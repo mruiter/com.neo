@@ -1,0 +1,71 @@
+{
+	"id": "com.neo",
+	"name": {
+		"en": "NEO Z-Wave Plug"
+	},
+	"version": "1.0.0",
+	"compatibility": ">=0.9.2",
+	"description": {
+		"en": "NEO Wall Switch"
+	},
+	"category": [
+		"appliances",
+		"lights"
+	],
+	"images": {
+		"large": "/assets/images/large.png",
+		"small": "/assets/images/small.png"
+	},
+	"author": {
+		"name": "Marco Ruiter",
+		"email": "mruiter@tuxweb.nl"
+	},
+ 	"drivers": [
+		  {
+			"id": "NAS-WR01ZE",
+			"name": {
+				"en": "NEO Wall Plug"
+			},
+			"zwave": {
+				"manufacturerId": 600,
+				"productTypeId": 3,
+				"productId": 4231,
+				"learnmode": {
+					"image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
+					"instruction": {
+						"en": "Press the button on your NEO Wall Plug three times",
+						"nl": "Druk driemaal op de knop op de NEO Wall Plug"
+					}
+				},
+				"associationGroups": [
+					3
+				]
+			},
+			"class": "socket",
+			"capabilities": [
+				"onoff",
+				"measure_power"
+			],
+			"images": {
+				"large": "/drivers/NAS-WR01ZE/assets/images/large.png",
+				"small": "/drivers/NAS-WR01ZE/assets/images/small.png"
+			},
+			"settings": [
+				{
+				    "id": "meter_report",
+				    "type": "checkbox",
+				    "label": {
+					    "en": "Meter Report",
+						"nl": "Meter Report"
+				    },
+				    "value": true,
+				    "hint": {
+					    "en": "This will Disable/Enable meter report measure data to controller.",
+						"nl": "Dit zal meter rapportages inschakelen naar controller."
+				    }
+			    }
+
+			]
+		}
+	]
+}
