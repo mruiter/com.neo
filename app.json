@@ -76,7 +76,7 @@
 					},
 					"hint": {
 						"en": "The amount of seconds between a Meter Report being send to controller.",
-						"nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden gezonden."
+						"nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden."
 					}
 				},
 				{
@@ -89,7 +89,7 @@
 				    "value": true,
 				    "hint": {
 					    "en": "This will Disable/Enable the status led on top.",
-						"nl": "Hiermee schakeld u de functie van de status led aan of uit."
+						"nl": "Hiermee schakelt u de functie van de status led aan of uit."
 				    }
 			    },
 				{
@@ -102,7 +102,7 @@
 				    "value": true,
 				    "hint": {
 					    "en": "After power loss the state of the relay will switch to last known.",
-						"nl": "Schakel terug naar laatst bekende schakelstand ba spanningsuitval"
+						"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
 				    }
 			    }
 
