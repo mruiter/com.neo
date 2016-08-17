@@ -22,17 +22,52 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				return report['Value'] === 'on/enable';
 			}
 		},
-		'measure_power': {
-			'command_class'				: 'COMMAND_CLASS_SENSOR_MULTILEVEL',
-			'command_get'				: 'SENSOR_MULTILEVEL_GET',
-			'command_report'			: 'SENSOR_MULTILEVEL_REPORT',
-			'command_report_parser'		: function( report ){
-				return report['Sensor Value (Parsed)'];
-			}
+			'measure_power': {
+			'command_class'				: 'COMMAND_CLASS_METER',
+			'command_get'					: 'METER_GET',
+			'command_get_cb'			: true,
+			'command_get_parser'	: function(power) {
+				return {
+					'Properties1': {
+						'Scale': 0
+					}
+				}
+			},
+			'command_report'				: 'METER_REPORT',
+			'command_report_parser'	: function(report) {
+				return report['Meter Value (Parsed)'];
+			},
+			
 		}
 	},
+	    settings: {
+                "meter_report": {
+                "index": 1,
+                "size": 1,
+                "parser": function( input ) {
+                return new Buffer([ parseInt(input) ]);
+                  }
+                },
+				"meter_report_interval": {
+                "index": 2,
+                "size": 2,
+                "parser": function( input ) {
+                return new Buffer([ parseInt(input) ]);
+                  }
+                },
+                "led_display": {
+                "index": 5,
+                "size": 1,
+                "parser": function( input ) {
+                return new Buffer([ parseInt(input) ]);
+                  }
+                },
+				"remember_state": {
+                "index": 7,
+                "size": 1,
+                "parser": function( input ) {
+                return new Buffer([ parseInt(input) ]);
+                  }
+                }
+              }
 })
-
-module.exports.on('applicationUpdate', function( device_data, buf ){
-	Homey.manager('flow').triggerDevice( 'fgwpe-101_nif', null, null, device_data )
-});
