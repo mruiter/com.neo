@@ -1,12 +1,12 @@
 # SZ Neo Z-Wave Wall Plug App for Homey @ Athom.com
 
-Use these cheap chinese plugs available on aliexpress.
-Be carefull, there's also a wifi plug, be sure you have NAS-WR01ZE
+Makes Homey work with these nice and cheap chinese z-wave products
 
-## Flow Options
+NAS-DS01ZE		Door Sensor
+NAS-PD01ZE		Motion Sensor
+NAS-WR01ZE		Power Switching Plug
+NAS-WS01ZE		Flood Sensor
 
-You are able to turn switch on/off
+Todo
 
-## ToDo:
-
-Power Usage not always reporting
+The Siren - Still in shipment from chinatown

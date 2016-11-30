@@ -3,8 +3,6 @@
 const path			= require('path');
 const ZwaveDriver	= require('homey-zwavedriver');
 
-// http://www.szneo.com/en/products/show.php?id=189  / http://products.z-wavealliance.org/products/1670 / http://www.pepper1.net/zwavedb/device/897/897-0258-0003-0087-03-04-05-03-46.xml
-
 module.exports = new ZwaveDriver( path.basename(__dirname), {
 	debug: true,
 	capabilities: {

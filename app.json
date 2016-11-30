@@ -183,7 +183,7 @@
 			"zwave": {
 				"manufacturerId": 600,
 				"productTypeId": 3,
-				"productId": 1083,
+				"productId": 4227,
 				"learnmode": {
 					"image": "/drivers/NAS-PD01ZE/assets/icon.svg",
 					"instruction": {
@@ -196,7 +196,6 @@
 			"class": "sensor",
 			"capabilities": [
 				"alarm_motion",
-				"alarm_battery",
 				"measure_luminance",
 				"measure_battery"
 			],
@@ -252,7 +251,7 @@
 			"zwave": {
 				"manufacturerId": 600,
 				"productTypeId": 3,
-				"productId": 1085,
+				"productId": 4229,
 				"learnmode": {
 					"image": "/drivers/NAS-WS01ZE/assets/icon.svg",
 					"instruction": {
@@ -265,7 +264,6 @@
 			"class": "sensor",
 			"capabilities": [
 				"alarm_water",
-				"alarm_battery",
 				"measure_battery"
 			],
 			"images": {
