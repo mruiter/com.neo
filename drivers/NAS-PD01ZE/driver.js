@@ -4,6 +4,7 @@ const path = require('path');
 const ZwaveDriver = require('homey-zwavedriver');
 
 module.exports = new ZwaveDriver(path.basename(__dirname), {
+	debug: true,
 	capabilities: {
 		'alarm_motion': {
 			'command_class': 'COMMAND_CLASS_NOTIFICATION',

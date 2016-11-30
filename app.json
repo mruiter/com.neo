@@ -115,8 +115,6 @@
 			]
 		},
 
-
-
 		{
 			"id": "NAS-DS01ZE",
 			"name": {
@@ -176,8 +174,6 @@
 					}
 				]
 		},
-
-
 
 		{
 			"id": "NAS-PD01ZE",
@@ -245,14 +241,53 @@
 						}
 					]
 				}
+			]
+		},
 
+		{
+			"id": "NAS-WS01ZE",
+			"name": {
+				"en": "NEO Flood Sensor"
+			},
+			"zwave": {
+				"manufacturerId": 600,
+				"productTypeId": 3,
+				"productId": 1085,
+				"learnmode": {
+					"image": "/drivers/NAS-WS01ZE/assets/icon.svg",
+					"instruction": {
+						"en": "Press the code button inside your NEO PIR three times",
+						"nl": "Druk driemaal op de code knop binnen in de NEO PIR"
+					}
+				},
+				"associationGroups": [ 1 ]
+			},
+			"class": "sensor",
+			"capabilities": [
+				"alarm_water",
+				"alarm_battery",
+				"measure_battery"
+			],
+			"images": {
+				"large": "/drivers/NAS-WS01ZE/assets/images/large.jpg",
+				"small": "/drivers/NAS-WS01ZE/assets/images/small.jpg"
+			},
+			"settings": [
+
+				{
+					"id": "alarm_sound_enable_disable",
+					"type": "checkbox",
+					"label": {
+						"en": "Alarm sound on detection",
+						"nl": "Alarm geluid bij detectie"
+					},
+					"hint": {
+						"en": "When unchecked it will only report to controller no sound",
+						"nl": "Indien niet aangevink zal er alleen een notificatie naar de controller worden verzonden , geen geluid"
+					},
+					"value": true
+				}
 			]
 		}
-
-
-
-
-
-
 	]
 }

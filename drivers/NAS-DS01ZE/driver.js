@@ -4,6 +4,7 @@ const path			= require('path');
 const ZwaveDriver	= require('homey-zwavedriver');
 
 module.exports = new ZwaveDriver( path.basename(__dirname), {
+	debug: true,
 	capabilities: {
 		'alarm_contact': {
 			'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
@@ -17,7 +18,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			'command_report': 'BATTERY_REPORT',
 			'command_report_parser': report => {
 				if (report['Battery Level'] === "battery low warning") return 1;
-				
+
 				return report['Battery Level (Raw)'][0];
 			}
 		},
