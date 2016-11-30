@@ -40,7 +40,8 @@ module.exports = new ZwaveDriver('mydriver', {
 			'command_report'			: 'SENSOR_MULTILEVEL_REPORT',
 			'command_report_parser'		: function( report ){
 				return report['Sensor Value (Parsed)'];
-			}
+			},
+			'optional': true // if device variably advertises a command class (e.g. cc battery when dc-powered) set this variable to true to prevent crashes
 		}
 	},
 	settings: {

@@ -1,16 +1,17 @@
 {
 	"id": "com.neo",
 	"name": {
-		"en": "NEO Z-Wave Plug"
+		"en": "NEO Z-Wave Products"
 	},
-	"version": "1.0.0",
-	"compatibility": ">=0.9.2",
+	"version": "1.1.0",
+	"compatibility": ">=1.0.1",
 	"description": {
-		"en": "NEO Wall Switch"
+		"en": "NEO Z-Wave products"
 	},
 	"category": [
 		"appliances",
-		"lights"
+		"lights",
+		"security"
 	],
 	"images": {
 		"large": "/assets/images/large.jpg",
@@ -20,7 +21,12 @@
 		"name": "Marco Ruiter",
 		"email": "mruiter@tuxweb.nl"
 	},
- 	"drivers": [
+	"contributors": {
+		"name": "Niels van Gelderen",
+		"email": "nielsvangelderen@gmail.com"
+	},
+
+	"drivers": [
 		  {
 			"id": "NAS-WR01ZE",
 			"name": {
@@ -107,6 +113,146 @@
 			    }
 
 			]
+		},
+
+
+
+		{
+			"id": "NAS-DS01ZE",
+			"name": {
+			"en": "NEO Door Sensor"
+			},
+			"zwave": {
+				"manufacturerId": 600,
+				"productTypeId": 3,
+				"productId": 4226,
+				"learnmode": {
+					"instruction": {
+						"en": "Press the button on your NEO Sensor three times",
+						"nl": "Druk driemaal op de knop in de sensor unit"
+					}
+				},
+				"associationGroups": [ 1 ]
+			},
+			"class": "sensor",
+			"capabilities": [
+				"alarm_contact",
+				"alarm_battery",
+				"measure_battery"
+			],
+			"images": {
+				"large": "/drivers/NAS-DS01ZE/assets/images/large.jpg",
+				"small": "/drivers/NAS-DS01ZE/assets/images/small.jpg"
+			},
+			"settings": [{
+				"id": "off_delay",
+				"type": "number",
+						"attr": {
+							"min" : 0,
+							"max" : 65535
+						},
+				    "label": {
+					    "en": "Off Delay"
+						},
+				    "value": 0,
+				    "hint": {
+					    "en": "This configuration parameter that can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay"
+				    }
+			    },
+				{
+					"id": "basic_set_level",
+					"type": "number",
+					"attr": {
+						"min": -1,
+						"max": 99
+					},
+					"value": -1,
+					"label": {
+						"en": "Basic Set Level"
+					},
+					"hint": {
+						"en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), -1=ON (Binary Switch Device)"
+						}
+					}
+				]
+		},
+
+
+
+		{
+			"id": "NAS-PD01ZE",
+			"name": {
+				"en": "NEO PIR Motion Sensor"
+			},
+			"zwave": {
+				"manufacturerId": 600,
+				"productTypeId": 3,
+				"productId": 1083,
+				"learnmode": {
+					"image": "/drivers/NAS-PD01ZE/assets/icon.svg",
+					"instruction": {
+						"en": "Press the code button inside your NEO PIR three times",
+						"nl": "Druk driemaal op de code knop binnen in de NEO PIR"
+					}
+				},
+				"associationGroups": [ 1 ]
+			},
+			"class": "sensor",
+			"capabilities": [
+				"alarm_motion",
+				"alarm_battery",
+				"measure_luminance",
+				"measure_battery"
+			],
+			"images": {
+				"large": "/drivers/NAS-PD01ZE/assets/images/large.jpg",
+				"small": "/drivers/NAS-PD01ZE/assets/images/small.jpg"
+			},
+			"settings": [
+				{
+					"id": "motion_sensor_sensitivity",
+					"type": "dropdown",
+					"label": {
+						"en": "PIR Motion Sensitivity",
+						"nl": "PIR Bewegings Gevoeligheid"
+					},
+					"value": "1",
+					"hint": {
+						"en": "High Sensitivity",
+						"nl": "Hoge Gevoeligheid"
+					},
+					"values": [
+						{
+							"id": "2",
+							"label": {
+								"en": "Normal Sensitivity (default)",
+								"nl": "Normale Gevoeligheid (stanaard)"
+							}
+						},
+						{
+							"id": "3",
+							"label": {
+								"en": "Lower Sensitivity",
+								"nl": "Lagere Gevoeligheid"
+							}
+						},
+						{
+							"id": "4",
+							"label": {
+								"en": "Lowest Sensitivity",
+								"nl": "Laagste Gevoeligheid"
+							}
+						}
+					]
+				}
+
+			]
 		}
+
+
+
+
+
+
 	]
 }
