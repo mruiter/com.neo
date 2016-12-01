@@ -1,12 +1,12 @@
 {
 	"id": "com.neo",
 	"name": {
-		"en": "NEO Z-Wave Products"
+		"en": "NEO Coolcam Z-Wave Products"
 	},
 	"version": "1.1.1",
 	"compatibility": ">=1.0.1",
 	"description": {
-		"en": "NEO Z-Wave products"
+		"en": "NEO Coolcam Z-Wave products"
 	},
 	"category": [
 		"appliances",
@@ -26,7 +26,7 @@
 		  {
 			"id": "NAS-WR01ZE",
 			"name": {
-				"en": "NEO Wall Plug"
+				"en": "NEO Power Wall Plug"
 			},
 			"zwave": {
 				"manufacturerId": 600,
@@ -122,8 +122,8 @@
 				"productId": 4226,
 				"learnmode": {
 					"instruction": {
-						"en": "Press the button on your NEO Sensor three times",
-						"nl": "Druk driemaal op de knop in de sensor unit"
+						"en": "Press the button inside your NEO Door Sensor three times",
+						"nl": "Druk driemaal op de knop in de Deur Sensor unit"
 					}
 				},
 				"associationGroups": [ 1 ]
@@ -131,7 +131,6 @@
 			"class": "sensor",
 			"capabilities": [
 				"alarm_contact",
-				"alarm_battery",
 				"measure_battery"
 			],
 			"images": {
@@ -251,8 +250,8 @@
 				"learnmode": {
 					"image": "/drivers/NAS-WS01ZE/assets/icon.svg",
 					"instruction": {
-						"en": "Press the code button inside your NEO PIR three times",
-						"nl": "Druk driemaal op de code knop binnen in de NEO PIR"
+						"en": "Press the code button inside your NEO Flood Sensor three times",
+						"nl": "Druk driemaal op de code knop binnen in de NEO Flood Sensor"
 					}
 				},
 				"associationGroups": [ 1 ]

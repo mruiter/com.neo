@@ -27,7 +27,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			return {
 				'Properties1': {
 				'Rate Type': 'Import',
-				'Scale': 0
+				'Scale': 1
 					},
 					'Scale 2': 0
 					};
@@ -36,11 +36,12 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				'command_report_parser': report => {
 				if (report.hasOwnProperty('Properties2') &&
 				report.Properties2.hasOwnProperty('Scale bits 10') &&
-				report.Properties2['Scale bits 10'] === 0)
+				report.Properties2['Scale bits 10'] === 1)
 				return report['Meter Value (Parsed)'];
 				return null;
-				}
+				},
 			}
+			
 		
 		},
 	    settings: {
