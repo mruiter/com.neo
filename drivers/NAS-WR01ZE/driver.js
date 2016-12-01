@@ -21,23 +21,28 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			}
 		},
 			'measure_power': {
-			'command_class'				: 'COMMAND_CLASS_METER',
-			'command_get'					: 'METER_GET',
-			'command_get_cb'			: true,
-			'command_get_parser'	: function(power) {
-				return {
-					'Properties1': {
-						'Scale': 0
-					}
-				}
-			},
-			'command_report'				: 'METER_REPORT',
-			'command_report_parser'	: function(report) {
+			'command_class': 'COMMAND_CLASS_METER',
+			'command_get': 'METER_GET',
+			'command_get_parser': () => {
+			return {
+				'Properties1': {
+				'Rate Type': 'Import',
+				'Scale': 0
+					},
+					'Scale 2': 0
+					};
+				},
+				'command_report': 'METER_REPORT',
+				'command_report_parser': report => {
+				if (report.hasOwnProperty('Properties2') &&
+				report.Properties2.hasOwnProperty('Scale bits 10') &&
+				report.Properties2['Scale bits 10'] === 0)
 				return report['Meter Value (Parsed)'];
-			},
-			
-		}
-	},
+				return null;
+				}
+			}
+		
+		},
 	    settings: {
                 "meter_report": {
                 "index": 1,
