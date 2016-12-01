@@ -10,10 +10,14 @@ Makes Homey work with these nice and cheap chinese z-wave products
 
 -	NAS-WS01ZE		Flood Sensor
 
-* Todo
+
+Todo
 
 
 The Siren - Still in shipment from chinatown
+
 Power report from Power Switching Plug is not reporting in
+
 Lux report from motion sensor is not reporting in
+
 Battery levels does not ACK on the normal request on the battery command class
