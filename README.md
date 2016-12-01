@@ -1,12 +1,18 @@
-# SZ Neo Z-Wave Wall Plug App for Homey @ Athom.com
+# Neo Coolcam Z-Wave App for Homey @ Athom.com
 
 Makes Homey work with these nice and cheap chinese z-wave products
 
-NAS-DS01ZE		Door Sensor
-NAS-PD01ZE		Motion Sensor
-NAS-WR01ZE		Power Switching Plug
-NAS-WS01ZE		Flood Sensor
+Version 1.1.1
 
-Todo
+**Supports:**
+ * NAS-DS01ZE		Door Sensor
+ * NAS-PD01ZE		Motion Sensor
+ * NAS-WR01ZE		Power Switching Plug
+ * NAS-WS01ZE		Flood Sensor
 
-The Siren - Still in shipment from chinatown
+**Todo:**
+
+ * The Siren - Still in shipment from chinatown
+
+
+The official NEO [APP] topic on the forum:
