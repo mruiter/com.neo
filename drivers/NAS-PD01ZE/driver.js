@@ -55,8 +55,20 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			"index": 10,
 			"size": 1,
 		},
-		"PIR_off_delay": {
+		"motion_off_delay": {
 			"index": 2,
+			"size": 2,
+		},
+		"day_night_treshold": {
+			"index": 5,
+			"size": 2,
+		},		
+		"illumination_polling_interval": {
+			"index": 7,
+			"size": 2,
+		},
+		"illumination_report_threshold": {
+			"index": 9,
 			"size": 2,
 		},
 	}
