@@ -18,6 +18,4 @@ The Siren - Still in shipment from chinatown
 
 Power report from Power Switching Plug is not reporting in
 
-Lux report from motion sensor is not reporting in
-
 Battery levels does not ACK on the normal request on the battery command class
