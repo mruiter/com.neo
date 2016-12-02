@@ -207,32 +207,39 @@
 						"en": "PIR Motion Sensitivity",
 						"nl": "PIR Bewegings Gevoeligheid"
 					},
-					"value": "1",
+					"value": "12",
 					"hint": {
-						"en": "High Sensitivity",
-						"nl": "Hoge Gevoeligheid"
+						"en": "You can set the sensitivity of the PIR motion detection",
+						"nl": "Hiermee kunt u de gevoeligheid van de PIR aanpassen"
 					},
 					"values": [
 						{
-							"id": "2",
+							"id": "8",
+							"label": {
+								"en": "High Sensitivity",
+								"nl": "Hoge Gevoeligheid"
+								}
+						},
+						{
+							"id": "12",
 							"label": {
 								"en": "Normal Sensitivity (default)",
 								"nl": "Normale Gevoeligheid (stanaard)"
-							}
+								}
 						},
 						{
-							"id": "3",
+							"id": "128",
 							"label": {
 								"en": "Lower Sensitivity",
 								"nl": "Lagere Gevoeligheid"
-							}
+								}
 						},
 						{
-							"id": "4",
+							"id": "255",
 							"label": {
 								"en": "Lowest Sensitivity",
 								"nl": "Laagste Gevoeligheid"
-							}
+								}
 						}
 					]
 				},
