@@ -232,6 +232,78 @@
 								"en": "Lowest Sensitivity",
 								"nl": "Laagste Gevoeligheid"
 							}
+						},
+
+						{
+							"id": "motion_cancellation_delay",
+							"type": "number",
+							"label": {
+								"en": "Motion alarm cancellation delay (seconds)",
+								"nl": "Bewegingsalarm annuleringsperiode (seconden)"
+							},
+							"value": 30,
+							"attr": {
+								"min": 5,
+								"max": 600
+							},
+							"hint": {
+								"en": "Set the time (in seconds) when the Motion alarm will be cancelled.\nRange: 5 - 600",
+								"nl": "Zet de tijd (in seconden) wanneer het Bewegingsalarm zal worden geannuleerd.\nBereik: 5 - 600"
+							}
+						},
+
+						{
+							"id": "day_night_treshold",
+							"type": "number",
+							"value": 100,
+							"attr": {
+								"min": 0,
+								"max": 1000
+							},
+							"label": {
+								"en": "Motion operating mode threshold",
+								"nl": "Bewegings alarm functie drempel"
+							},
+							"hint": {
+								"en": "Determine on which lux level it is either day or night",
+								"nl": "Bepaal bij hoeveel lux het schakelt tussen dag of nacht"
+							}
+						},
+		
+						{
+							"id": "illumination_polling_interval",
+							"type": "number",
+							"label": {
+								"en": "Illumination polling interval (seconds)",
+								"nl": "Lichtsterkte polling interval (seconden)"
+							},
+							"value": 180,
+							"attr": {
+								"min": 60,
+								"max": 36000
+							},
+							"hint": {
+								"en": "Determine the time between illumination reports to Homey, even when value has not changed.\nRange: 60 - 36000",
+								"nl": "Bepaal wanneer de lichtsterkte waarde naar Homey word verzonden, ook als de waarde niet veranderd is.\nBereik: 60 - 36000"
+							}
+						},
+
+						{
+							"id": "illumination_report_threshold",
+							"type": "number",
+							"label": {
+								"en": "Illumination report threshold (lux)",
+								"nl": "Lichtsterkte rapportage drempel (lux)"
+							},
+							"value": 100,
+							"attr": {
+								"min": 0,
+								"max": 1000
+							},
+							"hint": {
+								"en": "Sets how many lux needs to change before the value is being send to Homey.\nRange: 0 - 1000.",
+								"nl": "Zet hoeveel lux er moet veranderen voordat de waarde naar Homey word verstuurd.\nBereik: 0 - 1000."
+							}
 						}
 					]
 				}
