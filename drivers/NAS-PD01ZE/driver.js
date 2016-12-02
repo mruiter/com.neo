@@ -51,5 +51,13 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			"index": 1,
 			"size": 1,
 		},
+		"motion_blink": {
+			"index": 10,
+			"size": 1,
+		},
+		"PIR_off_delay": {
+			"index": 2,
+			"size": 2,
+		},
 	}
 });
