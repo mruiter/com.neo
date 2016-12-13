@@ -16,4 +16,6 @@ Makes Homey work with these nice and cheap chinese z-wave products
 Todo
 
 
-Power report from Power Switching Plug is not reporting in
+Some users report no Lux from Motion Sensor. 
+If you can, please sens in a debug of the PIR sending its data.
+All my PIRs are reporting in Lux so hard to troubleshoot
