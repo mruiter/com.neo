@@ -95,6 +95,23 @@
 				    }
 			    },
 				{
+					"id": "power_report_change",
+					"type": "number",
+					"attr": {
+						"min": 1,
+						"max": 100
+					},
+					"value": 50,
+					"label": {
+						"en": "Power consumed change resulting (%)",
+						"nl": "Procentuele wijziging van het vermogen (%)"
+					},
+					"hint": {
+						"en": "The amount of power consumed must change to be reported to the controller.",
+						"nl": "De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller."
+					}
+				},
+				{
 				    "id": "remember_state",
 				    "type": "checkbox",
 				    "label": {

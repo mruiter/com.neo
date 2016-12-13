@@ -52,7 +52,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
                 return new Buffer([ parseInt(input) ]);
                   }
                 },
-				"meter_report_interval": {
+		"meter_report_interval": {
                 "index": 2,
                 "size": 2,
                 "parser": function( input ) {
@@ -66,7 +66,14 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
                 return new Buffer([ parseInt(input) ]);
                   }
                 },
-				"remember_state": {
+                "power_report_change": {
+                "index": 6,
+                "size": 1,
+                "parser": function( input ) {
+                return new Buffer([ parseInt(input) ]);
+                  }
+                },
+		"remember_state": {
                 "index": 7,
                 "size": 1,
                 "parser": function( input ) {
