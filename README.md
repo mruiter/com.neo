@@ -13,6 +13,11 @@ Makes Homey work with these nice and cheap chinese z-wave products
 -	NAS-WS01ZE		Flood Sensor
 
 
+
+Please take note: The power usage on the powerplug has been fixed. 
+In order to get it working like it should you have to re-pair your plug again, sorry...... :(
+
+
 Todo
 
 
