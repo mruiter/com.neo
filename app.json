@@ -21,7 +21,14 @@
 		"name": "Marco Ruiter",
 		"email": "mruiter@tuxweb.nl"
 	},
-
+	"contributors": {
+		"developers": [
+			{
+				"name": "Ted Tolboom",
+				"email": "dTNL.Homey@gmail.com"
+			}
+		]
+	},
 	"drivers": [
 		  {
 			"id": "NAS-WR01ZE",
@@ -39,7 +46,34 @@
 						"nl": "Druk driemaal op de knop op de NEO Wall Plug"
 					}
 				},
-				"associationGroups": [ 1 ]
+				"associationGroups": [ 1 ],
+				"defaultConfiguration": [
+					{
+						"id": 1,
+						"size": 1,
+						"value": 120
+					},
+					{
+						"id": 2,
+						"size": 2,
+						"value": 120
+					},
+					{
+						"id": 5,
+						"size": 1,
+						"value": true
+					},
+					{
+						"id": 6,
+						"size": 1,
+						"value": 80
+					},
+					{
+						"id": 7,
+						"size": 1,
+						"value": true
+					}	
+				]
 			},
 			"class": "socket",
 			"capabilities": [
@@ -101,7 +135,7 @@
 						"min": 1,
 						"max": 100
 					},
-					"value": 50,
+					"value": 80,
 					"label": {
 						"en": "Power consumed change resulting (%)",
 						"nl": "Procentuele wijziging van het vermogen (%)"
