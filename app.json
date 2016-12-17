@@ -21,7 +21,14 @@
 		"name": "Marco Ruiter",
 		"email": "mruiter@tuxweb.nl"
 	},
-
+	"contributors": {
+		"developers": [
+			{
+				"name": "Ted Tolboom",
+				"email": "dTNL.Homey@gmail.com"
+			}
+		]
+	},
 	"drivers": [
 		  {
 			"id": "NAS-WR01ZE",
@@ -101,7 +108,7 @@
 						"min": 1,
 						"max": 100
 					},
-					"value": 50,
+					"value": 80,
 					"label": {
 						"en": "Power consumed change resulting (%)",
 						"nl": "Procentuele wijziging van het vermogen (%)"
