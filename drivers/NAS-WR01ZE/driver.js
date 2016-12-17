@@ -4,7 +4,7 @@ const path			= require('path');
 const ZwaveDriver	= require('homey-zwavedriver');
 
 module.exports = new ZwaveDriver( path.basename(__dirname), {
-	debug: false,
+	debug: true,
 	capabilities: {
 		'onoff': {
 			'command_class'				: 'COMMAND_CLASS_SWITCH_BINARY',
@@ -27,9 +27,32 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			return {
 				'Properties1': {
 				'Rate Type': 'Import',
-				'Scale': 1
+				'Scale': 2
 					},
-					'Scale 2': 2
+					'Scale 2': 0
+					};
+				},
+				'command_report': 'METER_REPORT',
+				'command_report_parser': report => {
+				if (report.hasOwnProperty('Properties2') &&
+				report.Properties2.hasOwnProperty('Scale bits 10') &&
+				report.Properties2['Scale bits 10'] === 2)
+				return report['Meter Value (Parsed)'];
+				return null;
+				},
+			},
+			
+			
+			'meter_power': {
+			'command_class': 'COMMAND_CLASS_METER',
+			'command_get': 'METER_GET',
+			'command_get_parser': () => {
+			return {
+				'Properties1': {
+				'Rate Type': 'Import',
+				'Scale': 0
+					},
+					'Scale 2': 0
 					};
 				},
 				'command_report': 'METER_REPORT',
@@ -49,8 +72,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
                 "index": 1,
                 "size": 1,
                 "parser": value => new Buffer([ ( value === true ) ? 0 : 1 ])
-                  }
-                },
+                  },
 		"meter_report_interval": {
                 "index": 2,
                 "size": 2
@@ -59,7 +81,6 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
                 "index": 5,
                 "size": 1,
                 "parser": value => new Buffer([ ( value === true ) ? 0 : 1 ])
-                  }
                 },
                 "power_report_change": {
                 "index": 6,
