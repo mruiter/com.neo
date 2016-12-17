@@ -48,37 +48,27 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
                 "meter_report": {
                 "index": 1,
                 "size": 1,
-                "parser": function( input ) {
-                return new Buffer([ parseInt(input) ]);
+                "parser": value => new Buffer([ ( value === true ) ? 0 : 1 ])
                   }
                 },
 		"meter_report_interval": {
                 "index": 2,
-                "size": 2,
-                "parser": function( input ) {
-                return new Buffer([ parseInt(input) ]);
-                  }
+                "size": 2
                 },
                 "led_display": {
                 "index": 5,
                 "size": 1,
-                "parser": function( input ) {
-                return new Buffer([ parseInt(input) ]);
+                "parser": value => new Buffer([ ( value === true ) ? 0 : 1 ])
                   }
                 },
                 "power_report_change": {
                 "index": 6,
                 "size": 1,
-                "parser": function( input ) {
-                return new Buffer([ parseInt(input) ]);
-                  }
                 },
 		"remember_state": {
                 "index": 7,
                 "size": 1,
-                "parser": function( input ) {
-                return new Buffer([ parseInt(input) ]);
-                  }
+                "parser": value => new Buffer([ ( value === true ) ? 0 : 1 ])
                 }
               }
 })
