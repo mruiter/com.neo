@@ -29,7 +29,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				'Rate Type': 'Import',
 				'Scale': 1
 					},
-					'Scale 2': 0
+					'Scale 2': 2
 					};
 				},
 				'command_report': 'METER_REPORT',
