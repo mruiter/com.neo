@@ -239,7 +239,34 @@
 						"nl": "Druk driemaal op de code knop binnen in de NEO PIR"
 					}
 				},
-				"associationGroups": [ 1 ]
+				"associationGroups": [ 1 ],
+				"defaultConfiguration": [
+					{
+						"id": 10,
+						"size": 1,
+						"value": 0
+					},
+					{
+						"id": 1,
+						"size": 1,
+						"value": 12
+					},
+					{
+						"id": 9,
+						"size": 2,
+						"value": 200
+					},
+					{
+						"id": 7,
+						"size": 2,
+						"value": 600
+					},
+					{
+						"id": 2,
+						"size": 2,
+						"value": 60
+					}	
+				]
 			},
 			"class": "sensor",
 			"capabilities": [
@@ -319,7 +346,7 @@
 						"en": "PIR Blinks red when motion detected",
 						"nl": "PIR knippert rood bij bewegings detectie"
 					},
-					"value": true,
+					"value": false,
 					"hint": {
 						"en": "PIR Blinks red when motion detected",
 						"nl": "PIR knippert rood bij bewegings detectie"
@@ -349,7 +376,7 @@
 						"en": "Illumination polling interval (seconds)",
 						"nl": "Lichtsterkte polling interval (seconden)"
 					},
-					"value": 180,
+					"value": 600,
 					"attr": {
 						"min": 60,
 						"max": 36000
@@ -366,7 +393,7 @@
 						"en": "Illumination report threshold (lux)",
 						"nl": "Lichtsterkte rapportage drempel (lux)"
 					},
-					"value": 100,
+					"value": 200,
 					"attr": {
 						"min": 0,
 						"max": 1000
