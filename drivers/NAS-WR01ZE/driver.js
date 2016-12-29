@@ -77,6 +77,14 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
                 "index": 2,
                 "size": 2
                 },
+		"over_load_current": {
+                "index": 3,
+                "size": 1
+                },
+		"alarm_current": {
+                "index": 4,
+                "size": 1
+                },
                 "led_display": {
                 "index": 5,
                 "size": 1,
@@ -84,12 +92,21 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
                 },
                 "power_report_change": {
                 "index": 6,
-                "size": 1,
+                "size": 1
                 },
 		"remember_state": {
                 "index": 7,
                 "size": 1,
                 "parser": value => new Buffer([ ( value === true ) ? 0 : 1 ])
+                },
+		"time_switch_function": {
+                "index": 8,
+                "size": 1,
+		"parser": value => new Buffer([ ( value === true ) ? 0 : 1 ])
+                },
+		"time_switch_period": {
+                "index": 9,
+                "size": 1
                 }
               }
 })
