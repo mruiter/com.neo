@@ -47,6 +47,26 @@
 					}
 				},
 				"associationGroups": [ 1 ],
+				"associationGroupsOptions": {
+					"1": {
+						"hint": {
+							"en": "Reports the lifeline service that assigned to plug status – ON/OFF. It enables the Plug to send reports and readings to the Z-Wave Controller. (Homey ID by default). It is not recommended to change this group.",
+							"nl": "Rapportage van de status van de power plug en staat controle (AAN/UIT) over de power plug toe (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen."
+						}
+					},
+					"2": {
+						"hint": {
+							"en": "Allows for sending alarm commands to associated devices such as Siren, relay module, lighting, etc. If current load is over the max current defined in parameter #3, the Plug will send a alarm to the associated devices. (add Z-wave ID of relay devices).",
+							"nl": "Rapportage van een alarm commando naar gekoppelde apparaten, zoals sirene, schakelaar, verlichting, etc. Op het moment dat het stroom hoger is dan gedefinieerd in parameter #3, wordt een alarm naar de gekoppelde apparaten gestuurd (voeg het Z-wave ID van het te koppelen apparaat toe)."
+						}
+					},
+					"3": {
+						"hint": {
+							"en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
+							"nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)"
+						}
+					}
+				},
 				"defaultConfiguration": [
 					{
 						"id": 1,
