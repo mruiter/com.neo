@@ -71,7 +71,7 @@
 					{
 						"id": 1,
 						"size": 1,
-						"value": 120
+						"value": 1
 					},
 					{
 						"id": 2,
@@ -91,7 +91,7 @@
 					{
 						"id": 7,
 						"size": 1,
-						"value": true
+						"value": "0xFF"
 					}	
 				]
 			},
@@ -110,13 +110,13 @@
 				    "id": "meter_report",
 				    "type": "checkbox",
 				    "label": {
-					    "en": "1. Meter Report",
-						"nl": "1. Meter Report"
+					    "en": "Enable Meter Report",
+						"nl": "Meter Reportage inschakelen"
 				    },
 				    "value": true,
 				    "hint": {
-					    "en": "This will Disable/Enable meter report measure data to controller. (default: enabled = checked)",
-						"nl": "Dit zal meter rapportages inschakelen naar controller. (standaard: ingeschakeld = checked)"
+					    "en": "#1. This will Disable/Enable meter report measure data to controller. (default: enabled = checked)",
+						"nl": "#1. Dit zal meter rapportages inschakelen naar controller. (standaard: ingeschakeld = checked)"
 				    }
 			    	},
 				{
@@ -128,12 +128,12 @@
 					},
 					"value": 120,
 					"label": {
-						"en": "2. Meter Report Interval [s]",
-						"nl": "2. Meter Report Interval [s]"
+						"en": "Meter Report Interval [s]",
+						"nl": "Meter Reportage Interval [s]"
 					},
 					"hint": {
-						"en": "The amount of seconds between a Meter Report being send to controller. (default: 120 [s], range: 60 - 65535)",
-						"nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden. (standaard: 120 [s], bereik: 60 - 65535)"
+						"en": "#2. The amount of seconds between a Meter Report being send to controller. (default: 120 [s], range: 60 - 65535)",
+						"nl": "#2. De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden. (standaard: 120 [s], bereik: 60 - 65535)"
 					}
 				},
 				{
@@ -145,12 +145,12 @@
 					},
 					"value": 12,
 					"label": {
-						"en": "3. Maximum over-load current [A]",
-						"nl": "3. Maximale over-load stroom [A]"
+						"en": "Maximum over-load current [A]",
+						"nl": "Maximale over-load stroom [A]"
 					},
 					"hint": {
-						"en": "Defines the maximum current the plug can provide to the device connected to it. If the current consumed is greater than the value set, the plug will cut power. (default: 12 [A], range: 1 - 12)",
-						"nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het huidige stroomverbruik groter is dan de ingestelde waarde, wordt de power plug uitgeschakeld. (standaard: 12 [A], bereik: 1 - 12)"
+						"en": "#3. Defines the maximum current the plug can provide to the device connected to it. If the current consumed is greater than the value set, the plug will cut power. (default: 12 [A], range: 1 - 12)",
+						"nl": "#3. Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het huidige stroomverbruik groter is dan de ingestelde waarde, wordt de power plug uitgeschakeld. (standaard: 12 [A], bereik: 1 - 12)"
 					}
 				},
 				{
@@ -162,25 +162,25 @@
 					},
 					"value": 12,
 					"label": {
-						"en": "4. Upper alarm current [A]",
-						"nl": "4. Alarm stroom [A]"
+						"en": "Upper alarm current [A]",
+						"nl": "Bovenwaarde alarm stroom [A]"
 					},
 					"hint": {
-						"en": "Defines the current the plug is allowed to provide to the device connected to it. If the alarm current is exceeded, the plug will send an alarm notification to the controller and LED will turn RED. Value specified has to be less or equal to #3. (default: 12 [A], range: 1 - 12)",
-						"nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het alarm stroom overschreden wordt, zal de power plug een alarm naar de controller versturen en de LED rood kleuren. De waarde moet kleiner of gelijk zijn aan #3. (standaard: 12 [A], bereik: 1 - 12)"
+						"en": "#4. Defines the current the plug is allowed to provide to the device connected to it. If the alarm current is exceeded, the plug will send an alarm notification to the controller and LED will turn RED. Value specified has to be less or equal to #3. (default: 12 [A], range: 1 - 12)",
+						"nl": "#4. Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het alarm stroom overschreden wordt, zal de power plug een alarm naar de controller versturen en de LED rood kleuren. De waarde moet kleiner of gelijk zijn aan #3. (standaard: 12 [A], bereik: 1 - 12)"
 					}
 				},
 				{
 				    "id": "led_display",
 				    "type": "checkbox",
 				    "label": {
-					    "en": "5. State indication Led",
-						"nl": "5. Status indicatie Led"
+					    "en": "Enable state indication Led",
+						"nl": "Status indicatie Led inschakelen"
 				    },
 				    "value": true,
 				    "hint": {
-					    "en": "This will Disable/Enable the status led on top. (default: enabled = checked)",
-						"nl": "Hiermee schakelt u de functie van de status led aan of uit. (standaard: ingeschakeld = checked)"
+					    "en": "#5. Enable (checked) or disable (unchecked) the status led on top. (default: enabled = checked)",
+						"nl": "#5. Schakel de status indicatie led aan (checked) of uit (unchecked). (standaard: ingeschakeld = checked)"
 				    }
 			    },
 				{
@@ -192,38 +192,38 @@
 					},
 					"value": 80,
 					"label": {
-						"en": "6. Power consumed change resulting [%]",
-						"nl": "6. Procentuele wijziging van het vermogen [%]"
+						"en": "Power consumed change resulting [%]",
+						"nl": "Procentuele wijziging van het vermogen [%]"
 					},
 					"hint": {
-						"en": "The amount of power consumed must change to be reported to the controller. (default: 80 [%], range: 1 - 100)",
-						"nl": "De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller. (standaard: 80 [%], bereik: 1 - 100)"
+						"en": "#6. The amount of power consumed must change to be reported to the controller. (default: 80 [%], range: 1 - 100)",
+						"nl": "#6. De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller. (standaard: 80 [%], bereik: 1 - 100)"
 					}
 				},
 				{
 				    "id": "remember_state",
 				    "type": "checkbox",
 				    "label": {
-					    	"en": "7. Return to last known state after power loss",
-						"nl": "7. Keer terug naar laatst bekende status bij spanningsuitval"
+					    	"en": "Return to last known state after power loss",
+						"nl": "Keer terug naar laatst bekende status bij spanningsuitval"
 				    },
 				    "value": true,
 				    "hint": {
-					    	"en": "After power loss the state of the relay will switch to last known. (default: enabled = checked)",
-						"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval. (standaard: uitgeschakeld = unchecked)"
+					    	"en": "#7. After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked). (default: enabled = checked)",
+						"nl": "#7. Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked). (standaard: uitgeschakeld = unchecked)"
 				    }
 			    	},
 				{
 				    "id": "time_switch_function",
 				    "type": "checkbox",
 				    "label": {
-					    	"en": "8. Enable power plug time switch function",
-						"nl": "8. Power plug tijd schakelings functie"
+					    	"en": "Enable power plug time switch function",
+						"nl": "Power plug tijd schakelings functie"
 				    },
 				    "value": false,
 				    "hint": {
-					    	"en": "Enables or disables the time switch function. When enabled, the power plug, after being switched on, will switch off after the in #9 defined time. (default: disabled = unchecked)",
-						"nl": "Aan of uitzetten tijd schakelings functie. Wanneer ingeschakeld zal de power plug na ingeschakeld te zijn, automatisch uitschakelen na de in #9 gedefinieerde tijd. (standaard: uitgeschakeld = unchecked)"
+					    	"en": "#8. Enables or disables the time switch function. When enabled (checked), the power plug, after being switched on, will switch off after the in #9 defined time. (default: disabled = unchecked)",
+						"nl": "#8. Aan of uitzetten tijd schakelings functie. Wanneer ingeschakeld (checked) zal de power plug na ingeschakeld te zijn, automatisch uitschakelen na de in #9 gedefinieerde tijd. (standaard: uitgeschakeld = unchecked)"
 				    }
 			    	},
 				{
@@ -235,17 +235,16 @@
 					},
 					"value": 150,
 					"label": {
-						"en": "9. Time period to switch off plug [min]",
-						"nl": "9. Tijdsduur voor het uitschakelen [min]"
+						"en": "Time period to switch off plug [min]",
+						"nl": "Tijdsduur voor het uitschakelen van de power plug [min]"
 					},
 					"hint": {
-						"en": "The time period before switching off the power plug, if time function has been enabled in #8. (default: 150 [min], range: 1 - 65535)",
-						"nl": "De tijdsduur waarna de power plug zal uitschakelen, wanneer de tijd schakelings functie ingeschakeld is in #8. (standaard: 150 [min], bereik: 1 - 65535)"
+						"en": "#9. The time period before switching off the power plug, if time function has been enabled in #8. (default: 150 [min], range: 1 - 65535)",
+						"nl": "#9. De tijdsduur waarna de power plug zal uitschakelen, wanneer de tijd schakelings functie ingeschakeld is in #8. (standaard: 150 [min], bereik: 1 - 65535)"
 					}
 				}
 			]
 		},
-
 		{
 			"id": "NAS-DS01ZE",
 			"name": {
