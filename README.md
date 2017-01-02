@@ -17,8 +17,5 @@ All my PIRs are reporting in Lux so hard to troubleshoot
 ### v 1.1.5
 **add support:**  
 NAS-WR01ZE - Additional settings implemented (e.g. over-load current, alarm current, time switch function)
-
 **update:**  
-NAS-WR01ZE - Bug fixes defaultConfiguration and parameters
-NAS-WR01ZE - Implementation of power consumption (kWh)
-NAS-WR01ZE - Textual fixes (setting-labels, -hints and association group-hints)
+NAS-WR01ZE - Bug fixes defaultConfiguration and parameters, implementation of power consumption (kWh), textual fixes (setting-labels, -hints and association group-hints)
