@@ -2,10 +2,12 @@
 Makes Homey work with these nice and cheap chinese z-wave products
 
 ## Supported devices with most common parameters:
-* NAS-AB01ZE, Siren
-* NAS-DS01ZE, Door Sensor
 * NAS-PD01ZE, Motion Sensor
 * NAS-WR01ZE, Power Switching Plug
+
+## Supported devices with some parameters:
+* NAS-AB01ZE, Siren
+* NAS-DS01ZE, Door Sensor
 * NAS-WS01ZE, Flood Sensor
 
 ## Todo
