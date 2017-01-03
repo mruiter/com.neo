@@ -63,6 +63,52 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				return report['Meter Value (Parsed)'];
 				return null;
 				},
+			},
+		'measure_voltage': {
+			'command_class': 'COMMAND_CLASS_METER',
+			'command_get': 'METER_GET',
+			'command_get_parser': () => {
+			return {
+				'Properties1': {
+				'Rate Type': 'Import',
+				'Scale': 2
+					},
+					'Scale 2': 0
+					};
+				},
+				'command_report': 'METER_REPORT',
+				'command_report_parser': report => {
+				if (report.hasOwnProperty('Properties2') &&
+				report.Properties2.hasOwnProperty('Size') &&
+				report.Properties2['Size'] === 2 &&
+				report.Properties2.hasOwnProperty('Scale bits 10') &&
+				report.Properties2['Scale bits 10'] === 0)
+				return report['Meter Value (Parsed)'];
+				return null;
+				},
+			},
+		'measure_current': {
+			'command_class': 'COMMAND_CLASS_METER',
+			'command_get': 'METER_GET',
+			'command_get_parser': () => {
+			return {
+				'Properties1': {
+				'Rate Type': 'Import',
+				'Scale': 2
+					},
+					'Scale 2': 0
+					};
+				},
+				'command_report': 'METER_REPORT',
+				'command_report_parser': report => {
+				if (report.hasOwnProperty('Properties2') &&
+				report.Properties2.hasOwnProperty('Size') &&
+				report.Properties2['Size'] === 2 &&
+				report.Properties2.hasOwnProperty('Scale bits 10') &&
+				report.Properties2['Scale bits 10'] === 1)
+				return report['Meter Value (Parsed)'];
+				return null;
+				},
 			}
 		},
 	settings: {
