@@ -20,7 +20,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				return report['Value'] === 'on/enable';
 			}
 		},
-			'measure_power': {
+		'measure_power': {
 			'command_class': 'COMMAND_CLASS_METER',
 			'command_get': 'METER_GET',
 			'command_get_parser': () => {
@@ -41,9 +41,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				return null;
 				},
 			},
-			
-			
-			'meter_power': {
+		'meter_power': {
 			'command_class': 'COMMAND_CLASS_METER',
 			'command_get': 'METER_GET',
 			'command_get_parser': () => {
@@ -58,38 +56,55 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				'command_report': 'METER_REPORT',
 				'command_report_parser': report => {
 				if (report.hasOwnProperty('Properties2') &&
+				report.Properties2.hasOwnProperty('Size') &&
+				report.Properties2['Size'] === 4 &&
 				report.Properties2.hasOwnProperty('Scale bits 10') &&
-				report.Properties2['Scale bits 10'] === 1)
+				report.Properties2['Scale bits 10'] === 0)
 				return report['Meter Value (Parsed)'];
 				return null;
 				},
 			}
-			
-		
 		},
-	    settings: {
+	settings: {
                 "meter_report": {
                 "index": 1,
                 "size": 1,
-                "parser": value => new Buffer([ ( value === true ) ? 0 : 1 ])
+                "parser": value => new Buffer([ ( value === true ) ? 1 : 0 ])
                   },
 		"meter_report_interval": {
                 "index": 2,
                 "size": 2
                 },
-                "led_display": {
+		"over_load_current": {
+                "index": 3,
+                "size": 1
+                },
+		"alarm_current": {
+                "index": 4,
+                "size": 1
+                },
+        	"led_display": {
                 "index": 5,
                 "size": 1,
-                "parser": value => new Buffer([ ( value === true ) ? 0 : 1 ])
+                "parser": value => new Buffer([ ( value === true ) ? 1 : 0 ])
                 },
-                "power_report_change": {
+        	"power_report_change": {
                 "index": 6,
-                "size": 1,
+                "size": 1
                 },
 		"remember_state": {
                 "index": 7,
                 "size": 1,
-                "parser": value => new Buffer([ ( value === true ) ? 0 : 1 ])
+                "signed": false,
+                },
+		"time_switch_function": {
+                "index": 8,
+                "size": 1,
+				"parser": value => new Buffer([ ( value === true ) ? 1 : 0 ])
+                },
+		"time_switch_period": {
+                "index": 9,
+                "size": 1
                 }
               }
 })
