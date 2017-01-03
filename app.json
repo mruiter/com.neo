@@ -29,6 +29,44 @@
 			}
 		]
 	},
+	"capabilities": {
+		"measure_current": {
+					"type": "number",
+					"title": {
+						"en": "Current",
+						"nl": "Stroom"
+						},
+					"units": {
+						"en": "A"
+						},
+					"desc": {
+						"en": "Electric current(A)",
+						"nl": "Elektrische stroom (A)"
+						},
+					"chartType": "stepLine",
+					"decimals": 2,
+					"getable": true,
+					"setable": false
+					},
+				"measure_voltage": {
+					"type": "number",
+					"title": {
+						"en": "Voltage",
+						"nl": "Spanning"
+						},
+					"units": {
+						"en": "V"
+						},
+					"desc": {
+						"en": "Voltage (V)",
+						"nl": "Spanning (V)"
+						},
+					"chartType": "stepLine",
+					"decimals": 0,
+					"getable": true,
+					"setable": false
+					}
+		},
 	"drivers": [
 		  {
 			"id": "NAS-WR01ZE",
@@ -98,13 +136,38 @@
 			"class": "socket",
 			"capabilities": [
 				"onoff",
+				"meter_power",
 				"measure_power",
-				"meter_power"
+				"measure_current",
+				"measure_voltage"
 			],
 			"images": {
 				"large": "/drivers/NAS-WR01ZE/assets/images/large.jpg",
 				"small": "/drivers/NAS-WR01ZE/assets/images/small.jpg"
 			},
+			"mobile": {
+            "components": [
+                {
+					"id": "icon",
+					"capabilities": [ "onoff" ]
+				},
+				{
+                    "id": "sensor",
+                    "capabilities": [ "meter_power", "measure_power","measure_current", "measure_voltage" ],
+                    "options": {
+    					"icons": {
+        					"measure_current": "/drivers/NAS-WR01ZE/assets/measure_current.svg",
+        					"measure_voltage": "/drivers/NAS-WR01ZE/assets/measure_voltage.svg",
+        					"measure_power": "/drivers/NAS-WR01ZE/assets/measure_power.svg"
+    							}
+                	}
+                },
+                {
+                    "id": "toggle",
+                    "capabilities": [ "onoff" ]
+                }
+            ]
+        	},
 			"settings": [
 				{
 				    "id": "meter_report",
