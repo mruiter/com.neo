@@ -33,7 +33,7 @@
 		  {
 			"id": "NAS-WR01ZE",
 			"name": {
-				"en": "NEO Power Wall Plug"
+				"en": "NEO Wall Plug"
 			},
 			"zwave": {
 				"manufacturerId": 600,
@@ -308,7 +308,7 @@
 		{
 			"id": "NAS-PD01ZE",
 			"name": {
-				"en": "NEO PIR Motion Sensor"
+				"en": "NEO Motion Sensor"
 			},
 			"zwave": {
 				"manufacturerId": 600,
@@ -646,9 +646,5 @@
 			
 			
 		]
-
-
-
-
 	}
 }

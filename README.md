@@ -11,9 +11,8 @@ Makes Homey work with these nice and cheap chinese z-wave products
 * NAS-WS01ZE, Flood Sensor
 
 ## Todo
-Some users report no Lux from Motion Sensor. 
-If you can, please sens in a debug of the PIR sending its data.
-All my PIRs are reporting in Lux so hard to troubleshoot
+* Add more settings to devices
+* Custom mobile card on Wall Plug 
 
 ## Change Log:
 ### v 1.1.5
