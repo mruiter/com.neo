@@ -18,11 +18,13 @@ Makes Homey work with these nice and cheap chinese z-wave products
 ### v 1.1.6
 **update:**
 NAS-WR01ZE - Updated mobile card & insights logging to include current and voltage
+
 **note:**
 * re-pair of Power Plug required to make use of this update
 
 ### v 1.1.5
 **add support:**  
 NAS-WR01ZE - Additional settings implemented (e.g. over-load current, alarm current, time switch function)
+
 **update:**  
 NAS-WR01ZE - Bug fixes defaultConfiguration and parameters, implementation of power consumption (kWh), textual fixes (setting-labels, -hints and association group-hints)
