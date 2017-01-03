@@ -20,7 +20,7 @@ Makes Homey work with these nice and cheap chinese z-wave products
 NAS-WR01ZE - Updated mobile card & insights logging to include current and voltage
 
 **note:**
-* re-pair of Power Plug required to make use of this update
+re-pair of Power Plug required to make use of this update
 
 ### v 1.1.5
 **add support:**  
