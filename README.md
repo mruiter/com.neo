@@ -10,13 +10,24 @@ Makes Homey work with these nice and cheap chinese z-wave products
 * NAS-DS01ZE, Door Sensor
 * NAS-WS01ZE, Flood Sensor
 
+## Supported Languages:
+* English
+* Dutch (Nederlands)
+
 ## Todo
 * Add more settings to devices
-* Custom mobile card on Wall Plug 
 
 ## Change Log:
+### v 1.1.6
+**update:**   
+NAS-WR01ZE - Updated mobile card & insights logging to include current and voltage   
+Z-Wave Driver (v1.1.2)   
+**notes**   
+re-pair of Power Plug required to make use of current and voltage reporting capabilities   
+
 ### v 1.1.5
-**add support:**  
-NAS-WR01ZE - Additional settings implemented (e.g. over-load current, alarm current, time switch function)
-**update:**  
-NAS-WR01ZE - Bug fixes defaultConfiguration and parameters, implementation of power consumption (kWh), textual fixes (setting-labels, -hints and association group-hints)
+**add support:**   
+NAS-WR01ZE - Additional settings implemented (e.g. over-load current, alarm current, time switch function)   
+**update:**     
+NAS-WR01ZE - Bug fixes defaultConfiguration and parameters, implementation of power consumption (kWh)   
+NAS-WR01ZE - textual fixes (setting-labels, -hints and association group-hints)   
