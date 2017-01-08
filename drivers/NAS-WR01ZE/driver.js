@@ -4,7 +4,7 @@ const path			= require('path');
 const ZwaveDriver	= require('homey-zwavedriver');
 
 module.exports = new ZwaveDriver( path.basename(__dirname), {
-	debug: true,
+	debug: false,
 	capabilities: {
 		'onoff': {
 			'command_class'				: 'COMMAND_CLASS_SWITCH_BINARY',
@@ -113,44 +113,44 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 		},
 	settings: {
                 "meter_report": {
-                "index": 1,
-                "size": 1,
-                "parser": value => new Buffer([ ( value === true ) ? 1 : 0 ])
-                  },
-		"meter_report_interval": {
-                "index": 2,
-                "size": 2
-                },
-		"over_load_current": {
-                "index": 3,
-                "size": 1
-                },
-		"alarm_current": {
-                "index": 4,
-                "size": 1
-                },
-        	"led_display": {
-                "index": 5,
-                "size": 1,
-                "parser": value => new Buffer([ ( value === true ) ? 1 : 0 ])
-                },
-        	"power_report_change": {
-                "index": 6,
-                "size": 1
-                },
-		"remember_state": {
-                "index": 7,
-                "size": 1,
-                "signed": false,
-                },
-		"time_switch_function": {
-                "index": 8,
-                "size": 1,
-				"parser": value => new Buffer([ ( value === true ) ? 1 : 0 ])
-                },
-		"time_switch_period": {
-                "index": 9,
-                "size": 1
-                }
+               		"index": 1,
+                	"size": 1,
+                	"parser": value => new Buffer([ ( value === true ) ? 1 : 0 ])
+                  	},
+				"meter_report_interval": {
+                	"index": 2,
+                	"size": 2
+                	},
+				"over_load_current": {
+                	"index": 3,
+                	"size": 1
+                	},
+				"alarm_current": {
+                	"index": 4,
+                	"size": 1
+                	},
+        		"led_display": {
+                	"index": 5,
+                	"size": 1,
+                	"parser": value => new Buffer([ ( value === true ) ? 1 : 0 ])
+                	},
+        		"power_report_change": {
+                	"index": 6,
+                	"size": 1
+                	},
+				"remember_state": {
+                	"index": 7,
+                	"size": 1,
+                	"signed": false,
+                	},
+				"time_switch_function": {
+                	"index": 8,
+                	"size": 1,
+					"parser": value => new Buffer([ ( value === true ) ? 1 : 0 ])
+                	},
+				"time_switch_period": {
+                	"index": 9,
+                	"size": 2,
+                	}
               }
 })
