@@ -18,7 +18,7 @@ Makes Homey work with these nice and cheap chinese z-wave products
 * Add more settings to devices
 
 ## Change Log:
-### v 1.1.6
+### v 1.1.6 
 **update:**   
 NAS-WR01ZE - Updated mobile card & insights logging to include current and voltage   
 Z-Wave Driver (v1.1.2)   
