@@ -18,7 +18,16 @@ Makes Homey work with these nice and cheap chinese z-wave products
 * Add more settings to devices
 
 ## Change Log:
-### v 1.1.6
+### v 1.1.7   
+**update:**   
+NAS-PD01ZE - Fixed LUX reporting based on threshold setting     
+NAS-PD01ZE - Added battery alarm trigger card    
+NAS-PD01ZE - Regrouping settings based on function + textual updates settings / labels / hints   
+NAS-WR01ZE - Regrouping settings based on function + textual updates settings / labels / hints   
+**notes**   
+NAS-PD01ZE - LUX reporting based on interval setting is not working; under clarification with manufacturer   
+
+### v 1.1.6 
 **update:**   
 NAS-WR01ZE - Updated mobile card & insights logging to include current and voltage   
 Z-Wave Driver (v1.1.2)   
