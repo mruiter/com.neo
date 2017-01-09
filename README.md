@@ -16,6 +16,7 @@ Makes Homey work with these nice and cheap chinese z-wave products
 
 ## Todo
 * Add more settings to devices
+* Support the soon to be available touch wall switch
 
 ## Change Log:
 ### v 1.1.7   
