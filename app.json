@@ -3,8 +3,8 @@
 	"name": {
 		"en": "NEO Coolcam Z-Wave Products"
 	},
-	"version": "1.1.3",
-	"compatibility": ">=1.0.3",
+	"version": "1.1.7",
+	"compatibility": ">=1.0.1",
 	"description": {
 		"en": "NEO Coolcam Z-Wave products"
 	},
@@ -21,12 +21,57 @@
 		"name": "Marco Ruiter",
 		"email": "mruiter@tuxweb.nl"
 	},
-
+	"contributors": {
+		"developers": [
+			{
+				"name": "Ted Tolboom",
+				"email": "dTNL.Homey@gmail.com"
+			}
+		]
+	},
+	"capabilities": {
+		"measure_current": {
+					"type": "number",
+					"title": {
+						"en": "Current",
+						"nl": "Stroom"
+						},
+					"units": {
+						"en": "A"
+						},
+					"desc": {
+						"en": "Electric current(A)",
+						"nl": "Elektrische stroom (A)"
+						},
+					"chartType": "stepLine",
+					"decimals": 2,
+					"getable": true,
+					"setable": false
+					},
+				"measure_voltage": {
+					"type": "number",
+					"title": {
+						"en": "Voltage",
+						"nl": "Spanning"
+						},
+					"units": {
+						"en": "V"
+						},
+					"desc": {
+						"en": "Voltage (V)",
+						"nl": "Spanning (V)"
+						},
+					"chartType": "stepLine",
+					"decimals": 0,
+					"getable": true,
+					"setable": false
+					}
+		},
 	"drivers": [
 		  {
 			"id": "NAS-WR01ZE",
 			"name": {
-				"en": "NEO Power Wall Plug"
+				"en": "NEO Wall Plug"
 			},
 			"zwave": {
 				"manufacturerId": 600,
@@ -39,48 +84,91 @@
 						"nl": "Druk driemaal op de knop op de NEO Wall Plug"
 					}
 				},
-				"associationGroups": [ 1 ]
+				"associationGroups": [ 1 ],
+				"associationGroupsOptions": {
+					"1": {
+						"hint": {
+							"en": "Reports the lifeline service that assigned to plug status – ON/OFF. It enables the Plug to send reports and readings to the Z-Wave Controller. (Homey ID by default). It is not recommended to change this group.",
+							"nl": "Rapportage van de status van de power plug en staat controle (AAN/UIT) over de power plug toe (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen."
+						}
+					},
+					"2": {
+						"hint": {
+							"en": "Allows for sending alarm commands to associated devices such as Siren, relay module, lighting, etc. If current load is over the max current defined in 'Maximum over-load current', the Plug will send a alarm to the associated devices. (add Z-wave ID of relay devices).",
+							"nl": "Rapportage van een alarm commando naar gekoppelde apparaten, zoals sirene, schakelaar, verlichting, etc. Op het moment dat het stroom hoger is dan gedefinieerd in 'Maximale over-load stroom', wordt een alarm naar de gekoppelde apparaten gestuurd (voeg het Z-wave ID van het te koppelen apparaat toe)."
+						}
+					},
+					"3": {
+						"hint": {
+							"en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
+							"nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)"
+						}
+					}
+				},
+				"defaultConfiguration": [
+					{
+						"id": 1,
+						"size": 1,
+						"value": 1
+					},
+					{
+						"id": 2,
+						"size": 2,
+						"value": 120
+					},
+					{
+						"id": 5,
+						"size": 1,
+						"value": true
+					},
+					{
+						"id": 6,
+						"size": 1,
+						"value": 80
+					},
+					{
+						"id": 7,
+						"size": 1,
+						"value": "0xFF"
+					}	
+				]
 			},
 			"class": "socket",
 			"capabilities": [
 				"onoff",
-				"measure_power"
+				"meter_power",
+				"measure_power",
+				"measure_current",
+				"measure_voltage"
 			],
 			"images": {
 				"large": "/drivers/NAS-WR01ZE/assets/images/large.jpg",
 				"small": "/drivers/NAS-WR01ZE/assets/images/small.jpg"
 			},
-			"settings": [
-				{
-				    "id": "meter_report",
-				    "type": "checkbox",
-				    "label": {
-					    "en": "Meter Report",
-						"nl": "Meter Report"
-				    },
-				    "value": true,
-				    "hint": {
-					    "en": "This will Disable/Enable meter report measure data to controller.",
-						"nl": "Dit zal meter rapportages inschakelen naar controller."
-				    }
-			    },
-				{
-					"id": "meter_report_interval",
-					"type": "number",
-					"attr": {
-						"min": 60,
-						"max": 3600
-					},
-					"value": 120,
-					"label": {
-						"en": "Meter Report Interval (s)",
-						"nl": "Meter Report Interval (s)"
-					},
-					"hint": {
-						"en": "The amount of seconds between a Meter Report being send to controller.",
-						"nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden."
-					}
+			"mobile": {
+            "components": [
+                {
+					"id": "icon",
+					"capabilities": [ "onoff" ]
 				},
+				{
+                    "id": "sensor",
+                    "capabilities": [ "meter_power", "measure_power","measure_current", "measure_voltage" ],
+                    "options": {
+    					"icons": {
+        					"measure_current": "/drivers/NAS-WR01ZE/assets/measure_current.svg",
+        					"measure_voltage": "/drivers/NAS-WR01ZE/assets/measure_voltage.svg",
+        					"measure_power": "/drivers/NAS-WR01ZE/assets/measure_power.svg"
+    							}
+                	}
+                },
+                {
+                    "id": "toggle",
+                    "capabilities": [ "onoff" ]
+                }
+            ]
+        	},
+			"settings": [
 				{
 				    "id": "led_display",
 				    "type": "checkbox",
@@ -90,27 +178,136 @@
 				    },
 				    "value": true,
 				    "hint": {
-					    "en": "This will Disable/Enable the status led on top.",
-						"nl": "Hiermee schakelt u de functie van de status led aan of uit."
+					    "en": "Enable (checked) the status led on top. (#5, default: enabled = checked)",
+						"nl": "Schakel de status indicatie led functie in (checked). (#5, standaard: ingeschakeld = checked)"
 				    }
 			    },
+				{
+				    "id": "meter_report",
+				    "type": "checkbox",
+				    "label": {
+					    "en": "Meter report functie",
+						"nl": "Meter reportage functie"
+				    },
+				    "value": true,
+				    "hint": {
+					    "en": "Enable (checked) sending meter report measure data to the Z-wave controller. (#1, default: enabled = checked)",
+						"nl": "Inschakelen (checked) van het versturen van meter rapportages naar de Z-wave controller. (#1, standaard: ingeschakeld = checked)"
+				    }
+			    	},
+				{
+					"id": "meter_report_interval",
+					"type": "number",
+					"attr": {
+						"min": 60,
+						"max": 3600
+					},
+					"value": 120,
+					"label": {
+						"en": "Meter report interval (s)",
+						"nl": "Meter reportage interval (s)"
+					},
+					"hint": {
+						"en": "The amount of seconds between a Meter Report being send to controller. (#2, default: 120 [s], range: 60 - 65535)",
+						"nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden. (#2, standaard: 120 [s], bereik: 60 - 65535)"
+					}
+				},
+				{
+					"id": "power_report_change",
+					"type": "number",
+					"attr": {
+						"min": 1,
+						"max": 100
+					},
+					"value": 80,
+					"label": {
+						"en": "Power change [%]",
+						"nl": "Wijziging van vermogen [%]"
+					},
+					"hint": {
+						"en": "The amount of power consumed must change to be reported to the controller. (#6, default: 80 [%], range: 1 - 100)",
+						"nl": "De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller. (#6, standaard: 80 [%], bereik: 1 - 100)"
+					}
+				},
 				{
 				    "id": "remember_state",
 				    "type": "checkbox",
 				    "label": {
-					    "en": "Return to last known state after power loss",
-						"nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+					    	"en": "Restore state after power loss",
+							"nl": "Herstel toestand bij spanningsuitval"
 				    },
 				    "value": true,
 				    "hint": {
-					    "en": "After power loss the state of the relay will switch to last known.",
-						"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
+					    	"en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked). (#7, default: enabled = checked)",
+							"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked). (#7, standaard: uitgeschakeld = unchecked)"
 				    }
-			    }
-
+			    },
+				{
+					"id": "over_load_current",
+					"type": "number",
+					"attr": {
+						"min": 1,
+						"max": 16
+					},
+					"value": 12,
+					"label": {
+						"en": "Maximum over-load current (A)",
+						"nl": "Maximale over-load stroom (A)"
+					},
+					"hint": {
+						"en": "Defines the maximum current the plug can provide to the device connected to it. If the current consumed is greater than the value set, the plug will cut power. (#3, default: 12 [A], range: 1 - 12)",
+						"nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het huidige stroomverbruik groter is dan de ingestelde waarde, wordt de power plug uitgeschakeld. (#3, standaard: 12 [A], bereik: 1 - 12)"
+					}
+				},
+				{
+					"id": "alarm_current",
+					"type": "number",
+					"attr": {
+						"min": 1,
+						"max": 16
+					},
+					"value": 12,
+					"label": {
+						"en": "Upper alarm current (A)",
+						"nl": "Bovenwaarde alarm stroom (A)"
+					},
+					"hint": {
+						"en": "Defines the current the plug is allowed to provide to the device connected to it. If the alarm current is exceeded, the plug will send an alarm notification to the controller and LED will turn RED. Value specified has to be less or equal to 'Maximum over-load current'. (#4, default: 12 [A], range: 1 - 12)",
+						"nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het alarm stroom overschreden wordt, zal de power plug een alarm naar de controller versturen en de LED rood kleuren. De waarde moet kleiner of gelijk zijn aan 'Maximale over-load stroom'. (#4, standaard: 12 [A], bereik: 1 - 12)"
+					}
+				},
+				{
+				    "id": "time_switch_function",
+				    "type": "checkbox",
+				    "label": {
+					    	"en": "Time switch off function",
+							"nl": "Tijd uitschakel functie"
+				    },
+				    "value": false,
+				    "hint": {
+					    	"en": "Enable the time switch off function. When enabled (checked), the power plug, after being switched on, will switch off after the defined time in 'Switch off time period'. (#8, default: disabled = unchecked)",
+							"nl": "Inschakelen van de tijd uitschakel functie. Wanneer ingeschakeld (checked) zal de power plug na ingeschakeld te zijn, automatisch uitschakelen na de in 'Uitschakel tijdsduur' gedefinieerde tijd. (#8, standaard: uitgeschakeld = unchecked)"
+				    }
+			    	},
+				{
+					"id": "time_switch_period",
+					"type": "number",
+					"attr": {
+						"min": 1,
+						"max": 65535
+					},
+					"value": 150,
+					"label": {
+						"en": "Switch off time period (min)",
+						"nl": "Uitschakel tijdsduur (min)"
+					},
+					"hint": {
+						"en": "The time period before switching off the power plug, if time function has been enabled in 'Time switch off function'. (#9, default: 150 [min], range: 1 - 65535)",
+						"nl": "De tijdsduur waarna de power plug zal uitschakelen, wanneer de tijd schakelings functie ingeschakeld is in 'Tijd uitschakel functie'. (#9, standaard: 150 [min], bereik: 1 - 65535)"
+					}
+				}
 			]
 		},
-
 		{
 			"id": "NAS-DS01ZE",
 			"name": {
@@ -174,7 +371,7 @@
 		{
 			"id": "NAS-PD01ZE",
 			"name": {
-				"en": "NEO PIR Motion Sensor"
+				"en": "NEO Motion Sensor"
 			},
 			"zwave": {
 				"manufacturerId": 600,
@@ -187,7 +384,50 @@
 						"nl": "Druk driemaal op de code knop binnen in de NEO PIR"
 					}
 				},
-				"associationGroups": [ 1 ]
+				"associationGroups": [ 1 ],
+				"associationGroupsOptions": {
+					"1": {
+						"hint": {
+							"en": "Lifeline service that assigned to Sensor (Motion detector) status – Open/Close. It enables the sensor to send reports and readings to Z‐Wave Controller whenever the sensor is triggered. (Homey ID by default). It is not recommended to change this group.",
+							"nl": "Lifeline service toegekend aan de Sensor (Bewegingsdetectie) status - Open/Dicht. Via deze groep kan de sensor bewegingsdetectie / lichtsterkte / batterijniveau rapporteren naar de Z-wave Controller wanneer de sensor geactiveerd is. (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen."
+						}
+					},
+					"2": {
+						"hint": {
+							"en": "Allows for control commands to associated devices such as relay module, lighting, etc. This association group is configured through the 'Illumination switch ON function' parameters. (add Z-wave ID of relay devices).",
+							"nl": "Verstuurd controle commando naar gekoppelde apparaten zoals schakelaar, verlichting, etc. Deze group wordt geconfigureerd door de 'Lichtsterkte inschakel functie' parameters. (voeg het Z-wave ID van het te koppelen apparaat toe)."
+						} 
+					},
+					"3": {
+						"hint": {
+							"en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
+							"nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)"
+						}
+					},
+					"4": {
+						"hint": {
+							"en": "allows for Send Sensor Binary Report (motion detection) to associated devices in this group (add Z-wave ID of relay devices).",
+							"nl": "Rapportage van Send Sensor Binary Report (bewegingsdetectie) naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)"
+						}
+					}
+				},
+				"defaultConfiguration": [
+					{
+						"id": 10,
+						"size": 1,
+						"value": 0
+					},
+					{
+						"id": 9,
+						"size": 1,
+						"value": "0x14"
+					},
+					{
+						"id": 7,
+						"size": 2,
+						"value": 600
+					}
+				]
 			},
 			"class": "sensor",
 			"capabilities": [
@@ -201,16 +441,42 @@
 			},
 			"settings": [
 				{
+					"id": "enable_PIR_function",
+					"type": "checkbox",
+					"label": {
+						"en": "Motion detection function",
+						"nl": "Bewegingsdetectie functie"
+					},
+					"value": true,
+					"hint": {
+						"en": "Enable the motion detection (PIR) function. This parameter does not effect the luminance reporting. (#4, default: enabled = checked)",
+						"nl": "Inschakelen van de bewegingsdetectie (PIR) functie. Deze parameter heeft geen invloed op de lichtsterke rapportage. (#4, standaard: ingeschakeld = checked)"
+					}					
+				},
+				{
+					"id": "motion_blink",
+					"type": "checkbox",
+					"label": {
+						"en": "LED indication when motion detected",
+						"nl": "LED indicatie bij bewegingsdetectie"
+					},
+					"value": false,
+					"hint": {
+						"en": "Enable LED/PIR to blink red when motion detected. (#10, default: enabled = checked)",
+						"nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (#10, standaard: ingeschakeld = checked)"
+					}					
+				},
+				{
 					"id": "motion_sensor_sensitivity",
 					"type": "dropdown",
 					"label": {
-						"en": "PIR Motion Sensitivity",
-						"nl": "PIR Bewegings Gevoeligheid"
+						"en": "Motion detection sensitivity",
+						"nl": "Bewegingsdetectie gevoeligheid"
 					},
 					"value": "12",
 					"hint": {
-						"en": "You can set the sensitivity of the PIR motion detection",
-						"nl": "Hiermee kunt u de gevoeligheid van de PIR aanpassen"
+						"en": "Adapt the sensitivity of the motion detection. (#1, default: Normal sensitivity)",
+						"nl": "Hiermee kunt u de gevoeligheid van de bewegingsdetectie aanpassen. (#1, standaard: Normale gevoeligheid)"
 					},
 					"values": [
 						{
@@ -224,7 +490,7 @@
 							"id": "12",
 							"label": {
 								"en": "Normal Sensitivity (default)",
-								"nl": "Normale Gevoeligheid (stanaard)"
+								"nl": "Normale Gevoeligheid (standaard)"
 								}
 						},
 						{
@@ -244,58 +510,28 @@
 					]
 				},
 				{
-				"id": "motion_off_delay",
+				"id": "re-trigger_interval",
 				"type": "number",
 						"attr": {
-							"min" : 5,
-							"max" : 600
+							"min" : 0,
+							"max" : 8
 						},
 				    "label": {
-							"en": "Time PIR will give alarm signal",
-							"nl": "De tijd dat de PIR het alarm signaal afgeeft"
+							"en": "Motion detection re-trigger interval (s)",
+							"nl": "Bewegingsdetectie herhalings interval (s)"
 						},
-				    "value": 60,
+				    "value": 8,
 				    "hint": {
-					    "en": "You can define the time from 5 to 600 seconds , during this time the PIR will keep signaling the alarm status to the controller",
-						"nl": "Instelbare tijd dat de PIR alarm afgeeft naar de controller. Van 5 tot 600 seconden instelbaar"
+					    "en": "Motion detection re-trigger interval. This value must be less than the 'Motion detection ON time'. (#6 default: 8 [s], range: 0 - 8 [s])",
+						"nl": "Bewegingsdetectie herhalings interval. De waarde moet lager zijn dan de 'Bewegingsdetectie AAN tijd'. (#6 standaard: 8 [s], bereik: 0 - 8 [s])"
 				    }
 			    },
 				{
-					"id": "motion_blink",
-					"type": "checkbox",
-					"label": {
-						"en": "PIR Blinks red when motion detected",
-						"nl": "PIR knippert rood bij bewegings detectie"
-					},
-					"value": true,
-					"hint": {
-						"en": "PIR Blinks red when motion detected",
-						"nl": "PIR knippert rood bij bewegings detectie"
-					}					
-				},
-				{
-					"id": "day_night_treshold",
-					"type": "number",
-					"value": 100,
-					"attr": {
-						"min": 0,
-						"max": 1000
-					},
-					"label": {
-						"en": "Motion operating mode threshold",
-						"nl": "Bewegings alarm functie drempel"
-					},
-					"hint": {
-						"en": "Determine on which lux level it is either day or night",
-						"nl": "Bepaal bij hoeveel lux het schakelt tussen dag of nacht"
-					}
-				},
-							{
 					"id": "illumination_polling_interval",
 					"type": "number",
 					"label": {
-						"en": "Illumination polling interval (seconds)",
-						"nl": "Lichtsterkte polling interval (seconden)"
+						"en": "Illumination polling interval (s)",
+						"nl": "Lichtsterkte polling interval (s)"
 					},
 					"value": 180,
 					"attr": {
@@ -303,8 +539,8 @@
 						"max": 36000
 					},
 					"hint": {
-						"en": "Determine the time between illumination reports to Homey, even when value has not changed.\nRange: 60 - 36000",
-						"nl": "Bepaal wanneer de lichtsterkte waarde naar Homey word verzonden, ook als de waarde niet veranderd is.\nBereik: 60 - 36000"
+						"en": "Determine the time between illumination reports to Homey, even when value has not changed. (#7 default: 180 [s], range: 60 - 36000 [s])",
+						"nl": "Bepaal het interval tussen lichtsterkte rapportages naar Homey, ook als de waarde niet veranderd is. (#7 standaard: 180 [s], bereik: 60 - 36000 [s])"
 					}
 				},
 				{
@@ -314,14 +550,79 @@
 						"en": "Illumination report threshold (lux)",
 						"nl": "Lichtsterkte rapportage drempel (lux)"
 					},
+					"value": 20,
+					"attr": {
+						"min": 0,
+						"max": 255
+					},
+					"hint": {
+						"en": "Sets how many lux needs to change before the value is being send to Homey. (#9 default: 20 [lux], range: 0 - 255 [lux])",
+						"nl": "Definieer hoeveel lux er moet veranderen voordat de waarde naar Homey word verstuurd. (#9 standaard: 20 [lux], bereik: 0 - 1000 [lux])"
+					}
+				},
+				{
+					"id": "enable_illumination_trigger",
+					"type": "checkbox",
+					"label": {
+						"en": "Illumination switch ON function",
+						"nl": "Lichtsterkte inschakel functie"
+					},
+					"value": false,
+					"hint": {
+						"en": "Enable the function to switch on a associated device (group 2) once motion has been detected and the illumination level will be less than the value specified in 'Illumination switch ON level'. (#8 default: disabled = unchecked)",
+						"nl": "Inschakelen van de lichtsterkte inschakel functie van een gekoppeld apparaat (groep 2) wanneer de lichtsterkte lager is dan de waard gedefinieerd in 'Lichtsterkte inschakel niveau'. (#8 standaard: uitgeschakeld = unchecked)"
+					}					
+				},
+				{
+				"id": "basic_set_level",
+				"type": "number",
+						"attr": {
+							"min" : 0,
+							"max" : 255
+						},
+				    "label": {
+							"en": "Switch ON command (see hint)",
+							"nl": "Inschakel commando (zie hint)"
+						},
+				    "value": 255,
+				    "hint": {
+					    "en": "Command sent to associated device (group 2). (#3 default: 255 = ON, Range: 0 – OFF, Alarm cancelling or turning a device off; 255 – ON (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))",
+						"nl": "Commando dat gestuurd wordt naar het gekoppelde apparaat (group 2). (#3 standaard: 255 = AAN, bereik: 0 – UIT, annulering alarm of het uitschakelen van het gekoppeld apparaat; 255 – AAN (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))"
+				    }
+			    },		
+				{
+				"id": "motion_off_delay",
+				"type": "number",
+						"attr": {
+							"min" : 5,
+							"max" : 600
+						},
+				    "label": {
+							"en": "Motion detection ON time (s)",
+							"nl": "Bewegingsdetectie AAN tijd (s)"
+						},
+				    "value": 60,
+				    "hint": {
+					    "en": "Time duration that the associated device (group 2) stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (#2 default: 30 [s], range: 5 - 600 [s])",
+						"nl": "Instelbare tijd dat het gekoppelde apparaat (groep 2) aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. (#2 standaard: 30 [s], bereik: 5 - 600 [s])"
+				    }
+			    },
+				
+			    {
+					"id": "day_night_treshold",
+					"type": "number",
 					"value": 100,
 					"attr": {
 						"min": 0,
 						"max": 1000
 					},
+					"label": {
+						"en": "Illumination switch ON level (lux)",
+						"nl": "Lichtsterkte inschakel niveau (lux)"
+					},
 					"hint": {
-						"en": "Sets how many lux needs to change before the value is being send to Homey.\nRange: 0 - 1000.",
-						"nl": "Zet hoeveel lux er moet veranderen voordat de waarde naar Homey word verstuurd.\nBereik: 0 - 1000."
+						"en": "Define the illumination level value which determines when the 'Illumination switch ON function' is activated. If the illumination level falls below this value and a person moves across or within the detected area, the motion sensor will switch on the associated device (group 2). (#5 default: 100 [lux], range: 0 - 1000 [lux])",
+						"nl": "Definieer het lichtsterkte niveau waarbij de 'lichtsterkte inschakel functie' actief wordt. Wanneer de lichtsterkte onder deze waarde komt en bewegings wordt waargenomen, schakelt de sensor het gekoppelde apparaat (groep 2) in. (#5 standaard: 100 [lux], bereik: 0 - 1000 [lux])"
 					}
 				}
 			]
@@ -435,7 +736,7 @@
 			]
 		}
 	],
-			"flow" : {
+	"flow" : {
 		"actions": [
 					{
 				"id": "sound_alarm",
@@ -451,7 +752,7 @@
 					}
 				]
 			},
-					{
+			{
 				"id": "silence_alarm",
 				"title": {
 					"en": "Silence alarm",
@@ -481,13 +782,22 @@
 						"filter": "driver_id=NAS-AB01ZE"
 					}
 				]
-			}
+			},
+			{
+				"id": "PD01ZE_battery_alarm",
+				"title": {
+					"en": "The battery alarm turned on",
+					"nl": "De batterijwaarschuwing gaat aan"
+				},
+				"args": [{
+					"name": "device",
+					"type": "device",
+					"filter": "driver_id=NAS-PD01ZE"
+				}
+			]
+		}
 			
 			
 		]
-
-
-
-
 	}
 }
