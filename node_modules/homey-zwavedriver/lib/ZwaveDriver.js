@@ -220,11 +220,17 @@ class ZwaveDriver extends events.EventEmitter {
 
 				let newValue = undefined;
 
+				// If settings object is a function return value in the driver
+				if (typeof settingsObj === 'function') {
+					
+					settingsObj(newSettingsObj[changedKey], oldSettingsObj[changedKey], deviceData);
+					continue;
+
 				// Magically try to convert the value to a buffer
-				if (typeof settingsObj.parser === 'function') {
+				} else if (typeof settingsObj.parser === 'function') {
 
 					// Use the parser defined in driver.js and feed it the newly saved setting
-					newValue = settingsObj.parser(newSettingsObj[changedKey], newSettingsObj);
+					newValue = settingsObj.parser(newSettingsObj[changedKey], newSettingsObj, deviceData);
 
 					// Check if valid buffer is provided
 					if (!Buffer.isBuffer(newValue)) throw new Error(`invalid_setting_value_type_for_${changedKey}`);
@@ -233,7 +239,7 @@ class ZwaveDriver extends events.EventEmitter {
 					|| parseInt(newSettingsObj[changedKey], 10).toString() === newSettingsObj[changedKey]) {
 
 					// Try to write new value  to a buffer
-					if( settingsObj.signed === false ) {
+					if (settingsObj.signed === false) {
 
 						try {
 							newValue = new Buffer(settingsObj.size);

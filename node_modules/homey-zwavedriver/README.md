@@ -62,8 +62,8 @@ module.exports = new ZwaveDriver('mydriver', {
 			'size': 1,
 			
 			// define a custom parser method (optional)
-			'parser': function( input ) {
-				return new Buffer([ parseInt(input) ]);
+			'parser': function( newValue, newSettings, deviceData ) {
+				return new Buffer([ parseInt(newValue) ]);
 			}
 		},
 		'led_ring_color_off': {
@@ -77,6 +77,10 @@ module.exports = new ZwaveDriver('mydriver', {
 			// set signed to false to let (0, 255) scale to (0x00, 0xFF)
 			// otherwise the domain is (-128, 127) for size=1
 			'signed': false
+		},
+		'custom_setting': function( newValue, oldValue, deviceData ) {
+
+			// For using a custom setting in the driver
 		}
 	}
 });
