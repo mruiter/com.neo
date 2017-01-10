@@ -4,6 +4,7 @@ Makes Homey work with these nice and cheap chinese z-wave products
 ## Supported devices with most common parameters:
 * NAS-PD01ZE, Motion Sensor
 * NAS-WR01ZE, Power Switching Plug
+* NAS-SW01ZE, Touch Wall Switch
 
 ## Supported devices with some parameters:
 * NAS-AB01ZE, Siren
@@ -19,6 +20,15 @@ Makes Homey work with these nice and cheap chinese z-wave products
 * Support the soon to be available touch wall switch
 
 ## Change Log:
+
+### v 1.1.8   
+**add support:**   
+NAS-SW01ZE - Touch Wall Switch Support Added
+note: Untested because no hardware available yet
+Please contact me on slack or mail to debug further if something is not working correct with this switch
+**fixed**
+* NAS-AB01ZE - Fixed a flow card error in the driver
+
 ### v 1.1.7   
 **update:**   
 NAS-PD01ZE - Fixed LUX reporting based on threshold setting     

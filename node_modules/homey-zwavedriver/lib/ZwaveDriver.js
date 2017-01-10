@@ -222,9 +222,8 @@ class ZwaveDriver extends events.EventEmitter {
 
 				// If settings object is a function return value in the driver
 				if (typeof settingsObj === 'function') {
-					
+
 					settingsObj(newSettingsObj[changedKey], oldSettingsObj[changedKey], deviceData);
-					continue;
 
 				// Magically try to convert the value to a buffer
 				} else if (typeof settingsObj.parser === 'function') {

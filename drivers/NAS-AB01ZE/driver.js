@@ -52,9 +52,9 @@ Homey.manager('flow').on('action.sound_alarm', function( callback, args ){
 	Homey.log('on flow action.action.sound_alarm');
 	Homey.log('args', args);
 
-	Homey.manager('drivers').getDriver('schreeuwer').capabilities.onoff.set(args.device, true, function (err, data) {
+	Homey.manager('drivers').getDriver('NAS-AB01ZE').capabilities.onoff.set(args.device, true, function (err, data) {
 		Homey.log('');
-		Homey.log('Homey.manager(drivers).getDriver(schreeuwer).capabilities.onoff.set');
+		Homey.log('Homey.manager(drivers).getDriver(NAS-AB01ZE).capabilities.onoff.set');
 		Homey.log('err', err);
 		Homey.log('data', data);
 		if (err) callback (err, false);
@@ -68,9 +68,9 @@ Homey.manager('flow').on('action.silence_alarm', function( callback, args ){
 	Homey.log('on flow action.action.silence_alarm');
 	Homey.log('args', args);
 
-	Homey.manager('drivers').getDriver('schreeuwer').capabilities.onoff.set(args.device, false, function (err, data) {
+	Homey.manager('drivers').getDriver('NAS-AB01ZE').capabilities.onoff.set(args.device, false, function (err, data) {
 		Homey.log('');
-		Homey.log('Homey.manager(drivers).getDriver(schreeuwer).capabilities.onoff.set');
+		Homey.log('Homey.manager(drivers).getDriver(NAS-AB01ZE).capabilities.onoff.set');
 		Homey.log('err', err);
 		Homey.log('data', data);
 		if (err) callback (err, false);
