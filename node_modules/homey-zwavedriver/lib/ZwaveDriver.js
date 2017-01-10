@@ -4,6 +4,8 @@ const events = require('events');
 
 const nodeEvents = ['online', 'applicationUpdate'];
 
+const SAVED_STATE_TIMEOUT = 30 * 60 * 1000; // 30 min. Duration window within stored capability values are considered valid
+
 /**
  * Generic driver for Z-Wave devices.
  */
@@ -19,6 +21,7 @@ class ZwaveDriver extends events.EventEmitter {
 		super();
 
 		// Get driver specification as defined in app.json
+		this.driverId = driverId;
 		this.driver = findWhere(Homey.manifest.drivers, { id: driverId });
 
 		// Override default options with provided options object
@@ -38,6 +41,11 @@ class ZwaveDriver extends events.EventEmitter {
 
 		this.capabilities = {};
 		this.pollIntervals = {};
+
+		// register unload cb
+		if( Homey && Homey.on ) {
+			Homey.on('unload', this._onUnload.bind(this));
+		}
 
 		// bind set and get functions
 
@@ -312,6 +320,19 @@ class ZwaveDriver extends events.EventEmitter {
 				setPollIntervals: {},
 			};
 
+			// get older state
+			let state = Homey.manager('settings').get(`zwavedriver_${this.driverId}_${deviceData.token}_state`)
+			if( state ) {
+				let when = new Date( state.when );
+				if( ((new Date) - when) < SAVED_STATE_TIMEOUT ) {
+					this._debug(deviceData.token, 'Found saved state', state);
+					this.nodes[deviceData.token].state = state.state;
+				}
+
+				Homey.manager('settings').unset(`zwavedriver_${this.driverId}_${deviceData.token}_state`);
+
+			}
+
 			nodeEvents.forEach((nodeEvent) => {
 				zwaveNode.on(nodeEvent, function () {
 					const args = Array.prototype.slice.call(arguments);
@@ -365,7 +386,7 @@ class ZwaveDriver extends events.EventEmitter {
 				}
 
 				this._debug('------------------------------------------');
-				console.log('');
+				this._debug('');
 
 				// attach event listeners
 				nodeEvents.forEach((nodeEvent) => {
@@ -699,6 +720,26 @@ class ZwaveDriver extends events.EventEmitter {
 			args.unshift('[debug]');
 			console.log.apply(null, args);
 		}
+	}
+
+	/**
+	 * Fired when the app unloads
+	 * to save all battery data
+	 * @private
+	*/
+	_onUnload() {
+
+		for( let nodeId in this.nodes ) {
+			let node = this.nodes[ nodeId ];
+			if( node.instance.battery !== true ) continue;
+
+			Homey.manager('settings').set(`zwavedriver_${this.driverId}_${nodeId}_state`, {
+				state: node.state,
+				when: new Date()
+			});
+
+		}
+
 	}
 }
 
