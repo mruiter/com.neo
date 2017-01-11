@@ -23,6 +23,10 @@
 	},
 	"contributors": {
 		"developers": [
+						{
+				"name": "Marco Ruiter",
+				"email": "mruiter@tuxweb.nl"
+			},
 			{
 				"name": "Ted Tolboom",
 				"email": "dTNL.Homey@gmail.com"
@@ -323,7 +327,19 @@
 						"nl": "Druk driemaal op de knop in de Deur Sensor unit"
 					}
 				},
-				"associationGroups": [ 1 ]
+				"associationGroups": [ 1 ],
+				"defaultConfiguration": [
+					{
+						"id": 1,
+						"size": 2,
+						"value": 0
+					},
+					{
+						"id": 2,
+						"size": 1,
+						"value": 255
+					}
+				]
 			},
 			"class": "sensor",
 			"capabilities": [
@@ -347,7 +363,8 @@
 						},
 				    "value": 0,
 				    "hint": {
-					    "en": "This configuration parameter that can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay"
+					    "en": "Can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay",
+						"nl": "Kan gebruikt worden om de hoeveelheid vertraging aan te passen voordat het OFF commando verzonden. Deze parameter kan worden geconfigureerd met de waarde van 0 tot en met 65535, waarbij 0 betekent stuur onmiddellijk UIT commando en 65535 betekent 65.535 seconden vertraging"
 				    }
 			    },
 				{
@@ -362,7 +379,8 @@
 						"en": "Basic Set Level"
 					},
 					"hint": {
-						"en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), -1=ON (Binary Switch Device)"
+						"en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), -1=ON (Binary Switch Device)",
+						"nl": "0=UIT, Alarm annuleren of het uitschakelen van de sensor, 1-99 = Dim Level (Multilevel Switch Device), -1 = ON (Binary Switch Device)"
 						}
 					}
 				]

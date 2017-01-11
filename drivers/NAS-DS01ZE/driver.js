@@ -13,7 +13,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			'command_report_parser': report => report['Sensor Value'] === 'detected an event'
 		},
 		'measure_battery': {
-			getOnWakeUp: true,
+			//getOnWakeUp: true,
 			'command_class': 'COMMAND_CLASS_BATTERY',
 			'command_get': 'BATTERY_GET',
 			'command_report': 'BATTERY_REPORT',
@@ -29,14 +29,14 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 	settings: {
 		"off_delay": {
 			"index": 1,
-			"size": 1,
+			"size": 2,
 			"parser": function( input ) {
 				return new Buffer([ parseInt(input) ]);
 			}
 		},
 		"basic_level_set": {
 			"index": 2,
-			"size": 2,
+			"size": 1,
 			"parser": function( input ) {
 				return new Buffer([ parseInt(input) ]);
 			}

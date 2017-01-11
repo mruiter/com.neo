@@ -226,58 +226,60 @@ class ZwaveDriver extends events.EventEmitter {
 					settingsObj(newSettingsObj[changedKey], oldSettingsObj[changedKey], deviceData);
 
 				// Magically try to convert the value to a buffer
-				} else if (typeof settingsObj.parser === 'function') {
-
-					// Use the parser defined in driver.js and feed it the newly saved setting
-					newValue = settingsObj.parser(newSettingsObj[changedKey], newSettingsObj, deviceData);
-
-					// Check if valid buffer is provided
-					if (!Buffer.isBuffer(newValue)) throw new Error(`invalid_setting_value_type_for_${changedKey}`);
-
-				} else if (typeof newSettingsObj[changedKey] === 'number'
-					|| parseInt(newSettingsObj[changedKey], 10).toString() === newSettingsObj[changedKey]) {
-
-					// Try to write new value  to a buffer
-					if (settingsObj.signed === false) {
-
-						try {
-							newValue = new Buffer(settingsObj.size);
-							newValue.writeUIntBE(newSettingsObj[changedKey], 0, settingsObj.size);
-						} catch (e) {
-							return this._debug(e);
-						}
-
-					} else {
-
-						try {
-							newValue = new Buffer(settingsObj.size);
-							newValue.writeIntBE(newSettingsObj[changedKey], 0, settingsObj.size);
-						} catch (e) {
-							return this._debug(e);
-						}
-
-					}
-				} else if (typeof newSettingsObj[changedKey] === 'boolean') {
-					newValue = new Buffer([(newSettingsObj[changedKey] === true) ? 1 : 0]);
-				}
-
-				if (Buffer.isBuffer(newValue)) {
-					this._debug('CONFIGURATION_SET', 'index:', settingsObj.index, 'size:', settingsObj.size,
-						'newValue', newValue);
-
-					// Call configuration set on node with new value
-					node.instance.CommandClass.COMMAND_CLASS_CONFIGURATION.CONFIGURATION_SET({
-						'Parameter Number': settingsObj.index,
-						Level: {
-							Size: settingsObj.size,
-							Default: false,
-						},
-						'Configuration Value': newValue,
-					}, (err, result) => {
-						if (err) return this._debug('CONFIGURATION_SET', err);
-					});
 				} else {
-					this._debug('invalid new value for setting', changedKey);
+					if (typeof settingsObj.parser === 'function') {
+
+						// Use the parser defined in driver.js and feed it the newly saved setting
+						newValue = settingsObj.parser(newSettingsObj[changedKey], newSettingsObj, deviceData);
+
+						// Check if valid buffer is provided
+						if (!Buffer.isBuffer(newValue)) throw new Error(`invalid_setting_value_type_for_${changedKey}`);
+
+					} else if (typeof newSettingsObj[changedKey] === 'number'
+						|| parseInt(newSettingsObj[changedKey], 10).toString() === newSettingsObj[changedKey]) {
+
+						// Try to write new value  to a buffer
+						if (settingsObj.signed === false) {
+
+							try {
+								newValue = new Buffer(settingsObj.size);
+								newValue.writeUIntBE(newSettingsObj[changedKey], 0, settingsObj.size);
+							} catch (e) {
+								return this._debug(e);
+							}
+
+						} else {
+
+							try {
+								newValue = new Buffer(settingsObj.size);
+								newValue.writeIntBE(newSettingsObj[changedKey], 0, settingsObj.size);
+							} catch (e) {
+								return this._debug(e);
+							}
+
+						}
+					} else if (typeof newSettingsObj[changedKey] === 'boolean') {
+						newValue = new Buffer([(newSettingsObj[changedKey] === true) ? 1 : 0]);
+					}
+
+					if (Buffer.isBuffer(newValue)) {
+						this._debug('CONFIGURATION_SET', 'index:', settingsObj.index, 'size:', settingsObj.size,
+							'newValue', newValue);
+
+						// Call configuration set on node with new value
+						node.instance.CommandClass.COMMAND_CLASS_CONFIGURATION.CONFIGURATION_SET({
+							'Parameter Number': settingsObj.index,
+							Level: {
+								Size: settingsObj.size,
+								Default: false,
+							},
+							'Configuration Value': newValue,
+						}, (err, result) => {
+							if (err) return this._debug('CONFIGURATION_SET', err);
+						});
+					} else {
+						this._debug('invalid new value for setting', changedKey);
+					}
 				}
 			}
 		});
