@@ -21,7 +21,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			}
 		},
 		'measure_battery': {
-			getOnWakeUp: true,
+			//getOnWakeUp: true,
 			'command_class': 'COMMAND_CLASS_BATTERY',
 			'command_get': 'BATTERY_GET',
 			'command_report': 'BATTERY_REPORT',
@@ -37,12 +37,68 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 		
 		},
 	    settings: {
+				"alarmvolume": {
+					"index": 1,
+					"size": 1,
+					"parser": function( input ) {
+					return new Buffer([ parseInt(input) ]);
+					}
+                },
+				"alarmsoundtime": {
+					"index": 2,
+					"size": 1,
+					"parser": function( input ) {
+					return new Buffer([ parseInt(input) ]);
+					}
+                },
+				"doorbellsoundtime": {
+					"index": 3,
+					"size": 1,
+					"parser": function( input ) {
+					return new Buffer([ parseInt(input) ]);
+					}
+                },
+				"doorbellvolume": {
+					"index": 4,
+					"size": 1,
+					"parser": function( input ) {
+					return new Buffer([ parseInt(input) ]);
+					}
+                },
+				"alarmtune": {
+					"index": 5,
+					"size": 1,
+					"parser": function( input ) {
+					return new Buffer([ parseInt(input) ]);
+					}
+                },
+				"doorbelltune": {
+					"index": 6,
+					"size": 1,
+					"parser": function( input ) {
+					return new Buffer([ parseInt(input) ]);
+					}
+                },
+				"alarmordoorbell": {
+					"index": 7,
+					"size": 1,
+					"parser": function( input ) {
+					return new Buffer([ parseInt(input) ]);
+					}
+                },
                 "alarmled": {
-                "index": 8,
-                "size": 1,
-                "parser": function( input ) {
-                return new Buffer([ parseInt(input) ]);
-                  }
+					"index": 8,
+					"size": 1,
+					"parser": function( input ) {
+					return new Buffer([ parseInt(input) ]);
+					}
+                },
+				"doorbellled": {
+					"index": 9,
+					"size": 1,
+					"parser": function( input ) {
+					return new Buffer([ parseInt(input) ]);
+					}
                 },
 	          }
 });

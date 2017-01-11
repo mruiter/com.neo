@@ -5,10 +5,11 @@ Makes Homey work with these nice and cheap chinese z-wave products
 * NAS-PD01ZE, Motion Sensor
 * NAS-WR01ZE, Power Switching Plug
 * NAS-SW01ZE, Touch Wall Switch
+* NAS-AB01ZE, Siren / Doorbell speaker
+* NAS-DS01ZE, Door Sensor
+
 
 ## Supported devices with some parameters:
-* NAS-AB01ZE, Siren
-* NAS-DS01ZE, Door Sensor
 * NAS-WS01ZE, Flood Sensor
 
 ## Supported Languages:
@@ -17,9 +18,19 @@ Makes Homey work with these nice and cheap chinese z-wave products
 
 ## Todo
 * Add more settings to devices
-* Support the soon to be available touch wall switch
 
 ## Change Log:
+
+### v 1.1.9   
+**add support:**   
+NAS-SW01ZE - Touch Wall Switch Support Added
+note: Untested because no hardware available yet
+Please contact me on slack or mail to debug further if something is not working correct with this switch
+NAS-AB01ZE - More settings so the siren can also be used as doorbell speaker
+
+**fixed**
+* NAS-AB01ZE - Fixed a flow card error in the driver
+
 
 ### v 1.1.8   
 **add support:**   
