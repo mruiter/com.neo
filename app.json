@@ -3,7 +3,7 @@
 	"name": {
 		"en": "NEO Coolcam Z-Wave Products"
 	},
-	"version": "1.1.8",
+	"version": "1.1.9",
 	"compatibility": ">=1.0.1",
 	"description": {
 		"en": "NEO Coolcam Z-Wave products"
@@ -134,7 +134,7 @@
 						"id": 7,
 						"size": 1,
 						"value": "0xFF"
-					}	
+					}
 				]
 			},
 			"class": "socket",
@@ -385,10 +385,10 @@
 					}
 				]
 		},
-		
-		
-		
-		
+
+
+
+
 		{
 			"id": "NAS-SW01ZE",
 			"name": {
@@ -488,7 +488,7 @@
 			    }
 			]
 		},
-		
+
 		{
 			"id": "NAS-PD01ZE",
 			"name": {
@@ -517,7 +517,7 @@
 						"hint": {
 							"en": "Allows for control commands to associated devices such as relay module, lighting, etc. This association group is configured through the 'Illumination switch ON function' parameters. (add Z-wave ID of relay devices).",
 							"nl": "Verstuurd controle commando naar gekoppelde apparaten zoals schakelaar, verlichting, etc. Deze group wordt geconfigureerd door de 'Lichtsterkte inschakel functie' parameters. (voeg het Z-wave ID van het te koppelen apparaat toe)."
-						} 
+						}
 					},
 					"3": {
 						"hint": {
@@ -572,7 +572,7 @@
 					"hint": {
 						"en": "Enable the motion detection (PIR) function. This parameter does not effect the luminance reporting. (#4, default: enabled = checked)",
 						"nl": "Inschakelen van de bewegingsdetectie (PIR) functie. Deze parameter heeft geen invloed op de lichtsterke rapportage. (#4, standaard: ingeschakeld = checked)"
-					}					
+					}
 				},
 				{
 					"id": "motion_blink",
@@ -585,7 +585,7 @@
 					"hint": {
 						"en": "Enable LED/PIR to blink red when motion detected. (#10, default: enabled = checked)",
 						"nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (#10, standaard: ingeschakeld = checked)"
-					}					
+					}
 				},
 				{
 					"id": "motion_sensor_sensitivity",
@@ -692,7 +692,7 @@
 					"hint": {
 						"en": "Enable the function to switch on a associated device (group 2) once motion has been detected and the illumination level will be less than the value specified in 'Illumination switch ON level'. (#8 default: disabled = unchecked)",
 						"nl": "Inschakelen van de lichtsterkte inschakel functie van een gekoppeld apparaat (groep 2) wanneer de lichtsterkte lager is dan de waarde gedefinieerd in 'Lichtsterkte inschakel niveau'. (#8 standaard: uitgeschakeld = unchecked)"
-					}					
+					}
 				},
 				{
 				"id": "basic_set_level",
@@ -710,7 +710,7 @@
 					    "en": "Command sent to associated device (group 2). (#3 default: 255 = ON, Range: 0 – OFF, Alarm cancelling or turning a device off; 255 – ON (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))",
 						"nl": "Commando dat gestuurd wordt naar het gekoppelde apparaat (group 2). (#3 standaard: 255 = AAN, bereik: 0 – UIT, annulering alarm of het uitschakelen van het gekoppeld apparaat; 255 – AAN (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))"
 				    }
-			    },		
+			    },
 				{
 				"id": "motion_off_delay",
 				"type": "number",
@@ -728,7 +728,7 @@
 						"nl": "Instelbare tijd dat het gekoppelde apparaat (groep 2) aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. (#2 standaard: 30 [s], bereik: 5 - 600 [s])"
 				    }
 			    },
-				
+
 			    {
 					"id": "day_night_treshold",
 					"type": "number",
@@ -1213,7 +1213,7 @@
 						}
 					]
 				},
-				{					
+				{
 					"id": "alarmled",
 				    "type": "checkbox",
 				    "label": {
@@ -1225,8 +1225,8 @@
 					    "en": "You can turn the alarm led siginaling on on/off",
 						"nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden"
 				    }
-			    },				
-				{					
+			    },
+				{
 					"id": "doorbellled",
 				    "type": "checkbox",
 				    "label": {
@@ -1240,8 +1240,8 @@
 				    }
 			    }
 			]
-		},		
-		
+		},
+
 		{
 			"id": "NAS-WS01ZE",
 			"name": {
@@ -1258,7 +1258,45 @@
 						"nl": "Druk driemaal op de code knop binnen in de NEO Flood Sensor"
 					}
 				},
-				"associationGroups": [ 1 ]
+				"associationGroups": [ 1 ],
+				"defaultConfiguration": [
+					{
+						"id": 1,
+						"size": 1,
+						"value": 120
+					},
+					{
+						"id": 2,
+						"size": 1,
+						"value": 1
+					},
+					{
+						"id": 3,
+						"size": 1,
+						"value": 60
+					},
+					{
+						"id": 4,
+						"size": 1,
+						"value": 5
+					},
+					{
+						"id": 5,
+						"size": 1,
+						"value": 1
+					},
+					{
+						"id": 6,
+						"size": 1,
+						"value": 1
+					}
+					,
+					{
+						"id": 7,
+						"size": 1,
+						"value": "0xFF"
+					}
+				]
 			},
 			"class": "sensor",
 			"capabilities": [
@@ -1270,7 +1308,74 @@
 				"small": "/drivers/NAS-WS01ZE/assets/images/small.jpg"
 			},
 			"settings": [
-
+				{
+					"id": "alarm_duration_time",
+					"type": "number",
+					"attr": {
+						"min": 1,
+						"max": 255
+					},
+					"value": 1,
+					"label": {
+						"en": "Alarm Duration Time",
+						"nl": "Alarm Duratie Tijd"
+					},
+					"hint": {
+						"en": "This configuration parameter that can be used to adjust the time in minutes for beep and LED turned on when water leakage is detected. If this parameter is set to ‘0’, the beep and LED will be turn on always until water leakage is not detected. (default: 120, range: 0 - 255)",
+						"nl": "Deze configuratie parameter die kan worden gebruikt om de tijd in minuten aan te passen voor geluidssignaal en LED ingeschakeld wanneer lekwater wordt gedetecteerd. Als deze parameter is ingesteld op '0', zal de pieptoon en LED altijd aan zijn tot lekkage water niet meer wordt gedetecteerd. (Standaard: 120, bereik: 0-255)"
+					}
+				},
+				{
+					"id": "alarm_interval",
+					"type": "number",
+					"attr": {
+						"min": 1,
+						"max": 255
+					},
+					"value": 1,
+					"label": {
+						"en": "Alarm Interval",
+						"nl": "Alarm Interval"
+					},
+					"hint": {
+						"en": "This Parameter defines beep on /off interval time in minutes when water leakage is detected. (default: 1, range: 1 - 255)",
+						"nl": "Deze parameter definieert pieptoon aan / uit interval tijd in minuten waneer lekwater wordt gedetecteerd. (Standaard: 1, bereik: 1-255)"
+					}
+				},
+				{
+					"id": "first_alarm_ontime",
+					"type": "number",
+					"attr": {
+						"min": 10,
+						"max": 255
+					},
+					"value": 60,
+					"label": {
+						"en": "First Alarm On Time Duration",
+						"nl": "Eerste Alarm On Time tijdsduur"
+					},
+					"hint": {
+						"en": "This parameter defines beep in seconds on duration first time when water leakage is detected. (default: 60, range: 10 - 255)",
+						"nl": "Deze parameter definieert de pieptoon in seconden van de duur eerste keer toen lekwater wordt gedetecteerd. (Standaard: 60, bereik: 10-255)"
+					}
+				},
+				{
+					"id": "first_alarm_duration",
+					"type": "number",
+					"attr": {
+						"min": 5,
+						"max": 255
+					},
+					"value": 5,
+					"label": {
+						"en": "Alarm on time duration",
+						"nl": "Alarm aan tijd duur"
+					},
+					"hint": {
+						"en": "This parameter defines beep on duration in seconds after first beep on when water leakage is detected. (default: 5, range: 5 - 255)",
+						"nl": "Deze parameter definieert de pieptoon in seconden van de duur in seconden na eerste pieptoon wanneer lekwater wordt gedetecteerd. (Standaard: 5, bereik: 5-255)"
+					}
+				},
 				{
 					"id": "alarm_sound_enable_disable",
 					"type": "checkbox",
@@ -1281,6 +1386,19 @@
 					"hint": {
 						"en": "When unchecked it will only report to controller no sound",
 						"nl": "Indien niet aangevink zal er alleen een notificatie naar de controller worden verzonden , geen geluid"
+					},
+					"value": true
+				},
+				{
+					"id": "sensor_enable_disable",
+					"type": "checkbox",
+					"label": {
+						"en": "Enable or Disable sensor",
+						"nl": "Schakel sensor Aan of Uit"
+					},
+					"hint": {
+						"en": "When unchecked the sensor will not report and is disabled",
+						"nl": "Indien niet aangevink zal de sensor worden uitgeschakeld"
 					},
 					"value": true
 				}
@@ -1347,8 +1465,6 @@
 				}
 			]
 		}
-			
-			
 		]
 	}
 }
