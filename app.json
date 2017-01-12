@@ -4,7 +4,7 @@
 		"en": "NEO Coolcam Z-Wave Products"
 	},
 	"version": "1.1.9",
-	"compatibility": ">=1.0.1",
+	"compatibility": ">=1.1.3",
 	"description": {
 		"en": "NEO Coolcam Z-Wave products"
 	},
@@ -33,44 +33,7 @@
 			}
 		]
 	},
-	"capabilities": {
-		"measure_current": {
-					"type": "number",
-					"title": {
-						"en": "Current",
-						"nl": "Stroom"
-						},
-					"units": {
-						"en": "A"
-						},
-					"desc": {
-						"en": "Electric current(A)",
-						"nl": "Elektrische stroom (A)"
-						},
-					"chartType": "stepLine",
-					"decimals": 2,
-					"getable": true,
-					"setable": false
-					},
-				"measure_voltage": {
-					"type": "number",
-					"title": {
-						"en": "Voltage",
-						"nl": "Spanning"
-						},
-					"units": {
-						"en": "V"
-						},
-					"desc": {
-						"en": "Voltage (V)",
-						"nl": "Spanning (V)"
-						},
-					"chartType": "stepLine",
-					"decimals": 0,
-					"getable": true,
-					"setable": false
-					}
-		},
+
 	"drivers": [
 		  {
 			"id": "NAS-WR01ZE",
@@ -846,10 +809,10 @@
 				    "id": "alarmvolume",
 				    "type": "dropdown",
 				    "label": {
-					    "en": "Alarm Volume",
-						"nl": "Alarm Volume"
+					    "en": "Alarm volume",
+						"nl": "Alarm volume"
 				    },
-				    "value": 3,
+				    "value": "3",
 				    "hint": {
 					    "en": "Set the volume of the Alarm sound",
 						"nl": "Aanpassen volume van Alarm geluid"
@@ -882,10 +845,10 @@
 					"id": "alarmsoundtime",
 				    "type": "dropdown",
 				    "label": {
-					    "en": "Alarm sound duration time",
-						"nl": "Alarm geluid duratie"
+					    "en": "Alarm duration time",
+						"nl": "Alarm duratie"
 				    },
-				    "value": 2,
+				    "value": "2",
 				    "hint": {
 					    "en": "Set the duration of the time the siren will sound its alarm music",
 						"nl": "Pas de tijd aan dat de sirene zijn alarm geluid laat horen"
@@ -929,13 +892,49 @@
 					]
 				},
 				{
+				    "id": "doorbellvolume",
+				    "type": "dropdown",
+				    "label": {
+					    "en": "Doorbell volume",
+						"nl": "Deurbel volume"
+				    },
+				    "value": "1",
+				    "hint": {
+					    "en": "Set the volume of the Doorbell sound",
+						"nl": "Aanpassen volume van deurbel geluid"
+				    },
+					"values": [
+						{
+							"id": "1",
+							"label": {
+								"en": "Low (default)",
+								"nl": "Laag (standaard)"
+								}
+						},
+						{
+							"id": "2",
+							"label": {
+								"en": "Midle",
+								"nl": "Middelmatig"
+								}
+						},
+						{
+							"id": "3",
+							"label": {
+								"en": "High",
+								"nl": "Hoog"
+								}
+						}
+					]
+				},
+				{
 					"id": "doorbellsoundtime",
 				    "type": "dropdown",
 				    "label": {
-					    "en": "Doorbell sound duration time",
-						"nl": "Deurbel geluid duratie"
+					    "en": "Doorbell duration time",
+						"nl": "Deurbel duratie"
 				    },
-				    "value": 1,
+				    "value": "1",
 				    "hint": {
 					    "en": "Set the duration of the time the doorbell will sound its music",
 						"nl": "Pas de tijd aan dat de deurbell zijn geluid laat horen"
@@ -979,49 +978,13 @@
 					]
 				},
 				{
-				    "id": "doorbellvolume",
-				    "type": "dropdown",
-				    "label": {
-					    "en": "Doorbell Volume",
-						"nl": "Deurbel Volume"
-				    },
-				    "value": 1,
-				    "hint": {
-					    "en": "Set the volume of the Doorbell sound",
-						"nl": "Aanpassen volume van deurbel geluid"
-				    },
-					"values": [
-						{
-							"id": "1",
-							"label": {
-								"en": "Low (default)",
-								"nl": "Laag (standaard)"
-								}
-						},
-						{
-							"id": "2",
-							"label": {
-								"en": "Midle",
-								"nl": "Middelmatig"
-								}
-						},
-						{
-							"id": "3",
-							"label": {
-								"en": "High",
-								"nl": "Hoog"
-								}
-						}
-					]
-				},
-				{
 				    "id": "alarmtune",
 				    "type": "dropdown",
 				    "label": {
 					    "en": "Alarm sound tune",
-						"nl": "Melodie/geluid bij alarm"
+						"nl": "Melodie/geluid alarm"
 				    },
-				    "value": 10,
+				    "value": "10",
 				    "hint": {
 					    "en": "Choose the tune of the alarm sound",
 						"nl": "Kies de melodie die gebruikt wordt bij alarm"
@@ -1104,9 +1067,9 @@
 				    "type": "dropdown",
 				    "label": {
 					    "en": "Doorbell sound tune",
-						"nl": "Melodie/geluid als deurbel"
+						"nl": "Melodie/geluid deurbel"
 				    },
-				    "value": 9,
+				    "value": "9",
 				    "hint": {
 					    "en": "Choose the tune of the doorbell sound",
 						"nl": "Kies de melodie die gebruikt wordt als deurbel"
@@ -1188,10 +1151,10 @@
 				    "id": "alarmordoorbell",
 				    "type": "dropdown",
 				    "label": {
-					    "en": "Use siren as Alarm or Doorbell",
-						"nl": "Gebruik siren als Alarm of Deurbell"
+					    "en": "Use as Siren or Doorbell",
+						"nl": "Gebruik als sirene of bel"
 				    },
-				    "value": 1,
+				    "value": "1",
 				    "hint": {
 					    "en": "You can choose on what setting the siren works (alarm or deurbell settings)",
 						"nl": "Maak uw keuze op welk setting nivo de sirene werkt (alarm of deurbel settings"

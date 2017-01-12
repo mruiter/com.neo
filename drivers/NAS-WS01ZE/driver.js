@@ -12,7 +12,6 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			'command_report': 'SENSOR_BINARY_REPORT',
 			'command_report_parser': report => report['Sensor Value'] === 'detected an event'
 		},
-
 		'measure_battery': {
 			//getOnWakeUp: true,
 			'command_class': 'COMMAND_CLASS_BATTERY',
@@ -26,8 +25,6 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				}
  			}
 		}
-
-
 	},
 	settings: {
 		"alarm_duration_time": {
@@ -53,6 +50,6 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 		"sensor_enable_disable": {
 			"index": 6,
 			"size": 1,
-		},
+		}
 	}
 });
