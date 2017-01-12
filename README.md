@@ -1,5 +1,5 @@
 # SZ Neo Coolcam device support App for Homey @ Athom.com
-Makes Homey work with these nice and cheap Chinese z-wave products
+Makes Homey work with these great and cheap Chinese z-wave products
 
 ## Supported devices with most common parameters:
 * NAS-PD01ZE, Motion Sensor
@@ -29,10 +29,6 @@ Please contact me on slack @m-ruiter or mail to debug further if something is no
 NAS-AB01ZE - All settings added so the siren can also be used as doorbell speaker
 NAS-DS10ZE - All settings added
 NAS-WR01ZE - Removed custom capabilities as they are now part of the default Homey capabilities
-
-**fixed**
-* NAS-AB01ZE - Fixed a flow card error in the driver
-
 
 ### v 1.1.8   
 **add support:**   
