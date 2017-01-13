@@ -21,7 +21,7 @@ None until Neo releases new products
 
 ### v 1.1.9 - You need homey firmware 1.1.3 or higher
 **add support:**   
-NAS-SW01ZE - Touch Wall Switch Support Added
+NAS-SW01ZE - Touch Wall Switch Support Added    
 note: Untested because no hardware available yet
 Please contact me on slack @m-ruiter or mail to debug further if something is not working correct with this switch    
 
