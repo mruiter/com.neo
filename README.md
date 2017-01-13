@@ -46,7 +46,7 @@ NAS-PD01ZE - Added battery alarm trigger card
 NAS-PD01ZE - Regrouping settings based on function + textual updates settings / labels / hints   
 NAS-WR01ZE - Regrouping settings based on function + textual updates settings / labels / hints   
 
-**notes**   
+**notes:**   
 NAS-PD01ZE - LUX reporting based on interval setting is not working; under clarification with manufacturer   
 
 ### v 1.1.6 
@@ -54,7 +54,7 @@ NAS-PD01ZE - LUX reporting based on interval setting is not working; under clari
 NAS-WR01ZE - Updated mobile card & insights logging to include current and voltage   
 Z-Wave Driver (v1.1.2)   
 
-**notes**   
+**notes:**   
 re-pair of Power Plug required to make use of current and voltage reporting capabilities   
 
 ### v 1.1.5
