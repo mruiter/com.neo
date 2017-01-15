@@ -2,17 +2,17 @@
 
 const path = require('path');
 const ZwaveDriver = require('homey-zwavedriver');
+// http://products.z-wavealliance.org/products/1920
 
 module.exports = new ZwaveDriver(path.basename(__dirname), {
-	debug: false,
+	debug: true,
 	capabilities: {
 		'alarm_motion': {
 				'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
 				'command_get': 'SENSOR_BINARY_GET',
 				'command_report': 'SENSOR_BINARY_REPORT',
 				'command_report_parser': report => report['Sensor Value'] === 'detected an event'
-				},
-
+			},
 		'measure_luminance': {
 			'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
 			'command_get': 'SENSOR_MULTILEVEL_GET',
@@ -34,24 +34,33 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			return null;
 			}
 		},
-		'measure_battery': {
-			//getOnWakeUp: true,
-			'command_class': 'COMMAND_CLASS_BATTERY',
-			'command_get': 'BATTERY_GET',
-			'command_report': 'BATTERY_REPORT',
-			'command_report_parser': (report, node) => {
-				// If prev value is not empty and new value is empty
-				if (node && node.state && node.state.measure_battery !== 1 && report['Battery Level (Raw)'][0] == 0xFF) {
-					// Trigger device flow
-					Homey.manager('flow').triggerDevice('PD01ZE_battery_alarm', {}, {}, node.device_data, err => {
-						if (err) console.error('Error triggerDevice -> battery_alarm', err);
-					});
-				}
-				if(report['Battery Level (Raw)'][0] == 0xFF) return 1;
-					return report['Battery Level (Raw)'][0];
-				}
-		}
-	},
+		'alarm_battery': { 
+    			'command_class': 'COMMAND_CLASS_BATTERY',
+	    		'command_get': 'BATTERY_GET',
+    			'command_report': 'BATTERY_REPORT',
+    			'command_report_parser': (report, node) => { 
+    				if(report.hasOwnProperty('Battery Level (Raw)')) {
+    					if (report['Battery Level (Raw)'][0] == 255) {
+    						return true
+    						}
+    					return false
+   	        			}
+   					}		
+    	},
+		'measure_battery': { 
+    			//getOnWakeUp: true,
+    			'command_class': 'COMMAND_CLASS_BATTERY',
+	    		'command_get': 'BATTERY_GET',
+    			'command_report': 'BATTERY_REPORT',
+    			'command_report_parser': (report, node) => { 
+    				if(report.hasOwnProperty('Battery Level (Raw)')) {
+    					if(report['Battery Level (Raw)'][0] == 255) return 1;
+        				return report['Battery Level (Raw)'][0];
+						}
+					return null;
+    			}
+    	}
+    },
 	settings: {
 		"motion_sensor_sensitivity": {
 			"index": 1,
@@ -101,4 +110,22 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			"parser": value => new Buffer([ ( value === true ) ? 1 : 0 ])
 		}
 	}
-})
+});
+
+module.exports.on('initNode', token => {
+    const node = module.exports.nodes[token];
+    if (node) {
+        if (node.instance.CommandClass.COMMAND_CLASS_WAKE_UP) {
+            node.instance.CommandClass.COMMAND_CLASS_WAKE_UP.on('report', (command, report) => {
+                if (command.name === 'WAKE_UP_NOTIFICATION') {
+                    // Retrieve 'Battery Level' upon wake-up; temp replacement of getOnWakeUp function (triggering on online event instead of Wake-up)
+                    	node.instance.CommandClass['COMMAND_CLASS_BATTERY'].BATTERY_GET({});
+                    // Option to retrieve the WAKE_UP_INTERVAL upon wake-up; for debugging only
+                    	//node.instance.CommandClass['COMMAND_CLASS_WAKE_UP'].WAKE_UP_INTERVAL_GET({});
+                    // Option to retrieve configuration of a certain parameter upon wake-up; for debugging only
+                    	//node.instance.CommandClass['COMMAND_CLASS_CONFIGURATION'].CONFIGURATION_GET( {'Parameter Number': new Buffer([10])}, null );
+                }
+            });
+        }
+    }
+});
