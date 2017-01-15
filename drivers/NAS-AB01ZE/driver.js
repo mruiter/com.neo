@@ -21,7 +21,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			}
 		},
 		'measure_battery': {
-			getOnWakeUp: true,
+			//getOnWakeUp: true,
 			'command_class': 'COMMAND_CLASS_BATTERY',
 			'command_get': 'BATTERY_GET',
 			'command_report': 'BATTERY_REPORT',
@@ -32,34 +32,59 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 					 return report['Battery Level (Raw)'][0];
 				}
  			}
-		}
-			
-		
+		}	
 		},
 	    settings: {
+				"alarmvolume": {
+					"index": 1,
+					"size": 1,
+					},
+				"alarmsoundtime": {
+					"index": 2,
+					"size": 1,
+					},
+				"doorbellsoundtime": {
+					"index": 3,
+					"size": 1,
+					},
+				"doorbellvolume": {
+					"index": 4,
+					"size": 1,
+					},
+				"alarmtune": {
+					"index": 5,
+					"size": 1,
+					},
+				"doorbelltune": {
+					"index": 6,
+					"size": 1,
+					},
+				"alarmordoorbell": {
+					"index": 7,
+					"size": 1,
+					},
                 "alarmled": {
-                "index": 8,
-                "size": 1,
-                "parser": function( input ) {
-                return new Buffer([ parseInt(input) ]);
-                  }
-                },
-	          }
-});
+					"index": 8,
+					"size": 1,
+					},
+				"doorbellled": {
+					"index": 9,
+					"size": 1,
+					}
+                }
+})
 
 Homey.manager('flow').on('action.sound_alarm', function( callback, args ){
 	Homey.log('');
 	Homey.log('on flow action.action.sound_alarm');
 	Homey.log('args', args);
-
-	Homey.manager('drivers').getDriver('schreeuwer').capabilities.onoff.set(args.device, true, function (err, data) {
+	Homey.manager('drivers').getDriver('NAS-AB01ZE').capabilities.onoff.set(args.device, true, function (err, data) {
 		Homey.log('');
-		Homey.log('Homey.manager(drivers).getDriver(schreeuwer).capabilities.onoff.set');
+		Homey.log('Homey.manager(drivers).getDriver(NAS-AB01ZE).capabilities.onoff.set');
 		Homey.log('err', err);
 		Homey.log('data', data);
 		if (err) callback (err, false);
 	});
-
 	callback( null, true );
 });
 
@@ -67,14 +92,12 @@ Homey.manager('flow').on('action.silence_alarm', function( callback, args ){
 	Homey.log('');
 	Homey.log('on flow action.action.silence_alarm');
 	Homey.log('args', args);
-
-	Homey.manager('drivers').getDriver('schreeuwer').capabilities.onoff.set(args.device, false, function (err, data) {
+	Homey.manager('drivers').getDriver('NAS-AB01ZE').capabilities.onoff.set(args.device, false, function (err, data) {
 		Homey.log('');
-		Homey.log('Homey.manager(drivers).getDriver(schreeuwer).capabilities.onoff.set');
+		Homey.log('Homey.manager(drivers).getDriver(NAS-AB01ZE).capabilities.onoff.set');
 		Homey.log('err', err);
 		Homey.log('data', data);
 		if (err) callback (err, false);
 	});
-
 	callback( null, true );
 })

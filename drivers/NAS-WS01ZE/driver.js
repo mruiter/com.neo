@@ -12,9 +12,8 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			'command_report': 'SENSOR_BINARY_REPORT',
 			'command_report_parser': report => report['Sensor Value'] === 'detected an event'
 		},
-
 		'measure_battery': {
-			getOnWakeUp: true,
+			//getOnWakeUp: true,
 			'command_class': 'COMMAND_CLASS_BATTERY',
 			'command_get': 'BATTERY_GET',
 			'command_report': 'BATTERY_REPORT',
@@ -26,13 +25,31 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				}
  			}
 		}
-
-
 	},
 	settings: {
+		"alarm_duration_time": {
+			"index": 1,
+			"size": 1,
+		},
+		"alarm_interval": {
+			"index": 2,
+			"size": 1,
+		},
+		"first_alarm_ontime": {
+			"index": 3,
+			"size": 1,
+		},
+		"first_alarm_duration": {
+			"index": 4,
+			"size": 1,
+		},
 		"alarm_sound_enable_disable": {
 			"index": 5,
 			"size": 1,
 		},
+		"sensor_enable_disable": {
+			"index": 6,
+			"size": 1,
+		}
 	}
 });
