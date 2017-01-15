@@ -3,8 +3,8 @@
 	"name": {
 		"en": "NEO Coolcam Z-Wave Products"
 	},
-	"version": "1.1.9",
-	"compatibility": ">=1.1.3",
+	"version": "1.1.10",
+	"compatibility": ">=1.0.1",
 	"description": {
 		"en": "NEO Coolcam Z-Wave products"
 	},
@@ -23,7 +23,7 @@
 	},
 	"contributors": {
 		"developers": [
-						{
+			{
 				"name": "Marco Ruiter",
 				"email": "mruiter@tuxweb.nl"
 			},
@@ -33,7 +33,44 @@
 			}
 		]
 	},
-
+	"capabilities": {
+		"measure_current": {
+					"type": "number",
+					"title": {
+						"en": "Current",
+						"nl": "Stroom"
+						},
+					"units": {
+						"en": "A"
+						},
+					"desc": {
+						"en": "Electric current(A)",
+						"nl": "Elektrische stroom (A)"
+						},
+					"chartType": "stepLine",
+					"decimals": 2,
+					"getable": true,
+					"setable": false
+					},
+				"measure_voltage": {
+					"type": "number",
+					"title": {
+						"en": "Voltage",
+						"nl": "Spanning"
+						},
+					"units": {
+						"en": "V"
+						},
+					"desc": {
+						"en": "Voltage (V)",
+						"nl": "Spanning (V)"
+						},
+					"chartType": "stepLine",
+					"decimals": 0,
+					"getable": true,
+					"setable": false
+					}
+		},
 	"drivers": [
 		  {
 			"id": "NAS-WR01ZE",
@@ -97,7 +134,7 @@
 						"id": 7,
 						"size": 1,
 						"value": "0xFF"
-					}
+					}	
 				]
 			},
 			"class": "socket",
@@ -307,7 +344,8 @@
 			"class": "sensor",
 			"capabilities": [
 				"alarm_contact",
-				"measure_battery"
+				"measure_battery",
+				"alarm_battery"
 			],
 			"images": {
 				"large": "/drivers/NAS-DS01ZE/assets/images/large.jpg",
@@ -348,11 +386,7 @@
 					}
 				]
 		},
-
-
-
-
-		{
+{
 			"id": "NAS-SW01ZE",
 			"name": {
 			"en": "NEO Touch Switch"
@@ -451,7 +485,6 @@
 			    }
 			]
 		},
-
 		{
 			"id": "NAS-PD01ZE",
 			"name": {
@@ -468,6 +501,24 @@
 						"nl": "Druk driemaal op de code knop binnen in de NEO PIR"
 					}
 				},
+				"defaultConfiguration": [
+					{
+						"id": 7,
+						"size": 2,
+						"value": 600
+					},
+					{
+						"id": 9,
+						"size": 1,
+						"value": "0x14"
+					},
+					{
+						"id": 10,
+						"size": 1,
+						"value": 0
+					}
+				],
+				"wakeUpInterval": 21600,
 				"associationGroups": [ 1 ],
 				"associationGroupsOptions": {
 					"1": {
@@ -480,7 +531,7 @@
 						"hint": {
 							"en": "Allows for control commands to associated devices such as relay module, lighting, etc. This association group is configured through the 'Illumination switch ON function' parameters. (add Z-wave ID of relay devices).",
 							"nl": "Verstuurd controle commando naar gekoppelde apparaten zoals schakelaar, verlichting, etc. Deze group wordt geconfigureerd door de 'Lichtsterkte inschakel functie' parameters. (voeg het Z-wave ID van het te koppelen apparaat toe)."
-						}
+						} 
 					},
 					"3": {
 						"hint": {
@@ -494,29 +545,13 @@
 							"nl": "Rapportage van Send Sensor Binary Report (bewegingsdetectie) naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)"
 						}
 					}
-				},
-				"defaultConfiguration": [
-					{
-						"id": 10,
-						"size": 1,
-						"value": 0
-					},
-					{
-						"id": 9,
-						"size": 1,
-						"value": "0x14"
-					},
-					{
-						"id": 7,
-						"size": 2,
-						"value": 600
-					}
-				]
+				}
 			},
 			"class": "sensor",
 			"capabilities": [
 				"alarm_motion",
 				"measure_luminance",
+				"alarm_battery",
 				"measure_battery"
 			],
 			"images": {
@@ -535,20 +570,20 @@
 					"hint": {
 						"en": "Enable the motion detection (PIR) function. This parameter does not effect the luminance reporting. (#4, default: enabled = checked)",
 						"nl": "Inschakelen van de bewegingsdetectie (PIR) functie. Deze parameter heeft geen invloed op de lichtsterke rapportage. (#4, standaard: ingeschakeld = checked)"
-					}
+					}					
 				},
 				{
 					"id": "motion_blink",
 					"type": "checkbox",
 					"label": {
-						"en": "LED indication when motion detected",
-						"nl": "LED indicatie bij bewegingsdetectie"
+						"en": "Motion detection LED indication",
+						"nl": "Bewegingsdetectie LED indicatie"
 					},
 					"value": false,
 					"hint": {
-						"en": "Enable LED/PIR to blink red when motion detected. (#10, default: enabled = checked)",
-						"nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (#10, standaard: ingeschakeld = checked)"
-					}
+						"en": "Enable LED/PIR to blink red when motion detected. (#10, default: disabled = unchecked)",
+						"nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (#10, standaard: uitgeschakeld = unchecked)"
+					}					
 				},
 				{
 					"id": "motion_sensor_sensitivity",
@@ -601,21 +636,21 @@
 							"max" : 8
 						},
 				    "label": {
-							"en": "Motion detection re-trigger interval (s)",
-							"nl": "Bewegingsdetectie herhalings interval (s)"
+							"en": "Motion detection blind time (s)",
+							"nl": "Bewegingsdetectie blinde tijd (s)"
 						},
 				    "value": 8,
 				    "hint": {
-					    "en": "Motion detection re-trigger interval. This value must be less than the 'Motion detection ON time'. (#6 default: 8 [s], range: 0 - 8 [s])",
-						"nl": "Bewegingsdetectie herhalings interval. De waarde moet lager zijn dan de 'Bewegingsdetectie AAN tijd'. (#6 standaard: 8 [s], bereik: 0 - 8 [s])"
+					    "en": "Period after motion detection in which the sensor is insensitive for new motion detection. This value must be less than the 'Motion detection ON time'. (#6 default: 8 [s], range: 0 - 8 [s])",
+						"nl": "Periode na detecteren van beweging waarin de sensor ongevoelig is voor nieuwe bewegingsdetectie. De waarde moet lager zijn dan de 'Bewegingsdetectie AAN tijd'. (#6 standaard: 8 [s], bereik: 0 - 8 [s])"
 				    }
 			    },
 				{
 					"id": "illumination_polling_interval",
 					"type": "number",
 					"label": {
-						"en": "Illumination polling interval (s)",
-						"nl": "Lichtsterkte polling interval (s)"
+						"en": "Illumination reporting interval (s)",
+						"nl": "Lichtsterkte rapportage interval (s)"
 					},
 					"value": 180,
 					"attr": {
@@ -655,6 +690,23 @@
 					"hint": {
 						"en": "Enable the function to switch on a associated device (group 2) once motion has been detected and the illumination level will be less than the value specified in 'Illumination switch ON level'. (#8 default: disabled = unchecked)",
 						"nl": "Inschakelen van de lichtsterkte inschakel functie van een gekoppeld apparaat (groep 2) wanneer de lichtsterkte lager is dan de waarde gedefinieerd in 'Lichtsterkte inschakel niveau'. (#8 standaard: uitgeschakeld = unchecked)"
+					}					
+				},
+			    {
+					"id": "day_night_treshold",
+					"type": "number",
+					"value": 100,
+					"attr": {
+						"min": 0,
+						"max": 1000
+					},
+					"label": {
+						"en": "Illumination switch ON level (lux)",
+						"nl": "Lichtsterkte inschakel niveau (lux)"
+					},
+					"hint": {
+						"en": "Define the illumination level value which determines when the 'Illumination switch ON function' is activated. If the illumination level falls below this value and a person moves across or within the detected area, the motion sensor will switch on the associated device (group 2). (#5 default: 100 [lux], range: 0 - 1000 [lux])",
+						"nl": "Definieer het lichtsterkte niveau waarbij de 'lichtsterkte inschakel functie' actief wordt. Wanneer de lichtsterkte onder deze waarde komt en bewegings wordt waargenomen, schakelt de sensor het gekoppelde apparaat (groep 2) in. (#5 standaard: 100 [lux], bereik: 0 - 1000 [lux])"
 					}
 				},
 				{
@@ -673,7 +725,7 @@
 					    "en": "Command sent to associated device (group 2). (#3 default: 255 = ON, Range: 0 – OFF, Alarm cancelling or turning a device off; 255 – ON (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))",
 						"nl": "Commando dat gestuurd wordt naar het gekoppelde apparaat (group 2). (#3 standaard: 255 = AAN, bereik: 0 – UIT, annulering alarm of het uitschakelen van het gekoppeld apparaat; 255 – AAN (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))"
 				    }
-			    },
+			    },		
 				{
 				"id": "motion_off_delay",
 				"type": "number",
@@ -690,25 +742,7 @@
 					    "en": "Time duration that the associated device (group 2) stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (#2 default: 30 [s], range: 5 - 600 [s])",
 						"nl": "Instelbare tijd dat het gekoppelde apparaat (groep 2) aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. (#2 standaard: 30 [s], bereik: 5 - 600 [s])"
 				    }
-			    },
-
-			    {
-					"id": "day_night_treshold",
-					"type": "number",
-					"value": 100,
-					"attr": {
-						"min": 0,
-						"max": 1000
-					},
-					"label": {
-						"en": "Illumination switch ON level (lux)",
-						"nl": "Lichtsterkte inschakel niveau (lux)"
-					},
-					"hint": {
-						"en": "Define the illumination level value which determines when the 'Illumination switch ON function' is activated. If the illumination level falls below this value and a person moves across or within the detected area, the motion sensor will switch on the associated device (group 2). (#5 default: 100 [lux], range: 0 - 1000 [lux])",
-						"nl": "Definieer het lichtsterkte niveau waarbij de 'lichtsterkte inschakel functie' actief wordt. Wanneer de lichtsterkte onder deze waarde komt en bewegings wordt waargenomen, schakelt de sensor het gekoppelde apparaat (groep 2) in. (#5 standaard: 100 [lux], bereik: 0 - 1000 [lux])"
-					}
-				}
+			    }
 			]
 		},
 
@@ -797,8 +831,9 @@
 			},
 			"class": "other",
 			"capabilities": [
-							"onoff",
-							"measure_battery"
+				"onoff",
+				"measure_battery",
+				"alarm_battery"
 			],
 			"images": {
 				"large": "/drivers/NAS-AB01ZE/assets/images/large.jpg",
@@ -1204,7 +1239,9 @@
 			    }
 			]
 		},
-
+		
+		
+		
 		{
 			"id": "NAS-WS01ZE",
 			"name": {
@@ -1264,7 +1301,8 @@
 			"class": "sensor",
 			"capabilities": [
 				"alarm_water",
-				"measure_battery"
+				"measure_battery",
+				"alarm_battery"
 			],
 			"images": {
 				"large": "/drivers/NAS-WS01ZE/assets/images/large.jpg",
@@ -1414,20 +1452,7 @@
 						"filter": "driver_id=NAS-AB01ZE"
 					}
 				]
-			},
-			{
-				"id": "PD01ZE_battery_alarm",
-				"title": {
-					"en": "The battery alarm turned on",
-					"nl": "De batterijwaarschuwing gaat aan"
-				},
-				"args": [{
-					"name": "device",
-					"type": "device",
-					"filter": "driver_id=NAS-PD01ZE"
-				}
-			]
-		}
+			}
 		]
 	}
 }
