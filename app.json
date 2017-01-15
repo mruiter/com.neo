@@ -739,8 +739,8 @@
 						},
 				    "value": 60,
 				    "hint": {
-					    "en": "Time duration that the associated device (group 2) stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (#2 default: 30 [s], range: 5 - 600 [s])",
-						"nl": "Instelbare tijd dat het gekoppelde apparaat (groep 2) aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. (#2 standaard: 30 [s], bereik: 5 - 600 [s])"
+					    "en": "Time duration that the associated device (group 2) stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (#2 default: 60 [s], range: 5 - 600 [s])",
+						"nl": "Instelbare tijd dat het gekoppelde apparaat (groep 2) aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. (#2 standaard: 60 [s], bereik: 5 - 600 [s])"
 				    }
 			    }
 			]
