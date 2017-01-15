@@ -19,16 +19,29 @@ None until Neo releases new products
 
 ## Change Log:
 
-### v 1.1.9 - You need homey firmware 1.1.3 or higher
+### v 1.1.10
+**update:**    
+NAS-AB01ZE - Add battery alarm and updated battery reporting    
+NAS-DS01ZE - Add battery alarm and updated battery reporting   
+NAS-PD01ZE - Add battery alarm and updated battery reporting   
+NAS-WS01ZE - Add battery alarm and updated battery reporting    
+NAS-WR01ZE - re-added custom capabilities due to delays on Homey v1.1.3   
+
+**notes:**   
+In order to make use of the battery alarm functionality, re-pair of device is required.    
+Battery reporting should work after app / driver update
+
+### v 1.1.9 - ~~You need homey firmware 1.1.3 or higher~~
 **add support:**   
 NAS-SW01ZE - Touch Wall Switch Support Added    
-note: Untested because no hardware available yet
+**notes:**   
+NAS-SW01ZE - Untested because no hardware available yet
 Please contact me on slack @m-ruiter or mail to debug further if something is not working correct with this switch    
 
 **update:**    
 NAS-AB01ZE - All settings added so the siren can also be used as doorbell speaker    
 NAS-DS10ZE - All settings added    
-NAS-WR01ZE - Removed custom capabilities as they are now part of the default Homey capabilities    
+~~NAS-WR01ZE - Removed custom capabilities as they are now part of the default Homey capabilities~~
 
 ### v 1.1.8   
 **add support:**      
