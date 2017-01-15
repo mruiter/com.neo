@@ -5,7 +5,7 @@ const ZwaveDriver = require('homey-zwavedriver');
 // http://products.z-wavealliance.org/products/1920
 
 module.exports = new ZwaveDriver(path.basename(__dirname), {
-	debug: true,
+	debug: false,
 	capabilities: {
 		'alarm_motion': {
 				'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
