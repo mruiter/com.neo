@@ -31,6 +31,11 @@ c. check if effective and retry to the desired value
 
 ## Change Log:
 
+### v 1.1.11
+**update:**    
+NAS-WR01ZE - Updated driver for compatibility 1.1.3 firmware
+
+
 ### v 1.1.10
 **update:**    
 NAS-AB01ZE - Add battery alarm and updated battery reporting + All settings added so the siren can also be used as doorbell speaker   
