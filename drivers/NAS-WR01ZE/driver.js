@@ -2,6 +2,7 @@
 
 const path			= require('path');
 const ZwaveDriver	= require('homey-zwavedriver');
+http://products.z-wavealliance.org/products/1783
 
 module.exports = new ZwaveDriver( path.basename(__dirname), {
 	debug: false,

@@ -17,18 +17,38 @@ None until Neo releases new products
 * English
 * Dutch
 
+## Support notes:
+Most reliable way to update battery powered devices   
+1. Place the sensor near Homey (< 1 meter)   
+2. Change the settings to the values you want   
+3. Wake up the sensor (triple click the button)   
+4. During the blinking of the LED (indicating connection to Homey) press "save settings"   
+
+If problems persists:    
+a. Temporarely disable other Z-wave apps   
+b. change the setting to another value with above steps   
+c. check if effective and retry to the desired value    
+
 ## Change Log:
 
-### v 1.1.9 - You need homey firmware 1.1.3 or higher
-**add support:**   
-NAS-SW01ZE - Touch Wall Switch Support Added    
-note: Untested because no hardware available yet
-Please contact me on slack @m-ruiter or mail to debug further if something is not working correct with this switch    
-
+### v 1.1.11
 **update:**    
-NAS-AB01ZE - All settings added so the siren can also be used as doorbell speaker    
-NAS-DS10ZE - All settings added    
-NAS-WR01ZE - Removed custom capabilities as they are now part of the default Homey capabilities    
+NAS-WR01ZE - Updated driver for compatibility 1.1.3 firmware
+
+
+### v 1.1.10
+**update:**    
+NAS-AB01ZE - Add battery alarm and updated battery reporting + All settings added so the siren can also be used as doorbell speaker   
+NAS-DS01ZE - Add battery alarm and updated battery reporting + All settings added     
+NAS-PD01ZE - Add battery alarm and updated battery reporting   
+NAS-WS01ZE - Add battery alarm and updated battery reporting    
+NAS-WR01ZE - re-added custom capabilities due to delays on Homey v1.1.3   
+
+**notes:**   
+In order to make use of the battery alarm functionality, re-pair of device is required.    
+Battery reporting should work after app / driver update
+
+### v 1.1.9 - Pulled - No ETA on 1.1.3  
 
 ### v 1.1.8   
 **add support:**      
