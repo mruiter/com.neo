@@ -30,12 +30,17 @@ c. check if effective and retry to the desired value
 
 ## Change Log:
 
+### v 1.1.13
+**update:**    
+Support for GetOnWakeUp in Z-Wave driver enabled
+Updated Z-Wave driver
+
 ### v 1.1.11
 **update:**    
-NAS-AB01ZE - Updated driver for compatibility 1.1.3 firmware (GetOnWakeUp)    
-NAS-DS01ZE - Updated driver for compatibility 1.1.3 firmware (GetOnWakeUp)     
-NAS-PD01ZE - Updated driver for compatibility 1.1.3 firmware (GetOnWakeUp)   
-NAS-WS01ZE - Updated driver for compatibility 1.1.3 firmware (GetOnWakeUp)   
+NAS-AB01ZE - Updated driver for compatibility 1.1.3 firmware
+NAS-DS01ZE - Updated driver for compatibility 1.1.3 firmware     
+NAS-PD01ZE - Updated driver for compatibility 1.1.3 firmware   
+NAS-WS01ZE - Updated driver for compatibility 1.1.3 firmware 
 NAS-WR01ZE - Updated driver for compatibility 1.1.3 firmware (standardized custom capabilities)     
 
 ### v 1.1.10
