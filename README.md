@@ -9,7 +9,6 @@ Makes Homey work with these great and cheap Chinese z-wave products
 * NAS-DS01ZE, Door Sensor
 * NAS-WS01ZE, Flood Sensor
 
-
 ## Supported devices with some parameters:
 None until Neo releases new products
 
@@ -33,8 +32,11 @@ c. check if effective and retry to the desired value
 
 ### v 1.1.11
 **update:**    
-NAS-WR01ZE - Updated driver for compatibility 1.1.3 firmware
-
+NAS-AB01ZE - Updated driver for compatibility 1.1.3 firmware (GetOnWakeUp)    
+NAS-DS01ZE - Updated driver for compatibility 1.1.3 firmware (GetOnWakeUp)     
+NAS-PD01ZE - Updated driver for compatibility 1.1.3 firmware (GetOnWakeUp)   
+NAS-WS01ZE - Updated driver for compatibility 1.1.3 firmware (GetOnWakeUp)   
+NAS-WR01ZE - Updated driver for compatibility 1.1.3 firmware (standardized custom capabilities)     
 
 ### v 1.1.10
 **update:**    
