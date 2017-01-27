@@ -35,6 +35,9 @@ c. check if effective and retry to the desired value
 Support for GetOnWakeUp in Z-Wave driver enabled
 Updated Z-Wave driver
 
+### v 1.1.12
+(Only released in Developers Preview for testing)
+
 ### v 1.1.11
 **update:**    
 NAS-AB01ZE - Updated driver for compatibility 1.1.3 firmware
