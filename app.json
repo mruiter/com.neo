@@ -3,8 +3,8 @@
 	"name": {
 		"en": "NEO Coolcam Z-Wave Products"
 	},
-	"version": "1.1.13",
-	"compatibility": ">=1.1.3",
+	"version": "1.1.14",
+	"compatibility": ">=1.1.4",
 	"description": {
 		"en": "NEO Coolcam Z-Wave products"
 	},
@@ -716,7 +716,12 @@
 				"components":[
 				{
 					"id": "icon",
-					"capabilities": [  ]
+					"capabilities": [ "onoff"  ]
+				},
+								{
+					"id": "battery",
+					"capabilities": ["measure_battery" ],
+					"options": { "showTitle": true }
 				},
 				{
 					"id": "toggle",
@@ -724,10 +729,19 @@
 					"options": { "showTitle": true }
 				},
 				{
-					"id": "battery",
-					"capabilities": ["measure_battery" ],
-					"options": { "showTitle": true }
-				}
+					"id": "sensor",
+					"capabilities": ["alarm_battery" ],
+					"options": {
+						"icons": {
+							"Batterij Alarm": "/drivers/NAS-AB01ZE/assets/images/alarm_battery.svg"
+								},
+							"Batterij Alarm": {
+								"noblink": false,
+								"invert": false
+								}
+							}
+				}			
+
 			 ]
 			},
 			"zwave": {
