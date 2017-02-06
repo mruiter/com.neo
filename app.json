@@ -119,14 +119,7 @@
 				},
 				{
                     "id": "sensor",
-                    "capabilities": [ "meter_power", "measure_power","measure_current", "measure_voltage" ],
-                    "options": {
-    					"icons": {
-        					"measure_current": "/drivers/NAS-WR01ZE/assets/measure_current.svg",
-        					"measure_voltage": "/drivers/NAS-WR01ZE/assets/measure_voltage.svg",
-        					"measure_power": "/drivers/NAS-WR01ZE/assets/measure_power.svg"
-    							}
-                	}
+                    "capabilities": [ "meter_power", "measure_power","measure_current", "measure_voltage" ]
                 },
                 {
                     "id": "toggle",
