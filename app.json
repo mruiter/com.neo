@@ -3,7 +3,7 @@
 	"name": {
 		"en": "NEO Coolcam Z-Wave Products"
 	},
-	"version": "1.1.14",
+	"version": "1.1.15",
 	"compatibility": ">=1.1.4",
 	"description": {
 		"en": "NEO Coolcam Z-Wave products"
@@ -375,6 +375,18 @@
 				],
 				"associationGroups": [ 1 ],
 				"multiChannelNodes": {
+					"1": {
+						"class": "socket",
+						"capabilities": [
+							"onoff"
+						],
+						"icon": "/drivers/NAS-SW01ZE/assets/icon2.svg",
+						"name": {
+							"en": "Right Button",
+							"nl": "Rechter Knop"
+						},
+						"settings": []
+					},
 					"2": {
 						"class": "socket",
 						"capabilities": [

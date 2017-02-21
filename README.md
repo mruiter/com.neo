@@ -29,7 +29,11 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
 
 ## Change Log:
-
+    
+### v 1.1.15
+**update:**    
+NAS-SW01ZE - Defined multinode 1, should be done by itself but made sure multinode 1 is also defined just i case this might ever change.    
+    
 ### v 1.1.14
 **update:**    
 NAS-AB01ZE - Updated mobile card to show battery alarm and toggle on icon     
