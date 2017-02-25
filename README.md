@@ -29,11 +29,15 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
 
 ## Change Log:
-    
+
+### v 1.1.16
+**update:**
+All devices - update battery_alarm, code clean-up, minor fixes   
+
 ### v 1.1.15
 **update:**    
 NAS-SW01ZE - Defined multinode 1, should be done by itself but made sure multinode 1 is also defined just i case this might ever change.    
-    
+
 ### v 1.1.14
 **update:**    
 NAS-AB01ZE - Updated mobile card to show battery alarm and toggle on icon     
@@ -41,7 +45,7 @@ NAS-AB01ZE - Updated mobile card to show battery alarm and toggle on icon
 **notes:**   
 Somehow battery reporting has stopped again with the Homey 1.1.4 firmware.  
 In order to get it working again re-pair of device is required, for now this looks like the only solution.  
- 
+
 ### v 1.1.13
 **update:**    
 Support for GetOnWakeUp in Z-Wave driver enabled
@@ -91,7 +95,7 @@ NAS-WR01ZE - Regrouping settings based on function + textual updates settings / 
 **notes:**   
 NAS-PD01ZE - LUX reporting based on interval setting is not working; under clarification with manufacturer   
 
-### v 1.1.6 
+### v 1.1.6
 **update:**   
 NAS-WR01ZE - Updated mobile card & insights logging to include current and voltage   
 Z-Wave Driver (v1.1.2)   
@@ -109,4 +113,4 @@ NAS-WR01ZE - textual fixes (setting-labels, -hints and association group-hints)
 
 -------------
 
-Older changelog notes have been ereased from this timeline...... 
+Older changelog notes have been ereased from this timeline......

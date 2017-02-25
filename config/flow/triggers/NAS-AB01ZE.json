@@ -1,0 +1,12 @@
+[{
+	"id": "battery_alarm",
+	"title": {
+		"en": "The battery alarm turned on",
+		"nl": "De batterijwaarschuwing gaat aan"
+	},
+	"args": [{
+		"name": "device",
+		"type": "device",
+		"filter": "driver_id=NAS-AB01ZE"
+	}]
+}]

@@ -1,0 +1,111 @@
+{
+	"id": "NAS-SW01ZE",
+	"name": {
+		"en": "NEO Touch Switch"
+	},
+	"zwave": {
+		"manufacturerId": 600,
+		"productTypeId": 3,
+		"productId": 4235,
+		"learnmode": {
+			"instruction": {
+				"en": "Press the left button on you're wallswitch three times quickly",
+				"nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
+			}
+		},
+		"defaultConfiguration": [{
+				"id": 1,
+				"size": 1,
+				"value": 1
+			},
+			{
+				"id": 2,
+				"size": 1,
+				"value": 1
+			},
+			{
+				"id": 3,
+				"size": 1,
+				"value": 1
+			}
+		],
+		"associationGroups": [
+			1
+		],
+		"multiChannelNodes": {
+			"1": {
+				"class": "socket",
+				"capabilities": [
+					"onoff"
+				],
+				"icon": "/drivers/NAS-SW01ZE/assets/icon2.svg",
+				"name": {
+					"en": "Right Button",
+					"nl": "Rechter Knop"
+				},
+				"settings": []
+			},
+			"2": {
+				"class": "socket",
+				"capabilities": [
+					"onoff"
+				],
+				"icon": "/drivers/NAS-SW01ZE/assets/icon2.svg",
+				"name": {
+					"en": "Right Button",
+					"nl": "Rechter Knop"
+				},
+				"settings": []
+			}
+		}
+	},
+	"class": "socket",
+	"capabilities": [
+		"onoff"
+	],
+	"icon": "/drivers/NAS-SW01ZE/assets/icon1.svg",
+	"images": {
+		"large": "/drivers/NAS-SW01ZE/assets/images/large.jpg",
+		"small": "/drivers/NAS-SW01ZE/assets/images/small.jpg"
+	},
+	"settings": [{
+			"id": "backlight",
+			"type": "checkbox",
+			"label": {
+				"en": "Backlight Enable/Disable",
+				"nl": "Backlight Aan/Uit"
+			},
+			"value": true,
+			"hint": {
+				"en": "With this setting you can control te backlight",
+				"nl": "Hiermee kunt u de backlight aan of uitzetten"
+			}
+		},
+		{
+			"id": "status_indicate",
+			"type": "checkbox",
+			"label": {
+				"en": "Button status lightEnable/Disable",
+				"nl": "Knopstatus lampje Aan/Uit"
+			},
+			"value": true,
+			"hint": {
+				"en": "When on and switch in on the button will turn pink",
+				"nl": "Wanneer aan en de schakelaar wordt aangezet zal de knop roze oplichten"
+			}
+		},
+		{
+			"id": "laststate_return",
+			"type": "checkbox",
+			"label": {
+				"en": "Remember last state after power failure",
+				"nl": "Herinner laatste status bij spanningsuitval"
+			},
+			"value": true,
+			"hint": {
+				"en": "When enabled the switch will return to it's last state after power is restored again",
+				"nl": "Indien aan zal de schakelaar naar zijn laatst bekende stand gaan als spanning weer aanwezig is"
+			}
+		}
+	]
+}
