@@ -30,6 +30,10 @@ c. check if effective and retry to the desired value
 
 ## Change Log:
 
+### v 1.1.17
+**update:**
+NAS-WR01ZE - Add Power Meter reset flow card    
+
 ### v 1.1.16
 **update:**
 All devices - update battery_alarm, code clean-up, minor fixes   
