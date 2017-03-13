@@ -150,3 +150,22 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 		},
 	},
 });
+
+Homey.manager('flow').on('action.WR01ZE_reset_meter', (callback, args) => {
+	const node = module.exports.nodes[args.device.token];
+
+	if (node &&
+		node.instance.CommandClass.COMMAND_CLASS_METER) {
+		node.instance.CommandClass.COMMAND_CLASS_METER.METER_RESET({}, (err, result) => {
+			if (err) return callback(err);
+
+			// If properly transmitted, change the setting and finish flow card
+			if (result === 'TRANSMIT_COMPLETE_OK') {
+
+				return callback(null, true);
+			}
+
+			return callback('unknown_response');
+		});
+	} else return callback('unknown_error');
+});
