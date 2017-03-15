@@ -32,7 +32,7 @@ c. check if effective and retry to the desired value
     
 ### v 1.1.18
 **update:**
-NAS-AB01ZE - Add Siren/Doorbel switch mode action card
+NAS-AB01ZE - Add Siren/Doorbel switch mode action card    
 Updated Z-Wave driver   
     
 ### v 1.1.17
