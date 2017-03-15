@@ -21,5 +21,29 @@
 			"type": "device",
 			"filter": "driver_id=NAS-AB01ZE"
 		}]
+	},
+	{
+		"id": "set_sirenmode",
+		"title": {
+			"en": "Set Siren Mode",
+			"nl": "Modus Sirene"
+		},
+		"args": [{
+			"name": "device",
+			"type": "device",
+			"filter": "driver_id=NAS-AB01ZE"
+		}]
+	},
+		{
+		"id": "set_doorbelmode",
+		"title": {
+			"en": "Set Doorbel Mode",
+			"nl": "Modus Deurbel"
+		},
+		"args": [{
+			"name": "device",
+			"type": "device",
+			"filter": "driver_id=NAS-AB01ZE"
+		}]
 	}
 ]
