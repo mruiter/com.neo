@@ -1,49 +1,121 @@
 [{
-		"id": "sound_alarm",
-		"title": {
-			"en": "Sound alarm",
-			"nl": "Alarm luiden"
-		},
-		"args": [{
-			"name": "device",
-			"type": "device",
-			"filter": "driver_id=NAS-AB01ZE"
+    "id": "AB01ZE_alarm_state",
+    "title": {
+      "en": "Change the alarm state",
+      "nl": "Verander de alarm toestand"
+    },
+    "hint": {
+      "en": "Change the alarm state; sound or silence the alarm",
+      "nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm"
+    },
+    "args": [{
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=NAS-AB01ZE"
+	},
+      {
+        "name": "alarm_state",
+        "type": "dropdown",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Silence alarm",
+              "nl": "Alarm stil"
+            }
+						},
+          {
+            "id": "1",
+            "label": {
+              "en": "Sound alarm",
+              "nl": "Alarm luiden"
+            }
+						}
+					]
+				}]
+},
+  {
+    "id": "AB01ZE_alarm_mode",
+    "title": {
+      "en": "Set the device mode",
+      "nl": "Stel de apparaat modus is"
+    },
+    "hint": {
+      "en": "Set the device mode; alarm or doorbell mode",
+      "nl": "Stel de apparaat modus in; alarm of deurbel"
+    },
+    "args": [{
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=NAS-AB01ZE"
+	},
+      {
+        "name": "alarm_mode",
+        "type": "dropdown",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Alarm",
+              "nl": "Alarm"
+            }
+						},
+          {
+            "id": "1",
+            "label": {
+              "en": "Doorbel",
+              "nl": "Deurbel"
+            }
+						}
+					]
+				}]
+},
+  {
+    "id": "sound_alarm",
+    "title": {
+      "en": "Sound alarm",
+      "nl": "Alarm luiden"
+    },
+    "args": [{
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=NAS-AB01ZE"
 		}]
 	},
-	{
-		"id": "silence_alarm",
-		"title": {
-			"en": "Silence alarm",
-			"nl": "Alarm stil"
-		},
-		"args": [{
-			"name": "device",
-			"type": "device",
-			"filter": "driver_id=NAS-AB01ZE"
+  {
+    "id": "silence_alarm",
+    "title": {
+      "en": "Silence alarm",
+      "nl": "Alarm stil"
+    },
+    "args": [{
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=NAS-AB01ZE"
 		}]
 	},
-	{
-		"id": "set_sirenmode",
-		"title": {
-			"en": "Set Siren Mode",
-			"nl": "Modus Sirene"
-		},
-		"args": [{
-			"name": "device",
-			"type": "device",
-			"filter": "driver_id=NAS-AB01ZE"
+  {
+    "id": "set_sirenmode",
+    "title": {
+      "en": "Set Siren Mode",
+      "nl": "Modus Sirene"
+    },
+    "args": [{
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=NAS-AB01ZE"
 		}]
 	},
-		{
-		"id": "set_doorbelmode",
-		"title": {
-			"en": "Set Doorbel Mode",
-			"nl": "Modus Deurbel"
-		},
-		"args": [{
-			"name": "device",
-			"type": "device",
-			"filter": "driver_id=NAS-AB01ZE"
+  {
+    "id": "set_doorbelmode",
+    "title": {
+      "en": "Set Doorbel Mode",
+      "nl": "Modus Deurbel"
+    },
+    "args": [{
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=NAS-AB01ZE"
 		}]
 	}
 ]
