@@ -3,7 +3,7 @@
   "name": {
     "en": "NEO Coolcam Z-Wave Products"
   },
-  "version": "1.1.18",
+  "version": "1.1.19",
   "compatibility": ">=1.1.4",
   "description": {
     "en": "NEO Coolcam Z-Wave products"
@@ -52,6 +52,82 @@
     ],
     "conditions": [],
     "actions": [
+      {
+        "id": "AB01ZE_alarm_state",
+        "title": {
+          "en": "Change the alarm state",
+          "nl": "Verander de alarm toestand"
+        },
+        "hint": {
+          "en": "Change the alarm state; sound or silence the alarm",
+          "nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
+          },
+          {
+            "name": "alarm_state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Silence alarm",
+                  "nl": "Alarm stil"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Sound alarm",
+                  "nl": "Alarm luiden"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AB01ZE_alarm_mode",
+        "title": {
+          "en": "Set the device mode",
+          "nl": "Stel de apparaat modus is"
+        },
+        "hint": {
+          "en": "Set the device mode; alarm or doorbell mode",
+          "nl": "Stel de apparaat modus in; alarm of deurbel"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
+          },
+          {
+            "name": "alarm_mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Alarm",
+                  "nl": "Alarm"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Doorbel",
+                  "nl": "Deurbel"
+                }
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "sound_alarm",
         "title": {
@@ -105,6 +181,44 @@
             "name": "device",
             "type": "device",
             "filter": "driver_id=NAS-AB01ZE"
+          }
+        ]
+      },
+      {
+        "id": "SW01ZE_switch_LED",
+        "title": {
+          "en": "Set Touch Switch LED",
+          "nl": "Stel Touch Switch LED in"
+        },
+        "hint": {
+          "en": "Enable or disable the Touch Switch LED, lighting up blue when enabled",
+          "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-SW01ZE"
+          },
+          {
+            "name": "switch_LED_onoff",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "LED disabled",
+                  "nl": "LED uitgeschakeld"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "LED enabled",
+                  "nl": "LED ingeschakeld"
+                }
+              }
+            ]
           }
         ]
       },
@@ -998,44 +1112,18 @@
         "productTypeId": 3,
         "productId": 4235,
         "learnmode": {
+          "image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
           "instruction": {
             "en": "Press the left button on you're wallswitch three times quickly",
             "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
           }
         },
-        "defaultConfiguration": [
-          {
-            "id": 1,
-            "size": 1,
-            "value": 1
-          },
-          {
-            "id": 2,
-            "size": 1,
-            "value": 1
-          },
-          {
-            "id": 3,
-            "size": 1,
-            "value": 1
-          }
-        ],
+        "defaultConfiguration": [],
         "associationGroups": [
-          1
+          1,
+          2
         ],
         "multiChannelNodes": {
-          "1": {
-            "class": "socket",
-            "capabilities": [
-              "onoff"
-            ],
-            "icon": "/drivers/NAS-SW01ZE/assets/icon2.svg",
-            "name": {
-              "en": "Right Button",
-              "nl": "Rechter Knop"
-            },
-            "settings": []
-          },
           "2": {
             "class": "socket",
             "capabilities": [
@@ -1043,8 +1131,8 @@
             ],
             "icon": "/drivers/NAS-SW01ZE/assets/icon2.svg",
             "name": {
-              "en": "Right Button",
-              "nl": "Rechter Knop"
+              "en": "NEO Touch Right Switch",
+              "nl": "NEO Touch Rechter Schakelaar"
             },
             "settings": []
           }
@@ -1054,7 +1142,7 @@
       "capabilities": [
         "onoff"
       ],
-      "icon": "/drivers/NAS-SW01ZE/assets/icon1.svg",
+      "icon": "/drivers/NAS-SW01ZE/assets/icon.svg",
       "images": {
         "large": "/drivers/NAS-SW01ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-SW01ZE/assets/images/small.jpg"
@@ -1064,39 +1152,39 @@
           "id": "backlight",
           "type": "checkbox",
           "label": {
-            "en": "Backlight Enable/Disable",
-            "nl": "Backlight Aan/Uit"
+            "en": "Touch Switch LED enable",
+            "nl": "Touch Switch LED Aan"
           },
           "value": true,
           "hint": {
-            "en": "With this setting you can control te backlight",
-            "nl": "Hiermee kunt u de backlight aan of uitzetten"
+            "en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
+            "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)"
           }
         },
         {
           "id": "status_indicate",
           "type": "checkbox",
           "label": {
-            "en": "Button status lightEnable/Disable",
-            "nl": "Knopstatus lampje Aan/Uit"
+            "en": "Touch Switch LED state",
+            "nl": "Touch Switch LED status"
           },
           "value": true,
           "hint": {
-            "en": "When on and switch in on the button will turn pink",
-            "nl": "Wanneer aan en de schakelaar wordt aangezet zal de knop roze oplichten"
+            "en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
+            "nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)"
           }
         },
         {
           "id": "laststate_return",
           "type": "checkbox",
           "label": {
-            "en": "Remember last state after power failure",
-            "nl": "Herinner laatste status bij spanningsuitval"
+            "en": "Restore state after power loss",
+            "nl": "Herstel toestand bij spanningsuitval"
           },
           "value": true,
           "hint": {
-            "en": "When enabled the switch will return to it's last state after power is restored again",
-            "nl": "Indien aan zal de schakelaar naar zijn laatst bekende stand gaan als spanning weer aanwezig is"
+            "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
+            "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
           }
         }
       ]
