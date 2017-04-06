@@ -94,7 +94,7 @@
         "id": "AB01ZE_alarm_mode",
         "title": {
           "en": "Set the device mode",
-          "nl": "Stel de apparaat modus is"
+          "nl": "Stel de apparaat modus in"
         },
         "hint": {
           "en": "Set the device mode; alarm or doorbell mode",

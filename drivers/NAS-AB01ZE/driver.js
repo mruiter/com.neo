@@ -116,7 +116,7 @@ Homey.manager('flow').on('action.AB01ZE_alarm_mode', (callback, args) => {
         Size: 1,
         Default: false,
       },
-      'Configuration Value': args.alarm_mode,
+      'Configuration Value': new Buffer([args.alarm_mode]),
     }, (err, result) => {
       if (err) return callback(err);
 
@@ -129,7 +129,8 @@ Homey.manager('flow').on('action.AB01ZE_alarm_mode', (callback, args) => {
 
       return callback('unknown_response');
     });
-  } else return callback('unknown_error');
+  }
+  else return callback('unknown_error');
 
 });
 
@@ -187,7 +188,8 @@ Homey.manager('flow').on('action.NAS-AB01ZE_set_sirenmode', (callback, args) => 
 
       return callback('unknown_response');
     });
-  } else return callback('unknown_error');
+  }
+  else return callback('unknown_error');
 
 });
 
@@ -215,6 +217,7 @@ Homey.manager('flow').on('action.NAS-AB01ZE_set_doorbelmode', (callback, args) =
 
       return callback('unknown_response');
     });
-  } else return callback('unknown_error');
+  }
+  else return callback('unknown_error');
 
 });
