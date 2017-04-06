@@ -111,14 +111,14 @@
             "type": "dropdown",
             "values": [
               {
-                "id": "0",
+                "id": "1",
                 "label": {
                   "en": "Alarm",
                   "nl": "Alarm"
                 }
               },
               {
-                "id": "1",
+                "id": "2",
                 "label": {
                   "en": "Doorbel",
                   "nl": "Deurbel"
