@@ -560,7 +560,7 @@ class ZwaveDriver extends events.EventEmitter {
 
 							// Use parser if provided
 							if (optionsCapabilityItem.command_get_parser) {
-								args = optionsCapabilityItem.command_get_parser();
+								args = optionsCapabilityItem.command_get_parser(node);
 							}
 
 							// Check if node supports this command class
