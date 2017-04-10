@@ -45,7 +45,7 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			size: 2,
 			signed: false,
 		},
-		basic_level_set: {
+		basic_set_level: {
 			index: 2,
 			size: 1,
 			signed: false,
