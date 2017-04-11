@@ -27,9 +27,13 @@ If problems persists:
 a. Temporarely disable other Z-wave apps   
 b. change the setting to another value with above steps   
 c. check if effective and retry to the desired value    
-
-## Change Log:   
-
+    
+## Change Log:       
+    
+### v 1.1.20    
+**fixed:**        
+NAS-DS01ZE - Settings naming error corrected (basic_set_level)       
+    
 ### v 1.1.19
 **fixed:**    
 NAS-SW01ZE - updated driver, tested and working ok (re-pair of device required)   
