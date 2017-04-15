@@ -27,13 +27,18 @@ If problems persists:
 a. Temporarely disable other Z-wave apps   
 b. change the setting to another value with above steps   
 c. check if effective and retry to the desired value    
-    
+
 ## Change Log:       
-    
+
+### v 1.1.21    
+**fixed:**        
+NAS-AB01ZE - Add action card for setting alarm or doorbell tune    
+NAS-AB01ZE - Fixed alarm state action card    
+
 ### v 1.1.20    
 **fixed:**        
 NAS-DS01ZE - Settings naming error corrected (basic_set_level)       
-    
+
 ### v 1.1.19
 **fixed:**    
 NAS-SW01ZE - updated driver, tested and working ok (re-pair of device required)   

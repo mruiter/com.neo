@@ -5,19 +5,13 @@ const ZwaveDriver = require('homey-zwavedriver');
 // http://products.z-wavealliance.org/products/1783
 
 module.exports = new ZwaveDriver(path.basename(__dirname), {
-	debug: false,
 	capabilities: {
 		onoff: {
 			command_class: 'COMMAND_CLASS_SWITCH_BINARY',
 			command_get: 'SWITCH_BINARY_GET',
 			command_set: 'SWITCH_BINARY_SET',
-			command_get_parser: () => ({
-				'V1 Alarm Type': 0,
-				'Notification Type': 'Home Security',
-				Event: 7,
-			}),
 			command_set_parser: (value) => ({
-				'Switch Value': value,
+				'Switch Value': (value > 0) ? 'on/enable' : 'off/disable',
 			}),
 			command_report: 'SWITCH_BINARY_REPORT',
 			command_report_parser: report => report.Value === 'on/enable',
@@ -155,17 +149,18 @@ Homey.manager('flow').on('action.WR01ZE_reset_meter', (callback, args) => {
 	const node = module.exports.nodes[args.device.token];
 
 	if (node &&
+		node.instance &&
+		node.instance.CommandClass &&
 		node.instance.CommandClass.COMMAND_CLASS_METER) {
 		node.instance.CommandClass.COMMAND_CLASS_METER.METER_RESET({}, (err, result) => {
 			if (err) return callback(err);
 
 			// If properly transmitted, change the setting and finish flow card
 			if (result === 'TRANSMIT_COMPLETE_OK') {
-
 				return callback(null, true);
 			}
-
 			return callback('unknown_response');
 		});
-	} else return callback('unknown_error');
+	}
+	else return callback('unknown_error');
 });

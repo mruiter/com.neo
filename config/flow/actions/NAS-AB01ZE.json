@@ -1,73 +1,258 @@
 [{
-    "id": "AB01ZE_alarm_state",
-    "title": {
-      "en": "Change the alarm state",
-      "nl": "Verander de alarm toestand"
-    },
-    "hint": {
-      "en": "Change the alarm state; sound or silence the alarm",
-      "nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm"
-    },
-    "args": [{
-        "name": "device",
-        "type": "device",
-        "filter": "driver_id=NAS-AB01ZE"
-	},
-      {
-        "name": "alarm_state",
-        "type": "dropdown",
-        "values": [
-          {
-            "id": "0",
-            "label": {
-              "en": "Silence alarm",
-              "nl": "Alarm stil"
-            }
+		"id": "AB01ZE_alarm_state",
+		"title": {
+			"en": "Change the alarm state",
+			"nl": "Verander de alarm toestand"
+		},
+		"hint": {
+			"en": "Change the alarm state; sound or silence the alarm",
+			"nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm"
+		},
+		"args": [
+			{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=NAS-AB01ZE"
+	     },
+			{
+				"name": "alarm_state",
+				"type": "dropdown",
+				"values": [
+					{
+						"id": "0",
+						"label": {
+							"en": "Silence alarm",
+							"nl": "Alarm stil"
+						}
 						},
-          {
-            "id": "1",
-            "label": {
-              "en": "Sound alarm",
-              "nl": "Alarm luiden"
-            }
+					{
+						"id": "1",
+						"label": {
+							"en": "Sound alarm",
+							"nl": "Alarm luiden"
+						}
 						}
 					]
 				}]
 },
-  {
-    "id": "AB01ZE_alarm_mode",
-    "title": {
-      "en": "Set the device mode",
-      "nl": "Stel de apparaat modus in"
-    },
-    "hint": {
-      "en": "Set the device mode; alarm or doorbell mode",
-      "nl": "Stel de apparaat modus in; alarm of deurbel"
-    },
-    "args": [{
-        "name": "device",
-        "type": "device",
-        "filter": "driver_id=NAS-AB01ZE"
+	{
+		"id": "AB01ZE_alarm_mode",
+		"title": {
+			"en": "Set the device mode",
+			"nl": "Stel de apparaat modus in"
+		},
+		"hint": {
+			"en": "Set the device mode; alarm or doorbell mode",
+			"nl": "Stel de apparaat modus in; alarm of deurbel"
+		},
+		"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=NAS-AB01ZE"
 	},
-      {
-        "name": "alarm_mode",
-        "type": "dropdown",
-        "values": [
-          {
-            "id": "1",
-            "label": {
-              "en": "Alarm",
-              "nl": "Alarm"
-            }
+			{
+				"name": "alarm_mode",
+				"type": "dropdown",
+				"values": [
+					{
+						"id": "1",
+						"label": {
+							"en": "Alarm",
+							"nl": "Alarm"
+						}
 						},
-          {
-            "id": "2",
-            "label": {
-              "en": "Doorbel",
-              "nl": "Deurbel"
-            }
+					{
+						"id": "2",
+						"label": {
+							"en": "Doorbel",
+							"nl": "Deurbel"
+						}
 						}
 					]
 				}]
+},
+	{
+		"id": "AB01ZE_alarm_tune",
+		"title": {
+			"en": "Set the alarm tune",
+			"nl": "Stel de alarm melodie in"
+		},
+		"hint": {
+			"en": "Choose the tune of the alarm sound",
+			"nl": "Kies de melodie die gebruikt wordt bij alarm"
+		},
+		"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=NAS-AB01ZE"
+},
+			{
+				"name": "alarm_tune",
+				"type": "dropdown",
+				"values": [
+					{
+						"id": "1",
+						"label": {
+							"en": "Tune 1",
+							"nl": "Melodie 1"
+						}
+				},
+					{
+						"id": "2",
+						"label": {
+							"en": "Tune 2",
+							"nl": "Melodie 2"
+						}
+				},
+					{
+						"id": "3",
+						"label": {
+							"en": "Tune 3",
+							"nl": "Melodie 3"
+						}
+				},
+					{
+						"id": "4",
+						"label": {
+							"en": "Tune 4",
+							"nl": "Melodie 4"
+						}
+				},
+					{
+						"id": "5",
+						"label": {
+							"en": "Tune 5",
+							"nl": "Melodie 5"
+						}
+				},
+					{
+						"id": "6",
+						"label": {
+							"en": "Tune 6",
+							"nl": "Melodie 6"
+						}
+				},
+					{
+						"id": "7",
+						"label": {
+							"en": "Tune 7",
+							"nl": "Melodie 7"
+						}
+				},
+					{
+						"id": "8",
+						"label": {
+							"en": "Tune 8",
+							"nl": "Melodie 8"
+						}
+				},
+					{
+						"id": "9",
+						"label": {
+							"en": "Tune 9",
+							"nl": "Melodie 9"
+						}
+				},
+					{
+						"id": "10",
+						"label": {
+							"en": "Tune 10 (default)",
+							"nl": "Melodie 10 (standaard)"
+						}
+				}
+			]
+      }]
+},
+	{
+		"id": "AB01ZE_doorbell_tune",
+		"title": {
+			"en": "Set the doorbell tune",
+			"nl": "Stel de deurbel melodie in"
+		},
+		"hint": {
+			"en": "Choose the tune of the doorbell sound",
+			"nl": "Kies de melodie die gebruikt wordt als deurbel"
+		},
+		"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=NAS-AB01ZE"
+},
+			{
+				"name": "doorbell_tune",
+				"type": "dropdown",
+				"values": [
+					{
+						"id": "1",
+						"label": {
+							"en": "Tune 1",
+							"nl": "Melodie 1"
+						}
+  				},
+					{
+						"id": "2",
+						"label": {
+							"en": "Tune 2",
+							"nl": "Melodie 2"
+						}
+  				},
+					{
+						"id": "3",
+						"label": {
+							"en": "Tune 3",
+							"nl": "Melodie 3"
+						}
+  				},
+					{
+						"id": "4",
+						"label": {
+							"en": "Tune 4",
+							"nl": "Melodie 4"
+						}
+  				},
+					{
+						"id": "5",
+						"label": {
+							"en": "Tune 5",
+							"nl": "Melodie 5"
+						}
+  				},
+					{
+						"id": "6",
+						"label": {
+							"en": "Tune 6",
+							"nl": "Melodie 6"
+						}
+  				},
+					{
+						"id": "7",
+						"label": {
+							"en": "Tune 7",
+							"nl": "Melodie 7"
+						}
+  				},
+					{
+						"id": "8",
+						"label": {
+							"en": "Tune 8",
+							"nl": "Melodie 8"
+						}
+  				},
+					{
+						"id": "9",
+						"label": {
+							"en": "Tune 9 (default)",
+							"nl": "Melodie 9 (standard)"
+						}
+  				},
+					{
+						"id": "10",
+						"label": {
+							"en": "Tune 10",
+							"nl": "Melodie 10"
+						}
+  				}
+    ]
+    }]
 }
 ]
