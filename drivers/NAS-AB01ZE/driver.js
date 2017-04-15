@@ -93,7 +93,7 @@ Homey.manager('flow').on('action.AB01ZE_alarm_state', (callback, args) => {
 	Homey.log((args.alarm_state) ? 'on flow action.action.sound_alarm' : 'on flow action.action.silence_alarm');
 	Homey.log('args', args);
 
-	Homey.manager('drivers').getDriver('NAS-AB01ZE').capabilities.onoff.set(args.device, args.alarm_state, (err, data) => {
+	Homey.manager('drivers').getDriver('NAS-AB01ZE').capabilities.onoff.set(args.device, args.alarm_state === '1', (err, data) => {
 		Homey.log('');
 		Homey.log('Homey.manager(drivers).getDriver(NAS-AB01ZE).capabilities.onoff.set');
 		Homey.log('err', err);
