@@ -32,7 +32,7 @@ c. check if effective and retry to the desired value
 
 ### v 1.1.21    
 **fixed:**        
-NAS-AB01ZE - Add action card for setting alarm or doorbell tune
+NAS-AB01ZE - Add action card for setting alarm or doorbell tune    
 NAS-AB01ZE - Fixed alarm state action card    
 
 ### v 1.1.20    
