@@ -10,14 +10,11 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
       command_class: 'COMMAND_CLASS_SWITCH_BINARY',
       command_get: 'SWITCH_BINARY_GET',
       command_set: 'SWITCH_BINARY_SET',
-      command_set_parser: (value) => ({
-        'Value': (value) ? 'on/enable' : 'off/disable'
+      'command_set_parser': value => ({
+        'Switch Value': (value) ? 'on/enable' : 'off/disable'
       }),
       command_report: 'SWITCH_BINARY_REPORT',
-      command_report_parser: (report, node) => {
-        if (report.hasOwnProperty('Value')) return report['Value'] === 'on/enable';
-        return null;
-      },
+      command_report_parser: report => report.Value === 'on/enable'
     },
   },
   settings: {
