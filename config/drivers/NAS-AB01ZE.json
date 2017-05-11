@@ -50,7 +50,17 @@
 		"manufacturerId": 600,
 		"productTypeId": 3,
 		"productId": 4232,
+		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2171/Siren User Manual Common V3_2.pdf",
+		"pid": 2171,
+		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025443",
 		"learnmode": {
+			"image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
+			"instruction": {
+				"en": "Press the button on inside youre NEO Siren three times",
+				"nl": "Druk driemaal op de knop op in de NEO Sirene"
+			}
+		},
+		"unlearnmode": {
 			"image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
 			"instruction": {
 				"en": "Press the button on inside youre NEO Siren three times",

@@ -7,7 +7,17 @@
 		"manufacturerId": 600,
 		"productTypeId": 3,
 		"productId": 4229,
+		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1788/Water Leakage Detector User Manual V2.doc",
+		"pid": 1788,
+		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055075",
 		"learnmode": {
+			"image": "/drivers/NAS-WS01ZE/assets/icon.svg",
+			"instruction": {
+				"en": "Press the code button inside your NEO Flood Sensor three times",
+				"nl": "Druk driemaal op de code knop binnen in de NEO Flood Sensor"
+			}
+		},
+		"unlearnmode": {
 			"image": "/drivers/NAS-WS01ZE/assets/icon.svg",
 			"instruction": {
 				"en": "Press the code button inside your NEO Flood Sensor three times",

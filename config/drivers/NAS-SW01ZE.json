@@ -14,6 +14,13 @@
 				"nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
 			}
 		},
+		"unlearnmode": {
+			"image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
+			"instruction": {
+				"en": "Press the left button on you're wallswitch three times quickly",
+				"nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
+			}
+		},
 		"defaultConfiguration": [
 		],
 		"associationGroups": [
@@ -82,34 +89,6 @@
 				"en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
 				"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
 			}
-		},
-		{
-			"id": "switch_binary_version",
-			"type": "dropdown",
-			"label": {
-				"en": "Switch Binary version",
-				"nl": "Switch Binary versie"
-			},
-			"value": "2",
-			"hint": {
-				"en": "Switch Binary version of Touch Switch; do not change, will be updated automatically. \nDefault: 2",
-				"nl": "Switch Binary versie van de Touch Switch; niet aanpassen, wordt automatisch geupdate. \nStandaard: 2"
-			},
-			"values": [{
-					"id": "1",
-					"label": {
-						"en": "Switch Binary V1",
-						"nl": "Switch Binary V1"
-					}
-      },
-				{
-					"id": "2",
-					"label": {
-						"en": "Switch Binary V2",
-						"nl": "Switch Binary V2"
-					}
-  		}
-      ]
-    }
+		}
 	]
 }

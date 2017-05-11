@@ -7,7 +7,17 @@
 		"manufacturerId": 600,
 		"productTypeId": 3,
 		"productId": 4227,
+		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
+		"pid": 1920,
+		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
 		"learnmode": {
+			"image": "/drivers/NAS-PD01ZE/assets/icon.svg",
+			"instruction": {
+				"en": "Press the code button inside your NEO PIR three times",
+				"nl": "Druk driemaal op de code knop binnen in de NEO PIR"
+			}
+		},
+		"unlearnmode": {
 			"image": "/drivers/NAS-PD01ZE/assets/icon.svg",
 			"instruction": {
 				"en": "Press the code button inside your NEO PIR three times",
