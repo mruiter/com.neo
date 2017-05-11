@@ -1,5 +1,5 @@
 'use strict';
-
+//Homey.log('node-commandclass', node.instance.CommandClass.COMMAND_CLASS_SWITCH_BINARY.version);
 const path = require('path');
 const ZwaveDriver = require('homey-zwavedriver');
 
@@ -12,7 +12,7 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			command_set: 'SWITCH_BINARY_SET',
 			'command_set_parser': (value, node) => {
 				// COMMAND_CLASS_SWITCH_BINARY V1 set parser
-				if (node.settings.switch_binary_version === '1') {
+				if (node.instance.CommandClass.COMMAND_CLASS_SWITCH_BINARY.version === '1') {
 					return {
 						'Switch Value': (value) ? 'on/enable' : 'off/disable'
 					}
@@ -26,18 +26,13 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			command_report_parser: (report, node) => {
 				// COMMAND_CLASS_SWITCH_BINARY V2 report parser
 				if (report.hasOwnProperty('Current Value')) {
-					// if settings.switch_binary_version is empty or not equal to V2 update it
-					if (!node.settings.hasOwnProperty('switch_binary_version') || node.settings.switch_binary_version !== '2') module.exports.setSettings(node.device_data, {
-						switch_binary_version: '2',
-					});
+
 					return report['Current Value'] === 'on/enable';
 				};
+
 				// COMMAND_CLASS_SWITCH_BINARY V1 report parser
 				if (report.hasOwnProperty('Value')) {
-					// if settings.switch_binary_version is not equal to V1 update it
-					if (!node.settings.hasOwnProperty('switch_binary_version') || node.settings.switch_binary_version !== '1') module.exports.setSettings(node.device_data, {
-						switch_binary_version: '1',
-					});
+
 					return report.Value === 'on/enable';
 				}
 				return null;
