@@ -4,7 +4,7 @@ const path = require('path');
 const ZwaveDriver = require('homey-zwavedriver');
 
 module.exports = new ZwaveDriver(path.basename(__dirname), {
-	debug: false,
+	debug: true,
 	capabilities: {
 		onoff: {
 			command_class: 'COMMAND_CLASS_SWITCH_BINARY',
@@ -12,6 +12,8 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			command_set: 'SWITCH_BINARY_SET',
 			'command_set_parser': (value, node) => {
 				// COMMAND_CLASS_SWITCH_BINARY V1 set parser
+				Homey.log('SET, node.instance:',node.instance);
+				Homey.log('SET, CommandClass COMMAND_CLASS_SWITCH_BINARY version:',node.instance.CommandClass.COMMAND_CLASS_SWITCH_BINARY.version);
 				if (node.instance.CommandClass.COMMAND_CLASS_SWITCH_BINARY.version === '1') {
 					return {
 						'Switch Value': (value) ? 'on/enable' : 'off/disable'
@@ -24,6 +26,8 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 				};
 			},
 			command_report_parser: (report, node) => {
+				Homey.log('REPORT, node.instance:',node.instance);
+				Homey.log('REPORT, CommandClass COMMAND_CLASS_SWITCH_BINARY version:',node.instance.CommandClass.COMMAND_CLASS_SWITCH_BINARY.version);
 				// COMMAND_CLASS_SWITCH_BINARY V2 report parser
 				if (report.hasOwnProperty('Current Value')) {
 
