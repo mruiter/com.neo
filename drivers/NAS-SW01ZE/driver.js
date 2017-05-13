@@ -1,44 +1,18 @@
 'use strict';
-//Homey.log('node-commandclass', node.instance.CommandClass.COMMAND_CLASS_SWITCH_BINARY.version);
 const path = require('path');
 const ZwaveDriver = require('homey-zwavedriver');
 
 module.exports = new ZwaveDriver(path.basename(__dirname), {
-	debug: true,
 	capabilities: {
 		onoff: {
 			command_class: 'COMMAND_CLASS_SWITCH_BINARY',
 			command_get: 'SWITCH_BINARY_GET',
 			command_set: 'SWITCH_BINARY_SET',
-			'command_set_parser': (value, node) => {
-				// COMMAND_CLASS_SWITCH_BINARY V1 set parser
-				Homey.log('SET, node.instance:',node.instance);
-				Homey.log('SET, CommandClass COMMAND_CLASS_SWITCH_BINARY version:',node.instance.CommandClass.COMMAND_CLASS_SWITCH_BINARY.version);
-				if (node.instance.CommandClass.COMMAND_CLASS_SWITCH_BINARY.version === '1') {
-					return {
-						'Switch Value': (value) ? 'on/enable' : 'off/disable'
-					}
-				};
-				// COMMAND_CLASS_SWITCH_BINARY V2 set parser
-				return {
-					'Target Value': (value) ? 'on/enable' : 'off/disable',
-					'Duration': 'Default'
-				};
-			},
+			// Use RAW command to enable compatibility with COMMAND_CLASS_SWITCH_BINARY V1 and V2
+			command_set_parser: value => new Buffer([(value) ? 255 : 0]),
+			// Use RAW command to enable compatibility with COMMAND_CLASS_SWITCH_BINARY V1 and V2
 			command_report_parser: (report, node) => {
-				Homey.log('REPORT, node.instance:',node.instance);
-				Homey.log('REPORT, CommandClass COMMAND_CLASS_SWITCH_BINARY version:',node.instance.CommandClass.COMMAND_CLASS_SWITCH_BINARY.version);
-				// COMMAND_CLASS_SWITCH_BINARY V2 report parser
-				if (report.hasOwnProperty('Current Value')) {
-
-					return report['Current Value'] === 'on/enable';
-				};
-
-				// COMMAND_CLASS_SWITCH_BINARY V1 report parser
-				if (report.hasOwnProperty('Value')) {
-
-					return report.Value === 'on/enable';
-				}
+				if (typeof report['Value (Raw)'] !== 'undefined') return report['Value (Raw)'][0] > 0;
 				return null;
 			},
 		},
