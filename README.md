@@ -31,9 +31,6 @@ c. check if effective and retry to the desired value
 ## Change Log:       
 
 ### v 1.1.22    
-**fixed:**        
-NAS-SW01ZE - Add compatibility with V1 and V2 binary switch CC    
-
 **update:**    
 all - Add productDocumentation and unlearnmode    
 all - Updated NEO branded images    

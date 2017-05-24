@@ -8,13 +8,15 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			command_class: 'COMMAND_CLASS_SWITCH_BINARY',
 			command_get: 'SWITCH_BINARY_GET',
 			command_set: 'SWITCH_BINARY_SET',
-			// Use RAW command to enable compatibility with COMMAND_CLASS_SWITCH_BINARY V1 and V2
-			command_set_parser: value => new Buffer([(value) ? 255 : 0]),
-			// Use RAW command to enable compatibility with COMMAND_CLASS_SWITCH_BINARY V1 and V2
+			command_set_parser: (value) => ({
+				'Target Value': (value) ? 'on/enable' : 'off/disable',
+				'Duration': 'Default'
+			}),
+			command_report: 'SWITCH_BINARY_REPORT',
 			command_report_parser: (report, node) => {
-				if (typeof report['Value (Raw)'] !== 'undefined') return report['Value (Raw)'][0] > 0;
+				if (report.hasOwnProperty('Current Value')) return report['Current Value'] === 'on/enable';
 				return null;
-			},
+			}
 		},
 	},
 	settings: {
