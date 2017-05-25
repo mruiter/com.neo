@@ -32,7 +32,7 @@ c. check if effective and retry to the desired value
 
 ### v 1.1.22    
 **update:**    
-all - Add productDocumentation and unlearnmode    
+all - Add product documentation and unlearnmode    
 all - Updated NEO branded images    
 
 ### v 1.1.21    
