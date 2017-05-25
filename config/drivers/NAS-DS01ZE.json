@@ -7,7 +7,16 @@
 		"manufacturerId": 600,
 		"productTypeId": 3,
 		"productId": 4226,
+		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1782/Door-Window User Guide.doc",
+		"pid": 1782,
+		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055076",
 		"learnmode": {
+			"instruction": {
+				"en": "Press the button inside your NEO Door Sensor three times",
+				"nl": "Druk driemaal op de knop in de Deur Sensor unit"
+			}
+		},
+		"unlearnmode": {
 			"instruction": {
 				"en": "Press the button inside your NEO Door Sensor three times",
 				"nl": "Druk driemaal op de knop in de Deur Sensor unit"
@@ -15,17 +24,6 @@
 		},
 		"associationGroups": [
 			1
-		],
-		"defaultConfiguration": [{
-				"id": 1,
-				"size": 2,
-				"value": 0
-			},
-			{
-				"id": 2,
-				"size": 1,
-				"value": "0xFF"
-			}
 		]
 	},
 	"class": "sensor",

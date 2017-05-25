@@ -30,6 +30,11 @@ c. check if effective and retry to the desired value
 
 ## Change Log:       
 
+### v 1.1.22    
+**update:**    
+all - Add productDocumentation and unlearnmode    
+all - Updated NEO branded images    
+
 ### v 1.1.21    
 **fixed:**        
 NAS-AB01ZE - Add action card for setting alarm or doorbell tune    

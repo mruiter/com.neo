@@ -50,7 +50,17 @@
 		"manufacturerId": 600,
 		"productTypeId": 3,
 		"productId": 4232,
+		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2171/Siren User Manual Common V3_2.pdf",
+		"pid": 2171,
+		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025443",
 		"learnmode": {
+			"image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
+			"instruction": {
+				"en": "Press the button on inside youre NEO Siren three times",
+				"nl": "Druk driemaal op de knop op in de NEO Sirene"
+			}
+		},
+		"unlearnmode": {
 			"image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
 			"instruction": {
 				"en": "Press the button on inside youre NEO Siren three times",
@@ -60,48 +70,9 @@
 		"associationGroups": [
 			1
 		],
-		"defaultConfiguration": [{
-				"id": 1,
-				"size": 1,
-				"value": 3
-			},
-			{
-				"id": 2,
-				"size": 1,
-				"value": 2
-			},
-			{
-				"id": 3,
-				"size": 1,
-				"value": 1
-			},
-			{
-				"id": 4,
-				"size": 1,
-				"value": 1
-			},
-			{
-				"id": 5,
-				"size": 1,
-				"value": 10
-			},
-			{
-				"id": 6,
-				"size": 1,
-				"value": 9
-			},
-			{
-				"id": 7,
-				"size": 1,
-				"value": 1
-			},
+		"defaultConfiguration": [
 			{
 				"id": 8,
-				"size": 1,
-				"value": 0
-			},
-			{
-				"id": 9,
 				"size": 1,
 				"value": 0
 			}
@@ -441,7 +412,7 @@
 					"id": "9",
 					"label": {
 						"en": "Tune 9 (default)",
-						"nl": "Melodie 9 (standard)"
+						"nl": "Melodie 9 (standaard)"
 					}
 				},
 				{

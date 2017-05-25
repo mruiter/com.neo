@@ -7,7 +7,17 @@
 		"manufacturerId": 600,
 		"productTypeId": 3,
 		"productId": 4231,
+		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
+		"pid": 1783,
+		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055074",
 		"learnmode": {
+			"image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
+			"instruction": {
+				"en": "Press the button on your NEO Wall Plug three times",
+				"nl": "Druk driemaal op de knop op de NEO Wall Plug"
+			}
+		},
+		"unlearnmode": {
 			"image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
 			"instruction": {
 				"en": "Press the button on your NEO Wall Plug three times",
