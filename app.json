@@ -14,8 +14,8 @@
     "security"
   ],
 	"images": {
-		"large": "/assets/images/large.jpg",
-		"small": "/assets/images/small.jpg"
+		"large": "/assets/images/large.png",
+		"small": "/assets/images/small.png"
 	},
 	"author": {
 		"name": "Marco Ruiter",
@@ -463,8 +463,8 @@
         "alarm_battery"
       ],
 			"images": {
-				"large": "/drivers/NAS-AB01ZE/assets/images/large.jpg",
-				"small": "/drivers/NAS-AB01ZE/assets/images/small.jpg"
+				"large": "/drivers/NAS-AB01ZE/assets/images/large.png",
+				"small": "/drivers/NAS-AB01ZE/assets/images/small.png"
 			},
 			"settings": [
 				{
@@ -901,8 +901,8 @@
         "alarm_battery"
       ],
 			"images": {
-				"large": "/drivers/NAS-DS01ZE/assets/images/large.jpg",
-				"small": "/drivers/NAS-DS01ZE/assets/images/small.jpg"
+				"large": "/drivers/NAS-DS01ZE/assets/images/large.png",
+				"small": "/drivers/NAS-DS01ZE/assets/images/small.png"
 			},
 			"settings": [
 				{
@@ -1021,8 +1021,8 @@
         "measure_battery"
       ],
 			"images": {
-				"large": "/drivers/NAS-PD01ZE/assets/images/large.jpg",
-				"small": "/drivers/NAS-PD01ZE/assets/images/small.jpg"
+				"large": "/drivers/NAS-PD01ZE/assets/images/large.png",
+				"small": "/drivers/NAS-PD01ZE/assets/images/small.png"
 			},
 			"settings": [
 				{
@@ -1260,8 +1260,8 @@
       ],
 			"icon": "/drivers/NAS-SW01ZE/assets/icon.svg",
 			"images": {
-				"large": "/drivers/NAS-SW01ZE/assets/images/large.jpg",
-				"small": "/drivers/NAS-SW01ZE/assets/images/small.jpg"
+				"large": "/drivers/NAS-SW01ZE/assets/images/large.png",
+				"small": "/drivers/NAS-SW01ZE/assets/images/small.png"
 			},
 			"settings": [
 				{
@@ -1376,8 +1376,8 @@
         "measure_voltage"
       ],
 			"images": {
-				"large": "/drivers/NAS-WR01ZE/assets/images/large.jpg",
-				"small": "/drivers/NAS-WR01ZE/assets/images/small.jpg"
+				"large": "/drivers/NAS-WR01ZE/assets/images/large.png",
+				"small": "/drivers/NAS-WR01ZE/assets/images/small.png"
 			},
 			"mobile": {
 				"components": [
@@ -1618,8 +1618,8 @@
         "alarm_battery"
       ],
 			"images": {
-				"large": "/drivers/NAS-WS01ZE/assets/images/large.jpg",
-				"small": "/drivers/NAS-WS01ZE/assets/images/small.jpg"
+				"large": "/drivers/NAS-WS01ZE/assets/images/large.png",
+				"small": "/drivers/NAS-WS01ZE/assets/images/small.png"
 			},
 			"settings": [
 				{
