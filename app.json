@@ -1,1720 +1,1838 @@
 {
-	"id": "com.neo",
-	"name": {
-		"en": "NEO Coolcam"
-	},
-	"version": "1.1.22",
-	"compatibility": ">=1.1.4",
-	"description": {
-		"en": "NEO Coolcam"
-	},
-	"category": [
+  "id": "com.neo",
+  "name": {
+    "en": "NEO Coolcam"
+  },
+  "version": "1.1.23",
+  "compatibility": ">=1.1.4",
+  "description": {
+    "en": "NEO Coolcam"
+  },
+  "category": [
     "appliances",
     "lights",
     "security"
   ],
-	"images": {
-		"large": "/assets/images/large.png",
-		"small": "/assets/images/small.png"
-	},
-	"author": {
-		"name": "Marco Ruiter",
-		"email": "mruiter@tuxweb.nl"
-	},
-	"contributors": {
-		"developers": [
-			{
-				"name": "Marco Ruiter",
-				"email": "mruiter@tuxweb.nl"
+  "images": {
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  },
+  "author": {
+    "name": "Marco Ruiter",
+    "email": "mruiter@tuxweb.nl"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Marco Ruiter",
+        "email": "mruiter@tuxweb.nl"
       },
-			{
-				"name": "Ted Tolboom",
-				"email": "dTNL.Homey@gmail.com"
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
       }
     ]
-	},
-	"flow": {
-		"triggers": [
-			{
-				"id": "battery_alarm",
-				"title": {
-					"en": "The battery alarm turned on",
-					"nl": "De batterijwaarschuwing gaat aan"
-				},
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=NAS-AB01ZE"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "battery_alarm",
+        "title": {
+          "en": "The battery alarm turned on",
+          "nl": "De batterijwaarschuwing gaat aan"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
           }
         ]
       }
     ],
-		"conditions": [],
-		"actions": [
-			{
-				"id": "AB01ZE_alarm_state",
-				"title": {
-					"en": "Change the alarm state",
-					"nl": "Verander de alarm toestand"
-				},
-				"hint": {
-					"en": "Change the alarm state; sound or silence the alarm",
-					"nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm"
-				},
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=NAS-AB01ZE"
+    "conditions": [],
+    "actions": [
+      {
+        "id": "AB01ZE_alarm_state",
+        "title": {
+          "en": "Change the alarm state",
+          "nl": "Verander de alarm toestand"
+        },
+        "hint": {
+          "en": "Change the alarm state; sound or silence the alarm",
+          "nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
           },
-					{
-						"name": "alarm_state",
-						"type": "dropdown",
-						"values": [
-							{
-								"id": "0",
-								"label": {
-									"en": "Silence alarm",
-									"nl": "Alarm stil"
-								}
+          {
+            "name": "alarm_state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Silence alarm",
+                  "nl": "Alarm stil"
+                }
               },
-							{
-								"id": "1",
-								"label": {
-									"en": "Sound alarm",
-									"nl": "Alarm luiden"
-								}
+              {
+                "id": "1",
+                "label": {
+                  "en": "Sound alarm",
+                  "nl": "Alarm luiden"
+                }
               }
             ]
           }
         ]
       },
-			{
-				"id": "AB01ZE_alarm_mode",
-				"title": {
-					"en": "Set the device mode",
-					"nl": "Stel de apparaat modus in"
-				},
-				"hint": {
-					"en": "Set the device mode; alarm or doorbell mode",
-					"nl": "Stel de apparaat modus in; alarm of deurbel"
-				},
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=NAS-AB01ZE"
+      {
+        "id": "AB01ZE_alarm_mode",
+        "title": {
+          "en": "Set the device mode",
+          "nl": "Stel de apparaat modus in"
+        },
+        "hint": {
+          "en": "Set the device mode; alarm or doorbell mode",
+          "nl": "Stel de apparaat modus in; alarm of deurbel"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
           },
-					{
-						"name": "alarm_mode",
-						"type": "dropdown",
-						"values": [
-							{
-								"id": "1",
-								"label": {
-									"en": "Alarm",
-									"nl": "Alarm"
-								}
+          {
+            "name": "alarm_mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Alarm",
+                  "nl": "Alarm"
+                }
               },
-							{
-								"id": "2",
-								"label": {
-									"en": "Doorbel",
-									"nl": "Deurbel"
-								}
+              {
+                "id": "2",
+                "label": {
+                  "en": "Doorbel",
+                  "nl": "Deurbel"
+                }
               }
             ]
           }
         ]
       },
-			{
-				"id": "AB01ZE_alarm_tune",
-				"title": {
-					"en": "Set the alarm tune",
-					"nl": "Stel de alarm melodie in"
-				},
-				"hint": {
-					"en": "Choose the tune of the alarm sound",
-					"nl": "Kies de melodie die gebruikt wordt bij alarm"
-				},
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=NAS-AB01ZE"
+      {
+        "id": "AB01ZE_alarm_tune",
+        "title": {
+          "en": "Set the alarm tune",
+          "nl": "Stel de alarm melodie in"
+        },
+        "hint": {
+          "en": "Choose the tune of the alarm sound",
+          "nl": "Kies de melodie die gebruikt wordt bij alarm"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
           },
-					{
-						"name": "alarm_tune",
-						"type": "dropdown",
-						"values": [
-							{
-								"id": "1",
-								"label": {
-									"en": "Tune 1",
-									"nl": "Melodie 1"
-								}
+          {
+            "name": "alarm_tune",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Tune 1",
+                  "nl": "Melodie 1"
+                }
               },
-							{
-								"id": "2",
-								"label": {
-									"en": "Tune 2",
-									"nl": "Melodie 2"
-								}
+              {
+                "id": "2",
+                "label": {
+                  "en": "Tune 2",
+                  "nl": "Melodie 2"
+                }
               },
-							{
-								"id": "3",
-								"label": {
-									"en": "Tune 3",
-									"nl": "Melodie 3"
-								}
+              {
+                "id": "3",
+                "label": {
+                  "en": "Tune 3",
+                  "nl": "Melodie 3"
+                }
               },
-							{
-								"id": "4",
-								"label": {
-									"en": "Tune 4",
-									"nl": "Melodie 4"
-								}
+              {
+                "id": "4",
+                "label": {
+                  "en": "Tune 4",
+                  "nl": "Melodie 4"
+                }
               },
-							{
-								"id": "5",
-								"label": {
-									"en": "Tune 5",
-									"nl": "Melodie 5"
-								}
+              {
+                "id": "5",
+                "label": {
+                  "en": "Tune 5",
+                  "nl": "Melodie 5"
+                }
               },
-							{
-								"id": "6",
-								"label": {
-									"en": "Tune 6",
-									"nl": "Melodie 6"
-								}
+              {
+                "id": "6",
+                "label": {
+                  "en": "Tune 6",
+                  "nl": "Melodie 6"
+                }
               },
-							{
-								"id": "7",
-								"label": {
-									"en": "Tune 7",
-									"nl": "Melodie 7"
-								}
+              {
+                "id": "7",
+                "label": {
+                  "en": "Tune 7",
+                  "nl": "Melodie 7"
+                }
               },
-							{
-								"id": "8",
-								"label": {
-									"en": "Tune 8",
-									"nl": "Melodie 8"
-								}
+              {
+                "id": "8",
+                "label": {
+                  "en": "Tune 8",
+                  "nl": "Melodie 8"
+                }
               },
-							{
-								"id": "9",
-								"label": {
-									"en": "Tune 9",
-									"nl": "Melodie 9"
-								}
+              {
+                "id": "9",
+                "label": {
+                  "en": "Tune 9",
+                  "nl": "Melodie 9"
+                }
               },
-							{
-								"id": "10",
-								"label": {
-									"en": "Tune 10 (default)",
-									"nl": "Melodie 10 (standaard)"
-								}
+              {
+                "id": "10",
+                "label": {
+                  "en": "Tune 10 (default)",
+                  "nl": "Melodie 10 (standaard)"
+                }
               }
             ]
           }
         ]
       },
-			{
-				"id": "AB01ZE_doorbell_tune",
-				"title": {
-					"en": "Set the doorbell tune",
-					"nl": "Stel de deurbel melodie in"
-				},
-				"hint": {
-					"en": "Choose the tune of the doorbell sound",
-					"nl": "Kies de melodie die gebruikt wordt als deurbel"
-				},
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=NAS-AB01ZE"
+      {
+        "id": "AB01ZE_doorbell_tune",
+        "title": {
+          "en": "Set the doorbell tune",
+          "nl": "Stel de deurbel melodie in"
+        },
+        "hint": {
+          "en": "Choose the tune of the doorbell sound",
+          "nl": "Kies de melodie die gebruikt wordt als deurbel"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
           },
-					{
-						"name": "doorbell_tune",
-						"type": "dropdown",
-						"values": [
-							{
-								"id": "1",
-								"label": {
-									"en": "Tune 1",
-									"nl": "Melodie 1"
-								}
+          {
+            "name": "doorbell_tune",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Tune 1",
+                  "nl": "Melodie 1"
+                }
               },
-							{
-								"id": "2",
-								"label": {
-									"en": "Tune 2",
-									"nl": "Melodie 2"
-								}
+              {
+                "id": "2",
+                "label": {
+                  "en": "Tune 2",
+                  "nl": "Melodie 2"
+                }
               },
-							{
-								"id": "3",
-								"label": {
-									"en": "Tune 3",
-									"nl": "Melodie 3"
-								}
+              {
+                "id": "3",
+                "label": {
+                  "en": "Tune 3",
+                  "nl": "Melodie 3"
+                }
               },
-							{
-								"id": "4",
-								"label": {
-									"en": "Tune 4",
-									"nl": "Melodie 4"
-								}
+              {
+                "id": "4",
+                "label": {
+                  "en": "Tune 4",
+                  "nl": "Melodie 4"
+                }
               },
-							{
-								"id": "5",
-								"label": {
-									"en": "Tune 5",
-									"nl": "Melodie 5"
-								}
+              {
+                "id": "5",
+                "label": {
+                  "en": "Tune 5",
+                  "nl": "Melodie 5"
+                }
               },
-							{
-								"id": "6",
-								"label": {
-									"en": "Tune 6",
-									"nl": "Melodie 6"
-								}
+              {
+                "id": "6",
+                "label": {
+                  "en": "Tune 6",
+                  "nl": "Melodie 6"
+                }
               },
-							{
-								"id": "7",
-								"label": {
-									"en": "Tune 7",
-									"nl": "Melodie 7"
-								}
+              {
+                "id": "7",
+                "label": {
+                  "en": "Tune 7",
+                  "nl": "Melodie 7"
+                }
               },
-							{
-								"id": "8",
-								"label": {
-									"en": "Tune 8",
-									"nl": "Melodie 8"
-								}
+              {
+                "id": "8",
+                "label": {
+                  "en": "Tune 8",
+                  "nl": "Melodie 8"
+                }
               },
-							{
-								"id": "9",
-								"label": {
-									"en": "Tune 9 (default)",
-									"nl": "Melodie 9 (standard)"
-								}
+              {
+                "id": "9",
+                "label": {
+                  "en": "Tune 9 (default)",
+                  "nl": "Melodie 9 (standard)"
+                }
               },
-							{
-								"id": "10",
-								"label": {
-									"en": "Tune 10",
-									"nl": "Melodie 10"
-								}
+              {
+                "id": "10",
+                "label": {
+                  "en": "Tune 10",
+                  "nl": "Melodie 10"
+                }
               }
             ]
           }
         ]
       },
-			{
-				"id": "SW01ZE_switch_LED",
-				"title": {
-					"en": "Set Touch Switch LED",
-					"nl": "Stel Touch Switch LED in"
-				},
-				"hint": {
-					"en": "Enable or disable the Touch Switch LED, lighting up blue when enabled",
-					"nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld"
-				},
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=NAS-SW01ZE"
+      {
+        "id": "SW01ZE_switch_LED",
+        "title": {
+          "en": "Set Touch Switch LED",
+          "nl": "Stel Touch Switch LED in"
+        },
+        "hint": {
+          "en": "Enable or disable the Touch Switch LED, lighting up blue when enabled",
+          "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-SW01ZE"
           },
-					{
-						"name": "switch_LED_onoff",
-						"type": "dropdown",
-						"values": [
-							{
-								"id": "0",
-								"label": {
-									"en": "LED disabled",
-									"nl": "LED uitgeschakeld"
-								}
+          {
+            "name": "switch_LED_onoff",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "LED disabled",
+                  "nl": "LED uitgeschakeld"
+                }
               },
-							{
-								"id": "1",
-								"label": {
-									"en": "LED enabled",
-									"nl": "LED ingeschakeld"
-								}
+              {
+                "id": "1",
+                "label": {
+                  "en": "LED enabled",
+                  "nl": "LED ingeschakeld"
+                }
               }
             ]
           }
         ]
       },
-			{
-				"id": "WR01ZE_reset_meter",
-				"title": {
-					"en": "Reset meter values",
-					"nl": "Meter waarden resetten"
-				},
-				"hint": {
-					"en": "Reset the accumulated power usage (kWh). Can not be reversed.",
-					"nl": "Reset de stroomverbruik (kWh) waarden. Kan niet ongedaan gemaakt worden. "
-				},
-				"args": [
-					{
-						"name": "device",
-						"type": "device",
-						"filter": "driver_id=NAS-WR01ZE"
+      {
+        "id": "SW01ZE_switch_LED",
+        "title": {
+          "en": "Set Touch Switch LED",
+          "nl": "Stel Touch Switch LED in"
+        },
+        "hint": {
+          "en": "Enable or disable the Touch Switch LED, lighting up blue when enabled",
+          "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-SW01ZE"
+          },
+          {
+            "name": "switch_LED_onoff",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "LED disabled",
+                  "nl": "LED uitgeschakeld"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "LED enabled",
+                  "nl": "LED ingeschakeld"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "WR01ZE_reset_meter",
+        "title": {
+          "en": "Reset meter values",
+          "nl": "Meter waarden resetten"
+        },
+        "hint": {
+          "en": "Reset the accumulated power usage (kWh). Can not be reversed.",
+          "nl": "Reset de stroomverbruik (kWh) waarden. Kan niet ongedaan gemaakt worden. "
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-WR01ZE"
           }
         ]
       }
     ]
-	},
-	"drivers": [
-		{
-			"id": "NAS-AB01ZE",
-			"name": {
-				"en": "NEO Siren"
-			},
-			"mobile": {
-				"components": [
-					{
-						"id": "icon",
-						"capabilities": [
+  },
+  "drivers": [
+    {
+      "id": "NAS-AB01ZE",
+      "name": {
+        "en": "NEO Siren"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": [
               "onoff"
             ]
           },
-					{
-						"id": "battery",
-						"capabilities": [
+          {
+            "id": "battery",
+            "capabilities": [
               "measure_battery"
             ],
-						"options": {
-							"showTitle": true
-						}
+            "options": {
+              "showTitle": true
+            }
           },
-					{
-						"id": "toggle",
-						"capabilities": [
+          {
+            "id": "toggle",
+            "capabilities": [
               "onoff"
             ],
-						"options": {
-							"showTitle": true
-						}
+            "options": {
+              "showTitle": true
+            }
           },
-					{
-						"id": "sensor",
-						"capabilities": [
+          {
+            "id": "sensor",
+            "capabilities": [
               "alarm_battery",
               "alarm_battery"
             ],
-						"options": {
-							"icons": {
-								"Batterij Alarm": "/drivers/NAS-AB01ZE/assets/images/alarm_battery.svg"
-							},
-							"Batterij Alarm": {
-								"noblink": false,
-								"invert": false
-							}
-						}
+            "options": {
+              "icons": {
+                "Batterij Alarm": "/drivers/NAS-AB01ZE/assets/images/alarm_battery.svg"
+              },
+              "Batterij Alarm": {
+                "noblink": false,
+                "invert": false
+              }
+            }
           }
         ]
-			},
-			"zwave": {
-				"manufacturerId": 600,
-				"productTypeId": 3,
-				"productId": 4232,
-				"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2171/Siren User Manual Common V3_2.pdf",
-				"pid": 2171,
-				"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025443",
-				"learnmode": {
-					"image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
-					"instruction": {
-						"en": "Press the button on inside youre NEO Siren three times",
-						"nl": "Druk driemaal op de knop op in de NEO Sirene"
-					}
-				},
-				"unlearnmode": {
-					"image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
-					"instruction": {
-						"en": "Press the button on inside youre NEO Siren three times",
-						"nl": "Druk driemaal op de knop op in de NEO Sirene"
-					}
-				},
-				"associationGroups": [
+      },
+      "zwave": {
+        "manufacturerId": 600,
+        "productTypeId": 3,
+        "productId": 4232,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2171/Siren User Manual Common V3_2.pdf",
+        "pid": 2171,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025443",
+        "learnmode": {
+          "image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on inside youre NEO Siren three times",
+            "nl": "Druk driemaal op de knop op in de NEO Sirene"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on inside youre NEO Siren three times",
+            "nl": "Druk driemaal op de knop op in de NEO Sirene"
+          }
+        },
+        "associationGroups": [
           1
         ],
-				"defaultConfiguration": [
-					{
-						"id": 8,
-						"size": 1,
-						"value": 0
+        "defaultConfiguration": [
+          {
+            "id": 8,
+            "size": 1,
+            "value": 0
           }
         ]
-			},
-			"class": "other",
-			"capabilities": [
+      },
+      "class": "other",
+      "capabilities": [
         "onoff",
         "measure_battery",
         "alarm_battery"
       ],
-			"images": {
-				"large": "/drivers/NAS-AB01ZE/assets/images/large.png",
-				"small": "/drivers/NAS-AB01ZE/assets/images/small.png"
-			},
-			"settings": [
-				{
-					"id": "alarmvolume",
-					"type": "dropdown",
-					"label": {
-						"en": "Alarm volume",
-						"nl": "Alarm volume"
-					},
-					"value": "3",
-					"hint": {
-						"en": "Set the volume of the Alarm sound",
-						"nl": "Aanpassen volume van Alarm geluid"
-					},
-					"values": [
-						{
-							"id": "1",
-							"label": {
-								"en": "Low",
-								"nl": "Laag"
-							}
+      "images": {
+        "large": "/drivers/NAS-AB01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-AB01ZE/assets/images/small.jpg"
+      },
+      "settings": [
+        {
+          "id": "alarmvolume",
+          "type": "dropdown",
+          "label": {
+            "en": "Alarm volume",
+            "nl": "Alarm volume"
+          },
+          "value": "3",
+          "hint": {
+            "en": "Set the volume of the Alarm sound",
+            "nl": "Aanpassen volume van Alarm geluid"
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Low",
+                "nl": "Laag"
+              }
             },
-						{
-							"id": "2",
-							"label": {
-								"en": "Midle",
-								"nl": "Middelmatig"
-							}
+            {
+              "id": "2",
+              "label": {
+                "en": "Midle",
+                "nl": "Middelmatig"
+              }
             },
-						{
-							"id": "3",
-							"label": {
-								"en": "High (default)",
-								"nl": "Hoog (standaard)"
-							}
+            {
+              "id": "3",
+              "label": {
+                "en": "High (default)",
+                "nl": "Hoog (standaard)"
+              }
             }
           ]
         },
-				{
-					"id": "alarmsoundtime",
-					"type": "dropdown",
-					"label": {
-						"en": "Alarm duration time",
-						"nl": "Alarm duratie"
-					},
-					"value": "2",
-					"hint": {
-						"en": "Set the duration of the time the siren will sound its alarm music",
-						"nl": "Pas de tijd aan dat de sirene zijn alarm geluid laat horen"
-					},
-					"values": [
-						{
-							"id": "0",
-							"label": {
-								"en": "Alarm sound off",
-								"nl": "Alarm geluid uit"
-							}
+        {
+          "id": "alarmsoundtime",
+          "type": "dropdown",
+          "label": {
+            "en": "Alarm duration time",
+            "nl": "Alarm duratie"
+          },
+          "value": "2",
+          "hint": {
+            "en": "Set the duration of the time the siren will sound its alarm music",
+            "nl": "Pas de tijd aan dat de sirene zijn alarm geluid laat horen"
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Alarm sound off",
+                "nl": "Alarm geluid uit"
+              }
             },
-						{
-							"id": "1",
-							"label": {
-								"en": "30 seconds",
-								"nl": "30 seconden"
-							}
+            {
+              "id": "1",
+              "label": {
+                "en": "30 seconds",
+                "nl": "30 seconden"
+              }
             },
-						{
-							"id": "2",
-							"label": {
-								"en": "1 minute (default)",
-								"nl": "1 minuut (standaard)"
-							}
+            {
+              "id": "2",
+              "label": {
+                "en": "1 minute (default)",
+                "nl": "1 minuut (standaard)"
+              }
             },
-						{
-							"id": "3",
-							"label": {
-								"en": "5 minutes",
-								"nl": "5 minuten"
-							}
+            {
+              "id": "3",
+              "label": {
+                "en": "5 minutes",
+                "nl": "5 minuten"
+              }
             },
-						{
-							"id": "255",
-							"label": {
-								"en": "Endless until battery drained or alarm switched off",
-								"nl": "Oneindig totdat de accu leeg is of alarm wordt uitgezet"
-							}
+            {
+              "id": "255",
+              "label": {
+                "en": "Endless until battery drained or alarm switched off",
+                "nl": "Oneindig totdat de accu leeg is of alarm wordt uitgezet"
+              }
             }
           ]
         },
-				{
-					"id": "doorbellvolume",
-					"type": "dropdown",
-					"label": {
-						"en": "Doorbell volume",
-						"nl": "Deurbel volume"
-					},
-					"value": "1",
-					"hint": {
-						"en": "Set the volume of the Doorbell sound",
-						"nl": "Aanpassen volume van deurbel geluid"
-					},
-					"values": [
-						{
-							"id": "1",
-							"label": {
-								"en": "Low (default)",
-								"nl": "Laag (standaard)"
-							}
+        {
+          "id": "doorbellvolume",
+          "type": "dropdown",
+          "label": {
+            "en": "Doorbell volume",
+            "nl": "Deurbel volume"
+          },
+          "value": "1",
+          "hint": {
+            "en": "Set the volume of the Doorbell sound",
+            "nl": "Aanpassen volume van deurbel geluid"
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Low (default)",
+                "nl": "Laag (standaard)"
+              }
             },
-						{
-							"id": "2",
-							"label": {
-								"en": "Midle",
-								"nl": "Middelmatig"
-							}
+            {
+              "id": "2",
+              "label": {
+                "en": "Midle",
+                "nl": "Middelmatig"
+              }
             },
-						{
-							"id": "3",
-							"label": {
-								"en": "High",
-								"nl": "Hoog"
-							}
+            {
+              "id": "3",
+              "label": {
+                "en": "High",
+                "nl": "Hoog"
+              }
             }
           ]
         },
-				{
-					"id": "doorbellsoundtime",
-					"type": "dropdown",
-					"label": {
-						"en": "Doorbell duration time",
-						"nl": "Deurbel duratie"
-					},
-					"value": "1",
-					"hint": {
-						"en": "Set the duration of the time the doorbell will sound its music",
-						"nl": "Pas de tijd aan dat de deurbell zijn geluid laat horen"
-					},
-					"values": [
-						{
-							"id": "0",
-							"label": {
-								"en": "Doorbell sound off",
-								"nl": "Deurbel geluid uit"
-							}
+        {
+          "id": "doorbellsoundtime",
+          "type": "dropdown",
+          "label": {
+            "en": "Doorbell duration time",
+            "nl": "Deurbel duratie"
+          },
+          "value": "1",
+          "hint": {
+            "en": "Set the duration of the time the doorbell will sound its music",
+            "nl": "Pas de tijd aan dat de deurbell zijn geluid laat horen"
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Doorbell sound off",
+                "nl": "Deurbel geluid uit"
+              }
             },
-						{
-							"id": "1",
-							"label": {
-								"en": "30 seconds (default)",
-								"nl": "30 seconden (standaard)"
-							}
+            {
+              "id": "1",
+              "label": {
+                "en": "30 seconds (default)",
+                "nl": "30 seconden (standaard)"
+              }
             },
-						{
-							"id": "2",
-							"label": {
-								"en": "1 minute",
-								"nl": "1 minuut"
-							}
+            {
+              "id": "2",
+              "label": {
+                "en": "1 minute",
+                "nl": "1 minuut"
+              }
             },
-						{
-							"id": "3",
-							"label": {
-								"en": "5 minutes",
-								"nl": "5 minuten"
-							}
+            {
+              "id": "3",
+              "label": {
+                "en": "5 minutes",
+                "nl": "5 minuten"
+              }
             },
-						{
-							"id": "255",
-							"label": {
-								"en": "Endless until battery drained or doorbell switched off",
-								"nl": "Oneindig totdat de accu leeg is of deurbell trigger wordt uitgezet"
-							}
+            {
+              "id": "255",
+              "label": {
+                "en": "Endless until battery drained or doorbell switched off",
+                "nl": "Oneindig totdat de accu leeg is of deurbell trigger wordt uitgezet"
+              }
             }
           ]
         },
-				{
-					"id": "alarmtune",
-					"type": "dropdown",
-					"label": {
-						"en": "Alarm sound tune",
-						"nl": "Melodie/geluid alarm"
-					},
-					"value": "10",
-					"hint": {
-						"en": "Choose the tune of the alarm sound",
-						"nl": "Kies de melodie die gebruikt wordt bij alarm"
-					},
-					"values": [
-						{
-							"id": "1",
-							"label": {
-								"en": "Tune 1",
-								"nl": "Melodie 1"
-							}
+        {
+          "id": "alarmtune",
+          "type": "dropdown",
+          "label": {
+            "en": "Alarm sound tune",
+            "nl": "Melodie/geluid alarm"
+          },
+          "value": "10",
+          "hint": {
+            "en": "Choose the tune of the alarm sound",
+            "nl": "Kies de melodie die gebruikt wordt bij alarm"
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Tune 1",
+                "nl": "Melodie 1"
+              }
             },
-						{
-							"id": "2",
-							"label": {
-								"en": "Tune 2",
-								"nl": "Melodie 2"
-							}
+            {
+              "id": "2",
+              "label": {
+                "en": "Tune 2",
+                "nl": "Melodie 2"
+              }
             },
-						{
-							"id": "3",
-							"label": {
-								"en": "Tune 3",
-								"nl": "Melodie 3"
-							}
+            {
+              "id": "3",
+              "label": {
+                "en": "Tune 3",
+                "nl": "Melodie 3"
+              }
             },
-						{
-							"id": "4",
-							"label": {
-								"en": "Tune 4",
-								"nl": "Melodie 4"
-							}
+            {
+              "id": "4",
+              "label": {
+                "en": "Tune 4",
+                "nl": "Melodie 4"
+              }
             },
-						{
-							"id": "5",
-							"label": {
-								"en": "Tune 5",
-								"nl": "Melodie 5"
-							}
+            {
+              "id": "5",
+              "label": {
+                "en": "Tune 5",
+                "nl": "Melodie 5"
+              }
             },
-						{
-							"id": "6",
-							"label": {
-								"en": "Tune 6",
-								"nl": "Melodie 6"
-							}
+            {
+              "id": "6",
+              "label": {
+                "en": "Tune 6",
+                "nl": "Melodie 6"
+              }
             },
-						{
-							"id": "7",
-							"label": {
-								"en": "Tune 7",
-								"nl": "Melodie 7"
-							}
+            {
+              "id": "7",
+              "label": {
+                "en": "Tune 7",
+                "nl": "Melodie 7"
+              }
             },
-						{
-							"id": "8",
-							"label": {
-								"en": "Tune 8",
-								"nl": "Melodie 8"
-							}
+            {
+              "id": "8",
+              "label": {
+                "en": "Tune 8",
+                "nl": "Melodie 8"
+              }
             },
-						{
-							"id": "9",
-							"label": {
-								"en": "Tune 9",
-								"nl": "Melodie 9"
-							}
+            {
+              "id": "9",
+              "label": {
+                "en": "Tune 9",
+                "nl": "Melodie 9"
+              }
             },
-						{
-							"id": "10",
-							"label": {
-								"en": "Tune 10 (default)",
-								"nl": "Melodie 10 (standaard)"
-							}
+            {
+              "id": "10",
+              "label": {
+                "en": "Tune 10 (default)",
+                "nl": "Melodie 10 (standaard)"
+              }
             }
           ]
         },
-				{
-					"id": "doorbelltune",
-					"type": "dropdown",
-					"label": {
-						"en": "Doorbell sound tune",
-						"nl": "Melodie/geluid deurbel"
-					},
-					"value": "9",
-					"hint": {
-						"en": "Choose the tune of the doorbell sound",
-						"nl": "Kies de melodie die gebruikt wordt als deurbel"
-					},
-					"values": [
-						{
-							"id": "1",
-							"label": {
-								"en": "Tune 1",
-								"nl": "Melodie 1"
-							}
+        {
+          "id": "doorbelltune",
+          "type": "dropdown",
+          "label": {
+            "en": "Doorbell sound tune",
+            "nl": "Melodie/geluid deurbel"
+          },
+          "value": "9",
+          "hint": {
+            "en": "Choose the tune of the doorbell sound",
+            "nl": "Kies de melodie die gebruikt wordt als deurbel"
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Tune 1",
+                "nl": "Melodie 1"
+              }
             },
-						{
-							"id": "2",
-							"label": {
-								"en": "Tune 2",
-								"nl": "Melodie 2"
-							}
+            {
+              "id": "2",
+              "label": {
+                "en": "Tune 2",
+                "nl": "Melodie 2"
+              }
             },
-						{
-							"id": "3",
-							"label": {
-								"en": "Tune 3",
-								"nl": "Melodie 3"
-							}
+            {
+              "id": "3",
+              "label": {
+                "en": "Tune 3",
+                "nl": "Melodie 3"
+              }
             },
-						{
-							"id": "4",
-							"label": {
-								"en": "Tune 4",
-								"nl": "Melodie 4"
-							}
+            {
+              "id": "4",
+              "label": {
+                "en": "Tune 4",
+                "nl": "Melodie 4"
+              }
             },
-						{
-							"id": "5",
-							"label": {
-								"en": "Tune 5",
-								"nl": "Melodie 5"
-							}
+            {
+              "id": "5",
+              "label": {
+                "en": "Tune 5",
+                "nl": "Melodie 5"
+              }
             },
-						{
-							"id": "6",
-							"label": {
-								"en": "Tune 6",
-								"nl": "Melodie 6"
-							}
+            {
+              "id": "6",
+              "label": {
+                "en": "Tune 6",
+                "nl": "Melodie 6"
+              }
             },
-						{
-							"id": "7",
-							"label": {
-								"en": "Tune 7",
-								"nl": "Melodie 7"
-							}
+            {
+              "id": "7",
+              "label": {
+                "en": "Tune 7",
+                "nl": "Melodie 7"
+              }
             },
-						{
-							"id": "8",
-							"label": {
-								"en": "Tune 8",
-								"nl": "Melodie 8"
-							}
+            {
+              "id": "8",
+              "label": {
+                "en": "Tune 8",
+                "nl": "Melodie 8"
+              }
             },
-						{
-							"id": "9",
-							"label": {
-								"en": "Tune 9 (default)",
-								"nl": "Melodie 9 (standaard)"
-							}
+            {
+              "id": "9",
+              "label": {
+                "en": "Tune 9 (default)",
+                "nl": "Melodie 9 (standaard)"
+              }
             },
-						{
-							"id": "10",
-							"label": {
-								"en": "Tune 10",
-								"nl": "Melodie 10"
-							}
+            {
+              "id": "10",
+              "label": {
+                "en": "Tune 10",
+                "nl": "Melodie 10"
+              }
             }
           ]
         },
-				{
-					"id": "alarmordoorbell",
-					"type": "dropdown",
-					"label": {
-						"en": "Use as Siren or Doorbell",
-						"nl": "Gebruik als sirene of bel"
-					},
-					"value": "1",
-					"hint": {
-						"en": "You can choose on what setting the siren works (alarm or deurbell settings)",
-						"nl": "Maak uw keuze op welk setting nivo de sirene werkt (alarm of deurbel settings"
-					},
-					"values": [
-						{
-							"id": "1",
-							"label": {
-								"en": "Alarm Siren/settings",
-								"nl": "Alarm Sirene/instellingen"
-							}
+        {
+          "id": "alarmordoorbell",
+          "type": "dropdown",
+          "label": {
+            "en": "Use as Siren or Doorbell",
+            "nl": "Gebruik als sirene of bel"
+          },
+          "value": "1",
+          "hint": {
+            "en": "You can choose on what setting the siren works (alarm or deurbell settings)",
+            "nl": "Maak uw keuze op welk setting nivo de sirene werkt (alarm of deurbel settings"
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Alarm Siren/settings",
+                "nl": "Alarm Sirene/instellingen"
+              }
             },
-						{
-							"id": "2",
-							"label": {
-								"en": "Doorbell Melody/settings",
-								"nl": "Deurbell melodie/instellingen"
-							}
+            {
+              "id": "2",
+              "label": {
+                "en": "Doorbell Melody/settings",
+                "nl": "Deurbell melodie/instellingen"
+              }
             }
           ]
         },
-				{
-					"id": "alarmled",
-					"type": "checkbox",
-					"label": {
-						"en": "Alarm led on/off",
-						"nl": "Alarm led aan/uit"
-					},
-					"value": true,
-					"hint": {
-						"en": "You can turn the alarm led siginaling on on/off",
-						"nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden"
-					}
+        {
+          "id": "alarmled",
+          "type": "checkbox",
+          "label": {
+            "en": "Alarm led on/off",
+            "nl": "Alarm led aan/uit"
+          },
+          "value": true,
+          "hint": {
+            "en": "You can turn the alarm led siginaling on on/off",
+            "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden"
+          }
         },
-				{
-					"id": "doorbellled",
-					"type": "checkbox",
-					"label": {
-						"en": "Doorbell led on/off",
-						"nl": "Deurbel led aan/uit"
-					},
-					"value": false,
-					"hint": {
-						"en": "You can turn the alarm led siginaling on on/off",
-						"nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden"
-					}
+        {
+          "id": "doorbellled",
+          "type": "checkbox",
+          "label": {
+            "en": "Doorbell led on/off",
+            "nl": "Deurbel led aan/uit"
+          },
+          "value": false,
+          "hint": {
+            "en": "You can turn the alarm led siginaling on on/off",
+            "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden"
+          }
         }
       ]
     },
-		{
-			"id": "NAS-DS01ZE",
-			"name": {
-				"en": "NEO Door Sensor"
-			},
-			"zwave": {
-				"manufacturerId": 600,
-				"productTypeId": 3,
-				"productId": 4226,
-				"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1782/Door-Window User Guide.doc",
-				"pid": 1782,
-				"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055076",
-				"learnmode": {
-					"instruction": {
-						"en": "Press the button inside your NEO Door Sensor three times",
-						"nl": "Druk driemaal op de knop in de Deur Sensor unit"
-					}
-				},
-				"unlearnmode": {
-					"instruction": {
-						"en": "Press the button inside your NEO Door Sensor three times",
-						"nl": "Druk driemaal op de knop in de Deur Sensor unit"
-					}
-				},
-				"associationGroups": [
+    {
+      "id": "NAS-DS01ZE",
+      "name": {
+        "en": "NEO Door Sensor"
+      },
+      "zwave": {
+        "manufacturerId": 600,
+        "productTypeId": 3,
+        "productId": 4226,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1782/Door-Window User Guide.doc",
+        "pid": 1782,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055076",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the button inside your NEO Door Sensor three times",
+            "nl": "Druk driemaal op de knop in de Deur Sensor unit"
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Press the button inside your NEO Door Sensor three times",
+            "nl": "Druk driemaal op de knop in de Deur Sensor unit"
+          }
+        },
+        "associationGroups": [
           1
         ]
-			},
-			"class": "sensor",
-			"capabilities": [
+      },
+      "class": "sensor",
+      "capabilities": [
         "alarm_contact",
         "measure_battery",
         "alarm_battery"
       ],
-			"images": {
-				"large": "/drivers/NAS-DS01ZE/assets/images/large.png",
-				"small": "/drivers/NAS-DS01ZE/assets/images/small.png"
-			},
-			"settings": [
-				{
-					"id": "off_delay",
-					"type": "number",
-					"attr": {
-						"min": 0,
-						"max": 65535
-					},
-					"label": {
-						"en": "Off Delay"
-					},
-					"value": 0,
-					"hint": {
-						"en": "Can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay",
-						"nl": "Kan gebruikt worden om de hoeveelheid vertraging aan te passen voordat het OFF commando verzonden. Deze parameter kan worden geconfigureerd met de waarde van 0 tot en met 65535, waarbij 0 betekent stuur onmiddellijk UIT commando en 65535 betekent 65.535 seconden vertraging"
-					}
+      "images": {
+        "large": "/drivers/NAS-DS01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-DS01ZE/assets/images/small.jpg"
+      },
+      "settings": [
+        {
+          "id": "off_delay",
+          "type": "number",
+          "attr": {
+            "min": 0,
+            "max": 65535
+          },
+          "label": {
+            "en": "Off Delay"
+          },
+          "value": 0,
+          "hint": {
+            "en": "Can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay",
+            "nl": "Kan gebruikt worden om de hoeveelheid vertraging aan te passen voordat het OFF commando verzonden. Deze parameter kan worden geconfigureerd met de waarde van 0 tot en met 65535, waarbij 0 betekent stuur onmiddellijk UIT commando en 65535 betekent 65.535 seconden vertraging"
+          }
         },
-				{
-					"id": "basic_set_level",
-					"type": "number",
-					"attr": {
-						"min": 0,
-						"max": 255
-					},
-					"value": 255,
-					"label": {
-						"en": "Basic Set Level"
-					},
-					"hint": {
-						"en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
-						"nl": "0=UIT, Alarm annuleren of het uitschakelen van de sensor, 1-99 = Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)"
-					}
+        {
+          "id": "basic_set_level",
+          "type": "number",
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "value": 255,
+          "label": {
+            "en": "Basic Set Level"
+          },
+          "hint": {
+            "en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
+            "nl": "0=UIT, Alarm annuleren of het uitschakelen van de sensor, 1-99 = Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)"
+          }
         }
       ]
     },
-		{
-			"id": "NAS-PD01ZE",
-			"name": {
-				"en": "NEO Motion Sensor"
-			},
-			"zwave": {
-				"manufacturerId": 600,
-				"productTypeId": 3,
-				"productId": 4227,
-				"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
-				"pid": 1920,
-				"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
-				"learnmode": {
-					"image": "/drivers/NAS-PD01ZE/assets/icon.svg",
-					"instruction": {
-						"en": "Press the code button inside your NEO PIR three times",
-						"nl": "Druk driemaal op de code knop binnen in de NEO PIR"
-					}
-				},
-				"unlearnmode": {
-					"image": "/drivers/NAS-PD01ZE/assets/icon.svg",
-					"instruction": {
-						"en": "Press the code button inside your NEO PIR three times",
-						"nl": "Druk driemaal op de code knop binnen in de NEO PIR"
-					}
-				},
-				"defaultConfiguration": [
-					{
-						"id": 7,
-						"size": 2,
-						"value": 600
+    {
+      "id": "NAS-PD01ZE",
+      "name": {
+        "en": "NEO Motion Sensor"
+      },
+      "zwave": {
+        "manufacturerId": 600,
+        "productTypeId": 3,
+        "productId": 4227,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
+        "pid": 1920,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
+        "learnmode": {
+          "image": "/drivers/NAS-PD01ZE/assets/icon.svg",
+          "instruction": {
+            "en": "Press the code button inside your NEO PIR three times",
+            "nl": "Druk driemaal op de code knop binnen in de NEO PIR"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-PD01ZE/assets/icon.svg",
+          "instruction": {
+            "en": "Press the code button inside your NEO PIR three times",
+            "nl": "Druk driemaal op de code knop binnen in de NEO PIR"
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 7,
+            "size": 2,
+            "value": 600
           },
-					{
-						"id": 9,
-						"size": 1,
-						"value": "0x14"
+          {
+            "id": 9,
+            "size": 1,
+            "value": "0x14"
           },
-					{
-						"id": 10,
-						"size": 1,
-						"value": 0
+          {
+            "id": 10,
+            "size": 1,
+            "value": 0
           }
         ],
-				"wakeUpInterval": 21600,
-				"associationGroups": [
+        "wakeUpInterval": 21600,
+        "associationGroups": [
           1
         ],
-				"associationGroupsOptions": {
-					"1": {
-						"hint": {
-							"en": "Lifeline service that assigned to Sensor (Motion detector) status – Open/Close. It enables the sensor to send reports and readings to Z‐Wave Controller whenever the sensor is triggered. (Homey ID by default). It is not recommended to change this group.",
-							"nl": "Lifeline service toegekend aan de Sensor (Bewegingsdetectie) status - Open/Dicht. Via deze groep kan de sensor bewegingsdetectie / lichtsterkte / batterijniveau rapporteren naar de Z-wave Controller wanneer de sensor geactiveerd is. (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen."
-						}
-					},
-					"2": {
-						"hint": {
-							"en": "Allows for control commands to associated devices such as relay module, lighting, etc. This association group is configured through the 'Illumination switch ON function' parameters. (add Z-wave ID of relay devices).",
-							"nl": "Verstuurd controle commando naar gekoppelde apparaten zoals schakelaar, verlichting, etc. Deze group wordt geconfigureerd door de 'Lichtsterkte inschakel functie' parameters. (voeg het Z-wave ID van het te koppelen apparaat toe)."
-						}
-					},
-					"3": {
-						"hint": {
-							"en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
-							"nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)"
-						}
-					},
-					"4": {
-						"hint": {
-							"en": "allows for Send Sensor Binary Report (motion detection) to associated devices in this group (add Z-wave ID of relay devices).",
-							"nl": "Rapportage van Send Sensor Binary Report (bewegingsdetectie) naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)"
-						}
-					}
-				}
-			},
-			"class": "sensor",
-			"capabilities": [
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline service that assigned to Sensor (Motion detector) status – Open/Close. It enables the sensor to send reports and readings to Z‐Wave Controller whenever the sensor is triggered. (Homey ID by default). It is not recommended to change this group.",
+              "nl": "Lifeline service toegekend aan de Sensor (Bewegingsdetectie) status - Open/Dicht. Via deze groep kan de sensor bewegingsdetectie / lichtsterkte / batterijniveau rapporteren naar de Z-wave Controller wanneer de sensor geactiveerd is. (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen."
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Allows for control commands to associated devices such as relay module, lighting, etc. This association group is configured through the 'Illumination switch ON function' parameters. (add Z-wave ID of relay devices).",
+              "nl": "Verstuurd controle commando naar gekoppelde apparaten zoals schakelaar, verlichting, etc. Deze group wordt geconfigureerd door de 'Lichtsterkte inschakel functie' parameters. (voeg het Z-wave ID van het te koppelen apparaat toe)."
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
+              "nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)"
+            }
+          },
+          "4": {
+            "hint": {
+              "en": "allows for Send Sensor Binary Report (motion detection) to associated devices in this group (add Z-wave ID of relay devices).",
+              "nl": "Rapportage van Send Sensor Binary Report (bewegingsdetectie) naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)"
+            }
+          }
+        }
+      },
+      "class": "sensor",
+      "capabilities": [
         "alarm_motion",
         "measure_luminance",
         "alarm_battery",
         "measure_battery"
       ],
-			"images": {
-				"large": "/drivers/NAS-PD01ZE/assets/images/large.png",
-				"small": "/drivers/NAS-PD01ZE/assets/images/small.png"
-			},
-			"settings": [
-				{
-					"id": "enable_PIR_function",
-					"type": "checkbox",
-					"label": {
-						"en": "Motion detection function",
-						"nl": "Bewegingsdetectie functie"
-					},
-					"value": true,
-					"hint": {
-						"en": "Enable the motion detection (PIR) function. This parameter does not effect the luminance reporting. (#4, default: enabled = checked)",
-						"nl": "Inschakelen van de bewegingsdetectie (PIR) functie. Deze parameter heeft geen invloed op de lichtsterke rapportage. (#4, standaard: ingeschakeld = checked)"
-					}
+      "images": {
+        "large": "/drivers/NAS-PD01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-PD01ZE/assets/images/small.jpg"
+      },
+      "settings": [
+        {
+          "id": "enable_PIR_function",
+          "type": "checkbox",
+          "label": {
+            "en": "Motion detection function",
+            "nl": "Bewegingsdetectie functie"
+          },
+          "value": true,
+          "hint": {
+            "en": "Enable the motion detection (PIR) function. This parameter does not effect the luminance reporting. (#4, default: enabled = checked)",
+            "nl": "Inschakelen van de bewegingsdetectie (PIR) functie. Deze parameter heeft geen invloed op de lichtsterke rapportage. (#4, standaard: ingeschakeld = checked)"
+          }
         },
-				{
-					"id": "motion_blink",
-					"type": "checkbox",
-					"label": {
-						"en": "Motion detection LED indication",
-						"nl": "Bewegingsdetectie LED indicatie"
-					},
-					"value": false,
-					"hint": {
-						"en": "Enable LED/PIR to blink red when motion detected. (#10, default: disabled = unchecked)",
-						"nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (#10, standaard: uitgeschakeld = unchecked)"
-					}
+        {
+          "id": "motion_blink",
+          "type": "checkbox",
+          "label": {
+            "en": "Motion detection LED indication",
+            "nl": "Bewegingsdetectie LED indicatie"
+          },
+          "value": false,
+          "hint": {
+            "en": "Enable LED/PIR to blink red when motion detected. (#10, default: disabled = unchecked)",
+            "nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (#10, standaard: uitgeschakeld = unchecked)"
+          }
         },
-				{
-					"id": "motion_sensor_sensitivity",
-					"type": "dropdown",
-					"label": {
-						"en": "Motion detection sensitivity",
-						"nl": "Bewegingsdetectie gevoeligheid"
-					},
-					"value": "12",
-					"hint": {
-						"en": "Adapt the sensitivity of the motion detection. (#1, default: Normal sensitivity)",
-						"nl": "Hiermee kunt u de gevoeligheid van de bewegingsdetectie aanpassen. (#1, standaard: Normale gevoeligheid)"
-					},
-					"values": [
-						{
-							"id": "8",
-							"label": {
-								"en": "High Sensitivity",
-								"nl": "Hoge Gevoeligheid"
-							}
+        {
+          "id": "motion_sensor_sensitivity",
+          "type": "dropdown",
+          "label": {
+            "en": "Motion detection sensitivity",
+            "nl": "Bewegingsdetectie gevoeligheid"
+          },
+          "value": "12",
+          "hint": {
+            "en": "Adapt the sensitivity of the motion detection. (#1, default: Normal sensitivity)",
+            "nl": "Hiermee kunt u de gevoeligheid van de bewegingsdetectie aanpassen. (#1, standaard: Normale gevoeligheid)"
+          },
+          "values": [
+            {
+              "id": "8",
+              "label": {
+                "en": "High Sensitivity",
+                "nl": "Hoge Gevoeligheid"
+              }
             },
-						{
-							"id": "12",
-							"label": {
-								"en": "Normal Sensitivity (default)",
-								"nl": "Normale Gevoeligheid (standaard)"
-							}
+            {
+              "id": "12",
+              "label": {
+                "en": "Normal Sensitivity (default)",
+                "nl": "Normale Gevoeligheid (standaard)"
+              }
             },
-						{
-							"id": "128",
-							"label": {
-								"en": "Lower Sensitivity",
-								"nl": "Lagere Gevoeligheid"
-							}
+            {
+              "id": "128",
+              "label": {
+                "en": "Lower Sensitivity",
+                "nl": "Lagere Gevoeligheid"
+              }
             },
-						{
-							"id": "255",
-							"label": {
-								"en": "Lowest Sensitivity",
-								"nl": "Laagste Gevoeligheid"
-							}
+            {
+              "id": "255",
+              "label": {
+                "en": "Lowest Sensitivity",
+                "nl": "Laagste Gevoeligheid"
+              }
             }
           ]
         },
-				{
-					"id": "re-trigger_interval",
-					"type": "number",
-					"attr": {
-						"min": 0,
-						"max": 8
-					},
-					"label": {
-						"en": "Motion detection blind time (s)",
-						"nl": "Bewegingsdetectie blinde tijd (s)"
-					},
-					"value": 8,
-					"hint": {
-						"en": "Period after motion detection in which the sensor is insensitive for new motion detection. This value must be less than the 'Motion detection ON time'. (#6 default: 8 [s], range: 0 - 8 [s])",
-						"nl": "Periode na detecteren van beweging waarin de sensor ongevoelig is voor nieuwe bewegingsdetectie. De waarde moet lager zijn dan de 'Bewegingsdetectie AAN tijd'. (#6 standaard: 8 [s], bereik: 0 - 8 [s])"
-					}
+        {
+          "id": "re-trigger_interval",
+          "type": "number",
+          "attr": {
+            "min": 0,
+            "max": 8
+          },
+          "label": {
+            "en": "Motion detection blind time (s)",
+            "nl": "Bewegingsdetectie blinde tijd (s)"
+          },
+          "value": 8,
+          "hint": {
+            "en": "Period after motion detection in which the sensor is insensitive for new motion detection. This value must be less than the 'Motion detection ON time'. (#6 default: 8 [s], range: 0 - 8 [s])",
+            "nl": "Periode na detecteren van beweging waarin de sensor ongevoelig is voor nieuwe bewegingsdetectie. De waarde moet lager zijn dan de 'Bewegingsdetectie AAN tijd'. (#6 standaard: 8 [s], bereik: 0 - 8 [s])"
+          }
         },
-				{
-					"id": "illumination_polling_interval",
-					"type": "number",
-					"label": {
-						"en": "Illumination reporting interval (s)",
-						"nl": "Lichtsterkte rapportage interval (s)"
-					},
-					"value": 180,
-					"attr": {
-						"min": 60,
-						"max": 36000
-					},
-					"hint": {
-						"en": "Determine the time between illumination reports to Homey, even when value has not changed. (#7 default: 180 [s], range: 60 - 36000 [s])",
-						"nl": "Bepaal het interval tussen lichtsterkte rapportages naar Homey, ook als de waarde niet veranderd is. (#7 standaard: 180 [s], bereik: 60 - 36000 [s])"
-					}
+        {
+          "id": "illumination_polling_interval",
+          "type": "number",
+          "label": {
+            "en": "Illumination reporting interval (s)",
+            "nl": "Lichtsterkte rapportage interval (s)"
+          },
+          "value": 180,
+          "attr": {
+            "min": 60,
+            "max": 36000
+          },
+          "hint": {
+            "en": "Determine the time between illumination reports to Homey, even when value has not changed. (#7 default: 180 [s], range: 60 - 36000 [s])",
+            "nl": "Bepaal het interval tussen lichtsterkte rapportages naar Homey, ook als de waarde niet veranderd is. (#7 standaard: 180 [s], bereik: 60 - 36000 [s])"
+          }
         },
-				{
-					"id": "illumination_report_threshold",
-					"type": "number",
-					"label": {
-						"en": "Illumination report threshold (lux)",
-						"nl": "Lichtsterkte rapportage drempel (lux)"
-					},
-					"value": 20,
-					"attr": {
-						"min": 0,
-						"max": 255
-					},
-					"hint": {
-						"en": "Sets how many lux needs to change before the value is being send to Homey. (#9 default: 20 [lux], range: 0 - 255 [lux])",
-						"nl": "Definieer hoeveel lux er moet veranderen voordat de waarde naar Homey word verstuurd. (#9 standaard: 20 [lux], bereik: 0 - 1000 [lux])"
-					}
+        {
+          "id": "illumination_report_threshold",
+          "type": "number",
+          "label": {
+            "en": "Illumination report threshold (lux)",
+            "nl": "Lichtsterkte rapportage drempel (lux)"
+          },
+          "value": 20,
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "hint": {
+            "en": "Sets how many lux needs to change before the value is being send to Homey. (#9 default: 20 [lux], range: 0 - 255 [lux])",
+            "nl": "Definieer hoeveel lux er moet veranderen voordat de waarde naar Homey word verstuurd. (#9 standaard: 20 [lux], bereik: 0 - 1000 [lux])"
+          }
         },
-				{
-					"id": "enable_illumination_trigger",
-					"type": "checkbox",
-					"label": {
-						"en": "Illumination switch ON function",
-						"nl": "Lichtsterkte inschakel functie"
-					},
-					"value": false,
-					"hint": {
-						"en": "Enable the function to switch on a associated device (group 2) once motion has been detected and the illumination level will be less than the value specified in 'Illumination switch ON level'. (#8 default: disabled = unchecked)",
-						"nl": "Inschakelen van de lichtsterkte inschakel functie van een gekoppeld apparaat (groep 2) wanneer de lichtsterkte lager is dan de waarde gedefinieerd in 'Lichtsterkte inschakel niveau'. (#8 standaard: uitgeschakeld = unchecked)"
-					}
+        {
+          "id": "enable_illumination_trigger",
+          "type": "checkbox",
+          "label": {
+            "en": "Illumination switch ON function",
+            "nl": "Lichtsterkte inschakel functie"
+          },
+          "value": false,
+          "hint": {
+            "en": "Enable the function to switch on a associated device (group 2) once motion has been detected and the illumination level will be less than the value specified in 'Illumination switch ON level'. (#8 default: disabled = unchecked)",
+            "nl": "Inschakelen van de lichtsterkte inschakel functie van een gekoppeld apparaat (groep 2) wanneer de lichtsterkte lager is dan de waarde gedefinieerd in 'Lichtsterkte inschakel niveau'. (#8 standaard: uitgeschakeld = unchecked)"
+          }
         },
-				{
-					"id": "day_night_treshold",
-					"type": "number",
-					"value": 100,
-					"attr": {
-						"min": 0,
-						"max": 1000
-					},
-					"label": {
-						"en": "Illumination switch ON level (lux)",
-						"nl": "Lichtsterkte inschakel niveau (lux)"
-					},
-					"hint": {
-						"en": "Define the illumination level value which determines when the 'Illumination switch ON function' is activated. If the illumination level falls below this value and a person moves across or within the detected area, the motion sensor will switch on the associated device (group 2). (#5 default: 100 [lux], range: 0 - 1000 [lux])",
-						"nl": "Definieer het lichtsterkte niveau waarbij de 'lichtsterkte inschakel functie' actief wordt. Wanneer de lichtsterkte onder deze waarde komt en bewegings wordt waargenomen, schakelt de sensor het gekoppelde apparaat (groep 2) in. (#5 standaard: 100 [lux], bereik: 0 - 1000 [lux])"
-					}
+        {
+          "id": "day_night_treshold",
+          "type": "number",
+          "value": 100,
+          "attr": {
+            "min": 0,
+            "max": 1000
+          },
+          "label": {
+            "en": "Illumination switch ON level (lux)",
+            "nl": "Lichtsterkte inschakel niveau (lux)"
+          },
+          "hint": {
+            "en": "Define the illumination level value which determines when the 'Illumination switch ON function' is activated. If the illumination level falls below this value and a person moves across or within the detected area, the motion sensor will switch on the associated device (group 2). (#5 default: 100 [lux], range: 0 - 1000 [lux])",
+            "nl": "Definieer het lichtsterkte niveau waarbij de 'lichtsterkte inschakel functie' actief wordt. Wanneer de lichtsterkte onder deze waarde komt en bewegings wordt waargenomen, schakelt de sensor het gekoppelde apparaat (groep 2) in. (#5 standaard: 100 [lux], bereik: 0 - 1000 [lux])"
+          }
         },
-				{
-					"id": "basic_set_level",
-					"type": "number",
-					"attr": {
-						"min": 0,
-						"max": 255
-					},
-					"label": {
-						"en": "Switch ON command (see hint)",
-						"nl": "Inschakel commando (zie hint)"
-					},
-					"value": 255,
-					"hint": {
-						"en": "Command sent to associated device (group 2). (#3 default: 255 = ON, Range: 0 – OFF, Alarm cancelling or turning a device off; 255 – ON (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))",
-						"nl": "Commando dat gestuurd wordt naar het gekoppelde apparaat (group 2). (#3 standaard: 255 = AAN, bereik: 0 – UIT, annulering alarm of het uitschakelen van het gekoppeld apparaat; 255 – AAN (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))"
-					}
+        {
+          "id": "basic_set_level",
+          "type": "number",
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "label": {
+            "en": "Switch ON command (see hint)",
+            "nl": "Inschakel commando (zie hint)"
+          },
+          "value": 255,
+          "hint": {
+            "en": "Command sent to associated device (group 2). (#3 default: 255 = ON, Range: 0 – OFF, Alarm cancelling or turning a device off; 255 – ON (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))",
+            "nl": "Commando dat gestuurd wordt naar het gekoppelde apparaat (group 2). (#3 standaard: 255 = AAN, bereik: 0 – UIT, annulering alarm of het uitschakelen van het gekoppeld apparaat; 255 – AAN (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))"
+          }
         },
-				{
-					"id": "motion_off_delay",
-					"type": "number",
-					"attr": {
-						"min": 5,
-						"max": 600
-					},
-					"label": {
-						"en": "Motion detection ON time (s)",
-						"nl": "Bewegingsdetectie AAN tijd (s)"
-					},
-					"value": 60,
-					"hint": {
-						"en": "Time duration that the associated device (group 2) stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (#2 default: 60 [s], range: 5 - 600 [s])",
-						"nl": "Instelbare tijd dat het gekoppelde apparaat (groep 2) aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. \nParameter: 2 standaard: 60 [s], bereik: 5 - 600 [s])"
-					}
+        {
+          "id": "motion_off_delay",
+          "type": "number",
+          "attr": {
+            "min": 5,
+            "max": 600
+          },
+          "label": {
+            "en": "Motion detection ON time (s)",
+            "nl": "Bewegingsdetectie AAN tijd (s)"
+          },
+          "value": 60,
+          "hint": {
+            "en": "Time duration that the associated device (group 2) stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (#2 default: 60 [s], range: 5 - 600 [s])",
+            "nl": "Instelbare tijd dat het gekoppelde apparaat (groep 2) aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. \nParameter: 2 standaard: 60 [s], bereik: 5 - 600 [s])"
+          }
         }
       ]
     },
-		{
-			"id": "NAS-SW01ZE",
-			"name": {
-				"en": "NEO Touch Switch"
-			},
-			"zwave": {
-				"manufacturerId": 600,
-				"productTypeId": 3,
-				"productId": 4235,
-				"learnmode": {
-					"image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
-					"instruction": {
-						"en": "Press the left button on you're wallswitch three times quickly",
-						"nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
-					}
-				},
-				"unlearnmode": {
-					"image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
-					"instruction": {
-						"en": "Press the left button on you're wallswitch three times quickly",
-						"nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
-					}
-				},
-				"defaultConfiguration": [],
-				"associationGroups": [
+    {
+      "id": "NAS-SC01ZE",
+      "name": {
+        "en": "NEO Touch Switch Single"
+      },
+      "zwave": {
+        "manufacturerId": 600,
+        "productTypeId": 3,
+        "productId": 4235,
+        "learnmode": {
+          "image": "/drivers/NAS-SC01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on you're wallswitch three times quickly",
+            "nl": "Druk driemaal snel achter elkaar op de knop van de wallswitch"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-SC01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on you're wallswitch three times quickly",
+            "nl": "Druk driemaal snel achter elkaar op de knop van de wallswitch"
+          }
+        },
+        "defaultConfiguration": [],
+        "associationGroups": [
           1,
           2
         ],
-				"multiChannelNodes": {
-					"2": {
-						"class": "socket",
-						"capabilities": [
+        "class": "socket",
+        "capabilities": [
+          "onoff"
+        ],
+        "icon": "/drivers/NAS-SC01ZE/assets/icon.svg",
+        "images": {
+          "large": "/drivers/NAS-SC01ZE/assets/images/large.jpg",
+          "small": "/drivers/NAS-SC01ZE/assets/images/small.jpg"
+        },
+        "settings": [
+          {
+            "id": "backlight",
+            "type": "checkbox",
+            "label": {
+              "en": "Touch Switch LED enable",
+              "nl": "Touch Switch LED Aan"
+            },
+            "value": true,
+            "hint": {
+              "en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
+              "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)"
+            }
+          },
+          {
+            "id": "status_indicate",
+            "type": "checkbox",
+            "label": {
+              "en": "Touch Switch LED state",
+              "nl": "Touch Switch LED status"
+            },
+            "value": true,
+            "hint": {
+              "en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
+              "nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)"
+            }
+          },
+          {
+            "id": "laststate_return",
+            "type": "checkbox",
+            "label": {
+              "en": "Restore state after power loss",
+              "nl": "Herstel toestand bij spanningsuitval"
+            },
+            "value": true,
+            "hint": {
+              "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
+              "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "NAS-SW01ZE",
+      "name": {
+        "en": "NEO Touch Switch"
+      },
+      "zwave": {
+        "manufacturerId": 600,
+        "productTypeId": 3,
+        "productId": 4235,
+        "learnmode": {
+          "image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the left button on you're wallswitch three times quickly",
+            "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the left button on you're wallswitch three times quickly",
+            "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
+          }
+        },
+        "defaultConfiguration": [],
+        "associationGroups": [
+          1,
+          2
+        ],
+        "multiChannelNodes": {
+          "2": {
+            "class": "socket",
+            "capabilities": [
               "onoff"
             ],
-						"icon": "/drivers/NAS-SW01ZE/assets/icon2.svg",
-						"name": {
-							"en": "NEO Touch Right Switch",
-							"nl": "NEO Touch Rechter Schakelaar"
-						},
-						"settings": []
-					}
-				}
-			},
-			"class": "socket",
-			"capabilities": [
+            "icon": "/drivers/NAS-SW01ZE/assets/icon2.svg",
+            "name": {
+              "en": "NEO Touch Right Switch",
+              "nl": "NEO Touch Rechter Schakelaar"
+            },
+            "settings": []
+          }
+        }
+      },
+      "class": "socket",
+      "capabilities": [
         "onoff"
       ],
-			"icon": "/drivers/NAS-SW01ZE/assets/icon.svg",
-			"images": {
-				"large": "/drivers/NAS-SW01ZE/assets/images/large.png",
-				"small": "/drivers/NAS-SW01ZE/assets/images/small.png"
-			},
-			"settings": [
-				{
-					"id": "backlight",
-					"type": "checkbox",
-					"label": {
-						"en": "Touch Switch LED enable",
-						"nl": "Touch Switch LED Aan"
-					},
-					"value": true,
-					"hint": {
-						"en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
-						"nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)"
-					}
+      "icon": "/drivers/NAS-SW01ZE/assets/icon.svg",
+      "images": {
+        "large": "/drivers/NAS-SW01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-SW01ZE/assets/images/small.jpg"
+      },
+      "settings": [
+        {
+          "id": "backlight",
+          "type": "checkbox",
+          "label": {
+            "en": "Touch Switch LED enable",
+            "nl": "Touch Switch LED Aan"
+          },
+          "value": true,
+          "hint": {
+            "en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
+            "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)"
+          }
         },
-				{
-					"id": "status_indicate",
-					"type": "checkbox",
-					"label": {
-						"en": "Touch Switch LED state",
-						"nl": "Touch Switch LED status"
-					},
-					"value": true,
-					"hint": {
-						"en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
-						"nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)"
-					}
+        {
+          "id": "status_indicate",
+          "type": "checkbox",
+          "label": {
+            "en": "Touch Switch LED state",
+            "nl": "Touch Switch LED status"
+          },
+          "value": true,
+          "hint": {
+            "en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
+            "nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)"
+          }
         },
-				{
-					"id": "laststate_return",
-					"type": "checkbox",
-					"label": {
-						"en": "Restore state after power loss",
-						"nl": "Herstel toestand bij spanningsuitval"
-					},
-					"value": true,
-					"hint": {
-						"en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
-						"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
-					}
+        {
+          "id": "laststate_return",
+          "type": "checkbox",
+          "label": {
+            "en": "Restore state after power loss",
+            "nl": "Herstel toestand bij spanningsuitval"
+          },
+          "value": true,
+          "hint": {
+            "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
+            "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
+          }
         }
       ]
     },
-		{
-			"id": "NAS-WR01ZE",
-			"name": {
-				"en": "NEO Wall Plug"
-			},
-			"zwave": {
-				"manufacturerId": 600,
-				"productTypeId": 3,
-				"productId": 4231,
-				"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
-				"pid": 1783,
-				"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055074",
-				"learnmode": {
-					"image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
-					"instruction": {
-						"en": "Press the button on your NEO Wall Plug three times",
-						"nl": "Druk driemaal op de knop op de NEO Wall Plug"
-					}
-				},
-				"unlearnmode": {
-					"image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
-					"instruction": {
-						"en": "Press the button on your NEO Wall Plug three times",
-						"nl": "Druk driemaal op de knop op de NEO Wall Plug"
-					}
-				},
-				"associationGroups": [
+    {
+      "id": "NAS-WR01ZE",
+      "name": {
+        "en": "NEO Wall Plug"
+      },
+      "zwave": {
+        "manufacturerId": 600,
+        "productTypeId": 3,
+        "productId": 4231,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
+        "pid": 1783,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055074",
+        "learnmode": {
+          "image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on your NEO Wall Plug three times",
+            "nl": "Druk driemaal op de knop op de NEO Wall Plug"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on your NEO Wall Plug three times",
+            "nl": "Druk driemaal op de knop op de NEO Wall Plug"
+          }
+        },
+        "associationGroups": [
           1
         ],
-				"associationGroupsOptions": {
-					"1": {
-						"hint": {
-							"en": "Reports the lifeline service that assigned to plug status – ON/OFF. It enables the Plug to send reports and readings to the Z-Wave Controller. (Homey ID by default). It is not recommended to change this group.",
-							"nl": "Rapportage van de status van de power plug en staat controle (AAN/UIT) over de power plug toe (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen."
-						}
-					},
-					"2": {
-						"hint": {
-							"en": "Allows for sending alarm commands to associated devices such as Siren, relay module, lighting, etc. If current load is over the max current defined in 'Maximum over-load current', the Plug will send a alarm to the associated devices. (add Z-wave ID of relay devices).",
-							"nl": "Rapportage van een alarm commando naar gekoppelde apparaten, zoals sirene, schakelaar, verlichting, etc. Op het moment dat het stroom hoger is dan gedefinieerd in 'Maximale over-load stroom', wordt een alarm naar de gekoppelde apparaten gestuurd (voeg het Z-wave ID van het te koppelen apparaat toe)."
-						}
-					},
-					"3": {
-						"hint": {
-							"en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
-							"nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)"
-						}
-					}
-				},
-				"defaultConfiguration": [
-					{
-						"id": 2,
-						"size": 2,
-						"value": 300
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Reports the lifeline service that assigned to plug status – ON/OFF. It enables the Plug to send reports and readings to the Z-Wave Controller. (Homey ID by default). It is not recommended to change this group.",
+              "nl": "Rapportage van de status van de power plug en staat controle (AAN/UIT) over de power plug toe (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen."
+            }
           },
-					{
-						"id": 6,
-						"size": 1,
-						"value": 80
+          "2": {
+            "hint": {
+              "en": "Allows for sending alarm commands to associated devices such as Siren, relay module, lighting, etc. If current load is over the max current defined in 'Maximum over-load current', the Plug will send a alarm to the associated devices. (add Z-wave ID of relay devices).",
+              "nl": "Rapportage van een alarm commando naar gekoppelde apparaten, zoals sirene, schakelaar, verlichting, etc. Op het moment dat het stroom hoger is dan gedefinieerd in 'Maximale over-load stroom', wordt een alarm naar de gekoppelde apparaten gestuurd (voeg het Z-wave ID van het te koppelen apparaat toe)."
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
+              "nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)"
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 2,
+            "size": 2,
+            "value": 300
+          },
+          {
+            "id": 6,
+            "size": 1,
+            "value": 80
           }
         ]
-			},
-			"class": "socket",
-			"capabilities": [
+      },
+      "class": "socket",
+      "capabilities": [
         "onoff",
         "meter_power",
         "measure_power",
         "measure_current",
         "measure_voltage"
       ],
-			"images": {
-				"large": "/drivers/NAS-WR01ZE/assets/images/large.png",
-				"small": "/drivers/NAS-WR01ZE/assets/images/small.png"
-			},
-			"mobile": {
-				"components": [
-					{
-						"id": "icon",
-						"capabilities": [
+      "images": {
+        "large": "/drivers/NAS-WR01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-WR01ZE/assets/images/small.jpg"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": [
               "onoff"
             ]
           },
-					{
-						"id": "sensor",
-						"capabilities": [
+          {
+            "id": "sensor",
+            "capabilities": [
               "meter_power",
               "measure_power",
               "measure_current",
               "measure_voltage"
             ]
           },
-					{
-						"id": "toggle",
-						"capabilities": [
+          {
+            "id": "toggle",
+            "capabilities": [
               "onoff"
             ]
           }
         ]
-			},
-			"settings": [
-				{
-					"id": "led_display",
-					"type": "checkbox",
-					"label": {
-						"en": "State indication Led",
-						"nl": "Status indicatie Led"
-					},
-					"value": true,
-					"hint": {
-						"en": "Enable (checked) the status led on top.\nParameter #5\nDefault: enabled = checked",
-						"nl": "Schakel de status indicatie led functie in (checked).\nParameter #5\nStandaard: ingeschakeld = checked"
-					}
+      },
+      "settings": [
+        {
+          "id": "led_display",
+          "type": "checkbox",
+          "label": {
+            "en": "State indication Led",
+            "nl": "Status indicatie Led"
+          },
+          "value": true,
+          "hint": {
+            "en": "Enable (checked) the status led on top.\nParameter #5\nDefault: enabled = checked",
+            "nl": "Schakel de status indicatie led functie in (checked).\nParameter #5\nStandaard: ingeschakeld = checked"
+          }
         },
-				{
-					"id": "meter_report",
-					"type": "checkbox",
-					"label": {
-						"en": "Meter report functie",
-						"nl": "Meter reportage functie"
-					},
-					"value": true,
-					"hint": {
-						"en": "Enable (checked) sending meter report measure data to the Z-wave controller.\nParameter #1\nDefault: enabled = checked",
-						"nl": "Inschakelen (checked) van het versturen van meter rapportages naar de Z-wave controller.\nParameter#1\nStandaard: ingeschakeld = checked"
-					}
+        {
+          "id": "meter_report",
+          "type": "checkbox",
+          "label": {
+            "en": "Meter report functie",
+            "nl": "Meter reportage functie"
+          },
+          "value": true,
+          "hint": {
+            "en": "Enable (checked) sending meter report measure data to the Z-wave controller.\nParameter #1\nDefault: enabled = checked",
+            "nl": "Inschakelen (checked) van het versturen van meter rapportages naar de Z-wave controller.\nParameter#1\nStandaard: ingeschakeld = checked"
+          }
         },
-				{
-					"id": "meter_report_interval",
-					"type": "number",
-					"attr": {
-						"min": 60,
-						"max": 65535
-					},
-					"value": 300,
-					"label": {
-						"en": "Meter report interval (s)",
-						"nl": "Meter reportage interval (s)"
-					},
-					"hint": {
-						"en": "The amount of seconds between a Meter Report being send to controller. \nParameter #2\nRange: 60 - 65535\nDefault: 300",
-						"nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden. \nParameter #2\nBereik: 60 - 65535\nStandaard: 300"
-					}
+        {
+          "id": "meter_report_interval",
+          "type": "number",
+          "attr": {
+            "min": 60,
+            "max": 65535
+          },
+          "value": 300,
+          "label": {
+            "en": "Meter report interval (s)",
+            "nl": "Meter reportage interval (s)"
+          },
+          "hint": {
+            "en": "The amount of seconds between a Meter Report being send to controller. \nParameter #2\nRange: 60 - 65535\nDefault: 300",
+            "nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden. \nParameter #2\nBereik: 60 - 65535\nStandaard: 300"
+          }
         },
-				{
-					"id": "power_report_change",
-					"type": "number",
-					"attr": {
-						"min": 1,
-						"max": 100
-					},
-					"value": 80,
-					"label": {
-						"en": "Power change [%]",
-						"nl": "Wijziging van vermogen [%]"
-					},
-					"hint": {
-						"en": "The amount of power consumed must change to be reported to the controller.\nParameter #6\nRange: 1 - 100\nDefault: 80",
-						"nl": "De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller.\nParameter #6\nBereik: 1 - 100\nStandaard: 80"
-					}
+        {
+          "id": "power_report_change",
+          "type": "number",
+          "attr": {
+            "min": 1,
+            "max": 100
+          },
+          "value": 80,
+          "label": {
+            "en": "Power change [%]",
+            "nl": "Wijziging van vermogen [%]"
+          },
+          "hint": {
+            "en": "The amount of power consumed must change to be reported to the controller.\nParameter #6\nRange: 1 - 100\nDefault: 80",
+            "nl": "De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller.\nParameter #6\nBereik: 1 - 100\nStandaard: 80"
+          }
         },
-				{
-					"id": "remember_state",
-					"type": "checkbox",
-					"label": {
-						"en": "Restore state after power loss",
-						"nl": "Herstel toestand bij spanningsuitval"
-					},
-					"value": true,
-					"hint": {
-						"en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nParameter #7\nDefault: enabled = checked)",
-						"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked). \nParameter #7\nStandaard: uitgeschakeld = unchecked)"
-					}
+        {
+          "id": "remember_state",
+          "type": "checkbox",
+          "label": {
+            "en": "Restore state after power loss",
+            "nl": "Herstel toestand bij spanningsuitval"
+          },
+          "value": true,
+          "hint": {
+            "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nParameter #7\nDefault: enabled = checked)",
+            "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked). \nParameter #7\nStandaard: uitgeschakeld = unchecked)"
+          }
         },
-				{
-					"id": "over_load_current",
-					"type": "number",
-					"attr": {
-						"min": 1,
-						"max": 16
-					},
-					"value": 13,
-					"label": {
-						"en": "Maximum over-load current (A)",
-						"nl": "Maximale over-load stroom (A)"
-					},
-					"hint": {
-						"en": "Defines the maximum current the plug can provide to the device connected to it. If the current consumed is greater than the value set, the plug will cut power.\nParameter #3\nRange: 1 - 16\nDefault: 13",
-						"nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het huidige stroomverbruik groter is dan de ingestelde waarde, wordt de power plug uitgeschakeld. \nParameter #3\nBereik: 1 - 16\nStandaard: 13"
-					}
+        {
+          "id": "over_load_current",
+          "type": "number",
+          "attr": {
+            "min": 1,
+            "max": 16
+          },
+          "value": 13,
+          "label": {
+            "en": "Maximum over-load current (A)",
+            "nl": "Maximale over-load stroom (A)"
+          },
+          "hint": {
+            "en": "Defines the maximum current the plug can provide to the device connected to it. If the current consumed is greater than the value set, the plug will cut power.\nParameter #3\nRange: 1 - 16\nDefault: 13",
+            "nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het huidige stroomverbruik groter is dan de ingestelde waarde, wordt de power plug uitgeschakeld. \nParameter #3\nBereik: 1 - 16\nStandaard: 13"
+          }
         },
-				{
-					"id": "alarm_current",
-					"type": "number",
-					"attr": {
-						"min": 1,
-						"max": 16
-					},
-					"value": 12,
-					"label": {
-						"en": "Upper alarm current (A)",
-						"nl": "Bovenwaarde alarm stroom (A)"
-					},
-					"hint": {
-						"en": "Defines the current the plug is allowed to provide to the device connected to it. If the alarm current is exceeded, the plug will send an alarm notification to the controller and LED will turn RED. Value specified has to be less or equal to 'Maximum over-load current'. \nParameter #4\nRange: 1 - 12\nDefault: 12",
-						"nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het alarm stroom overschreden wordt, zal de power plug een alarm naar de controller versturen en de LED rood kleuren. De waarde moet kleiner of gelijk zijn aan 'Maximale over-load stroom'. \nParameter #4n\nBereik: 1 - 12\nStandaard: 12"
-					}
+        {
+          "id": "alarm_current",
+          "type": "number",
+          "attr": {
+            "min": 1,
+            "max": 16
+          },
+          "value": 12,
+          "label": {
+            "en": "Upper alarm current (A)",
+            "nl": "Bovenwaarde alarm stroom (A)"
+          },
+          "hint": {
+            "en": "Defines the current the plug is allowed to provide to the device connected to it. If the alarm current is exceeded, the plug will send an alarm notification to the controller and LED will turn RED. Value specified has to be less or equal to 'Maximum over-load current'. \nParameter #4\nRange: 1 - 12\nDefault: 12",
+            "nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het alarm stroom overschreden wordt, zal de power plug een alarm naar de controller versturen en de LED rood kleuren. De waarde moet kleiner of gelijk zijn aan 'Maximale over-load stroom'. \nParameter #4n\nBereik: 1 - 12\nStandaard: 12"
+          }
         },
-				{
-					"id": "time_switch_function",
-					"type": "checkbox",
-					"label": {
-						"en": "Time switch off function",
-						"nl": "Tijd uitschakel functie"
-					},
-					"value": false,
-					"hint": {
-						"en": "Enable the time switch off function. When enabled (checked), the power plug, after being switched on, will switch off after the defined time in 'Switch off time period'. (#8, default: disabled = unchecked)",
-						"nl": "Inschakelen van de tijd uitschakel functie. Wanneer ingeschakeld (checked) zal de power plug na ingeschakeld te zijn, automatisch uitschakelen na de in 'Uitschakel tijdsduur' gedefinieerde tijd. \nParameter: 8, standaard: uitgeschakeld = unchecked)"
-					}
+        {
+          "id": "time_switch_function",
+          "type": "checkbox",
+          "label": {
+            "en": "Time switch off function",
+            "nl": "Tijd uitschakel functie"
+          },
+          "value": false,
+          "hint": {
+            "en": "Enable the time switch off function. When enabled (checked), the power plug, after being switched on, will switch off after the defined time in 'Switch off time period'. (#8, default: disabled = unchecked)",
+            "nl": "Inschakelen van de tijd uitschakel functie. Wanneer ingeschakeld (checked) zal de power plug na ingeschakeld te zijn, automatisch uitschakelen na de in 'Uitschakel tijdsduur' gedefinieerde tijd. \nParameter: 8, standaard: uitgeschakeld = unchecked)"
+          }
         },
-				{
-					"id": "time_switch_period",
-					"type": "number",
-					"attr": {
-						"min": 1,
-						"max": 65535
-					},
-					"value": 150,
-					"label": {
-						"en": "Switch off time period (min)",
-						"nl": "Uitschakel tijdsduur (min)"
-					},
-					"hint": {
-						"en": "The time period before switching off the power plug, if time function has been enabled in 'Time switch off function'. \nParameter: 9\nRange: 1 - 65535\nDefault: 150",
-						"nl": "De tijdsduur waarna de power plug zal uitschakelen, wanneer de tijd schakelings functie ingeschakeld is in 'Tijd uitschakel functie'. \nParameter: 9\nBereik: 1 - 65535\nStandaard: 150"
-					}
+        {
+          "id": "time_switch_period",
+          "type": "number",
+          "attr": {
+            "min": 1,
+            "max": 65535
+          },
+          "value": 150,
+          "label": {
+            "en": "Switch off time period (min)",
+            "nl": "Uitschakel tijdsduur (min)"
+          },
+          "hint": {
+            "en": "The time period before switching off the power plug, if time function has been enabled in 'Time switch off function'. \nParameter: 9\nRange: 1 - 65535\nDefault: 150",
+            "nl": "De tijdsduur waarna de power plug zal uitschakelen, wanneer de tijd schakelings functie ingeschakeld is in 'Tijd uitschakel functie'. \nParameter: 9\nBereik: 1 - 65535\nStandaard: 150"
+          }
         }
       ]
     },
-		{
-			"id": "NAS-WS01ZE",
-			"name": {
-				"en": "NEO Flood Sensor"
-			},
-			"zwave": {
-				"manufacturerId": 600,
-				"productTypeId": 3,
-				"productId": 4229,
-				"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1788/Water Leakage Detector User Manual V2.doc",
-				"pid": 1788,
-				"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055075",
-				"learnmode": {
-					"image": "/drivers/NAS-WS01ZE/assets/icon.svg",
-					"instruction": {
-						"en": "Press the code button inside your NEO Flood Sensor three times",
-						"nl": "Druk driemaal op de code knop binnen in de NEO Flood Sensor"
-					}
-				},
-				"unlearnmode": {
-					"image": "/drivers/NAS-WS01ZE/assets/icon.svg",
-					"instruction": {
-						"en": "Press the code button inside your NEO Flood Sensor three times",
-						"nl": "Druk driemaal op de code knop binnen in de NEO Flood Sensor"
-					}
-				},
-				"associationGroups": [
+    {
+      "id": "NAS-WS01ZE",
+      "name": {
+        "en": "NEO Flood Sensor"
+      },
+      "zwave": {
+        "manufacturerId": 600,
+        "productTypeId": 3,
+        "productId": 4229,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1788/Water Leakage Detector User Manual V2.doc",
+        "pid": 1788,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055075",
+        "learnmode": {
+          "image": "/drivers/NAS-WS01ZE/assets/icon.svg",
+          "instruction": {
+            "en": "Press the code button inside your NEO Flood Sensor three times",
+            "nl": "Druk driemaal op de code knop binnen in de NEO Flood Sensor"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-WS01ZE/assets/icon.svg",
+          "instruction": {
+            "en": "Press the code button inside your NEO Flood Sensor three times",
+            "nl": "Druk driemaal op de code knop binnen in de NEO Flood Sensor"
+          }
+        },
+        "associationGroups": [
           1
         ],
-				"defaultConfiguration": [
-					{
-						"id": 1,
-						"size": 1,
-						"value": 120
+        "defaultConfiguration": [
+          {
+            "id": 1,
+            "size": 1,
+            "value": 120
           },
-					{
-						"id": 2,
-						"size": 1,
-						"value": 1
+          {
+            "id": 2,
+            "size": 1,
+            "value": 1
           },
-					{
-						"id": 3,
-						"size": 1,
-						"value": 60
+          {
+            "id": 3,
+            "size": 1,
+            "value": 60
           },
-					{
-						"id": 4,
-						"size": 1,
-						"value": 5
+          {
+            "id": 4,
+            "size": 1,
+            "value": 5
           },
-					{
-						"id": 5,
-						"size": 1,
-						"value": 1
+          {
+            "id": 5,
+            "size": 1,
+            "value": 1
           },
-					{
-						"id": 6,
-						"size": 1,
-						"value": 1
+          {
+            "id": 6,
+            "size": 1,
+            "value": 1
           },
-					{
-						"id": 7,
-						"size": 1,
-						"value": "0xFF"
+          {
+            "id": 7,
+            "size": 1,
+            "value": "0xFF"
           }
         ]
-			},
-			"class": "sensor",
-			"capabilities": [
+      },
+      "class": "sensor",
+      "capabilities": [
         "alarm_water",
         "measure_battery",
         "alarm_battery"
       ],
-			"images": {
-				"large": "/drivers/NAS-WS01ZE/assets/images/large.png",
-				"small": "/drivers/NAS-WS01ZE/assets/images/small.png"
-			},
-			"settings": [
-				{
-					"id": "alarm_duration_time",
-					"type": "number",
-					"attr": {
-						"min": 1,
-						"max": 255
-					},
-					"value": 1,
-					"label": {
-						"en": "Alarm Duration Time",
-						"nl": "Alarm Duratie Tijd"
-					},
-					"hint": {
-						"en": "This configuration parameter that can be used to adjust the time in minutes for beep and LED turned on when water leakage is detected. If this parameter is set to ‘0’, the beep and LED will be turn on always until water leakage is not detected. (default: 120, range: 0 - 255)",
-						"nl": "Deze configuratie parameter die kan worden gebruikt om de tijd in minuten aan te passen voor geluidssignaal en LED ingeschakeld wanneer lekwater wordt gedetecteerd. Als deze parameter is ingesteld op '0', zal de pieptoon en LED altijd aan zijn tot lekkage water niet meer wordt gedetecteerd. (Standaard: 120, bereik: 0-255)"
-					}
+      "images": {
+        "large": "/drivers/NAS-WS01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-WS01ZE/assets/images/small.jpg"
+      },
+      "settings": [
+        {
+          "id": "alarm_duration_time",
+          "type": "number",
+          "attr": {
+            "min": 1,
+            "max": 255
+          },
+          "value": 1,
+          "label": {
+            "en": "Alarm Duration Time",
+            "nl": "Alarm Duratie Tijd"
+          },
+          "hint": {
+            "en": "This configuration parameter that can be used to adjust the time in minutes for beep and LED turned on when water leakage is detected. If this parameter is set to ‘0’, the beep and LED will be turn on always until water leakage is not detected. (default: 120, range: 0 - 255)",
+            "nl": "Deze configuratie parameter die kan worden gebruikt om de tijd in minuten aan te passen voor geluidssignaal en LED ingeschakeld wanneer lekwater wordt gedetecteerd. Als deze parameter is ingesteld op '0', zal de pieptoon en LED altijd aan zijn tot lekkage water niet meer wordt gedetecteerd. (Standaard: 120, bereik: 0-255)"
+          }
         },
-				{
-					"id": "alarm_interval",
-					"type": "number",
-					"attr": {
-						"min": 1,
-						"max": 255
-					},
-					"value": 1,
-					"label": {
-						"en": "Alarm Interval",
-						"nl": "Alarm Interval"
-					},
-					"hint": {
-						"en": "This Parameter defines beep on /off interval time in minutes when water leakage is detected. (default: 1, range: 1 - 255)",
-						"nl": "Deze parameter definieert pieptoon aan / uit interval tijd in minuten waneer lekwater wordt gedetecteerd. (Standaard: 1, bereik: 1-255)"
-					}
+        {
+          "id": "alarm_interval",
+          "type": "number",
+          "attr": {
+            "min": 1,
+            "max": 255
+          },
+          "value": 1,
+          "label": {
+            "en": "Alarm Interval",
+            "nl": "Alarm Interval"
+          },
+          "hint": {
+            "en": "This Parameter defines beep on /off interval time in minutes when water leakage is detected. (default: 1, range: 1 - 255)",
+            "nl": "Deze parameter definieert pieptoon aan / uit interval tijd in minuten waneer lekwater wordt gedetecteerd. (Standaard: 1, bereik: 1-255)"
+          }
         },
-				{
-					"id": "first_alarm_ontime",
-					"type": "number",
-					"attr": {
-						"min": 10,
-						"max": 255
-					},
-					"value": 60,
-					"label": {
-						"en": "First Alarm On Time Duration",
-						"nl": "Eerste Alarm On Time tijdsduur"
-					},
-					"hint": {
-						"en": "This parameter defines beep in seconds on duration first time when water leakage is detected. (default: 60, range: 10 - 255)",
-						"nl": "Deze parameter definieert de pieptoon in seconden van de duur eerste keer toen lekwater wordt gedetecteerd. (Standaard: 60, bereik: 10-255)"
-					}
+        {
+          "id": "first_alarm_ontime",
+          "type": "number",
+          "attr": {
+            "min": 10,
+            "max": 255
+          },
+          "value": 60,
+          "label": {
+            "en": "First Alarm On Time Duration",
+            "nl": "Eerste Alarm On Time tijdsduur"
+          },
+          "hint": {
+            "en": "This parameter defines beep in seconds on duration first time when water leakage is detected. (default: 60, range: 10 - 255)",
+            "nl": "Deze parameter definieert de pieptoon in seconden van de duur eerste keer toen lekwater wordt gedetecteerd. (Standaard: 60, bereik: 10-255)"
+          }
         },
-				{
-					"id": "first_alarm_duration",
-					"type": "number",
-					"attr": {
-						"min": 5,
-						"max": 255
-					},
-					"value": 5,
-					"label": {
-						"en": "Alarm on time duration",
-						"nl": "Alarm aan tijd duur"
-					},
-					"hint": {
-						"en": "This parameter defines beep on duration in seconds after first beep on when water leakage is detected. (default: 5, range: 5 - 255)",
-						"nl": "Deze parameter definieert de pieptoon in seconden van de duur in seconden na eerste pieptoon wanneer lekwater wordt gedetecteerd. (Standaard: 5, bereik: 5-255)"
-					}
+        {
+          "id": "first_alarm_duration",
+          "type": "number",
+          "attr": {
+            "min": 5,
+            "max": 255
+          },
+          "value": 5,
+          "label": {
+            "en": "Alarm on time duration",
+            "nl": "Alarm aan tijd duur"
+          },
+          "hint": {
+            "en": "This parameter defines beep on duration in seconds after first beep on when water leakage is detected. (default: 5, range: 5 - 255)",
+            "nl": "Deze parameter definieert de pieptoon in seconden van de duur in seconden na eerste pieptoon wanneer lekwater wordt gedetecteerd. (Standaard: 5, bereik: 5-255)"
+          }
         },
-				{
-					"id": "alarm_sound_enable_disable",
-					"type": "checkbox",
-					"label": {
-						"en": "Alarm sound on detection",
-						"nl": "Alarm geluid bij detectie"
-					},
-					"hint": {
-						"en": "When unchecked it will only report to controller no sound",
-						"nl": "Indien niet aangevink zal er alleen een notificatie naar de controller worden verzonden , geen geluid"
-					},
-					"value": true
+        {
+          "id": "alarm_sound_enable_disable",
+          "type": "checkbox",
+          "label": {
+            "en": "Alarm sound on detection",
+            "nl": "Alarm geluid bij detectie"
+          },
+          "hint": {
+            "en": "When unchecked it will only report to controller no sound",
+            "nl": "Indien niet aangevink zal er alleen een notificatie naar de controller worden verzonden , geen geluid"
+          },
+          "value": true
         },
-				{
-					"id": "sensor_enable_disable",
-					"type": "checkbox",
-					"label": {
-						"en": "Enable or Disable sensor",
-						"nl": "Schakel sensor Aan of Uit"
-					},
-					"hint": {
-						"en": "When unchecked the sensor will not report and is disabled",
-						"nl": "Indien niet aangevink zal de sensor worden uitgeschakeld"
-					},
-					"value": true
+        {
+          "id": "sensor_enable_disable",
+          "type": "checkbox",
+          "label": {
+            "en": "Enable or Disable sensor",
+            "nl": "Schakel sensor Aan of Uit"
+          },
+          "hint": {
+            "en": "When unchecked the sensor will not report and is disabled",
+            "nl": "Indien niet aangevink zal de sensor worden uitgeschakeld"
+          },
+          "value": true
         }
       ]
     }

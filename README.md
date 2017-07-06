@@ -4,7 +4,8 @@ Makes Homey work with these great and cheap Chinese z-wave products
 ## Supported devices with most common parameters:
 * NAS-PD01ZE, Motion Sensor
 * NAS-WR01ZE, Power Switching Plug
-* NAS-SW01ZE, Touch Wall Switch
+* NAS-SC01ZE, Touch Wall Switch Single
+* NAS-SW01ZE, Touch Wall Switch Dual
 * NAS-AB01ZE, Siren / Doorbell speaker
 * NAS-DS01ZE, Door Sensor
 * NAS-WS01ZE, Flood Sensor
@@ -29,6 +30,10 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
 
 ## Change Log:       
+
+### v 1.1.23    
+**update:**    
+NAS-SC01ZE - Added support for Touch Wall Switch Single  
 
 ### v 1.1.22    
 **update:**    

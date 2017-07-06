@@ -1,57 +1,36 @@
 {
-	"id": "NAS-SW01ZE",
+	"id": "NAS-SC01ZE",
 	"name": {
-		"en": "NEO Touch Switch Dual"
+		"en": "NEO Touch Switch Single"
 	},
 	"zwave": {
 		"manufacturerId": 600,
 		"productTypeId": 3,
 		"productId": 4235,
 		"learnmode": {
-			"image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
+			"image": "/drivers/NAS-SC01ZE/assets/learnmode.svg",
 			"instruction": {
-				"en": "Press the left button on you're wallswitch three times quickly",
-				"nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
+				"en": "Press the button on you're wallswitch three times quickly",
+				"nl": "Druk driemaal snel achter elkaar op de knop van de wallswitch"
 			}
 		},
 		"unlearnmode": {
-			"image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
+			"image": "/drivers/NAS-SC01ZE/assets/learnmode.svg",
 			"instruction": {
-				"en": "Press the left button on you're wallswitch three times quickly",
-				"nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
+				"en": "Press the button on you're wallswitch three times quickly",
+				"nl": "Druk driemaal snel achter elkaar op de knop van de wallswitch"
 			}
 		},
-		"defaultConfiguration": [
-		],
-		"associationGroups": [
-			1,
-      2
-		],
-		"multiChannelNodes": {
-			"2": {
-				"class": "socket",
-				"capabilities": [
-					"onoff"
-				],
-				"icon": "/drivers/NAS-SW01ZE/assets/icon2.svg",
-				"name": {
-					"en": "NEO Touch Right Switch",
-					"nl": "NEO Touch Rechter Schakelaar"
-				},
-				"settings": []
-			}
-		}
-	},
-	"class": "socket",
-	"capabilities": [
-		"onoff"
-	],
-	"icon": "/drivers/NAS-SW01ZE/assets/icon.svg",
-	"images": {
-		"large": "/drivers/NAS-SW01ZE/assets/images/large.jpg",
-		"small": "/drivers/NAS-SW01ZE/assets/images/small.jpg"
-	},
-	"settings": [{
+		"defaultConfiguration": [ ],
+		"associationGroups": [ 1,2 ],
+		"class": "socket",
+		"capabilities": [ "onoff" ],
+		"icon": "/drivers/NAS-SC01ZE/assets/icon.svg",
+		"images": {
+			"large": "/drivers/NAS-SC01ZE/assets/images/large.jpg",
+			"small": "/drivers/NAS-SC01ZE/assets/images/small.jpg"
+		},
+		"settings": [{
 			"id": "backlight",
 			"type": "checkbox",
 			"label": {
@@ -91,4 +70,5 @@
 			}
 		}
 	]
+}
 }
