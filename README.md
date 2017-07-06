@@ -9,6 +9,7 @@ Makes Homey work with these great and cheap Chinese z-wave products
 * NAS-AB01ZE, Siren / Doorbell speaker
 * NAS-DS01ZE, Door Sensor
 * NAS-WS01ZE, Flood Sensor
+* NAS-RC01ZE, SOS KeyFob    
 
 ## Supported devices with some parameters:
 None until Neo releases new products
@@ -34,6 +35,7 @@ c. check if effective and retry to the desired value
 ### v 1.1.23    
 **update:**    
 NAS-SC01ZE - Added support for Touch Wall Switch Single  
+NAS-RC01ZE - Added support for SOS KeyFob    
 
 ### v 1.1.22    
 **update:**    
