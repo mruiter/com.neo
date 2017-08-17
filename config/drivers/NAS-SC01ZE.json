@@ -6,7 +6,7 @@
 	"zwave": {
 		"manufacturerId": 600,
 		"productTypeId": 3,
-		"productId": 4235,
+		"productId": 0,
 		"learnmode": {
 			"image": "/drivers/NAS-SC01ZE/assets/learnmode.svg",
 			"instruction": {
@@ -21,16 +21,17 @@
 				"nl": "Druk driemaal snel achter elkaar op de knop van de wallswitch"
 			}
 		},
-		"defaultConfiguration": [ ],
-		"associationGroups": [ 1,2 ],
-		"class": "socket",
-		"capabilities": [ "onoff" ],
-		"icon": "/drivers/NAS-SC01ZE/assets/icon.svg",
-		"images": {
-			"large": "/drivers/NAS-SC01ZE/assets/images/large.jpg",
-			"small": "/drivers/NAS-SC01ZE/assets/images/small.jpg"
-		},
-		"settings": [{
+		"defaultConfiguration": [],
+		"associationGroups": [1, 2]
+	},
+	"class": "socket",
+	"capabilities": ["onoff"],
+	"icon": "/drivers/NAS-SC01ZE/assets/icon.svg",
+	"images": {
+		"large": "/drivers/NAS-SC01ZE/assets/images/large.jpg",
+		"small": "/drivers/NAS-SC01ZE/assets/images/small.jpg"
+	},
+	"settings": [{
 			"id": "backlight",
 			"type": "checkbox",
 			"label": {
@@ -70,5 +71,4 @@
 			}
 		}
 	]
-}
 }
