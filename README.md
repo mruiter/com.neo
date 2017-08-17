@@ -32,6 +32,10 @@ c. check if effective and retry to the desired value
 
 ## Change Log:       
 
+### v 1.1.24      
+**fixed:**    
+NAS-SW01ZE - Support for V1 and V2 Touch Wall Switch     
+
 ### v 1.1.23    
 **update:**    
 NAS-SC01ZE - Added support for Touch Wall Switch Single  

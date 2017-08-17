@@ -3,7 +3,7 @@
   "name": {
     "en": "NEO Coolcam"
   },
-  "version": "1.1.23",
+  "version": "1.1.24",
   "compatibility": ">=1.1.4",
   "description": {
     "en": "NEO Coolcam"
@@ -46,6 +46,78 @@
             "name": "device",
             "type": "device",
             "filter": "driver_id=NAS-AB01ZE"
+          }
+        ]
+      },
+      {
+        "id": "NAS-RC01ZE-scene",
+        "title": {
+          "en": "KeyFob buttons",
+          "nl": "KeyFob knoppen"
+        },
+        "hint": {
+          "en": "KeyFob Functions.",
+          "nl": "KeyFob Funtionaliteit."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-RC01ZE"
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Unlock Key",
+                  "nl": "Unlock Key"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Lock Key",
+                  "nl": "Lock Key"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "SOS Key",
+                  "nl": "SOS Key"
+                }
+              }
+            ]
+          },
+          {
+            "name": "scene",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Key Pressed",
+                "label": {
+                  "en": "Pressed ",
+                  "nl": "Ingedrukt"
+                }
+              },
+              {
+                "id": "Key Held Down",
+                "label": {
+                  "en": "Long press",
+                  "nl": "Lang drukken"
+                }
+              },
+              {
+                "id": "Key Released",
+                "label": {
+                  "en": "Long press released",
+                  "nl": "Lang drukken gestopt"
+                }
+              }
+            ]
           }
         ]
       }
@@ -1250,6 +1322,589 @@
       ]
     },
     {
+      "id": "NAS-RC01ZE",
+      "class": "security",
+      "name": {
+        "en": "KeyFob",
+        "nl": "KeyFob"
+      },
+      "capabilities": [
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/NAS-RC01ZE/assets/images/large.png",
+        "small": "/drivers/NAS-RC01ZE/assets/images/small.png"
+      },
+      "mobile": {
+        "components": [
+          {
+            "capabilities": [],
+            "id": "icon"
+          },
+          {
+            "capabilities": [
+              "measure_battery"
+            ],
+            "id": "battery"
+          }
+        ]
+      },
+      "zwave": {
+        "manufacturerId": [
+          600
+        ],
+        "productTypeId": [
+          4097
+        ],
+        "productId": [
+          4234
+        ],
+        "wakeUpInterval": 0,
+        "learnmode": {
+          "instruction": {
+            "en": "Press the SOS button on the KeyFob three times.",
+            "nl": "Druk drie keer op de SOS knop op van KeyFob."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Press the SOS button on the KeyFob three times.",
+            "nl": "Druk drie keer op de SOS knop op van KeyFob."
+          }
+        },
+        "productDocumentation": "",
+        "zwaveAllianceProductId": "",
+        "imageRemotePath": "",
+        "associationGroups": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline reports the device status and allows for assigning a single device only (main controller by default).",
+              "nl": "Lifeline rapporteert de status van het apparaat en staat maar 1 geassocieerd apparaat toe."
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Allows for sending control commands to associated devices.",
+              "nl": "Hiermee kunt u besturingsopdrachten verzenden naar bijbehorende apparaten."
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "Allows for Send Notification to associated devices in this group.",
+              "nl": "Staat Send Notification toe aan geassocieerde apparaten in deze groep."
+            }
+          },
+          "4": {
+            "hint": {
+              "en": "Allows for Send Sensor Binary Report to associated devices in this group.",
+              "nl": "Hiermee kunt u Binary Report Verzenden Sensor verzenden naar geassocieerde apparaten in deze groep."
+            }
+          },
+          "5": {
+            "hint": {
+              "en": "Allows for Send Central Scene Notification to associated devices in this group.",
+              "nl": "Hiermee kunt u Central Scene Notification versturen naar geassocieerde apparaten in deze groep."
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Button Settings",
+            "nl": "Knoppen Instellingen"
+          },
+          "collapsed": true,
+          "children": [
+            {
+              "id": "square_scenes",
+              "type": "dropdown",
+              "label": {
+                "en": "Square (□) button",
+                "nl": "Vierkante (□) knop"
+              },
+              "hint": {
+                "en": "This parameter defines which button interactions can trigger a Flow. Using the 2x and 3x pressed introduces a slight delay in Flow triggering.",
+                "nl": "Deze parameter bepaalt welke knop interacties een Flow kunnen triggeren. Bij het gebruik van de 2x en 3x drukken ontstaat er een kleine vertraging bij het triggeren van Flows."
+              },
+              "value": "9",
+              "values": [
+                {
+                  "id": "9",
+                  "label": {
+                    "en": "Pressed 1x and hold/release",
+                    "nl": "1x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "en": "Pressed 1x, 2x and hold/released",
+                    "nl": "1x, 2x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "15",
+                  "label": {
+                    "en": "Pressed 1x, 2x, 3x and hold/released",
+                    "nl": "1x, 2x, 3x ingedrukt en lang drukken/loslaten"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "circle_scenes",
+              "type": "dropdown",
+              "label": {
+                "en": "Circle (○) button",
+                "nl": "Cirkel (○) knop"
+              },
+              "hint": {
+                "en": "This parameter defines which button interactions can trigger a Flow. Using the 2x and 3x pressed introduces a slight delay in Flow triggering.",
+                "nl": "Deze parameter bepaalt welke knop interacties een Flow kunnen triggeren. Bij het gebruik van de 2x en 3x drukken ontstaat er een kleine vertraging bij het triggeren van Flows."
+              },
+              "value": "9",
+              "values": [
+                {
+                  "id": "9",
+                  "label": {
+                    "en": "Pressed 1x and hold/release",
+                    "nl": "1x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "en": "Pressed 1x, 2x and hold/released",
+                    "nl": "1x, 2x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "15",
+                  "label": {
+                    "en": "Pressed 1x, 2x, 3x and hold/released",
+                    "nl": "1x, 2x, 3x ingedrukt en lang drukken/loslaten"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "cross_scenes",
+              "type": "dropdown",
+              "label": {
+                "en": "Cross (x) button",
+                "nl": "Kruis (x) knop"
+              },
+              "hint": {
+                "en": "This parameter defines which button interactions can trigger a Flow. Using the 2x and 3x pressed introduces a slight delay in Flow triggering.",
+                "nl": "Deze parameter bepaalt welke knop interacties een Flow kunnen triggeren. Bij het gebruik van de 2x en 3x drukken ontstaat er een kleine vertraging bij het triggeren van Flows."
+              },
+              "value": "9",
+              "values": [
+                {
+                  "id": "9",
+                  "label": {
+                    "en": "Pressed 1x and hold/release",
+                    "nl": "1x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "en": "Pressed 1x, 2x and hold/released",
+                    "nl": "1x, 2x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "15",
+                  "label": {
+                    "en": "Pressed 1x, 2x, 3x and hold/released",
+                    "nl": "1x, 2x, 3x ingedrukt en lang drukken/loslaten"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "triangle_scenes",
+              "type": "dropdown",
+              "label": {
+                "en": "Triangle (△) button",
+                "nl": "Driehoek (△) knop"
+              },
+              "hint": {
+                "en": "This parameter defines which button interactions can trigger a Flow. Using the 2x and 3x pressed introduces a slight delay in Flow triggering.",
+                "nl": "Deze parameter bepaalt welke knop interacties een Flow kunnen triggeren. Bij het gebruik van de 2x en 3x drukken ontstaat er een kleine vertraging bij het triggeren van Flows."
+              },
+              "value": "9",
+              "values": [
+                {
+                  "id": "9",
+                  "label": {
+                    "en": "Pressed 1x and hold/release",
+                    "nl": "1x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "en": "Pressed 1x, 2x and hold/released",
+                    "nl": "1x, 2x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "15",
+                  "label": {
+                    "en": "Pressed 1x, 2x, 3x and hold/released",
+                    "nl": "1x, 2x, 3x ingedrukt en lang drukken/loslaten"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "minus_scenes",
+              "type": "dropdown",
+              "label": {
+                "en": "Minus (-) button",
+                "nl": "Min (-) knop"
+              },
+              "hint": {
+                "en": "This parameter defines which button interactions can trigger a Flow. Using the 2x and 3x pressed introduces a slight delay in Flow triggering.",
+                "nl": "Deze parameter bepaalt welke knop interacties een Flow kunnen triggeren. Bij het gebruik van de 2x en 3x drukken ontstaat er een kleine vertraging bij het triggeren van Flows."
+              },
+              "value": "9",
+              "values": [
+                {
+                  "id": "9",
+                  "label": {
+                    "en": "Pressed 1x and hold/release",
+                    "nl": "1x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "en": "Pressed 1x, 2x and hold/released",
+                    "nl": "1x, 2x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "15",
+                  "label": {
+                    "en": "Pressed 1x, 2x, 3x and hold/released",
+                    "nl": "1x, 2x, 3x ingedrukt en lang drukken/loslaten"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "plus_scenes",
+              "type": "dropdown",
+              "label": {
+                "en": "Plus (+) button",
+                "nl": "Plus (+) knop"
+              },
+              "hint": {
+                "en": "This parameter defines which button interactions can trigger a Flow. Using the 2x and 3x pressed introduces a slight delay in Flow triggering.",
+                "nl": "Deze parameter bepaalt welke knop interacties een Flow kunnen triggeren. Bij het gebruik van de 2x en 3x drukken ontstaat er een kleine vertraging bij het triggeren van Flows."
+              },
+              "value": "9",
+              "values": [
+                {
+                  "id": "9",
+                  "label": {
+                    "en": "Pressed 1x and hold/release",
+                    "nl": "1x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "11",
+                  "label": {
+                    "en": "Pressed 1x, 2x and hold/released",
+                    "nl": "1x, 2x ingedrukt en lang drukken/loslaten"
+                  }
+                },
+                {
+                  "id": "15",
+                  "label": {
+                    "en": "Pressed 1x, 2x, 3x and hold/released",
+                    "nl": "1x, 2x, 3x ingedrukt en lang drukken/loslaten"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Sequences",
+            "nl": "Reeksen"
+          },
+          "collapsed": true,
+          "children": [
+            {
+              "id": "sequence_timeout",
+              "type": "number",
+              "label": {
+                "en": "Timeout",
+                "nl": "Vertraging"
+              },
+              "value": 1,
+              "attr": {
+                "min": 0.5,
+                "max": 3,
+                "step": 0.1
+              },
+              "hint": {
+                "en": "Maximum time (in seconds) between each button press of the sequence. Range: 0.5s - 3.0s",
+                "nl": "Maximale tijd (in seconden) tussen het indrukken van elke knop van de reeks. Bereik: 0,5s - 3,0s"
+              }
+            },
+            {
+              "id": "sequence_1",
+              "type": "text",
+              "label": {
+                "en": "Sequence 1",
+                "nl": "Reeks 1"
+              },
+              "value": "0",
+              "pattern": "^0$|^[1-6];([1-6];)?([1-6];)?([1-6];)?[1-6];?",
+              "hint": {
+                "en": "Separate button numbers by a semicolon ( ; ), use 2 to 5 buttons. No duplicate sequences are allowed. 0 = sequence disabled. Buttons are numbered from left to right, from top to bottom (1 - 6).",
+                "nl": "Scheid knop nummers door een puntkomma ( ; ), gebruik 2 tot 5 knoppen. 2x dezelfde reeks is niet toegestaan. 0 = reeks uitgeschakeld. Knoppen zijn genummerd van links naar rechts, van boven naar beneden (1 - 6)."
+              }
+            },
+            {
+              "id": "sequence_2",
+              "type": "text",
+              "label": {
+                "en": "Sequence 2",
+                "nl": "Reeks 2"
+              },
+              "value": "0",
+              "pattern": "^0$|^[1-6];([1-6];)?([1-6];)?([1-6];)?[1-6];?",
+              "hint": {
+                "en": "Separate button numbers by a semicolon ( ; ), use 2 to 5 buttons. No duplicate sequences are allowed. 0 = sequence disabled. Buttons are numbered from left to right, from top to bottom (1 - 6).",
+                "nl": "Scheid knop nummers door een puntkomma ( ; ), gebruik 2 tot 5 knoppen. 2x dezelfde reeks is niet toegestaan. 0 = reeks uitgeschakeld. Knoppen zijn genummerd van links naar rechts, van boven naar beneden (1 - 6)."
+              }
+            },
+            {
+              "id": "sequence_3",
+              "type": "text",
+              "label": {
+                "en": "Sequence 3",
+                "nl": "Reeks 3"
+              },
+              "value": "0",
+              "pattern": "^0$|^[1-6];([1-6];)?([1-6];)?([1-6];)?[1-6];?",
+              "hint": {
+                "en": "Separate button numbers by a semicolon ( ; ), use 2 to 5 buttons. No duplicate sequences are allowed. 0 = sequence disabled. Buttons are numbered from left to right, from top to bottom (1 - 6).",
+                "nl": "Scheid knop nummers door een puntkomma ( ; ), gebruik 2 tot 5 knoppen. 2x dezelfde reeks is niet toegestaan. 0 = reeks uitgeschakeld. Knoppen zijn genummerd van links naar rechts, van boven naar beneden (1 - 6)."
+              }
+            },
+            {
+              "id": "sequence_4",
+              "type": "text",
+              "label": {
+                "en": "Sequence 4",
+                "nl": "Reeks 4"
+              },
+              "value": "0",
+              "pattern": "^0$|^[1-6];([1-6];)?([1-6];)?([1-6];)?[1-6];?",
+              "hint": {
+                "en": "Separate button numbers by a semicolon ( ; ), use 2 to 5 buttons. No duplicate sequences are allowed. 0 = sequence disabled. Buttons are numbered from left to right, from top to bottom (1 - 6).",
+                "nl": "Scheid knop nummers door een puntkomma ( ; ), gebruik 2 tot 5 knoppen. 2x dezelfde reeks is niet toegestaan. 0 = reeks uitgeschakeld. Knoppen zijn genummerd van links naar rechts, van boven naar beneden (1 - 6)."
+              }
+            },
+            {
+              "id": "sequence_5",
+              "type": "text",
+              "label": {
+                "en": "Sequence 5",
+                "nl": "Reeks 5"
+              },
+              "value": "0",
+              "pattern": "^0$|^[1-6];([1-6];)?([1-6];)?([1-6];)?[1-6];?",
+              "hint": {
+                "en": "Separate button numbers by a semicolon ( ; ), use 2 to 5 buttons. No duplicate sequences are allowed. 0 = sequence disabled. Buttons are numbered from left to right, from top to bottom (1 - 6).",
+                "nl": "Scheid knop nummers door een puntkomma ( ; ), gebruik 2 tot 5 knoppen. 2x dezelfde reeks is niet toegestaan. 0 = reeks uitgeschakeld. Knoppen zijn genummerd van links naar rechts, van boven naar beneden (1 - 6)."
+              }
+            },
+            {
+              "id": "sequence_6",
+              "type": "text",
+              "label": {
+                "en": "Sequence 6",
+                "nl": "Reeks 6"
+              },
+              "value": "0",
+              "pattern": "^0$|^[1-6];([1-6];)?([1-6];)?([1-6];)?[1-6];?",
+              "hint": {
+                "en": "Separate button numbers by a semicolon ( ; ), use 2 to 5 buttons. No duplicate sequences are allowed. 0 = sequence disabled. Buttons are numbered from left to right, from top to bottom (1 - 6).",
+                "nl": "Scheid knop nummers door een puntkomma ( ; ), gebruik 2 tot 5 knoppen. 2x dezelfde reeks is niet toegestaan. 0 = reeks uitgeschakeld. Knoppen zijn genummerd van links naar rechts, van boven naar beneden (1 - 6)."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Association Group Button Values",
+            "nl": "Associatie Groep Knop Waarden"
+          },
+          "collapsed": true,
+          "children": [
+            {
+              "id": "group_operating_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Association groups operating mode",
+                "nl": "Associatie groepen werkingsmodus"
+              },
+              "value": "0",
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Single press: toggle state",
+                    "nl": "Eenmaal drukken: schakel status"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Single press: toggle state, double press: full brightness",
+                    "nl": "Eenmaal drukken: schakel status, tweemaal drukken: volle helderheid"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "Single press: turn on, double press: turn off",
+                    "nl": "Eenmaal drukken: schakel aan, tweemaal drukken: sckakel uit"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Determine the behaviour of the KeyFob with regard to its association groups.",
+                "nl": "Bepaal het gedrag van de KeyFob met betrekking tot zijn associatie groepen."
+              }
+            },
+            {
+              "id": "value_group_square",
+              "type": "number",
+              "label": {
+                "en": "Group 2 and 3 (□)",
+                "nl": "Groep 2 en 3 (□)"
+              },
+              "value": 255,
+              "attr": {
+                "min": 1,
+                "max": 255
+              },
+              "hint": {
+                "en": "Determine the value that is send to association group 2 and 3. Range: 1 - 99, 255 (previous state).",
+                "nl": "Bepaal de waarde die wordt verzonden naar associatie groep 2 en 3. Bereik: 1 - 99, 255 (vorige status)."
+              }
+            },
+            {
+              "id": "value_group_circle",
+              "type": "number",
+              "label": {
+                "en": "Group 4 and 5 (○)",
+                "nl": "Groep 4 en 5 (○)"
+              },
+              "value": 255,
+              "attr": {
+                "min": 1,
+                "max": 255
+              },
+              "hint": {
+                "en": "Determine the value that is send to association group 4 and 5. Range: 1 - 99, 255 (previous state).",
+                "nl": "Bepaal de waarde die wordt verzonden naar associatie groep 4 en 5. Bereik: 1 - 99, 255 (vorige status)."
+              }
+            },
+            {
+              "id": "value_group_cross",
+              "type": "number",
+              "label": {
+                "en": "Group 6 and 7 (x)",
+                "nl": "Groep 6 en 7 (x)"
+              },
+              "value": 255,
+              "attr": {
+                "min": 1,
+                "max": 255
+              },
+              "hint": {
+                "en": "Determine the value that is send to association group 6 and 7. Range: 1 - 99, 255 (previous state).",
+                "nl": "Bepaal de waarde die wordt verzonden naar associatie groep 6 en 7. Bereik: 1 - 99, 255 (vorige status)."
+              }
+            },
+            {
+              "id": "value_group_triangle",
+              "type": "number",
+              "label": {
+                "en": "Group 8 and 9 (△)",
+                "nl": "Groep 8 en 9 (△)"
+              },
+              "value": 255,
+              "attr": {
+                "min": 1,
+                "max": 255
+              },
+              "hint": {
+                "en": "Determine the value that is send to association group 8 and 9. Range: 1 - 99, 255 (previous state).",
+                "nl": "Bepaal de waarde die wordt verzonden naar associatie groep 8 en 9. Bereik: 1 - 99, 255 (vorige status)."
+              }
+            },
+            {
+              "id": "value_group_minus",
+              "type": "number",
+              "label": {
+                "en": "Group 10 and 11 (-)",
+                "nl": "Groep 10 en 11 (-)"
+              },
+              "value": 255,
+              "attr": {
+                "min": 1,
+                "max": 255
+              },
+              "hint": {
+                "en": "Determine the value that is send to association group 10 and 11. Range: 1 - 99, 255 (previous state).",
+                "nl": "Bepaal de waarde die wordt verzonden naar associatie groep 10 en 11. Bereik: 1 - 99, 255 (vorige status)."
+              }
+            },
+            {
+              "id": "value_group_plus",
+              "type": "number",
+              "label": {
+                "en": "Group 12 and 13 (+)",
+                "nl": "Groep 12 en 13 (+)"
+              },
+              "value": 255,
+              "attr": {
+                "min": 1,
+                "max": 255
+              },
+              "hint": {
+                "en": "Determine the value that is send to association group 12 and 13. Range: 1 - 99, 255 (previous state).",
+                "nl": "Bepaal de waarde die wordt verzonden naar associatie groep 12 en 13. Bereik: 1 - 99, 255 (vorige status)."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "NAS-SC01ZE",
       "name": {
         "en": "NEO Touch Switch Single"
@@ -1257,7 +1912,7 @@
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 3,
-        "productId": 4235,
+        "productId": 0,
         "learnmode": {
           "image": "/drivers/NAS-SC01ZE/assets/learnmode.svg",
           "instruction": {
@@ -1276,63 +1931,63 @@
         "associationGroups": [
           1,
           2
-        ],
-        "class": "socket",
-        "capabilities": [
-          "onoff"
-        ],
-        "icon": "/drivers/NAS-SC01ZE/assets/icon.svg",
-        "images": {
-          "large": "/drivers/NAS-SC01ZE/assets/images/large.jpg",
-          "small": "/drivers/NAS-SC01ZE/assets/images/small.jpg"
-        },
-        "settings": [
-          {
-            "id": "backlight",
-            "type": "checkbox",
-            "label": {
-              "en": "Touch Switch LED enable",
-              "nl": "Touch Switch LED Aan"
-            },
-            "value": true,
-            "hint": {
-              "en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
-              "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)"
-            }
-          },
-          {
-            "id": "status_indicate",
-            "type": "checkbox",
-            "label": {
-              "en": "Touch Switch LED state",
-              "nl": "Touch Switch LED status"
-            },
-            "value": true,
-            "hint": {
-              "en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
-              "nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)"
-            }
-          },
-          {
-            "id": "laststate_return",
-            "type": "checkbox",
-            "label": {
-              "en": "Restore state after power loss",
-              "nl": "Herstel toestand bij spanningsuitval"
-            },
-            "value": true,
-            "hint": {
-              "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
-              "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
-            }
-          }
         ]
-      }
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "icon": "/drivers/NAS-SC01ZE/assets/icon.svg",
+      "images": {
+        "large": "/drivers/NAS-SC01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-SC01ZE/assets/images/small.jpg"
+      },
+      "settings": [
+        {
+          "id": "backlight",
+          "type": "checkbox",
+          "label": {
+            "en": "Touch Switch LED enable",
+            "nl": "Touch Switch LED Aan"
+          },
+          "value": true,
+          "hint": {
+            "en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
+            "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)"
+          }
+        },
+        {
+          "id": "status_indicate",
+          "type": "checkbox",
+          "label": {
+            "en": "Touch Switch LED state",
+            "nl": "Touch Switch LED status"
+          },
+          "value": true,
+          "hint": {
+            "en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
+            "nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)"
+          }
+        },
+        {
+          "id": "laststate_return",
+          "type": "checkbox",
+          "label": {
+            "en": "Restore state after power loss",
+            "nl": "Herstel toestand bij spanningsuitval"
+          },
+          "value": true,
+          "hint": {
+            "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
+            "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
+          }
+        }
+      ]
     },
     {
       "id": "NAS-SW01ZE",
       "name": {
-        "en": "NEO Touch Switch"
+        "en": "NEO Touch Switch Dual"
       },
       "zwave": {
         "manufacturerId": 600,
