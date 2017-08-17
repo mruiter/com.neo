@@ -1332,8 +1332,8 @@
         "measure_battery"
       ],
       "images": {
-        "large": "/drivers/NAS-RC01ZE/assets/images/large.png",
-        "small": "/drivers/NAS-RC01ZE/assets/images/small.png"
+        "large": "/drivers/NAS-RC01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-RC01ZE/assets/images/small.jpg"
       },
       "mobile": {
         "components": [

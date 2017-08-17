@@ -31,15 +31,13 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
 
 ## Change Log:       
-
-### v 1.1.24      
-**fixed:**    
-NAS-SW01ZE - Support for V1 and V2 Touch Wall Switch     
-
+ 
 ### v 1.1.23    
 **update:**    
 NAS-SC01ZE - Added support for Touch Wall Switch Single  
 NAS-RC01ZE - Added support for SOS KeyFob    
+**fixed:**    
+NAS-SW01ZE - Support for V1 and V2 Touch Wall Switch Dual  
 
 ### v 1.1.22    
 **update:**    
