@@ -1,36 +1,43 @@
 # SZ Neo Coolcam device support App for Homey @ Athom.com
 Makes Homey work with these great and cheap Chinese z-wave products
-
+   
 ## Supported devices with most common parameters:
-* NAS-PD01ZE, Motion Sensor
+* NAS-PD01ZE, Motion Sensor  
+* NAS-PD02ZE, Motion Sensor  
 * NAS-WR01ZE, Power Switching Plug
 * NAS-SC01ZE, Touch Wall Switch Single
 * NAS-SW01ZE, Touch Wall Switch Dual
 * NAS-AB01ZE, Siren / Doorbell speaker
 * NAS-DS01ZE, Door Sensor
 * NAS-WS01ZE, Flood Sensor
-* NAS-RC01ZE, SOS KeyFob    
-
-## Supported devices with some parameters:
-None until Neo releases new products
-
+  
+## Supported devices with some parameters:    
+None until Neo releases new products    
+   
 ## Supported Languages:
 * English
 * Dutch
-
+   
 ## Support notes:
 Most reliable way to update battery powered devices   
 1. Place the sensor near Homey (< 1 meter)   
 2. Change the settings to the values you want   
 3. Wake up the sensor (triple click the button)   
 4. During the blinking of the LED (indicating connection to Homey) press "save settings"   
-
+    
 If problems persists:    
 a. Temporarely disable other Z-wave apps   
 b. change the setting to another value with above steps   
 c. check if effective and retry to the desired value    
-
-## Change Log:       
+     
+## Change Log:     
+    
+### v 2.0.0    
+**update:**   
+Moved App to zwave-mesh driver and SDKv2   
+Added all other know country/regio id's known in de z-wave alliance database in the app    
+Added support for the NAS-SC01ZE Touch Wall Switch Single    
+Added empty driver for PD02 so it shows in appstore as device icon/tile    
  
 ### v 1.1.23    
 **fixed:**    

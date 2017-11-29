@@ -1,14 +1,13 @@
 {
 	"id": "NAS-AB01ZE",
 	"name": {
-		"en": "NEO Siren"
+		"en": "Siren/Doorbell",
+		"nl": "Sirene/Deurbel"
 	},
 	"mobile": {
 		"components": [{
 				"id": "icon",
-				"capabilities": [
-					"onoff"
-				]
+				"capabilities": [ "onoff" ]
 			},
 			{
 				"id": "battery",
@@ -30,26 +29,19 @@
 			},
 			{
 				"id": "sensor",
-				"capabilities": [
-					"alarm_battery",
-					"alarm_battery"
-				],
-				"options": {
-					"icons": {
-						"Batterij Alarm": "/drivers/NAS-AB01ZE/assets/images/alarm_battery.svg"
-					},
-					"Batterij Alarm": {
-						"noblink": false,
-						"invert": false
-					}
-				}
+				"capabilities": [  "alarm_siren", "alarm_battery" ],
+				    "options": {
+    					"icons": {
+        					"alarm_siren": "/drivers/NAS-AB01ZE/assets/alarm.svg"
+    							}
+                	}
 			}
 		]
 	},
 	"zwave": {
 		"manufacturerId": 600,
 		"productTypeId": 3,
-		"productId": 4232,
+		"productId": [4232 , 136],
 		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2171/Siren User Manual Common V3_2.pdf",
 		"pid": 2171,
 		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025443",
@@ -81,6 +73,7 @@
 	"class": "other",
 	"capabilities": [
 		"onoff",
+		"alarm_siren",
 		"measure_battery",
 		"alarm_battery"
 	],
@@ -90,6 +83,10 @@
 	},
 	"settings": [{
 			"id": "alarmvolume",
+			"zwave": {
+				"index": 1,
+				"size": 1
+			},
 			"type": "dropdown",
 			"label": {
 				"en": "Alarm volume",
@@ -125,6 +122,10 @@
 		},
 		{
 			"id": "alarmsoundtime",
+			"zwave": {
+				"index": 2,
+				"size": 1
+			},
 			"type": "dropdown",
 			"label": {
 				"en": "Alarm duration time",
@@ -174,6 +175,10 @@
 		},
 		{
 			"id": "doorbellvolume",
+			"zwave": {
+				"index": 4,
+				"size": 1
+			},
 			"type": "dropdown",
 			"label": {
 				"en": "Doorbell volume",
@@ -209,6 +214,10 @@
 		},
 		{
 			"id": "doorbellsoundtime",
+			"zwave": {
+				"index": 3,
+				"size": 1
+			},
 			"type": "dropdown",
 			"label": {
 				"en": "Doorbell duration time",
@@ -258,6 +267,10 @@
 		},
 		{
 			"id": "alarmtune",
+			"zwave": {
+				"index": 5,
+				"size": 1
+			},
 			"type": "dropdown",
 			"label": {
 				"en": "Alarm sound tune",
@@ -342,6 +355,10 @@
 		},
 		{
 			"id": "doorbelltune",
+			"zwave": {
+				"index": 6,
+				"size": 1
+			},
 			"type": "dropdown",
 			"label": {
 				"en": "Doorbell sound tune",
@@ -426,6 +443,10 @@
 		},
 		{
 			"id": "alarmordoorbell",
+			"zwave": {
+				"index": 7,
+				"size": 1
+			},
 			"type": "dropdown",
 			"label": {
 				"en": "Use as Siren or Doorbell",
@@ -454,6 +475,10 @@
 		},
 		{
 			"id": "alarmled",
+			"zwave": {
+				"index": 8,
+				"size": 1
+			},
 			"type": "checkbox",
 			"label": {
 				"en": "Alarm led on/off",
@@ -467,6 +492,10 @@
 		},
 		{
 			"id": "doorbellled",
+			"zwave": {
+				"index": 9,
+				"size": 1
+			},
 			"type": "checkbox",
 			"label": {
 				"en": "Doorbell led on/off",

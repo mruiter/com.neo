@@ -1,7 +1,15 @@
 'use strict';
 
-const Log = require('homey-log').Log;
+const Homey = require('homey');
 
-module.exports.init = () => {
-	console.log(`${Homey.manifest.id} running...`);
-};
+class NeoZwave extends Homey.App {
+
+	onInit() {
+
+		this.log('Neo Z-wave app is running...');
+
+	}
+
+}
+
+module.exports = NeoZwave;

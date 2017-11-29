@@ -1,12 +1,13 @@
 {
 	"id": "NAS-DS01ZE",
 	"name": {
-		"en": "NEO Door Sensor"
+		"en": "Door Sensor",
+		"nl": "Deur Sensor"
 	},
 	"zwave": {
 		"manufacturerId": 600,
 		"productTypeId": 3,
-		"productId": 4226,
+		"productId": [4226 , 130],
 		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1782/Door-Window User Guide.doc",
 		"pid": 1782,
 		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055076",
@@ -38,6 +39,10 @@
 	},
 	"settings": [{
 			"id": "off_delay",
+			"zwave": {
+				"index": 1,
+				"size": 2
+			},
 			"type": "number",
 			"attr": {
 				"min": 0,
@@ -54,6 +59,10 @@
 		},
 		{
 			"id": "basic_set_level",
+			"zwave": {
+				"index": 2,
+				"size": 1
+			},
 			"type": "number",
 			"attr": {
 				"min": 0,

@@ -1,0 +1,75 @@
+{
+  "id": "com.neo",
+  "sdk": 2,
+  "name": {
+    "en": "NEO Coolcam",
+    "nl": "NEO Coolcam"
+  },
+  "version": "2.0.0",
+  "compatibility": ">=1.5.3",
+  "description": {
+    "en": "NEO Coolcam Z-Wave device support",
+	"nl": "NEO Coolcam Z-Wave device support"
+  },
+  "tags": {
+    "en": [
+      "scene controller",
+      "remote",
+      "remote control",
+      "central scene",
+      "scenes",
+      "motion detection",
+      "motion",
+      "alarm",
+      "door",
+      "window",
+      "sensor",
+      "switch",
+      "smart plug",
+      "USB"
+    ],
+    "nl": [
+      "scene controller",
+      "afstandsbediening",
+      "central scene",
+      "scenes",
+      "bewegingsdetectie",
+      "beweging",
+      "alarm",
+      "deur",
+      "raam",
+      "sensor",
+      "schakelaar",
+      "USB"
+    ]
+  },
+  "category": [
+    "appliances",
+    "lights",
+    "security"
+  ],
+  "images": {
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  },
+  "author": {
+    "name": "Marco Ruiter",
+    "email": "mruiter@tuxweb.nl"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Marco Ruiter",
+        "email": "mruiter@tuxweb.nl"
+      },
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
+      }
+    ]
+  },
+  "flow": {
+  },
+  "drivers": [
+  ]
+}

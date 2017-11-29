@@ -1,12 +1,13 @@
 {
 	"id": "NAS-WS01ZE",
 	"name": {
-		"en": "NEO Flood Sensor"
+		"en": "Flood Sensor",
+		"nl": "Water Sensor"
 	},
 	"zwave": {
 		"manufacturerId": 600,
 		"productTypeId": 3,
-		"productId": 4229,
+		"productId": [4229 , 133],
 		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1788/Water Leakage Detector User Manual V2.doc",
 		"pid": 1788,
 		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055075",
@@ -76,6 +77,10 @@
 	},
 	"settings": [{
 			"id": "alarm_duration_time",
+			"zwave": {
+				"index": 1,
+				"size": 1
+			},
 			"type": "number",
 			"attr": {
 				"min": 1,
@@ -93,6 +98,10 @@
 		},
 		{
 			"id": "alarm_interval",
+			"zwave": {
+				"index": 2,
+				"size": 1
+			},
 			"type": "number",
 			"attr": {
 				"min": 1,
@@ -110,6 +119,10 @@
 		},
 		{
 			"id": "first_alarm_ontime",
+			"zwave": {
+				"index": 3,
+				"size": 1
+			},
 			"type": "number",
 			"attr": {
 				"min": 10,
@@ -127,6 +140,10 @@
 		},
 		{
 			"id": "first_alarm_duration",
+			"zwave": {
+				"index": 4,
+				"size": 1
+			},
 			"type": "number",
 			"attr": {
 				"min": 5,
@@ -144,6 +161,10 @@
 		},
 		{
 			"id": "alarm_sound_enable_disable",
+			"zwave": {
+				"index": 5,
+				"size": 1
+			},
 			"type": "checkbox",
 			"label": {
 				"en": "Alarm sound on detection",
@@ -157,6 +178,10 @@
 		},
 		{
 			"id": "sensor_enable_disable",
+			"zwave": {
+				"index": 6,
+				"size": 1
+			},
 			"type": "checkbox",
 			"label": {
 				"en": "Enable or Disable sensor",

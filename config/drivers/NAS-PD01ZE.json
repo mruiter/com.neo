@@ -1,12 +1,13 @@
 {
 	"id": "NAS-PD01ZE",
 	"name": {
-		"en": "NEO Motion Sensor"
+		"en": "Motion Sensor V1",
+		"nl": "Beweging Sensor V1"
 	},
 	"zwave": {
 		"manufacturerId": 600,
 		"productTypeId": 3,
-		"productId": 4227,
+		"productId": [4227 , 131],
 		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
 		"pid": 1920,
 		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
@@ -84,6 +85,10 @@
 	},
 	"settings": [{
 			"id": "enable_PIR_function",
+			"zwave": {
+				"index": 4,
+				"size": 1
+			},
 			"type": "checkbox",
 			"label": {
 				"en": "Motion detection function",
@@ -97,6 +102,10 @@
 		},
 		{
 			"id": "motion_blink",
+			"zwave": {
+				"index": 10,
+				"size": 1
+			},
 			"type": "checkbox",
 			"label": {
 				"en": "Motion detection LED indication",
@@ -110,6 +119,10 @@
 		},
 		{
 			"id": "motion_sensor_sensitivity",
+			"zwave": {
+				"index": 1,
+				"size": 1
+			},
 			"type": "dropdown",
 			"label": {
 				"en": "Motion detection sensitivity",
@@ -152,6 +165,10 @@
 		},
 		{
 			"id": "re-trigger_interval",
+			"zwave": {
+				"index": 6,
+				"size": 1
+			},
 			"type": "number",
 			"attr": {
 				"min": 0,
@@ -169,6 +186,10 @@
 		},
 		{
 			"id": "illumination_polling_interval",
+			"zwave": {
+				"index": 7,
+				"size": 2
+			},
 			"type": "number",
 			"label": {
 				"en": "Illumination reporting interval (s)",
@@ -186,6 +207,10 @@
 		},
 		{
 			"id": "illumination_report_threshold",
+			"zwave": {
+				"index": 9,
+				"size": 1
+			},
 			"type": "number",
 			"label": {
 				"en": "Illumination report threshold (lux)",
@@ -203,6 +228,10 @@
 		},
 		{
 			"id": "enable_illumination_trigger",
+			"zwave": {
+				"index": 8,
+				"size": 1
+			},
 			"type": "checkbox",
 			"label": {
 				"en": "Illumination switch ON function",
@@ -216,6 +245,10 @@
 		},
 		{
 			"id": "day_night_treshold",
+			"zwave": {
+				"index": 5,
+				"size": 2
+			},
 			"type": "number",
 			"value": 100,
 			"attr": {
@@ -233,6 +266,10 @@
 		},
 		{
 			"id": "basic_set_level",
+			"zwave": {
+				"index": 3,
+				"size": 1
+			},
 			"type": "number",
 			"attr": {
 				"min": 0,
@@ -250,6 +287,10 @@
 		},
 		{
 			"id": "motion_off_delay",
+			"zwave": {
+				"index": 2,
+				"size": 2
+			},
 			"type": "number",
 			"attr": {
 				"min": 5,

@@ -1,12 +1,13 @@
 {
 	"id": "NAS-WR01ZE",
 	"name": {
-		"en": "NEO Wall Plug"
+		"en": "Power Wallplug",
+		"nl": "Spanning Muurplug"
 	},
 	"zwave": {
 		"manufacturerId": 600,
 		"productTypeId": 3,
-		"productId": 4231,
+		"productId": [4231 , 135],
 		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
 		"pid": 1783,
 		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055074",
@@ -97,6 +98,10 @@
 	},
 	"settings": [{
 			"id": "led_display",
+			"zwave": {
+				"index": 5,
+				"size": 1
+			},
 			"type": "checkbox",
 			"label": {
 				"en": "State indication Led",
@@ -110,6 +115,10 @@
 		},
 		{
 			"id": "meter_report",
+			"zwave": {
+				"index": 1,
+				"size": 1
+			},
 			"type": "checkbox",
 			"label": {
 				"en": "Meter report functie",
@@ -123,6 +132,10 @@
 		},
 		{
 			"id": "meter_report_interval",
+			"zwave": {
+				"index": 2,
+				"size": 2
+			},
 			"type": "number",
 			"attr": {
 				"min": 60,
@@ -140,6 +153,10 @@
 		},
 		{
 			"id": "power_report_change",
+			"zwave": {
+				"index": 6,
+				"size": 1
+			},
 			"type": "number",
 			"attr": {
 				"min": 1,
@@ -157,6 +174,10 @@
 		},
 		{
 			"id": "remember_state",
+			"zwave": {
+				"index": 7,
+				"size": 1
+			},
 			"type": "checkbox",
 			"label": {
 				"en": "Restore state after power loss",
@@ -170,6 +191,10 @@
 		},
 		{
 			"id": "over_load_current",
+			"zwave": {
+				"index": 3,
+				"size": 1
+			},
 			"type": "number",
 			"attr": {
 				"min": 1,
@@ -187,6 +212,10 @@
 		},
 		{
 			"id": "alarm_current",
+			"zwave": {
+				"index": 4,
+				"size": 1
+			},
 			"type": "number",
 			"attr": {
 				"min": 1,
@@ -204,6 +233,10 @@
 		},
 		{
 			"id": "time_switch_function",
+			"zwave": {
+				"index": 8,
+				"size": 1
+			},
 			"type": "checkbox",
 			"label": {
 				"en": "Time switch off function",
@@ -217,6 +250,10 @@
 		},
 		{
 			"id": "time_switch_period",
+			"zwave": {
+				"index": 9,
+				"size": 2
+			},
 			"type": "number",
 			"attr": {
 				"min": 1,
