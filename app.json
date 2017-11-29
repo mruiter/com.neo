@@ -378,8 +378,8 @@
           "nl": "Stel Touch Switch LED in"
         },
         "hint": {
-          "en": "Enable or disable the Touch Switch LED, lighting up blue when enabled",
-          "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld"
+          "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
+          "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld"
         },
         "args": [
           {
@@ -416,8 +416,8 @@
           "nl": "Stel Touch Switch LED in"
         },
         "hint": {
-          "en": "Enable or disable the Touch Switch LED, lighting up blue when enabled",
-          "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld"
+          "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
+          "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld"
         },
         "args": [
           {
