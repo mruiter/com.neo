@@ -5,8 +5,8 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class Siren_AB01Z extends ZwaveDevice {
 	async onMeshInit() {
-		this.enableDebug();
-		this.printNode();
+		//this.enableDebug();
+		//this.printNode();
 		this.registerCapability('onoff', 'SWITCH_BINARY');
 		this.registerCapability('alarm_siren', 'NOTIFICATION');
 		this.registerCapability('alarm_battery', 'BATTERY');

@@ -1,5 +1,6 @@
 'use strict';
 
+const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class WallSwitchDual_SC01Z extends ZwaveDevice {
@@ -10,10 +11,10 @@ class WallSwitchDual_SC01Z extends ZwaveDevice {
 		
 		//===== Led On/Off
 		let SC01ZE_LED_mode_run_listener = async(args) => {
-			this.log('FlowCardAction Set Led Mode to: ', args.led_mode);
-			this.configurationSet({id: 'backlight'}, args.led_mode);
+			this.log('FlowCardAction Set Led Mode to: ', args.switch_LED_onoff);
+			this.configurationSet({id: 'backlight'}, args.switch_LED_onoff);
 		};
-		let actionSC01ZE_led_mode = new Homey.FlowCardAction('SC01ZE_led_mode');
+		let actionSC01ZE_led_mode = new Homey.FlowCardAction('SC01ZE_switch_LED');
 		actionSC01ZE_led_mode
 			.register()
 			.registerRunListener(SC01ZE_LED_mode_run_listener);		
