@@ -5,8 +5,8 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class WallSwitchDual_SW01Z extends ZwaveDevice {
 	async onMeshInit() {
-		//this.enableDebug();
-		//this.printNode();
+		this.enableDebug();
+		this.printNode();
 		this.registerCapability('onoff', 'SWITCH_BINARY');
 		
 		//===== Led On/Off
