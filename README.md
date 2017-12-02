@@ -8,6 +8,7 @@ Makes Homey work with these great and cheap Chinese z-wave products
 * NAS-SC01ZE, Touch Wall Switch Single
 * NAS-SW01ZE, Touch Wall Switch Dual
 * NAS-AB01ZE, Siren / Doorbell speaker
+* NAS-RC01ZE, Remote KeyFob / Alarm Button   
 * NAS-DS01ZE, Door Sensor
 * NAS-WS01ZE, Flood Sensor
   
@@ -32,6 +33,10 @@ c. check if effective and retry to the desired value
      
 ## Change Log:     
     
+### v 2.0.1    
+**update:**   
+Added support for the KeyFob Remote Control / Alarm Buton       
+	
 ### v 2.0.0    
 **update:**   
 Moved App to zwave-mesh driver and SDKv2   
