@@ -80,8 +80,8 @@
 		"measure_battery"
 	],
 	"images": {
-		"large": "/drivers/NAS-PD01ZE/assets/images/large.jpg",
-		"small": "/drivers/NAS-PD01ZE/assets/images/small.jpg"
+		"large": "/drivers/NAS-PD02ZE/assets/images/large.jpg",
+		"small": "/drivers/NAS-PD02ZE/assets/images/small.jpg"
 	},
 	"settings": [{
 			"id": "enable_PIR_function",

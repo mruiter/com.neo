@@ -70,7 +70,7 @@
   },
   "capabilities": {
     "alarm_siren": {
-      "type": "number",
+      "type": "boolean",
       "title": {
         "en": "Siren",
         "nl": "Sirene"
@@ -82,9 +82,22 @@
         "en": "Alarm",
         "nl": "Alarm"
       },
-      "min": 0,
-      "max": 1,
-      "step": 1,
+      "getable": true,
+      "setable": false
+    },
+    "alarm_emergency": {
+      "type": "boolean",
+      "title": {
+        "en": "Emergency",
+        "nl": "Noodgeval"
+      },
+      "units": {
+        "en": "Status"
+      },
+      "desc": {
+        "en": "Alarm",
+        "nl": "Alarm"
+      },
       "getable": true,
       "setable": false
     }
@@ -1548,8 +1561,8 @@
         "measure_battery"
       ],
       "images": {
-        "large": "/drivers/NAS-PD01ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-PD01ZE/assets/images/small.jpg"
+        "large": "/drivers/NAS-PD02ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-PD02ZE/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -1787,6 +1800,7 @@
       },
       "capabilities": [
         "measure_battery",
+        "alarm_emergency",
         "alarm_battery"
       ],
       "images": {
@@ -1810,13 +1824,14 @@
           {
             "id": "sensor",
             "capabilities": [
+              "alarm_emergency",
               "alarm_battery"
             ],
             "options": {
               "icons": {
-                "Battery_Alarm": "/drivers/HKZW-SCN04/assets/alarm_battery.svg"
+                "alarm_emergency": "/drivers/NAS-RC01ZE/assets/emergency.svg"
               },
-              "Battery_Alarm": {
+              "alarm_battery": {
                 "noblink": false,
                 "invert": false
               }

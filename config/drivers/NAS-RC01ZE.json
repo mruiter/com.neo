@@ -7,6 +7,7 @@
 	},
 	"capabilities": [
 		"measure_battery",
+		"alarm_emergency",
 		"alarm_battery"
 	],
 	"images": {
@@ -30,13 +31,14 @@
 			{
 				"id": "sensor",
 				"capabilities": [
+					"alarm_emergency",
 					"alarm_battery"
 				],
 				"options": {
 					"icons": {
-						"Battery_Alarm": "/drivers/HKZW-SCN04/assets/alarm_battery.svg"
+						"alarm_emergency": "/drivers/NAS-RC01ZE/assets/emergency.svg"
 					},
-					"Battery_Alarm": {
+					"alarm_battery": {
 						"noblink": false,
 						"invert": false
 					}

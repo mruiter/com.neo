@@ -10,7 +10,9 @@ class KeyFob_RC01Z extends ZwaveDevice {
 		this.enableDebug();
 		this.printNode();
 		this.registerCapability('alarm_battery', 'BATTERY');
+		this.registerCapability('alarm_emergency', 'NOTIFICATION');
 		this.registerCapability('measure_battery', 'BATTERY');
+
 		
 		
 		// define and register FlowCardTriggers
