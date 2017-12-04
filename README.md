@@ -35,7 +35,7 @@ c. check if effective and retry to the desired value
     
 ### v 2.0.1    
 **update:**   
-Added support for the KeyFob Remote Control / Alarm Buton       
+Added support for the KeyFob/ SOS Remote Control       
 	
 ### v 2.0.0    
 **update:**   
