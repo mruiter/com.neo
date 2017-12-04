@@ -9,7 +9,11 @@ class WaterSensor_WS01 extends ZwaveDevice {
 		//this.printNode();
 		this.registerCapability('alarm_water', 'BINARY_SENSOR');
 		this.registerCapability('alarm_battery', 'BATTERY');
-		this.registerCapability('measure_battery', 'BATTERY');
+		this.registerCapability('measure_battery', 'BATTERY', {
+			getOpts: {
+				getOnOnline: true,
+			}
+		});
 	}
 
 }

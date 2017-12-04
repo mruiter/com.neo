@@ -10,7 +10,11 @@ class MultiSensor_PD02Z extends ZwaveDevice {
 		this.registerCapability('alarm_motion', 'SENSOR_BINARY');
 		this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL');
 		this.registerCapability('alarm_battery', 'BATTERY');
-		this.registerCapability('measure_battery', 'BATTERY');
+		this.registerCapability('measure_battery', 'BATTERY', {
+			getOpts: {
+				getOnOnline: true,
+			}
+		});
 	}
 
 }

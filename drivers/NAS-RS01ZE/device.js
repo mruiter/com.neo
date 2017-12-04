@@ -15,6 +15,7 @@ class KeyFob_RC01Z extends ZwaveDevice {
 				getOnOnline: true,
 			}
 		});
+	
 		this.registerCapability('alarm_emergency', 'NOTIFICATION', {
 			get: 'NOTIFICATION_GET',
 			getOpts: {
