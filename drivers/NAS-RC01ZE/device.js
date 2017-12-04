@@ -13,7 +13,23 @@ class KeyFob_RC01Z extends ZwaveDevice {
 		this.registerCapability('alarm_emergency', 'NOTIFICATION');
 		this.registerCapability('measure_battery', 'BATTERY');
 
-		
+		// Register Flow card trigger
+		const EmergencyFlowTrigger = new Homey.FlowCardTriggerDevice('alarm_emergency');
+		EmergencyFlowTrigger.register();
+
+		// Check if Flow card is registered in app manifest
+		if (!(EmergencyFlowTrigger instanceof Error)) {
+
+			// Handle Emergency notification
+			this.on('EmergencyTrigger', async () => {
+				this.log('EmergencyTrigger');
+				try {
+					await EmergencyFlowTrigger.trigger(this, {}, {});
+				} catch (err) {
+					this.error('failed_to_trigger_alarm_emergency_flow', err);
+				}
+			});
+		} else this.error('missing_alarm_emergency_card_in_manifest');
 		
 		// define and register FlowCardTriggers
 		let triggerRC_scene = new Homey.FlowCardTriggerDevice('RC_scene');
@@ -23,7 +39,7 @@ class KeyFob_RC01Z extends ZwaveDevice {
 				//this.log(args, state);
 				return Promise.resolve(args.button === state.button && args.scene === state.scene);
 			});
-
+		
 		
 		// register a report listener (SDK2 style not yet operational)
 		this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', (rawReport, parsedReport) => {
