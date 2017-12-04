@@ -1934,14 +1934,14 @@
         "learnmode": {
           "image": "/drivers/NAS-SC01ZE/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the left button on you're wallswitch three times quickly",
+            "en": "Press the left button on youre wallswitch three times quickly",
             "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
           }
         },
         "unlearnmode": {
           "image": "/drivers/NAS-SC01ZE/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the left button on you're wallswitch three times quickly",
+            "en": "Press the left button on youre wallswitch three times quickly",
             "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
           }
         },
@@ -2027,14 +2027,14 @@
         "learnmode": {
           "image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the left button on you're wallswitch three times quickly",
+            "en": "Press the left button on your wallswitch three times quickly",
             "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
           }
         },
         "unlearnmode": {
           "image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the left button on you're wallswitch three times quickly",
+            "en": "Press the left button on youre wallswitch three times quickly",
             "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
           }
         },
