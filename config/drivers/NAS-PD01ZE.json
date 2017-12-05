@@ -1,8 +1,8 @@
 {
 	"id": "NAS-PD01ZE",
 	"name": {
-		"en": "Motion Sensor V1",
-		"nl": "Beweging Sensor V1"
+		"en": "PIR V1",
+		"nl": "PIR V1"
 	},
 	"zwave": {
 		"manufacturerId": 600,
