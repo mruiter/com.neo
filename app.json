@@ -5,7 +5,7 @@
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.0.2",
+  "version": "2.0.1",
   "compatibility": ">=1.5.3",
   "description": {
     "en": "NEO Coolcam Z-Wave device support",
@@ -1152,12 +1152,14 @@
         "pid": 1782,
         "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055076",
         "learnmode": {
+          "image": "/drivers/NAS-DS01ZE/assets/learnmode.svg",
           "instruction": {
             "en": "Press the button inside your NEO Door Sensor three times",
             "nl": "Druk driemaal op de knop in de Deur Sensor unit"
           }
         },
         "unlearnmode": {
+          "image": "/drivers/NAS-DS01ZE/assets/learnmode.svg",
           "instruction": {
             "en": "Press the button inside your NEO Door Sensor three times",
             "nl": "Druk driemaal op de knop in de Deur Sensor unit"
@@ -1912,12 +1914,14 @@
         ],
         "wakeUpInterval": 0,
         "learnmode": {
+          "image": "/drivers/NAS-RC01ZE/assets/learnmode.svg",
           "instruction": {
             "en": "Press the SOS button on the KeyFob three times.",
             "nl": "Druk drie keer op de SOS knop op van KeyFob."
           }
         },
         "unlearnmode": {
+          "image": "/drivers/NAS-RC01ZE/assets/learnmode.svg",
           "instruction": {
             "en": "Press the SOS button on the KeyFob three times.",
             "nl": "Druk drie keer op de SOS knop op van KeyFob."
@@ -2024,12 +2028,14 @@
         ],
         "wakeUpInterval": 0,
         "learnmode": {
+          "image": "/drivers/NAS-RS01ZE/assets/learnmode.svg",
           "instruction": {
             "en": "Press the SOS button on the KeyFob three times.",
             "nl": "Druk drie keer op de SOS knop op van KeyFob."
           }
         },
         "unlearnmode": {
+          "image": "/drivers/NAS-RS01ZE/assets/learnmode.svg",
           "instruction": {
             "en": "Press the SOS button on the KeyFob three times.",
             "nl": "Druk drie keer op de SOS knop op van KeyFob."

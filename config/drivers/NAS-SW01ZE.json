@@ -1,107 +1,106 @@
 {
-	"id": "NAS-SW01ZE",
-	"name": {
-		"en": "Touch Switch Dual",
-		"nl": "Aanraakschakelaar Dubbel"
-	},
-	"zwave": {
-		"manufacturerId": 600,
-		"productTypeId": 3,
-		"productId": 4235,
-		"learnmode": {
-			"image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
-			"instruction": {
-				"en": "Press the left button on your wallswitch three times quickly",
-				"nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
-			}
-		},
-		"unlearnmode": {
-			"image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
-			"instruction": {
-				"en": "Press the left button on youre wallswitch three times quickly",
-				"nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
-			}
-		},
-		"defaultConfiguration": [
-		],
-		"associationGroups": [
-			1,
+  "id": "NAS-SW01ZE",
+  "name": {
+    "en": "Touch Switch Dual",
+    "nl": "Aanraakschakelaar Dubbel"
+  },
+  "zwave": {
+    "manufacturerId": 600,
+    "productTypeId": 3,
+    "productId": 4235,
+    "learnmode": {
+      "image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the left button on your wallswitch three times quickly",
+        "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the left button on youre wallswitch three times quickly",
+        "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
+      }
+    },
+    "defaultConfiguration": [],
+    "associationGroups": [
+      1,
       2
-		],
-		"multiChannelNodes": {
-			"2": {
-				"class": "socket",
-				"capabilities": [
-					"onoff"
-				],
-				"icon": "/drivers/NAS-SW01ZE/assets/icon2.svg",
-				"name": {
-					"en": "NEO Touch Right Switch",
-					"nl": "NEO Touch Rechter Schakelaar"
-				},
-				"settings": []
-			}
-		}
-	},
-	"class": "socket",
-	"capabilities": [
-		"onoff"
-	],
-	"icon": "/drivers/NAS-SW01ZE/assets/icon.svg",
-	"images": {
-		"large": "/drivers/NAS-SW01ZE/assets/images/large.jpg",
-		"small": "/drivers/NAS-SW01ZE/assets/images/small.jpg"
-	},
-	"settings": [{
-			"id": "backlight",
-			"zwave": {
-				"index": 1,
-				"size": 1
-			},
-			"type": "checkbox",
-			"label": {
-				"en": "Touch Switch LED enable",
-				"nl": "Touch Switch LED Aan"
-			},
-			"value": true,
-			"hint": {
-				"en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
-				"nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)"
-			}
-		},
-		{
-			"id": "status_indicate",
-			"zwave": {
-				"index": 2,
-				"size": 1
-			},
-			"type": "checkbox",
-			"label": {
-				"en": "Touch Switch LED state",
-				"nl": "Touch Switch LED status"
-			},
-			"value": true,
-			"hint": {
-				"en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
-				"nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)"
-			}
-		},
-		{
-			"id": "laststate_return",
-			"zwave": {
-				"index": 3,
-				"size": 1
-			},
-			"type": "checkbox",
-			"label": {
-				"en": "Restore state after power loss",
-				"nl": "Herstel toestand bij spanningsuitval"
-			},
-			"value": true,
-			"hint": {
-				"en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
-				"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
-			}
-		}
-	]
+    ],
+    "multiChannelNodes": {
+      "2": {
+        "class": "socket",
+        "capabilities": [
+          "onoff"
+        ],
+        "icon": "/drivers/NAS-SW01ZE/assets/icon2.svg",
+        "name": {
+          "en": "NEO Touch Right Switch",
+          "nl": "NEO Touch Rechter Schakelaar"
+        },
+        "settings": []
+      }
+    }
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff"
+  ],
+  "icon": "/drivers/NAS-SW01ZE/assets/icon.svg",
+  "images": {
+    "large": "/drivers/NAS-SW01ZE/assets/images/large.jpg",
+    "small": "/drivers/NAS-SW01ZE/assets/images/small.jpg"
+  },
+  "settings": [{
+      "id": "backlight",
+      "zwave": {
+        "index": 1,
+        "size": 1
+      },
+      "type": "checkbox",
+      "label": {
+        "en": "Touch Switch LED enable",
+        "nl": "Touch Switch LED Aan"
+      },
+      "value": true,
+      "hint": {
+        "en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
+        "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)"
+      }
+    },
+    {
+      "id": "status_indicate",
+      "zwave": {
+        "index": 2,
+        "size": 1
+      },
+      "type": "checkbox",
+      "label": {
+        "en": "Touch Switch LED state",
+        "nl": "Touch Switch LED status"
+      },
+      "value": true,
+      "hint": {
+        "en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
+        "nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)"
+      }
+    },
+    {
+      "id": "laststate_return",
+      "zwave": {
+        "index": 3,
+        "size": 1
+      },
+      "type": "checkbox",
+      "label": {
+        "en": "Restore state after power loss",
+        "nl": "Herstel toestand bij spanningsuitval"
+      },
+      "value": true,
+      "hint": {
+        "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
+        "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
+      }
+    }
+  ]
 }

@@ -1,81 +1,83 @@
 {
-	"id": "NAS-DS01ZE",
-	"name": {
-		"en": "Door Sensor",
-		"nl": "Deur Sensor"
-	},
-	"zwave": {
-		"manufacturerId": 600,
-		"productTypeId": 3,
-		"productId": [4226 , 130],
-		"productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1782/Door-Window User Guide.doc",
-		"pid": 1782,
-		"imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055076",
-		"learnmode": {
-			"instruction": {
-				"en": "Press the button inside your NEO Door Sensor three times",
-				"nl": "Druk driemaal op de knop in de Deur Sensor unit"
-			}
-		},
-		"unlearnmode": {
-			"instruction": {
-				"en": "Press the button inside your NEO Door Sensor three times",
-				"nl": "Druk driemaal op de knop in de Deur Sensor unit"
-			}
-		},
-		"associationGroups": [
-			1
-		]
-	},
-	"class": "sensor",
-	"capabilities": [
-		"alarm_contact",
-		"measure_battery",
-		"alarm_battery"
-	],
-	"images": {
-		"large": "/drivers/NAS-DS01ZE/assets/images/large.jpg",
-		"small": "/drivers/NAS-DS01ZE/assets/images/small.jpg"
-	},
-	"settings": [{
-			"id": "off_delay",
-			"zwave": {
-				"index": 1,
-				"size": 2
-			},
-			"type": "number",
-			"attr": {
-				"min": 0,
-				"max": 65535
-			},
-			"label": {
-				"en": "Off Delay"
-			},
-			"value": 0,
-			"hint": {
-				"en": "Can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay",
-				"nl": "Kan gebruikt worden om de hoeveelheid vertraging aan te passen voordat het OFF commando verzonden. Deze parameter kan worden geconfigureerd met de waarde van 0 tot en met 65535, waarbij 0 betekent stuur onmiddellijk UIT commando en 65535 betekent 65.535 seconden vertraging"
-			}
-		},
-		{
-			"id": "basic_set_level",
-			"zwave": {
-				"index": 2,
-				"size": 1
-			},
-			"type": "number",
-			"attr": {
-				"min": 0,
-				"max": 255
-			},
-			"value": 255,
-			"label": {
-				"en": "Basic Set Level"
-			},
-			"hint": {
-				"en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
-				"nl": "0=UIT, Alarm annuleren of het uitschakelen van de sensor, 1-99 = Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)"
-			}
-		}
-	]
+  "id": "NAS-DS01ZE",
+  "name": {
+    "en": "Door Sensor",
+    "nl": "Deur Sensor"
+  },
+  "zwave": {
+    "manufacturerId": 600,
+    "productTypeId": 3,
+    "productId": [4226, 130],
+    "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1782/Door-Window User Guide.doc",
+    "pid": 1782,
+    "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055076",
+    "learnmode": {
+      "image": "/drivers/NAS-DS01ZE/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the button inside your NEO Door Sensor three times",
+        "nl": "Druk driemaal op de knop in de Deur Sensor unit"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/NAS-DS01ZE/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the button inside your NEO Door Sensor three times",
+        "nl": "Druk driemaal op de knop in de Deur Sensor unit"
+      }
+    },
+    "associationGroups": [
+      1
+    ]
+  },
+  "class": "sensor",
+  "capabilities": [
+    "alarm_contact",
+    "measure_battery",
+    "alarm_battery"
+  ],
+  "images": {
+    "large": "/drivers/NAS-DS01ZE/assets/images/large.jpg",
+    "small": "/drivers/NAS-DS01ZE/assets/images/small.jpg"
+  },
+  "settings": [{
+      "id": "off_delay",
+      "zwave": {
+        "index": 1,
+        "size": 2
+      },
+      "type": "number",
+      "attr": {
+        "min": 0,
+        "max": 65535
+      },
+      "label": {
+        "en": "Off Delay"
+      },
+      "value": 0,
+      "hint": {
+        "en": "Can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay",
+        "nl": "Kan gebruikt worden om de hoeveelheid vertraging aan te passen voordat het OFF commando verzonden. Deze parameter kan worden geconfigureerd met de waarde van 0 tot en met 65535, waarbij 0 betekent stuur onmiddellijk UIT commando en 65535 betekent 65.535 seconden vertraging"
+      }
+    },
+    {
+      "id": "basic_set_level",
+      "zwave": {
+        "index": 2,
+        "size": 1
+      },
+      "type": "number",
+      "attr": {
+        "min": 0,
+        "max": 255
+      },
+      "value": 255,
+      "label": {
+        "en": "Basic Set Level"
+      },
+      "hint": {
+        "en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
+        "nl": "0=UIT, Alarm annuleren of het uitschakelen van de sensor, 1-99 = Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)"
+      }
+    }
+  ]
 }

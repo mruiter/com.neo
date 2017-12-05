@@ -4,11 +4,11 @@ const Homey = require('homey');
 
 class NeoZwave extends Homey.App {
 
-	onInit() {
+  onInit() {
 
-		this.log('Neo Z-wave app is running...');
+    this.log('Neo Z-wave app is running...');
 
-	}
+  }
 
 }
 
