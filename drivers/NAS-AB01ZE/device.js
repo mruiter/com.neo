@@ -5,8 +5,8 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class Siren_AB01Z extends ZwaveDevice {
   async onMeshInit() {
-    //this.enableDebug();
-    //this.printNode();
+    this.enableDebug();
+    this.printNode();
     this.registerCapability('onoff', 'SWITCH_BINARY');
     this.registerCapability('alarm_battery', 'BATTERY');
     this.registerCapability('measure_battery', 'BATTERY', {
@@ -36,6 +36,20 @@ class Siren_AB01Z extends ZwaveDevice {
       }
     });
 
+	//===== Create a Action card to activate or deactivated the siren
+    let AB01ZE_alarm_state_run_listener = async (args) => {
+      this.log('Status Alarm: ', alarm_state);
+	  this.triggerCapabilityListener('onoff', 'alarm_state')
+	};
+
+    let actionAB01ZE_alarm_state = new Homey.FlowCardAction('AB01ZE_alarm_state');
+    actionAB01ZE_alarm_state
+      .register()
+      .registerRunListener(AB01ZE_alarm_state_run_listener);
+	
+	
+	
+	// Cards that responde to the siren activating
     // Register Flow card trigger
     const SirenFlowTrigger = new Homey.FlowCardTriggerDevice('alarm_siren');
     SirenFlowTrigger.register();
@@ -53,18 +67,6 @@ class Siren_AB01Z extends ZwaveDevice {
         }
       });
     } else this.error('missing_alarm_siren_card_in_manifest');
-
-
-    //===== Sound Alarm
-    let AB01ZE_alarm_state_run_listener = async (args) => {
-      this.log('Status Alarm: ', args.alarm_state);
-
-    };
-    let actionAB01ZE_alarm_state = new Homey.FlowCardAction('AB01ZE_alarm_state');
-    actionAB01ZE_alarm_state
-      .register()
-      .registerRunListener(AB01ZE_alarm_state_run_listener);
-
 
     //===== CONTROL Siren Alarm/Doorbell mode
     let AB01ZE_alarm_mode_run_listener = async (args) => {
