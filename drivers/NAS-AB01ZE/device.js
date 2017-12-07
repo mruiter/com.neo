@@ -37,12 +37,18 @@ class Siren_AB01Z extends ZwaveDevice {
     });
 
 	//===== Create a Action card to activate or deactivated the siren
-    let AB01ZE_alarm_state_run_listener = async (args) => {
-      this.log('Status Alarm: ', args.alarm_state);
-	 	return this.triggerCapabilityListener('onoff', args.alarm_state)
-				.then(() => null)
-				.catch(err => new Error('failed_to_trigger_siren'));
-	};
+       let AB01ZE_alarm_state_run_listener = (args) => {
+            this.log('Status Alarm:', args.alarm_state);
+			if (args.alarm_state === 0) {
+            return this.triggerCapabilityListener('onoff', false)
+                .then(() => null)
+                .catch(err => new Error('failed_to_trigger_off'));
+			} else if (args.alarm_state === 1) {
+				return this.triggerCapabilityListener('onoff', true)
+                .catch(err => new Error('failed_to_trigger_on', err));
+			}
+        };
+
 
     let actionAB01ZE_alarm_state = new Homey.FlowCardAction('AB01ZE_alarm_state');
     actionAB01ZE_alarm_state
