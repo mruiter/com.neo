@@ -37,18 +37,28 @@ class Siren_AB01Z extends ZwaveDevice {
     });
 
 	//===== Create a Action card to activate or deactivated the siren
-       let AB01ZE_alarm_state_run_listener = (args) => {
-            this.log('Status Alarm:', args.alarm_state);
-			if (args.alarm_state === 0) {
-            return this.triggerCapabilityListener('onoff', false)
-                .then(() => null)
-                .catch(err => new Error('failed_to_trigger_off'));
-			} else if (args.alarm_state === 1) {
-				return this.triggerCapabilityListener('onoff', true)
-                .catch(err => new Error('failed_to_trigger_on', err));
-			}
-        };
+    //   let AB01ZE_alarm_state_run_listener = (args) => {
+    //        this.log('Status Alarm:', args.alarm_state);
+	//		if (args.alarm_state === 0) {
+    //        return this.triggerCapabilityListener('onoff', false)
+    //            .then(() => null)
+    //            .catch(err => new Error('failed_to_trigger_off'));
+	//		} else if (args.alarm_state === 1) {
+	//			return this.triggerCapabilityListener('onoff', true)
+    //            .catch(err => new Error('failed_to_trigger_on', err));
+	//		}
+    //    };
 
+	//===== CONTROL Binary Switch
+	// define FlowCardAction to set the Switch
+	let AB01ZE_alarm_state_run_listener = async(args) => {
+		this.log('FlowCardAction Set LED level for: ', args.alarm_state);
+		let result = await args.device.node.CommandClass.COMMAND_CLASS_SWITCH_BINARY.SWITCH_BINARY_SET({
+			'Switch Value': args.alarm_state
+			});
+		this.log("outcome: ", result)
+		if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
+	};
 
     let actionAB01ZE_alarm_state = new Homey.FlowCardAction('AB01ZE_alarm_state');
     actionAB01ZE_alarm_state

@@ -267,14 +267,14 @@
             "type": "dropdown",
             "values": [
               {
-                "id": false,
+                "id": "off/disable",
                 "label": {
                   "en": "Silence alarm",
                   "nl": "Alarm stil"
                 }
               },
               {
-                "id": true,
+                "id": "on/enable",
                 "label": {
                   "en": "Sound alarm",
                   "nl": "Alarm luiden"
