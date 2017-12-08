@@ -34,6 +34,12 @@ c. check if effective and retry to the desired value
      
 ## Change Log:     
     
+### v 2.0.2  
+**fixed:**   
+Fixed Siren Trigger card that did not fire correct    
+**update:**       
+Updated more device icons for better appstore experience    
+      
 ### v 2.0.1    
 **update:**   
 Added support for the KeyFob/ Emergency Remote Control   
