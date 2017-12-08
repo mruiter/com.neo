@@ -5,7 +5,7 @@
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.0.1",
+  "version": "2.0.2",
   "compatibility": ">=1.5.3",
   "description": {
     "en": "NEO Coolcam Z-Wave device support",
@@ -267,14 +267,14 @@
             "type": "dropdown",
             "values": [
               {
-                "id": "0",
+                "id": "off/disable",
                 "label": {
                   "en": "Silence alarm",
                   "nl": "Alarm stil"
                 }
               },
               {
-                "id": "1",
+                "id": "on/enable",
                 "label": {
                   "en": "Sound alarm",
                   "nl": "Alarm luiden"
