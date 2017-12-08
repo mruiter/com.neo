@@ -5,7 +5,7 @@
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.0.2",
+  "version": "2.0.3",
   "compatibility": ">=1.5.3",
   "description": {
     "en": "NEO Coolcam Z-Wave device support",
@@ -278,6 +278,96 @@
                 "label": {
                   "en": "Sound alarm",
                   "nl": "Alarm luiden"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AB01ZE_siren_volume",
+        "title": {
+          "en": "Set volume of siren",
+          "nl": "Zet het volume van de sirene"
+        },
+        "hint": {
+          "en": "Set volume of siren.",
+          "nl": "Zet het volume van de sirene."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
+          },
+          {
+            "name": "siren_volume",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Low",
+                  "nl": "Laag"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Midle",
+                  "nl": "Middelmatig"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "High (default)",
+                  "nl": "Hoog (standaard)"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AB01ZE_doorbell_volume",
+        "title": {
+          "en": "Set volume of the doorbell",
+          "nl": "Zet het volume van de deurbel"
+        },
+        "hint": {
+          "en": "Set volume of the doorbell.",
+          "nl": "Zet het volume van de deurbel."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
+          },
+          {
+            "name": "doorbell_volume",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Low",
+                  "nl": "Laag"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Midle",
+                  "nl": "Middelmatig"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "High (default)",
+                  "nl": "Hoog (standaard)"
                 }
               }
             ]

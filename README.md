@@ -34,11 +34,15 @@ c. check if effective and retry to the desired value
      
 ## Change Log:     
     
+### v 2.0.3 - Stable Release from beta SDKv2 versions      
+**update:**
+Added volume action cards for siren and doorbell mode NAS-AB01ZE    
+	
 ### v 2.0.2  
 **fixed:**   
 Fixed Siren Trigger card that did not fire correct    
 **update:**       
-Updated more device icons for better appstore experience    
+Updated more device icons for better experience    
       
 ### v 2.0.1    
 **update:**   
