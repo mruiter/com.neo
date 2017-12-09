@@ -1,5 +1,4 @@
-# SZ Neo Coolcam device support App for Homey @ Athom.com
-Makes Homey work with all Coolcam Neo Z-Wave products   
+# SZ Neo Coolcam Z-Wave device APP for Homey
    
 Donations will be used for charity. Every 25 euros collected will be send to a different charity organization every time. I make this app for fun and don’t tend to make profit for my own.
 If you like the work. Please think of the people who you could please a bit by donating.
