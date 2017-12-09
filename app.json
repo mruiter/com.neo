@@ -63,18 +63,6 @@
     "name": "Marco Ruiter",
     "email": "mruiter@tuxweb.nl"
   },
-  "contributors": {
-    "developers": [
-      {
-        "name": "Marco Ruiter",
-        "email": "mruiter@tuxweb.nl"
-      },
-      {
-        "name": "Ted Tolboom",
-        "email": "dTNL.Homey@gmail.com"
-      }
-    ]
-  },
   "contributing": {
     "donate": {
     "paypal": {
