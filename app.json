@@ -63,6 +63,14 @@
     "name": "Marco Ruiter",
     "email": "mruiter@tuxweb.nl"
   },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Marco Ruiter",
+        "email": "mruiter@tuxweb.nl"
+      }
+    ]
+  },
   "contributing": {
     "donate": {
     "paypal": {
