@@ -75,6 +75,14 @@
       }
     ]
   },
+  "contributing": {
+    "donate": {
+    "paypal": {
+    "username": "MarcoRuiter",
+    "currency": "EUR"
+     }
+   }
+  },
   "capabilities": {
     "alarm_siren": {
       "type": "boolean",

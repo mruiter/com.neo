@@ -1,5 +1,9 @@
 # SZ Neo Coolcam device support App for Homey @ Athom.com
-Makes Homey work with these great and cheap Chinese z-wave products
+Makes Homey work with all Coolcam Neo Z-Wave products   
+   
+Donations will be used for charity. Every 25 euros collected will be send to a different charity organization every time. I make this app for fun and don’t tend to make profit for my own.
+If you like the work. Please think of the people who you could please a bit by donating.
+Want the next donation to go to your favorite charity ? Don’t hesitate and tell me what it is.
    
 ## Supported devices with most common parameters:
 * NAS-PD01ZE, Motion Sensor  
@@ -12,7 +16,7 @@ Makes Homey work with these great and cheap Chinese z-wave products
 * NAS-RS01ZE, Remote Emergency Button   
 * NAS-DS01ZE, Door Sensor
 * NAS-WS01ZE, Flood Sensor
-  
+    
 ## Supported devices with some parameters:    
 None until Neo releases new products    
    
