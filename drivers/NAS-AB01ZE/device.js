@@ -62,7 +62,7 @@ class Siren_AB01Z extends ZwaveDevice {
 
       // Handle Emergency notification
       this.on('SirenTrigger', async () => {
-        this.log('SirenTrigger');
+        //this.log('SirenTrigger');
         try {
           await SirenFlowTrigger.trigger(this, {}, {});
         } catch (err) {
@@ -74,7 +74,7 @@ class Siren_AB01Z extends ZwaveDevice {
     // Cards that change device settings
     //===== CONTROL Siren Alarm/Doorbell mode
     let AB01ZE_alarm_mode_run_listener = async (args) => {
-      this.log('FlowCardAction Set Alarm Mode to: ', args.alarm_mode);
+      //this.log('FlowCardAction Set Alarm Mode to: ', args.alarm_mode);
       this.configurationSet({
         id: 'alarmordoorbell'
       }, args.alarm_mode);
@@ -86,7 +86,7 @@ class Siren_AB01Z extends ZwaveDevice {
 
     //===== CONTROL Siren Alarm Tune
     let AB01ZE_alarm_tune_run_listener = async (args) => {
-      this.log('FlowCardAction Set Alarm Tune to: ', args.alarm_tune);
+      //this.log('FlowCardAction Set Alarm Tune to: ', args.alarm_tune);
       this.configurationSet({
         id: 'alarmtune'
       }, args.alarm_tune);
@@ -98,7 +98,7 @@ class Siren_AB01Z extends ZwaveDevice {
 
     //===== CONTROL Siren Doorbell Tune
     let AB01ZE_doorbell_tune_run_listener = async (args) => {
-      this.log('FlowCardAction Set Doorbell Tune to: ', args.doorbell_tune);
+      //this.log('FlowCardAction Set Doorbell Tune to: ', args.doorbell_tune);
       this.configurationSet({
         id: 'doorbelltune'
       }, args.doorbell_tune);
@@ -110,7 +110,7 @@ class Siren_AB01Z extends ZwaveDevice {
 
     //===== CONTROL Siren Volume
     let AB01ZE_siren_volume_run_listener = async (args) => {
-      this.log('FlowCardAction Set Siren volume to: ', args.siren_volume);
+      //this.log('FlowCardAction Set Siren volume to: ', args.siren_volume);
       this.configurationSet({
         id: 'alarmvolume'
       }, args.siren_volume);
@@ -122,7 +122,7 @@ class Siren_AB01Z extends ZwaveDevice {
 
     //===== CONTROL Doorbell Volume
     let AB01ZE_doorbell_volume_run_listener = async (args) => {
-      this.log('FlowCardAction Set Doorbell volume to: ', args.doorbell_volume);
+      //this.log('FlowCardAction Set Doorbell volume to: ', args.doorbell_volume);
       this.configurationSet({
         id: 'doorbellvolume'
       }, args.doorbell_volume);
