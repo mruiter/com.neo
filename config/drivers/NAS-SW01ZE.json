@@ -7,7 +7,7 @@
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 3,
-    "productId": 4235,
+    "productId": [ 4235, 139 ],
     "learnmode": {
       "image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
       "instruction": {
