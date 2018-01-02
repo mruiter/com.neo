@@ -87,9 +87,11 @@
       "id": "enable_PIR_function",
       "zwave": {
         "index": 4,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "checkbox",
+	  "_size": 1,
       "label": {
         "en": "Motion detection function",
         "nl": "Bewegingsdetectie functie"
@@ -104,9 +106,11 @@
       "id": "motion_blink",
       "zwave": {
         "index": 10,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "checkbox",
+	  "_size": 1,
       "label": {
         "en": "Motion detection LED indication",
         "nl": "Bewegingsdetectie LED indicatie"
@@ -121,9 +125,11 @@
       "id": "motion_sensor_sensitivity",
       "zwave": {
         "index": 1,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "dropdown",
+	  "_size": 1,
       "label": {
         "en": "Motion detection sensitivity",
         "nl": "Bewegingsdetectie gevoeligheid"
@@ -141,7 +147,7 @@
           }
         },
         {
-          "id": "12",
+          "id": "16",
           "label": {
             "en": "Normal Sensitivity (default)",
             "nl": "Normale Gevoeligheid (standaard)"
@@ -167,9 +173,11 @@
       "id": "re-trigger_interval",
       "zwave": {
         "index": 6,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "number",
+	  "_size": 1,
       "attr": {
         "min": 0,
         "max": 8
@@ -188,9 +196,11 @@
       "id": "illumination_polling_interval",
       "zwave": {
         "index": 7,
-        "size": 2
+        "size": 2,
+		"signed": false
       },
       "type": "number",
+	  "_size": 2,
       "label": {
         "en": "Illumination reporting interval (s)",
         "nl": "Lichtsterkte rapportage interval (s)"
@@ -209,9 +219,11 @@
       "id": "illumination_report_threshold",
       "zwave": {
         "index": 9,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "number",
+	  "_size": 1,
       "label": {
         "en": "Illumination report threshold (lux)",
         "nl": "Lichtsterkte rapportage drempel (lux)"
@@ -230,7 +242,8 @@
       "id": "enable_illumination_trigger",
       "zwave": {
         "index": 8,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "checkbox",
       "label": {
@@ -247,9 +260,11 @@
       "id": "day_night_treshold",
       "zwave": {
         "index": 5,
-        "size": 2
+        "size": 2,
+		"signed": false
       },
       "type": "number",
+	  "_size": 2,
       "value": 100,
       "attr": {
         "min": 0,
@@ -268,9 +283,11 @@
       "id": "basic_set_level",
       "zwave": {
         "index": 3,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "number",
+	  "_size": 1,
       "attr": {
         "min": 0,
         "max": 255
@@ -289,9 +306,11 @@
       "id": "motion_off_delay",
       "zwave": {
         "index": 2,
-        "size": 2
+        "size": 2,
+		"signed": false
       },
       "type": "number",
+	  "_size": 2,
       "attr": {
         "min": 5,
         "max": 600

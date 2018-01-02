@@ -37,6 +37,12 @@ c. check if effective and retry to the desired value
      
 ## Change Log:     
     
+	
+### v 2.0.5    
+**fixed:**
+Fixed motion sensor sensitivity setting      
+Water Sensors not reporting in   
+
 ### v 2.0.4     
 **fixed:**
 Added fix from z-wave mesh driver that should fix some trouble with the dual switches and a specific firmware version       
