@@ -7,7 +7,7 @@ class WaterSensor_WS01 extends ZwaveDevice {
   async onMeshInit() {
     this.enableDebug();
     this.printNode();
-    this.registerCapability('alarm_water', 'NOTIFICATION'{
+    this.registerCapability('alarm_water', 'NOTIFICATION', {
       get: 'NOTIFICATION_GET',
       getOpts: {
         getOnOnline: true,
