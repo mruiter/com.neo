@@ -39,8 +39,7 @@ c. check if effective and retry to the desired value
     
 	
 ### v 2.0.5    
-**fixed:**
-Fixed motion sensor sensitivity setting      
+**fixed:**     
 Water Sensors not reporting in   
 
 ### v 2.0.4     
