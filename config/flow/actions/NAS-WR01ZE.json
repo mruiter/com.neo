@@ -1,6 +1,6 @@
 [
 {
-	"id": "WR01Z_reset_meter",
+	"id": "resetMeter",
 	"title": {
 		"en": "Reset meter values",
 		"nl": "Meter waarden opnieuw instellen"
@@ -18,4 +18,3 @@
 	]
 }
 ]
-
