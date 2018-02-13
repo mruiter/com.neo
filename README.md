@@ -37,6 +37,10 @@ c. check if effective and retry to the desired value
      
 ## Change Log:     
     	
+### v 2.0.6   
+**fixed:**     
+Meter Reset in driver on WR01Z Plugs after support dropped in the Z-Wave Mesh driver after issues     
+   
 ### v 2.0.5   
 **fixed:**     
 Water Sensor not reporting in on leakage  
