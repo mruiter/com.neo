@@ -36,7 +36,11 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
      
 ## Change Log:     
-    	
+   
+### v 2.0.7   
+**update:**     
+First reports came in of a real PIR v2 so its added with lightspeed        
+    
 ### v 2.0.6   
 **fixed:**     
 Meter Reset in driver on WR01Z Plugs after support dropped in the Z-Wave Mesh driver after issues     

@@ -5,7 +5,7 @@
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.0.6",
+  "version": "2.0.7",
   "compatibility": ">=1.5.3",
   "description": {
     "en": "NEO Coolcam Z-Wave device support",
@@ -1665,10 +1665,7 @@
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 3,
-        "productId": [
-          4227,
-          131
-        ],
+        "productId": 4237,
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
         "pid": 1920,
         "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
@@ -1737,6 +1734,7 @@
       "class": "sensor",
       "capabilities": [
         "alarm_motion",
+        "measure_temperature",
         "measure_luminance",
         "alarm_battery",
         "measure_battery"
