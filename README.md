@@ -37,6 +37,10 @@ c. check if effective and retry to the desired value
      
 ## Change Log:     
    
+### v 2.0.8   
+**update:**     
+Added the new forum and issue links for the new appstore layout 
+    
 ### v 2.0.7   
 **update:**     
 First reports came in of a real PIR v2 so its added with lightspeed        
