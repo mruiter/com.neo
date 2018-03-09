@@ -3,7 +3,7 @@
 const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
-class WallSwitchDual_SC01Z extends ZwaveDevice {
+class WallSwitchSingle_SC01Z extends ZwaveDevice {
   async onMeshInit() {
     //this.enableDebug();
     //this.printNode();
@@ -22,4 +22,4 @@ class WallSwitchDual_SC01Z extends ZwaveDevice {
       .registerRunListener(SC01ZE_LED_mode_run_listener);
   }
 }
-module.exports = WallSwitchDual_SC01Z;
+module.exports = WallSwitchSingle_SC01Z;

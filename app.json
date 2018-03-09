@@ -5,7 +5,7 @@
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.0.8",
+  "version": "2.0.9",
   "compatibility": ">=1.5.3",
   "description": {
     "en": "NEO Coolcam Z-Wave device support",
@@ -72,7 +72,7 @@
     ]
   },
   "bugs": {
-	"url": "https://github.com/mruiter/com.neo/issues"
+    "url": "https://github.com/mruiter/com.neo/issues"
   },
   "athomForumDiscussionId": 4346,
   "contributing": {
