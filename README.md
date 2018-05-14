@@ -6,15 +6,16 @@ Want the next donation to go to your favorite charity ? Don’t hesitate and tel
    
 ## Supported devices with most common parameters:
 * NAS-PD01ZE, Motion Sensor  
-* NAS-PD02ZE, Motion Sensor  
-* NAS-WR01ZE, Power Switching Plug
-* NAS-SC01ZE, Touch Wall Switch Single
-* NAS-SW01ZE, Touch Wall Switch Dual
-* NAS-AB01ZE, Siren / Doorbell speaker
+* NAS-PD02ZE, Motion Sensor V2 
+* NAS-WR01ZE, Power Switching Plug  
+* NAS-SC01ZE, Touch Wall Switch Single  
+* NAS-SW01ZE, Touch Wall Switch Dual  
+* NAS-AB01ZE, Siren / Doorbell speaker   
+* NAS-AB02ZE, Siren / Doorbell speaker V2   
 * NAS-RC01ZE, Remote KeyFob / Alarm Button   
 * NAS-RS01ZE, Remote Emergency Button   
-* NAS-DS01ZE, Door Sensor
-* NAS-WS01ZE, Flood Sensor
+* NAS-DS01ZE, Door Sensor   
+* NAS-WS01ZE, Flood Sensor   
     
 ## Supported devices with some parameters:    
 None until Neo releases new products    
@@ -36,6 +37,11 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
      
 ## Change Log:     
+   
+### v 2.0.10   
+**update:**     
+Small update for the PIRv2    
+Update to latest Mesh-Driver 
    
 ### v 2.0.9   
 **update:**     
