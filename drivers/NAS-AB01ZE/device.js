@@ -133,6 +133,5 @@ class Siren_AB01Z extends ZwaveDevice {
       .registerRunListener(AB01ZE_doorbell_volume_run_listener);
 
   }
-
 }
 module.exports = Siren_AB01Z;

@@ -85,8 +85,6 @@ class KeyFob_RC01Z extends ZwaveDevice {
       }
     });
 
-
-
   }
 }
 module.exports = KeyFob_RC01Z;

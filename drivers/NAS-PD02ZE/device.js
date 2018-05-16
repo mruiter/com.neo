@@ -17,6 +17,5 @@ class MultiSensor_PD02Z extends ZwaveDevice {
       }
     });
   }
-
 }
 module.exports = MultiSensor_PD02Z;

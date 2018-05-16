@@ -15,6 +15,5 @@ class WaterSensor_WS01 extends ZwaveDevice {
       }
     });
   }
-
 }
 module.exports = WaterSensor_WS01;
