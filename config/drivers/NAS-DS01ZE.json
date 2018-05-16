@@ -43,7 +43,8 @@
       "id": "off_delay",
       "zwave": {
         "index": 1,
-        "size": 2
+        "size": 2,
+		"signed": false
       },
       "type": "number",
       "attr": {
@@ -63,7 +64,8 @@
       "id": "basic_set_level",
       "zwave": {
         "index": 2,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "number",
       "attr": {

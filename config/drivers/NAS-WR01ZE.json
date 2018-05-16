@@ -134,7 +134,8 @@
       "id": "meter_report_interval",
       "zwave": {
         "index": 2,
-        "size": 2
+        "size": 2,
+		"signed": false
       },
       "type": "number",
       "attr": {
@@ -252,7 +253,8 @@
       "id": "time_switch_period",
       "zwave": {
         "index": 9,
-        "size": 2
+        "size": 2,
+		"signed": false
       },
       "type": "number",
       "attr": {

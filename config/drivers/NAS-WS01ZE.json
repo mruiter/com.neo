@@ -79,7 +79,8 @@
       "id": "alarm_duration_time",
       "zwave": {
         "index": 1,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "number",
       "attr": {
@@ -100,7 +101,8 @@
       "id": "alarm_interval",
       "zwave": {
         "index": 2,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "number",
       "attr": {
@@ -121,7 +123,8 @@
       "id": "first_alarm_ontime",
       "zwave": {
         "index": 3,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "number",
       "attr": {
@@ -142,7 +145,8 @@
       "id": "first_alarm_duration",
       "zwave": {
         "index": 4,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "number",
       "attr": {

@@ -46,15 +46,9 @@
     ]
   },
   "zwave": {
-    "manufacturerId": [
-      600
-    ],
-    "productTypeId": [
-      3
-    ],
-    "productId": [
-      4240
-    ],
+    "manufacturerId": 600,
+    "productTypeId": 3,
+    "productId": 4240,
     "wakeUpInterval": 0,
     "learnmode": {
       "image": "/drivers/NAS-RS01ZE/assets/learnmode.svg",
