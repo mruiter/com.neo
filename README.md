@@ -37,7 +37,12 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
      
 ## Change Log:     
-   
+  
+### v 2.0.11   
+**update:**     
+Added some device ID's from the PIR and Plug   
+Update to latest Mesh-Driver 
+  
 ### v 2.0.10   
 **update:**     
 Small update for the PIRv2    

@@ -5,8 +5,9 @@
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.0.10",
+  "version": "2.0.11",
   "compatibility": ">=1.5.3",
+  "brandColor": "#ff66cc",
   "description": {
     "en": "NEO Coolcam Z-Wave device support",
     "nl": "NEO Coolcam Z-Wave device support"
@@ -2423,6 +2424,7 @@
         "manufacturerId": 600,
         "productTypeId": 3,
         "productId": [
+          8327,
           4231,
           135
         ],

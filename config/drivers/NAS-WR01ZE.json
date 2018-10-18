@@ -7,7 +7,7 @@
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 3,
-    "productId": [4231, 135],
+    "productId": [8327, 4231, 135],
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
     "pid": 1783,
     "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055074",
