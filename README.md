@@ -40,8 +40,8 @@ c. check if effective and retry to the desired value
   
 ### v 2.0.11   
 **update:**     
-Added some device ID's from the PIR and Plug   
-Update to latest Mesh-Driver 
+Added some device ID's from the PIR, Siren and Plug   
+Update to latest Mesh-Driver   
   
 ### v 2.0.10   
 **update:**     
