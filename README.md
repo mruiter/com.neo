@@ -37,7 +37,10 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
      
 ## Change Log:  
-
+    
+### v 2.0.14      
+Switched back to the old mesh driver since the new one breaks reporting in the homey core     
+  
 ### v 2.0.13     
 **update:**     
 Fixed missing "signed": false in Doorbell/Siren
