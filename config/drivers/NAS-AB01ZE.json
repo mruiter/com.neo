@@ -125,7 +125,8 @@
       "id": "alarmsoundtime",
       "zwave": {
         "index": 2,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "dropdown",
       "label": {
@@ -217,7 +218,8 @@
       "id": "doorbellsoundtime",
       "zwave": {
         "index": 3,
-        "size": 1
+        "size": 1,
+		"signed": false
       },
       "type": "dropdown",
       "label": {

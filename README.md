@@ -36,7 +36,11 @@ a. Temporarely disable other Z-wave apps
 b. change the setting to another value with above steps   
 c. check if effective and retry to the desired value    
      
-## Change Log:     
+## Change Log:  
+
+### v 2.0.13     
+**update:**     
+Fixed missing "signed": false in Doorbell/Siren
   
 ### v 2.0.12     
 **update:**     

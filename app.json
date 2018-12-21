@@ -5,7 +5,7 @@
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.0.12",
+  "version": "2.0.13",
   "compatibility": ">=1.5.3",
   "brandColor": "#ff66cc",
   "description": {
@@ -850,7 +850,8 @@
           "id": "alarmsoundtime",
           "zwave": {
             "index": 2,
-            "size": 1
+            "size": 1,
+            "signed": false
           },
           "type": "dropdown",
           "label": {
@@ -944,7 +945,8 @@
           "id": "doorbellsoundtime",
           "zwave": {
             "index": 3,
-            "size": 1
+            "size": 1,
+            "signed": false
           },
           "type": "dropdown",
           "label": {
