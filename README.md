@@ -38,6 +38,9 @@ c. check if effective and retry to the desired value
      
 ## Change Log:  
     
+### v 2.0.16      
+Updated to latest mesh driver again after fixes being done by Athom 
+	
 ### v 2.0.15      
 Added new EU device ID's to the app for PowerPlug   
     
