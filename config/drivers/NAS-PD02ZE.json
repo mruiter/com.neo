@@ -171,6 +171,25 @@
       ]
     },
     {
+      "id": "motion_eventreport",
+      "zwave": {
+        "index": 11,
+        "size": 1,
+        "signed": false
+      },
+      "type": "checkbox",
+      "_size": 1,
+      "label": {
+        "en": "Motion detection event report",
+        "nl": "Bewegingsdetectie gebeurtenis rapportage"
+      },
+      "value": true,
+      "hint": {
+        "en": "Enabled: The motion detected event will be sent to controller/gateway only once until device report motion cleared event. Disabled: The motion detected event will be sent to controller/gateway when device detects motion event. (#11, default: enabled = checked)",
+        "nl": "Ingeschakeld: De bewegingsdetectie gebeurtenis wordt eenmalig gerapporteerd aan de controller/gateway. Disabled: de bewegingsdetectie wordt bij elke detectie gerapporteerd aan de controller/gateway. (#11, standaard: ingeschakeld = checked)"
+      }
+    },
+    {
       "id": "re-trigger_interval",
       "zwave": {
         "index": 6,

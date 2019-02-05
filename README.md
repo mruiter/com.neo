@@ -38,6 +38,9 @@ c. check if effective and retry to the desired value
      
 ## Change Log:  
     
+### v 2.0.18      
+Extra setting added to the v2 PIR "Motion detection event report"   
+	
 ### v 2.0.17      
 Again back to the old mesh driver. Now updates dont get pushed to Homey   
 	
