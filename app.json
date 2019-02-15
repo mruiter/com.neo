@@ -5,7 +5,7 @@
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.0.18",
+  "version": "2.0.19",
   "compatibility": ">=1.5.3",
   "brandColor": "#ff66cc",
   "description": {
@@ -1765,7 +1765,7 @@
         {
           "id": "motion_blink",
           "zwave": {
-            "index": 10,
+            "index": 11,
             "size": 1,
             "signed": false
           },
@@ -1833,7 +1833,7 @@
         {
           "id": "motion_eventreport",
           "zwave": {
-            "index": 11,
+            "index": 12,
             "size": 1,
             "signed": false
           },
@@ -2444,8 +2444,8 @@
         "productId": [
           8327,
           4231,
-          135,
-          4135
+          4135,
+          135
         ],
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
         "pid": 1783,

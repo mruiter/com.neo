@@ -38,6 +38,9 @@ c. check if effective and retry to the desired value
      
 ## Change Log:  
     
+### v 2.0.19      
+Update setting for PIRv2 detection led Enable/Disable      
+	
 ### v 2.0.18      
 Extra setting added to the v2 PIR "Motion detection event report"   
 	
