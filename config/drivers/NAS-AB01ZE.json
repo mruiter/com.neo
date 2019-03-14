@@ -511,7 +511,7 @@
       "hint": {
         "en": "You can choose on what setting the siren works (alarm or deurbell settings)",
         "nl": "Maak uw keuze op welk setting nivo de sirene werkt (alarm of deurbel settings",
-        "du": "Du kannst wählen, mit welcher Einstellung die Sirene funktioniert (Alarm- oder Türklingel-Einstellungen)."
+        "de": "Du kannst wählen, mit welcher Einstellung die Sirene funktioniert (Alarm- oder Türklingel-Einstellungen)."
       },
       "values": [{
           "id": "1",
