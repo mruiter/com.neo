@@ -3,7 +3,7 @@
   "name": {
     "en": "Flood Sensor",
     "nl": "Water Sensor",
-    "de": "Wasser Sensor",
+    "de": "Wasser Sensor"
   },
   "zwave": {
     "manufacturerId": 600,
@@ -166,7 +166,7 @@
       "label": {
         "en": "Alarm on time duration",
         "nl": "Alarm aan tijd duur",
-        "de": "Alarm Ein Dauer",
+        "de": "Alarm Ein Dauer"
       },
       "hint": {
         "en": "This parameter defines beep on duration in seconds after first beep on when water leakage is detected. (default: 5, range: 5 - 255)",
