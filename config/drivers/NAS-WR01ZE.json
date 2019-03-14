@@ -181,7 +181,7 @@
       "hint": {
         "en": "The amount of power consumed must change to be reported to the controller.\nParameter #6\nRange: 1 - 100\nDefault: 80",
         "nl": "De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller.\nParameter #6\nBereik: 1 - 100\nStandaard: 80",
-        "de": "Der aktuelle Stromverbrauch der sich ändern muss, damit er an den Controller gemeldet wird. \nParameter #6 \nBereich: 1 - 100 \nStandard: 80",
+        "de": "Der aktuelle Stromverbrauch der sich ändern muss, damit er an den Controller gemeldet wird. \nParameter #6 \nBereich: 1 - 100 \nStandard: 80"
       }
     },
     {
@@ -218,7 +218,7 @@
       "label": {
         "en": "Maximum over-load current (A)",
         "nl": "Maximale over-load stroom (A)",
-        "de": "Maximaler Überlaststrom (A)",
+        "de": "Maximaler Überlaststrom (A)"
       },
       "hint": {
         "en": "Defines the maximum current the plug can provide to the device connected to it. If the current consumed is greater than the value set, the plug will cut power.\nParameter #3\nRange: 1 - 16\nDefault: 13",
