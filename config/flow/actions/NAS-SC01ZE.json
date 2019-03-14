@@ -2,11 +2,13 @@
   "id": "SC01ZE_switch_LED",
   "title": {
     "en": "Set Touch Switch LED",
-    "nl": "Stel Touch Switch LED in"
+    "nl": "Stel Touch Switch LED in",
+    "de": "Touch-Steuerung LED einstellen"
   },
   "hint": {
     "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
-    "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld"
+    "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld",
+    "de": "Aktivieren oder Deaktivieren der Touch-Steuerung LED, die beim Einschalten aufleuchtet."
   },
   "args": [{
       "name": "device",
@@ -21,14 +23,16 @@
           "id": "0",
           "label": {
             "en": "LED disabled",
-            "nl": "LED uitgeschakeld"
+            "nl": "LED uitgeschakeld",
+            "de": "LED deaktivieren"
 			}
 		},
         {
           "id": "1",
           "label": {
             "en": "LED enabled",
-            "nl": "LED ingeschakeld"
+            "nl": "LED ingeschakeld",
+            "de": "LED aktivieren"
 			}
 		}
 		]
