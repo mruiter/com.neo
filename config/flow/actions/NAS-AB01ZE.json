@@ -141,7 +141,7 @@
     "title": {
       "en": "Set the device mode",
       "nl": "Stel de apparaat modus in",
-      "de": "Einstellen des Gerätemodus",
+      "de": "Einstellen des Gerätemodus"
     },
     "hint": {
       "en": "Set the device mode; alarm or doorbell mode",
