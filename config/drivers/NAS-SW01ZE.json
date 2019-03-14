@@ -12,7 +12,7 @@
       "image": "/drivers/NAS-SW01ZE/assets/learnmode.svg",
       "instruction": {
         "en": "Press the left button on your wallswitch three times quickly",
-        "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch"
+        "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch",
         "de": "Drücke den linken Knopf am Wandschalter dreimal schnell."																	 
       }
     },
@@ -39,7 +39,7 @@
         "name": {
           "en": "NEO Touch Right Switch",
           "nl": "NEO Touch Rechter Schakelaar",
-          "de": "NEO Touch Rechter Taster",
+          "de": "NEO Touch Rechter Taster"
         },
         "settings": []
       }
