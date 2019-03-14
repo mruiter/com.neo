@@ -8,7 +8,7 @@
   "hint": {
     "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
     "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld",
-    "de": "Aktivieren oder Deaktivieren der Touch-Steuerung LED, die beim Einschalten aufleuchtet."
+    "de": "Aktivieren oder deaktivieren der Touch-Steuerung LED, die beim Einschalten aufleuchtet."
   },
   "args": [{
       "name": "device",
