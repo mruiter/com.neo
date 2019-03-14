@@ -2,7 +2,8 @@
   "id": "NAS-AB01ZE",
   "name": {
     "en": "Siren/Doorbell",
-    "nl": "Sirene/Deurbel"
+    "nl": "Sirene/Deurbel",
+    "de": "Sirene/Türklingel"
   },
   "mobile": {
     "components": [{
@@ -49,14 +50,16 @@
       "image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
       "instruction": {
         "en": "Press the button on inside youre NEO Siren three times",
-        "nl": "Druk driemaal op de knop op in de NEO Sirene"
+        "nl": "Druk driemaal op de knop op in de NEO Sirene",
+        "de": "Drücke die Taste im Inneren deiner NEO Sirene dreimal."
       }
     },
     "unlearnmode": {
       "image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
       "instruction": {
         "en": "Press the button on inside youre NEO Siren three times",
-        "nl": "Druk driemaal op de knop op in de NEO Sirene"
+        "nl": "Druk driemaal op de knop op in de NEO Sirene",
+        "de": "Drücke die Taste im Inneren deiner NEO Sirene dreimal."
       }
     },
     "associationGroups": [
@@ -91,32 +94,37 @@
       "type": "dropdown",
       "label": {
         "en": "Alarm volume",
-        "nl": "Alarm volume"
+        "nl": "Alarm volume",
+        "de": "Alarm Lautstärke"
       },
       "value": "3",
       "hint": {
         "en": "Set the volume of the Alarm sound",
-        "nl": "Aanpassen volume van Alarm geluid"
+        "nl": "Aanpassen volume van Alarm geluid",
+        "de": "Einstellen der Lautstärke des Alarmtons"
       },
       "values": [{
           "id": "1",
           "label": {
             "en": "Low",
-            "nl": "Laag"
+            "nl": "Laag",
+            "de": "Niedrig"
           }
         },
         {
           "id": "2",
           "label": {
             "en": "Midle",
-            "nl": "Middelmatig"
+            "nl": "Middelmatig",
+            "de": "Mittel"
           }
         },
         {
           "id": "3",
           "label": {
             "en": "High (default)",
-            "nl": "Hoog (standaard)"
+            "nl": "Hoog (standaard)",
+            "de": "Hoch (Standard)"
           }
         }
       ]
@@ -131,46 +139,53 @@
       "type": "dropdown",
       "label": {
         "en": "Alarm duration time",
-        "nl": "Alarm duratie"
+        "nl": "Alarm duratie",
+        "de": "Alarmdauer"
       },
       "value": "2",
       "hint": {
         "en": "Set the duration of the time the siren will sound its alarm music",
-        "nl": "Pas de tijd aan dat de sirene zijn alarm geluid laat horen"
+        "nl": "Pas de tijd aan dat de sirene zijn alarm geluid laat horen",
+        "de": "Stellt die Zeitdauer ein, während der die Sirene Alarmton erklingt"
       },
       "values": [{
           "id": "0",
           "label": {
             "en": "Alarm sound off",
-            "nl": "Alarm geluid uit"
+            "nl": "Alarm geluid uit",
+            "de": "Alarmton aus"
           }
         },
         {
           "id": "1",
           "label": {
             "en": "30 seconds",
-            "nl": "30 seconden"
+            "nl": "30 seconden",
+            "de": "30 Sekunden"
           }
         },
         {
           "id": "2",
           "label": {
             "en": "1 minute (default)",
-            "nl": "1 minuut (standaard)"
+            "nl": "1 minuut (standaard)",
+            "de": "1 Minute (Standard)"
           }
         },
         {
           "id": "3",
           "label": {
             "en": "5 minutes",
-            "nl": "5 minuten"
+            "nl": "5 minuten",
+            "de": "5 Minuten"
           }
         },
         {
           "id": "255",
           "label": {
             "en": "Endless until battery drained or alarm switched off",
-            "nl": "Oneindig totdat de accu leeg is of alarm wordt uitgezet"
+            "nl": "Oneindig totdat de accu leeg is of alarm wordt uitgezet",
+            "de": "Endlos, bis die Batterie leer ist oder der Alarm ausgeschaltet wurde."
           }
         }
       ]
@@ -184,32 +199,37 @@
       "type": "dropdown",
       "label": {
         "en": "Doorbell volume",
-        "nl": "Deurbel volume"
+        "nl": "Deurbel volume",
+        "de": "Türklingel Lautstärke"
       },
       "value": "1",
       "hint": {
         "en": "Set the volume of the Doorbell sound",
-        "nl": "Aanpassen volume van deurbel geluid"
+        "nl": "Aanpassen volume van deurbel geluid",
+        "de": "Stellt die Lautstärke des Türklingeltons ein."
       },
       "values": [{
           "id": "1",
           "label": {
             "en": "Low (default)",
-            "nl": "Laag (standaard)"
+            "nl": "Laag (standaard)",
+            "de": "Niedrig (Standard)"
           }
         },
         {
           "id": "2",
           "label": {
             "en": "Midle",
-            "nl": "Middelmatig"
+            "nl": "Middelmatig",
+            "de": "Mittel"
           }
         },
         {
           "id": "3",
           "label": {
             "en": "High",
-            "nl": "Hoog"
+            "nl": "Hoog",
+            "de": "Hoch"
           }
         }
       ]
@@ -224,46 +244,53 @@
       "type": "dropdown",
       "label": {
         "en": "Doorbell duration time",
-        "nl": "Deurbel duratie"
+        "nl": "Deurbel duratie",
+        "de": "Türklingel Dauer"
       },
       "value": "1",
       "hint": {
         "en": "Set the duration of the time the doorbell will sound its music",
-        "nl": "Pas de tijd aan dat de deurbell zijn geluid laat horen"
+        "nl": "Pas de tijd aan dat de deurbell zijn geluid laat horen",
+        "de": "Stellt die Dauer ein, während Türklingel ihre Musik erklingen lässt."
       },
       "values": [{
           "id": "0",
           "label": {
             "en": "Doorbell sound off",
-            "nl": "Deurbel geluid uit"
+            "nl": "Deurbel geluid uit",
+            "de": "Türklingel aus"
           }
         },
         {
           "id": "1",
           "label": {
             "en": "30 seconds (default)",
-            "nl": "30 seconden (standaard)"
+            "nl": "30 seconden (standaard)",
+            "de": "30 Sekunden (Standard)"
           }
         },
         {
           "id": "2",
           "label": {
             "en": "1 minute",
-            "nl": "1 minuut"
+            "nl": "1 minuut",
+            "de": "1 Minute"
           }
         },
         {
           "id": "3",
           "label": {
             "en": "5 minutes",
-            "nl": "5 minuten"
+            "nl": "5 minuten",
+            "de": "5 Minuten"
           }
         },
         {
           "id": "255",
           "label": {
             "en": "Endless until battery drained or doorbell switched off",
-            "nl": "Oneindig totdat de accu leeg is of deurbell trigger wordt uitgezet"
+            "nl": "Oneindig totdat de accu leeg is of deurbell trigger wordt uitgezet",
+            "de": "Endlos, bis die Batterie leer ist oder die Türklingel ausgeschaltet wurde."
           }
         }
       ]
@@ -277,81 +304,93 @@
       "type": "dropdown",
       "label": {
         "en": "Alarm sound tune",
-        "nl": "Melodie/geluid alarm"
+        "nl": "Melodie/geluid alarm",
+        "de": "Alarm Melodie"
       },
       "value": "10",
       "hint": {
         "en": "Choose the tune of the alarm sound",
-        "nl": "Kies de melodie die gebruikt wordt bij alarm"
+        "nl": "Kies de melodie die gebruikt wordt bij alarm",
+        "de": "Wählt die Melodie des Alarmtons aus."
       },
       "values": [{
           "id": "1",
           "label": {
             "en": "Tune 1",
-            "nl": "Melodie 1"
+            "nl": "Melodie 1",
+            "de": "Melodie 1"
           }
         },
         {
           "id": "2",
           "label": {
             "en": "Tune 2",
-            "nl": "Melodie 2"
+            "nl": "Melodie 2",
+            "de": "Melodie 2"
           }
         },
         {
           "id": "3",
           "label": {
             "en": "Tune 3",
-            "nl": "Melodie 3"
+            "nl": "Melodie 3",
+            "de": "Melodie 3"
           }
         },
         {
           "id": "4",
           "label": {
             "en": "Tune 4",
-            "nl": "Melodie 4"
+            "nl": "Melodie 4",
+            "de": "Melodie 4"
           }
         },
         {
           "id": "5",
           "label": {
             "en": "Tune 5",
-            "nl": "Melodie 5"
+            "nl": "Melodie 5",
+            "de": "Melodie 5"
           }
         },
         {
           "id": "6",
           "label": {
             "en": "Tune 6",
-            "nl": "Melodie 6"
+            "nl": "Melodie 6",
+            "de": "Melodie 6"
           }
         },
         {
           "id": "7",
           "label": {
             "en": "Tune 7",
-            "nl": "Melodie 7"
+            "nl": "Melodie 7",
+            "de": "Melodie 7"
           }
         },
         {
           "id": "8",
           "label": {
             "en": "Tune 8",
-            "nl": "Melodie 8"
+            "nl": "Melodie 8",
+            "de": "Melodie 8"
           }
         },
         {
           "id": "9",
           "label": {
             "en": "Tune 9",
-            "nl": "Melodie 9"
+            "nl": "Melodie 9",
+            "de": "Melodie 9"
           }
         },
         {
           "id": "10",
           "label": {
             "en": "Tune 10 (default)",
-            "nl": "Melodie 10 (standaard)"
+            "nl": "Melodie 10 (standaard)",
+            "de": "Melodie 10 (Standard)"
           }
         }
       ]
@@ -365,81 +404,93 @@
       "type": "dropdown",
       "label": {
         "en": "Doorbell sound tune",
-        "nl": "Melodie/geluid deurbel"
+        "nl": "Melodie/geluid deurbel",
+        "de": "Türklingel Melodie"
       },
       "value": "9",
       "hint": {
         "en": "Choose the tune of the doorbell sound",
-        "nl": "Kies de melodie die gebruikt wordt als deurbel"
+        "nl": "Kies de melodie die gebruikt wordt als deurbel",
+        "de": "Wählt die Türklingel Meldie aus"
       },
       "values": [{
           "id": "1",
           "label": {
             "en": "Tune 1",
-            "nl": "Melodie 1"
+            "nl": "Melodie 1",
+            "de": "Melodie 1"
           }
         },
         {
           "id": "2",
           "label": {
             "en": "Tune 2",
-            "nl": "Melodie 2"
+            "nl": "Melodie 2",
+            "de": "Melodie 2"
           }
         },
         {
           "id": "3",
           "label": {
             "en": "Tune 3",
-            "nl": "Melodie 3"
+            "nl": "Melodie 3",
+            "de": "Melodie 3"
           }
         },
         {
           "id": "4",
           "label": {
             "en": "Tune 4",
-            "nl": "Melodie 4"
+            "nl": "Melodie 4",
+            "de": "Melodie 4"
           }
         },
         {
           "id": "5",
           "label": {
             "en": "Tune 5",
-            "nl": "Melodie 5"
+            "nl": "Melodie 5",
+            "de": "Melodie 5"
           }
         },
         {
           "id": "6",
           "label": {
             "en": "Tune 6",
-            "nl": "Melodie 6"
+            "nl": "Melodie 6",
+            "de": "Melodie 6"
           }
         },
         {
           "id": "7",
           "label": {
             "en": "Tune 7",
-            "nl": "Melodie 7"
+            "nl": "Melodie 7",
+            "de": "Melodie 7"
           }
         },
         {
           "id": "8",
           "label": {
             "en": "Tune 8",
-            "nl": "Melodie 8"
+            "nl": "Melodie 8",
+            "de": "Melodie 8"
           }
         },
         {
           "id": "9",
           "label": {
             "en": "Tune 9 (default)",
-            "nl": "Melodie 9 (standaard)"
+            "nl": "Melodie 9 (standaard)",
+            "de": "Melodie 9 (Standard)"
           }
         },
         {
           "id": "10",
           "label": {
             "en": "Tune 10",
-            "nl": "Melodie 10"
+            "nl": "Melodie 10",
+            "de": "Melodie 10"
           }
         }
       ]
@@ -453,25 +504,29 @@
       "type": "dropdown",
       "label": {
         "en": "Use as Siren or Doorbell",
-        "nl": "Gebruik als sirene of bel"
+        "nl": "Gebruik als sirene of bel",
+        "de": "Verwendung als Sirene oder Türklingel"
       },
       "value": "1",
       "hint": {
         "en": "You can choose on what setting the siren works (alarm or deurbell settings)",
-        "nl": "Maak uw keuze op welk setting nivo de sirene werkt (alarm of deurbel settings"
+        "nl": "Maak uw keuze op welk setting nivo de sirene werkt (alarm of deurbel settings",
+        "du": "Du kannst wählen, mit welcher Einstellung die Sirene funktioniert (Alarm- oder Türklingel-Einstellungen)."
       },
       "values": [{
           "id": "1",
           "label": {
             "en": "Alarm Siren/settings",
-            "nl": "Alarm Sirene/instellingen"
+            "nl": "Alarm Sirene/instellingen",
+            "de": "Alarmsirene/Einstellungen"
           }
         },
         {
           "id": "2",
           "label": {
             "en": "Doorbell Melody/settings",
-            "nl": "Deurbell melodie/instellingen"
+            "nl": "Deurbell melodie/instellingen",
+            "de": "Türklingel/Einstellungen""
           }
         }
       ]
@@ -485,12 +540,14 @@
       "type": "checkbox",
       "label": {
         "en": "Alarm led on/off",
-        "nl": "Alarm led aan/uit"
+        "nl": "Alarm led aan/uit",
+        "de": "Alarm LED Ein/Aus"
       },
       "value": true,
       "hint": {
         "en": "You can turn the alarm led siginaling on on/off",
-        "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden"
+        "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
+        "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED."
       }
     },
     {
@@ -502,12 +559,14 @@
       "type": "checkbox",
       "label": {
         "en": "Doorbell led on/off",
-        "nl": "Deurbel led aan/uit"
+        "nl": "Deurbel led aan/uit",
+        "de": "Türklingel LED Ein/Aus"
       },
       "value": false,
       "hint": {
         "en": "You can turn the alarm led siginaling on on/off",
-        "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden"
+        "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
+        "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED."
       }
     }
   ]
