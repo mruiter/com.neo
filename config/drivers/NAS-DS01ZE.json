@@ -15,14 +15,16 @@
       "image": "/drivers/NAS-DS01ZE/assets/learnmode.svg",
       "instruction": {
         "en": "Press the button inside your NEO Door Sensor three times",
-        "nl": "Druk driemaal op de knop in de Deur Sensor unit"
+        "nl": "Druk driemaal op de knop in de Deur Sensor unit",
+        "de": "Drücke die Taste in deinem NEO Türsensor dreimal."
       }
     },
     "unlearnmode": {
       "image": "/drivers/NAS-DS01ZE/assets/learnmode.svg",
       "instruction": {
         "en": "Press the button inside your NEO Door Sensor three times",
-        "nl": "Druk driemaal op de knop in de Deur Sensor unit"
+        "nl": "Druk driemaal op de knop in de Deur Sensor unit",
+        "de": "Drücke die Taste in deinem NEO Türsensor dreimal."
       }
     },
     "associationGroups": [
@@ -52,12 +54,14 @@
         "max": 65535
       },
       "label": {
-        "en": "Off Delay"
+        "en": "Off Delay",
+        "de": "Ausschaltverzögerung"
       },
       "value": 0,
       "hint": {
         "en": "Can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay",
-        "nl": "Kan gebruikt worden om de hoeveelheid vertraging aan te passen voordat het OFF commando verzonden. Deze parameter kan worden geconfigureerd met de waarde van 0 tot en met 65535, waarbij 0 betekent stuur onmiddellijk UIT commando en 65535 betekent 65.535 seconden vertraging"
+        "nl": "Kan gebruikt worden om de hoeveelheid vertraging aan te passen voordat het OFF commando verzonden. Deze parameter kan worden geconfigureerd met de waarde van 0 tot en met 65535, waarbij 0 betekent stuur onmiddellijk UIT commando en 65535 betekent 65.535 seconden vertraging",
+        "de": "Kann verwendet werden, um die Verzögerungszeit einzustellen, bevor der AUS-Befehl gesendet wird. Dieser Parameter kann mit dem Wert von 0 bis 65535 konfiguriert werden, wobei 0 bedeutet, dass der AUS-Befehl sofort gesendet wird und 65535 bedeutet, dass die Verzögerung 65535 Sekunden beträgt"
       }
     },
     {
@@ -78,7 +82,8 @@
       },
       "hint": {
         "en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
-        "nl": "0=UIT, Alarm annuleren of het uitschakelen van de sensor, 1-99 = Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)"
+        "nl": "0=UIT, Alarm annuleren of het uitschakelen van de sensor, 1-99 = Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
+        "de": "0=AUS, Alarm deaktivieren oder ein Gerät ausschalten, 1-99=Dim Level (Multilevel Switch Device), 255 = EIN (Binary Switch Device)"
       }
     }
   ]
