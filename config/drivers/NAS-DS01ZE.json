@@ -7,7 +7,7 @@
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 3,
-    "productId": [4226, 130],
+    "productId": [4226, 24706, 8333, 130],
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1782/Door-Window User Guide.doc",
     "pid": 1782,
     "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055076",
