@@ -1366,7 +1366,7 @@
         "productId": [
           4226,
           24706,
-          8333,
+          8322,
           130
         ],
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1782/Door-Window User Guide.doc",
@@ -1463,7 +1463,8 @@
           4227,
           24707,
           131,
-          8323
+          8323,
+          8333
         ],
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
         "pid": 1920,

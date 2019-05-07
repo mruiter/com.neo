@@ -39,7 +39,7 @@ c. check if effective and retry to the desired value
 ## Change Log:  
     
 ### v 2.0.21      
-Added support for Doorsensor RU and NZ region.   	
+Added support for Doorsensor RU and NZ region / Added support for PIRv1 RU region.   	
 	
 ### v 2.0.20      
 Added German Translation to the app. Minimum homey firmware 2.0.5 - Time for all to update and dump V1 series.	
