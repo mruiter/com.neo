@@ -1936,7 +1936,7 @@
         {
           "id": "motion_blink",
           "zwave": {
-            "index": 11,
+            "index": 10,
             "size": 1,
             "signed": false
           },
@@ -2012,7 +2012,7 @@
         {
           "id": "motion_eventreport",
           "zwave": {
-            "index": 12,
+            "index": 11,
             "size": 1,
             "signed": false
           },
