@@ -264,7 +264,7 @@
         "hint": {
           "en": "Change the alarm state; sound or silence the alarm",
           "nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm",
-          "de": "Ändern des Alarmstatus; Ein- oder ausschalten des Alarmtons."
+          "de": "Ändern des Alarmstatus; Ein- oder ausschalten des Alarms."
         },
         "args": [
           {
@@ -281,7 +281,7 @@
                 "label": {
                   "en": "Silence alarm",
                   "nl": "Alarm stil",
-                  "de": "Stiller Alarm"
+                  "de": "Alarm stummschalten"
                 }
               },
               {
@@ -289,7 +289,7 @@
                 "label": {
                   "en": "Sound alarm",
                   "nl": "Alarm luiden",
-                  "de": "Akustischer Alarm"
+                  "de": "Alarm auslösen"
                 }
               }
             ]
