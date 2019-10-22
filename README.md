@@ -44,7 +44,7 @@ c. check if effective and retry to the desired value
 ### v 2.1.0 - Initial Beta Release - Breaking Changes for Wall Switch !!         
 Added support Homey Energy.  
 Added first support base for Touch Wall Switch Triple    
-- Still needs user input - Please report your device, manufacturer and product id -     
+- Still needs user input, please report your device, manufacturer and product id       
 Renamed wall switch driver names to the changed Coolcam naming - Will need re-pair of the Touch Wall Switch Dual.  
 Driver split the Power Switching Plug V1 and V2 version - Will need re-pair of the Power Switching Plug V2.  
 Change: All devices are added unsecure to avoid the problems in the Homey z-wave core.   
