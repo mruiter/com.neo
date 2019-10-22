@@ -8,8 +8,10 @@ Want the next donation to go to your favorite charity ? Don’t hesitate and tel
 * NAS-PD01ZE, Motion Sensor  
 * NAS-PD02ZE, Motion Sensor V2 
 * NAS-WR01ZE, Power Switching Plug  
+* NAS-WR02ZE, Power Switching Plug V2  
 * NAS-SC01ZE, Touch Wall Switch Single  
-* NAS-SW01ZE, Touch Wall Switch Dual  
+* NAS-SC02ZE, Touch Wall Switch Dual  
+* NAS-SC03ZE, Touch Wall Switch Triple  
 * NAS-AB01ZE, Siren / Doorbell speaker   
 * NAS-AB02ZE, Siren / Doorbell speaker V2   
 * NAS-RC01ZE, Remote KeyFob / Alarm Button   
@@ -21,8 +23,9 @@ Want the next donation to go to your favorite charity ? Don’t hesitate and tel
 None until Neo releases new products    
    
 ## Supported Languages:
-* English
-* Dutch
+* English    
+* Dutch    
+* German   
    
 ## Support notes:
 Most reliable way to update battery powered devices   
@@ -37,12 +40,20 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
      
 ## Change Log:  
-    
+
+### v 2.1.0 - Initial Beta Release - Breaking Changes for Wall Switch !!         
+Added support Homey Energy.  
+Added first support base for Touch Wall Switch Triple - Still needs user input - Please report your device, manufacturer and product id.   
+Renamed wall switch driver names to the changed Coolcam naming - Will need re-pair of the Touch Wall Switch Dual.  
+Driver split the Power Switching Plug V1 and V2 version - Will need re-pair of the Power Switching Plug V2.  
+Change: All devices are added unsecure to avoid the problems in the Homey z-wave core.   
+         
 ### v 2.0.21      
 Added support for Doorsensor RU and NZ region / Added support for PIRv1 RU region.   	
 	
 ### v 2.0.20      
-Added German Translation to the app. Minimum homey firmware 2.0.5 - Time for all to update and dump V1 series.	
+Added German Translation to the app.    
+Minimum homey firmware 2.0.5 - Time for all to update and dump V1 series.	
 	
 ### v 2.0.19      
 Update setting for PIRv2 detection led Enable/Disable      

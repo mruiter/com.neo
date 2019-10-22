@@ -1,13 +1,13 @@
 {
   "id": "NAS-WR01ZE",
   "name": {
-    "en": "Power Wallplug",
-    "nl": "Spanning Muurplug"
+    "en": "Power Wallplug V1",
+    "nl": "Spanning Muurplug V1"
   },
   "zwave": {
     "manufacturerId": 600,
-    "productTypeId": [3, 512],
-    "productId": [8327, 4231, 4135, 135],
+    "productTypeId": [3],
+    "productId": [8327, 4231, 135],
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
     "pid": 1783,
     "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055074",
@@ -64,6 +64,7 @@
     ]
   },
   "class": "socket",
+  "includeSecure": false,
   "capabilities": [
     "onoff",
     "meter_power",

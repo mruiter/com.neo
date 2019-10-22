@@ -8,7 +8,7 @@
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 3,
-    "productId": [4229, 133],
+    "productId": [4229, 133, 8325],
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1788/Water Leakage Detector User Manual V2.doc",
     "pid": 1788,
     "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055075",
@@ -69,6 +69,10 @@
     ]
   },
   "class": "sensor",
+  "energy": {
+    "batteries": [ "CR14250" ] 
+  },
+  "includeSecure": false,
   "capabilities": [
     "alarm_water",
     "measure_battery",

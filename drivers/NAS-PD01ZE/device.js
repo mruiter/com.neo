@@ -7,14 +7,17 @@ class MultiSensor_PD01Z extends ZwaveDevice {
   async onMeshInit() {
     //this.enableDebug();
     //this.printNode();
-    this.registerCapability('alarm_motion', 'NOTIFICATION');
-    this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL');
-    this.registerCapability('alarm_battery', 'BATTERY');
-    this.registerCapability('measure_battery', 'BATTERY', {
-      getOpts: {
-        getOnOnline: true,
-      }
-    });
+    this.registerCapability('alarm_motion', 'NOTIFICATION', {
+			getOpts: {
+				getOnOnline: true,
+			},
+		});
+    this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL', {
+			getOpts: {
+				getOnOnline: true,
+			},
+		});
+    this.registerCapability('measure_battery', 'BATTERY');
   }
 }
 module.exports = MultiSensor_PD01Z;

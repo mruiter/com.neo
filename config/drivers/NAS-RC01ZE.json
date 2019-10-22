@@ -1,6 +1,5 @@
 {
   "id": "NAS-RC01ZE",
-  "class": "sensor",
   "name": {
     "en": "KeyFob",
     "nl": "KeyFob"
@@ -30,21 +29,21 @@
       {
         "id": "sensor",
         "capabilities": [
-          "alarm_emergency",
-          "alarm_battery"
+          "alarm_emergency"
         ],
         "options": {
           "icons": {
             "alarm_emergency": "/drivers/NAS-RC01ZE/assets/emergency.svg"
-          },
-          "alarm_battery": {
-            "noblink": false,
-            "invert": false
           }
         }
       }
     ]
   },
+  "class": "sensor",
+  "energy": {
+    "batteries": [ "CR3032" ] 
+  },
+  "includeSecure": false,
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 3,

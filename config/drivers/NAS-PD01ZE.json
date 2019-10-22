@@ -79,10 +79,13 @@
     }
   },
   "class": "sensor",
+  "energy": {
+    "batteries": [ "CR123A" ] 
+  },
+  "includeSecure": false,
   "capabilities": [
     "alarm_motion",
     "measure_luminance",
-    "alarm_battery",
     "measure_battery"
   ],
   "images": {

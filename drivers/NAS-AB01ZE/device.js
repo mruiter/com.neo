@@ -8,7 +8,6 @@ class Siren_AB01Z extends ZwaveDevice {
     //this.enableDebug();
     //this.printNode();
     this.registerCapability('onoff', 'SWITCH_BINARY');
-    this.registerCapability('alarm_battery', 'BATTERY');
     this.registerCapability('measure_battery', 'BATTERY', {
       getOpts: {
         getOnOnline: true,

@@ -1,6 +1,5 @@
 {
   "id": "NAS-RS01ZE",
-  "class": "sensor",
   "name": {
     "en": "SOS Button",
     "nl": "SOS Knop"
@@ -45,6 +44,11 @@
       }
     ]
   },
+  "class": "sensor",
+  "energy": {
+    "batteries": [ "CR3032" ] 
+  },
+  "includeSecure": false,
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 3,

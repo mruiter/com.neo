@@ -32,10 +32,13 @@
     ]
   },
   "class": "sensor",
+  "energy": {
+    "batteries": [ "CR2" ] 
+  },
+  "includeSecure": false,
   "capabilities": [
     "alarm_contact",
-    "measure_battery",
-    "alarm_battery"
+    "measure_battery"
   ],
   "images": {
     "large": "/drivers/NAS-DS01ZE/assets/images/large.jpg",

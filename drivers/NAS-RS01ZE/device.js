@@ -7,12 +7,7 @@ class KeyFob_RS01Z extends ZwaveDevice {
   async onMeshInit() {
     //this.enableDebug();
     //this.printNode();
-    this.registerCapability('alarm_battery', 'BATTERY');
-    this.registerCapability('measure_battery', 'BATTERY', {
-      getOpts: {
-        getOnOnline: true,
-      }
-    });
+    this.registerCapability('measure_battery', 'BATTERY');
 
     this.registerCapability('alarm_emergency', 'NOTIFICATION', {
       get: 'NOTIFICATION_GET',

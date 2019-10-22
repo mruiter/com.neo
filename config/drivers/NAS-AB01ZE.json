@@ -72,11 +72,14 @@
     }]
   },
   "class": "other",
+  "energy": {
+    "batteries": [ "CR123A", "CR123A" ] 
+  },
+  "includeSecure": false,
   "capabilities": [
     "onoff",
     "alarm_siren",
-    "measure_battery",
-    "alarm_battery"
+    "measure_battery"
   ],
   "capabilitiesOptions": {
 	"onoff" : { "greyout" : false } 
