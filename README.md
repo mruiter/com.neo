@@ -42,13 +42,11 @@ c. check if effective and retry to the desired value
 ## Change Log:  
 
 ### v 2.1.0 - Initial Beta Release - Breaking Changes for Wall Switch !!         
-Added support Homey Energy.  
-Driver split the Power Switching Plug V1 and V2 version - Will need re-pair of the Power Switching Plug V2.  
+Added support Homey Energy. 
+Added support for Touch Wall Switch Triple    
+Driver split the Power Switching Plug V1 and V2 version - Could need re-pair of the Power Switching Plug V2.  
 Renamed wall switch driver names to the changed Coolcam naming - Will need re-pair of the Touch Wall Switch Dual.  
-Change: All devices are added unsecure to avoid the problems in the Homey z-wave core.  
-Added first support base for Touch Wall Switch Triple    
-- Still needs user input, please report your device, manufacturer and product id       
- 
+Change: All battery powered devices are forced unsecure to avoid the problems in the Homey z-wave core.  
          
 ### v 2.0.21      
 Added support for Doorsensor RU and NZ region / Added support for PIRv1 RU region.   	
