@@ -6,8 +6,8 @@
   },
   "zwave": {
     "manufacturerId": 600,
-    "productTypeId": 3,
-    "productId": [ 5555 ],
+    "productTypeId": 512,
+    "productId": [ 4139 ],
     "learnmode": {
       "image": "/drivers/NAS-SC03ZE/assets/learnmode.svg",
       "instruction": {
