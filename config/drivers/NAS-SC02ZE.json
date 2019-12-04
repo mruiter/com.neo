@@ -8,6 +8,7 @@
     "manufacturerId": 600,
     "productTypeId": 3,
     "productId": [ 4235, 139 , 8331],
+	"includeSecure": false,
     "learnmode": {
       "image": "/drivers/NAS-SC02ZE/assets/learnmode.svg",
       "instruction": {
@@ -46,7 +47,6 @@
     }
   },
   "class": "socket",
-  "includeSecure": false,
   "capabilities": [
     "onoff"
   ],

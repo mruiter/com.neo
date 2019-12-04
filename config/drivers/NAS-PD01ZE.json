@@ -8,6 +8,7 @@
     "manufacturerId": 600,
     "productTypeId": 3,
     "productId": [4227, 24707, 131, 8323, 8333],
+	"includeSecure": false,
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
     "pid": 1920,
     "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
@@ -82,7 +83,6 @@
   "energy": {
     "batteries": [ "CR123A" ] 
   },
-  "includeSecure": false,
   "capabilities": [
     "alarm_motion",
     "measure_luminance",

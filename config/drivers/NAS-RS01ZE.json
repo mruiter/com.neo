@@ -48,11 +48,11 @@
   "energy": {
     "batteries": [ "CR3032" ] 
   },
-  "includeSecure": false,
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 3,
     "productId": [ 4240, 4239],
+	"includeSecure": false,
     "wakeUpInterval": 0,
     "learnmode": {
       "image": "/drivers/NAS-RS01ZE/assets/learnmode.svg",

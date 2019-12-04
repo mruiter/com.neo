@@ -5,7 +5,7 @@
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.1.0",
+  "version": "2.1.1",
   "compatibility": ">=3.0.0",
   "brandColor": "#ff66cc",
   "description": {
@@ -877,6 +877,7 @@
           136,
           24712
         ],
+        "includeSecure": false,
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2171/Siren User Manual Common V3_2.pdf",
         "pid": 2171,
         "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025443",
@@ -914,7 +915,6 @@
           "CR123A"
         ]
       },
-      "includeSecure": false,
       "capabilities": [
         "onoff",
         "alarm_siren",
@@ -1438,6 +1438,7 @@
           8322,
           130
         ],
+        "includeSecure": false,
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1782/Door-Window User Guide.doc",
         "pid": 1782,
         "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055076",
@@ -1467,7 +1468,6 @@
           "CR2"
         ]
       },
-      "includeSecure": false,
       "capabilities": [
         "alarm_contact",
         "measure_battery"
@@ -1540,6 +1540,7 @@
           8323,
           8333
         ],
+        "includeSecure": false,
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
         "pid": 1920,
         "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
@@ -1617,7 +1618,6 @@
           "CR123A"
         ]
       },
-      "includeSecure": false,
       "capabilities": [
         "alarm_motion",
         "measure_luminance",
@@ -1907,6 +1907,7 @@
         "manufacturerId": 600,
         "productTypeId": 3,
         "productId": 4237,
+        "includeSecure": false,
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
         "pid": 1920,
         "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
@@ -1984,7 +1985,6 @@
           "CR123A"
         ]
       },
-      "includeSecure": false,
       "capabilities": [
         "alarm_motion",
         "measure_temperature",
@@ -2334,11 +2334,11 @@
           "CR3032"
         ]
       },
-      "includeSecure": false,
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 3,
         "productId": 4234,
+        "includeSecure": false,
         "wakeUpInterval": 0,
         "learnmode": {
           "image": "/drivers/NAS-RC01ZE/assets/learnmode.svg",
@@ -2455,7 +2455,6 @@
           "CR3032"
         ]
       },
-      "includeSecure": false,
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 3,
@@ -2463,6 +2462,7 @@
           4240,
           4239
         ],
+        "includeSecure": false,
         "wakeUpInterval": 0,
         "learnmode": {
           "image": "/drivers/NAS-RS01ZE/assets/learnmode.svg",
@@ -2536,6 +2536,7 @@
         "manufacturerId": 600,
         "productTypeId": 3,
         "productId": 4236,
+        "includeSecure": false,
         "learnmode": {
           "image": "/drivers/NAS-SC01ZE/assets/learnmode.svg",
           "instruction": {
@@ -2559,7 +2560,6 @@
         ]
       },
       "class": "socket",
-      "includeSecure": false,
       "capabilities": [
         "onoff"
       ],
@@ -2641,6 +2641,7 @@
           139,
           8331
         ],
+        "includeSecure": false,
         "learnmode": {
           "image": "/drivers/NAS-SC02ZE/assets/learnmode.svg",
           "instruction": {
@@ -2679,7 +2680,6 @@
         }
       },
       "class": "socket",
-      "includeSecure": false,
       "capabilities": [
         "onoff"
       ],
@@ -2759,6 +2759,7 @@
         "productId": [
           4139
         ],
+        "includeSecure": false,
         "learnmode": {
           "image": "/drivers/NAS-SC03ZE/assets/learnmode.svg",
           "instruction": {
@@ -2810,7 +2811,6 @@
         }
       },
       "class": "socket",
-      "includeSecure": false,
       "capabilities": [
         "onoff"
       ],
@@ -2894,6 +2894,7 @@
           4231,
           135
         ],
+        "includeSecure": false,
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
         "pid": 1783,
         "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055074",
@@ -2951,7 +2952,6 @@
         ]
       },
       "class": "socket",
-      "includeSecure": false,
       "capabilities": [
         "onoff",
         "meter_power",
@@ -3198,6 +3198,7 @@
         "productId": [
           4135
         ],
+        "includeSecure": false,
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
         "pid": 1783,
         "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055074",
@@ -3255,7 +3256,6 @@
         ]
       },
       "class": "socket",
-      "includeSecure": false,
       "capabilities": [
         "onoff",
         "meter_power",
@@ -3502,6 +3502,7 @@
           133,
           8325
         ],
+        "includeSecure": false,
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1788/Water Leakage Detector User Manual V2.doc",
         "pid": 1788,
         "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055075",
@@ -3568,7 +3569,6 @@
           "CR14250"
         ]
       },
-      "includeSecure": false,
       "capabilities": [
         "alarm_water",
         "measure_battery",

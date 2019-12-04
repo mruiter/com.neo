@@ -40,7 +40,10 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
      
 ## Change Log:  
-
+     
+### v 2.1.1   
+Corrected "includeSecure": false placement. No secure adds until Athom fixes the S2 and delays on secure devices.     
+     
 ### v 2.1.0 - Initial Beta Release - Breaking Changes for Wall Switch !!         
 Added support Homey Energy. 
 Added support for Touch Wall Switch Triple    
