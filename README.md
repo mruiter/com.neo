@@ -42,7 +42,10 @@ c. check if effective and retry to the desired value
 ## Change Log:  
      
 ### v 2.1.1   
-Corrected "includeSecure": false placement. No secure adds until Athom fixes the S2 and delays on secure devices.     
+Corrected "includeSecure": false placement. No secure adds until Athom fixes the S2 and delays on secure devices.   
+Added test code for curtain controller.    
+Fixed some language errors.   
+Added some more device ID's that users reported.    
      
 ### v 2.1.0 - Initial Beta Release - Breaking Changes for Wall Switch !!         
 Added support Homey Energy. 

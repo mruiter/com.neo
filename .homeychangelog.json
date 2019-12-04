@@ -1,4 +1,6 @@
-{
+{	"2.1.1": {
+		"en": "• Added test code for curtain controller. • Fixed add_unsecure since athom its secure zwave is buggy. • Fixed some language errors. • Added some more device ID's that users reported."
+				},
 	"2.1.0": {
 		"en": "Initial Beta Release V2.1 series - Breaking Changes for Wall Switch !! • Added support Homey Energy. • Added support for Touch Wall Switch Triple. • Driver split the Power Switching Plug V1 and V2 version - Could need re-pair of the Power Switching Plug V2. • Renamed wall switch driver names to the changed Coolcam naming - Will need re-pair of the Touch Wall Switch Dual. • Change: All battery powered devices are forced unsecure to avoid the problems in the Homey z-wave core."
 				},
