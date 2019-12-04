@@ -8,7 +8,7 @@
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 3,
-    "productId": [4229, 133, 8325],
+    "productId": [4229, 133, 8325, 24709],
 	"includeSecure": false,
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1788/Water Leakage Detector User Manual V2.doc",
     "pid": 1788,
