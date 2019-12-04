@@ -1,18 +1,12 @@
 {
 	"2.1.0": {
-		"en": "Initial Beta Release - Breaking Changes for Wall Switch !!         
-				Added support Homey Energy. 
-				Added support for Touch Wall Switch Triple.    
-				Driver split the Power Switching Plug V1 and V2 version - Could need re-pair of the Power Switching Plug V2.  
-				Renamed wall switch driver names to the changed Coolcam naming - Will need re-pair of the Touch Wall Switch Dual.  
-				Change: All battery powered devices are forced unsecure to avoid the problems in the Homey z-wave core."
+		"en": "Initial Beta Release V2.1 series - Breaking Changes for Wall Switch !! • Added support Homey Energy. • Added support for Touch Wall Switch Triple. • Driver split the Power Switching Plug V1 and V2 version - Could need re-pair of the Power Switching Plug V2. • Renamed wall switch driver names to the changed Coolcam naming - Will need re-pair of the Touch Wall Switch Dual. • Change: All battery powered devices are forced unsecure to avoid the problems in the Homey z-wave core."
 				},
 	"2.0.21": {
 		"en": "Added support for Doorsensor RU and NZ region / Added support for PIRv1 RU region."
 				},
 	"2.0.20": {
-		"en": "Added German Translation to the app.    
-				Minimum homey firmware 2.0.5 - Time for all to update and dump V1 series."
+		"en": "Added German Translation to the app."
 				},
 	"2.0.19": {
 		"en": "Update setting for PIRv2 detection led Enable/Disable."
@@ -39,12 +33,10 @@
 		"en": "Added some device ID's from the PIR."
 				},
 	"2.0.11": {
-		"en": "Added some device ID's from the PIR, Siren and Plug.
-				Update to latest Mesh-Driver."
+		"en": "• Added some device ID's from the PIR, Siren and Plug. • Update to latest Mesh-Driver."
 				},
 	"2.0.10": {
-		"en": "Small update for the PIRv2 .
-				Update to latest Mesh-Driver."
+		"en": "• Small update for the PIRv2. • Update to latest Mesh-Driver."
 				},
 	"2.0.9": {
 		"en": "Small update for single wall switches."
@@ -59,8 +51,7 @@
 		"en": "Meter Reset in driver on WR01Z Plugs after support dropped in the Z-Wave Mesh driver after issues."
 				},
 	"2.0.5": {
-		"en": "Water Sensor not reporting in on leakage.
-				Motion Sensor sensitivity settings."
+		"en": "• Water Sensor not reporting in on leakage. • Motion Sensor sensitivity settings."
 				},
 	"2.0.4": {
 		"en": "Added fix from z-wave mesh driver that should fix some trouble with the dual switches and a specific firmware version."
@@ -69,20 +60,13 @@
 		"en": "Added volume action cards for siren and doorbell mode NAS-AB01ZE."
 				},
 	"2.0.2": {
-		"en": "Fixed Siren Trigger card that did not fire correct.
-				Updated more device icons for better experience."
+		"en": "• Fixed Siren Trigger card that did not fire correct. • Updated more device icons for better experience."
 				},
 	"2.0.1": { 
-		"en": "Added support for the KeyFob/ Emergency Remote Control.
-				Added support for the SOS Remote button.
-				Updated device icons for better appstore experience.
-				Updated some device svg icons for better experience on Homey."
+		"en": "• Added support for the KeyFob/ Emergency Remote Control. • Added support for the SOS Remote button. • Updated device icons for better appstore experience. • Updated some device svg icons for better experience on Homey."
 				},
 	"2.0.0": {
-		"en": "Moved App to zwave-mesh driver and SDKv2.
-				Added all other know country/regio id's known in de z-wave alliance database in the app.
-				Added support for the NAS-SC01ZE Touch Wall Switch Single.
-				Added empty driver for PD02 so it shows in appstore as device icon/tile."
+		"en": "• Moved App to zwave-mesh driver and SDKv2. • Added all other know country/regio id's known in de z-wave alliance database in the app. • Added support for the NAS-SC01ZE Touch Wall Switch Single. • Added empty driver for PD02 so it shows in appstore as device icon/tile."
 				}
 }
 				
