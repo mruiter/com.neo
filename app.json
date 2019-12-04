@@ -874,7 +874,8 @@
         "productTypeId": 3,
         "productId": [
           4232,
-          136
+          136,
+          24712
         ],
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2171/Siren User Manual Common V3_2.pdf",
         "pid": 2171,
@@ -3002,8 +3003,9 @@
           },
           "value": true,
           "hint": {
-            "en": "Aktiviert die Status led oben.\nParameter #5\nStandard: aktiviert = ausgewählt",
-            "nl": "Schakel de status indicatie led functie in (checked).\nParameter #5\nStandaard: ingeschakeld = checked"
+            "en": "Enable (checked) the status led on top.\nParameter #5\nDefault: enabled = checked",
+            "nl": "Schakel de status indicatie led functie in (checked).\nParameter #5\nStandaard: ingeschakeld = checked",
+            "de": "Aktiviert die Status led oben.\nParameter #5\nStandard: aktiviert = ausgewählt"
           }
         },
         {
@@ -3305,8 +3307,9 @@
           },
           "value": true,
           "hint": {
-            "en": "Aktiviert die Status led oben.\nParameter #5\nStandard: aktiviert = ausgewählt",
-            "nl": "Schakel de status indicatie led functie in (checked).\nParameter #5\nStandaard: ingeschakeld = checked"
+            "en": "Enable (checked) the status led on top.\nParameter #5\nDefault: enabled = checked",
+            "nl": "Schakel de status indicatie led functie in (checked).\nParameter #5\nStandaard: ingeschakeld = checked",
+            "de": "Aktiviert die Status led oben.\nParameter #5\nStandard: aktiviert = ausgewählt"
           }
         },
         {

@@ -116,7 +116,7 @@
       "hint": {
         "en": "Enable (checked) the status led on top.\nParameter #5\nDefault: enabled = checked",
         "nl": "Schakel de status indicatie led functie in (checked).\nParameter #5\nStandaard: ingeschakeld = checked",
-        "en": "Aktiviert die Status led oben.\nParameter #5\nStandard: aktiviert = ausgewählt"
+        "de": "Aktiviert die Status led oben.\nParameter #5\nStandard: aktiviert = ausgewählt"
       }
     },
     {

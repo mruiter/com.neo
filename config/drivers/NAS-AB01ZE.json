@@ -42,7 +42,7 @@
   "zwave": {
     "manufacturerId": [600, 543],
     "productTypeId": 3,
-    "productId": [4232, 136],
+    "productId": [4232, 136, 24712],
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2171/Siren User Manual Common V3_2.pdf",
     "pid": 2171,
     "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025443",
