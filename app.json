@@ -3536,9 +3536,9 @@
             "de": "Oberer Alarmstrom (A)"
           },
           "hint": {
-            "en": "Defines the current the plug is allowed to provide to the device connected to it. If the alarm current is exceeded, the plug will send an alarm notification to the controller and LED will turn RED. Value specified has to be less or equal to 'Maximum over-load current'. \nParameter #10\nRange: 1 - 12\nDefault: 12",
-            "nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het alarm stroom overschreden wordt, zal de power plug een alarm naar de controller versturen en de LED rood kleuren. De waarde moet kleiner of gelijk zijn aan 'Maximale over-load stroom'. \nParameter #10n\nBereik: 1 - 12\nStandaard: 12",
-            "de": "Definiert den Strom, den der Stecker für das angeschlossene Gerät liefern darf. Wenn der Alarmstrom überschritten wird, sendet der Stecker eine Alarmmeldung an den Controller und die LED leuchtet ROT. Der angegebene Wert muss kleiner oder gleich 'Maximaler Überlaststrom' sein. \nParameter #10\nBereich: 1 - 12\nStandard: 12"
+            "en": "Defines the current the plug is allowed to provide to the device connected to it. If the alarm current is exceeded, the plug will send an alarm notification to the controller and LED will turn YELLOW. Value specified has to be less or equal to 'Maximum over-load current'. \nParameter #10\nRange: 1 - 12\nDefault: 12",
+            "nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het alarm stroom overschreden wordt, zal de power plug een alarm naar de controller versturen en de LED GEEL kleuren. De waarde moet kleiner of gelijk zijn aan 'Maximale over-load stroom'. \nParameter #10n\nBereik: 1 - 12\nStandaard: 12",
+            "de": "Definiert den Strom, den der Stecker für das angeschlossene Gerät liefern darf. Wenn der Alarmstrom überschritten wird, sendet der Stecker eine Alarmmeldung an den Controller und die LED leuchtet GELB. Der angegebene Wert muss kleiner oder gleich 'Maximaler Überlaststrom' sein. \nParameter #10\nBereich: 1 - 12\nStandard: 12"
           }
         },
         {
