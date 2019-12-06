@@ -119,6 +119,25 @@
         "de": "Aktiviert die Status led oben.\nParameter #3\nStandard: aktiviert = ausgewählt"
       }
     },
+	{
+	"id": "physical_button_enabled",
+      "zwave": {
+        "index": 2,
+        "size": 1
+      },
+      "type": "checkbox",
+      "label": {
+        "en": "Enable/Disable button function",
+        "nl": "Aan/Uit schakelen van knop functionaliteit",
+        "de": "Schalten die Tastenfunktion ein / aus"
+      },
+      "value": true,
+      "hint": {
+        "en": "When enabled (default), the button on the wall plug can be used to switch the load on/off.",
+        "nl": "Indien ingeschakeld (standaard), kan de knop op de stekker worden gebruikt om aan / uit te schakelen.",
+        "de": "Wenn aktiviert (Standardeinstellung), kann die Taste am Stecker zum Ein- und Ausschalten verwendet werden."
+      }
+    },
     {
       "id": "meter_report",
       "zwave": {
@@ -147,7 +166,7 @@
       },
       "type": "number",
       "attr": {
-        "min": 60,
+        "min": 30,
         "max": 32767
       },
       "value": 300,
@@ -175,9 +194,9 @@
       },
       "value": 50,
       "label": {
-        "en": "Current change [x0.01A]",
-        "nl": "Wijziging van stroom [x0.01A]",
-        "de": "Stromverbrauch Änderung [x0.01A]"
+        "en": "Current change (x0.01A)",
+        "nl": "Wijziging van stroom (x0.01A)",
+        "de": "Stromverbrauch Änderung (x0.01A)"
       },
       "hint": {
         "en": "The amount of current consumed must change to be reported to the controller.\nParameter #6\nRange: 1 - 1600\nDefault: 50",
@@ -215,7 +234,7 @@
         "min": 1,
         "max": 16
       },
-      "value": 13,
+      "value": 16,
       "label": {
         "en": "Maximum over-load current (A)",
         "nl": "Maximale over-load stroom (A)",
@@ -236,9 +255,9 @@
       "type": "number",
       "attr": {
         "min": 1,
-        "max": 16
+        "max": 15
       },
-      "value": 12,
+      "value": 13,
       "label": {
         "en": "Upper alarm current (A)",
         "nl": "Bovenwaarde alarm stroom (A)",
@@ -266,7 +285,7 @@
       "hint": {
         "en": "Enable the time switch off function. When enabled (checked), the power plug, after being switched on, will switch off after the defined time in 'Switch off time period'. (#4, default: disabled = unchecked)",
         "nl": "Inschakelen van de tijd uitschakel functie. Wanneer ingeschakeld (checked) zal de power plug na ingeschakeld te zijn, automatisch uitschakelen na de in 'Uitschakel tijdsduur' gedefinieerde tijd. \nParameter: #4, standaard: uitgeschakeld = unchecked)",
-        "en": "Aktiviert die Zeitschaltfunktion. Wenn aktiviert (ausgewählt), schaltet sich der Netzstecker nach dem Einschalten nach der unter 'Ausschaltzeit' definierten Zeit aus. (#4, Standard: deaktiviert = nicht ausgewählt)"
+        "de": "Aktiviert die Zeitschaltfunktion. Wenn aktiviert (ausgewählt), schaltet sich der Netzstecker nach dem Einschalten nach der unter 'Ausschaltzeit' definierten Zeit aus. (#4, Standard: deaktiviert = nicht ausgewählt)"
       }
     },
     {
@@ -281,7 +300,7 @@
         "min": 1,
         "max": 32767
       },
-      "value": 150,
+      "value": 120,
       "label": {
         "en": "Switch off time period (min)",
         "nl": "Uitschakel tijdsduur (min)",
