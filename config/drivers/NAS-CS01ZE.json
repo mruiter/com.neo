@@ -31,7 +31,8 @@
   },
   "class": "windowcoverings",
   "capabilities": [
-    "dim"
+    "windowcoverings_set",
+	"onoff"
   ],
   "icon": "/drivers/NAS-CS01ZE/assets/icon.svg",
   "images": {

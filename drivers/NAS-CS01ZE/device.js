@@ -7,8 +7,8 @@ class CurtainController_CS01ZE extends ZwaveDevice {
   async onMeshInit() {
     this.enableDebug();
     this.printNode();
-	this.registerCapability('dim', 'SWITCH_MULTILEVEL');
-	this.registerCapability('windowcoverings_state', 'SWITCH_BINARY');
+	this.registerCapability('windowcoverings_set', 'SWITCH_MULTILEVEL');
+	this.registerCapability('onoff', 'SWITCH_BINARY');
 
   }
 }
