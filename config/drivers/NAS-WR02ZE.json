@@ -51,18 +51,7 @@
           "de": "Ermöglicht das Senden von Benachrichtigungen an assozierte Geräte in dieser Gruppe (Hinzufügen der Z-Wave-ID von Relaisgeräten)."
         }
       }
-    },
-    "defaultConfiguration": [{
-        "id": 2,
-        "size": 2,
-        "value": 300
-      },
-      {
-        "id": 6,
-        "size": 1,
-        "value": 80
-      }
-    ]
+    }
   },
   "class": "socket",
   "capabilities": [
