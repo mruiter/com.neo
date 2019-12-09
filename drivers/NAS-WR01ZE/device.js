@@ -5,8 +5,8 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class Wallplug_WR01Z extends ZwaveDevice {
   onMeshInit() {
-     this.enableDebug();
-     this.printNode();
+     //this.enableDebug();
+     //this.printNode();
 		this.registerCapability('onoff', 'SWITCH_BINARY');
 
 		this.registerCapability('measure_power', 'METER', {

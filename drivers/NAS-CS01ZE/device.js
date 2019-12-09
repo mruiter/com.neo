@@ -5,8 +5,8 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class CurtainController_CS01ZE extends ZwaveDevice {
   async onMeshInit() {
-    this.enableDebug();
-    this.printNode();
+    //this.enableDebug();
+    //this.printNode();
 	this.registerCapability('windowcoverings_set', 'SWITCH_MULTILEVEL');
 	this.registerCapability('onoff', 'SWITCH_BINARY');
 
