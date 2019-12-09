@@ -64,7 +64,8 @@
         "en": "Swap the motor rotation",
         "nl": "Verander de draairichting van de motor",
         "de": "Drehrichtung des Motors ändern"
-      }
+      },
+	  "value": false
     },
     {
       "id": "backlight_enable",
@@ -91,6 +92,20 @@
         "en": "Controller LED shows move state",
         "nl": "Controler LED laat keuze zien",
         "de": "Controller LED zeigt bewegung status"
+      },
+      "value": true
+    },
+	{
+      "id": "button_switch_function_disable",
+      "zwave": {
+        "index": 5,
+        "size": 1
+      },
+      "type": "checkbox",
+      "label": {
+        "en": "Disable Button Control(true is buttons do function ?)",
+        "nl": "Knopbediening uitschakelen(aan is knoppen werken ?)",
+        "de": "Knopfbedienung ausschalten"
       },
       "value": true
     }
