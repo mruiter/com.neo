@@ -41,6 +41,11 @@ class Wallplug_WR02Z extends ZwaveDevice {
                     report.Properties2['Scale bits 10'] === 0 &&
                     report.Properties1.hasOwnProperty('Scale bit 2') &&
                     report.Properties1['Scale bit 2'] === false) {
+                      // Correct negative values due to firmware bug
+                      if (report['Meter Value (Parsed)'] < 0) {
+                        report['Meter Value (Parsed)'] += 21474836.48;
+                        this.log('Corrected negative meter_power')
+                      }
                     return report['Meter Value (Parsed)'];
                 }
                 return null;
