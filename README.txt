@@ -1,7 +1,5 @@
 # SZ Neo Coolcam Z-Wave device APP for Homey
-   
-Adds NEO Coolcam Z-wave support 
-   
+       
 ## Supported devices with most common parameters:
 * NAS-PD01ZE, Motion Sensor  
 * NAS-PD02ZE, Motion Sensor V2 

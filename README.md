@@ -41,6 +41,10 @@ c. check if effective and retry to the desired value
      
 ## Change Log:  
      
+### v 2.1.2   
+  
+Fix for V2 plugs and negative value reported back - THX 2 nlrb            
+	 
 ### v 2.1.1   
 Corrected "includeSecure": false placement. No secure adds until Athom fixes the S2 and delays on secure devices.   
 Added test code for curtain controller.    
