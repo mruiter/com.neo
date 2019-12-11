@@ -12,6 +12,7 @@ Want the next donation to go to your favorite charity ? Don’t hesitate and tel
 * NAS-SC01ZE, Touch Wall Switch Single  
 * NAS-SC02ZE, Touch Wall Switch Dual  
 * NAS-SC03ZE, Touch Wall Switch Triple  
+* NAS-CS03ZE, Curtain Controller     
 * NAS-AB01ZE, Siren / Doorbell speaker   
 * NAS-AB02ZE, Siren / Doorbell speaker V2   
 * NAS-RC01ZE, Remote KeyFob / Alarm Button   
@@ -41,9 +42,13 @@ c. check if effective and retry to the desired value
      
 ## Change Log:  
      
-### v 2.1.2   
-  
-Fix for V2 plugs and negative value reported back - THX 2 nlrb            
+### v 2.1.3   
+Made report parsers for V1 plug independend from the homey-mesh-driver. 
+Finished (i hope so :) ) the code for the curtain contoller.   
+Setting changes for the Pir V1.   
+           
+### v 2.1.2    
+Fix for V2 plugs and negative value reported back - THX 2 nlrb.            
 	 
 ### v 2.1.1   
 Corrected "includeSecure": false placement. No secure adds until Athom fixes the S2 and delays on secure devices.   

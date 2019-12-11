@@ -5,7 +5,7 @@
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.1.2",
+  "version": "2.1.3",
   "compatibility": ">=3.0.0",
   "brandColor": "#ff66cc",
   "description": {
@@ -1456,6 +1456,13 @@
           1
         ]
       },
+      "defaultConfiguration": [
+        {
+          "id": 5,
+          "size": 1,
+          "value": 1
+        }
+      ],
       "class": "windowcoverings",
       "capabilities": [
         "windowcoverings_set",
@@ -1531,9 +1538,9 @@
           },
           "type": "checkbox",
           "label": {
-            "en": "Disable Button Control(true is buttons do function ?)",
-            "nl": "Knopbediening uitschakelen(aan is knoppen werken ?)",
-            "de": "Knopfbedienung ausschalten"
+            "en": "Enable Button Control",
+            "nl": "Knopbediening ingeschakeld)",
+            "de": "Aktivieren Tastensteuerung"
           },
           "value": true
         }
@@ -3039,6 +3046,11 @@
         },
         "defaultConfiguration": [
           {
+            "id": 1,
+            "size": 1,
+            "value": 1
+          },
+          {
             "id": 2,
             "size": 2,
             "value": 300
@@ -3046,7 +3058,7 @@
           {
             "id": 6,
             "size": 1,
-            "value": 80
+            "value": 20
           }
         ]
       },
@@ -3161,16 +3173,16 @@
             "min": 1,
             "max": 100
           },
-          "value": 80,
+          "value": 20,
           "label": {
             "en": "Power change [%]",
             "nl": "Wijziging van vermogen [%]",
             "de": "Stromverbrauch Änderung [%]"
           },
           "hint": {
-            "en": "The amount of power consumed must change to be reported to the controller.\nParameter #6\nRange: 1 - 100\nDefault: 80",
-            "nl": "De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller.\nParameter #6\nBereik: 1 - 100\nStandaard: 80",
-            "de": "Der aktuelle Stromverbrauch der sich ändern muss, damit er an den Controller gemeldet wird. \nParameter #6 \nBereich: 1 - 100 \nStandard: 80"
+            "en": "The amount of power consumed must change to be reported to the controller.\nParameter #6\nRange: 1 - 100\nDefault: 20",
+            "nl": "De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller.\nParameter #6\nBereik: 1 - 100\nStandaard: 20",
+            "de": "Der aktuelle Stromverbrauch der sich ändern muss, damit er an den Controller gemeldet wird. \nParameter #6 \nBereich: 1 - 100 \nStandard: 20"
           }
         },
         {

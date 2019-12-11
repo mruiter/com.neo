@@ -8,6 +8,7 @@
 * NAS-SC01ZE, Touch Wall Switch Single  
 * NAS-SC02ZE, Touch Wall Switch Dual  
 * NAS-SC03ZE, Touch Wall Switch Triple  
+* NAS-CS03ZE, Curtain Controller     
 * NAS-AB01ZE, Siren / Doorbell speaker   
 * NAS-AB02ZE, Siren / Doorbell speaker V2   
 * NAS-RC01ZE, Remote KeyFob / Alarm Button   
@@ -16,7 +17,7 @@
 * NAS-WS01ZE, Flood Sensor   
     
 ## Unsupported device:    
-Neo Coolcam Curtain Controller.         
+None until Neo releases new products              
    
 ## Supported Languages:
 * English    

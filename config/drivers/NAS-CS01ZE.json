@@ -29,6 +29,12 @@
     "defaultConfiguration": [],
     "associationGroups": [ 1 ]
   },
+  "defaultConfiguration": [{
+        "id": 5,
+        "size": 1,
+        "value": 1
+      }
+    ],
   "class": "windowcoverings",
   "capabilities": [
     "windowcoverings_set",
@@ -103,9 +109,9 @@
       },
       "type": "checkbox",
       "label": {
-        "en": "Disable Button Control(true is buttons do function ?)",
-        "nl": "Knopbediening uitschakelen(aan is knoppen werken ?)",
-        "de": "Knopfbedienung ausschalten"
+        "en": "Enable Button Control",
+        "nl": "Knopbediening ingeschakeld)",
+        "de": "Aktivieren Tastensteuerung"
       },
       "value": true
     }
