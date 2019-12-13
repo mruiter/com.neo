@@ -43,8 +43,8 @@ c. check if effective and retry to the desired value
 ## Change Log:  
      
 ### v 2.1.3   
-Made report parsers for V1 plug independend from the homey-mesh-driver. 
-Finished (i hope so :) ) the code for the curtain contoller.   
+Made report parsers for V1 plug independend from the homey-mesh-driver.    
+Finished ( i hope so :) ) the code for the curtain contoller.   
 Setting changes for the Pir V1.   
            
 ### v 2.1.2    

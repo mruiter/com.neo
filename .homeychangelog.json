@@ -1,5 +1,5 @@
 {	"2.1.3": {
-		"en": "• Made report parsers for V1 plug independend from the homey-mesh-driver. • Finished (i hope so :) ) the code for the curtain contoller. • Setting changes for the Pir V1."
+		"en": "• Made report parsers for V1 plug independend from the homey-mesh-driver. • Finished ( i hope so :) ) the code for the curtain contoller. • Setting changes for the Pir V1."
 				},
 	"2.1.2": {
 		"en": "• Fix for V2 plugs and negative value reported back - THX 2 nlrb."
