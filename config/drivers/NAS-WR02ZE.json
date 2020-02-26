@@ -6,7 +6,7 @@
   },
   "zwave": {
     "manufacturerId": 600,
-    "productTypeId": [3, 512],
+    "productTypeId": [3, 512, 768],
     "productId": [4135],
 	"includeSecure": false,
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
