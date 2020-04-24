@@ -91,7 +91,7 @@
       },
       "type": "number",
       "attr": {
-        "min": 1,
+        "min": 0,
         "max": 255
       },
       "value": 1,
