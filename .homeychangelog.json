@@ -1,3 +1,6 @@
+{	"2.1.5": {
+		"en": "• Added newly reported device ID for Motion Sensor V2. • Added MultiChannelAss for 3 way switch. • Added test base for new Doorsensor V2. • Updated MeshDriver."
+				},
 {	"2.1.4": {
 		"en": "• Added newly reported device ID for the WallPlug V2."
 				},

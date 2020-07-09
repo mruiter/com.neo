@@ -6,8 +6,8 @@
   },
   "zwave": {
     "manufacturerId": 600,
-    "productTypeId": 3,
-    "productId": 4237,
+    "productTypeId": [3, 512], 
+    "productId": [4237, 4145],
 	"includeSecure": false,
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
     "pid": 1920,

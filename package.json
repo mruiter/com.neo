@@ -1,6 +1,6 @@
 {
   "name": "com.neo",
-  "version": "2.0.0",
+  "version": "2.1.5",
   "description": "This app adds support for the Z-wave devices made by Coolcam NEO(http://www.szneo.com/).",
   "main": "app.js",
   "requires": true,
