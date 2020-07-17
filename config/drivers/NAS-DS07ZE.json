@@ -7,22 +7,22 @@
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 16,
-    "productId": 92,
+    "productId": 1794,
 	"includeSecure": false,
     "learnmode": {
       "image": "/drivers/NAS-DS07ZE/assets/learnmode.svg",
       "instruction": {
-        "en": "Press the button inside your NEO Door Sensor three times",
-        "nl": "Druk driemaal op de knop in de Deur Sensor unit",
-        "de": "Drücke die Taste in deinem NEO Türsensor dreimal."
+        "en": "Press the button inside your NEO Door Sensor and hold it for 5 seconds until you see a white light and let it go.",
+        "nl": "Druk op de pair knop en houdt deze 5 seconden vast totdat de led wit oplicht en laat deze dan los.",
+        "de": "Drücken Sie die Taste in Ihrem NEO-Türsensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los."
       }
     },
     "unlearnmode": {
       "image": "/drivers/NAS-DS07ZE/assets/learnmode.svg",
       "instruction": {
-        "en": "Press the button inside your NEO Door Sensor three times",
-        "nl": "Druk driemaal op de knop in de Deur Sensor unit",
-        "de": "Drücke die Taste in deinem NEO Türsensor dreimal."
+        "en": "Press the button inside your NEO Door Sensor and hold it for 5 seconds until you see a white light and let it go.",
+        "nl": "Druk op de pair knop en houdt deze 5 seconden vast totdat de led wit oplicht en laat deze dan los.",
+        "de": "Drücken Sie die Taste in Ihrem NEO-Türsensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los."
       }
     },
     "associationGroups": [
@@ -35,6 +35,7 @@
   },
   "capabilities": [
     "alarm_contact",
+	"alarm_tamper",
 	"measure_temperature",
 	"measure_humidity",
     "measure_battery"	

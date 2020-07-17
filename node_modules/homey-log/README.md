@@ -33,20 +33,20 @@ throw new Error("Whoops");
 
 ### Methods
 
-##### Log.init( String url );
+#### Log.init( String url );
 Set the URL manually, when not provided using your `env.json`. Not recommended due to security!
 
-##### Log.setTags( Object tags );
+#### Log.setTags( Object tags );
 Set a custom object of 'tags'. Tags that are already set are `appId`, `appVersion` and `homeyVersion`
 
-##### Log.setExtra( Object extra );
+#### Log.setExtra( Object extra );
 Set a custom object of 'extra' parameters
 
-##### Log.setUser( Object user );
+#### Log.setUser( Object user );
 Set a custom object of 'user' data - do not include sensitive data!
 
 #### Log.captureMessage( String message )
 Send a message to Sentry
 
-#### captureException( Error err )
+#### Log.captureException( Error err )
 Send an Error object to Sentry

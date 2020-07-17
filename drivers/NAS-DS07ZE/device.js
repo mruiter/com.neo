@@ -11,6 +11,11 @@ class DoorWindowSensor_DS07Z extends ZwaveDevice {
 				getOnOnline: true,
 			},
 		});
+	this.registerCapability('alarm_tamper', 'NOTIFICATION', {
+			getOpts: {
+				getOnOnline: true,
+			},
+		});
 	this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
 			getOpts: {
 				getOnOnline: true,

@@ -1,8 +1,9 @@
-SZ Neo Coolcam Z-Wave device APP for Homey
+Neo Coolcam Z-Wave device APP for Homey
        
 Supported devices with most common parameters:
 NAS-PD01ZE, Motion Sensor  
 NAS-PD02ZE, Motion Sensor V2 
+NAS-PD03ZE, Motion Sensor V3 
 NAS-WR01ZE, Power Switching Plug  
 NAS-WR02ZE, Power Switching Plug V2  
 NAS-SC01ZE, Touch Wall Switch Single  
@@ -14,8 +15,9 @@ NAS-AB02ZE, Siren / Doorbell speaker V2
 NAS-RC01ZE, Remote KeyFob / Alarm Button   
 NAS-RS01ZE, Remote Emergency Button   
 NAS-DS01ZE, Door Sensor  
-NAS-DS07ZE, Door Sensor V2 - Testing Fase     
+NAS-DS07ZE, Door Sensor V2    
 NAS-WS01ZE, Flood Sensor   
+NAS-RE01ZE, ZWave Repeater
     
    
 Supported Languages:

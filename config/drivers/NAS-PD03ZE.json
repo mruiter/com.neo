@@ -1,31 +1,31 @@
 {
-  "id": "NAS-PD02ZE",
+  "id": "NAS-PD03ZE",
   "name": {
-    "en": "PIR V2",
-    "nl": "PIR V2"
+    "en": "PIR V3",
+    "nl": "PIR V3"
   },
   "zwave": {
     "manufacturerId": 600,
-    "productTypeId": [3, 512], 
-    "productId": 4145,
+    "productTypeId": 3, 
+    "productId": 4237,
 	"includeSecure": false,
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
     "pid": 1920,
     "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
     "learnmode": {
-      "image": "/drivers/NAS-PD02ZE/assets/icon.svg",
+      "image": "/drivers/NAS-PD03ZE/assets/icon.svg",
       "instruction": {
-        "en": "Press the code button inside your NEO PIR three times",
-        "nl": "Druk driemaal op de code knop binnen in de NEO PIR",
-        "de": "Drücke die Code-Taste in deinem NEO PIR dreimal"													
+        "en": "Press the button inside your NEO Motion Sensor and hold it for 5 seconds until you see a white light and let it go.",
+        "nl": "Druk op de pair knop van uw NEO Motion Sensor en houdt deze 5 seconden vast totdat de led wit oplicht en laat deze dan los.",
+        "de": "Drücken Sie die Taste in Ihrem NEO Motion Sensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los."										
       }
     },
     "unlearnmode": {
-      "image": "/drivers/NAS-PD02ZE/assets/icon.svg",
+      "image": "/drivers/NAS-PD03ZE/assets/icon.svg",
       "instruction": {
-        "en": "Press the code button inside your NEO PIR three times",
-        "nl": "Druk driemaal op de code knop binnen in de NEO PIR",
-        "de": "Drücke die Code-Taste in deinem NEO PIR dreimal"														
+        "en": "Press the button inside your NEO Door Sensor and hold it for 5 seconds until you see a white light and let it go.",
+        "nl": "Druk op de pair knop en houdt deze 5 seconden vast totdat de led wit oplicht en laat deze dan los.",
+        "de": "Drücken Sie die Taste in Ihrem NEO-Türsensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los."											
       }
     },
     "defaultConfiguration": [
