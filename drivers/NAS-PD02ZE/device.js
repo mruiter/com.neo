@@ -5,9 +5,9 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class MultiSensor_PD02Z extends ZwaveDevice {
   async onMeshInit() {
-    this.enableDebug();
-    this.printNode();
-    this.registerCapability('alarm_motion', 'SENSOR_BINARY', {
+    //*this.enableDebug();
+    //*this.printNode();
+    this.registerCapability('alarm_motion', 'NOTIFICATION', {
 			getOpts: {
 				getOnOnline: true,
 			},

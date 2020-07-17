@@ -1,4 +1,7 @@
-{	"2.1.7": {
+{	"2.1.8": {
+		"en": "• Changed reports for Pir V2 since users reported no alarm notifications"
+				},
+	"2.1.7": {
 		"en": "• Split the new reported V2 Pir into new V3 to solve issues. • Added new Doorsensor V2 support. • Added new Z-Wave Repeater support. • Fixed Dual and Tripple switch associations."
 				},
 	"2.1.6": {
