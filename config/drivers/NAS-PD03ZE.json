@@ -45,7 +45,7 @@
         "value": 20
       },
       {
-        "id": 10,
+        "id": 11,
         "size": 1,
         "value": 0
       }
@@ -171,7 +171,7 @@
         "nl": "Bewegingsdetectie AAN tijd (s)",
         "de": "Bewegungsmelder EIN-Zeit (s)"
       },
-      "value": 60,
+      "value": 30,
       "hint": {
         "en": "Time duration that the associated device (group 2) stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (#2 default: 60 [s], range: 5 - 600 [s])",
         "nl": "Instelbare tijd dat het gekoppelde apparaat (groep 2) aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. \nParameter: 2 standaard: 60 [s], bereik: 5 - 600 [s])",
@@ -336,7 +336,7 @@
       "value": 100,
       "attr": {
         "min": 0,
-        "max": 255
+        "max": 100
       },
       "hint": {
         "en": "Sets how many lux needs to change before the value is being send to Homey. (#9 default: 20 [lux], range: 0 - 255 [lux])",

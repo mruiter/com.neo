@@ -4,7 +4,7 @@
     "en": "Z-Wave Repeater",
     "nl": "Z-Wave Repeater"
   },
-  "capabilities": [ ],
+  "capabilities": [ "measure_temperature", "measure_humidity" ],
   "images": {
     "large": "/drivers/NAS-RE01ZE/assets/images/large.jpg",
     "small": "/drivers/NAS-RE01ZE/assets/images/small.jpg"
