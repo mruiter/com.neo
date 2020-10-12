@@ -1,5 +1,6 @@
 'use strict';
 
+const Homey = require('homey');
 const {ZwaveDevice} = require('homey-zwavedriver');
 
 class Wallplug_WR01Z extends ZwaveDevice {
@@ -81,6 +82,7 @@ class Wallplug_WR01Z extends ZwaveDevice {
                 return null;
             }
         });
+		
 	// define FlowCardAction to reset meter_power
 		let WR01Z_reset_meter_run_listener = async(args) => {
 			let result = await args.device.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({})

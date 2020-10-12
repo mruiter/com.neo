@@ -1,5 +1,6 @@
 'use strict';
 
+const Homey = require('homey');
 const {ZwaveDevice} = require('homey-zwavedriver');
 
 class Wallplug_WR02Z extends ZwaveDevice {
