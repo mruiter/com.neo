@@ -1,0 +1,22 @@
+{
+  "name": "com.neo",
+  "version": "3.0.0",
+  "description": "This app adds support for the Z-wave devices made by Coolcam NEO(http://www.szneo.com/).",
+  "main": "app.js",
+  "devDependencies": {
+    "homey": "^2.8.0"
+  },
+  "dependencies": {
+    "homey-zwavedriver": "^1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mruiter/com.neo.git"
+  },
+  "author": "Marco Ruiter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mruiter/com.neo/issues"
+  },
+  "homepage": "https://forum.athom.com/discussion/1745/app-z-wave-neo-coolcam-z-wave-devices"
+}

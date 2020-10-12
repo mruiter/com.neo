@@ -1,0 +1,38 @@
+{
+  "id": "NAS-CS01ZE",
+  "name": {
+    "en": "Curtain controller",
+    "nl": "Scherm controller",
+	"de": "Vorhang controller"
+  },
+  "class": "windowcoverings",
+  "capabilities": [
+    "windowcoverings_set",
+	"onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.jpg",
+    "small": "{{driverAssetsPath}}/images/small.jpg"
+  },
+  "zwave": {
+    "manufacturerId": 600,
+    "productTypeId": 512,
+    "productId": 4140,
+	"includeSecure": false,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the middle button on youre controller three times quickly",
+        "nl": "Druk driemaal snel achter elkaar op de middelste knop van de controller",
+        "de": "Drücke den mittlere Knopf am controller dreimal schnell."
+      }
+    },
+	  "defaultConfiguration": [{
+        "id": 5,
+        "size": 1,
+        "value": 1
+      }
+    ],
+    "associationGroups": [ 1 ]
+  }
+}

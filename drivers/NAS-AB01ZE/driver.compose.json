@@ -1,0 +1,71 @@
+{
+  "id": "NAS-AB01ZE",
+  "name": {
+    "en": "Siren/Doorbell",
+    "nl": "Sirene/Deurbel",
+    "de": "Sirene/Türklingel"
+  },
+  "mobile": {
+    "components": [{
+        "id": "icon",
+        "capabilities": ["onoff"]
+      },
+      {
+        "id": "battery",
+        "capabilities": [ "measure_battery" ],
+        "options": {
+          "showTitle": true
+        }
+      },
+      {
+        "id": "toggle",
+        "capabilities": [
+          "onoff"
+        ],
+        "options": {
+          "showTitle": true
+        }
+      },
+      {
+        "id": "sensor",
+        "capabilities": ["alarm_siren", "alarm_battery"],
+        "options": {
+          "icons": {
+            "alarm_siren": "{{driverAssetsPath}}/alarm.svg"
+          }
+        }
+      }
+    ]
+  },
+  "class": "other",
+  "capabilities": [
+    "onoff",
+    "alarm_siren",
+    "measure_battery"
+  ],
+  "capabilitiesOptions": {
+	"onoff" : { "greyout" : false } 
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.jpg",
+    "small": "{{driverAssetsPath}}/images/small.jpg"
+  },
+  "energy": {
+    "batteries": [ "CR123A", "CR123A" ] 
+  },
+  "zwave": {
+    "manufacturerId": [600, 543],
+    "productTypeId": 3,
+    "productId": [4232, 136, 24712],
+	"includeSecure": false,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on inside youre NEO Siren three times",
+        "nl": "Druk driemaal op de knop op in de NEO Sirene",
+        "de": "Drücke die Taste im Inneren deiner NEO Sirene dreimal."
+      }
+    },
+    "associationGroups": [ 1 ]
+  }
+}

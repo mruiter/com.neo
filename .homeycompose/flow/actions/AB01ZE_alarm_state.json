@@ -1,0 +1,40 @@
+{
+  "id": "AB01ZE_alarm_state",
+  "title": {
+    "en": "Change the alarm state",
+    "nl": "Verander de alarm toestand",
+    "de": "Ändern des Alarmstatus"
+  },
+  "hint": {
+    "en": "Change the alarm state; sound or silence the alarm",
+    "nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm",
+    "de": "Ändern des Alarmstatus; Ein- oder ausschalten des Alarmtons."
+  },
+  "args": [{
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=NAS-AB01ZE"
+    },
+    {
+      "name": "alarm_state",
+      "type": "dropdown",
+      "values": [{
+          "id": "off/disable",
+          "label": {
+            "en": "Silence alarm",
+            "nl": "Alarm stil",
+            "de": "Stiller Alarm"
+          }
+        },
+        {
+          "id": "on/enable",
+          "label": {
+            "en": "Sound alarm",
+            "nl": "Alarm luiden",
+            "de": "Akustischer Alarm"
+          }
+        }
+      ]
+    }
+  ]
+}

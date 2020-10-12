@@ -1,0 +1,28 @@
+{
+  "type": "boolean",
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/alarm.svg",
+  "title": {
+    "en": "Siren",
+    "nl": "Sirene"
+  },
+  "units": {
+    "en": "Status",
+    "nl": "Status"
+  },
+  "desc": {
+    "en": "Alarm",
+    "nl": "Alarm"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "Siren On",
+    "nl": "Sirene Aan"
+  },
+  "insightsTitleFalse": {
+    "en": "Siren Off",
+    "nl": "Sirene Uit"
+  }
+}

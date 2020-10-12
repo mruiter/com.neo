@@ -1,0 +1,41 @@
+{
+  "id": "AB01ZE_alarm_mode",
+  "title": {
+    "en": "Set the device mode",
+    "nl": "Stel de apparaat modus in",
+    "de": "Einstellen des Gerätemodus"
+  },
+  "hint": {
+    "en": "Set the device mode; alarm or doorbell mode",
+    "nl": "Stel de apparaat modus in; alarm of deurbel",
+    "de": "Einstellen des Gerätemodus; Alarm- oder Türklingelmodus"
+  },
+
+  "args": [{
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=NAS-AB01ZE"
+    },
+    {
+      "name": "alarm_mode",
+      "type": "dropdown",
+      "values": [{
+          "id": "1",
+          "label": {
+            "en": "Alarm",
+            "nl": "Alarm",
+            "de": "Alarm"
+          }
+        },
+        {
+          "id": "2",
+          "label": {
+            "en": "Doorbel",
+            "nl": "Deurbel",
+            "de": "Türklingel"
+          }
+        }
+      ]
+    }
+  ]
+}
