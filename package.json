@@ -7,7 +7,8 @@
     "homey": "^2.8.0"
   },
   "dependencies": {
-    "homey-zwavedriver": "^1.0.3"
+    "homey-meshdriver": "^2.0.0",
+    "homey-zwavedriver": "^2.0.0"
   },
   "repository": {
     "type": "git",

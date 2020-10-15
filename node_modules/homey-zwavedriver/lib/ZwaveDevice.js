@@ -811,7 +811,8 @@ class ZwaveDevice extends Homey.Device {
   }
 
   /**
-   * Register a setting parser, which is called when a setting has changed.
+   * Register a setting parser, which is called when a setting has changed. This is only needed
+   * for Z-Wave settings, which directly map between a Homey setting and a Z-Wave parameter.
    * @param {string} settingId - The setting ID, as specified in `/app.json`
    * @param {Function} parserFn - The parser function, must return a Buffer, number or boolean
    * @param {number|boolean|string|object} parserFn.value - The setting value
