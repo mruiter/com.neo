@@ -1,14 +1,13 @@
 {
-  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.neo",
-  "version": "3.0.0",
-  "brandColor": "#ff66cc",
-  "sdk": 3,
-  "compatibility": ">=5.0.0",
+  "sdk": 2,
   "name": {
-    "en": "Neo Coolcam",
-    "nl": "Neo Coolcam"
+    "en": "NEO Coolcam",
+    "nl": "NEO Coolcam"
   },
+  "version": "2.1.8",
+  "compatibility": ">=3.0.0",
+  "brandColor": "#ff66cc",
   "description": {
     "en": "NEO Coolcam Z-Wave device support",
     "nl": "NEO Coolcam Z-Wave device ondersteuning",
@@ -58,7 +57,6 @@
     "lights",
     "security"
   ],
-  "permissions": [],
   "images": {
     "large": "/assets/images/large.jpg",
     "small": "/assets/images/small.jpg"
@@ -86,28 +84,42 @@
       }
     }
   },
+  "capabilities": {
+    "alarm_siren": {
+      "type": "boolean",
+      "title": {
+        "en": "Siren",
+        "nl": "Sirene"
+      },
+      "units": {
+        "en": "Status"
+      },
+      "desc": {
+        "en": "Alarm",
+        "nl": "Alarm"
+      },
+      "getable": true,
+      "setable": false
+    },
+    "alarm_emergency": {
+      "type": "boolean",
+      "title": {
+        "en": "Emergency",
+        "nl": "Noodgeval"
+      },
+      "units": {
+        "en": "Status"
+      },
+      "desc": {
+        "en": "Alarm",
+        "nl": "Alarm"
+      },
+      "getable": true,
+      "setable": false
+    }
+  },
   "flow": {
     "triggers": [
-      {
-        "id": "alarm_emergency",
-        "title": {
-          "en": "Emergency Alarm",
-          "nl": "SOS Alarm",
-          "de": "SOS Alarm"
-        },
-        "hint": {
-          "en": "This card will trigger when Emergency button is activated.",
-          "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop SOS wordt ingedrukt.",
-          "de": "Diese Karte wird ausgelöst, wenn der Notfalltaster gedrückt wird."
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=NAS-RS01ZE"
-          }
-        ]
-      },
       {
         "id": "alarm_siren",
         "title": {
@@ -199,51 +211,49 @@
             ]
           }
         ]
-      }
-    ],
-    "actions": [
+      },
       {
-        "id": "AB01ZE_alarm_mode",
+        "id": "alarm_emergency",
         "title": {
-          "en": "Set the device mode",
-          "nl": "Stel de apparaat modus in",
-          "de": "Einstellen des Gerätemodus"
+          "en": "Emergency Alarm",
+          "nl": "SOS Alarm",
+          "de": "SOS Alarm"
         },
         "hint": {
-          "en": "Set the device mode; alarm or doorbell mode",
-          "nl": "Stel de apparaat modus in; alarm of deurbel",
-          "de": "Einstellen des Gerätemodus; Alarm- oder Türklingelmodus"
+          "en": "This card will trigger when Emergency button is activated.",
+          "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop SOS wordt ingedrukt.",
+          "de": "Diese Karte wird ausgelöst, wenn der Notfalltaster gedrückt wird."
         },
         "args": [
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=NAS-AB01ZE"
-          },
-          {
-            "name": "alarm_mode",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Alarm",
-                  "nl": "Alarm",
-                  "de": "Alarm"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Doorbel",
-                  "nl": "Deurbel",
-                  "de": "Türklingel"
-                }
-              }
-            ]
+            "filter": "driver_id=NAS-RC01ZE"
           }
         ]
       },
+      {
+        "id": "alarm_emergency",
+        "title": {
+          "en": "Emergency Alarm",
+          "nl": "SOS Alarm",
+          "de": "SOS Alarm"
+        },
+        "hint": {
+          "en": "This card will trigger when Emergency button is activated.",
+          "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop SOS wordt ingedrukt.",
+          "de": "Diese Karte wird ausgelöst, wenn der Notfalltaster gedrückt wird."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-RS01ZE"
+          }
+        ]
+      }
+    ],
+    "actions": [
       {
         "id": "AB01ZE_alarm_state",
         "title": {
@@ -280,6 +290,148 @@
                   "en": "Sound alarm",
                   "nl": "Alarm luiden",
                   "de": "Akustischer Alarm"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AB01ZE_siren_volume",
+        "title": {
+          "en": "Set volume of siren",
+          "nl": "Zet het volume van de sirene",
+          "de": "Einstellen der Lautstärke der Sirene"
+        },
+        "hint": {
+          "en": "Set volume of siren.",
+          "nl": "Zet het volume van de sirene.",
+          "de": "Einstellen der Lautstärke der Sirene"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
+          },
+          {
+            "name": "siren_volume",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Low",
+                  "nl": "Laag",
+                  "de": "Niedrig"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Midle",
+                  "nl": "Middelmatig",
+                  "de": "Mittel"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "High (default)",
+                  "nl": "Hoog (standaard)",
+                  "de": "Hoch (Standard)"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AB01ZE_doorbell_volume",
+        "title": {
+          "en": "Set volume of the doorbell",
+          "nl": "Zet het volume van de deurbel",
+          "de": "Lautstärke der Türklingel einstellen."
+        },
+        "hint": {
+          "en": "Set volume of the doorbell.",
+          "nl": "Zet het volume van de deurbel.",
+          "de": "Lautstärke der Türklingel einstellen."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
+          },
+          {
+            "name": "doorbell_volume",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Low",
+                  "nl": "Laag",
+                  "de": "Niedrig"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Midle",
+                  "nl": "Middelmatig",
+                  "de": "Mittel"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "High (default)",
+                  "nl": "Hoog (standaard)",
+                  "de": "Hoch (Standard)"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AB01ZE_alarm_mode",
+        "title": {
+          "en": "Set the device mode",
+          "nl": "Stel de apparaat modus in",
+          "de": "Einstellen des Gerätemodus"
+        },
+        "hint": {
+          "en": "Set the device mode; alarm or doorbell mode",
+          "nl": "Stel de apparaat modus in; alarm of deurbel",
+          "de": "Einstellen des Gerätemodus; Alarm- oder Türklingelmodus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=NAS-AB01ZE"
+          },
+          {
+            "name": "alarm_mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Alarm",
+                  "nl": "Alarm",
+                  "de": "Alarm"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Doorbel",
+                  "nl": "Deurbel",
+                  "de": "Türklingel"
                 }
               }
             ]
@@ -499,106 +651,6 @@
         ]
       },
       {
-        "id": "AB01ZE_doorbell_volume",
-        "title": {
-          "en": "Set volume of the doorbell",
-          "nl": "Zet het volume van de deurbel",
-          "de": "Lautstärke der Türklingel einstellen."
-        },
-        "hint": {
-          "en": "Set volume of the doorbell.",
-          "nl": "Zet het volume van de deurbel.",
-          "de": "Lautstärke der Türklingel einstellen."
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=NAS-AB01ZE"
-          },
-          {
-            "name": "doorbell_volume",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Low",
-                  "nl": "Laag",
-                  "de": "Niedrig"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Midle",
-                  "nl": "Middelmatig",
-                  "de": "Mittel"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "High (default)",
-                  "nl": "Hoog (standaard)",
-                  "de": "Hoch (Standard)"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "AB01ZE_siren_volume",
-        "title": {
-          "en": "Set volume of siren",
-          "nl": "Zet het volume van de sirene",
-          "de": "Einstellen der Lautstärke der Sirene"
-        },
-        "hint": {
-          "en": "Set volume of siren.",
-          "nl": "Zet het volume van de sirene.",
-          "de": "Einstellen der Lautstärke der Sirene"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=NAS-AB01ZE"
-          },
-          {
-            "name": "siren_volume",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Low",
-                  "nl": "Laag",
-                  "de": "Niedrig"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Midle",
-                  "nl": "Middelmatig",
-                  "de": "Mittel"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "High (default)",
-                  "nl": "Hoog (standaard)",
-                  "de": "Hoch (Standard)"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
         "id": "SC01ZE_switch_LED",
         "title": {
           "en": "Set Touch Switch LED",
@@ -667,7 +719,7 @@
                 "label": {
                   "en": "LED disabled",
                   "nl": "LED uitgeschakeld",
-                  "de": "LED deaktivieren"
+                  "de": "LED aktivieren"
                 }
               },
               {
@@ -675,7 +727,7 @@
                 "label": {
                   "en": "LED enabled",
                   "nl": "LED ingeschakeld",
-                  "de": "LED aktivieren"
+                  "de": "LED deaktivieren"
                 }
               }
             ]
@@ -709,7 +761,7 @@
                 "label": {
                   "en": "LED disabled",
                   "nl": "LED uitgeschakeld",
-                  "de": "LED deaktivieren"
+                  "de": "LED aktivieren"
                 }
               },
               {
@@ -717,7 +769,7 @@
                 "label": {
                   "en": "LED enabled",
                   "nl": "LED ingeschakeld",
-                  "de": "LED aktivieren"
+                  "de": "LED deaktivieren"
                 }
               }
             ]
@@ -814,7 +866,55 @@
           }
         ]
       },
+      "zwave": {
+        "manufacturerId": [
+          600,
+          543
+        ],
+        "productTypeId": 3,
+        "productId": [
+          4232,
+          136,
+          24712
+        ],
+        "includeSecure": false,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2171/Siren User Manual Common V3_2.pdf",
+        "pid": 2171,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17025443",
+        "learnmode": {
+          "image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on inside youre NEO Siren three times",
+            "nl": "Druk driemaal op de knop op in de NEO Sirene",
+            "de": "Drücke die Taste im Inneren deiner NEO Sirene dreimal."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on inside youre NEO Siren three times",
+            "nl": "Druk driemaal op de knop op in de NEO Sirene",
+            "de": "Drücke die Taste im Inneren deiner NEO Sirene dreimal."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 8,
+            "size": 1,
+            "value": 0
+          }
+        ]
+      },
       "class": "other",
+      "energy": {
+        "batteries": [
+          "CR123A",
+          "CR123A"
+        ]
+      },
       "capabilities": [
         "onoff",
         "alarm_siren",
@@ -828,36 +928,6 @@
       "images": {
         "large": "/drivers/NAS-AB01ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-AB01ZE/assets/images/small.jpg"
-      },
-      "energy": {
-        "batteries": [
-          "CR123A",
-          "CR123A"
-        ]
-      },
-      "zwave": {
-        "manufacturerId": [
-          600,
-          543
-        ],
-        "productTypeId": 3,
-        "productId": [
-          4232,
-          136,
-          24712
-        ],
-        "includeSecure": false,
-        "learnmode": {
-          "image": "/drivers/NAS-AB01ZE/assets/learnmode.svg",
-          "instruction": {
-            "en": "Press the button on inside youre NEO Siren three times",
-            "nl": "Druk driemaal op de knop op in de NEO Sirene",
-            "de": "Drücke die Taste im Inneren deiner NEO Sirene dreimal."
-          }
-        },
-        "associationGroups": [
-          1
-        ]
       },
       "settings": [
         {
@@ -1360,15 +1430,6 @@
         "nl": "Scherm controller",
         "de": "Vorhang controller"
       },
-      "class": "windowcoverings",
-      "capabilities": [
-        "windowcoverings_set",
-        "onoff"
-      ],
-      "images": {
-        "large": "/drivers/NAS-CS01ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-CS01ZE/assets/images/small.jpg"
-      },
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 512,
@@ -1382,16 +1443,35 @@
             "de": "Drücke den mittlere Knopf am controller dreimal schnell."
           }
         },
-        "defaultConfiguration": [
-          {
-            "id": 5,
-            "size": 1,
-            "value": 1
+        "unlearnmode": {
+          "image": "/drivers/NAS-CS01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the middle button on youre controller three times quickly",
+            "nl": "Druk driemaal snel achter elkaar op de middelste knop van de controller",
+            "de": "Drücke den mittlere Knopf am controller dreimal schnell."
           }
-        ],
+        },
+        "defaultConfiguration": [],
         "associationGroups": [
           1
         ]
+      },
+      "defaultConfiguration": [
+        {
+          "id": 5,
+          "size": 1,
+          "value": 1
+        }
+      ],
+      "class": "windowcoverings",
+      "capabilities": [
+        "windowcoverings_set",
+        "onoff"
+      ],
+      "icon": "/drivers/NAS-CS01ZE/assets/icon.svg",
+      "images": {
+        "large": "/drivers/NAS-CS01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-CS01ZE/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -1472,20 +1552,6 @@
         "en": "Door Sensor",
         "nl": "Deur Sensor"
       },
-      "class": "sensor",
-      "capabilities": [
-        "alarm_contact",
-        "measure_battery"
-      ],
-      "images": {
-        "large": "/drivers/NAS-DS01ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-DS01ZE/assets/images/small.jpg"
-      },
-      "energy": {
-        "batteries": [
-          "CR2"
-        ]
-      },
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 3,
@@ -1496,7 +1562,18 @@
           130
         ],
         "includeSecure": false,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1782/Door-Window User Guide.doc",
+        "pid": 1782,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055076",
         "learnmode": {
+          "image": "/drivers/NAS-DS01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button inside your NEO Door Sensor three times",
+            "nl": "Druk driemaal op de knop in de Deur Sensor unit",
+            "de": "Drücke die Taste in deinem NEO Türsensor dreimal."
+          }
+        },
+        "unlearnmode": {
           "image": "/drivers/NAS-DS01ZE/assets/learnmode.svg",
           "instruction": {
             "en": "Press the button inside your NEO Door Sensor three times",
@@ -1506,37 +1583,21 @@
         },
         "associationGroups": [
           1
-        ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Lifeline service that assigned to Sensor (Motion detector) status – Open/Close. It enables the sensor to send reports and readings to Z‐Wave Controller whenever the sensor is triggered. (Homey ID by default). It is not recommended to change this group.",
-              "nl": "Lifeline service toegekend aan de Sensor (Bewegingsdetectie) status - Open/Dicht. Via deze groep kan de sensor bewegingsdetectie / lichtsterkte / batterijniveau rapporteren naar de Z-wave Controller wanneer de sensor geactiveerd is. (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen.",
-              "de": "Lifeline Service, der dem Sensor (Bewegungsmelder) zugeordnet ist - Open/Close. Es ermöglicht dem Sensor, Berichte und Messwerte an den Z-Wave-Controller zu senden, wenn der Sensor ausgelöst wird. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern."
-            }
-          },
-          "2": {
-            "hint": {
-              "en": "Allows for control commands to associated devices such as relay module, lighting, etc. This association group is configured through the 'Illumination switch ON function' parameters. (add Z-wave ID of relay devices).",
-              "nl": "Verstuurd controle commando naar gekoppelde apparaten zoals schakelaar, verlichting, etc. Deze group wordt geconfigureerd door de 'Lichtsterkte inschakel functie' parameters. (voeg het Z-wave ID van het te koppelen apparaat toe).",
-              "de": "Ermöglicht Steuerbefehle für assoziierte Geräte wie Relaismodul, Beleuchtung usw. Diese Assoziationsgruppe wird über die Parameter 'Helligkeit Einschalt Funktion' konfiguriert. (Z-Wave-ID von Relaisgeräten hinzufügen)."
-            }
-          },
-          "3": {
-            "hint": {
-              "en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-              "de": "Ermöglicht das Senden von Benachrichtigungen an assozierten Geräte in dieser Gruppe (Z-Wave-ID der Relaisgeräte hinzufügen)."
-            }
-          },
-          "4": {
-            "hint": {
-              "en": "allows for Send Sensor Binary Report (motion detection) to associated devices in this group (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van Send Sensor Binary Report (bewegingsdetectie) naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-              "de": "Ermöglicht das Senden der Sensor-Binärdaten (Bewegungserkennung) an assozierten Geräte in dieser Gruppe (Z-Wave-ID der Relaisgeräte hinzufügen)."
-            }
-          }
-        }
+        ]
+      },
+      "class": "sensor",
+      "energy": {
+        "batteries": [
+          "CR2"
+        ]
+      },
+      "capabilities": [
+        "alarm_contact",
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/NAS-DS01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-DS01ZE/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -1592,7 +1653,37 @@
         "en": "Door Sensor V2",
         "nl": "Deur Sensor V2"
       },
+      "zwave": {
+        "manufacturerId": 600,
+        "productTypeId": 16,
+        "productId": 1794,
+        "includeSecure": false,
+        "learnmode": {
+          "image": "/drivers/NAS-DS07ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button inside your NEO Door Sensor and hold it for 5 seconds until you see a white light and let it go.",
+            "nl": "Druk op de pair knop en houdt deze 5 seconden vast totdat de led wit oplicht en laat deze dan los.",
+            "de": "Drücken Sie die Taste in Ihrem NEO-Türsensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-DS07ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button inside your NEO Door Sensor and hold it for 5 seconds until you see a white light and let it go.",
+            "nl": "Druk op de pair knop en houdt deze 5 seconden vast totdat de led wit oplicht en laat deze dan los.",
+            "de": "Drücken Sie die Taste in Ihrem NEO-Türsensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los."
+          }
+        },
+        "associationGroups": [
+          1
+        ]
+      },
       "class": "sensor",
+      "energy": {
+        "batteries": [
+          "CR123A"
+        ]
+      },
       "capabilities": [
         "alarm_contact",
         "alarm_tamper",
@@ -1603,58 +1694,6 @@
       "images": {
         "large": "/drivers/NAS-DS07ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-DS07ZE/assets/images/small.jpg"
-      },
-      "energy": {
-        "batteries": [
-          "CR123A"
-        ]
-      },
-      "zwave": {
-        "manufacturerId": 600,
-        "productTypeId": 16,
-        "productId": 1794,
-        "includeSecure": false,
-        "learnmode": {
-          "image": "/drivers/NAS-DS07ZE/assets/learnmode.svg",
-          "instruction": {
-            "en": "Press the code button inside your NEO PIR three times",
-            "nl": "Druk driemaal op de code knop binnen in de NEO PIR",
-            "de": "Drücke die Code-Taste in deinem NEO PIR dreimal"
-          }
-        },
-        "associationGroups": [
-          1
-        ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Lifeline service that assigned to Sensor (Motion detector) status – Open/Close. It enables the sensor to send reports and readings to Z‐Wave Controller whenever the sensor is triggered. (Homey ID by default). It is not recommended to change this group.",
-              "nl": "Lifeline service toegekend aan de Sensor (Bewegingsdetectie) status - Open/Dicht. Via deze groep kan de sensor bewegingsdetectie / lichtsterkte / batterijniveau rapporteren naar de Z-wave Controller wanneer de sensor geactiveerd is. (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen.",
-              "de": "Lifeline Service, der dem Sensor (Bewegungsmelder) zugeordnet ist - Open/Close. Es ermöglicht dem Sensor, Berichte und Messwerte an den Z-Wave-Controller zu senden, wenn der Sensor ausgelöst wird. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern."
-            }
-          },
-          "2": {
-            "hint": {
-              "en": "Allows for control commands to associated devices such as relay module, lighting, etc. This association group is configured through the 'Illumination switch ON function' parameters. (add Z-wave ID of relay devices).",
-              "nl": "Verstuurd controle commando naar gekoppelde apparaten zoals schakelaar, verlichting, etc. Deze group wordt geconfigureerd door de 'Lichtsterkte inschakel functie' parameters. (voeg het Z-wave ID van het te koppelen apparaat toe).",
-              "de": "Ermöglicht Steuerbefehle für assoziierte Geräte wie Relaismodul, Beleuchtung usw. Diese Assoziationsgruppe wird über die Parameter 'Helligkeit Einschalt Funktion' konfiguriert. (Z-Wave-ID von Relaisgeräten hinzufügen)."
-            }
-          },
-          "3": {
-            "hint": {
-              "en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-              "de": "Ermöglicht das Senden von Benachrichtigungen an assozierten Geräte in dieser Gruppe (Z-Wave-ID der Relaisgeräte hinzufügen)."
-            }
-          },
-          "4": {
-            "hint": {
-              "en": "allows for Send Sensor Binary Report (motion detection) to associated devices in this group (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van Send Sensor Binary Report (bewegingsdetectie) naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-              "de": "Ermöglicht das Senden der Sensor-Binärdaten (Bewegungserkennung) an assozierten Geräte in dieser Gruppe (Z-Wave-ID der Relaisgeräte hinzufügen)."
-            }
-          }
-        }
       },
       "settings": [
         {
@@ -1851,21 +1890,6 @@
         "en": "PIR V1",
         "nl": "PIR V1"
       },
-      "class": "sensor",
-      "capabilities": [
-        "alarm_motion",
-        "measure_luminance",
-        "measure_battery"
-      ],
-      "images": {
-        "large": "/drivers/NAS-PD01ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-PD01ZE/assets/images/small.jpg"
-      },
-      "energy": {
-        "batteries": [
-          "CR123A"
-        ]
-      },
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 3,
@@ -1877,14 +1901,43 @@
           8333
         ],
         "includeSecure": false,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
+        "pid": 1920,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
         "learnmode": {
-          "image": "/drivers/NAS-PD01ZE/assets/learnmode.svg",
+          "image": "/drivers/NAS-PD01ZE/assets/icon.svg",
           "instruction": {
             "en": "Press the code button inside your NEO PIR three times",
             "nl": "Druk driemaal op de code knop binnen in de NEO PIR",
             "de": "Drücke die Code-Taste in deinem NEO PIR dreimal"
           }
         },
+        "unlearnmode": {
+          "image": "/drivers/NAS-PD01ZE/assets/icon.svg",
+          "instruction": {
+            "en": "Press the code button inside your NEO PIR three times",
+            "nl": "Druk driemaal op de code knop binnen in de NEO PIR",
+            "de": "Drücke die Code-Taste in deinem NEO PIR dreimal"
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 7,
+            "size": 2,
+            "value": 600
+          },
+          {
+            "id": 9,
+            "size": 1,
+            "value": "0x14"
+          },
+          {
+            "id": 10,
+            "size": 1,
+            "value": 0
+          }
+        ],
+        "wakeUpInterval": 21600,
         "associationGroups": [
           1
         ],
@@ -1918,6 +1971,21 @@
             }
           }
         }
+      },
+      "class": "sensor",
+      "energy": {
+        "batteries": [
+          "CR123A"
+        ]
+      },
+      "capabilities": [
+        "alarm_motion",
+        "measure_luminance",
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/NAS-PD01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-PD01ZE/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -2195,22 +2263,6 @@
         "en": "PIR V2",
         "nl": "PIR V2"
       },
-      "class": "sensor",
-      "capabilities": [
-        "alarm_motion",
-        "measure_temperature",
-        "measure_luminance",
-        "measure_battery"
-      ],
-      "images": {
-        "large": "/drivers/NAS-PD02ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-PD02ZE/assets/images/small.jpg"
-      },
-      "energy": {
-        "batteries": [
-          "CR123A"
-        ]
-      },
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": [
@@ -2219,14 +2271,47 @@
         ],
         "productId": 4145,
         "includeSecure": false,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
+        "pid": 1920,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
         "learnmode": {
-          "image": "/drivers/NAS-PD02ZE/assets/learnmode.svg",
+          "image": "/drivers/NAS-PD02ZE/assets/icon.svg",
           "instruction": {
             "en": "Press the code button inside your NEO PIR three times",
             "nl": "Druk driemaal op de code knop binnen in de NEO PIR",
             "de": "Drücke die Code-Taste in deinem NEO PIR dreimal"
           }
         },
+        "unlearnmode": {
+          "image": "/drivers/NAS-PD02ZE/assets/icon.svg",
+          "instruction": {
+            "en": "Press the code button inside your NEO PIR three times",
+            "nl": "Druk driemaal op de code knop binnen in de NEO PIR",
+            "de": "Drücke die Code-Taste in deinem NEO PIR dreimal"
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 3,
+            "size": 1,
+            "value": 255
+          },
+          {
+            "id": 7,
+            "size": 2,
+            "value": 600
+          },
+          {
+            "id": 9,
+            "size": 1,
+            "value": 20
+          },
+          {
+            "id": 11,
+            "size": 1,
+            "value": 0
+          }
+        ],
         "associationGroups": [
           1
         ],
@@ -2260,6 +2345,22 @@
             }
           }
         }
+      },
+      "class": "sensor",
+      "energy": {
+        "batteries": [
+          "CR123A"
+        ]
+      },
+      "capabilities": [
+        "alarm_motion",
+        "measure_temperature",
+        "measure_luminance",
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/NAS-PD02ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-PD02ZE/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -2537,35 +2638,52 @@
         "en": "PIR V3",
         "nl": "PIR V3"
       },
-      "class": "sensor",
-      "capabilities": [
-        "alarm_motion",
-        "measure_temperature",
-        "measure_luminance",
-        "measure_battery"
-      ],
-      "images": {
-        "large": "/drivers/NAS-PD03ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-PD03ZE/assets/images/small.jpg"
-      },
-      "energy": {
-        "batteries": [
-          "CR123A"
-        ]
-      },
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 3,
         "productId": 4237,
         "includeSecure": false,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
+        "pid": 1920,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
         "learnmode": {
-          "image": "/drivers/NAS-PD03ZE/assets/learnmode.svg",
+          "image": "/drivers/NAS-PD03ZE/assets/icon.svg",
           "instruction": {
-            "en": "Press the code button inside your NEO PIR three times",
-            "nl": "Druk driemaal op de code knop binnen in de NEO PIR",
-            "de": "Drücke die Code-Taste in deinem NEO PIR dreimal"
+            "en": "Press the button inside your NEO Motion Sensor and hold it for 5 seconds until you see a white light and let it go.",
+            "nl": "Druk op de pair knop van uw NEO Motion Sensor en houdt deze 5 seconden vast totdat de led wit oplicht en laat deze dan los.",
+            "de": "Drücken Sie die Taste in Ihrem NEO Motion Sensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los."
           }
         },
+        "unlearnmode": {
+          "image": "/drivers/NAS-PD03ZE/assets/icon.svg",
+          "instruction": {
+            "en": "Press the button inside your NEO Door Sensor and hold it for 5 seconds until you see a white light and let it go.",
+            "nl": "Druk op de pair knop en houdt deze 5 seconden vast totdat de led wit oplicht en laat deze dan los.",
+            "de": "Drücken Sie die Taste in Ihrem NEO-Türsensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los."
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 3,
+            "size": 1,
+            "value": 255
+          },
+          {
+            "id": 7,
+            "size": 2,
+            "value": 600
+          },
+          {
+            "id": 9,
+            "size": 1,
+            "value": 20
+          },
+          {
+            "id": 11,
+            "size": 1,
+            "value": 0
+          }
+        ],
         "associationGroups": [
           1
         ],
@@ -2599,6 +2717,22 @@
             }
           }
         }
+      },
+      "class": "sensor",
+      "energy": {
+        "batteries": [
+          "CR123A"
+        ]
+      },
+      "capabilities": [
+        "alarm_motion",
+        "measure_temperature",
+        "measure_luminance",
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/NAS-PD02ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-PD02ZE/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -2876,7 +3010,6 @@
         "en": "KeyFob",
         "nl": "KeyFob"
       },
-      "class": "sensor",
       "capabilities": [
         "measure_battery",
         "alarm_emergency",
@@ -2886,6 +3019,34 @@
         "large": "/drivers/NAS-RC01ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-RC01ZE/assets/images/small.jpg"
       },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon"
+          },
+          {
+            "id": "battery",
+            "capabilities": [
+              "measure_battery"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "alarm_emergency"
+            ],
+            "options": {
+              "icons": {
+                "alarm_emergency": "/drivers/NAS-RC01ZE/assets/emergency.svg"
+              }
+            }
+          }
+        ]
+      },
+      "class": "sensor",
       "energy": {
         "batteries": [
           "CR3032"
@@ -2896,6 +3057,7 @@
         "productTypeId": 3,
         "productId": 4234,
         "includeSecure": false,
+        "wakeUpInterval": 0,
         "learnmode": {
           "image": "/drivers/NAS-RC01ZE/assets/learnmode.svg",
           "instruction": {
@@ -2904,6 +3066,17 @@
             "de": "Drücke die SOS-Taste am KeyFob dreimal."
           }
         },
+        "unlearnmode": {
+          "image": "/drivers/NAS-RC01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the SOS button on the KeyFob three times.",
+            "nl": "Druk drie keer op de SOS knop op van KeyFob.",
+            "de": "Drücke die SOS-Taste am KeyFob dreimal."
+          }
+        },
+        "productDocumentation": "",
+        "zwaveAllianceProductId": "",
+        "imageRemotePath": "",
         "associationGroups": [
           1
         ],
@@ -2953,7 +3126,6 @@
         "en": "Z-Wave Repeater",
         "nl": "Z-Wave Repeater"
       },
-      "class": "other",
       "capabilities": [
         "measure_temperature",
         "measure_humidity"
@@ -2962,13 +3134,22 @@
         "large": "/drivers/NAS-RE01ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-RE01ZE/assets/images/small.jpg"
       },
+      "class": "other",
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 16,
         "productId": 1814,
         "includeSecure": false,
         "learnmode": {
-          "image": "/drivers/NAS-RE01ZE/assets/learnmode.svg",
+          "image": "/drivers/NAS-RE01ZE/assets/icon.svg",
+          "instruction": {
+            "en": "Press the button on the side your NEO Repeater and hold it for 5 seconds until you see a blue light on top and let it go.",
+            "nl": "Druk op de pair knop aan de zijkant van de NEO Repeater en houdt deze 5 seconden vast totdat een blauw licht aan de bovenkant te zien is.",
+            "de": "Halten Sie die Paartaste an der Seite des NEO-Repeaters 5 Sekunden lang gedrückt, bis oben ein blaues Licht angezeigt wird."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-RE01ZE/assets/icon.svg",
           "instruction": {
             "en": "Press the button on the side your NEO Repeater and hold it for 5 seconds until you see a blue light on top and let it go.",
             "nl": "Druk op de pair knop aan de zijkant van de NEO Repeater en houdt deze 5 seconden vast totdat een blauw licht aan de bovenkant te zien is.",
@@ -2996,7 +3177,6 @@
         "en": "SOS Button",
         "nl": "SOS Knop"
       },
-      "class": "sensor",
       "capabilities": [
         "measure_battery",
         "alarm_emergency",
@@ -3006,6 +3186,39 @@
         "large": "/drivers/NAS-RS01ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-RS01ZE/assets/images/small.jpg"
       },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon"
+          },
+          {
+            "id": "battery",
+            "capabilities": [
+              "measure_battery"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "alarm_emergency",
+              "alarm_battery"
+            ],
+            "options": {
+              "icons": {
+                "alarm_emergency": "/drivers/NAS-RC01ZE/assets/emergency.svg"
+              },
+              "alarm_battery": {
+                "noblink": false,
+                "invert": false
+              }
+            }
+          }
+        ]
+      },
+      "class": "sensor",
       "energy": {
         "batteries": [
           "CR3032"
@@ -3018,6 +3231,8 @@
           4240,
           4239
         ],
+        "includeSecure": false,
+        "wakeUpInterval": 0,
         "learnmode": {
           "image": "/drivers/NAS-RS01ZE/assets/learnmode.svg",
           "instruction": {
@@ -3026,6 +3241,17 @@
             "de": "Drücke die SOS-Taste am KeyFob dreimal."
           }
         },
+        "unlearnmode": {
+          "image": "/drivers/NAS-RS01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the SOS button on the KeyFob three times.",
+            "nl": "Druk drie keer op de SOS knop op van KeyFob.",
+            "de": "Drücke die SOS-Taste am KeyFob dreimal."
+          }
+        },
+        "productDocumentation": "",
+        "zwaveAllianceProductId": "",
+        "imageRemotePath": "",
         "associationGroups": [
           1
         ],
@@ -3075,14 +3301,6 @@
         "en": "Touch Switch Single",
         "nl": "Aanraakschakelaar Enkel"
       },
-      "class": "socket",
-      "capabilities": [
-        "onoff"
-      ],
-      "images": {
-        "large": "/drivers/NAS-SC01ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-SC01ZE/assets/images/small.jpg"
-      },
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 3,
@@ -3096,32 +3314,28 @@
             "de": "Drücke den linken Knopf am Wandschalter dreimal schnell."
           }
         },
-        "associationGroups": [
-          1
-        ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Reports the lifeline service that assigned to plug status – ON/OFF. It enables the Plug to send reports and readings to the Z-Wave Controller. (Homey ID by default). It is not recommended to change this group.",
-              "nl": "Rapportage van de status van de power plug en staat controle (AAN/UIT) over de power plug toe (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen.",
-              "de": "Lifeline Service. Meldet den Status des Power Plugs - EIN/AUS. Es ermöglicht dem Plug, Berichte und Messwerte an den Z-Wave-Controller zu senden. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern."
-            }
-          },
-          "2": {
-            "hint": {
-              "en": "Allows for sending alarm commands to associated devices such as Siren, relay module, lighting, etc. If current load is over the max current defined in 'Maximum over-load current', the Plug will send a alarm to the associated devices. (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van een alarm commando naar gekoppelde apparaten, zoals sirene, schakelaar, verlichting, etc. Op het moment dat het stroom hoger is dan gedefinieerd in 'Maximale over-load stroom', wordt een alarm naar de gekoppelde apparaten gestuurd (voeg het Z-wave ID van het te koppelen apparaat toe).",
-              "de": "Ermöglicht das Senden von Alarmbefehlen an assozierte Geräte wie Sirenen, Relaismodule, Lichter etc. Wenn die Strombelastung über dem unter 'Maximaler Überlaststrom' definierten Maximalstrom liegt, sendet der Plug einen Alarm an die zugehörigen Geräte. (Z-Wave-ID von Relaisgeräten hinzufügen)"
-            }
-          },
-          "3": {
-            "hint": {
-              "en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-              "de": "Ermöglicht das Senden von Benachrichtigungen an assozierte Geräte in dieser Gruppe (Hinzufügen der Z-Wave-ID von Relaisgeräten)."
-            }
+        "unlearnmode": {
+          "image": "/drivers/NAS-SC01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the left button on youre wallswitch three times quickly",
+            "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch",
+            "de": "Drücke den linken Knopf am Wandschalter dreimal schnell."
           }
-        }
+        },
+        "defaultConfiguration": [],
+        "associationGroups": [
+          1,
+          2
+        ]
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "icon": "/drivers/NAS-SC01ZE/assets/icon.svg",
+      "images": {
+        "large": "/drivers/NAS-SC01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-SC01ZE/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -3188,14 +3402,6 @@
         "en": "Touch Switch Dual",
         "nl": "Aanraakschakelaar Dubbel"
       },
-      "class": "socket",
-      "capabilities": [
-        "onoff"
-      ],
-      "images": {
-        "large": "/drivers/NAS-SC02ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-SC02ZE/assets/images/small.jpg"
-      },
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 3,
@@ -3208,11 +3414,20 @@
         "learnmode": {
           "image": "/drivers/NAS-SC02ZE/assets/learnmode.svg",
           "instruction": {
+            "en": "Press the left button on your wallswitch three times quickly",
+            "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch",
+            "de": "Drücke den linken Knopf am Wandschalter dreimal schnell."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-SC02ZE/assets/learnmode.svg",
+          "instruction": {
             "en": "Press the left button on youre wallswitch three times quickly",
             "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch",
             "de": "Drücke den linken Knopf am Wandschalter dreimal schnell."
           }
         },
+        "defaultConfiguration": [],
         "associationGroups": [
           1
         ],
@@ -3233,30 +3448,16 @@
             },
             "settings": []
           }
-        },
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Reports the lifeline service that assigned to plug status – ON/OFF. It enables the Plug to send reports and readings to the Z-Wave Controller. (Homey ID by default). It is not recommended to change this group.",
-              "nl": "Rapportage van de status van de power plug en staat controle (AAN/UIT) over de power plug toe (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen.",
-              "de": "Lifeline Service. Meldet den Status des Power Plugs - EIN/AUS. Es ermöglicht dem Plug, Berichte und Messwerte an den Z-Wave-Controller zu senden. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern."
-            }
-          },
-          "2": {
-            "hint": {
-              "en": "Allows for sending alarm commands to associated devices such as Siren, relay module, lighting, etc. If current load is over the max current defined in 'Maximum over-load current', the Plug will send a alarm to the associated devices. (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van een alarm commando naar gekoppelde apparaten, zoals sirene, schakelaar, verlichting, etc. Op het moment dat het stroom hoger is dan gedefinieerd in 'Maximale over-load stroom', wordt een alarm naar de gekoppelde apparaten gestuurd (voeg het Z-wave ID van het te koppelen apparaat toe).",
-              "de": "Ermöglicht das Senden von Alarmbefehlen an assozierte Geräte wie Sirenen, Relaismodule, Lichter etc. Wenn die Strombelastung über dem unter 'Maximaler Überlaststrom' definierten Maximalstrom liegt, sendet der Plug einen Alarm an die zugehörigen Geräte. (Z-Wave-ID von Relaisgeräten hinzufügen)"
-            }
-          },
-          "3": {
-            "hint": {
-              "en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-              "de": "Ermöglicht das Senden von Benachrichtigungen an assozierte Geräte in dieser Gruppe (Hinzufügen der Z-Wave-ID von Relaisgeräten)."
-            }
-          }
         }
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "icon": "/drivers/NAS-SC02ZE/assets/icon.svg",
+      "images": {
+        "large": "/drivers/NAS-SC02ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-SC02ZE/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -3323,14 +3524,6 @@
         "en": "Touch Switch Triple",
         "nl": "Aanraakschakelaar Triple"
       },
-      "class": "socket",
-      "capabilities": [
-        "onoff"
-      ],
-      "images": {
-        "large": "/drivers/NAS-SC03ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-SC03ZE/assets/images/small.jpg"
-      },
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 512,
@@ -3341,11 +3534,20 @@
         "learnmode": {
           "image": "/drivers/NAS-SC03ZE/assets/learnmode.svg",
           "instruction": {
+            "en": "Press the left button on your wallswitch three times quickly",
+            "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch",
+            "de": "Drücke den linken Knopf am Wandschalter dreimal schnell."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-SC03ZE/assets/learnmode.svg",
+          "instruction": {
             "en": "Press the left button on youre wallswitch three times quickly",
             "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch",
             "de": "Drücke den linken Knopf am Wandschalter dreimal schnell."
           }
         },
+        "defaultConfiguration": [],
         "associationGroups": [
           1
         ],
@@ -3380,30 +3582,16 @@
             },
             "settings": []
           }
-        },
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Reports the lifeline service that assigned to plug status – ON/OFF. It enables the Plug to send reports and readings to the Z-Wave Controller. (Homey ID by default). It is not recommended to change this group.",
-              "nl": "Rapportage van de status van de power plug en staat controle (AAN/UIT) over de power plug toe (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen.",
-              "de": "Lifeline Service. Meldet den Status des Power Plugs - EIN/AUS. Es ermöglicht dem Plug, Berichte und Messwerte an den Z-Wave-Controller zu senden. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern."
-            }
-          },
-          "2": {
-            "hint": {
-              "en": "Allows for sending alarm commands to associated devices such as Siren, relay module, lighting, etc. If current load is over the max current defined in 'Maximum over-load current', the Plug will send a alarm to the associated devices. (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van een alarm commando naar gekoppelde apparaten, zoals sirene, schakelaar, verlichting, etc. Op het moment dat het stroom hoger is dan gedefinieerd in 'Maximale over-load stroom', wordt een alarm naar de gekoppelde apparaten gestuurd (voeg het Z-wave ID van het te koppelen apparaat toe).",
-              "de": "Ermöglicht das Senden von Alarmbefehlen an assozierte Geräte wie Sirenen, Relaismodule, Lichter etc. Wenn die Strombelastung über dem unter 'Maximaler Überlaststrom' definierten Maximalstrom liegt, sendet der Plug einen Alarm an die zugehörigen Geräte. (Z-Wave-ID von Relaisgeräten hinzufügen)"
-            }
-          },
-          "3": {
-            "hint": {
-              "en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-              "de": "Ermöglicht das Senden von Benachrichtigungen an assozierte Geräte in dieser Gruppe (Hinzufügen der Z-Wave-ID von Relaisgeräten)."
-            }
-          }
         }
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "icon": "/drivers/NAS-SC03ZE/assets/icon.svg",
+      "images": {
+        "large": "/drivers/NAS-SC03ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-SC03ZE/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -3470,18 +3658,6 @@
         "en": "Power Wallplug V1",
         "nl": "Spanning Muurplug V1"
       },
-      "class": "socket",
-      "capabilities": [
-        "onoff",
-        "meter_power",
-        "measure_power",
-        "measure_current",
-        "measure_voltage"
-      ],
-      "images": {
-        "large": "/drivers/NAS-WR01ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-WR01ZE/assets/images/small.jpg"
-      },
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": [
@@ -3493,7 +3669,17 @@
           135
         ],
         "includeSecure": false,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
+        "pid": 1783,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055074",
         "learnmode": {
+          "image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on your NEO Wall Plug three times",
+            "nl": "Druk driemaal op de knop op de NEO Wall Plug"
+          }
+        },
+        "unlearnmode": {
           "image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
           "instruction": {
             "en": "Press the button on your NEO Wall Plug three times",
@@ -3525,7 +3711,61 @@
               "de": "Ermöglicht das Senden von Benachrichtigungen an assozierte Geräte in dieser Gruppe (Hinzufügen der Z-Wave-ID von Relaisgeräten)."
             }
           }
-        }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 1,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 2,
+            "size": 2,
+            "value": 300
+          },
+          {
+            "id": 6,
+            "size": 1,
+            "value": 20
+          }
+        ]
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff",
+        "meter_power",
+        "measure_power",
+        "measure_current",
+        "measure_voltage"
+      ],
+      "images": {
+        "large": "/drivers/NAS-WR01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-WR01ZE/assets/images/small.jpg"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": [
+              "onoff"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "meter_power",
+              "measure_power",
+              "measure_current",
+              "measure_voltage"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "onoff"
+            ]
+          }
+        ]
       },
       "settings": [
         {
@@ -3728,18 +3968,6 @@
         "en": "Power Wallplug V2",
         "nl": "Spanning Muurplug V2"
       },
-      "class": "socket",
-      "capabilities": [
-        "onoff",
-        "meter_power",
-        "measure_power",
-        "measure_current",
-        "measure_voltage"
-      ],
-      "images": {
-        "large": "/drivers/NAS-WR02ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-WR02ZE/assets/images/small.jpg"
-      },
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": [
@@ -3751,7 +3979,17 @@
           4135
         ],
         "includeSecure": false,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1783/Smart-Plug User Guide V2.doc",
+        "pid": 1783,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055074",
         "learnmode": {
+          "image": "/drivers/NAS-WR02ZE/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on your NEO Wall Plug three times",
+            "nl": "Druk driemaal op de knop op de NEO Wall Plug"
+          }
+        },
+        "unlearnmode": {
           "image": "/drivers/NAS-WR02ZE/assets/learnmode.svg",
           "instruction": {
             "en": "Press the button on your NEO Wall Plug three times",
@@ -3784,6 +4022,43 @@
             }
           }
         }
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff",
+        "meter_power",
+        "measure_power",
+        "measure_current",
+        "measure_voltage"
+      ],
+      "images": {
+        "large": "/drivers/NAS-WR02ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-WR02ZE/assets/images/small.jpg"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": [
+              "onoff"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "meter_power",
+              "measure_power",
+              "measure_current",
+              "measure_voltage"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "onoff"
+            ]
+          }
+        ]
       },
       "settings": [
         {
@@ -4007,21 +4282,6 @@
         "nl": "Water Sensor",
         "de": "Wasser Sensor"
       },
-      "class": "sensor",
-      "capabilities": [
-        "alarm_water",
-        "measure_battery",
-        "alarm_battery"
-      ],
-      "images": {
-        "large": "/drivers/NAS-WS01ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-WS01ZE/assets/images/small.jpg"
-      },
-      "energy": {
-        "batteries": [
-          "CR14250"
-        ]
-      },
       "zwave": {
         "manufacturerId": 600,
         "productTypeId": 3,
@@ -4032,47 +4292,80 @@
           24709
         ],
         "includeSecure": false,
+        "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1788/Water Leakage Detector User Manual V2.doc",
+        "pid": 1788,
+        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16055075",
         "learnmode": {
-          "image": "/drivers/NAS-WS01ZE/assets/learnmode.svg",
+          "image": "/drivers/NAS-WS01ZE/assets/icon.svg",
           "instruction": {
             "en": "Press the code button inside your NEO Flood Sensor three times",
             "nl": "Druk driemaal op de code knop binnen in de NEO Flood Sensor",
-            "de": "Drück dreimal die Code-Taste im NEO Wasser Sensor"
+            "de": "Drück  dreimal die Code-Taste im NEO Wasser Sensor"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/NAS-WS01ZE/assets/icon.svg",
+          "instruction": {
+            "en": "Press the code button inside your NEO Flood Sensor three times",
+            "nl": "Druk driemaal op de code knop binnen in de NEO Flood Sensor",
+            "de": "Drück  dreimal die Code-Taste im NEO Wasser Sensor"
           }
         },
         "associationGroups": [
           1
         ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Lifeline service that assigned to Sensor (Alarm) status – Open/Close. It enables the sensor to send reports and readings to Z‐Wave Controller whenever the sensor is triggered. (Homey ID by default). It is not recommended to change this group.",
-              "nl": "Lifeline service toegekend aan de Sensor (Alarm) status - Open/Dicht. Via deze groep kan de sensor bewegingsdetectie / lichtsterkte / batterijniveau rapporteren naar de Z-wave Controller wanneer de sensor geactiveerd is. (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen.",
-              "de": "Lifeline Service, der dem Sensor (Alarm) zugeordnet ist - Open/Close. Es ermöglicht dem Sensor, Berichte und Messwerte an den Z-Wave-Controller zu senden, wenn der Sensor ausgelöst wird. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern."
-            }
+        "defaultConfiguration": [
+          {
+            "id": 1,
+            "size": 1,
+            "value": 120
           },
-          "2": {
-            "hint": {
-              "en": "Allows for control commands to associated devices such as relay module, lighting, etc. This association group is configured through the 'Illumination switch ON function' parameters. (add Z-wave ID of relay devices).",
-              "nl": "Verstuurd controle commando naar gekoppelde apparaten zoals schakelaar, verlichting, etc. Deze group wordt geconfigureerd door de 'Lichtsterkte inschakel functie' parameters. (voeg het Z-wave ID van het te koppelen apparaat toe).",
-              "de": "Ermöglicht Steuerbefehle für assoziierte Geräte wie Relaismodul, Beleuchtung usw. Diese Assoziationsgruppe wird über die Parameter 'Helligkeit Einschalt Funktion' konfiguriert. (Z-Wave-ID von Relaisgeräten hinzufügen)."
-            }
+          {
+            "id": 2,
+            "size": 1,
+            "value": 1
           },
-          "3": {
-            "hint": {
-              "en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-              "de": "Ermöglicht das Senden von Benachrichtigungen an assozierten Geräte in dieser Gruppe (Z-Wave-ID der Relaisgeräte hinzufügen)."
-            }
+          {
+            "id": 3,
+            "size": 1,
+            "value": 60
           },
-          "4": {
-            "hint": {
-              "en": "allows for Send Sensor Binary Report (Alarm) to associated devices in this group (add Z-wave ID of relay devices).",
-              "nl": "Rapportage van Send Sensor Binary Report (Alarm) naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-              "de": "Ermöglicht das Senden der Sensor-Binärdaten (Alarm) an assozierten Geräte in dieser Gruppe (Z-Wave-ID der Relaisgeräte hinzufügen)."
-            }
+          {
+            "id": 4,
+            "size": 1,
+            "value": 5
+          },
+          {
+            "id": 5,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 6,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 7,
+            "size": 1,
+            "value": "0xFF"
           }
-        }
+        ]
+      },
+      "class": "sensor",
+      "energy": {
+        "batteries": [
+          "CR14250"
+        ]
+      },
+      "capabilities": [
+        "alarm_water",
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "images": {
+        "large": "/drivers/NAS-WS01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-WS01ZE/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -4211,63 +4504,5 @@
         }
       ]
     }
-  ],
-  "capabilities": {
-    "alarm_emergency": {
-      "type": "boolean",
-      "uiComponent": "sensor",
-      "icon": "/assets/capabilities/alarm.svg",
-      "title": {
-        "en": "Emergency",
-        "nl": "Noodgeval"
-      },
-      "units": {
-        "en": "Status",
-        "nl": "Status"
-      },
-      "desc": {
-        "en": "Alarm",
-        "nl": "Alarm"
-      },
-      "getable": true,
-      "setable": false,
-      "insights": true,
-      "insightsTitleTrue": {
-        "en": "Emergency",
-        "nl": "Noodgeval"
-      },
-      "insightsTitleFalse": {
-        "en": "-",
-        "nl": "-"
-      }
-    },
-    "alarm_siren": {
-      "type": "boolean",
-      "uiComponent": "sensor",
-      "icon": "/assets/capabilities/alarm.svg",
-      "title": {
-        "en": "Siren",
-        "nl": "Sirene"
-      },
-      "units": {
-        "en": "Status",
-        "nl": "Status"
-      },
-      "desc": {
-        "en": "Alarm",
-        "nl": "Alarm"
-      },
-      "getable": true,
-      "setable": false,
-      "insights": true,
-      "insightsTitleTrue": {
-        "en": "Siren On",
-        "nl": "Sirene Aan"
-      },
-      "insightsTitleFalse": {
-        "en": "Siren Off",
-        "nl": "Sirene Uit"
-      }
-    }
-  }
+  ]
 }

@@ -1,14 +1,16 @@
 'use strict';
 
 const Homey = require('homey');
-const {ZwaveDevice} = require('homey-zwavedriver');
+const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class KeyFob_RC01Z extends ZwaveDevice {
+  async onMeshInit() {
+    let PreviousSequenceNo = 'empty';
 
-  async onNodeInit() {
-	  let PreviousSequenceNo = 'empty';
-	  
-	this.registerCapability('alarm_emergency', 'NOTIFICATION', {
+    //this.enableDebug();
+    //this.printNode();
+    this.registerCapability('measure_battery', 'BATTERY');
+    this.registerCapability('alarm_emergency', 'NOTIFICATION', {
       get: 'NOTIFICATION_GET',
       getOpts: {
         getOnOnline: true,
@@ -28,11 +30,10 @@ class KeyFob_RC01Z extends ZwaveDevice {
         }
         return null;
       }
-    }); 
-	this.registerCapability('measure_battery', 'BATTERY');
-	
-	
-// Register Flow card trigger
+    });
+
+
+    // Register Flow card trigger
     const EmergencyFlowTrigger = new Homey.FlowCardTriggerDevice('alarm_emergency');
     EmergencyFlowTrigger.register();
 
@@ -78,11 +79,7 @@ class KeyFob_RC01Z extends ZwaveDevice {
         }
       }
     });
-	
-	
-	
+
   }
-
 }
-
 module.exports = KeyFob_RC01Z;

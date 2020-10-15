@@ -1,12 +1,12 @@
 'use strict';
 
 const Homey = require('homey');
-const {ZwaveDevice} = require('homey-zwavedriver');
+const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class KeyFob_RS01Z extends ZwaveDevice {
-
-  async onNodeInit() {
-	  
+  async onMeshInit() {
+    //this.enableDebug();
+    //this.printNode();
     this.registerCapability('measure_battery', 'BATTERY');
 
     this.registerCapability('alarm_emergency', 'NOTIFICATION', {
@@ -49,11 +49,6 @@ class KeyFob_RS01Z extends ZwaveDevice {
         }
       });
     } else this.error('missing_alarm_emergency_card_in_manifest');
-	
-	
-	
   }
-
 }
-
 module.exports = KeyFob_RS01Z;

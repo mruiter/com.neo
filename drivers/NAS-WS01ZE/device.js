@@ -1,10 +1,12 @@
 'use strict';
 
-const {ZwaveDevice} = require('homey-zwavedriver');
+const Homey = require('homey');
+const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class WaterSensor_WS01 extends ZwaveDevice {
-
-  async onNodeInit() {
+  async onMeshInit() {
+    //this.enableDebug();
+    //this.printNode();
     this.registerCapability('alarm_water', 'SENSOR_BINARY', {
 			getOpts: {
 				getOnOnline: true,
@@ -12,7 +14,5 @@ class WaterSensor_WS01 extends ZwaveDevice {
 		});
     this.registerCapability('measure_battery', 'BATTERY');
   }
-
 }
-
 module.exports = WaterSensor_WS01;

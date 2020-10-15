@@ -1,12 +1,14 @@
 'use strict';
 
 const Homey = require('homey');
-const {ZwaveDevice} = require('homey-zwavedriver');
+const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class Wallplug_WR02Z extends ZwaveDevice {
-
-  onNodeInit() {
+  onMeshInit() {
+    // this.enableDebug();
+    // this.printNode();
     this.registerCapability('onoff', 'SWITCH_BINARY');
+
 		this.registerCapability('measure_power', 'METER', {
             getParserV4: () => ({
                 'Sensor Type': 'Electric meter',
@@ -88,7 +90,7 @@ class Wallplug_WR02Z extends ZwaveDevice {
             }
         });
 
-		// define FlowCardAction to reset meter_power
+	// define FlowCardAction to reset meter_power
 		let WR02Z_reset_meter_run_listener = async(args) => {
 			let result = await args.device.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({})
 			if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
@@ -98,8 +100,6 @@ class Wallplug_WR02Z extends ZwaveDevice {
 		actionWR02Z_reset_meter
 			.register()
 			.registerRunListener(WR02Z_reset_meter_run_listener);	
-    
   }
 }
-
 module.exports = Wallplug_WR02Z;

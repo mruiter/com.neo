@@ -1,14 +1,17 @@
 {
   "name": "com.neo",
-  "version": "3.0.0",
+  "version": "2.1.8",
   "description": "This app adds support for the Z-wave devices made by Coolcam NEO(http://www.szneo.com/).",
   "main": "app.js",
-  "devDependencies": {
-    "homey": "^2.8.0"
-  },
+  "requires": true,
   "dependencies": {
-    "homey-meshdriver": "^2.0.0",
-    "homey-zwavedriver": "^2.0.0"
+    "homey-log": "^1.0.6",
+    "homey-meshdriver": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "run": "homeyConfig compose && athom project --run",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

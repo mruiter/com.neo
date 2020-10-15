@@ -1,14 +1,10 @@
 'use strict';
 
 const Homey = require('homey');
-const {
-  ZwaveDevice
-} = require('homey-zwavedriver');
+const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class Siren_AB01Z extends ZwaveDevice {
-
-  async onNodeInit() {
-
+  async onMeshInit() {
     //this.enableDebug();
     //this.printNode();
     this.registerCapability('onoff', 'SWITCH_BINARY');
@@ -135,9 +131,6 @@ class Siren_AB01Z extends ZwaveDevice {
       .register()
       .registerRunListener(AB01ZE_doorbell_volume_run_listener);
 
-
   }
-
 }
-
 module.exports = Siren_AB01Z;
