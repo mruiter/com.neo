@@ -109,26 +109,6 @@
         ]
       },
       {
-        "id": "alarm_siren",
-        "title": {
-          "en": "Siren Alarm",
-          "nl": "Sirene Alarm",
-          "de": "Sirenenalarm"
-        },
-        "hint": {
-          "en": "This card will trigger when siren is activated.",
-          "nl": "Deze kaart wordt alleen geactiveerd wanneer de sirene actief is.",
-          "de": "Diese Karte wird ausgelöst, wenn die Sirene aktiviert wird."
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=NAS-AB01ZE"
-          }
-        ]
-      },
-      {
         "id": "RC_scene",
         "title": {
           "en": "Scene is activated",
@@ -203,437 +183,33 @@
     ],
     "actions": [
       {
-        "id": "AB01ZE_alarm_mode",
+        "id": "backlight_mode",
         "title": {
-          "en": "Set the device mode",
-          "nl": "Stel de apparaat modus in",
-          "de": "Einstellen des Gerätemodus"
-        },
-        "hint": {
-          "en": "Set the device mode; alarm or doorbell mode",
-          "nl": "Stel de apparaat modus in; alarm of deurbel",
-          "de": "Einstellen des Gerätemodus; Alarm- oder Türklingelmodus"
+          "en": "Backlight On/Off",
+          "nl": "Backlight Aan/Uit"
         },
         "args": [
           {
-            "name": "device",
             "type": "device",
-            "filter": "driver_id=NAS-AB01ZE"
-          },
-          {
-            "name": "alarm_mode",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Alarm",
-                  "nl": "Alarm",
-                  "de": "Alarm"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Doorbel",
-                  "nl": "Deurbel",
-                  "de": "Türklingel"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "AB01ZE_alarm_state",
-        "title": {
-          "en": "Change the alarm state",
-          "nl": "Verander de alarm toestand",
-          "de": "Ändern des Alarmstatus"
-        },
-        "hint": {
-          "en": "Change the alarm state; sound or silence the alarm",
-          "nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm",
-          "de": "Ändern des Alarmstatus; Ein- oder ausschalten des Alarmtons."
-        },
-        "args": [
-          {
             "name": "device",
-            "type": "device",
-            "filter": "driver_id=NAS-AB01ZE"
-          },
-          {
-            "name": "alarm_state",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "off/disable",
-                "label": {
-                  "en": "Silence alarm",
-                  "nl": "Alarm stil",
-                  "de": "Stiller Alarm"
-                }
-              },
-              {
-                "id": "on/enable",
-                "label": {
-                  "en": "Sound alarm",
-                  "nl": "Alarm luiden",
-                  "de": "Akustischer Alarm"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "AB01ZE_alarm_tune",
-        "title": {
-          "en": "Set the alarm tune",
-          "nl": "Stel de alarm melodie in",
-          "de": "Einstellen des Alarmtons"
-        },
-        "hint": {
-          "en": "Choose the tune of the alarm sound",
-          "nl": "Kies de melodie die gebruikt wordt bij alarm",
-          "de": "Wähle die Melodie des Alarmtons aus."
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=NAS-AB01ZE"
-          },
-          {
-            "name": "alarm_tune",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Tune 1",
-                  "nl": "Melodie 1",
-                  "de": "Melodie 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Tune 2",
-                  "nl": "Melodie 2",
-                  "de": "Melodie 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Tune 3",
-                  "nl": "Melodie 3",
-                  "de": "Melodie 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Tune 4",
-                  "nl": "Melodie 4",
-                  "de": "Melodie 4"
-                }
-              },
-              {
-                "id": "5",
-                "label": {
-                  "en": "Tune 5",
-                  "nl": "Melodie 5",
-                  "de": "Melodie 5"
-                }
-              },
-              {
-                "id": "6",
-                "label": {
-                  "en": "Tune 6",
-                  "nl": "Melodie 6",
-                  "de": "Melodie 6"
-                }
-              },
-              {
-                "id": "7",
-                "label": {
-                  "en": "Tune 7",
-                  "nl": "Melodie 7",
-                  "de": "Melodie 7"
-                }
-              },
-              {
-                "id": "8",
-                "label": {
-                  "en": "Tune 8",
-                  "nl": "Melodie 8",
-                  "de": "Melodie 8"
-                }
-              },
-              {
-                "id": "9",
-                "label": {
-                  "en": "Tune 9",
-                  "nl": "Melodie 9",
-                  "de": "Melodie 9"
-                }
-              },
-              {
-                "id": "10",
-                "label": {
-                  "en": "Tune 10 (default)",
-                  "nl": "Melodie 10 (standaard)",
-                  "de": "Melodie 10 (Standard)"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "AB01ZE_doorbell_tune",
-        "title": {
-          "en": "Set the doorbell tune",
-          "nl": "Stel de deurbel melodie in",
-          "de": "Einstellen der Türklingelmelodie"
-        },
-        "hint": {
-          "en": "Choose the tune of the doorbell sound",
-          "nl": "Kies de melodie die gebruikt wordt als deurbel",
-          "de": "Wähle die Melodie der Türklingel aus."
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=NAS-AB01ZE"
-          },
-          {
-            "name": "doorbell_tune",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Tune 1",
-                  "nl": "Melodie 1",
-                  "de": "Melodie 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Tune 2",
-                  "nl": "Melodie 2",
-                  "de": "Melodie 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Tune 3",
-                  "nl": "Melodie 3",
-                  "de": "Melodie 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Tune 4",
-                  "nl": "Melodie 4",
-                  "de": "Melodie 4"
-                }
-              },
-              {
-                "id": "5",
-                "label": {
-                  "en": "Tune 5",
-                  "nl": "Melodie 5",
-                  "de": "Melodie 5"
-                }
-              },
-              {
-                "id": "6",
-                "label": {
-                  "en": "Tune 6",
-                  "nl": "Melodie 6",
-                  "de": "Melodie 6"
-                }
-              },
-              {
-                "id": "7",
-                "label": {
-                  "en": "Tune 7",
-                  "nl": "Melodie 7",
-                  "de": "Melodie 7"
-                }
-              },
-              {
-                "id": "8",
-                "label": {
-                  "en": "Tune 8",
-                  "nl": "Melodie 8",
-                  "de": "Melodie 8"
-                }
-              },
-              {
-                "id": "9",
-                "label": {
-                  "en": "Tune 9 (default)",
-                  "nl": "Melodie 9 (standard)",
-                  "de": "Melodie 9 (Standard)"
-                }
-              },
-              {
-                "id": "10",
-                "label": {
-                  "en": "Tune 10",
-                  "nl": "Melodie 10",
-                  "de": "Melodie 10"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "AB01ZE_doorbell_volume",
-        "title": {
-          "en": "Set volume of the doorbell",
-          "nl": "Zet het volume van de deurbel",
-          "de": "Lautstärke der Türklingel einstellen."
-        },
-        "hint": {
-          "en": "Set volume of the doorbell.",
-          "nl": "Zet het volume van de deurbel.",
-          "de": "Lautstärke der Türklingel einstellen."
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=NAS-AB01ZE"
-          },
-          {
-            "name": "doorbell_volume",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Low",
-                  "nl": "Laag",
-                  "de": "Niedrig"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Midle",
-                  "nl": "Middelmatig",
-                  "de": "Mittel"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "High (default)",
-                  "nl": "Hoog (standaard)",
-                  "de": "Hoch (Standard)"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "AB01ZE_siren_volume",
-        "title": {
-          "en": "Set volume of siren",
-          "nl": "Zet het volume van de sirene",
-          "de": "Einstellen der Lautstärke der Sirene"
-        },
-        "hint": {
-          "en": "Set volume of siren.",
-          "nl": "Zet het volume van de sirene.",
-          "de": "Einstellen der Lautstärke der Sirene"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=NAS-AB01ZE"
-          },
-          {
-            "name": "siren_volume",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Low",
-                  "nl": "Laag",
-                  "de": "Niedrig"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Midle",
-                  "nl": "Middelmatig",
-                  "de": "Mittel"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "High (default)",
-                  "nl": "Hoog (standaard)",
-                  "de": "Hoch (Standard)"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "SC01ZE_switch_LED",
-        "title": {
-          "en": "Set Touch Switch LED",
-          "nl": "Stel Touch Switch LED in",
-          "de": "Touch-Steuerung LED einstellen"
-        },
-        "hint": {
-          "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
-          "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld",
-          "de": "Aktivieren oder deaktivieren der Touch-Steuerung LED, die beim Einschalten aufleuchtet."
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=NAS-SC01ZE"
           },
           {
-            "name": "switch_LED_onoff",
+            "name": "backlight_state",
             "type": "dropdown",
             "values": [
               {
                 "id": "0",
                 "label": {
-                  "en": "LED disabled",
-                  "nl": "LED uitgeschakeld",
-                  "de": "LED deaktivieren"
+                  "en": "Off",
+                  "nl": "Uit"
                 }
               },
               {
                 "id": "1",
                 "label": {
-                  "en": "LED enabled",
-                  "nl": "LED ingeschakeld",
-                  "de": "LED aktivieren"
+                  "en": "On",
+                  "nl": "Aan"
                 }
               }
             ]
@@ -641,41 +217,33 @@
         ]
       },
       {
-        "id": "SC02ZE_switch_LED",
+        "id": "backlight_mode",
         "title": {
-          "en": "Set Touch Switch LED",
-          "nl": "Stel Touch Switch LED in",
-          "de": "Touch-Steuerung LED einstellen"
-        },
-        "hint": {
-          "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
-          "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld",
-          "de": "Aktivieren oder deaktivieren der Touch-Steuerung LED, die beim Einschalten aufleuchtet."
+          "en": "Backlight On/Off",
+          "nl": "Backlight Aan/Uit"
         },
         "args": [
           {
-            "name": "device",
             "type": "device",
+            "name": "device",
             "filter": "driver_id=NAS-SC02ZE"
           },
           {
-            "name": "switch_LED_onoff",
+            "name": "backlight_state",
             "type": "dropdown",
             "values": [
               {
                 "id": "0",
                 "label": {
-                  "en": "LED disabled",
-                  "nl": "LED uitgeschakeld",
-                  "de": "LED deaktivieren"
+                  "en": "Off",
+                  "nl": "Uit"
                 }
               },
               {
                 "id": "1",
                 "label": {
-                  "en": "LED enabled",
-                  "nl": "LED ingeschakeld",
-                  "de": "LED aktivieren"
+                  "en": "On",
+                  "nl": "Aan"
                 }
               }
             ]
@@ -683,41 +251,33 @@
         ]
       },
       {
-        "id": "SC03ZE_switch_LED",
+        "id": "backlight_mode",
         "title": {
-          "en": "Set Touch Switch LED",
-          "nl": "Stel Touch Switch LED in",
-          "de": "Touch-Steuerung LED einstellen"
-        },
-        "hint": {
-          "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
-          "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld",
-          "de": "Aktivieren oder deaktivieren der Touch-Steuerung LED, die beim Einschalten aufleuchtet."
+          "en": "Backlight On/Off",
+          "nl": "Backlight Aan/Uit"
         },
         "args": [
           {
-            "name": "device",
             "type": "device",
+            "name": "device",
             "filter": "driver_id=NAS-SC03ZE"
           },
           {
-            "name": "switch_LED_onoff",
+            "name": "backlight_state",
             "type": "dropdown",
             "values": [
               {
                 "id": "0",
                 "label": {
-                  "en": "LED disabled",
-                  "nl": "LED uitgeschakeld",
-                  "de": "LED deaktivieren"
+                  "en": "Off",
+                  "nl": "Uit"
                 }
               },
               {
                 "id": "1",
                 "label": {
-                  "en": "LED enabled",
-                  "nl": "LED ingeschakeld",
-                  "de": "LED aktivieren"
+                  "en": "On",
+                  "nl": "Aan"
                 }
               }
             ]
@@ -728,18 +288,16 @@
         "id": "WR01Z_reset_meter",
         "title": {
           "en": "Reset meter values",
-          "nl": "Meter waarden opnieuw instellen",
-          "de": "Zählerwerte zurücksetzen"
+          "nl": "Meter waarden resetten"
         },
         "hint": {
-          "en": "Reset the accumulated power usage value (kWh), note that this can not be reversed.",
-          "nl": "Stel geaccumuleerde stroomverbruik waarde (kWh) opnieuw in, dit kan niet worden teruggedraaid.",
-          "de": "Rücksetzen des kumulierten Stromverbrauchswertes (kWh), beachte, dass dies nicht rückgängig gemacht werden kann."
+          "en": "Reset the accumulated power usage (kWh). Can not be reversed.",
+          "nl": "Reset de stroomverbruik (kWh) waarden. Kan niet ongedaan worden gemaakt."
         },
         "args": [
           {
-            "name": "device",
             "type": "device",
+            "name": "device",
             "filter": "driver_id=NAS-WR01ZE"
           }
         ]
@@ -748,18 +306,16 @@
         "id": "WR02Z_reset_meter",
         "title": {
           "en": "Reset meter values",
-          "nl": "Meter waarden opnieuw instellen",
-          "de": "Zählerwerte zurücksetzen"
+          "nl": "Meter waarden resetten"
         },
         "hint": {
-          "en": "Reset the accumulated power usage value (kWh), note that this can not be reversed.",
-          "nl": "Stel geaccumuleerde stroomverbruik waarde (kWh) opnieuw in, dit kan niet worden teruggedraaid.",
-          "de": "Rücksetzen des kumulierten Stromverbrauchswertes (kWh), beachte, dass dies nicht rückgängig gemacht werden kann."
+          "en": "Reset the accumulated power usage (kWh). Can not be reversed.",
+          "nl": "Reset de stroomverbruik (kWh) waarden. Kan niet ongedaan worden gemaakt."
         },
         "args": [
           {
-            "name": "device",
             "type": "device",
+            "name": "device",
             "filter": "driver_id=NAS-WR02ZE"
           }
         ]
@@ -3526,201 +3082,7 @@
             }
           }
         }
-      },
-      "settings": [
-        {
-          "id": "led_display",
-          "zwave": {
-            "index": 5,
-            "size": 1
-          },
-          "type": "checkbox",
-          "label": {
-            "en": "State indication Led",
-            "nl": "Status indicatie Led",
-            "de": "Status LED"
-          },
-          "value": true,
-          "hint": {
-            "en": "Enable (checked) the status led on top.\nParameter #5\nDefault: enabled = checked",
-            "nl": "Schakel de status indicatie led functie in (checked).\nParameter #5\nStandaard: ingeschakeld = checked",
-            "de": "Aktiviert die Status led oben.\nParameter #5\nStandard: aktiviert = ausgewählt"
-          }
-        },
-        {
-          "id": "meter_report",
-          "zwave": {
-            "index": 1,
-            "size": 1
-          },
-          "type": "checkbox",
-          "label": {
-            "en": "Meter report functie",
-            "nl": "Meter reportage functie",
-            "de": "Stromzähler Funktion"
-          },
-          "value": true,
-          "hint": {
-            "en": "Enable (checked) sending meter report measure data to the Z-wave controller.\nParameter #1\nDefault: enabled = checked",
-            "nl": "Inschakelen (checked) van het versturen van meter rapportages naar de Z-wave controller.\nParameter#1\nStandaard: ingeschakeld = checked",
-            "de": "Aktiviert das Senden von Messdaten des Stromverbrauchs an den Z-Wave-Controller.\nParameter #1\nStandard: aktiviert = ausgewählt"
-          }
-        },
-        {
-          "id": "meter_report_interval",
-          "zwave": {
-            "index": 2,
-            "size": 2,
-            "signed": false
-          },
-          "type": "number",
-          "attr": {
-            "min": 60,
-            "max": 65535
-          },
-          "value": 300,
-          "label": {
-            "en": "Meter report interval (s)",
-            "nl": "Meter reportage interval (s)",
-            "de": "Stromzählermeldung Intervall (s)"
-          },
-          "hint": {
-            "en": "The amount of seconds between a Meter Report being send to controller. \nParameter #2\nRange: 60 - 65535\nDefault: 300",
-            "nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden. \nParameter #2\nBereik: 60 - 65535\nStandaard: 300",
-            "de": "Die Anzahl der Sekunden zwischen dem Senden eines Stromverbrauchsberichts an den Controller. \nParameter #2\nBereich: 60 - 6553535\nStandard: 300"
-          }
-        },
-        {
-          "id": "power_report_change",
-          "zwave": {
-            "index": 6,
-            "size": 1
-          },
-          "type": "number",
-          "attr": {
-            "min": 1,
-            "max": 100
-          },
-          "value": 20,
-          "label": {
-            "en": "Power change [%]",
-            "nl": "Wijziging van vermogen [%]",
-            "de": "Stromverbrauch Änderung [%]"
-          },
-          "hint": {
-            "en": "The amount of power consumed must change to be reported to the controller.\nParameter #6\nRange: 1 - 100\nDefault: 20",
-            "nl": "De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller.\nParameter #6\nBereik: 1 - 100\nStandaard: 20",
-            "de": "Der aktuelle Stromverbrauch der sich ändern muss, damit er an den Controller gemeldet wird. \nParameter #6 \nBereich: 1 - 100 \nStandard: 20"
-          }
-        },
-        {
-          "id": "remember_state",
-          "zwave": {
-            "index": 7,
-            "size": 1
-          },
-          "type": "checkbox",
-          "label": {
-            "en": "Restore state after power loss",
-            "nl": "Herstel toestand bij spanningsuitval",
-            "de": "Status nach Stromausfall"
-          },
-          "value": true,
-          "hint": {
-            "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nParameter #7\nDefault: enabled = checked)",
-            "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked). \nParameter #7\nStandaard: uitgeschakeld = unchecked)",
-            "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn aktiviert (ausgewählt) oder bleibt ausgeschaltet, wenn deaktiviert (nicht ausgewählt).\nParameter #7\nStandard: aktiviert = ausgewählt)"
-          }
-        },
-        {
-          "id": "over_load_current",
-          "zwave": {
-            "index": 3,
-            "size": 1
-          },
-          "type": "number",
-          "attr": {
-            "min": 1,
-            "max": 16
-          },
-          "value": 13,
-          "label": {
-            "en": "Maximum over-load current (A)",
-            "nl": "Maximale over-load stroom (A)",
-            "de": "Maximaler Überlaststrom (A)"
-          },
-          "hint": {
-            "en": "Defines the maximum current the plug can provide to the device connected to it. If the current consumed is greater than the value set, the plug will cut power.\nParameter #3\nRange: 1 - 16\nDefault: 13",
-            "nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het huidige stroomverbruik groter is dan de ingestelde waarde, wordt de power plug uitgeschakeld. \nParameter #3\nBereik: 1 - 16\nStandaard: 13",
-            "de": "Definiert den maximalen Strom, den der Stecker für das angeschlossene Gerät liefern kann. Wenn der Stromverbrauch größer als der eingestellte Wert ist, unterbricht der Stecker die Stromversorgung \nParameter #3\nBereich: 1 - 16\nStandard: 13"
-          }
-        },
-        {
-          "id": "alarm_current",
-          "zwave": {
-            "index": 4,
-            "size": 1
-          },
-          "type": "number",
-          "attr": {
-            "min": 1,
-            "max": 16
-          },
-          "value": 12,
-          "label": {
-            "en": "Upper alarm current (A)",
-            "nl": "Bovenwaarde alarm stroom (A)",
-            "de": "Oberer Alarmstrom (A)"
-          },
-          "hint": {
-            "en": "Defines the current the plug is allowed to provide to the device connected to it. If the alarm current is exceeded, the plug will send an alarm notification to the controller and LED will turn RED. Value specified has to be less or equal to 'Maximum over-load current'. \nParameter #4\nRange: 1 - 12\nDefault: 12",
-            "nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het alarm stroom overschreden wordt, zal de power plug een alarm naar de controller versturen en de LED rood kleuren. De waarde moet kleiner of gelijk zijn aan 'Maximale over-load stroom'. \nParameter #4n\nBereik: 1 - 12\nStandaard: 12",
-            "de": "Definiert den Strom, den der Stecker für das angeschlossene Gerät liefern darf. Wenn der Alarmstrom überschritten wird, sendet der Stecker eine Alarmmeldung an den Controller und die LED leuchtet ROT. Der angegebene Wert muss kleiner oder gleich 'Maximaler Überlaststrom' sein. \nParameter #4\nBereich: 1 - 12\nStandard: 12"
-          }
-        },
-        {
-          "id": "time_switch_function",
-          "zwave": {
-            "index": 8,
-            "size": 1
-          },
-          "type": "checkbox",
-          "label": {
-            "en": "Time switch off function",
-            "nl": "Tijd uitschakel functie",
-            "de": "Zeitschaltfunktion"
-          },
-          "value": false,
-          "hint": {
-            "en": "Aktiviert die Zeitschaltfunktion. Wenn aktiviert (ausgewählt), schaltet sich der Netzstecker nach dem Einschalten nach der unter 'Ausschaltzeit' definierten Zeit aus. (#8, Standard: deaktiviert = nicht ausgewählt)",
-            "nl": "Inschakelen van de tijd uitschakel functie. Wanneer ingeschakeld (checked) zal de power plug na ingeschakeld te zijn, automatisch uitschakelen na de in 'Uitschakel tijdsduur' gedefinieerde tijd. \nParameter: 8, standaard: uitgeschakeld = unchecked)"
-          }
-        },
-        {
-          "id": "time_switch_period",
-          "zwave": {
-            "index": 9,
-            "size": 2,
-            "signed": false
-          },
-          "type": "number",
-          "attr": {
-            "min": 1,
-            "max": 65535
-          },
-          "value": 150,
-          "label": {
-            "en": "Switch off time period (min)",
-            "nl": "Uitschakel tijdsduur (min)",
-            "de": "Ausschaltzeit (min)"
-          },
-          "hint": {
-            "en": "The time period before switching off the power plug, if time function has been enabled in 'Time switch off function'. \nParameter: 9\nRange: 1 - 65535\nDefault: 150",
-            "nl": "De tijdsduur waarna de power plug zal uitschakelen, wanneer de tijd schakelings functie ingeschakeld is in 'Tijd uitschakel functie'. \nParameter: 9\nBereik: 1 - 65535\nStandaard: 150",
-            "de": "Die Zeitspanne bis zum Ausschalten des Power Plugs, wenn die Fuktion unter'Zeitschaltfunktion' aktiviert wurde. \nParameter: 9\nBereich: 1 - 6553535\nStandard: 150"
-          }
-        }
-      ]
+      }
     },
     {
       "id": "NAS-WR02ZE",

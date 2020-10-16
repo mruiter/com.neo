@@ -1,0 +1,32 @@
+{
+  "actions": [
+	{"id": "backlight_mode",
+	"title": {
+		"en": "Backlight On/Off",
+		"nl": "Backlight Aan/Uit"
+	  },
+	  "args": [
+		{
+		  "name": "backlight_state",
+		  "type": "dropdown",
+		  "values": [
+			{
+			  "id": "0",
+			  "label": {
+				"en": "Off",
+				"nl": "Uit"
+			  }
+			},
+			{
+			  "id": "1",
+			  "label": {
+				"en": "On",
+				"nl": "Aan"
+			  }
+			}
+		  ]
+		}
+		]
+	}
+	]
+}

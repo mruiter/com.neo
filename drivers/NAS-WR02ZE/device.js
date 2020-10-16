@@ -87,18 +87,19 @@ class Wallplug_WR02Z extends ZwaveDevice {
                 return null;
             }
         });
+  }
+	// define FlowCardAction to reset meter_power
+	resetMeterRunListener(args, state) {
+    if (this.node
+            && this.node.CommandClass
+            && this.node.CommandClass.COMMAND_CLASS_METER) {
+      this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({}, (err, result) => {
+        if (err) return callback(err);
 
-		// define FlowCardAction to reset meter_power
-		let WR02Z_reset_meter_run_listener = async(args) => {
-			let result = await args.device.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({})
-			if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
-		};
-
-		let actionWR02Z_reset_meter = new Homey.FlowCardAction('WR02Z_reset_meter');
-		actionWR02Z_reset_meter
-			.register()
-			.registerRunListener(WR02Z_reset_meter_run_listener);	
-    
+        // If properly transmitted, change the setting and finish flow card
+        return result === 'TRANSMIT_COMPLETE_OK';
+      });
+    } else return false;
   }
 }
 

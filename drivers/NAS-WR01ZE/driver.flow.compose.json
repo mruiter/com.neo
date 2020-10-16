@@ -1,0 +1,16 @@
+{
+  "actions": [
+    {
+      "id": "WR01Z_reset_meter",
+      "title": {
+        "en": "Reset meter values",
+        "nl": "Meter waarden resetten"
+      },
+      "hint": {
+        "en": "Reset the accumulated power usage (kWh). Can not be reversed.",
+        "nl": "Reset de stroomverbruik (kWh) waarden. Kan niet ongedaan worden gemaakt."
+      },
+      "args": []
+    }
+  ]
+}
