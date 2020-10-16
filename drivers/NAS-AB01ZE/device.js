@@ -39,6 +39,68 @@ class Siren_AB01Z extends ZwaveDevice {
       }
     });
   }
+  
+  ////////// Flow Triggers
+  
+   async alarm_modeRunListener(args, state) {
+    if (args.hasOwnProperty('alarm_mode')) {
+      return this.configurationSet({
+        index: 7,
+        size: 1,
+        id: 'alarm_mode',
+      }, new Buffer([args.alarm_mode]));
+    }
+  }
+
+   async alarm_tuneRunListener(args, state) {
+    if (args.hasOwnProperty('alarm_tune')) {
+      return this.configurationSet({
+        index: 5,
+        size: 1,
+        id: 'alarm_tune',
+      }, new Buffer([args.alarm_tune]));
+    }
+  }
+
+   async siren_volumeRunListener(args, state) {
+    if (args.hasOwnProperty('siren_volume')) {
+      return this.configurationSet({
+        index: 4,
+        size: 1,
+        id: 'siren_volume',
+      }, new Buffer([args.siren_volume]));
+    }
+  }
+
+   async doorbell_tuneRunListener(args, state) {
+    if (args.hasOwnProperty('doorbell_tune')) {
+      return this.configurationSet({
+        index: 6,
+        size: 1,
+        id: 'doorbell_tune',
+      }, new Buffer([args.doorbell_tune]));
+    }
+  }
+
+   async doorbell_volumeRunListener(args, state) {
+    if (args.hasOwnProperty('doorbell_volume')) {
+      return this.configurationSet({
+        index: 1,
+        size: 1,
+        id: 'doorbell_volume',
+      }, new Buffer([args.doorbell_volume]));
+    }
+  } 
+  
+  
+  
+  //////////////////
+  
+  
+  
+  
+  
+  
 
 }
 

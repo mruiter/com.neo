@@ -1,6 +1,6 @@
 {
   "actions": [
-	{"id": "backlight_mode",
+	{"id": "NAS-SC02Z_backlight_mode",
 	"title": {
 		"en": "Backlight On/Off",
 		"nl": "Backlight Aan/Uit"
