@@ -571,6 +571,20 @@
         ]
       },
       {
+        "id": "NAS-SC01Z_Toggle",
+        "title": {
+          "en": "Toggle on or off",
+          "nl": "Schakel aan of uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=NAS-SC01ZE"
+          }
+        ]
+      },
+      {
         "id": "NAS-SC02Z_backlight_mode",
         "title": {
           "en": "Backlight On/Off",
@@ -605,6 +619,20 @@
         ]
       },
       {
+        "id": "NAS-SC02Z_Toggle",
+        "title": {
+          "en": "Toggle on or off",
+          "nl": "Schakel aan of uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=NAS-SC02ZE"
+          }
+        ]
+      },
+      {
         "id": "NAS-SC03Z_backlight_mode",
         "title": {
           "en": "Backlight On/Off",
@@ -635,6 +663,20 @@
                 }
               }
             ]
+          }
+        ]
+      },
+      {
+        "id": "NAS-SC03Z_Toggle",
+        "title": {
+          "en": "Toggle on or off",
+          "nl": "Schakel aan of uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=NAS-SC03ZE"
           }
         ]
       },

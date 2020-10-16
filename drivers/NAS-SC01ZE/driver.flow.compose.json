@@ -27,6 +27,14 @@
 		  ]
 		}
 		]
-	}
+	},
+	{
+     "id": "NAS-SC01Z_Toggle",
+     "title": {
+        "en": "Toggle on or off",
+        "nl": "Schakel aan of uit"
+     },
+     "args": []
+   }
 	]
 }
