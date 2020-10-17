@@ -9,14 +9,6 @@ class KeyFob_RC01Z extends ZwaveDevice {
 	  let PreviousSequenceNo = 'empty';
 	  
 	this.registerCapability('alarm_emergency', 'NOTIFICATION', {
-      get: 'NOTIFICATION_GET',
-      getOpts: {
-        getOnOnline: true,
-      },
-      getParser: () => ({
-        'V1 Alarm Type': 0,
-        'Notification Type': 'Emergency',
-      }),
       report: 'NOTIFICATION_REPORT',
       reportParser: report => {
         if (report && report['Notification Type'] === 'Emergency') {
