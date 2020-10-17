@@ -18,14 +18,6 @@ class Siren_AB01Z extends ZwaveDevice {
       }
     });
     this.registerCapability('alarm_siren', 'NOTIFICATION', {
-      get: 'NOTIFICATION_GET',
-      getOpts: {
-        getOnOnline: true,
-      },
-      getParser: () => ({
-        'V1 Alarm Type': 0,
-        'Notification Type': 'Siren',
-      }),
       report: 'NOTIFICATION_REPORT',
       reportParser: report => {
         if (report && report['Notification Type'] === 'Siren') {

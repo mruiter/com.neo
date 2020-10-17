@@ -10,14 +10,6 @@ class KeyFob_RS01Z extends ZwaveDevice {
     this.registerCapability('measure_battery', 'BATTERY');
 
     this.registerCapability('alarm_emergency', 'NOTIFICATION', {
-      get: 'NOTIFICATION_GET',
-      getOpts: {
-        getOnOnline: true,
-      },
-      getParser: () => ({
-        'V1 Alarm Type': 0,
-        'Notification Type': 'Emergency',
-      }),
       report: 'NOTIFICATION_REPORT',
       reportParser: report => {
         if (report && report['Notification Type'] === 'Emergency') {
