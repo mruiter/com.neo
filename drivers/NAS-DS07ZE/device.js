@@ -5,11 +5,7 @@ const {ZwaveDevice} = require('homey-zwavedriver');
 class DoorWindowSensor_DS07Z extends ZwaveDevice {
 
   async onNodeInit() {
-    this.registerCapability('alarm_contact', 'NOTIFICATION', {
-      getOpts: {
-        getOnOnline: true,
-      },
-    });
+    this.registerCapability('alarm_contact', 'NOTIFICATION');
     this.registerCapability('alarm_tamper', 'SENSOR_MULTILEVEL', {
       getOpts: {
         getOnOnline: true,
