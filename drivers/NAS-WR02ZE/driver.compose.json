@@ -17,15 +17,16 @@
     "small": "{{driverAssetsPath}}/images/small.jpg"
   },
   "zwave": {
-    "manufacturerId": 600,
+    "manufacturerId": [600, 1050],
     "productTypeId": [3, 512, 768],
-    "productId": [4135],
+    "productId": [8, 4135],
     "includeSecure": false,
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
         "en": "Press the button on your NEO Wall Plug three times",
-        "nl": "Druk driemaal op de knop op de NEO Wall Plug"
+        "nl": "Druk driemaal op de knop op de NEO Wall Plug",
+        "de": "Drücken Sie dreimal die Taste am NEO-Wandstecker"
       }
     },
     "associationGroups": [
