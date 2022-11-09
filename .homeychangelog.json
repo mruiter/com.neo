@@ -1,0 +1,122 @@
+{ 
+  "2.1.16": {
+    "en": "• Added extra device ID's"
+  },
+  "2.1.15": {
+    "en": "• Added extra device ID's"
+  },
+  "2.1.14": {
+    "en": "• Added extra ID's Flood Sensor"
+  },
+  "2.1.13": {
+    "en": "• Updated pairing description of the PIR V4"
+  },
+  "2.1.12": {
+    "en": "• Minimum V7 Homey Firmware. • Added more PD07Z ids. • Removed force unsecure pair"
+  },
+  "2.1.11": {
+    "en": "• Added PIR v4 PD07Z"
+  },
+  "2.1.10": {
+    "en": "• Added extra ID's for the Wallplug V2"
+  },
+  "2.1.9": {
+    "en": "• Updated Mesh Driver after fix 2 prevent false alarm triggers on PIR"
+  },
+  "2.1.8": {
+    "en": "• Changed reports for Pir V2 since users reported no alarm notifications"
+  },
+  "2.1.7": {
+    "en": "• Split the new reported V2 Pir into new V3 to solve issues. • Added new Doorsensor V2 support. • Added new Z-Wave Repeater support. • Fixed Dual and Tripple switch associations."
+  },
+  "2.1.6": {
+    "en": "• Updated MeshDriver Lib JSON."
+  },
+  "2.1.5": {
+    "en": "• Added newly reported device ID for Motion Sensor V2. • Added MultiChannelAss for 3 way switch. • Added test base for new Doorsensor V2. • Updated MeshDriver."
+  },
+  "2.1.4": {
+    "en": "• Added newly reported device ID for the WallPlug V2."
+  },
+  "2.1.3": {
+    "en": "• Made report parsers for V1 plug independend from the homey-mesh-driver. • Finished ( i hope so :) ) the code for the curtain contoller. • Setting changes for the Pir V1."
+  },
+  "2.1.2": {
+    "en": "• Fix for V2 plugs and negative value reported back - THX 2 nlrb."
+  },
+  "2.1.1": {
+    "en": "• Added test code for curtain controller. • Fixed add_unsecure since athom its secure zwave is buggy. • Fixed some language errors. • Added some more device ID's that users reported. • Fixed settings for the v2 plugs"
+  },
+  "2.1.0": {
+    "en": "Initial Beta Release V2.1 series - Breaking Changes for Wall Switch !! • Added support Homey Energy. • Added support for Touch Wall Switch Triple. • Driver split the Power Switching Plug V1 and V2 version - Could need re-pair of the Power Switching Plug V2. • Renamed wall switch driver names to the changed Coolcam naming - Will need re-pair of the Touch Wall Switch Dual. • Change: All battery powered devices are forced unsecure to avoid the problems in the Homey z-wave core."
+  },
+  "2.0.21": {
+    "en": "Added support for Doorsensor RU and NZ region / Added support for PIRv1 RU region."
+  },
+  "2.0.20": {
+    "en": "Added German Translation to the app."
+  },
+  "2.0.19": {
+    "en": "Update setting for PIRv2 detection led Enable/Disable."
+  },
+  "2.0.18": {
+    "en": "Extra setting added to the v2 PIR Motion detection event report."
+  },
+  "2.0.17": {
+    "en": "Again back to the old mesh driver. Now updates dont get pushed to Homey."
+  },
+  "2.0.16": {
+    "en": "Updated to latest mesh driver again after fixes being done by Athom."
+  },
+  "2.0.15": {
+    "en": "Added new EU device ID's to the app for PowerPlug."
+  },
+  "2.0.14": {
+    "en": "Switched back to the old mesh driver since the new one breaks reporting in the homey core."
+  },
+  "2.0.13": {
+    "en": "Fixed missing signed: false in Doorbell/Siren."
+  },
+  "2.0.12": {
+    "en": "Added some device ID's from the PIR."
+  },
+  "2.0.11": {
+    "en": "• Added some device ID's from the PIR, Siren and Plug. • Update to latest Mesh-Driver."
+  },
+  "2.0.10": {
+    "en": "• Small update for the PIRv2. • Update to latest Mesh-Driver."
+  },
+  "2.0.9": {
+    "en": "Small update for single wall switches."
+  },
+  "2.0.8": {
+    "en": "Added the new forum and issue links for the new appstore layout."
+  },
+  "2.0.7": {
+    "en": "First reports came in of a real PIR v2 so id's are added."
+  },
+  "2.0.6": {
+    "en": "Meter Reset in driver on WR01Z Plugs after support dropped in the Z-Wave Mesh driver after issues."
+  },
+  "2.0.5": {
+    "en": "• Water Sensor not reporting in on leakage. • Motion Sensor sensitivity settings."
+  },
+  "2.0.4": {
+    "en": "Added fix from z-wave mesh driver that should fix some trouble with the dual switches and a specific firmware version."
+  },
+  "2.0.3": {
+    "en": "Added volume action cards for siren and doorbell mode NAS-AB01ZE."
+  },
+  "2.0.2": {
+    "en": "• Fixed Siren Trigger card that did not fire correct. • Updated more device icons for better experience."
+  },
+  "2.0.1": {
+    "en": "• Added support for the KeyFob/ Emergency Remote Control. • Added support for the SOS Remote button. • Updated device icons for better appstore experience. • Updated some device svg icons for better experience on Homey."
+  },
+  "2.0.0": {
+    "en": "• Moved App to zwave-mesh driver and SDKv2. • Added all other know country/regio id's known in de z-wave alliance database in the app. • Added support for the NAS-SC01ZE Touch Wall Switch Single. • Added empty driver for PD02 so it shows in appstore as device icon/tile."
+  },
+  "2.1.15": {
+    "en": "Updated Mesh Driver"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Emergency",
+    "nl": "Noodgeval"
+  },
+  "units": {
+    "en": "Status"
+  },
+  "desc": {
+    "en": "Alarm",
+    "nl": "Alarm"
+  },
+  "getable": true,
+  "setable": false
+}

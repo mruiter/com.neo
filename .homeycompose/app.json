@@ -1,0 +1,88 @@
+{
+  "id": "com.neo",
+  "sdk": 2,
+  "name": {
+    "en": "NEO Coolcam",
+    "nl": "NEO Coolcam"
+  },
+  "version": "2.1.16",
+  "compatibility": ">=7.0.0",
+  "brandColor": "#ff66cc",
+  "description": {
+    "en": "NEO Coolcam Z-Wave device support",
+    "nl": "NEO Coolcam Z-Wave device ondersteuning",
+    "de": "NEO Coolcam Z-Wave Produktunterstützung"
+  },
+  "tags": {
+    "en": [
+      "scene controller",
+      "remote",
+      "remote control",
+      "keyfob",
+      "sos",
+      "button",
+      "central scene",
+      "scenes",
+      "motion detection",
+      "motion",
+      "alarm",
+      "door",
+      "window",
+      "sensor",
+      "switch",
+      "smart plug",
+      "USB"
+    ],
+    "nl": [
+      "scene controller",
+      "afstandsbediening",
+      "sleutel",
+      "sleutelhanger",
+      "sos",
+      "knop",
+      "central scene",
+      "scenes",
+      "bewegingsdetectie",
+      "beweging",
+      "alarm",
+      "deur",
+      "raam",
+      "sensor",
+      "schakelaar",
+      "USB"
+    ]
+  },
+  "category": [
+    "appliances",
+    "lights",
+    "security"
+  ],
+  "images": {
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  },
+  "author": {
+    "name": "Marco Ruiter",
+    "email": "mruiter@tuxweb.nl"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Marco Ruiter",
+        "email": "mruiter@tuxweb.nl"
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/mruiter/com.neo/issues"
+  },
+  "support": "mailto:mruiter@tuxweb.nl",
+  "athomForumDiscussionId": 4346,
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "MarcoRuiter"
+      }
+    }
+  }
+}

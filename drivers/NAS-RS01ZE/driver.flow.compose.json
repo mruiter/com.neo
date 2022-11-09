@@ -1,0 +1,18 @@
+{
+  "triggers": [
+    {
+      "id": "alarm_sos",
+      "title": {
+        "en": "Emergency Alarm",
+        "nl": "SOS Alarm",
+        "de": "SOS Alarm"
+      },
+      "hint": {
+        "en": "This card will trigger when Emergency button is activated.",
+        "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop SOS wordt ingedrukt.",
+        "de": "Diese Karte wird ausgelöst, wenn der Notfalltaster gedrückt wird."
+      },
+      "args": []
+    }
+  ]
+}

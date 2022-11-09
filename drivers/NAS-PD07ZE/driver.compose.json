@@ -1,0 +1,238 @@
+{
+  "id": "NAS-PD07ZE",
+  "name": {
+    "en": "PIR V4",
+    "nl": "PIR V4"
+  },
+  "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 600,
+    "productTypeId": 16,
+    "productId": [ 1816 , 1824 ],
+    "learnmode": {
+      "image": "/drivers/NAS-PD07ZE/assets/icon.svg",
+      "instruction": {
+        "en": "Press the code button inside your NEO PIR for more then 5 seconds until it starts to blink",
+        "nl": "Druk op de code knop binnen in de NEO PIR voor minimaal 5 seconden totdat deze gaat knipperen",
+        "de": "Drücken Sie die Codetaste im Inneren des NEO PIR mindestens 5 Sekunden lang, bis sie blinkt"
+		}
+    },
+    "unlearnmode": {
+      "image": "/drivers/NAS-PD07ZE/assets/icon.svg",
+      "instruction": {
+        "en": "Press the code button inside your NEO PIR for more then 5 seconds until it starts to blink",
+        "nl": "Druk op de code knop binnen in de NEO PIR voor minimaal 5 seconden totdat deze gaat knipperen",
+        "de": "Drücken Sie die Codetaste im Inneren des NEO PIR mindestens 5 Sekunden lang, bis sie blinkt"
+		}
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Lifeline service that assigned to Sensor (Motion detector) status – Open/Close. It enables the sensor to send reports and readings to Z‐Wave Controller whenever the sensor is triggered. (Homey ID by default). It is not recommended to change this group.",
+          "nl": "Lifeline service toegekend aan de Sensor (Bewegingsdetectie) status - Open/Dicht. Via deze groep kan de sensor bewegingsdetectie / lichtsterkte / batterijniveau rapporteren naar de Z-wave Controller wanneer de sensor geactiveerd is. (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen.",
+          "de": "Lifeline Service, der dem Sensor (Bewegungsmelder) zugeordnet ist - Open/Close. Es ermöglicht dem Sensor, Berichte und Messwerte an den Z-Wave-Controller zu senden, wenn der Sensor ausgelöst wird. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern."
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Allows for control commands to associated devices such as relay module, lighting, etc. This association group is configured through the 'Illumination switch ON function' parameters. (add Z-wave ID of relay devices).",
+          "nl": "Verstuurd controle commando naar gekoppelde apparaten zoals schakelaar, verlichting, etc. Deze group wordt geconfigureerd door de 'Lichtsterkte inschakel functie' parameters. (voeg het Z-wave ID van het te koppelen apparaat toe).",
+          "de": "Ermöglicht Steuerbefehle für assoziierte Geräte wie Relaismodul, Beleuchtung usw. Diese Assoziationsgruppe wird über die Parameter 'Helligkeit Einschalt Funktion' konfiguriert. (Z-Wave-ID von Relaisgeräten hinzufügen)."
+        }
+      }
+    }
+  },
+  "class": "sensor",
+  "energy": {
+    "batteries": [ "CR123A" ]
+  },
+  "capabilities": [
+    "alarm_motion",
+	"alarm_tamper",
+    "measure_temperature",
+    "measure_luminance",
+	"measure_humidity",
+    "measure_battery"
+  ],
+  "images": {
+    "large": "/drivers/NAS-PD07ZE/assets/images/large.jpg",
+    "small": "/drivers/NAS-PD07ZE/assets/images/small.jpg"
+  },
+  "settings": [
+    {
+      "id": "motion_blink",
+      "zwave": {
+        "index": 1,
+        "size": 1,
+		"signed": false
+      },
+      "type": "checkbox",
+	  "_size": 1,
+      "label": {
+        "en": "Motion detection LED indication",
+        "nl": "Bewegingsdetectie LED indicatie",
+        "de": "Bewegungsmelder LED"
+      },
+      "value": true,
+      "hint": {
+        "en": "Enable LED/PIR to blink red when motion detected. (default: Enabled)",
+        "nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (standaard: uitgeschakeld)",
+        "de": "Aktiviert die LED/PIR, um rot zu blinken, wenn eine Bewegung erkannt wird. (default: aktiviert)"
+      }
+    },
+	{
+      "id": "enable_PIR_function",
+      "zwave": {
+        "index": 2,
+        "size": 1,
+		"signed": false
+      },
+      "type": "checkbox",
+	  "_size": 1,
+      "label": {
+        "en": "Motion detection function",
+        "nl": "Bewegingsdetectie functie",
+        "de": "Bewegungsmelder-Funktion"
+      },
+      "value": true,
+      "hint": {
+        "en": "Enable the motion detection (PIR) function. This parameter does not effect the luminance reporting. (default: enabled)",
+        "nl": "Inschakelen van de bewegingsdetectie (PIR) functie. Deze parameter heeft geen invloed op de lichtsterke rapportage. (standaard: ingeschakeld)",
+        "de": "Aktiviert die Funktion Bewegungsmelder (PIR). Dieser Parameter hat keinen Einfluss auf die Heilligkeitsmeldung. (Standard: aktiviert)"
+      }
+    },
+	  {
+      "id": "motion_sensor_sensitivity",
+      "zwave": {
+        "index": 6,
+        "size": 1,
+		"signed": false
+      },
+      "type": "dropdown",
+	  "_size": 1,
+      "label": {
+        "en": "Motion detection sensitivity",
+        "nl": "Bewegingsdetectie gevoeligheid",
+        "de": "Empfindlichkeit des Bewegungsmelders"
+      },
+      "value": "2",
+      "hint": {
+        "en": "Adapt the sensitivity of the motion detection. (default: Normal sensitivity)",
+        "nl": "Hiermee kunt u de gevoeligheid van de bewegingsdetectie aanpassen. (standaard: Normale gevoeligheid)",
+        "de": "Passt die Empfindlichkeit des Bewegungsmelders an. (Standard: Normale Empfindlichkeit)"
+      },
+      "values": [{
+          "id": "1",
+          "label": {
+            "en": "High Sensitivity",
+            "nl": "Hoge Gevoeligheid",
+            "de": "Hohe Empfindlichkeit"
+          }
+        },
+        {
+          "id": "2",
+          "label": {
+            "en": "Normal Sensitivity (default)",
+            "nl": "Normale Gevoeligheid (standaard)",
+            "de": "Normale Empfindlichkeit (Standard)"
+          }
+        },
+        {
+          "id": "8",
+          "label": {
+            "en": "Lower Sensitivity",
+            "nl": "Lagere Gevoeligheid",
+            "de": "Niedere Empfindlichkeit"
+          }
+        },
+        {
+          "id": "15",
+          "label": {
+            "en": "Lowest Sensitivity",
+            "nl": "Laagste Gevoeligheid",
+            "de": "Niedrigste Empfindlichkeit"
+          }
+        }
+      ]
+    },
+	{
+      "id": "motion_off_delay",
+      "zwave": {
+        "index": 15,
+        "size": 2,
+		"signed": false
+      },
+      "type": "number",
+	  "_size": 2,
+      "attr": {
+        "min": 5,
+        "max": 3600
+      },
+      "label": {
+        "en": "Motion detection ON time (s)",
+        "nl": "Bewegingsdetectie AAN tijd (s)",
+        "de": "Bewegungsmelder EIN-Zeit (s)"
+      },
+      "value": 30,
+      "hint": {
+        "en": "Time duration that stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (default: 30 [s], range: 5 - 3600 [s])",
+        "nl": "Instelbare tijd dat aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. (standaard: 30 [s], bereik: 5 - 3600 [s])",
+        "de": "Zeitdauer, die der Bewegungserkennung eingeschaltet bleibt. Dieser Parameterwert muss größer sein als das die Bewegungsmelder Blindzeit. (Standard: 30 [s], Bereich: 5 - 3600[s])"
+      }
+    },
+	{
+      "id": "re-trigger_interval",
+      "zwave": {
+        "index": 13,
+        "size": 1,
+		"signed": false
+      },
+      "type": "number",
+      	"_size": 1,
+		"attr": {
+        "min": 0,
+        "max": 8
+      },
+      "label": {
+        "en": "Motion detection blind time (s)",
+        "nl": "Bewegingsdetectie blinde tijd (s)",
+        "de": "Bewegungsmelder Blindzeit (s)"
+      },
+      "value": 8,
+      "hint": {
+        "en": "Period after motion detection in which the sensor is insensitive for new motion detection. This value must be less than the 'Motion detection ON time'. (#6 default: 8 [s], range: 0 - 8 [s])",
+        "nl": "Periode na detecteren van beweging waarin de sensor ongevoelig is voor nieuwe bewegingsdetectie. De waarde moet lager zijn dan de 'Bewegingsdetectie AAN tijd'. (#6 standaard: 8 [s], bereik: 0 - 8 [s])",
+        "de": "Zeitraum nach der Bewegungserkennung, in dem der Sensor für eine neue Bewegungserkennung unempfindlich ist. Dieser Wert muss kleiner sein als die Einschaltzeit der 'Bewegungserkennung'. (#6 Standard: 8 [s], Bereich: 0 - 8[s])"
+      }
+    },
+	{
+      "id": "sensor_interval",
+      "zwave": {
+        "index": 17,
+        "size": 2,
+		"signed": false
+      },
+      "type": "number",
+      	"_size": 2,
+		"attr": {
+        "min": 0,
+        "max": 30000
+      },
+      "label": {
+        "en": "Sensor report interval (s)",
+        "nl": "Sensor rapportage-interval(s)",
+        "de": "Sensorberichtsintervall (s)"
+      },
+      "value": 180,
+      "hint": {
+        "en": "Time interval for light, temperature and humidity sensor measuring. The higher the value, the battery life is longer. 0 is reporting off(default: 180 [s], range: 0 - 30000 [s])",
+        "nl": "Tijdsinterval voor het meten van licht, temperatuur en vochtigheidssensor. Hoe hoger de waarde, hoe langer de batterij meegaat. 0 is uit(standaard: 180 [s], bereik: 0 - 30000 [s])",
+        "de": "Zeitintervall für die Messung des Licht-, Temperatur- und Feuchtigkeitssensors. Je höher der Wert, desto länger ist die Akkulaufzeit. 0 ist aus(Standard: 180 [s], Bereich: 0 - 30000[s])"
+      }
+    }
+
+  ]
+}
