@@ -21,10 +21,7 @@ NAS-WS01ZE, Flood Sensor
 NAS-RE01ZE, ZWave Repeater
     
    
-Supported Languages:
-English    
-Dutch    
-German   
+Supported Languages: English, Dutch, German   
    
 Support notes:
 Most reliable way to update battery powered devices   
