@@ -5,9 +5,11 @@
   "main": "app.js",
   "requires": true,
   "dependencies": {
-    "homey-log": "^1.0.6",
-    "homey-meshdriver": "^2.0.4",
-    "update": "^0.7.4"
+    "homey-zwavedriver": "^2.1.0"
+  },
+  "devDependencies": {
+		"eslint": "^6.8.0",
+		"eslint-config-athom": "^2.1.0"
   },
   "scripts": {
     "run": "homeyConfig compose && athom project --run",

@@ -1,0 +1,8 @@
+{
+  "settings": {
+    "offlineNodeSaveMessage": "Instellingen zullen worden opgeslagen bij de volgende automatische wakeup van dit apparaat, dit kan een tijdje duren. Activeer de leermodus van het apparaat om de instellingen meteen op te slaan."
+  },
+  "error": {
+    "command_failed": "Er ging iets fout"
+  }
+}

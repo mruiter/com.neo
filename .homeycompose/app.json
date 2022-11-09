@@ -1,11 +1,11 @@
 {
   "id": "com.neo",
-  "sdk": 2,
+  "sdk": 3,
   "name": {
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.1.16",
+  "version": "3.0.0",
   "compatibility": ">=7.0.0",
   "brandColor": "#ff66cc",
   "description": {

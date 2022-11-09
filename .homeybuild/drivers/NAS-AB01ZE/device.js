@@ -1,12 +1,18 @@
 'use strict';
 
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class Siren_AB01Z extends ZwaveDevice {
-  async onMeshInit() {
-    //this.enableDebug();
-    //this.printNode();
+
+  async onNodeInit() {
+    // enable debugging
+    // this.enableDebug();
+
+    // print the node's info to the console
+    // this.printNode();
+
+    // register capabilities for this device
     this.registerCapability('onoff', 'SWITCH_BINARY');
     this.registerCapability('measure_battery', 'BATTERY', {
       getOpts: {

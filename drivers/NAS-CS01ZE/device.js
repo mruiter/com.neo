@@ -1,12 +1,18 @@
 'use strict';
 
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class CurtainController_CS01ZE extends ZwaveDevice {
-  async onMeshInit() {
-    //this.enableDebug();
-    //this.printNode();
+
+  async onNodeInit() {
+    // enable debugging
+    // this.enableDebug();
+
+    // print the node's info to the console
+    // this.printNode();
+
+    // register device capabilities
 	this.registerCapability('windowcoverings_set', 'SWITCH_MULTILEVEL');
 	this.registerCapability('onoff', 'SWITCH_BINARY');
 

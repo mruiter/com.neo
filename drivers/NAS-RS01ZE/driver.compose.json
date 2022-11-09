@@ -50,6 +50,7 @@
       "CR3032"
     ]
   },
+  "platforms": ["local"],
   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 600,
@@ -118,6 +119,5 @@
         }
       }
     }
-  },
-  "settings": []
+  }
 }
