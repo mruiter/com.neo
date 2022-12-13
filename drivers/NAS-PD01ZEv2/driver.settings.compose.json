@@ -1,0 +1,380 @@
+[
+  {
+    "id": "motion_sensor_sensitivity",
+    "zwave": {
+      "index": 1,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 2,
+    "attr": {
+        "min": 0,
+        "max": 99
+      },
+      "label": {
+      "en": "Motion detection sensitivity",
+      "nl": "Bewegingsdetectie gevoeligheid",
+      "de": "Empfindlichkeit des Bewegungsmelders"
+    },
+    "value": 3,
+    "hint": {
+      "en": "A low value is higher sensitivity and large range.",
+      "nl": "Een lage waarde is hogere gevoeligheid en grotere afstand.",
+      "de": "Ein niederigen Wert gibt eine hohe Empfindlichkeit und grosen Abstand."
+    }
+  },
+  {
+    "id": "motion_window_time",
+    "zwave": {
+      "index": 2,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 1,
+    "attr": {
+        "min": 0,
+        "max": 3
+      },
+      "label": {
+      "en": "Motion Window Time",
+      "nl": "Bewegingsdetectie Tijdsvenster",
+      "de": "Bewegungsmelder Zeitfenster"
+    },
+    "value": 2,
+    "hint": {
+      "en": "The time (Value*4s+4s) during which a number of defined pulses (see Pulse Count) will trigger a motion event.",
+      "nl": "De tijd (Waarde*4s+4s) waarbinnen een gedefinieerd aantal pulsen (zie ook Pulsaantal) een bewegingsmelding geeft.",
+      "de": "Der Zeitraum (Wert*4s+4s) innerhalb der eine definierte Anzahl von Impulsen (siehe auch Impulszahl) eine Bewegungsmeldung ausgibt."
+    }
+  },
+  {
+    "id": "pulse_count",
+    "zwave": {
+      "index": 3,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 1,
+    "attr": {
+        "min": 0,
+        "max": 3
+      },
+      "label": {
+      "en": "Pulse Count",
+      "nl": "Pulseaantal",
+      "de": "Impulszahl"
+    },
+    "value": 1,
+    "hint": {
+      "en": "The number of pulses (Value + 1) detected within the defined Motion Time Window to trigger an event.",
+      "nl": "Het aantal pulsen (Waarde + 1) binnen het Bewegingtijdsvenster wat een bewegingsmelding geeft.",
+      "de": "Die Anzahl der Impulse (Wert + 1) innerhalb des Bewegungszeitfensters, die einen Bewegungsalarm auslösen"
+    }
+  },  
+  {
+    "id": "re-trigger_interval",
+    "zwave": {
+      "index": 4,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 1,
+    "attr": {
+      "min": 0,
+      "max": 15
+    },
+    "label": {
+      "en": "Motion detection blind time",
+      "nl": "Bewegingsdetectie blinde tijd",
+      "de": "Bewegungsmelder Blindzeit"
+    },
+    "value": 15,
+    "hint": {
+      "en": "Period [(Value+1)/2] after motion detection in which the sensor is insensitive for new motion detection.",
+      "nl": "Periode [(Waarde+1)/2] na detecteren van beweging waarin de sensor ongevoelig is voor nieuwe bewegingsdetectie.",
+      "de": "Zeitraum [(Wert+1)/2] nach der Bewegungserkennung, in dem der Sensor für eine neue Bewegungserkennung unempfindlich ist."
+    }
+  },
+  {
+    "id": "enable_PIR_function",
+    "zwave": {
+      "index": 5,
+      "size": 1,
+      "signed": false
+    },
+    "type": "checkbox",
+    "_size": 1,
+    "label": {
+      "en": "Motion detection function",
+      "nl": "Bewegingsdetectie functie",
+      "de": "Bewegungsmelder-Funktion"
+    },
+    "value": true,
+    "hint": {
+      "en": "Enable the motion detection (PIR) function. This parameter does not effect the luminance reporting. (#4, default: enabled = checked)",
+      "nl": "Inschakelen van de bewegingsdetectie (PIR) functie. Deze parameter heeft geen invloed op de lichtsterke rapportage. (#4, standaard: ingeschakeld = checked)",
+      "de": "Aktiviert die Funktion Bewegungsmelder (PIR). Dieser Parameter hat keinen Einfluss auf die Heilligkeitsmeldung. (#4, Standard: aktiviert = ausgewählt)"
+    }
+  },
+  {
+    "id": "motion_clear_time",
+    "zwave": {
+      "index": 6,
+      "size": 2,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 2,
+    "attr": {
+      "min": 10,
+      "max": 3600
+    },
+    "label": {
+      "en": "Motion Clear Time (s)",
+      "nl": "Bewegingsmelding Aan Tijd (s)",
+      "de": "Bewegungsalarm An-Zeit (s)"
+    },
+    "value": 30,
+    "hint": {
+      "en": "Time in seconds before an event is cleared",
+      "nl": "Tijd in seconden dat een bewegingsmelding vermeldt blijft",
+      "de": "Zeit in Sekunden, die ein Bewegungsalarm verbleibt"
+    }
+  },
+  {
+    "id": "motion_blink",
+    "zwave": {
+      "index": 7,
+      "size": 1,
+      "signed": false
+    },
+    "type": "checkbox",
+    "_size": 1,
+    "label": {
+      "en": "Motion detection LED indication",
+      "nl": "Bewegingsdetectie LED indicatie",
+      "de": "Bewegungsmelder LED"
+    },
+    "value": false,
+    "hint": {
+      "en": "Enable LED/PIR to blink red when motion detected. (default: disabled = unchecked)",
+      "nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (standaard: uitgeschakeld = unchecked)",
+      "de": "Aktiviert die LED/PIR, um rot zu blinken, wenn eine Bewegung erkannt wird. (default: deaktiviert = nicht ausgewählt)"
+    }
+  },
+  {
+    "id": "binary_report",
+    "zwave": {
+      "index": 8,
+      "size": 1,
+      "signed": false
+    },
+    "type": "checkbox",
+    "_size": 1,
+    "label": {
+      "en": "Binary Sensor Report",
+      "nl": "Binair Sensor Rapport",
+      "de": "Binärer Sensorbericht"
+    },
+    "value": false,
+    "hint": {
+      "en": "Enable a binary report when motion detected. (default: disabled = unchecked)",
+      "nl": "Inschakelen van een binair rapport bij bewegingsdetectie. (standaard: uitgeschakeld = unchecked)",
+      "de": "Aktiviert ein binärer Bericht, wenn eine Bewegung erkannt wird. (default: deaktiviert = nicht ausgewählt)"
+    }
+  },
+  {
+    "id": "basic_set_level",
+    "zwave": {
+      "index": 9,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 1,
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "label": {
+      "en": "Switch ON command (see hint)",
+      "nl": "Inschakel commando (zie hint)",
+      "de": "Einschaltbefehl (siehe Hinweis)"
+    },
+    "value": 255,
+    "hint": {
+      "en": "Command sent to associated device (group 2). (default: 255 = ON, Range: 0 – OFF, Alarm cancelling or turning a device off)",
+      "nl": "Commando dat gestuurd wordt naar het gekoppelde apparaat (group 2). (standaard: 255 = AAN, bereik: 0 – UIT, annulering alarm of het uitschakelen van het gekoppeld apparaat)",
+      "de": "Befehl, der an das assozierte Gerät gesendet wird (Gruppe 2). (Standard: 255 = EIN, Bereich: 0 - AUS, Alarm deaktiveren oder ausschalten eines Gerätes)"
+    }
+  },
+  {
+    "id": "sensor_measuring_interval",
+    "zwave": {
+      "index": 10,
+      "size": 2,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 2,
+    "label": {
+      "en": "Sensor measuring interval (s)",
+      "nl": "Sensormeting interval (s)",
+      "de": "Sensormessung intervall (s)"
+    },
+    "value": 180,
+    "attr": {
+      "min": 30,
+      "max": 3600
+    },
+    "hint": {
+      "en": "Determine the time between measuring of light intensity and temperature (default: 180 [s])",
+      "nl": "Bepaal het interval tussen het meten van de lichtsterkte en temperatuur (standaard: 180 [s])",
+      "de": "Bestimmt die Zeit zwischen die Helligkeits- und Temperaturmessung (Standard: 180 [s])"
+    }
+  },
+  {
+    "id": "illumination_report_differential",
+    "zwave": {
+      "index": 11,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 1,
+    "label": {
+      "en": "Illumination differential report threshold (lux)",
+      "nl": "Lichtsterkte verschil rapportagedrempel (lux)",
+      "de": "Schwellenwert des Helligkeitsänderungs (Lux)"
+    },
+    "value": 50,
+    "attr": {
+      "min": 1,
+      "max": 127
+    },
+    "hint": {
+      "en": "Sets how many lux needs to change before the value is being send to Homey. (default: 50 [lux])",
+      "nl": "Definieer hoeveel lux er moet veranderen voordat de waarde naar Homey word verstuurd. (standaard: 50 [lux])",
+      "de": "Legt fest, wie viele Lux sich ändern müssen, bevor der Wert an Homey gesendet wird. (Standard: 50[lux])"
+    }
+  },
+  {
+    "id": "illumination_report_threshold",
+    "zwave": {
+      "index": 12,
+      "size": 1,
+        "signed": false
+    },
+    "type": "number",
+    "_size": 1,
+    "label": {
+      "en": "Illumination switch ON level (lux)",
+      "nl": "Lichtsterkte inschakel niveau (lux)",
+      "de": "Helligkeitseinschaltpegel (Lux)"
+    },
+    "value": 50,
+    "attr": {
+      "min": 1,
+      "max": 127
+    },
+    "hint": {
+      "en": "Defines when it is considered to be dark (see also 'Illumination switch ON function') (default: 50 [lux])",
+      "nl": "Definieert wanneer het donker is (zie ook 'Lichtsterkte inschakel functie') (standaard: 50 [lux])",
+      "de": "Legt fest, wann es Dunkel ist (siehe auch 'Helligkeit Einschalt Funktion') (Standard: 50[lux])"
+    }
+  },
+  {
+    "id": "enable_illumination_trigger",
+    "zwave": {
+      "index": 13,
+      "size": 1,
+      "signed": false
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Illumination switch ON function",
+      "nl": "Lichtsterkte inschakel functie",
+      "de": "Helligkeit Einschalt Funktion"
+    },
+    "value": false,
+    "hint": {
+      "en": "Enable the function to switch on a associated device (group 2) once motion has been detected and the illumination level will be less than the value specified in 'Illumination switch ON level'. (default: disabled = unchecked)",
+      "nl": "Inschakelen van de lichtsterkte inschakel functie van een gekoppeld apparaat (groep 2) wanneer de lichtsterkte lager is dan de waarde gedefinieerd in 'Lichtsterkte inschakel niveau'. (standaard: uitgeschakeld = unchecked)",
+      "de": "Aktiviere die Funktion, um ein assoziertes Gerät (Gruppe 2) einzuschalten, sobald eine Bewegung erkannt wurde und die Heilligkeit unter dem unter 'Helligkeitseinschaltpegel' angegebenen Wert liegt. (Standard: deaktiviert = nicht ausgewählt)"
+    }
+  },
+  {
+    "id": "enable_report_once",
+    "zwave": {
+      "index": 14,
+      "size": 1,
+      "signed": false
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Motion Event Report Once",
+      "nl": "Eenmalige Bewegingsmelding",
+      "de": "Einmaliger Bewegungsalarm"
+    },
+    "value": false,
+    "hint": {
+      "en": "If enabled a motion event will be sent to the controller only once until the event has been cleared (default: disabled = unchecked)",
+      "nl": "Als ingeschakeld zal een bewegingsalarm slechts één keer naar de controller worden gestuurd, totdat de melding is gewist (standaard: uitgeschakeld = unchecked)",
+      "de": "Wenn aktiviert, wird ein Bewegungsalarm nur einmal an die Steuerung gesendet, bis er gelöscht wird (Standard: deaktiviert = nicht ausgewählt)"
+    }
+  },
+  {
+    "id": "temperature_report_differential",
+    "zwave": {
+      "index": 15,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 1,
+    "label": {
+      "en": "Temperature differential report threshold (Celsius)",
+      "nl": "Temperatuur verschil rapportagedrempel (Celsius)",
+      "de": "Schwellenwert des Temperatursänderungs (Celsius)"
+    },
+    "value": 10,
+    "attr": {
+      "min": 1,
+      "max": 100
+    },
+    "hint": {
+      "en": "Sets how many degrees the temperature needs to change before the value is being send to Homey. (default: 50 [lux])",
+      "nl": "Definieert hoeveel graden de temperatuur moet veranderen voordat de waarde naar Homey wordt verstuurd. (standaard: 50 [lux])",
+      "de": "Legt fest, um wie viel Grad sich die Temperatur ändern muss, bevor der Wert an Homey gesendet wird. (Standard: 50[lux])"
+    }
+  },
+  {
+      "id": "light_intensity_calibration",
+      "zwave": {
+        "index": 99,
+        "size": 2,
+        "signed": false
+      },
+      "type": "number",
+      "_size": 2,
+      "attr": {
+        "min": 1,
+        "max": 65535
+      },
+      "label": {
+        "en": "Light Intensity Calibration",
+        "nl": "Lichtintensiteit Correctie",
+        "de": "HelligkeitKorrectur"
+      },
+      "value": 1000,
+      "hint": {
+        "en": "See manual for information on the calibration. (default: 1000, range: 1 - 65535)",
+        "nl": "Zie de handleiding voor het instellen van de calibratie (standaard: 1000, bereik: 1 - 65535)",
+        "de": "Siehe Handbuch für die Einrichtung der Kalibrierung (Standard: 1000, Bereich: 1 - 65535)"
+      }
+    }
+  ]
