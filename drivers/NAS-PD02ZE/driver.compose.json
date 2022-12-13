@@ -6,11 +6,8 @@
   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 600,
-    "productTypeId": [
-      3,
-      512
-    ],
-    "productId": [4145, 4150],
+    "productTypeId": 3,
+    "productId": 4145,
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
     "pid": 1920,
     "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-16105298",
