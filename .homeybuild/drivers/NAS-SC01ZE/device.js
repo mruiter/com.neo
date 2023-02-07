@@ -21,10 +21,7 @@ class WallSwitchSingle_SC01ZE extends ZwaveDevice {
         id: 'backlight'
       }, args.switch_LED_onoff);
     };
-    let actionSC01ZE_led_mode = new Homey.FlowCardAction('SC01ZE_switch_LED');
-    actionSC01ZE_led_mode
-      .register()
-      .registerRunListener(SC01ZE_LED_mode_run_listener);
+    let actionSC01ZE_led_mode = this.homey.flow.getActionCard('SC01ZE_switch_LED');
   }
 }
 module.exports = WallSwitchSingle_SC01ZE;

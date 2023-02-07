@@ -38,8 +38,7 @@ class KeyFob_RS01Z extends ZwaveDevice {
 
 
     // Register Flow card trigger
-    const EmergencyFlowTrigger = new Homey.FlowCardTriggerDevice('alarm_sos');
-    EmergencyFlowTrigger.register();
+    const EmergencyFlowTrigger = this.homey.flow.getDeviceTriggerCard('alarm_sos');
 
     // Check if Flow card is registered in app manifest
     if (!(EmergencyFlowTrigger instanceof Error)) {

@@ -39,8 +39,7 @@ class KeyFob_RC01Z extends ZwaveDevice {
 
 
     // Register Flow card trigger
-    const EmergencyFlowTrigger = new Homey.FlowCardTriggerDevice('alarm_emergency');
-    EmergencyFlowTrigger.register();
+    const EmergencyFlowTrigger = this.homey.flow.getDeviceTriggerCard('alarm_emergency');
 
     // Check if Flow card is registered in app manifest
     if (!(EmergencyFlowTrigger instanceof Error)) {
@@ -57,7 +56,7 @@ class KeyFob_RC01Z extends ZwaveDevice {
     } else this.error('missing_alarm_emergency_card_in_manifest');
 
     // define and register FlowCardTriggers
-    let triggerRC_scene = new Homey.FlowCardTriggerDevice('RC_scene');
+    let triggerRC_scene = this.homey.flow.getDeviceTriggerCard('RC_scene');
     triggerRC_scene
       .register()
       .registerRunListener((args, state) => {
