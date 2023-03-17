@@ -3,6 +3,8 @@
 const Homey = require('homey');
 const { ZwaveDevice } = require('homey-zwavedriver');
 
+class DoorWindowSensor_DS01Z extends ZwaveDevice {
+
   async onNodeInit() {
     // enable debugging
     // this.enableDebug();
