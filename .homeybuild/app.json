@@ -1891,10 +1891,12 @@
         "manufacturerId": 600,
         "productTypeId": [
           3,
-          16
+          16,
+          512
         ],
         "productId": [
           4227,
+          4150,
           24707,
           131,
           8323,
@@ -2276,8 +2278,7 @@
           512
         ],
         "productId": [
-          4145,
-          4150
+          4145
         ],
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
         "pid": 1920,

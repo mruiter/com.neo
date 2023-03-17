@@ -7,9 +7,10 @@
   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 600,
-    "productTypeId": [3, 16],
+    "productTypeId": [3, 16, 512],
     "productId": [
       4227,
+	  4150,
       24707,
       131,
       8323,
