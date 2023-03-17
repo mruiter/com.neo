@@ -11,7 +11,7 @@ const { ZwaveDevice } = require('homey-zwavedriver');
     // this.printNode();
 
     // register device capabilities
-    this.registerCapability('alarm_contact', 'NOTIFICATION');
+    this.registerCapability('alarm_contact', 'SENSOR_BINARY');
     this.registerCapability('measure_battery', 'BATTERY');
   }
 }
