@@ -13,7 +13,7 @@ class DoorWindowSensor_DS01Z extends ZwaveDevice {
     // this.printNode();
 
     // register device capabilities
-    this.registerCapability('alarm_contact', 'SENSOR_BINARY');
+    this.registerCapability('alarm_contact', 'NOTIFICATION');
     this.registerCapability('measure_battery', 'BATTERY');
   }
 }
