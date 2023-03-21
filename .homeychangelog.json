@@ -4,5 +4,8 @@
   },
   "3.0.1": {
     "en": "• Changed class Door Sensor, Changed flow cards devices"
-  } 
+  },
+  "3.0.2": {
+    "en": "• Fix for siren NAS-AB01ZE"
+  }   
 }
