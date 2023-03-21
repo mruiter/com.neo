@@ -56,8 +56,7 @@ class Siren_AB01Z extends ZwaveDevice {
 
     // Cards that responde to the siren activating / blink icon alarm
     // Register Flow card trigger
-    const SirenFlowTrigger = new Homey.FlowCardTriggerDevice('alarm_siren');
-    SirenFlowTrigger.register();
+    const SirenFlowTrigger = this.homey.flow.getDeviceTriggerCard('alarm_siren');
 
     // Check if Flow card is registered in app manifest
     if (!(SirenFlowTrigger instanceof Error)) {
