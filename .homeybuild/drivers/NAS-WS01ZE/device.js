@@ -1,7 +1,7 @@
 'use strict';
 
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class WaterSensor_WS01 extends ZwaveDevice {
 
