@@ -13,5 +13,8 @@
   },
   "3.0.4": {
     "en": "• Fixed scene in NAS-RC01ZE"
-  }      
+  },
+  "3.0.5": {
+    "en": "• Fixed Meter reset in NAS-WR01ZE and NAS-WR02ZE"
+  }            
 }
