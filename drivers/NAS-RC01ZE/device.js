@@ -56,16 +56,14 @@ class KeyFob_RC01Z extends ZwaveDevice {
     } else this.error('missing_alarm_emergency_card_in_manifest');
 
     // define and register FlowCardTriggers
-    let triggerRC_scene = this.homey.flow.getDeviceTriggerCard('RC_scene');
-    triggerRC_scene
-      .register()
+	const triggerRC_scene = this.homey.flow
+      .getDeviceTriggerCard('RC_scene')
       .registerRunListener((args, state) => {
-        //this.log(args, state);
         return Promise.resolve(args.button === state.button && args.scene === state.scene);
       });
 
 
-    // register a report listener (SDK2 style not yet operational)
+    // register a report listener
     this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', (rawReport, parsedReport) => {
       if (rawReport.hasOwnProperty('Properties1') &&
         rawReport.Properties1.hasOwnProperty('Key Attributes') &&

@@ -9,6 +9,9 @@
     "en": "• Fix for siren NAS-AB01ZE"
   },
   "3.0.3": {
-    "en": "• Fixed issue in Watersensor"
-  }    
+    "en": "• Fixed issue in NAS-WS01ZE"
+  },
+  "3.0.4": {
+    "en": "• Fixed scene in NAS-RC01ZE"
+  }      
 }
