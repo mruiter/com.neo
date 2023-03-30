@@ -3,7 +3,7 @@
     "en": "• Initial SDKv3 Release"
   },
   "3.0.1": {
-    "en": "• Changed class Door Sensor, Changed flow cards devices"
+    "en": "• Fix for alarm notification NAS-DS01ZE"
   },
   "3.0.2": {
     "en": "• Fix for siren NAS-AB01ZE"
@@ -16,5 +16,8 @@
   },
   "3.0.5": {
     "en": "• Fixed Meter reset in NAS-WR01ZE and NAS-WR02ZE"
-  }            
+  },
+  "3.0.6": {
+    "en": "• Fixed typo in NAS-WR02ZE"
+  }             
 }

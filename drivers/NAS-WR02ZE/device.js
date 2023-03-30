@@ -104,7 +104,7 @@ class Wallplug_WR02Z extends ZwaveDevice {
 
     const actionWR02Z_reset_meter = this.homey.flow
       .getActionCard('WR02Z_reset_meter')
-      .registerRunListener(WR012_reset_meter_run_listener);		
+      .registerRunListener(WR02_reset_meter_run_listener);		
   }
 }
 module.exports = Wallplug_WR02Z;
