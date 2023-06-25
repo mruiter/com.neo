@@ -1,7 +1,7 @@
 'use strict';
 
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const ZwaveDevice = require('homey-zwavedriver').ZwaveDevice;
 
 class MultiSensor_PD03Z extends ZwaveDevice {
   async onMeshInit() {

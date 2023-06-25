@@ -1,6 +1,6 @@
 'use strict';
 
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const ZwaveDevice = require('homey-zwavedriver').ZwaveDevice;
 
 class DoorWindowSensor_DS01Z extends ZwaveDevice {
   async onMeshInit() {
