@@ -1,12 +1,17 @@
 'use strict';
 
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class KeyFob_RS01Z extends ZwaveDevice {
-  async onMeshInit() {
-    //this.enableDebug();
-    //this.printNode();
+  async onNodeInit() {
+    // enable debugging
+    // this.enableDebug();
+
+    // print the node's info to the console
+    // this.printNode();
+
+    // register device capabilities
     this.registerCapability('measure_battery', 'BATTERY');
 
     this.registerCapability('alarm_sos', 'NOTIFICATION', {
@@ -33,8 +38,7 @@ class KeyFob_RS01Z extends ZwaveDevice {
 
 
     // Register Flow card trigger
-    const EmergencyFlowTrigger = new Homey.FlowCardTriggerDevice('alarm_sos');
-    EmergencyFlowTrigger.register();
+    const EmergencyFlowTrigger = this.homey.flow.getDeviceTriggerCard('alarm_sos');
 
     // Check if Flow card is registered in app manifest
     if (!(EmergencyFlowTrigger instanceof Error)) {

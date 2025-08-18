@@ -1,12 +1,18 @@
 'use strict';
 
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class Siren_AB01Z extends ZwaveDevice {
-  async onMeshInit() {
-    //this.enableDebug();
-    //this.printNode();
+
+  async onNodeInit() {
+    // enable debugging
+    // this.enableDebug();
+
+    // print the node's info to the console
+    // this.printNode();
+
+    // register capabilities for this device
     this.registerCapability('onoff', 'SWITCH_BINARY');
     this.registerCapability('measure_battery', 'BATTERY', {
       getOpts: {
@@ -46,15 +52,11 @@ class Siren_AB01Z extends ZwaveDevice {
       if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
     };
 
-    let actionAB01ZE_alarm_state = new Homey.FlowCardAction('AB01ZE_alarm_state');
-    actionAB01ZE_alarm_state
-      .register()
-      .registerRunListener(AB01ZE_alarm_state_run_listener);
+    let actionAB01ZE_alarm_state = this.homey.flow.getActionCard('AB01ZE_alarm_state');
 
     // Cards that responde to the siren activating / blink icon alarm
     // Register Flow card trigger
-    const SirenFlowTrigger = new Homey.FlowCardTriggerDevice('alarm_siren');
-    SirenFlowTrigger.register();
+    const SirenFlowTrigger = this.homey.flow.getDeviceTriggerCard('alarm_siren');
 
     // Check if Flow card is registered in app manifest
     if (!(SirenFlowTrigger instanceof Error)) {
@@ -78,10 +80,7 @@ class Siren_AB01Z extends ZwaveDevice {
         id: 'alarmordoorbell'
       }, args.alarm_mode);
     };
-    let actionAB01ZE_alarm_mode = new Homey.FlowCardAction('AB01ZE_alarm_mode');
-    actionAB01ZE_alarm_mode
-      .register()
-      .registerRunListener(AB01ZE_alarm_mode_run_listener);
+    let actionAB01ZE_alarm_mode = this.homey.flow.getActionCard('AB01ZE_alarm_mode');
 
     //===== CONTROL Siren Alarm Tune
     let AB01ZE_alarm_tune_run_listener = async (args) => {
@@ -90,10 +89,8 @@ class Siren_AB01Z extends ZwaveDevice {
         id: 'alarmtune'
       }, args.alarm_tune);
     };
-    let actionAB01ZE_alarm_tune = new Homey.FlowCardAction('AB01ZE_alarm_tune');
-    actionAB01ZE_alarm_tune
-      .register()
-      .registerRunListener(AB01ZE_alarm_tune_run_listener);
+    let actionAB01ZE_alarm_tune = this.homey.flow.getActionCard('AB01ZE_alarm_tune');
+
 
     //===== CONTROL Siren Doorbell Tune
     let AB01ZE_doorbell_tune_run_listener = async (args) => {
@@ -102,10 +99,7 @@ class Siren_AB01Z extends ZwaveDevice {
         id: 'doorbelltune'
       }, args.doorbell_tune);
     };
-    let actionAB01ZE_doorbell_tune = new Homey.FlowCardAction('AB01ZE_doorbell_tune');
-    actionAB01ZE_doorbell_tune
-      .register()
-      .registerRunListener(AB01ZE_doorbell_tune_run_listener);
+    let actionAB01ZE_doorbell_tune = this.homey.flow.getActionCard('AB01ZE_doorbell_tune');
 
     //===== CONTROL Siren Volume
     let AB01ZE_siren_volume_run_listener = async (args) => {
@@ -114,10 +108,7 @@ class Siren_AB01Z extends ZwaveDevice {
         id: 'alarmvolume'
       }, args.siren_volume);
     };
-    let actionAB01ZE_siren_volume = new Homey.FlowCardAction('AB01ZE_siren_volume');
-    actionAB01ZE_siren_volume
-      .register()
-      .registerRunListener(AB01ZE_siren_volume_run_listener);
+    let actionAB01ZE_siren_volume = this.homey.flow.getActionCard('AB01ZE_siren_volume');
 
     //===== CONTROL Doorbell Volume
     let AB01ZE_doorbell_volume_run_listener = async (args) => {
@@ -126,10 +117,7 @@ class Siren_AB01Z extends ZwaveDevice {
         id: 'doorbellvolume'
       }, args.doorbell_volume);
     };
-    let actionAB01ZE_doorbell_volume = new Homey.FlowCardAction('AB01ZE_doorbell_volume');
-    actionAB01ZE_doorbell_volume
-      .register()
-      .registerRunListener(AB01ZE_doorbell_volume_run_listener);
+    let actionAB01ZE_doorbell_volume = this.homey.flow.getActionCard('AB01ZE_doorbell_volume');
 
   }
 }

@@ -12,6 +12,7 @@
     "small": "/drivers/NAS-RE01ZE/assets/images/small.jpg"
   },
   "class": "other",
+  "platforms": ["local"],
   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 600,
@@ -45,6 +46,5 @@
         }
       }
     }
-  },
-  "settings": []
+  }
 }

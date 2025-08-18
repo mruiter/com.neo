@@ -3,15 +3,6 @@
     "en": "KeyFob",
     "nl": "KeyFob"
   },
-  "capabilities": [
-    "measure_battery",
-    "alarm_emergency",
-    "alarm_battery"
-  ],
-  "images": {
-    "large": "/drivers/NAS-RC01ZE/assets/images/large.jpg",
-    "small": "/drivers/NAS-RC01ZE/assets/images/small.jpg"
-  },
   "mobile": {
     "components": [
       {
@@ -39,12 +30,7 @@
       }
     ]
   },
-  "class": "sensor",
-  "energy": {
-    "batteries": [
-      "CR3032"
-    ]
-  },
+  "platforms": ["local"],
   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 600,
@@ -111,5 +97,19 @@
       }
     }
   },
-  "settings": []
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_emergency",
+    "alarm_battery"
+  ],
+  "images": {
+    "large": "/drivers/NAS-RC01ZE/assets/images/large.jpg",
+    "small": "/drivers/NAS-RC01ZE/assets/images/small.jpg"
+  },
+  "energy": {
+  "batteries": [
+      "CR3032"
+    ]
+  }
 }

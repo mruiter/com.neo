@@ -1,14 +1,19 @@
 'use strict';
 
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class KeyFob_RC01Z extends ZwaveDevice {
   async onMeshInit() {
     let PreviousSequenceNo = 'empty';
 
-    //this.enableDebug();
-    //this.printNode();
+    // enable debugging
+    // this.enableDebug();
+
+    // print the node's info to the console
+    // this.printNode();
+
+    // register device capabilities
     this.registerCapability('measure_battery', 'BATTERY');
     this.registerCapability('alarm_emergency', 'NOTIFICATION', {
       get: 'NOTIFICATION_GET',
@@ -34,8 +39,7 @@ class KeyFob_RC01Z extends ZwaveDevice {
 
 
     // Register Flow card trigger
-    const EmergencyFlowTrigger = new Homey.FlowCardTriggerDevice('alarm_emergency');
-    EmergencyFlowTrigger.register();
+    const EmergencyFlowTrigger = this.homey.flow.getDeviceTriggerCard('alarm_emergency');
 
     // Check if Flow card is registered in app manifest
     if (!(EmergencyFlowTrigger instanceof Error)) {
@@ -52,16 +56,14 @@ class KeyFob_RC01Z extends ZwaveDevice {
     } else this.error('missing_alarm_emergency_card_in_manifest');
 
     // define and register FlowCardTriggers
-    let triggerRC_scene = new Homey.FlowCardTriggerDevice('RC_scene');
-    triggerRC_scene
-      .register()
+	const triggerRC_scene = this.homey.flow
+      .getDeviceTriggerCard('RC_scene')
       .registerRunListener((args, state) => {
-        //this.log(args, state);
         return Promise.resolve(args.button === state.button && args.scene === state.scene);
       });
 
 
-    // register a report listener (SDK2 style not yet operational)
+    // register a report listener
     this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', (rawReport, parsedReport) => {
       if (rawReport.hasOwnProperty('Properties1') &&
         rawReport.Properties1.hasOwnProperty('Key Attributes') &&

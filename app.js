@@ -4,7 +4,7 @@ const Homey = require('homey');
 
 class NeoZwave extends Homey.App {
 
-  onInit() {
+  async onInit() {
 
     this.log('Neo Z-wave app is running...');
 

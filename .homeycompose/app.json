@@ -1,12 +1,12 @@
 {
   "id": "com.neo",
-  "sdk": 2,
+  "sdk": 3,
   "name": {
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.1.17",
-  "compatibility": ">=7.0.0",
+  "version": "3.0.6",
+  "compatibility": ">=10.0.0",
   "brandColor": "#ff66cc",
   "description": {
     "en": "NEO Coolcam Z-Wave device support",

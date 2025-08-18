@@ -1,13 +1,13 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.neo",
-  "sdk": 2,
+  "sdk": 3,
   "name": {
     "en": "NEO Coolcam",
     "nl": "NEO Coolcam"
   },
-  "version": "2.1.17",
-  "compatibility": ">=7.0.0",
+  "version": "3.0.6",
+  "compatibility": ">=10.0.0",
   "brandColor": "#ff66cc",
   "description": {
     "en": "NEO Coolcam Z-Wave device support",
@@ -833,6 +833,9 @@
           }
         ]
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -898,6 +901,7 @@
         "large": "/drivers/NAS-AB01ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-AB01ZE/assets/images/small.jpg"
       },
+      "id": "NAS-AB01ZE",
       "settings": [
         {
           "id": "alarmvolume",
@@ -1390,8 +1394,7 @@
             "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED."
           }
         }
-      ],
-      "id": "NAS-AB01ZE"
+      ]
     },
     {
       "name": {
@@ -1399,6 +1402,9 @@
         "nl": "Scherm controller",
         "de": "Vorhang controller"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -1444,6 +1450,7 @@
         "large": "/drivers/NAS-CS01ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-CS01ZE/assets/images/small.jpg"
       },
+      "id": "NAS-CS01ZE",
       "settings": [
         {
           "id": "swap_updown",
@@ -1515,14 +1522,16 @@
           },
           "value": true
         }
-      ],
-      "id": "NAS-CS01ZE"
+      ]
     },
     {
       "name": {
         "en": "Door Sensor",
         "nl": "Deur Sensor"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -1576,6 +1585,7 @@
         "large": "/drivers/NAS-DS01ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-DS01ZE/assets/images/small.jpg"
       },
+      "id": "NAS-DS01ZE",
       "settings": [
         {
           "id": "off_delay",
@@ -1622,14 +1632,16 @@
             "de": "0=AUS, Alarm deaktivieren oder ein Gerät ausschalten, 1-99=Dim Level (Multilevel Switch Device), 255 = EIN (Binary Switch Device)"
           }
         }
-      ],
-      "id": "NAS-DS01ZE"
+      ]
     },
     {
       "name": {
         "en": "Door Sensor V2",
         "nl": "Deur Sensor V2"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -1674,6 +1686,7 @@
         "large": "/drivers/NAS-DS07ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-DS07ZE/assets/images/small.jpg"
       },
+      "id": "NAS-DS07ZE",
       "settings": [
         {
           "id": "off_delay",
@@ -1861,14 +1874,16 @@
             "de": "0=AUS, Alarm deaktivieren oder ein Gerät ausschalten, 1-99=Dim Level (Multilevel Switch Device), 255 = EIN (Binary Switch Device)"
           }
         }
-      ],
-      "id": "NAS-DS07ZE"
+      ]
     },
     {
       "name": {
         "en": "PIR V1",
         "nl": "PIR V1"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -1876,10 +1891,12 @@
         "manufacturerId": 600,
         "productTypeId": [
           3,
-          16
+          16,
+          512
         ],
         "productId": [
           4227,
+          4150,
           24707,
           131,
           8323,
@@ -1972,6 +1989,7 @@
         "large": "/drivers/NAS-PD01ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-PD01ZE/assets/images/small.jpg"
       },
+      "id": "NAS-PD01ZE",
       "settings": [
         {
           "id": "enable_PIR_function",
@@ -2240,14 +2258,16 @@
             "de": "Zeitdauer, die das assozierte Gerät (Gruppe 2) nach der Bewegungserkennung eingeschaltet bleibt. Dieser Parameterwert muss größer sein als das die Bewegungsmelder Blindzeit. (#2 Standard: 60 [s], Bereich: 5 - 600[s])"
           }
         }
-      ],
-      "id": "NAS-PD01ZE"
+      ]
     },
     {
       "name": {
         "en": "PIR V2",
         "nl": "PIR V2"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -2258,8 +2278,7 @@
           512
         ],
         "productId": [
-          4145,
-          4150
+          4145
         ],
         "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
         "pid": 1920,
@@ -2352,6 +2371,7 @@
         "large": "/drivers/NAS-PD02ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-PD02ZE/assets/images/small.jpg"
       },
+      "id": "NAS-PD02ZE",
       "settings": [
         {
           "id": "motion_sensor_sensitivity",
@@ -2620,14 +2640,16 @@
             "de": "Aktiviert die LED/PIR, um rot zu blinken, wenn eine Bewegung erkannt wird. (#10, default: deaktiviert = nicht ausgewählt)"
           }
         }
-      ],
-      "id": "NAS-PD02ZE"
+      ]
     },
     {
       "name": {
         "en": "PIR V3",
         "nl": "PIR V3"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -2726,6 +2748,7 @@
         "large": "/drivers/NAS-PD02ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-PD02ZE/assets/images/small.jpg"
       },
+      "id": "NAS-PD03ZE",
       "settings": [
         {
           "id": "motion_sensor_sensitivity",
@@ -2994,8 +3017,7 @@
             "de": "Aktiviert die LED/PIR, um rot zu blinken, wenn eine Bewegung erkannt wird. (#10, default: deaktiviert = nicht ausgewählt)"
           }
         }
-      ],
-      "id": "NAS-PD03ZE"
+      ]
     },
     {
       "id": "NAS-PD07ZE",
@@ -3003,6 +3025,9 @@
         "en": "PIR V4",
         "nl": "PIR V4"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -3247,15 +3272,6 @@
         "en": "KeyFob",
         "nl": "KeyFob"
       },
-      "capabilities": [
-        "measure_battery",
-        "alarm_emergency",
-        "alarm_battery"
-      ],
-      "images": {
-        "large": "/drivers/NAS-RC01ZE/assets/images/large.jpg",
-        "small": "/drivers/NAS-RC01ZE/assets/images/small.jpg"
-      },
       "mobile": {
         "components": [
           {
@@ -3283,12 +3299,9 @@
           }
         ]
       },
-      "class": "sensor",
-      "energy": {
-        "batteries": [
-          "CR3032"
-        ]
-      },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -3357,8 +3370,23 @@
           }
         }
       },
-      "settings": [],
-      "id": "NAS-RC01ZE"
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_emergency",
+        "alarm_battery"
+      ],
+      "images": {
+        "large": "/drivers/NAS-RC01ZE/assets/images/large.jpg",
+        "small": "/drivers/NAS-RC01ZE/assets/images/small.jpg"
+      },
+      "energy": {
+        "batteries": [
+          "CR3032"
+        ]
+      },
+      "id": "NAS-RC01ZE",
+      "settings": []
     },
     {
       "name": {
@@ -3374,6 +3402,9 @@
         "small": "/drivers/NAS-RE01ZE/assets/images/small.jpg"
       },
       "class": "other",
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -3413,8 +3444,8 @@
           }
         }
       },
-      "settings": [],
-      "id": "NAS-RE01ZE"
+      "id": "NAS-RE01ZE",
+      "settings": []
     },
     {
       "name": {
@@ -3468,6 +3499,9 @@
           "CR3032"
         ]
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -3539,14 +3573,17 @@
           }
         }
       },
-      "settings": [],
-      "id": "NAS-RS01ZE"
+      "id": "NAS-RS01ZE",
+      "settings": []
     },
     {
       "name": {
         "en": "Touch Switch Single",
         "nl": "Aanraakschakelaar Enkel"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -3585,6 +3622,7 @@
         "large": "/drivers/NAS-SC01ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-SC01ZE/assets/images/small.jpg"
       },
+      "id": "NAS-SC01ZE",
       "settings": [
         {
           "id": "backlight",
@@ -3642,14 +3680,16 @@
             "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn es aktiviert (ausgewählt) ist, oder bleibt ausgeschaltet, wenn es deaktiviert ist (nicht ausgewählt).\nStandard: aktiviert = ausgewählt)."
           }
         }
-      ],
-      "id": "NAS-SC01ZE"
+      ]
     },
     {
       "name": {
         "en": "Touch Switch Dual",
         "nl": "Aanraakschakelaar Dubbel"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -3709,6 +3749,7 @@
         "large": "/drivers/NAS-SC02ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-SC02ZE/assets/images/small.jpg"
       },
+      "id": "NAS-SC02ZE",
       "settings": [
         {
           "id": "backlight",
@@ -3766,14 +3807,16 @@
             "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn es aktiviert (ausgewählt) ist, oder bleibt ausgeschaltet, wenn es deaktiviert ist (nicht ausgewählt).\nStandard: aktiviert = ausgewählt)."
           }
         }
-      ],
-      "id": "NAS-SC02ZE"
+      ]
     },
     {
       "name": {
         "en": "Touch Switch Triple",
         "nl": "Aanraakschakelaar Triple"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -3845,6 +3888,7 @@
         "large": "/drivers/NAS-SC03ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-SC03ZE/assets/images/small.jpg"
       },
+      "id": "NAS-SC03ZE",
       "settings": [
         {
           "id": "backlight",
@@ -3902,14 +3946,16 @@
             "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn es aktiviert (ausgewählt) ist, oder bleibt ausgeschaltet, wenn es deaktiviert ist (nicht ausgewählt).\nStandard: aktiviert = ausgewählt)."
           }
         }
-      ],
-      "id": "NAS-SC03ZE"
+      ]
     },
     {
       "name": {
         "en": "Power Wallplug V1",
         "nl": "Spanning Muurplug V1"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -4021,6 +4067,7 @@
           }
         ]
       },
+      "id": "NAS-WR01ZE",
       "settings": [
         {
           "id": "led_display",
@@ -4214,14 +4261,16 @@
             "de": "Die Zeitspanne bis zum Ausschalten des Power Plugs, wenn die Fuktion unter'Zeitschaltfunktion' aktiviert wurde. \nParameter: 9\nBereich: 1 - 6553535\nStandard: 150"
           }
         }
-      ],
-      "id": "NAS-WR01ZE"
+      ]
     },
     {
       "name": {
         "en": "Power Wallplug V2",
         "nl": "Spanning Muurplug V2"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -4326,6 +4375,7 @@
           }
         ]
       },
+      "id": "NAS-WR02ZE",
       "settings": [
         {
           "id": "led_display",
@@ -4539,8 +4589,7 @@
             "de": "Die Zeitspanne bis zum Ausschalten des Power Plugs, wenn die Fuktion unter'Zeitschaltfunktion' aktiviert wurde. \nParameter: 5\nBereich: 1 - 32767\nStandard: 150"
           }
         }
-      ],
-      "id": "NAS-WR02ZE"
+      ]
     },
     {
       "name": {
@@ -4548,6 +4597,9 @@
         "nl": "Water Sensor",
         "de": "Wasser Sensor"
       },
+      "platforms": [
+        "local"
+      ],
       "connectivity": [
         "zwave"
       ],
@@ -4639,6 +4691,7 @@
         "large": "/drivers/NAS-WS01ZE/assets/images/large.jpg",
         "small": "/drivers/NAS-WS01ZE/assets/images/small.jpg"
       },
+      "id": "NAS-WS01ZE",
       "settings": [
         {
           "id": "alarm_duration_time",
@@ -4774,8 +4827,7 @@
           },
           "value": true
         }
-      ],
-      "id": "NAS-WS01ZE"
+      ]
     }
   ],
   "capabilities": {

@@ -1,12 +1,18 @@
 'use strict';
 
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class WallSwitchDual_SC02ZE extends ZwaveDevice {
-  async onMeshInit() {
-    //this.enableDebug();
-    //this.printNode();
+
+  async onNodeInit() {
+    // enable debugging
+    // this.enableDebug();
+
+    // print the node's info to the console
+    // this.printNode();
+
+    // register device capabilities
     this.registerCapability('onoff', 'SWITCH_BINARY');
 
     //===== Led On/Off
@@ -16,10 +22,7 @@ class WallSwitchDual_SC02ZE extends ZwaveDevice {
         id: 'backlight'
       }, args.switch_LED_onoff);
     };
-    let actionSC02ZE_led_mode = new Homey.FlowCardAction('SC02ZE_switch_LED');
-    actionSC02ZE_led_mode
-      .register()
-      .registerRunListener(SC02ZE_LED_mode_run_listener);
+    let actionSC02ZE_led_mode = this.homey.flow.getActionCard('SC02ZE_switch_LED');
   }
 }
 module.exports = WallSwitchDual_SC02ZE;
