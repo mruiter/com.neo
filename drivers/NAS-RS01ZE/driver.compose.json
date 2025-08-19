@@ -1,7 +1,17 @@
 {
   "name": {
     "en": "SOS Button",
-    "nl": "SOS Knop"
+    "nl": "SOS Knop",
+    "da": "SOS-knap",
+    "de": "SOS-Taste",
+    "es": "Botón SOS",
+    "fr": "Bouton SOS",
+    "it": "Pulsante SOS",
+    "no": "SOS-knapp",
+    "sv": "SOS-knapp",
+    "pl": "Przycisk SOS",
+    "ru": "Кнопка SOS",
+    "ko": "SOS 버튼"
   },
   "capabilities": [
     "measure_battery",
@@ -50,8 +60,12 @@
       "CR3032"
     ]
   },
-  "platforms": ["local"],
-  "connectivity": ["zwave"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 3,
@@ -65,7 +79,16 @@
       "instruction": {
         "en": "Press the SOS button on the KeyFob three times.",
         "nl": "Druk drie keer op de SOS knop op van KeyFob.",
-        "de": "Drücke die SOS-Taste am KeyFob dreimal."
+        "de": "Drücke die SOS-Taste am KeyFob dreimal.",
+        "da": "Tryk på SOS-knappen på KeyFob’en tre gange.",
+        "es": "Presiona el botón SOS del llavero tres veces.",
+        "fr": "Appuyez trois fois sur le bouton SOS du porte-clés.",
+        "it": "Premi il pulsante SOS sul portachiavi tre volte.",
+        "no": "Trykk på SOS-knappen på KeyFob tre ganger.",
+        "sv": "Tryck på SOS-knappen på KeyFob tre gånger.",
+        "pl": "Naciśnij przycisk SOS na breloczku trzy razy.",
+        "ru": "Нажмите на кнопку SOS на брелоке три раза.",
+        "ko": "KeyFob의 SOS 버튼을 세 번 누르세요."
       }
     },
     "unlearnmode": {
@@ -73,7 +96,16 @@
       "instruction": {
         "en": "Press the SOS button on the KeyFob three times.",
         "nl": "Druk drie keer op de SOS knop op van KeyFob.",
-        "de": "Drücke die SOS-Taste am KeyFob dreimal."
+        "de": "Drücke die SOS-Taste am KeyFob dreimal.",
+        "da": "Tryk på SOS-knappen på KeyFob’en tre gange.",
+        "es": "Presiona el botón SOS del llavero tres veces.",
+        "fr": "Appuyez trois fois sur le bouton SOS du porte-clés.",
+        "it": "Premi il pulsante SOS sul portachiavi tre volte.",
+        "no": "Trykk på SOS-knappen på KeyFob tre ganger.",
+        "sv": "Tryck på SOS-knappen på KeyFob tre gånger.",
+        "pl": "Naciśnij przycisk SOS na breloczku trzy razy.",
+        "ru": "Нажмите на кнопку SOS на брелоке три раза.",
+        "ko": "KeyFob의 SOS 버튼을 세 번 누르세요."
       }
     },
     "productDocumentation": "",
@@ -87,35 +119,80 @@
         "hint": {
           "en": "Lifeline reports the device status and allows for assigning a single device only (main controller by default).",
           "nl": "Lifeline rapporteert de status van het apparaat en staat maar 1 geassocieerd apparaat toe.",
-          "de": "Lifeline meldet den Gerätestatus, es ist nur die Zuordnung nur eines einzelnen Geräts möglich (Hauptcontroller standardmäßig)."
+          "de": "Lifeline meldet den Gerätestatus, es ist nur die Zuordnung nur eines einzelnen Geräts möglich (Hauptcontroller standardmäßig).",
+          "da": "Lifeline rapporterer enhedens status og tillader kun tildeling af en enkelt enhed (hovedkontroller som standard).",
+          "es": "Lifeline informa sobre el estado del dispositivo y solo permite asignar un único dispositivo (controlador principal por defecto).",
+          "fr": "Lifeline rapporte l'état de l'appareil et ne permet d'assigner qu'un seul appareil (contrôleur principal par défaut).",
+          "it": "Lifeline riporta lo stato del dispositivo e permette di assegnare solo un singolo dispositivo (controller principale di default).",
+          "no": "Lifeline rapporterer enhetens status og tillater kun tildeling av en enkelt enhet (hovedkontroller som standard).",
+          "sv": "Lifeline rapporterar enhetens status och tillåter endast tilldelning av en enda enhet (huvudkontroll som standard).",
+          "pl": "Lifeline raportuje status urządzenia i pozwala na przypisanie tylko jednego urządzenia (domyślnie kontroler główny).",
+          "ru": "Lifeline сообщает о статусе устройства и позволяет назначить только одно устройство (по умолчанию главный контроллер).",
+          "ko": "라이프라인은 장치 상태를 보고하고 단일 장치만 할당하도록 허용합니다 (기본적으로 메인 컨트롤러)."
         }
       },
       "2": {
         "hint": {
           "en": "Allows for sending control commands to associated devices.",
           "nl": "Hiermee kunt u besturingsopdrachten verzenden naar bijbehorende apparaten.",
-          "de": "Ermöglicht das Senden von Steuerbefehlen (control commands) an assozierte Geräte."
+          "de": "Ermöglicht das Senden von Steuerbefehlen (control commands) an assozierte Geräte.",
+          "da": "Gør det muligt at sende kontrolkommandoer til tilknyttede enheder.",
+          "es": "Permite enviar comandos de control a los dispositivos asociados.",
+          "fr": "Permet d'envoyer des commandes de contrôle aux appareils associés.",
+          "it": "Consente di inviare comandi di controllo ai dispositivi associati.",
+          "no": "Gjør det mulig å sende kontrollkommandoer til tilknyttede enheter.",
+          "sv": "Tillåter att skicka styrkommandon till associerade enheter.",
+          "pl": "Pozwala na wysyłanie poleceń kontrolnych do powiązanych urządzeń.",
+          "ru": "Позволяет отправлять управляющие команды связанным устройствам.",
+          "ko": "관련 장치에 제어 명령을 보내는 것이 가능합니다."
         }
       },
       "3": {
         "hint": {
           "en": "Allows for Send Notification to associated devices in this group.",
           "nl": "Staat Send Notification toe aan geassocieerde apparaten in deze groep.",
-          "de": "Ermöglicht das Senden von Benachrichtigungen (Notification) an assozierte Geräte in dieser Gruppe."
+          "de": "Ermöglicht das Senden von Benachrichtigungen (Notification) an assozierte Geräte in dieser Gruppe.",
+          "da": "Gør det muligt at sende beskeder til de tilknyttede enheder i denne gruppe.",
+          "es": "Permite enviar notificaciones a los dispositivos asociados en este grupo.",
+          "fr": "Permet d'envoyer des notifications aux appareils associés de ce groupe.",
+          "it": "Permette di inviare notifiche ai dispositivi associati in questo gruppo.",
+          "no": "Gjør det mulig å sende varsler til tilknyttede enheter i denne gruppen.",
+          "sv": "Gör det möjligt att skicka notiser till associerade enheter i den här gruppen.",
+          "pl": "Pozwala na wysyłanie powiadomień do powiązanych urządzeń w tej grupie.",
+          "ru": "Позволяет отправлять уведомления связанным устройствам в этой группе.",
+          "ko": "이 그룹에 있는 관련 장치에 알림을 보낼 수 있습니다."
         }
       },
       "4": {
         "hint": {
           "en": "Allows for Send Sensor Binary Report to associated devices in this group.",
           "nl": "Hiermee kunt u Binary Report Verzenden Sensor verzenden naar geassocieerde apparaten in deze groep.",
-          "de": "Ermöglicht das Senden von Binärwerten (Binary Report) an assozierte Geräte in dieser Gruppe."
+          "de": "Ermöglicht das Senden von Binärwerten (Binary Report) an assozierte Geräte in dieser Gruppe.",
+          "da": "Gør det muligt at sende binære rapporter til de tilknyttede enheder i denne gruppe.",
+          "es": "Permite enviar informes binarios de sensor a los dispositivos asociados en este grupo.",
+          "fr": "Permet d'envoyer des rapports binaires de capteur aux appareils associés de ce groupe.",
+          "it": "Permette di inviare rapporti binari ai dispositivi associati in questo gruppo.",
+          "no": "Gjør det mulig å sende binære rapporter til tilknyttede enheter i denne gruppen.",
+          "sv": "Gör det möjligt att skicka binära sensorrapporer till associerade enheter i denna grupp.",
+          "pl": "Pozwala na wysyłanie binarnych raportów czujnika do powiązanych urządzeń w tej grupie.",
+          "ru": "Позволяет отправлять двоичные отчеты датчиков связанным устройствам в этой группе.",
+          "ko": "이 그룹에 있는 관련 장치에 이진 센서 보고서를 보낼 수 있습니다."
         }
       },
       "5": {
         "hint": {
           "en": "Allows for Send Central Scene Notification to associated devices in this group.",
           "nl": "Hiermee kunt u Central Scene Notification versturen naar geassocieerde apparaten in deze groep.",
-          "de": "Ermöglicht das Senden von zentralen Szenenbenachrichtigungen (Central Scene Notification) an assozierte Geräte in dieser Gruppe."
+          "de": "Ermöglicht das Senden von zentralen Szenenbenachrichtigungen (Central Scene Notification) an assozierte Geräte in dieser Gruppe.",
+          "da": "Gør det muligt at sende centrale scene-meddelelser til de tilknyttede enheder i denne gruppe.",
+          "es": "Permite enviar notificaciones de escena central a los dispositivos asociados en este grupo.",
+          "fr": "Permet d'envoyer des notifications de scène centrale aux appareils associés de ce groupe.",
+          "it": "Permette di inviare notifiche di scena centrale ai dispositivi associati in questo gruppo.",
+          "no": "Gjør det mulig å sende sentrale scenemeldinger til tilknyttede enheter i denne gruppen.",
+          "sv": "Gör det möjligt att skicka centrala scennotifikationer till associerade enheter i den här gruppen.",
+          "pl": "Pozwala na wysyłanie powiadomień o scenach centralnych do powiązanych urządzeń w tej grupie.",
+          "ru": "Позволяет отправлять уведомления о центральных сценах связанным устройствам в этой группе.",
+          "ko": "이 그룹에 있는 관련 장치에 중앙 장면 알림을 보낼 수 있습니다."
         }
       }
     }

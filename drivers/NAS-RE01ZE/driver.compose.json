@@ -1,7 +1,17 @@
 {
   "name": {
     "en": "Z-Wave Repeater",
-    "nl": "Z-Wave Repeater"
+    "nl": "Z-Wave Repeater",
+    "da": "Z-Wave Repeater",
+    "de": "Z-Wave Repeater",
+    "es": "Repetidor Z-Wave",
+    "fr": "Répéteur Z-Wave",
+    "it": "Ripetitore Z-Wave",
+    "no": "Z-Wave Repeater",
+    "sv": "Z-Wave Repeater",
+    "pl": "Repeater Z-Wave",
+    "ru": "Ретранслятор Z-Wave",
+    "ko": "Z-Wave 중계기"
   },
   "capabilities": [
     "measure_temperature",
@@ -12,18 +22,34 @@
     "small": "/drivers/NAS-RE01ZE/assets/images/small.jpg"
   },
   "class": "other",
-  "platforms": ["local"],
-  "connectivity": ["zwave"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 16,
-    "productId": [1814, 1826],
+    "productId": [
+      1814,
+      1826
+    ],
     "learnmode": {
       "image": "/drivers/NAS-RE01ZE/assets/icon.svg",
       "instruction": {
         "en": "Press the button on the side your NEO Repeater and hold it for 5 seconds until you see a blue light on top and let it go.",
         "nl": "Druk op de pair knop aan de zijkant van de NEO Repeater en houdt deze 5 seconden vast totdat een blauw licht aan de bovenkant te zien is.",
-        "de": "Halten Sie die Paartaste an der Seite des NEO-Repeaters 5 Sekunden lang gedrückt, bis oben ein blaues Licht angezeigt wird."
+        "de": "Halten Sie die Paartaste an der Seite des NEO-Repeaters 5 Sekunden lang gedrückt, bis oben ein blaues Licht angezeigt wird.",
+        "da": "Tryk på knappen på siden af din NEO Repeater og hold den i 5 sekunder, indtil du ser et blåt lys ovenpå og slip den.",
+        "es": "Presiona el botón en el costado de tu Repetidor NEO y manténlo presionado durante 5 segundos hasta que veas una luz azul en la parte superior y suéltalo.",
+        "fr": "Appuyez sur le bouton sur le côté de votre Répéteur NEO et maintenez-le enfoncé pendant 5 secondes jusqu'à ce que vous voyiez une lumière bleue sur le dessus, puis relâchez-le.",
+        "it": "Premi il pulsante sul lato del tuo Ripetitore NEO e tienilo premuto per 5 secondi fino a vedere una luce blu nella parte superiore, poi rilascialo.",
+        "no": "Trykk på knappen på siden av NEO Repeateren din og hold den inne i 5 sekunder til du ser et blått lys på toppen, og slipp den deretter.",
+        "sv": "Tryck på knappen på sidan av din NEO Repeater och håll den i 5 sekunder tills du ser ett blått ljus ovanpå och släpp den.",
+        "pl": "Naciśnij przycisk z boku swojego Repeatera NEO i przytrzymaj go przez 5 sekund, aż zobaczysz niebieskie światło u góry i puść go.",
+        "ru": "Нажмите кнопку на боковой стороне вашего ретранслятора NEO и удерживайте ее 5 секунд, пока не увидите синий свет сверху, затем отпустите.",
+        "ko": "NEO 반복기의 옆면 버튼을 누르고 5초 동안 유지한 후 윗부분에 파란 불빛이 보이면 놓으세요."
       }
     },
     "unlearnmode": {
@@ -31,7 +57,16 @@
       "instruction": {
         "en": "Press the button on the side your NEO Repeater and hold it for 5 seconds until you see a blue light on top and let it go.",
         "nl": "Druk op de pair knop aan de zijkant van de NEO Repeater en houdt deze 5 seconden vast totdat een blauw licht aan de bovenkant te zien is.",
-        "de": "Halten Sie die Paartaste an der Seite des NEO-Repeaters 5 Sekunden lang gedrückt, bis oben ein blaues Licht angezeigt wird."
+        "de": "Halten Sie die Paartaste an der Seite des NEO-Repeaters 5 Sekunden lang gedrückt, bis oben ein blaues Licht angezeigt wird.",
+        "da": "Tryk på knappen på siden af din NEO Repeater og hold den i 5 sekunder, indtil du ser et blåt lys ovenpå og slip den.",
+        "es": "Presiona el botón en el costado de tu Repetidor NEO y manténlo presionado durante 5 segundos hasta que veas una luz azul en la parte superior y suéltalo.",
+        "fr": "Appuyez sur le bouton sur le côté de votre Répéteur NEO et maintenez-le enfoncé pendant 5 secondes jusqu'à ce que vous voyiez une lumière bleue sur le dessus, puis relâchez-le.",
+        "it": "Premi il pulsante sul lato del tuo Ripetitore NEO e tienilo premuto per 5 secondi fino a vedere una luce blu nella parte superiore, poi rilascialo.",
+        "no": "Trykk på knappen på siden av NEO Repeateren din og hold den inne i 5 sekunder til du ser et blått lys på toppen, og slipp den deretter.",
+        "sv": "Tryck på knappen på sidan av din NEO Repeater och håll den i 5 sekunder tills du ser ett blått ljus ovanpå och släpp den.",
+        "pl": "Naciśnij przycisk z boku swojego Repeatera NEO i przytrzymaj go przez 5 sekund, aż zobaczysz niebieskie światło u góry i puść go.",
+        "ru": "Нажмите кнопку на боковой стороне вашего ретранслятора NEO и удерживайте ее 5 секунд, пока не увидите синий свет сверху, затем отпустите.",
+        "ko": "NEO 반복기의 옆면 버튼을 누르고 5초 동안 유지한 후 윗부분에 파란 불빛이 보이면 놓으세요."
       }
     },
     "associationGroups": [
@@ -42,7 +77,16 @@
         "hint": {
           "en": "Lifeline reports the device status and allows for assigning a single device only (main controller by default).",
           "nl": "Lifeline rapporteert de status van het apparaat en staat maar 1 geassocieerd apparaat toe.",
-          "de": "Lifeline meldet den Gerätestatus, es ist nur die Zuordnung nur eines einzelnen Geräts möglich (Hauptcontroller standardmäßig)."
+          "de": "Lifeline meldet den Gerätestatus, es ist nur die Zuordnung nur eines einzelnen Geräts möglich (Hauptcontroller standardmäßig).",
+          "da": "Lifeline rapporterer enhedens status og tillader kun tildeling af en enkelt enhed (hovedcontroller som standard).",
+          "es": "Lifeline informa sobre el estado del dispositivo y solo permite asignar un solo dispositivo (controlador principal por defecto).",
+          "fr": "Lifeline rapporte l'état de l'appareil et ne permet d'assigner qu'un seul appareil (contrôleur principal par défaut).",
+          "it": "Lifeline riporta lo stato del dispositivo e consente di assegnare un solo dispositivo (controller principale per default).",
+          "no": "Lifeline rapporterer enhetens status og lar deg bare tilordne en enkelt enhet (hovedkontroller som standard).",
+          "sv": "Lifeline rapporterar enhetens status och tillåter endast tilldelning av en enskild enhet (huvudkontroll som standard).",
+          "pl": "Lifeline raportuje status urządzenia i pozwala na przypisanie tylko jednego urządzenia (domyślnie główny kontroler).",
+          "ru": "Lifeline сообщает о состоянии устройства и позволяет назначить только одно устройство (по умолчанию главный контроллер).",
+          "ko": "Lifeline은 장치 상태를 보고하며 기본적으로 하나의 장치만 할당할 수 있습니다 (기본 컨트롤러)."
         }
       }
     }

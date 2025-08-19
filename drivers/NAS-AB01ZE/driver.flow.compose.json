@@ -5,17 +5,44 @@
       "title": {
         "en": "Siren Alarm",
         "nl": "Sirene Alarm",
-        "de": "Sirenenalarm"
+        "de": "Sirenenalarm",
+        "da": "Sirenealarm",
+        "es": "Alarma de sirena",
+        "fr": "Alarme de sirène",
+        "it": "Allarme sirena",
+        "no": "Sirenealarm",
+        "sv": "Sirenlarm",
+        "pl": "Alarm syreny",
+        "ru": "Сирена",
+        "ko": "사이렌 경보"
       },
       "titleFormatted": {
         "en": "Siren Alarm",
         "nl": "Sirene Alarm",
-        "de": "Sirenenalarm"
+        "de": "Sirenenalarm",
+        "da": "Sirenealarm",
+        "es": "Alarma de sirena",
+        "fr": "Alarme de sirène",
+        "it": "Allarme sirena",
+        "no": "Sirenealarm",
+        "sv": "Sirenlarm",
+        "pl": "Alarm syreny",
+        "ru": "Сирена",
+        "ko": "사이렌 경보"
       },
       "hint": {
         "en": "This card will trigger when siren is activated.",
         "nl": "Deze kaart wordt alleen geactiveerd wanneer de sirene actief is.",
-        "de": "Diese Karte wird ausgelöst, wenn die Sirene aktiviert wird."
+        "de": "Diese Karte wird ausgelöst, wenn die Sirene aktiviert wird.",
+        "da": "Dette kort aktiveres, når sirenen er aktiveret.",
+        "es": "Esta tarjeta se activará cuando se active la sirena.",
+        "fr": "Cette carte sera déclenchée lorsque la sirène est activée.",
+        "it": "Questa carta verrà attivata quando la sirena è attivata.",
+        "no": "Dette kortet vil utløses når sirenen er aktivert.",
+        "sv": "Detta kort triggas när sirenen är aktiverad.",
+        "pl": "Karta zostanie uruchomiona, gdy syrena zostanie aktywowana.",
+        "ru": "Эта карта сработает, когда сирена будет активирована.",
+        "ko": "이 카드의 사이렌이 활성화됩니다."
       },
       "args": []
     }
@@ -26,17 +53,44 @@
       "title": {
         "en": "Change the alarm state",
         "nl": "Verander de alarm toestand",
-        "de": "Ändern des Alarmstatus"
+        "de": "Ändern des Alarmstatus",
+        "da": "Skift alarmstatus",
+        "es": "Cambiar el estado de la alarma",
+        "fr": "Changer l'état de l'alarme",
+        "it": "Cambia lo stato dell'allarme",
+        "no": "Endre alarmstatus",
+        "sv": "Ändra larmstatus",
+        "pl": "Zmień stan alarmu",
+        "ru": "Изменить состояние сигнала тревоги",
+        "ko": "알람 변경"
       },
-        "titleFormatted": {
-          "en": "Change the alarm state to [[alarm_state]]",
-          "nl": "Verander de alarm toestand naar [[alarm_state]]",
-          "de": "Ändern des Alarmstatus zu [[alarm_state]]"
-        },
+      "titleFormatted": {
+        "en": "Change the alarm state to [[alarm_state]]",
+        "nl": "Verander de alarm toestand naar [[alarm_state]]",
+        "de": "Ändern des Alarmstatus zu [[alarm_state]]",
+        "da": "Skift alarmstatus til [[alarm_state]]",
+        "es": "Cambiar el estado de la alarma a [[alarm_state]]",
+        "fr": "Changer l'état de l'alarme en [[alarm_state]]",
+        "it": "Cambia lo stato dell'allarme in [[alarm_state]]",
+        "no": "Endre alarmstatus til [[alarm_state]]",
+        "sv": "Ändra larmstatus till [[alarm_state]]",
+        "pl": "Zmień stan alarmu na [[alarm_state]]",
+        "ru": "Измените состояние сигнала тревоги на [[alarm_state]]",
+        "ko": "[[alarm_state]] 알람 상태를 변경합니다"
+      },
       "hint": {
         "en": "Change the alarm state; sound or silence the alarm",
         "nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm",
-        "de": "Ändern des Alarmstatus; Ein- oder ausschalten des Alarmtons."
+        "de": "Ändern des Alarmstatus; Ein- oder ausschalten des Alarmtons.",
+        "da": "Skift alarmstatus; aktiver eller sluk alarmen",
+        "es": "Cambiar el estado de la alarma; activar o silenciar la alarma",
+        "fr": "Changer l'état de l'alarme ; activer ou désactiver l'alarme",
+        "it": "Cambia lo stato dell'allarme; suonare o silenziare l'allarme",
+        "no": "Endre alarmstatus; slå på eller av alarmen",
+        "sv": "Ändra larmstatus; slå på eller av larmet",
+        "pl": "Zmień stan alarmu; włączać lub wyłączać alarm",
+        "ru": "Измените состояние сигнала тревоги; звук или тишина тревоги",
+        "ko": "알람 상태를 변경합니다. 알람을 켜거나 끕니다"
       },
       "args": [
         {
@@ -48,7 +102,16 @@
               "label": {
                 "en": "Silence alarm",
                 "nl": "Alarm stil",
-                "de": "Stiller Alarm"
+                "de": "Stiller Alarm",
+                "da": "Stille alarm",
+                "es": "Silenciar alarma",
+                "fr": "Silence alarme",
+                "it": "Silenzia allarme",
+                "no": "Stille alarm",
+                "sv": "Tysta larm",
+                "pl": "Alarm bez",
+                "ru": "Тишина сигнализации",
+                "ko": "정지 경보"
               }
             },
             {
@@ -56,7 +119,16 @@
               "label": {
                 "en": "Sound alarm",
                 "nl": "Alarm luiden",
-                "de": "Akustischer Alarm"
+                "de": "Akustischer Alarm",
+                "da": "Lyde alarm",
+                "es": "Activar alarma",
+                "fr": "Alerte sonore",
+                "it": "Allarme sonoro",
+                "no": "Lyd alarm",
+                "sv": "Ljudlarm",
+                "pl": "Sygnał alarmowy",
+                "ru": "Звуковая сигнализация",
+                "ko": "사운드 알람"
               }
             }
           ]
@@ -68,17 +140,44 @@
       "title": {
         "en": "Set volume of siren",
         "nl": "Zet het volume van de sirene",
-        "de": "Einstellen der Lautstärke der Sirene"
+        "de": "Einstellen der Lautstärke der Sirene",
+        "da": "Indstil sirenevolumen",
+        "es": "Ajustar el volumen de la sirena",
+        "fr": "Régler le volume de la sirène",
+        "it": "Imposta il volume della sirena",
+        "no": "Sett volum for sirenen",
+        "sv": "Ställ in sirenens volym",
+        "pl": "Ustaw głośność syreny",
+        "ru": "Установить громкость сирены",
+        "ko": "사이렌의 볼륨을 설정"
       },
       "titleFormatted": {
         "en": "Set volume of siren to [[siren_volume]]",
         "nl": "Zet het volume van de sirene op [[siren_volume]]",
-        "de": "Lautstärke der Sirene auf [[siren_volume]] einstellen"
+        "de": "Lautstärke der Sirene auf [[siren_volume]] einstellen",
+        "da": "Indstil sirenevolumen til [[siren_volume]]",
+        "es": "Ajustar el volumen de la sirena a [[siren_volume]]",
+        "fr": "Régler le volume de la sirène à [[siren_volume]]",
+        "it": "Imposta il volume della sirena su [[siren_volume]]",
+        "no": "Sett volum for sirenen til [[siren_volume]]",
+        "sv": "Ställ in sirenens volym till [[siren_volume]]",
+        "pl": "Ustaw głośność syreny na [[siren_volume]]",
+        "ru": "Установить громкость сирены на [[siren_volume]]",
+        "ko": "사이렌의 볼륨을 [[siren_volume]]으로 설정"
       },
       "hint": {
         "en": "Set volume of siren.",
         "nl": "Zet het volume van de sirene.",
-        "de": "Einstellen der Lautstärke der Sirene"
+        "de": "Einstellen der Lautstärke der Sirene",
+        "da": "Indstil sirenevolumen.",
+        "es": "Ajustar el volumen de la sirena.",
+        "fr": "Régler le volume de la sirène.",
+        "it": "Imposta il volume della sirena.",
+        "no": "Sett volum for sirenen.",
+        "sv": "Ställ in sirenens volym.",
+        "pl": "Ustaw głośność syreny.",
+        "ru": "Установить громкость сирены.",
+        "ko": "사이렌의 볼륨을 설정합니다."
       },
       "args": [
         {
@@ -90,7 +189,16 @@
               "label": {
                 "en": "Low",
                 "nl": "Laag",
-                "de": "Niedrig"
+                "de": "Niedrig",
+                "da": "Lav",
+                "es": "Bajo",
+                "fr": "Bas",
+                "it": "Basso",
+                "no": "Lav",
+                "sv": "Låg",
+                "pl": "Niski",
+                "ru": "Низко",
+                "ko": "낮음"
               }
             },
             {
@@ -98,7 +206,16 @@
               "label": {
                 "en": "Midle",
                 "nl": "Middelmatig",
-                "de": "Mittel"
+                "de": "Mittel",
+                "da": "Middel",
+                "es": "Medio",
+                "fr": "Moyen",
+                "it": "Medio",
+                "no": "Middels",
+                "sv": "Mellan",
+                "pl": "Średni",
+                "ru": "Средний",
+                "ko": "중간"
               }
             },
             {
@@ -106,7 +223,16 @@
               "label": {
                 "en": "High (default)",
                 "nl": "Hoog (standaard)",
-                "de": "Hoch (Standard)"
+                "de": "Hoch (Standard)",
+                "da": "Høj (standard)",
+                "es": "Alto (predeterminado)",
+                "fr": "Élevé (par défaut)",
+                "it": "Alto (predefinito)",
+                "no": "Høy (standard)",
+                "sv": "Hög (standard)",
+                "pl": "Wysoki (domyślnie)",
+                "ru": "Высокий (по умолчанию)",
+                "ko": "높음 (기본값)"
               }
             }
           ]
@@ -118,17 +244,44 @@
       "title": {
         "en": "Set volume of the doorbell",
         "nl": "Zet het volume van de deurbel",
-        "de": "Lautstärke der Türklingel einstellen."
+        "de": "Lautstärke der Türklingel einstellen.",
+        "da": "Indstil dørklokkens lydstyrke",
+        "es": "Ajustar el volumen del timbre",
+        "fr": "Régler le volume de la sonnette",
+        "it": "Imposta il volume del campanello",
+        "no": "Sett volum for dørklokken",
+        "sv": "Ställ in dörrklockans volym",
+        "pl": "Ustaw głośność dzwonka do drzwi",
+        "ru": "Установить громкость дверного звонка",
+        "ko": "도어벨의 볼륨을 설정"
       },
       "titleFormatted": {
         "en": "Set volume of the doorbell to [[doorbell_volume]]",
         "nl": "Zet het volume van de deurbel op [[doorbell_volume]]",
-        "de": "Lautstärke der Türklingel auf [[doorbell_volume]] einstellen"
+        "de": "Lautstärke der Türklingel auf [[doorbell_volume]] einstellen",
+        "da": "Indstil dørklokkens lydstyrke til [[doorbell_volume]]",
+        "es": "Ajustar el volumen del timbre a [[doorbell_volume]]",
+        "fr": "Régler le volume de la sonnette à [[doorbell_volume]]",
+        "it": "Imposta il volume del campanello su [[doorbell_volume]]",
+        "no": "Sett volum for dørklokken til [[doorbell_volume]]",
+        "sv": "Ställ in dörrklockans volym till [[doorbell_volume]]",
+        "pl": "Ustaw głośność dzwonka do drzwi na [[doorbell_volume]]",
+        "ru": "Установить громкость дверного звонка на [[doorbell_volume]]",
+        "ko": "도어벨의 볼륨을 [[doorbell_volume]]로 설정"
       },
       "hint": {
         "en": "Set volume of the doorbell.",
         "nl": "Zet het volume van de deurbel.",
-        "de": "Lautstärke der Türklingel einstellen."
+        "de": "Lautstärke der Türklingel einstellen.",
+        "da": "Indstil dørklokkens lydstyrke.",
+        "es": "Ajustar el volumen del timbre.",
+        "fr": "Régler le volume de la sonnette.",
+        "it": "Imposta il volume del campanello.",
+        "no": "Sett volum for dørklokken.",
+        "sv": "Ställ in dörrklockans volym.",
+        "pl": "Ustaw głośność dzwonka do drzwi.",
+        "ru": "Установить громкость дверного звонка.",
+        "ko": "도어벨의 볼륨을 설정합니다."
       },
       "args": [
         {
@@ -140,7 +293,16 @@
               "label": {
                 "en": "Low",
                 "nl": "Laag",
-                "de": "Niedrig"
+                "de": "Niedrig",
+                "da": "Lav",
+                "es": "Bajo",
+                "fr": "Bas",
+                "it": "Basso",
+                "no": "Lav",
+                "sv": "Låg",
+                "pl": "Niski",
+                "ru": "Низко",
+                "ko": "낮음"
               }
             },
             {
@@ -148,7 +310,16 @@
               "label": {
                 "en": "Midle",
                 "nl": "Middelmatig",
-                "de": "Mittel"
+                "de": "Mittel",
+                "da": "Middel",
+                "es": "Medio",
+                "fr": "Moyen",
+                "it": "Medio",
+                "no": "Middels",
+                "sv": "Mellan",
+                "pl": "Średni",
+                "ru": "Средний",
+                "ko": "중간"
               }
             },
             {
@@ -156,7 +327,16 @@
               "label": {
                 "en": "High (default)",
                 "nl": "Hoog (standaard)",
-                "de": "Hoch (Standard)"
+                "de": "Hoch (Standard)",
+                "da": "Høj (standard)",
+                "es": "Alto (predeterminado)",
+                "fr": "Élevé (par défaut)",
+                "it": "Alto (predefinito)",
+                "no": "Høy (standard)",
+                "sv": "Hög (standard)",
+                "pl": "Wysoki (domyślnie)",
+                "ru": "Высокий (по умолчанию)",
+                "ko": "높음 (기본값)"
               }
             }
           ]
@@ -168,17 +348,44 @@
       "title": {
         "en": "Set the device mode",
         "nl": "Stel de apparaat modus in",
-        "de": "Einstellen des Gerätemodus"
+        "de": "Einstellen des Gerätemodus",
+        "da": "Indstil enhedstilstand",
+        "es": "Ajustar el modo del dispositivo",
+        "fr": "Régler le mode de l'appareil",
+        "it": "Imposta la modalità del dispositivo",
+        "no": "Sett enhetsmodus",
+        "sv": "Ställ in enhetsläge",
+        "pl": "Ustaw tryb urządzenia",
+        "ru": "Установить режим устройства",
+        "ko": "장치 모드 설정"
       },
       "titleFormatted": {
         "en": "Set the device mode to [[alarm_mode]]",
         "nl": "Stel de apparaat modus in op [[alarm_mode]]",
-        "de": "Gerätemodus auf [[alarm_mode]] einstellen"
+        "de": "Gerätemodus auf [[alarm_mode]] einstellen",
+        "da": "Indstil enhedstilstand til [[alarm_mode]]",
+        "es": "Ajustar el modo del dispositivo a [[alarm_mode]]",
+        "fr": "Régler le mode de l'appareil à [[alarm_mode]]",
+        "it": "Imposta la modalità del dispositivo su [[alarm_mode]]",
+        "no": "Sett enhetsmodus til [[alarm_mode]]",
+        "sv": "Ställ in enhetsläge till [[alarm_mode]]",
+        "pl": "Ustaw tryb urządzenia na [[alarm_mode]]",
+        "ru": "Установите режим устройства на [[alarm_mode]]",
+        "ko": "장치 모드를 [[alarm_mode]]로 설정"
       },
       "hint": {
         "en": "Set the device mode; alarm or doorbell mode",
         "nl": "Stel de apparaat modus in; alarm of deurbel",
-        "de": "Einstellen des Gerätemodus; Alarm- oder Türklingelmodus"
+        "de": "Einstellen des Gerätemodus; Alarm- oder Türklingelmodus",
+        "da": "Indstil enhedstilstand; alarm eller dørklokke",
+        "es": "Ajustar el modo del dispositivo; modo alarma o timbre",
+        "fr": "Régler le mode de l'appareil ; mode alarme ou sonnette",
+        "it": "Imposta la modalità del dispositivo; allarme o campanello",
+        "no": "Sett enhetsmodus; alarm eller dørklokke",
+        "sv": "Ställ in enhetsläge; larm eller dörrklocka",
+        "pl": "Ustaw tryb urządzenia; alarm lub dzwonek",
+        "ru": "Установите режим устройства; сигнализация или звонок",
+        "ko": "장치 모드 설정; 알람 또는 초인종 모드"
       },
       "args": [
         {
@@ -190,7 +397,16 @@
               "label": {
                 "en": "Alarm",
                 "nl": "Alarm",
-                "de": "Alarm"
+                "de": "Alarm",
+                "da": "Alarm",
+                "es": "Alarma",
+                "fr": "Alarme",
+                "it": "Allarme",
+                "no": "Alarm",
+                "sv": "Larm",
+                "pl": "Alarm",
+                "ru": "Сигнализация",
+                "ko": "경보"
               }
             },
             {
@@ -198,7 +414,16 @@
               "label": {
                 "en": "Doorbel",
                 "nl": "Deurbel",
-                "de": "Türklingel"
+                "de": "Türklingel",
+                "da": "Dørklokke",
+                "es": "Timbre",
+                "fr": "Sonnette",
+                "it": "Campanello",
+                "no": "Dørklokke",
+                "sv": "Dörrklocka",
+                "pl": "Dzwonek",
+                "ru": "Дверной звонок",
+                "ko": "초인종"
               }
             }
           ]
@@ -210,17 +435,44 @@
       "title": {
         "en": "Set the alarm tune",
         "nl": "Stel de alarm melodie in",
-        "de": "Einstellen des Alarmtons"
+        "de": "Einstellen des Alarmtons",
+        "da": "Indstil alarmlyden",
+        "es": "Ajustar el tono de la alarma",
+        "fr": "Régler la sonnerie d'alarme",
+        "it": "Imposta la melodia dell'allarme",
+        "no": "Sett alarmtone",
+        "sv": "Ställ in larmsignal",
+        "pl": "Ustaw melodię alarmu",
+        "ru": "Установить мелодию сигнала тревоги",
+        "ko": "알람을 설정"
       },
       "titleFormatted": {
         "en": "Set the alarm tune to [[alarm_tune]]",
         "nl": "Stel de alarm melodie in op [[alarm_tune]]",
-        "de": "Alarmmelodie auf [[alarm_tune]] einstellen"
+        "de": "Alarmmelodie auf [[alarm_tune]] einstellen",
+        "da": "Indstil alarmlyden til [[alarm_tune]]",
+        "es": "Ajustar el tono de la alarma a [[alarm_tune]]",
+        "fr": "Régler la sonnerie d'alarme sur [[alarm_tune]]",
+        "it": "Imposta la melodia dell'allarme su [[alarm_tune]]",
+        "no": "Sett alarmtone til [[alarm_tune]]",
+        "sv": "Ställ in larmsignal till [[alarm_tune]]",
+        "pl": "Ustaw melodię alarmu na [[alarm_tune]]",
+        "ru": "Установите мелодию сигнала тревоги на [[alarm_tune]]",
+        "ko": "알람 [[alarm_tune]]으로 설정"
       },
       "hint": {
         "en": "Choose the tune of the alarm sound",
         "nl": "Kies de melodie die gebruikt wordt bij alarm",
-        "de": "Wähle die Melodie des Alarmtons aus."
+        "de": "Wähle die Melodie des Alarmtons aus.",
+        "da": "Vælg lyden af alarmen",
+        "es": "Elegir el tono de sonido de la alarma",
+        "fr": "Choisissez la sonnerie du son d'alarme",
+        "it": "Scegli la melodia del suono dell'allarme",
+        "no": "Velg alarmlyd",
+        "sv": "Välj larmsignal",
+        "pl": "Wybierz melodię dźwięku alarmu",
+        "ru": "Выберите мелодию сигнала тревоги",
+        "ko": "알람 소리의 곡조를 선택하세요"
       },
       "args": [
         {
@@ -232,7 +484,16 @@
               "label": {
                 "en": "Tune 1",
                 "nl": "Melodie 1",
-                "de": "Melodie 1"
+                "de": "Melodie 1",
+                "da": "Melodi 1",
+                "es": "Melodía 1",
+                "fr": "Mélodie 1",
+                "it": "Melodia 1",
+                "no": "Melodi 1",
+                "sv": "Melodi 1",
+                "pl": "Melodia 1",
+                "ru": "Мелодия 1",
+                "ko": "멜로디 1"
               }
             },
             {
@@ -240,7 +501,16 @@
               "label": {
                 "en": "Tune 2",
                 "nl": "Melodie 2",
-                "de": "Melodie 2"
+                "de": "Melodie 2",
+                "da": "Melodi 2",
+                "es": "Melodía 2",
+                "fr": "Mélodie 2",
+                "it": "Melodia 2",
+                "no": "Melodi 2",
+                "sv": "Melodi 2",
+                "pl": "Melodia 2",
+                "ru": "Мелодия 2",
+                "ko": "멜로디 2"
               }
             },
             {
@@ -248,7 +518,16 @@
               "label": {
                 "en": "Tune 3",
                 "nl": "Melodie 3",
-                "de": "Melodie 3"
+                "de": "Melodie 3",
+                "da": "Melodi 3",
+                "es": "Melodía 3",
+                "fr": "Mélodie 3",
+                "it": "Melodia 3",
+                "no": "Melodi 3",
+                "sv": "Melodi 3",
+                "pl": "Melodia 3",
+                "ru": "Мелодия 3",
+                "ko": "멜로디 3"
               }
             },
             {
@@ -256,7 +535,16 @@
               "label": {
                 "en": "Tune 4",
                 "nl": "Melodie 4",
-                "de": "Melodie 4"
+                "de": "Melodie 4",
+                "da": "Melodi 4",
+                "es": "Melodía 4",
+                "fr": "Mélodie 4",
+                "it": "Melodia 4",
+                "no": "Melodi 4",
+                "sv": "Melodi 4",
+                "pl": "Melodia 4",
+                "ru": "Мелодия 4",
+                "ko": "멜로디 4"
               }
             },
             {
@@ -264,7 +552,16 @@
               "label": {
                 "en": "Tune 5",
                 "nl": "Melodie 5",
-                "de": "Melodie 5"
+                "de": "Melodie 5",
+                "da": "Melodi 5",
+                "es": "Melodía 5",
+                "fr": "Mélodie 5",
+                "it": "Melodia 5",
+                "no": "Melodi 5",
+                "sv": "Melodi 5",
+                "pl": "Melodia 5",
+                "ru": "Мелодия 5",
+                "ko": "멜로디 5"
               }
             },
             {
@@ -272,7 +569,16 @@
               "label": {
                 "en": "Tune 6",
                 "nl": "Melodie 6",
-                "de": "Melodie 6"
+                "de": "Melodie 6",
+                "da": "Melodi 6",
+                "es": "Melodía 6",
+                "fr": "Mélodie 6",
+                "it": "Melodia 6",
+                "no": "Melodi 6",
+                "sv": "Melodi 6",
+                "pl": "Melodia 6",
+                "ru": "Мелодия 6",
+                "ko": "멜로디 6"
               }
             },
             {
@@ -280,7 +586,16 @@
               "label": {
                 "en": "Tune 7",
                 "nl": "Melodie 7",
-                "de": "Melodie 7"
+                "de": "Melodie 7",
+                "da": "Melodi 7",
+                "es": "Melodía 7",
+                "fr": "Mélodie 7",
+                "it": "Melodia 7",
+                "no": "Melodi 7",
+                "sv": "Melodi 7",
+                "pl": "Melodia 7",
+                "ru": "Мелодия 7",
+                "ko": "멜로디 7"
               }
             },
             {
@@ -288,7 +603,16 @@
               "label": {
                 "en": "Tune 8",
                 "nl": "Melodie 8",
-                "de": "Melodie 8"
+                "de": "Melodie 8",
+                "da": "Melodi 8",
+                "es": "Melodía 8",
+                "fr": "Mélodie 8",
+                "it": "Melodia 8",
+                "no": "Melodi 8",
+                "sv": "Melodi 8",
+                "pl": "Melodia 8",
+                "ru": "Мелодия 8",
+                "ko": "멜로디 8"
               }
             },
             {
@@ -296,7 +620,16 @@
               "label": {
                 "en": "Tune 9",
                 "nl": "Melodie 9",
-                "de": "Melodie 9"
+                "de": "Melodie 9",
+                "da": "Melodi 9",
+                "es": "Melodía 9",
+                "fr": "Mélodie 9",
+                "it": "Melodia 9",
+                "no": "Melodi 9",
+                "sv": "Melodi 9",
+                "pl": "Melodia 9",
+                "ru": "Мелодия 9",
+                "ko": "멜로디 9"
               }
             },
             {
@@ -304,7 +637,16 @@
               "label": {
                 "en": "Tune 10 (default)",
                 "nl": "Melodie 10 (standaard)",
-                "de": "Melodie 10 (Standard)"
+                "de": "Melodie 10 (Standard)",
+                "da": "Melodi 10 (standard)",
+                "es": "Melodía 10 (predeterminado)",
+                "fr": "Mélodie 10 (par défaut)",
+                "it": "Melodia 10 (predefinito)",
+                "no": "Melodi 10 (standard)",
+                "sv": "Melodi 10 (standard)",
+                "pl": "Melodia 10 (domyślnie)",
+                "ru": "Мелодия 10 (по умолчанию)",
+                "ko": "멜로디 10 (기본값)"
               }
             }
           ]
@@ -316,17 +658,44 @@
       "title": {
         "en": "Set the doorbell tune",
         "nl": "Stel de deurbel melodie in",
-        "de": "Einstellen der Türklingelmelodie"
+        "de": "Einstellen der Türklingelmelodie",
+        "da": "Indstil dørklokkelyd",
+        "es": "Ajustar el tono del timbre",
+        "fr": "Régler la sonnerie de la sonnette",
+        "it": "Imposta la melodia del campanello",
+        "no": "Sett dørklokkens tone",
+        "sv": "Ställ in dörrklockans signal",
+        "pl": "Ustaw melodię dzwonka do drzwi",
+        "ru": "Установить мелодию дверного звонка",
+        "ko": "문 벨 설정"
       },
       "titleFormatted": {
         "en": "Set the doorbell tune to [[doorbell_tune]]",
         "nl": "Stel de deurbel melodie in op [[doorbell_tune]]",
-        "de": "Türklingelmelodie auf [[doorbell_tune]] einstellen"
+        "de": "Türklingelmelodie auf [[doorbell_tune]] einstellen",
+        "da": "Indstil dørklokkelyd til [[doorbell_tune]]",
+        "es": "Ajustar el tono del timbre a [[doorbell_tune]]",
+        "fr": "Régler la sonnerie de la sonnette à [[doorbell_tune]]",
+        "it": "Imposta la melodia del campanello su [[doorbell_tune]]",
+        "no": "Sett dørklokkens tone til [[doorbell_tune]]",
+        "sv": "Ställ in dörrklockans signal till [[doorbell_tune]]",
+        "pl": "Ustaw melodię dzwonka do drzwi na [[doorbell_tune]]",
+        "ru": "Установите мелодию дверного звонка на [[doorbell_tune]]",
+        "ko": "[[doorbell_tune]]으로 문 설정]"
       },
       "hint": {
         "en": "Choose the tune of the doorbell sound",
         "nl": "Kies de melodie die gebruikt wordt als deurbel",
-        "de": "Wähle die Melodie der Türklingel aus."
+        "de": "Wähle die Melodie der Türklingel aus.",
+        "da": "Vælg lyden af dørklokken",
+        "es": "Elegir el tono de sonido del timbre",
+        "fr": "Choisissez la sonnerie du son de la sonnette",
+        "it": "Scegli la melodia del suono del campanello",
+        "no": "Velg tonen til dørklokken",
+        "sv": "Välj dörrklockans signal",
+        "pl": "Wybierz melodię dźwięku dzwonka do drzwi",
+        "ru": "Выберите мелодию дверного звонка",
+        "ko": "초인종 소리의 곡조를 선택하세요"
       },
       "args": [
         {
@@ -338,7 +707,16 @@
               "label": {
                 "en": "Tune 1",
                 "nl": "Melodie 1",
-                "de": "Melodie 1"
+                "de": "Melodie 1",
+                "da": "Melodi 1",
+                "es": "Melodía 1",
+                "fr": "Mélodie 1",
+                "it": "Melodia 1",
+                "no": "Melodi 1",
+                "sv": "Melodi 1",
+                "pl": "Melodia 1",
+                "ru": "Мелодия 1",
+                "ko": "멜로디 1"
               }
             },
             {
@@ -346,7 +724,16 @@
               "label": {
                 "en": "Tune 2",
                 "nl": "Melodie 2",
-                "de": "Melodie 2"
+                "de": "Melodie 2",
+                "da": "Melodi 2",
+                "es": "Melodía 2",
+                "fr": "Mélodie 2",
+                "it": "Melodia 2",
+                "no": "Melodi 2",
+                "sv": "Melodi 2",
+                "pl": "Melodia 2",
+                "ru": "Мелодия 2",
+                "ko": "멜로디 2"
               }
             },
             {
@@ -354,7 +741,16 @@
               "label": {
                 "en": "Tune 3",
                 "nl": "Melodie 3",
-                "de": "Melodie 3"
+                "de": "Melodie 3",
+                "da": "Melodi 3",
+                "es": "Melodía 3",
+                "fr": "Mélodie 3",
+                "it": "Melodia 3",
+                "no": "Melodi 3",
+                "sv": "Melodi 3",
+                "pl": "Melodia 3",
+                "ru": "Мелодия 3",
+                "ko": "멜로디 3"
               }
             },
             {
@@ -362,7 +758,16 @@
               "label": {
                 "en": "Tune 4",
                 "nl": "Melodie 4",
-                "de": "Melodie 4"
+                "de": "Melodie 4",
+                "da": "Melodi 4",
+                "es": "Melodía 4",
+                "fr": "Mélodie 4",
+                "it": "Melodia 4",
+                "no": "Melodi 4",
+                "sv": "Melodi 4",
+                "pl": "Melodia 4",
+                "ru": "Мелодия 4",
+                "ko": "멜로디 4"
               }
             },
             {
@@ -370,7 +775,16 @@
               "label": {
                 "en": "Tune 5",
                 "nl": "Melodie 5",
-                "de": "Melodie 5"
+                "de": "Melodie 5",
+                "da": "Melodi 5",
+                "es": "Melodía 5",
+                "fr": "Mélodie 5",
+                "it": "Melodia 5",
+                "no": "Melodi 5",
+                "sv": "Melodi 5",
+                "pl": "Melodia 5",
+                "ru": "Мелодия 5",
+                "ko": "멜로디 5"
               }
             },
             {
@@ -378,7 +792,16 @@
               "label": {
                 "en": "Tune 6",
                 "nl": "Melodie 6",
-                "de": "Melodie 6"
+                "de": "Melodie 6",
+                "da": "Melodi 6",
+                "es": "Melodía 6",
+                "fr": "Mélodie 6",
+                "it": "Melodia 6",
+                "no": "Melodi 6",
+                "sv": "Melodi 6",
+                "pl": "Melodia 6",
+                "ru": "Мелодия 6",
+                "ko": "멜로디 6"
               }
             },
             {
@@ -386,7 +809,16 @@
               "label": {
                 "en": "Tune 7",
                 "nl": "Melodie 7",
-                "de": "Melodie 7"
+                "de": "Melodie 7",
+                "da": "Melodi 7",
+                "es": "Melodía 7",
+                "fr": "Mélodie 7",
+                "it": "Melodia 7",
+                "no": "Melodi 7",
+                "sv": "Melodi 7",
+                "pl": "Melodia 7",
+                "ru": "Мелодия 7",
+                "ko": "멜로디 7"
               }
             },
             {
@@ -394,7 +826,16 @@
               "label": {
                 "en": "Tune 8",
                 "nl": "Melodie 8",
-                "de": "Melodie 8"
+                "de": "Melodie 8",
+                "da": "Melodi 8",
+                "es": "Melodía 8",
+                "fr": "Mélodie 8",
+                "it": "Melodia 8",
+                "no": "Melodi 8",
+                "sv": "Melodi 8",
+                "pl": "Melodia 8",
+                "ru": "Мелодия 8",
+                "ko": "멜로디 8"
               }
             },
             {
@@ -402,7 +843,16 @@
               "label": {
                 "en": "Tune 9 (default)",
                 "nl": "Melodie 9 (standard)",
-                "de": "Melodie 9 (Standard)"
+                "de": "Melodie 9 (Standard)",
+                "da": "Melodi 9 (standard)",
+                "es": "Melodía 9 (predeterminado)",
+                "fr": "Mélodie 9 (par défaut)",
+                "it": "Melodia 9 (predefinito)",
+                "no": "Melodi 9 (standard)",
+                "sv": "Melodi 9 (standard)",
+                "pl": "Melodia 9 (domyślnie)",
+                "ru": "Мелодия 9 (по умолчанию)",
+                "ko": "멜로디 9 (기본값)"
               }
             },
             {
@@ -410,7 +860,16 @@
               "label": {
                 "en": "Tune 10",
                 "nl": "Melodie 10",
-                "de": "Melodie 10"
+                "de": "Melodie 10",
+                "da": "Melodi 10",
+                "es": "Melodía 10",
+                "fr": "Mélodie 10",
+                "it": "Melodia 10",
+                "no": "Melodi 10",
+                "sv": "Melodi 10",
+                "pl": "Melodia 10",
+                "ru": "Мелодия 10",
+                "ko": "멜로디 10"
               }
             }
           ]

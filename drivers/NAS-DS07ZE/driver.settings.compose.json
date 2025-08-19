@@ -1,188 +1,332 @@
 [
-    {
-      "id": "off_delay",
-      "zwave": {
-        "index": 8,
-        "size": 2,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 0,
-        "max": 30000
-      },
-      "label": {
-        "en": "Off Delay",
-        "de": "Ausschaltverzögerung"
-      },
-      "value": 30,
-      "hint": {
-        "en": "Can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay",
-        "nl": "Kan gebruikt worden om de hoeveelheid vertraging aan te passen voordat het OFF commando verzonden. Deze parameter kan worden geconfigureerd met de waarde van 0 tot en met 65535, waarbij 0 betekent stuur onmiddellijk UIT commando en 65535 betekent 65.535 seconden vertraging",
-        "de": "Kann verwendet werden, um die Verzögerungszeit einzustellen, bevor der AUS-Befehl gesendet wird. Dieser Parameter kann mit dem Wert von 0 bis 65535 konfiguriert werden, wobei 0 bedeutet, dass der AUS-Befehl sofort gesendet wird und 65535 bedeutet, dass die Verzögerung 65535 Sekunden beträgt"
-      }
+  {
+    "id": "off_delay",
+    "zwave": {
+      "index": 8,
+      "size": 2,
+      "signed": false
     },
-    {
-      "id": "led_indicator",
-      "zwave": {
-        "index": 1,
-        "size": 1,
-        "signed": false
-      },
-      "type": "checkbox",
-      "_size": 1,
-      "label": {
-        "en": "LED indication",
-        "nl": "LED indicatie",
-        "de": "LED"
-      },
-      "value": true,
-      "hint": {
-        "en": "Enable LED to blink on actions, default enabled",
-        "nl": "Schakel LED in om te knipperen bij acties, standaard ingeschakeld",
-        "de": "Aktivieren Sie die LED, um bei Aktionen zu blinken, Standard aktiviert"
-      }
+    "type": "number",
+    "attr": {
+      "min": 0,
+      "max": 30000
     },
-    {
-      "id": "sensor_measuring_interval",
-      "zwave": {
-        "index": 9,
-        "size": 2,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 0,
-        "max": 30000
-      },
-      "label": {
-        "en": "Sensor Measuring Interval",
-        "nl": "Sensor Meet Interval",
-        "de": "Ausschaltverzögerung"
-      },
-      "value": 180,
-      "hint": {
-        "en": "The time interval in seconds for sensor measuring, default 180",
-        "nl": "KHet tijdsinterval in seconden voor sensormeting, standaard 180",
-        "de": "Das Zeitintervall in Sekunden für die Sensormessung, Standard 180"
-      }
+    "label": {
+      "en": "Off Delay",
+      "de": "Ausschaltverzögerung",
+      "da": "Sluk forsinkelse",
+      "es": "Retraso de apagado",
+      "fr": "Délai d'arrêt",
+      "it": "Ritardo di spegnimento",
+      "no": "Av-forsinkelse",
+      "sv": "Avstängningsfördröjning",
+      "pl": "Opóźnienie wyłączenia",
+      "ru": "Задержка выключения",
+      "ko": "꺼짐 지연 시간"
     },
-    {
-      "id": "humidity_d_value",
-      "zwave": {
-        "index": 6,
-        "size": 1,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 0,
-        "max": 100
-      },
-      "label": {
-        "en": "Humidity D-Value Setting",
-        "nl": "Vochtigheid D-waarde instelling",
-        "de": "Feuchtigkeits D-Wert-Einstellung"
-      },
-      "value": 20,
-      "hint": {
-        "en": "Changes the value of the humidity. D-Value=Value x 0.1 RH%, default 20",
-        "nl": "Verandert de waarde van de vochtigheid. D-waarde = waarde x 0,1 RH%, standaard 20",
-        "de": "Ändert den wert der luftfeuchtigkeit. D-Wert = Wert x 0,1 RH%, Standard 20"
-      }
-    },
-    {
-      "id": "temp_d_value",
-      "zwave": {
-        "index": 5,
-        "size": 1,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 0,
-        "max": 100
-      },
-      "label": {
-        "en": "Temperature D-Value Setting",
-        "nl": "Temperatuur D-Waarde instelling",
-        "de": "Temperatur D-Wert-Einstellung"
-      },
-      "value": 10,
-      "hint": {
-        "en": "Changes the value of the temperature. D-Value=Value x 0.1 degree Celcius, default 10",
-        "nl": "Verandert de waarde van de temperatuur. D-waarde = waarde x 0,1 graden Celcius, standaard 10",
-        "de": "Ändert den Wert der temperatur. D-Wert = Wert x 0,1 Grad Celcius, Standard 10"
-      }
-    },
-    {
-      "id": "temp_offset",
-      "zwave": {
-        "index": 3,
-        "size": 1,
-        "signed": true
-      },
-      "type": "number",
-      "attr": {
-        "min": -120,
-        "max": 120
-      },
-      "label": {
-        "en": "Temperature Offset-setting",
-        "nl": "Temperatuur Offset-instelling",
-        "de": "Temperatur Offset-Einstellung"
-      },
-      "value": 0,
-      "hint": {
-        "en": "Changes the offset of the temperature. Value x 0.1 degree Celcius, default 0",
-        "nl": "Verandert de offset van de temperatuur. Waarde x 0,1 graden Celcius, standaard 0",
-        "de": "Ändert den Offset der Temperatur. Wert x 0,1 Grad Celsius, standard 0"
-      }
-    },
-    {
-      "id": "humidity_offset",
-      "zwave": {
-        "index": 4,
-        "size": 1,
-        "signed": true
-      },
-      "type": "number",
-      "attr": {
-        "min": -120,
-        "max": 120
-      },
-      "label": {
-        "en": "Humidity Offset-setting",
-        "nl": "Vochtigheid Offset-instelling",
-        "de": "Feuchtigkeit Offset-einstellung"
-      },
-      "value": 0,
-      "hint": {
-        "en": "Changes the offset of the temperature. Value x 0.1 degree Celcius, default 0",
-        "nl": "Verandert de offset van de temperatuur. Waarde x 0,1 graden Celcius, standaard 0",
-        "de": "Ändert den Offset der Temperatur. Wert x 0,1 Grad Celsius, standard 0"
-      }
-    },
-    {
-      "id": "basic_set_level",
-      "zwave": {
-        "index": 2,
-        "size": 1,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 0,
-        "max": 255
-      },
-      "value": 255,
-      "label": {
-        "en": "Basic Set Level"
-      },
-      "hint": {
-        "en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
-        "nl": "0=UIT, Alarm annuleren of het uitschakelen van de sensor, 1-99 = Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
-        "de": "0=AUS, Alarm deaktivieren oder ein Gerät ausschalten, 1-99=Dim Level (Multilevel Switch Device), 255 = EIN (Binary Switch Device)"
-      }
+    "value": 30,
+    "hint": {
+      "en": "Can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay",
+      "nl": "Kan gebruikt worden om de hoeveelheid vertraging aan te passen voordat het OFF commando verzonden. Deze parameter kan worden geconfigureerd met de waarde van 0 tot en met 65535, waarbij 0 betekent stuur onmiddellijk UIT commando en 65535 betekent 65.535 seconden vertraging",
+      "de": "Kann verwendet werden, um die Verzögerungszeit einzustellen, bevor der AUS-Befehl gesendet wird. Dieser Parameter kann mit dem Wert von 0 bis 65535 konfiguriert werden, wobei 0 bedeutet, dass der AUS-Befehl sofort gesendet wird und 65535 bedeutet, dass die Verzögerung 65535 Sekunden beträgt",
+      "da": "Kan bruges til at justere mængden af forsinkelse, før OFF-kommandoen sendes. Denne parameter kan konfigureres med værdien fra 0 til 65535, hvor 0 betyder send OFF-kommandoen straks, og 65535 betyder 65535 sekunders forsinkelse",
+      "es": "Se puede usar para ajustar la cantidad de retraso antes de que se transmita el comando OFF. Este parámetro se puede configurar con el valor de 0 a 65535, donde 0 significa enviar el comando OFF inmediatamente y 65535 significa 65535 segundos de retraso",
+      "fr": "Peut être utilisé pour ajuster le délai avant que la commande OFF ne soit transmise. Ce paramètre peut être configuré avec une valeur de 0 à 65535, où 0 signifie envoyer la commande OFF immédiatement et 65535 signifie un délai de 65535 secondes",
+      "it": "Può essere utilizzato per regolare il ritardo prima della trasmissione del comando OFF. Questo parametro può essere configurato con un valore da 0 a 65535, dove 0 significa inviare il comando OFF immediatamente e 65535 significa un ritardo di 65535 secondi",
+      "no": "Kan brukes til å justere mengden av forsinkelse før AV-kommandoen sendes. Denne parameteren kan konfigureres med verdien fra 0 til 65535, der 0 betyr send AV-kommando umiddelbart og 65535 betyr 65535 sekunders forsinkelse",
+      "sv": "Kan användas för att justera mängden av fördröjning innan OFF-kommandot sänds. Denna parameter kan konfigureras med värdet 0 till 65535, där 0 betyder skicka OFF-kommandot omedelbart och 65535 betyder 65535 sekunders fördröjning",
+      "pl": "Można użyć, aby dostosować opóźnienie przed wysłaniem polecenia OFF. Parametr ten można skonfigurować z wartością od 0 do 65535, gdzie 0 oznacza natychmiastowe wysłanie polecenia OFF, a 65535 oznacza opóźnienie 65535 sekund",
+      "ru": "Может использоваться для регулировки задержки перед передачей команды ВЫКЛ. Этот параметр можно настроить на значение от 0 до 65535, где 0 означает немедленную отправку команды ВЫКЛ, а 65535 означает задержку 65535 секунд",
+      "ko": "OFF 명령이 전송되기 전에 지연 시간을 조정하는 데 사용할 수 있습니다. 이 매개변수는 0에서 65535까지의 값으로 구성할 수 있으며, 0은 즉시 OFF 명령을 보내고 65535는 65535초 지연을 의미합니다."
     }
-  ]
+  },
+  {
+    "id": "led_indicator",
+    "zwave": {
+      "index": 1,
+      "size": 1,
+      "signed": false
+    },
+    "type": "checkbox",
+    "_size": 1,
+    "label": {
+      "en": "LED indication",
+      "nl": "LED indicatie",
+      "de": "LED",
+      "da": "LED indikator",
+      "es": "Indicación LED",
+      "fr": "Indication LED",
+      "it": "Indicazione LED",
+      "no": "LED-indikator",
+      "sv": "LED-indikation",
+      "pl": "Wskaźnik LED",
+      "ru": "Светодиодная индикация",
+      "ko": "LED 표시기"
+    },
+    "value": true,
+    "hint": {
+      "en": "Enable LED to blink on actions, default enabled",
+      "nl": "Schakel LED in om te knipperen bij acties, standaard ingeschakeld",
+      "de": "Aktivieren Sie die LED, um bei Aktionen zu blinken, Standard aktiviert",
+      "da": "Aktivér LED til at blinke ved handlinger, som standard aktiveret",
+      "es": "Habilitar LED para parpadear en acciones, habilitado por defecto",
+      "fr": "Activer la LED pour clignoter lors des actions, activé par défaut",
+      "it": "Abilita il LED a lampeggiare su azioni, abilitato per impostazione predefinita",
+      "no": "Aktiver LED til å blinke ved handlinger, standard aktivert",
+      "sv": "Aktivera LED för att blinka vid åtgärder, standard aktiverad",
+      "pl": "Włącz diodę LED, aby migała przy działaniach, domyślnie włączona",
+      "ru": "Включить мигание светодиода при действиях, по умолчанию включено",
+      "ko": "동작 시 LED가 깜박이도록 설정, 기본적으로 활성화됨"
+    }
+  },
+  {
+    "id": "sensor_measuring_interval",
+    "zwave": {
+      "index": 9,
+      "size": 2,
+      "signed": false
+    },
+    "type": "number",
+    "attr": {
+      "min": 0,
+      "max": 30000
+    },
+    "label": {
+      "en": "Sensor Measuring Interval",
+      "nl": "Sensor Meet Interval",
+      "de": "Ausschaltverzögerung",
+      "da": "Sensor målingsinterval",
+      "es": "Intervalo de medición del sensor",
+      "fr": "Intervalle de mesure du capteur",
+      "it": "Intervallo di misurazione del sensore",
+      "no": "Sensor måleintervall",
+      "sv": "Sensor mätningsintervall",
+      "pl": "Interwał pomiarowy czujnika",
+      "ru": "Интервал измерения датчика",
+      "ko": "센서 측정 간격"
+    },
+    "value": 180,
+    "hint": {
+      "en": "The time interval in seconds for sensor measuring, default 180",
+      "nl": "KHet tijdsinterval in seconden voor sensormeting, standaard 180",
+      "de": "Das Zeitintervall in Sekunden für die Sensormessung, Standard 180",
+      "da": "Tidsintervallet i sekunder for sensor måling, standard 180",
+      "es": "El intervalo de tiempo en segundos para la medición del sensor, predeterminado 180",
+      "fr": "L'intervalle de temps en secondes pour la mesure du capteur, par défaut 180",
+      "it": "L'intervallo di tempo in secondi per la misurazione del sensore, predefinito a 180",
+      "no": "Tidsintervallet i sekunder for måling av sensor, standard 180",
+      "sv": "Tidsintervallet i sekunder för sensor mätning, standard 180",
+      "pl": "Interwał czasowy w sekundach do pomiaru czujnika, domyślnie 180",
+      "ru": "Временной интервал в секундах для измерения датчиком, по умолчанию 180",
+      "ko": "센서 측정을 위한 시간 간격, 기본값 180"
+    }
+  },
+  {
+    "id": "humidity_d_value",
+    "zwave": {
+      "index": 6,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "attr": {
+      "min": 0,
+      "max": 100
+    },
+    "label": {
+      "en": "Humidity D-Value Setting",
+      "nl": "Vochtigheid D-waarde instelling",
+      "de": "Feuchtigkeits D-Wert-Einstellung",
+      "da": "Fugtighed D-værdi indstilling",
+      "es": "Configuración de valor D de humedad",
+      "fr": "Réglage de la valeur D d'humidité",
+      "it": "Impostazione del valore D di umidità",
+      "no": "Fuktighet D-verdi innstilling",
+      "sv": "Fuktighet D-värde inställning",
+      "pl": "Ustawienie wartości D wilgotności",
+      "ru": "Настройка D-значения влажности",
+      "ko": "습도 D-값 설정"
+    },
+    "value": 20,
+    "hint": {
+      "en": "Changes the value of the humidity. D-Value=Value x 0.1 RH%, default 20",
+      "nl": "Verandert de waarde van de vochtigheid. D-waarde = waarde x 0,1 RH%, standaard 20",
+      "de": "Ändert den wert der luftfeuchtigkeit. D-Wert = Wert x 0,1 RH%, Standard 20",
+      "da": "Ændrer værdien af fugtigheden. D-værdi = Værdi x 0,1 RH%, standard 20",
+      "es": "Cambia el valor de la humedad. Valor D = Valor x 0,1 %HR, predeterminado 20",
+      "fr": "Modifie la valeur de l'humidité. Valeur D = Valeur x 0,1 RH%, par défaut 20",
+      "it": "Cambia il valore dell'umidità. D-Valore = Valore x 0,1 RH%, predefinito 20",
+      "no": "Endrer verdien av fuktigheten. D-verdi = Verdi x 0,1 RH%, standard 20",
+      "sv": "Ändrar värdet för fuktigheten. D-värde = Värde x 0,1 % RH, standard 20",
+      "pl": "Zmienia wartość wilgotności. Wartość D = wartość x 0,1 RH%, domyślnie 20",
+      "ru": "Изменяет значение влажности. D-значение = Значение x 0,1 RH%, по умолчанию 20",
+      "ko": "습도의 값을 변경합니다. D-값 = 값 x 0.1 RH%, 기본값 20"
+    }
+  },
+  {
+    "id": "temp_d_value",
+    "zwave": {
+      "index": 5,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "attr": {
+      "min": 0,
+      "max": 100
+    },
+    "label": {
+      "en": "Temperature D-Value Setting",
+      "nl": "Temperatuur D-Waarde instelling",
+      "de": "Temperatur D-Wert-Einstellung",
+      "da": "Temperatur D-værdi indstilling",
+      "es": "Configuración de valor D de temperatura",
+      "fr": "Réglage de la valeur D de température",
+      "it": "Impostazione del valore D della temperatura",
+      "no": "Temperatur D-verdi innstilling",
+      "sv": "Temperatur D-värde inställning",
+      "pl": "Ustawienie wartości D temperatury",
+      "ru": "Настройка D-значения температуры",
+      "ko": "온도 D-값 설정"
+    },
+    "value": 10,
+    "hint": {
+      "en": "Changes the value of the temperature. D-Value=Value x 0.1 degree Celcius, default 10",
+      "nl": "Verandert de waarde van de temperatuur. D-waarde = waarde x 0,1 graden Celcius, standaard 10",
+      "de": "Ändert den Wert der temperatur. D-Wert = Wert x 0,1 Grad Celcius, Standard 10",
+      "da": "Ændrer værdien af temperaturen. D-værdi = Værdi x 0,1 grader Celsius, standard 10",
+      "es": "Cambia el valor de la temperatura. Valor D = Valor x 0,1 grados Celsius, predeterminado 10",
+      "fr": "Modifie la valeur de la température. Valeur D = Valeur x 0,1 degré Celsius, par défaut 10",
+      "it": "Cambia il valore della temperatura. D-Valore = Valore x 0,1 grado Celsius, predefinito 10",
+      "no": "Endrer verdien av temperaturen. D-verdi = Verdi x 0,1 grad Celsius, standard 10",
+      "sv": "Ändrar värdet för temperaturen. D-värde = Värde x 0,1 grad Celcius, standard 10",
+      "pl": "Zmienia wartość temperatury. Wartość D = wartość x 0,1 stopnia Celsjusza, domyślnie 10",
+      "ru": "Изменяет значение температуры. D-значение = Значение x 0.1 градус Цельсия, по умолчанию 10",
+      "ko": "온도의 값을 변경합니다. D-값 = 값 x 0.1도 섭씨, 기본값 10"
+    }
+  },
+  {
+    "id": "temp_offset",
+    "zwave": {
+      "index": 3,
+      "size": 1,
+      "signed": true
+    },
+    "type": "number",
+    "attr": {
+      "min": -120,
+      "max": 120
+    },
+    "label": {
+      "en": "Temperature Offset-setting",
+      "nl": "Temperatuur Offset-instelling",
+      "de": "Temperatur Offset-Einstellung",
+      "da": "Temperatur offset-indstilling",
+      "es": "Configuración de compensación de temperatura",
+      "fr": "Réglage de l'offset de température",
+      "it": "Impostazione dell'offset di temperatura",
+      "no": "Temperatur offset-innstilling",
+      "sv": "Temperatur offset-inställning",
+      "pl": "Ustawienie punktu odniesienia temperatury",
+      "ru": "Настройка смещения температуры",
+      "ko": "온도 오프셋 설정"
+    },
+    "value": 0,
+    "hint": {
+      "en": "Changes the offset of the temperature. Value x 0.1 degree Celcius, default 0",
+      "nl": "Verandert de offset van de temperatuur. Waarde x 0,1 graden Celcius, standaard 0",
+      "de": "Ändert den Offset der Temperatur. Wert x 0,1 Grad Celsius, standard 0",
+      "da": "Ændrer temperaturen offset. Værdi x 0,1 grader Celsius, standard 0",
+      "es": "Cambia la compensación de la temperatura. Valor x 0,1 grados Celsius, predeterminado 0",
+      "fr": "Modifie la compensation de température. Valeur x 0,1 degré Celsius, par défaut 0",
+      "it": "Cambia l'offset della temperatura. Valore x 0,1 gradi Celsius, predefinito 0",
+      "no": "Endrer temperaturens offset. Verdi x 0,1 grad Celsius, standard 0",
+      "sv": "Ändrar temperaturen offset. Värde x 0,1 grad C, standard 0",
+      "pl": "Zmienia offset temperatury. Wartość x 0,1 stopnia Celsjusza, domyślnie 0",
+      "ru": "Изменяет смещение температуры. Значение x 0,1 градуса Цельсия, по умолчанию 0",
+      "ko": "온도의 오프셋을 변경합니다. 값 x 0.1도 섭씨, 기본값 0"
+    }
+  },
+  {
+    "id": "humidity_offset",
+    "zwave": {
+      "index": 4,
+      "size": 1,
+      "signed": true
+    },
+    "type": "number",
+    "attr": {
+      "min": -120,
+      "max": 120
+    },
+    "label": {
+      "en": "Humidity Offset-setting",
+      "nl": "Vochtigheid Offset-instelling",
+      "de": "Feuchtigkeit Offset-einstellung",
+      "da": "Fugtighed offset-indstilling",
+      "es": "Configuración de compensación de humedad",
+      "fr": "Réglage de l'offset d'humidité",
+      "it": "Impostazione dell'offset di umidità",
+      "no": "Luftfuktighet offset-innstilling",
+      "sv": "Fuktighet offset-inställning",
+      "pl": "Ustawienie punktu odniesienia wilgotności",
+      "ru": "Настройка смещения влажности",
+      "ko": "습도 오프셋 설정"
+    },
+    "value": 0,
+    "hint": {
+      "en": "Changes the offset of the temperature. Value x 0.1 degree Celcius, default 0",
+      "nl": "Verandert de offset van de temperatuur. Waarde x 0,1 graden Celcius, standaard 0",
+      "de": "Ändert den Offset der Temperatur. Wert x 0,1 Grad Celsius, standard 0",
+      "da": "Ændrer temperaturen offset. Værdi x 0,1 grader Celsius, standard 0",
+      "es": "Cambia la compensación de la temperatura. Valor x 0,1 grados Celsius, predeterminado 0",
+      "fr": "Modifie la compensation de température. Valeur x 0,1 degré Celsius, par défaut 0",
+      "it": "Cambia l'offset della temperatura. Valore x 0,1 gradi Celsius, predefinito 0",
+      "no": "Endrer temperaturens offset. Verdi x 0,1 grad Celsius, standard 0",
+      "sv": "Ändrar temperaturen offset. Värde x 0,1 grad Celsius, standard 0",
+      "pl": "Zmienia offset temperatury. Wartość x 0,1 stopnia Celsjusza, domyślnie 0",
+      "ru": "Изменяет смещение температуры. Значение x 0,1 градуса Цельсия, по умолчанию 0",
+      "ko": "온도의 오프셋을 변경합니다. 값 x 0.1도 섭씨, 기본값 0"
+    }
+  },
+  {
+    "id": "basic_set_level",
+    "zwave": {
+      "index": 2,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "value": 255,
+    "label": {
+      "en": "Basic Set Level",
+      "da": "Grundlæggende indstillingsniveau",
+      "es": "Nivel de ajuste básico",
+      "fr": "Niveau de réglage de base",
+      "it": "Livello di impostazione di base",
+      "no": "Grunnleggende innstillingsnivå",
+      "sv": "Grundläggande inställningsnivå",
+      "pl": "Podstawowy poziom ustawienia",
+      "ru": "Базовый уровень установки",
+      "ko": "기본 설정 수준"
+    },
+    "hint": {
+      "en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
+      "nl": "0=UIT, Alarm annuleren of het uitschakelen van de sensor, 1-99 = Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
+      "de": "0=AUS, Alarm deaktivieren oder ein Gerät ausschalten, 1-99=Dim Level (Multilevel Switch Device), 255 = EIN (Binary Switch Device)",
+      "da": "0=SLUKKET, Annuler alarm eller slukke en enhed, 1-99=Dimmer Level (Multilevel Switch Device), 255 = TÆnDT (Binary Switch Device)",
+      "es": "0=OFF, Cancelación de alarma o apagado de un dispositivo, 1-99=Nivel de atenuación (Dispositivo de interruptor multinivel), 255 = ON (Dispositivo de interruptor binario)",
+      "fr": "0=ÉTEINT, Annulation d'alarme ou mise hors tension d'un appareil, 1-99=Niveau de gradation (Dispositif de commutateur multilevel), 255 = ON (Dispositif de commutateur binaire)",
+      "it": "0=SPENTO, Annullamento dell'allarme o spegnimento di un dispositivo, 1-99=Livello Dim (Dispositivo di interruttore multilevel), 255 = ON (Dispositivo di interruttore binario)",
+      "no": "0=AV, Avbryt alarm eller slå av en enhet, 1-99=Dimmenivå (Multilevel Switch Device), 255 = PÅ (Binary Switch Device)",
+      "sv": "0=AV, Avbryt larm eller stäng av en enhet, 1-99=Dämningsnivå (Multilevel Switch Device), 255 = PÅ (Binary Switch Device)",
+      "pl": "0=WYŁ, Anulowanie alarmu lub wyłączenie urządzenia, 1-99=Poziom ściemniacza (Urządzenie z przełącznikiem wielopoziomowym), 255 = WŁ (Urządzenie z przełącznikiem binarnym)",
+      "ru": "0=ВЫКЛ, Отключение сигнала тревоги или выключение устройства, 1-99=Уровень затемнения (Устройство с многозадачным выключателем), 255 = ВКЛ (Устройство с бинарным выключателем)",
+      "ko": "0=OFF, 알람 취소 또는 장치 끄기, 1-99=디밍 레벨 (다단계 스위치 장치), 255 = ON (바이너리 스위치 장치)"
+    }
+  }
+]

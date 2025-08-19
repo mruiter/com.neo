@@ -5,12 +5,30 @@
       "title": {
         "en": "Reset meter values",
         "nl": "Meter waarden opnieuw instellen",
-        "de": "Zählerwerte zurücksetzen"
+        "de": "Zählerwerte zurücksetzen",
+        "da": "Nulstil måleværdier",
+        "es": "Restablecer valores del medidor",
+        "fr": "Réinitialiser les valeurs du compteur",
+        "it": "Reimposta i valori del contatore",
+        "no": "Tilbakestill målerverdier",
+        "sv": "Återställ mätarvärden",
+        "pl": "Zresetuj wartości licznika",
+        "ru": "Сбросить значения счетчика",
+        "ko": "계량기 값 재설정"
       },
       "hint": {
         "en": "Reset the accumulated power usage value (kWh), note that this can not be reversed.",
         "nl": "Stel geaccumuleerde stroomverbruik waarde (kWh) opnieuw in, dit kan niet worden teruggedraaid.",
-        "de": "Rücksetzen des kumulierten Stromverbrauchswertes (kWh), beachte, dass dies nicht rückgängig gemacht werden kann."
+        "de": "Rücksetzen des kumulierten Stromverbrauchswertes (kWh), beachte, dass dies nicht rückgängig gemacht werden kann.",
+        "da": "Nulstil den akkumulerede strømforbrugsværdi (kWh), bemærk at dette ikke kan fortrydes.",
+        "es": "Restablecer el valor de uso de energía acumulada (kWh), tenga en cuenta que esto no se puede revertir.",
+        "fr": "Réinitialisez la valeur de consommation d'énergie accumulée (kWh), notez que cela ne peut pas être inversé.",
+        "it": "Reimposta il valore di consumo energetico accumulato (kWh), nota che questo non può essere annullato.",
+        "no": "Tilbakestill den akkumulerte strømforbruksverdien (kWh), merk at dette ikke kan reverseres.",
+        "sv": "Återställ det ackumulerade elförbrukningsvärdet (kWh), observera att detta inte kan ångras.",
+        "pl": "Zresetuj skumulowaną wartość zużycia energii (kWh), pamiętaj, że nie można tego cofnąć.",
+        "ru": "Сбросить накопленное значение использования электроэнергии (кВтч), имейте в виду, что это не может быть отменено.",
+        "ko": "누적 전력 사용량 값(kWh)을 재설정합니다. 이는 되돌릴 수 없습니다."
       },
       "args": []
     }

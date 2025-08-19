@@ -1,72 +1,117 @@
 [
-    {
-      "id": "swap_updown",
-      "zwave": {
-        "index": 1,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Swap Up/Down Button",
-        "nl": "Wissel omhoog en beneden knop",
-        "de": "Taste hoch und runter tauschen"
-      },
-      "value": true
+  {
+    "id": "swap_updown",
+    "zwave": {
+      "index": 1,
+      "size": 1
     },
-    {
-      "id": "swap_motorrotation",
-      "zwave": {
-        "index": 2,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Swap the motor rotation",
-        "nl": "Verander de draairichting van de motor",
-        "de": "Drehrichtung des Motors ändern"
-      },
-      "value": false
+    "type": "checkbox",
+    "label": {
+      "en": "Swap Up/Down Button",
+      "nl": "Wissel omhoog en beneden knop",
+      "de": "Taste hoch und runter tauschen",
+      "da": "Byt op/ned knap",
+      "es": "Intercambiar botón Arriba/Abajo",
+      "fr": "Échanger le bouton Haut/Bas",
+      "it": "Scambia pulsante su/giù",
+      "no": "Bytt opp/ned knapp",
+      "sv": "Byt upp/ner knapp",
+      "pl": "Zamień przycisk góra/dół",
+      "ru": "Переключить кнопку Вверх/Вниз",
+      "ko": "위/아래 버튼 전환"
     },
-    {
-      "id": "backlight_enable",
-      "zwave": {
-        "index": 3,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Controller LED state",
-        "nl": "Controler LED status",
-        "de": "Controller LED Status"
-      },
-      "value": true
+    "value": true
+  },
+  {
+    "id": "swap_motorrotation",
+    "zwave": {
+      "index": 2,
+      "size": 1
     },
-    {
-      "id": "move_led_indicator",
-      "zwave": {
-        "index": 4,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Controller LED shows move state",
-        "nl": "Controler LED laat keuze zien",
-        "de": "Controller LED zeigt bewegung status"
-      },
-      "value": true
+    "type": "checkbox",
+    "label": {
+      "en": "Swap the motor rotation",
+      "nl": "Verander de draairichting van de motor",
+      "de": "Drehrichtung des Motors ändern",
+      "da": "Byt motorens rotation",
+      "es": "Intercambiar la rotación del motor",
+      "fr": "Échanger la rotation du moteur",
+      "it": "Scambia la rotazione del motore",
+      "no": "Bytt motorrotasjonen",
+      "sv": "Byt motorrotationen",
+      "pl": "Zamień obroty silnika",
+      "ru": "Изменить направление вращения двигателя",
+      "ko": "모터 회전 전환"
     },
-    {
-      "id": "button_switch_function_disable",
-      "zwave": {
-        "index": 5,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Enable Button Control",
-        "nl": "Knopbediening ingeschakeld)",
-        "de": "Aktivieren Tastensteuerung"
-      },
-      "value": true
-    }
-  ]
+    "value": false
+  },
+  {
+    "id": "backlight_enable",
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Controller LED state",
+      "nl": "Controler LED status",
+      "de": "Controller LED Status",
+      "da": "Controller LED status",
+      "es": "Estado del LED del controlador",
+      "fr": "État de la LED du contrôleur",
+      "it": "Stato del LED del controller",
+      "no": "Kontroller LED-status",
+      "sv": "Kontroller LED-status",
+      "pl": "Stan diody LED kontrolera",
+      "ru": "Состояние светодиода контроллера",
+      "ko": "컨트롤러 LED 상태"
+    },
+    "value": true
+  },
+  {
+    "id": "move_led_indicator",
+    "zwave": {
+      "index": 4,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Controller LED shows move state",
+      "nl": "Controler LED laat keuze zien",
+      "de": "Controller LED zeigt bewegung status",
+      "da": "Controller LED viser bevægelsestilstand",
+      "es": "El LED del controlador muestra el estado de movimiento",
+      "fr": "La LED du contrôleur montre l'état de déplacement",
+      "it": "Il LED del controller mostra lo stato del movimento",
+      "no": "Kontroller LED viser bevegelsestilstand",
+      "sv": "Kontroller LED visar rörelsetillstånd",
+      "pl": "Diody LED kontrolera pokazują stan ruchu",
+      "ru": "Светодиод контроллера показывает состояние движения",
+      "ko": "컨트롤러 LED가 이동 상태를 표시"
+    },
+    "value": true
+  },
+  {
+    "id": "button_switch_function_disable",
+    "zwave": {
+      "index": 5,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Enable Button Control",
+      "nl": "Knopbediening ingeschakeld)",
+      "de": "Aktivieren Tastensteuerung",
+      "da": "Aktiver knapstyring",
+      "es": "Habilitar control de botón",
+      "fr": "Activer le contrôle des boutons",
+      "it": "Abilita il controllo del pulsante",
+      "no": "Aktiver knappkontroll",
+      "sv": "Aktivera knappstyrning",
+      "pl": "Włącz sterowanie przyciskiem",
+      "ru": "Включить управление кнопками",
+      "ko": "버튼 제어 활성화"
+    },
+    "value": true
+  }
+]

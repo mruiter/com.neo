@@ -1,10 +1,24 @@
 {
   "name": {
     "en": "Power Wallplug V1",
-    "nl": "Spanning Muurplug V1"
+    "nl": "Spanning Muurplug V1",
+    "da": "Strøm Vægstik V1",
+    "de": "Power Wandsteckdose V1",
+    "es": "Enchufe de Pared V1",
+    "fr": "Prise Murale V1",
+    "it": "Presa da Muro V1",
+    "no": "Strøm Veggplugg V1",
+    "sv": "Strömuttag V1",
+    "pl": "Wtyczka Ścienna V1",
+    "ru": "Электрическая Розетка V1",
+    "ko": "전원 벽 플러그 V1"
   },
-  "platforms": ["local"],
-  "connectivity": ["zwave"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": [
@@ -22,14 +36,34 @@
       "image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
       "instruction": {
         "en": "Press the button on your NEO Wall Plug three times",
-        "nl": "Druk driemaal op de knop op de NEO Wall Plug"
+        "nl": "Druk driemaal op de knop op de NEO Wall Plug",
+        "da": "Tryk på knappen på din NEO Wall Plug tre gange",
+        "de": "Drücken Sie dreimal die Taste an Ihrem NEO Wall Plug",
+        "es": "Presiona el botón en tu NEO Wall Plug tres veces",
+        "fr": "Appuyez trois fois sur le bouton de votre NEO Wall Plug",
+        "it": "Premi il pulsante sul tuo NEO Wall Plug tre volte",
+        "no": "Trykk på knappen på NEO-veggpluggen tre ganger",
+        "sv": "Tryck på knappen på din NEO-väggplugg tre gånger",
+        "pl": "Naciśnij przycisk na swojej wtyczce NEO Wall Plug trzy razy",
+        "ru": "Нажмите кнопку на вашем NEO Wall Plug три раза",
+        "ko": "NEO 벽 플러그에서 버튼을 세 번 누르세요"
       }
     },
     "unlearnmode": {
       "image": "/drivers/NAS-WR01ZE/assets/learnmode.svg",
       "instruction": {
         "en": "Press the button on your NEO Wall Plug three times",
-        "nl": "Druk driemaal op de knop op de NEO Wall Plug"
+        "nl": "Druk driemaal op de knop op de NEO Wall Plug",
+        "da": "Tryk på knappen på din NEO Wall Plug tre gange",
+        "de": "Drücken Sie dreimal die Taste an Ihrem NEO Wall Plug",
+        "es": "Presiona el botón en tu NEO Wall Plug tres veces",
+        "fr": "Appuyez trois fois sur le bouton de votre NEO Wall Plug",
+        "it": "Premi il pulsante sul tuo NEO Wall Plug tre volte",
+        "no": "Trykk på knappen på NEO-veggpluggen tre ganger",
+        "sv": "Tryck på knappen på din NEO-väggplugg tre gånger",
+        "pl": "Naciśnij przycisk na swojej wtyczce NEO Wall Plug trzy razy",
+        "ru": "Нажмите кнопку на вашем NEO Wall Plug три раза",
+        "ko": "NEO 벽 플러그에서 버튼을 세 번 누르세요"
       }
     },
     "associationGroups": [
@@ -40,21 +74,48 @@
         "hint": {
           "en": "Reports the lifeline service that assigned to plug status – ON/OFF. It enables the Plug to send reports and readings to the Z-Wave Controller. (Homey ID by default). It is not recommended to change this group.",
           "nl": "Rapportage van de status van de power plug en staat controle (AAN/UIT) over de power plug toe (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen.",
-          "de": "Lifeline Service. Meldet den Status des Power Plugs - EIN/AUS. Es ermöglicht dem Plug, Berichte und Messwerte an den Z-Wave-Controller zu senden. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern."
+          "de": "Lifeline Service. Meldet den Status des Power Plugs - EIN/AUS. Es ermöglicht dem Plug, Berichte und Messwerte an den Z-Wave-Controller zu senden. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern.",
+          "da": "Rapporterer livline-tjenesten, der er tildelt til stikstatus – TIL/FRA. Det gør det muligt for stikket at sende rapporter og målinger til Z-Wave-controlleren. (Homey ID som standard). Det anbefales ikke at ændre denne gruppe.",
+          "es": "Informa el servicio de línea de vida asignado al estado del enchufe – ENCENDIDO/APAGADO. Permite que el enchufe envíe informes y lecturas al controlador Z-Wave. (ID de Homey por defecto). No se recomienda cambiar este grupo.",
+          "fr": "Informe le service de ligne de vie attribué au statut de la prise - ALLUMÉ/ÉTEINT. Permet à la prise d'envoyer des rapports et des relevés au contrôleur Z-Wave. (ID Homey par défaut). Il n'est pas recommandé de modifier ce groupe.",
+          "it": "Riporta il servizio di linea vitale assegnato allo stato della presa – ACCESO/SPENTO. Permette alla presa di inviare report e letture al controller Z-Wave. (ID Homey di default). Non è consigliato cambiare questo gruppo.",
+          "no": "Rapporterer livlinjetjenesten som er tildelt til pluggstatus – PÅ/AV. Det gjør det mulig for Plug å sende rapporter og målinger til Z-Wave-kontrolleren. (Homey ID som standard). Det anbefales ikke å endre denne gruppen.",
+          "sv": "Rapporterar livlinjetjänsten som är tilldelad till strömbrytaren – PÅ/AV. Det gör det möjligt för Plug att skicka rapporter och avläsningar till Z-Wave-controlleren. (Homey ID som standard). Det rekommenderas inte att ändra denna grupp.",
+          "pl": "Raportuje usługę ratunkową przypisaną do stanu wtyczki – WŁ./WYŁ. Umożliwia wtyczce przesyłanie raportów i pomiarów do kontrolera Z-Wave. (Domyślnie ID Homey). Nie zaleca się zmiany tej grupy.",
+          "ru": "Сообщает о службе жизнеобеспечения, назначенной статусу штепселя – ВКЛ/ВЫКЛ. Это позволяет Plug отправлять отчёты и показания контроллеру Z-Wave. (ID Homey по умолчанию). Не рекомендуется изменять эту группу.",
+          "ko": "플러그 상태에 할당된 생명선 서비스를 보고합니다 – 켜짐/꺼짐. 플러그가 보고서 및 판독값을 Z-Wave 컨트롤러에 보낼 수 있게 합니다. (기본적으로 Homey ID). 이 그룹을 변경하는 것은 권장하지 않습니다."
         }
       },
       "2": {
         "hint": {
           "en": "Allows for sending alarm commands to associated devices such as Siren, relay module, lighting, etc. If current load is over the max current defined in 'Maximum over-load current', the Plug will send a alarm to the associated devices. (add Z-wave ID of relay devices).",
           "nl": "Rapportage van een alarm commando naar gekoppelde apparaten, zoals sirene, schakelaar, verlichting, etc. Op het moment dat het stroom hoger is dan gedefinieerd in 'Maximale over-load stroom', wordt een alarm naar de gekoppelde apparaten gestuurd (voeg het Z-wave ID van het te koppelen apparaat toe).",
-          "de": "Ermöglicht das Senden von Alarmbefehlen an assozierte Geräte wie Sirenen, Relaismodule, Lichter etc. Wenn die Strombelastung über dem unter 'Maximaler Überlaststrom' definierten Maximalstrom liegt, sendet der Plug einen Alarm an die zugehörigen Geräte. (Z-Wave-ID von Relaisgeräten hinzufügen)"
+          "de": "Ermöglicht das Senden von Alarmbefehlen an assozierte Geräte wie Sirenen, Relaismodule, Lichter etc. Wenn die Strombelastung über dem unter 'Maximaler Überlaststrom' definierten Maximalstrom liegt, sendet der Plug einen Alarm an die zugehörigen Geräte. (Z-Wave-ID von Relaisgeräten hinzufügen)",
+          "da": "Gør det muligt at sende alarmkommandoer til tilsluttede enheder som sirener, relæmoduler, belysning osv. Hvis den aktuelle belastning overstiger den maksimale strøm, der er defineret i 'Maksimal overbelastningsstrøm', sender stikket en alarm til de tilknyttede enheder. (tilføj Z-wave ID for relæenheder).",
+          "es": "Permite enviar comandos de alarma a dispositivos asociados como sirena, módulo de relé, iluminación, etc. Si la carga actual supera la corriente máxima definida en 'Corriente máxima de sobrecarga', el enchufe enviará una alarma a los dispositivos asociados. (agregue la ID de Z-wave de los dispositivos de relé).",
+          "fr": "Permet d'envoyer des commandes d'alarme aux appareils associés tels que sirène, module de relais, éclairage, etc. Si la charge actuelle dépasse le courant maximal défini dans « Courant maximal de surcharge », la prise enverra une alarme aux appareils associés. (ajoutez l'ID Z-wave des appareils relais).",
+          "it": "Consente di inviare comandi di allarme ai dispositivi associati come sirena, modulo relè, illuminazione, ecc. Se il carico attuale supera la corrente massima definita in 'Corrente massima di sovraccarico', la presa invierà un allarme ai dispositivi associati. (aggiungi l'ID Z-wave dei dispositivi relè).",
+          "no": "Gjør det mulig å sende alarmkommandoer til tilknyttede enheter som sirene, relémodul, belysning osv. Hvis nåværende belastning er over maksimal strøm angitt i 'Maksimal overbelastningsstrøm', sender Plug en alarm til de tilknyttede enhetene. (legg til Z-wave ID for reléenheter).",
+          "sv": "Tillåter att skicka larmsignaler till anslutna enheter som sirener, relämoduler, belysning osv. Om den aktuella belastningen överstiger den maximala strömmen definierad i 'Maximal överbelastningsström', kommer pluggen att skicka en larm till de anslutna enheterna. (lägg till Z-wave ID för reläenheter).",
+          "pl": "Pozwala na wysyłanie poleceń alarmowych do powiązanych urządzeń, takich jak syrena, moduł przekaźnikowy, oświetlenie itp. Jeśli bieżące obciążenie przekracza maksymalny prąd zdefiniowany w 'Maksymalny prąd przeciążenia', wtyczka wyśle alarm do powiązanych urządzeń. (dodaj ID Z-wave urządzeń przekaźnikowych).",
+          "ru": "Позволяет отправлять команды тревоги на связанные устройства, такие как сирена, реле, освещение и т. д. Если текущая нагрузка превышает максимальный ток, определённый в 'Максимальный ток перегрузки', штепсель отправит сигнал тревоги на связанные устройства. (добавьте Z-wave ID релейных устройств).",
+          "ko": "사이렌, 릴레이 모듈, 조명 등 관련 장치에 알람 명령을 보낼 수 있습니다. 현재 부하가 '최대 과부하 전류'에 정의된 최대 전류를 초과하면 플러그는 관련 장치에 알람을 보냅니다. (릴레이 장치의 Z-wave ID를 추가하십시오)."
         }
       },
       "3": {
         "hint": {
           "en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
           "nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-          "de": "Ermöglicht das Senden von Benachrichtigungen an assozierte Geräte in dieser Gruppe (Hinzufügen der Z-Wave-ID von Relaisgeräten)."
+          "de": "Ermöglicht das Senden von Benachrichtigungen an assozierte Geräte in dieser Gruppe (Hinzufügen der Z-Wave-ID von Relaisgeräten).",
+          "da": "Gør det muligt at sende meddelelser til tilsluttede enheder i denne gruppe (tilføj Z-wave ID for relæenheder).",
+          "es": "Permite enviar notificaciones a dispositivos asociados en este grupo (agregue el ID de Z-wave de los dispositivos de relé).",
+          "fr": "Permet d'envoyer des notifications aux appareils associés dans ce groupe (ajoutez l'ID Z-wave des appareils relais).",
+          "it": "Consente di inviare notifiche ai dispositivi associati in questo gruppo (aggiungi l'ID Z-wave dei dispositivi relè).",
+          "no": "Gjør det mulig å sende varsler til tilknyttede enheter i denne gruppen (legg til Z-wave ID for reléenheter).",
+          "sv": "Tillåter att skicka meddelanden till anslutna enheter i denna grupp (lägg till Z-wave ID för reläenheter).",
+          "pl": "Pozwala na wysyłanie powiadomień do powiązanych urządzeń w tej grupie (dodaj ID Z-wave urządzeń przekaźnikowych).",
+          "ru": "Позволяет отправлять уведомления на связанные устройства в этой группе (добавьте Z-wave ID релейных устройств).",
+          "ko": "이 그룹의 관련 장치에 알림을 보낼 수 있습니다 (릴레이 장치의 Z-wave ID 추가)."
         }
       }
     },

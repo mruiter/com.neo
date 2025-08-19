@@ -1,194 +1,347 @@
 [
-    {
-      "id": "led_display",
-      "zwave": {
-        "index": 5,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "State indication Led",
-        "nl": "Status indicatie Led",
-        "de": "Status LED"
-      },
-      "value": true,
-      "hint": {
-        "en": "Enable (checked) the status led on top.\nParameter #5\nDefault: enabled = checked",
-        "nl": "Schakel de status indicatie led functie in (checked).\nParameter #5\nStandaard: ingeschakeld = checked",
-        "de": "Aktiviert die Status led oben.\nParameter #5\nStandard: aktiviert = ausgewählt"
-      }
+  {
+    "id": "led_display",
+    "zwave": {
+      "index": 5,
+      "size": 1
     },
-    {
-      "id": "meter_report",
-      "zwave": {
-        "index": 1,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Meter report functie",
-        "nl": "Meter reportage functie",
-        "de": "Stromzähler Funktion"
-      },
-      "value": true,
-      "hint": {
-        "en": "Enable (checked) sending meter report measure data to the Z-wave controller.\nParameter #1\nDefault: enabled = checked",
-        "nl": "Inschakelen (checked) van het versturen van meter rapportages naar de Z-wave controller.\nParameter#1\nStandaard: ingeschakeld = checked",
-        "de": "Aktiviert das Senden von Messdaten des Stromverbrauchs an den Z-Wave-Controller.\nParameter #1\nStandard: aktiviert = ausgewählt"
-      }
+    "type": "checkbox",
+    "label": {
+      "en": "State indication Led",
+      "nl": "Status indicatie Led",
+      "de": "Status LED",
+      "da": "Tilstandsindikator LED",
+      "es": "Indicador de estado LED",
+      "fr": "LED d'indication d'état",
+      "it": "Indicatore di stato LED",
+      "no": "Statusindikator LED",
+      "sv": "Statusindikering LED",
+      "pl": "Wskaźnik stanu LED",
+      "ru": "Светодиодный индикатор состояния",
+      "ko": "상태 표시 LED"
     },
-    {
-      "id": "meter_report_interval",
-      "zwave": {
-        "index": 2,
-        "size": 2,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 60,
-        "max": 65535
-      },
-      "value": 300,
-      "label": {
-        "en": "Meter report interval (s)",
-        "nl": "Meter reportage interval (s)",
-        "de": "Stromzählermeldung Intervall (s)"
-      },
-      "hint": {
-        "en": "The amount of seconds between a Meter Report being send to controller. \nParameter #2\nRange: 60 - 65535\nDefault: 300",
-        "nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden. \nParameter #2\nBereik: 60 - 65535\nStandaard: 300",
-        "de": "Die Anzahl der Sekunden zwischen dem Senden eines Stromverbrauchsberichts an den Controller. \nParameter #2\nBereich: 60 - 6553535\nStandard: 300"
-      }
-    },
-    {
-      "id": "power_report_change",
-      "zwave": {
-        "index": 6,
-        "size": 1
-      },
-      "type": "number",
-      "attr": {
-        "min": 1,
-        "max": 100
-      },
-      "value": 20,
-      "label": {
-        "en": "Power change [%]",
-        "nl": "Wijziging van vermogen [%]",
-        "de": "Stromverbrauch Änderung [%]"
-      },
-      "hint": {
-        "en": "The amount of power consumed must change to be reported to the controller.\nParameter #6\nRange: 1 - 100\nDefault: 20",
-        "nl": "De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller.\nParameter #6\nBereik: 1 - 100\nStandaard: 20",
-        "de": "Der aktuelle Stromverbrauch der sich ändern muss, damit er an den Controller gemeldet wird. \nParameter #6 \nBereich: 1 - 100 \nStandard: 20"
-      }
-    },
-    {
-      "id": "remember_state",
-      "zwave": {
-        "index": 7,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Restore state after power loss",
-        "nl": "Herstel toestand bij spanningsuitval",
-        "de": "Status nach Stromausfall"
-      },
-      "value": true,
-      "hint": {
-        "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nParameter #7\nDefault: enabled = checked)",
-        "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked). \nParameter #7\nStandaard: uitgeschakeld = unchecked)",
-        "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn aktiviert (ausgewählt) oder bleibt ausgeschaltet, wenn deaktiviert (nicht ausgewählt).\nParameter #7\nStandard: aktiviert = ausgewählt)"
-      }
-    },
-    {
-      "id": "over_load_current",
-      "zwave": {
-        "index": 3,
-        "size": 1
-      },
-      "type": "number",
-      "attr": {
-        "min": 1,
-        "max": 16
-      },
-      "value": 13,
-      "label": {
-        "en": "Maximum over-load current (A)",
-        "nl": "Maximale over-load stroom (A)",
-        "de": "Maximaler Überlaststrom (A)"
-      },
-      "hint": {
-        "en": "Defines the maximum current the plug can provide to the device connected to it. If the current consumed is greater than the value set, the plug will cut power.\nParameter #3\nRange: 1 - 16\nDefault: 13",
-        "nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het huidige stroomverbruik groter is dan de ingestelde waarde, wordt de power plug uitgeschakeld. \nParameter #3\nBereik: 1 - 16\nStandaard: 13",
-        "de": "Definiert den maximalen Strom, den der Stecker für das angeschlossene Gerät liefern kann. Wenn der Stromverbrauch größer als der eingestellte Wert ist, unterbricht der Stecker die Stromversorgung \nParameter #3\nBereich: 1 - 16\nStandard: 13"
-      }
-    },
-    {
-      "id": "alarm_current",
-      "zwave": {
-        "index": 4,
-        "size": 1
-      },
-      "type": "number",
-      "attr": {
-        "min": 1,
-        "max": 16
-      },
-      "value": 12,
-      "label": {
-        "en": "Upper alarm current (A)",
-        "nl": "Bovenwaarde alarm stroom (A)",
-        "de": "Oberer Alarmstrom (A)"
-      },
-      "hint": {
-        "en": "Defines the current the plug is allowed to provide to the device connected to it. If the alarm current is exceeded, the plug will send an alarm notification to the controller and LED will turn RED. Value specified has to be less or equal to 'Maximum over-load current'. \nParameter #4\nRange: 1 - 12\nDefault: 12",
-        "nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het alarm stroom overschreden wordt, zal de power plug een alarm naar de controller versturen en de LED rood kleuren. De waarde moet kleiner of gelijk zijn aan 'Maximale over-load stroom'. \nParameter #4n\nBereik: 1 - 12\nStandaard: 12",
-        "de": "Definiert den Strom, den der Stecker für das angeschlossene Gerät liefern darf. Wenn der Alarmstrom überschritten wird, sendet der Stecker eine Alarmmeldung an den Controller und die LED leuchtet ROT. Der angegebene Wert muss kleiner oder gleich 'Maximaler Überlaststrom' sein. \nParameter #4\nBereich: 1 - 12\nStandard: 12"
-      }
-    },
-    {
-      "id": "time_switch_function",
-      "zwave": {
-        "index": 8,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Time switch off function",
-        "nl": "Tijd uitschakel functie",
-        "de": "Zeitschaltfunktion"
-      },
-      "value": false,
-      "hint": {
-        "en": "Aktiviert die Zeitschaltfunktion. Wenn aktiviert (ausgewählt), schaltet sich der Netzstecker nach dem Einschalten nach der unter 'Ausschaltzeit' definierten Zeit aus. (#8, Standard: deaktiviert = nicht ausgewählt)",
-        "nl": "Inschakelen van de tijd uitschakel functie. Wanneer ingeschakeld (checked) zal de power plug na ingeschakeld te zijn, automatisch uitschakelen na de in 'Uitschakel tijdsduur' gedefinieerde tijd. \nParameter: 8, standaard: uitgeschakeld = unchecked)"
-      }
-    },
-    {
-      "id": "time_switch_period",
-      "zwave": {
-        "index": 9,
-        "size": 2,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 1,
-        "max": 65535
-      },
-      "value": 150,
-      "label": {
-        "en": "Switch off time period (min)",
-        "nl": "Uitschakel tijdsduur (min)",
-        "de": "Ausschaltzeit (min)"
-      },
-      "hint": {
-        "en": "The time period before switching off the power plug, if time function has been enabled in 'Time switch off function'. \nParameter: 9\nRange: 1 - 65535\nDefault: 150",
-        "nl": "De tijdsduur waarna de power plug zal uitschakelen, wanneer de tijd schakelings functie ingeschakeld is in 'Tijd uitschakel functie'. \nParameter: 9\nBereik: 1 - 65535\nStandaard: 150",
-        "de": "Die Zeitspanne bis zum Ausschalten des Power Plugs, wenn die Fuktion unter'Zeitschaltfunktion' aktiviert wurde. \nParameter: 9\nBereich: 1 - 6553535\nStandard: 150"
-      }
+    "value": true,
+    "hint": {
+      "en": "Enable (checked) the status led on top.\nParameter #5\nDefault: enabled = checked",
+      "nl": "Schakel de status indicatie led functie in (checked).\nParameter #5\nStandaard: ingeschakeld = checked",
+      "de": "Aktiviert die Status led oben.\nParameter #5\nStandard: aktiviert = ausgewählt",
+      "da": "Aktivér (afkrydset) status LED'en øverst.\nParameter #5\nStandard: aktiveret = afkrydset",
+      "es": "Activa (marcada) la luz LED de estado en la parte superior.\nParámetro #5\nPor defecto: habilitado = marcado",
+      "fr": "Activez (coché) la LED d'état en haut.\nParamètre #5\nPar défaut : activé = coché",
+      "it": "Abilita (selezionato) il LED di stato in alto.\nParametro #5\nDefault: abilitato = selezionato",
+      "no": "Aktiver (merket) status LED'en på toppen.\nParameter #5\nStandard: aktivert = merket",
+      "sv": "Aktivera (markerad) statusdioden högst upp.\nParameter #5\nStandard: aktiverad = markerad",
+      "pl": "Włącz (zaznaczone) wskaźnik LED stanu na górze.\nParametr #5\nDomyślnie: włączony = zaznaczone",
+      "ru": "Включите (отмечено) светодиод состояния сверху.\nПараметр #5\nПо умолчанию: включено = отмечено",
+      "ko": "상단의 상태 LED를 활성화합니다(선택됨).\n매개변수 #5\n기본: 활성화됨 = 선택됨"
     }
-  ]
+  },
+  {
+    "id": "meter_report",
+    "zwave": {
+      "index": 1,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Meter report functie",
+      "nl": "Meter reportage functie",
+      "de": "Stromzähler Funktion"
+    },
+    "value": true,
+    "hint": {
+      "en": "Enable (checked) sending meter report measure data to the Z-wave controller.\nParameter #1\nDefault: enabled = checked",
+      "nl": "Inschakelen (checked) van het versturen van meter rapportages naar de Z-wave controller.\nParameter#1\nStandaard: ingeschakeld = checked",
+      "de": "Aktiviert das Senden von Messdaten des Stromverbrauchs an den Z-Wave-Controller.\nParameter #1\nStandard: aktiviert = ausgewählt",
+      "da": "Aktivér (afkrydset) afsendelse af målerdata til Z-wave controlleren.\nParameter #1\nStandard: aktiveret = afkrydset",
+      "es": "Activa (marcada) el envío de datos de medición de informes de contadores al controlador Z-wave.\nParámetro #1\nPor defecto: habilitado = marcado",
+      "fr": "Activer (coché) l'envoi des données de mesure de rapport de compteur au contrôleur Z-wave.\nParamètre #1\nPar défaut : activé = coché",
+      "it": "Abilita (selezionato) l'invio dei dati di misura del rapporto del contatore al controller Z-wave.\nParametro #1\nPredefinito: abilitato = selezionato",
+      "no": "Aktiver (merket) sending av målerdata til Z-wave-kontrolleren.\nParameter #1\nStandard: aktivert = merket",
+      "sv": "Aktivera (markerad) att skicka mätrapportdata till Z-wave-kontrollern.\nParameter #1\nStandard: aktiverad = markerad",
+      "pl": "Włącz (zaznaczone) wysyłanie danych pomiarowych z raportu licznikowego do kontrolera Z-wave.\nParametr #1\nDomyślnie: włączony = zaznaczone",
+      "ru": "Включите (отмечено) отправку данных измерений отчета счетчика на контроллер Z-wave.\nПараметр #1\nПо умолчанию: включено = отмечено",
+      "ko": "미터 보고서 측정 데이터를 Z-wave 컨트롤러에 전송하도록 활성화하십시오(선택됨).\n매개변수 #1\n기본: 활성화됨 = 선택됨"
+    }
+  },
+  {
+    "id": "meter_report_interval",
+    "zwave": {
+      "index": 2,
+      "size": 2,
+      "signed": false
+    },
+    "type": "number",
+    "attr": {
+      "min": 60,
+      "max": 65535
+    },
+    "value": 300,
+    "label": {
+      "en": "Meter report interval (s)",
+      "nl": "Meter reportage interval (s)",
+      "de": "Stromzählermeldung Intervall (s)",
+      "da": "Måler rapport interval (s)",
+      "es": "Intervalo de informe del medidor (s)",
+      "fr": "Intervalle de rapport de compteur (s)",
+      "it": "Intervallo rapporto metro (s)",
+      "no": "Målerapportintervall (s)",
+      "sv": "Mätrapportintervall (s)",
+      "pl": "Interwał raportowania z licznika (s)",
+      "ru": "Интервал отчета счетчика (с)",
+      "ko": "미터 보고서 간격 (초)"
+    },
+    "hint": {
+      "en": "The amount of seconds between a Meter Report being send to controller. \nParameter #2\nRange: 60 - 65535\nDefault: 300",
+      "nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden. \nParameter #2\nBereik: 60 - 65535\nStandaard: 300",
+      "de": "Die Anzahl der Sekunden zwischen dem Senden eines Stromverbrauchsberichts an den Controller. \nParameter #2\nBereich: 60 - 6553535\nStandard: 300",
+      "da": "Antal sekunder mellem at en målerapport bliver sendt til controlleren. \nParameter #2\nOmfang: 60 - 65535\nStandard: 300",
+      "es": "La cantidad de segundos entre un Informe de Medidor que se envía al controlador. \nParámetro #2\nRango: 60 - 65535\nPor defecto: 300",
+      "fr": "Le nombre de secondes entre un rapport de compteur envoyé au contrôleur. \nParamètre #2\nPlage : 60 - 65535\nPar défaut : 300",
+      "it": "La quantità di secondi tra un rapporto metro inviato al controller. \nParametro #2\nGamma: 60 - 65535\nPredefinito: 300",
+      "no": "Antall sekunder mellom hver gang en målerapport sendes til kontrollenheten. \nParameternr. 2\nRekkevidde: 60 - 65535\nStandard: 300",
+      "sv": "Antal sekunder mellan att en mätrapport skickas till kontrollenheten. \nParameter #2\nRange: 60 - 65535\nStandard: 300",
+      "pl": "Liczba sekund pomiędzy wysyłaniem Raportu Licznika do kontrolera. \nParametr #2\nZakres: 60 - 65535\nDomyślnie: 300",
+      "ru": "Количество секунд между отправкой отчета счетчика на контроллер. \nПараметр #2\nДиапазон: 60 - 65535\nПо умолчанию: 300",
+      "ko": "컨트롤러로 미터 보고서를 전송하는 사이의 초 단위입니다. \n매개변수 #2\n범위: 60 - 65535\n기본값: 300"
+    }
+  },
+  {
+    "id": "power_report_change",
+    "zwave": {
+      "index": 6,
+      "size": 1
+    },
+    "type": "number",
+    "attr": {
+      "min": 1,
+      "max": 100
+    },
+    "value": 20,
+    "label": {
+      "en": "Power change [%]",
+      "nl": "Wijziging van vermogen [%]",
+      "de": "Stromverbrauch Änderung [%]",
+      "da": "Strømændring [%]",
+      "es": "Cambio de potencia [%]",
+      "fr": "Changement de puissance [%]",
+      "it": "Variazione di potenza [%]",
+      "no": "Strømendring [%]",
+      "sv": "Effektändring [%]",
+      "pl": "Zmiana mocy [%]",
+      "ru": "Изменение мощности [%]",
+      "ko": "전력 변경 [%]"
+    },
+    "hint": {
+      "en": "The amount of power consumed must change to be reported to the controller.\nParameter #6\nRange: 1 - 100\nDefault: 20",
+      "nl": "De wijziging van die het vermogen moet ondergaan om gerapporteerd te worden naar de controller.\nParameter #6\nBereik: 1 - 100\nStandaard: 20",
+      "de": "Der aktuelle Stromverbrauch der sich ändern muss, damit er an den Controller gemeldet wird. \nParameter #6 \nBereich: 1 - 100 \nStandard: 20",
+      "da": "Den mængde strøm der forbruges skal ændres for at blive rapporteret til controlleren.\nParameter #6\nOmfang: 1 - 100\nStandard: 20",
+      "es": "La cantidad de potencia consumida debe cambiar para ser reportada al controlador.\nParámetro #6\nRango: 1 - 100\nPor defecto: 20",
+      "fr": "La quantité de puissance consommée doit changer pour être signalée au contrôleur.\nParamètre #6\nPlage : 1 - 100\nPar défaut : 20",
+      "it": "La quantità di potenza consumata deve cambiare per essere riportata al controller.\nParametro #6\nGamma: 1 - 100\nPredefinito: 20",
+      "no": "Mengden strøm konsumert må endres for å rapporteres til kontrolleren.\nParameter #6\nRekkevidde: 1 - 100\nStandard: 20",
+      "sv": "Mängden förbrukad ström måste ändras för att rapporteras till kontrollenheten.\nParameter #6\nRange: 1 - 100\nStandard: 20",
+      "pl": "Ilość zużytej mocy musi się zmienić, aby zostać zgłoszona do kontrolera.\nParametr #6\nZakres: 1 - 100\nDomyślnie: 20",
+      "ru": "Количество потребляемой мощности должно измениться, чтобы быть переданным на контроллер.\nПараметр #6\nДиапазон: 1 - 100\nПо умолчанию: 20",
+      "ko": "소비 전력이 제어기에 보고될 수 있도록 변경되어야 합니다.\n매개변수 #6\n범위: 1 - 100\n기본값: 20"
+    }
+  },
+  {
+    "id": "remember_state",
+    "zwave": {
+      "index": 7,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Restore state after power loss",
+      "nl": "Herstel toestand bij spanningsuitval",
+      "de": "Status nach Stromausfall",
+      "da": "Gendan tilstand efter strømtab",
+      "es": "Restaurar estado después de pérdida de energía",
+      "fr": "Restaurer l'état après une coupure de courant",
+      "it": "Ripristina lo stato dopo la perdita di potenza",
+      "no": "Gjenopprett tilstand etter strømbrudd",
+      "sv": "Återställ status efter strömavbrott",
+      "pl": "Przywróć stan po utracie zasilania",
+      "ru": "Восстановить состояние после отключения питания",
+      "ko": "전원 손실 후 상태 복원"
+    },
+    "value": true,
+    "hint": {
+      "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nParameter #7\nDefault: enabled = checked)",
+      "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked). \nParameter #7\nStandaard: uitgeschakeld = unchecked)",
+      "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn aktiviert (ausgewählt) oder bleibt ausgeschaltet, wenn deaktiviert (nicht ausgewählt).\nParameter #7\nStandard: aktiviert = ausgewählt)",
+      "da": "Efter strømtab skifter relæet til sidst kendte tilstand, hvis det er aktiveret (afkrydset), eller forbliver slukket, hvis det er deaktiveret (ikke afkrydset).\nParameter #7\nStandard: aktiveret = afkrydset)",
+      "es": "Después de una pérdida de energía, el relé cambiará al último estado conocido si está habilitado (marcado) o permanecerá apagado si está desactivado (desmarcado).\nParámetro #7\nPor defecto: habilitado = marcado)",
+      "fr": "Après une coupure de courant, le relais passe à l'état connu le plus récent s'il est activé (coché) ou reste éteint s'il est désactivé (non coché).\nParamètre #7\nPar défaut : activé = coché)",
+      "it": "Dopo una perdita di potenza il relè si commuta all'ultimo stato conosciuto se abilitato (selezionato) o resta spento se disabilitato (deselezionato).\nParametro #7\nPredefinito: abilitato = selezionato)",
+      "no": "Etter strømbrudd vil reléet bytte til siste kjente tilstand hvis aktivert (merket) eller forbli av hvis deaktivert (ikke merket).\nParameter #7\nStandard: aktivert = merket)",
+      "sv": "Efter strömavbrott skiftar reläet till senaste kända tillstånd om det är aktiverat (markerat) eller förblir avstängt om det är avaktiverat (omarkerat).\nParameter #7\nStandard: aktiverad = markerad)",
+      "pl": "Po utracie zasilania przekaźnik przełączy się na ostatni znany stan, jeśli jest włączony (zaznaczone), lub pozostanie wyłączony, jeśli jest wyłączony (niezaznaczone).\nParametr #7\nDomyślnie: włączony = zaznaczone)",
+      "ru": "После отключения питания реле переключится в последнее известное состояние, если включено (отмечено), или останется выключенным, если отключено (не отмечено).\nПараметр #7\nПо умолчанию: включено = отмечено)",
+      "ko": "전원 손실 후, 릴레이는 활성화된 경우(선택됨) 마지막으로 알려진 상태로 전환되거나 비활성화된 경우(선택되지 않음) 꺼진 상태를 유지합니다.\n매개변수 #7\n기본값: 활성화된 = 선택됨)"
+    }
+  },
+  {
+    "id": "over_load_current",
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "type": "number",
+    "attr": {
+      "min": 1,
+      "max": 16
+    },
+    "value": 13,
+    "label": {
+      "en": "Maximum over-load current (A)",
+      "nl": "Maximale over-load stroom (A)",
+      "de": "Maximaler Überlaststrom (A)",
+      "da": "Maksimal strøm overbelastning (A)",
+      "es": "Corriente máxima de sobrecarga (A)",
+      "fr": "Courant de surcharge maximum (A)",
+      "it": "Corrente di sovraccarico massima (A)",
+      "no": "Maksimal overbelastningsstrøm (A)",
+      "sv": "Maximal överbelastningsström (A)",
+      "pl": "Maksymalny prąd przeciążenia (A)",
+      "ru": "Максимальный ток перегрузки (А)",
+      "ko": "최대 과부화 전류 (A)"
+    },
+    "hint": {
+      "en": "Defines the maximum current the plug can provide to the device connected to it. If the current consumed is greater than the value set, the plug will cut power.\nParameter #3\nRange: 1 - 16\nDefault: 13",
+      "nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het huidige stroomverbruik groter is dan de ingestelde waarde, wordt de power plug uitgeschakeld. \nParameter #3\nBereik: 1 - 16\nStandaard: 13",
+      "de": "Definiert den maximalen Strom, den der Stecker für das angeschlossene Gerät liefern kann. Wenn der Stromverbrauch größer als der eingestellte Wert ist, unterbricht der Stecker die Stromversorgung \nParameter #3\nBereich: 1 - 16\nStandard: 13",
+      "da": "Definerer den maksimale strøm, stikket kan tilbyde til det tilsluttede apparat. Hvis det forbrugte strøm er større end den indstillede værdi, afbryder stikket strømmen.\nParameter #3\nOmfang: 1 - 16\nStandard: 13",
+      "es": "Define la corriente máxima que el enchufe puede proporcionar al dispositivo conectado a él. Si la corriente consumida es mayor que el valor establecido, el enchufe cortará la energía.\nParámetro #3\nRango: 1 - 16\nPor defecto: 13",
+      "fr": "Définit le courant maximal que la prise peut fournir à l'appareil qui y est connecté. Si le courant consommé est supérieur à la valeur définie, la prise coupera l'alimentation.\nParamètre #3\nPlage : 1 - 16\nPar défaut : 13",
+      "it": "Definisce la corrente massima che la presa può fornire al dispositivo collegato. Se la corrente consumata è maggiore del valore impostato, la spina interromperà l'alimentazione.\nParametro #3\nGamma: 1 - 16\nPredefinito: 13",
+      "no": "Definerer maksimal strøm plugg kan levere til enheten tilkoblet. Hvis den konsumert strøm er større enn det innstilte verdien, vil pluggen kutte strømmen.\nParameter #3\nRekkevidde: 1 - 16\nStandard: 13",
+      "sv": "Definierar den maximala ström som kontakten kan ge till den anslutna enheten. Om den förbrukade strömmen är större än det inställda värdet kommer kontakten att bryta strömmen.\nParameter #3\nRange: 1 - 16\nStandard: 13",
+      "pl": "Określa maksymalny prąd, jaki wtyczka może dostarczyć do podłączonego urządzenia. Jeśli pobrany prąd jest większy niż ustawiona wartość, wtyczka wyłączy zasilanie.\nParametr #3\nZakres: 1 - 16\nDomyślnie: 13",
+      "ru": "Определяет максимальный ток, который розетка может предоставить подключенному устройству. Если потребляемый ток превышает установленное значение, розетка отключит питание.\nПараметр #3\nДиапазон: 1 - 16\nПо умолчанию: 13",
+      "ko": "연결된 장치에 플러그가 제공할 수 있는 최대 전류를 정의합니다. 소비 전력이 설정 값보다 크면 플러그는 전원을 차단합니다.\n매개변수 #3\n범위: 1 - 16\n기본값: 13"
+    }
+  },
+  {
+    "id": "alarm_current",
+    "zwave": {
+      "index": 4,
+      "size": 1
+    },
+    "type": "number",
+    "attr": {
+      "min": 1,
+      "max": 16
+    },
+    "value": 12,
+    "label": {
+      "en": "Upper alarm current (A)",
+      "nl": "Bovenwaarde alarm stroom (A)",
+      "de": "Oberer Alarmstrom (A)",
+      "da": "Øverste alarmstrøm (A)",
+      "es": "Corriente de alarma superior (A)",
+      "fr": "Courant d'alarme supérieur (A)",
+      "it": "Corrente di allarme superiore (A)",
+      "no": "Øvre alarmstrøm (A)",
+      "sv": "Övre larmström (A)",
+      "pl": "Górny prąd alarmowy (A)",
+      "ru": "Верхний ток сигнала тревоги (А)",
+      "ko": "최대 경보 전류 (A)"
+    },
+    "hint": {
+      "en": "Defines the current the plug is allowed to provide to the device connected to it. If the alarm current is exceeded, the plug will send an alarm notification to the controller and LED will turn RED. Value specified has to be less or equal to 'Maximum over-load current'. \nParameter #4\nRange: 1 - 12\nDefault: 12",
+      "nl": "Specificeert de maximale stroom dat de power plug mag leveren aan het apparaat dat aan de power plug gekoppeld is. Wanneer het alarm stroom overschreden wordt, zal de power plug een alarm naar de controller versturen en de LED rood kleuren. De waarde moet kleiner of gelijk zijn aan 'Maximale over-load stroom'. \nParameter #4n\nBereik: 1 - 12\nStandaard: 12",
+      "de": "Definiert den Strom, den der Stecker für das angeschlossene Gerät liefern darf. Wenn der Alarmstrom überschritten wird, sendet der Stecker eine Alarmmeldung an den Controller und die LED leuchtet ROT. Der angegebene Wert muss kleiner oder gleich 'Maximaler Überlaststrom' sein. \nParameter #4\nBereich: 1 - 12\nStandard: 12",
+      "da": "Definerer strømmen, som stikket må levere til det tilsluttede apparat. Hvis alarmstrømmen overskrides, vil stikket sende en alarmmeddelelse til controlleren, og LED'en bliver RØD. Den angivne værdi skal være mindre eller lig med 'Maksimal strøm overbelastning'. \nParameter #4\nOmfang: 1 - 12\nStandard: 12",
+      "es": "Define la corriente que el enchufe puede proporcionar al dispositivo conectado. Si se excede la corriente de alarma, el enchufe enviará una notificación de alarma al controlador y el LED se volverá ROJO. El valor especificado debe ser menor o igual a la 'Corriente máxima de sobrecarga'. \nParámetro #4\nRango: 1 - 12\nPor defecto: 12",
+      "fr": "Définit le courant que la prise est autorisée à fournir à l'appareil qui y est connecté. Si le courant d'alarme est dépassé, la prise enverra une notification d'alarme au contrôleur et la LED s'allumera en ROUGE. La valeur spécifiée doit être inférieure ou égale au 'Courant de surcharge maximum'. \nParamètre #4\nPlage : 1 - 12\nPar défaut : 12",
+      "it": "Definisce la corrente che la spina è autorizzata a fornire al dispositivo connesso. Se si supera la corrente di allarme, la spina invierà una notifica di allarme al controller e il LED diventerà ROSSO. Il valore specificato deve essere minore o uguale a 'Corrente di sovraccarico massima'. \nParametro #4\nGamma: 1 - 12\nPredefinito: 12",
+      "no": "Definerer strømmen som pluggen kan levere til den tilkoblede enheten. Hvis alarmstrømmen overskrides, vil pluggen sende en alarmnotifikasjon til kontrolleren, og LED-en blir RØD. Verdien som spesifiseres må være mindre eller lik 'Maksimal overbelastningsstrøm'. \nParameter #4\nOmfang: 1 - 12\nStandard: 12",
+      "sv": "Definierar strömmen kontakten får ge till den anslutna enheten. Om larmströmmen överskrids skickar kontakten ett larm till kontrollenheten och lysdioden blir RÖD. Angivet värde måste vara lägre eller lika med 'Maximal överbelastningsström'. \nParameter #4\nRange: 1 - 12\nStandard: 12",
+      "pl": "Określa prąd, jaki wtyczka może dostarczyć do podłączonego do niej urządzenia. Jeśli zostanie przekroczony prąd alarmowy, wtyczka wyśle powiadomienie alarmowe do kontrolera, a dioda LED zaświeci się na CZERWONO. Podana wartość musi być mniejsza lub równa „Maksymalnemu prądowi przeciążenia”. \nParametr #4\nZakres: 1 - 12\nDomyślnie: 12",
+      "ru": "Определяет ток, который розетка может предоставить подключенному устройству. Если ток тревоги превышен, розетка отправит уведомление об аварии на контроллер, и светодиод будет светиться КРАСНЫМ. Указанное значение должно быть меньше или равно 'Максимальный ток перегрузки'. \nПараметр #4\nДиапазон: 1 - 12\nПо умолчанию: 12",
+      "ko": "플러그가 연결된 장치에 제공할 수 있는 전류를 정의합니다. 경보 전류가 초과되면 플러그는 컨트롤러에 경보 알림을 보내고 LED는 빨간색으로 변합니다. 지정된 값은 '최대 과부화 전류'보다 작거나 같아야 합니다. \n매개변수 #4\n범위: 1 - 12\n기본값: 12"
+    }
+  },
+  {
+    "id": "time_switch_function",
+    "zwave": {
+      "index": 8,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Time switch off function",
+      "nl": "Tijd uitschakel functie",
+      "de": "Zeitschaltfunktion",
+      "da": "Tids-udkoplingsfunktion",
+      "es": "Función de apagado programado",
+      "fr": "Fonction de coupure par minuterie",
+      "it": "Funzione di spegnimento temporizzato",
+      "no": "Tidsbryter av funksjon",
+      "sv": "Tidsavstängningsfunktion",
+      "pl": "Funkcja wyłączania czasowego",
+      "ru": "Функция таймера",
+      "ko": "타이머 끄기 기능"
+    },
+    "value": false,
+    "hint": {
+      "en": "Aktiviert die Zeitschaltfunktion. Wenn aktiviert (ausgewählt), schaltet sich der Netzstecker nach dem Einschalten nach der unter 'Ausschaltzeit' definierten Zeit aus. (#8, Standard: deaktiviert = nicht ausgewählt)",
+      "nl": "Inschakelen van de tijd uitschakel functie. Wanneer ingeschakeld (checked) zal de power plug na ingeschakeld te zijn, automatisch uitschakelen na de in 'Uitschakel tijdsduur' gedefinieerde tijd. \nParameter: 8, standaard: uitgeschakeld = unchecked)",
+      "da": "Aktiverer tids-udkoplingsfunktionen. Når aktiveret (afkrydset), vil stikket slukke efter den indstillede tid under 'Udkoblingstid'. (#8, Standard: deaktiveret = ikke afkrydset)",
+      "es": "Activa la función de apagado programado. Cuando está activada (marcada), el enchufe se apagará después de encenderse durante el tiempo definido en 'Período de apagado'. (#8, Por defecto: desactivado = no seleccionado)",
+      "fr": "Active la fonction de coupure par minuterie. Lorsqu'elle est activée (cochée), la prise s'éteindra après le temps défini sous 'Durée de coupure'. (#8, Par défaut : désactivé = non coché)",
+      "it": "Attiva la funzione di spegnimento temporizzato. Quando è attiva (selezionata), la spina si spegnerà dopo il tempo definito sotto 'Tempo di spegnimento'. (#8, Predefinito: disabilitato = non selezionato)",
+      "no": "Aktiverer tidsavbryterfunksjonen. Når aktivert (merket), vil støpselet slå seg av etter tiden definert under 'Avstengningstid'. (#8, Standard: deaktivert = ikke merket)",
+      "sv": "Aktiverar tidsavstängningsfunktionen. När den är aktiverad (markerad) stängs kontakten av efter den tid som anges under 'Avstäningstid'. (#8, Standard: avaktiverad = ej markerad)",
+      "pl": "Aktywuje funkcję wyłączania czasowego. Gdy jest aktywna (zaznaczona), wtyczka wyłączy się po upływie czasu zdefiniowanego w 'Czasie wyłączania'. (#8, Domyślnie: nieaktywna = nie zaznaczona)",
+      "ru": "Активирует функцию таймера. Когда активировано (отмечено), вилка отключится после времени, указанного в 'Время отключения'. (#8, По умолчанию: отключено = не отмечено)",
+      "ko": "타이머 끄기 기능을 활성화합니다. 활성화된 경우(선택됨), 플러그는 '꺼짐 시간'에 정의된 시간이 지나면 꺼집니다. (#8, 기본값: 비활성화됨 = 선택되지 않음)"
+    }
+  },
+  {
+    "id": "time_switch_period",
+    "zwave": {
+      "index": 9,
+      "size": 2,
+      "signed": false
+    },
+    "type": "number",
+    "attr": {
+      "min": 1,
+      "max": 65535
+    },
+    "value": 150,
+    "label": {
+      "en": "Switch off time period (min)",
+      "nl": "Uitschakel tijdsduur (min)",
+      "de": "Ausschaltzeit (min)",
+      "da": "Udkoblingstid (min)",
+      "es": "Período de apagado (min)",
+      "fr": "Durée de coupure (min)",
+      "it": "Periodo di spegnimento (min)",
+      "no": "Avstengningstid (min)",
+      "sv": "Avstängningstid (min)",
+      "pl": "Okres wyłączenia (min)",
+      "ru": "Период выключения (мин)",
+      "ko": "오프 시간(분)"
+    },
+    "hint": {
+      "en": "The time period before switching off the power plug, if time function has been enabled in 'Time switch off function'. \nParameter: 9\nRange: 1 - 65535\nDefault: 150",
+      "nl": "De tijdsduur waarna de power plug zal uitschakelen, wanneer de tijd schakelings functie ingeschakeld is in 'Tijd uitschakel functie'. \nParameter: 9\nBereik: 1 - 65535\nStandaard: 150",
+      "de": "Die Zeitspanne bis zum Ausschalten des Power Plugs, wenn die Fuktion unter'Zeitschaltfunktion' aktiviert wurde. \nParameter: 9\nBereich: 1 - 6553535\nStandard: 150",
+      "da": "Tidsperioden før udkobling af strømstikket, hvis tids-funktionen er aktiveret i 'Tids-udkoblingsfunktion'. \nParameter: 9\nOmfang: 1 - 65535\nStandard: 150",
+      "es": "El período de tiempo antes de apagar el enchufe, si la función de tiempo ha sido habilitada en 'Función de apagado programado'. \nParámetro: 9\nRango: 1 - 65535\nPor defecto: 150",
+      "fr": "La durée avant la coupure de la prise, si la fonction de minuterie a été activée dans 'Fonction de coupure par minuterie'. \nParamètre : 9\nPlage : 1 - 65535\nPar défaut : 150",
+      "it": "Il periodo di tempo prima dello spegnimento della presa, se la funzione di tempo è stata abilitata in 'Funzione di spegnimento temporizzato'. \nParametro: 9\nGamma: 1 - 65535\nPredefinito: 150",
+      "no": "Tidsperioden før man slår av strømstikkontakten, hvis tidsfunksjonen er aktivert i 'Tidsbryter av funksjon'. \nParameter: 9\nRekkevidde: 1 - 65535\nStandard: 150",
+      "sv": "Tidsperioden innan kontakten stängs av, om tidsfunktionen har aktiverats i 'Tidsavstängningsfunktion'. \nParameter: 9\nRange: 1 - 65535\nStandard: 150",
+      "pl": "Okres czasu przed wyłączeniem wtyczki, jeśli funkcja czasu została włączona w 'Funkcja wyłączania czasowego'. \nParametr: 9\nZakres: 1 - 65535\nDomyślnie: 150",
+      "ru": "Период времени до отключения вилки питания, если функция таймера была включена в 'Функция таймера'. \nПараметр: 9\nДиапазон: 1 - 65535\nПо умолчанию: 150",
+      "ko": "'타이머 끄기 기능'에서 시간이 설정된 경우 플러그를 끄기 전의 시간입니다. \n매개변수: 9\n범위: 1 - 65535\n기본값: 150"
+    }
+  }
+]

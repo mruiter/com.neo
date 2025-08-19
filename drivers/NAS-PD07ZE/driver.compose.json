@@ -2,29 +2,64 @@
   "id": "NAS-PD07ZE",
   "name": {
     "en": "PIR V4",
-    "nl": "PIR V4"
+    "nl": "PIR V4",
+    "da": "PIR V4",
+    "de": "PIR V4",
+    "es": "PIR V4",
+    "fr": "PIR V4",
+    "it": "PIR V4",
+    "no": "PIR V4",
+    "sv": "PIR V4",
+    "pl": "PIR V4",
+    "ru": "PIR V4",
+    "ko": "PIR V4"
   },
-  "platforms": ["local"],
-  "connectivity": ["zwave"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 16,
-    "productId": [ 1816 , 1824 ],
+    "productId": [
+      1816,
+      1824
+    ],
     "learnmode": {
       "image": "/drivers/NAS-PD07ZE/assets/icon.svg",
       "instruction": {
         "en": "Press the code button inside your NEO PIR for more then 5 seconds until it starts to blink",
         "nl": "Druk op de code knop binnen in de NEO PIR voor minimaal 5 seconden totdat deze gaat knipperen",
-        "de": "Drücken Sie die Codetaste im Inneren des NEO PIR mindestens 5 Sekunden lang, bis sie blinkt"
-		}
+        "de": "Drücken Sie die Codetaste im Inneren des NEO PIR mindestens 5 Sekunden lang, bis sie blinkt",
+        "da": "Tryk på kodeknappen inde i din NEO PIR i mere end 5 sekunder, indtil den begynder at blinke",
+        "es": "Presione el botón de código dentro de su NEO PIR durante más de 5 segundos hasta que comience a parpadear",
+        "fr": "Appuyez sur le bouton de code à l'intérieur de votre NEO PIR pendant plus de 5 secondes jusqu'à ce qu'il commence à clignoter",
+        "it": "Premere il pulsante del codice all'interno del tuo NEO PIR per più di 5 secondi fino a quando non inizia a lampeggiare",
+        "no": "Trykk på kodeknappen inne i din NEO PIR i mer enn 5 sekunder til den begynner å blinke",
+        "sv": "Tryck på kodknappen inuti din NEO PIR i mer än 5 sekunder tills den börjar blinka",
+        "pl": "Naciśnij przycisk kodu wewnątrz swojego NEO PIR przez ponad 5 sekund, aż zacznie migać",
+        "ru": "Нажмите кнопку кодирования внутри вашего NEO PIR более чем на 5 секунд, пока она не начнет мигать",
+        "ko": "NEO PIR 내부의 코드 버튼을 5초 이상 눌러 깜박이기 시작할 때까지 기다리십시오"
+      }
     },
     "unlearnmode": {
       "image": "/drivers/NAS-PD07ZE/assets/icon.svg",
       "instruction": {
         "en": "Press the code button inside your NEO PIR for more then 5 seconds until it starts to blink",
         "nl": "Druk op de code knop binnen in de NEO PIR voor minimaal 5 seconden totdat deze gaat knipperen",
-        "de": "Drücken Sie die Codetaste im Inneren des NEO PIR mindestens 5 Sekunden lang, bis sie blinkt"
-		}
+        "de": "Drücken Sie die Codetaste im Inneren des NEO PIR mindestens 5 Sekunden lang, bis sie blinkt",
+        "da": "Tryk på kodeknappen inde i din NEO PIR i mere end 5 sekunder, indtil den begynder at blinke",
+        "es": "Presione el botón de código dentro de su NEO PIR durante más de 5 segundos hasta que comience a parpadear",
+        "fr": "Appuyez sur le bouton de code à l'intérieur de votre NEO PIR pendant plus de 5 secondes jusqu'à ce qu'il commence à clignoter",
+        "it": "Premere il pulsante del codice all'interno del tuo NEO PIR per più di 5 secondi fino a quando non inizia a lampeggiare",
+        "no": "Trykk på kodeknappen inne i din NEO PIR i mer enn 5 sekunder til den begynner å blinke",
+        "sv": "Tryck på kodknappen inuti din NEO PIR i mer än 5 sekunder tills den börjar blinka",
+        "pl": "Naciśnij przycisk kodu wewnątrz swojego NEO PIR przez ponad 5 sekund, aż zacznie migać",
+        "ru": "Нажмите кнопку кодирования внутри вашего NEO PIR более чем на 5 секунд, пока она не начнет мигать",
+        "ko": "NEO PIR 내부의 코드 버튼을 5초 이상 눌러 깜박이기 시작할 때까지 기다리십시오"
+      }
     },
     "associationGroups": [
       1
@@ -34,28 +69,48 @@
         "hint": {
           "en": "Lifeline service that assigned to Sensor (Motion detector) status – Open/Close. It enables the sensor to send reports and readings to Z‐Wave Controller whenever the sensor is triggered. (Homey ID by default). It is not recommended to change this group.",
           "nl": "Lifeline service toegekend aan de Sensor (Bewegingsdetectie) status - Open/Dicht. Via deze groep kan de sensor bewegingsdetectie / lichtsterkte / batterijniveau rapporteren naar de Z-wave Controller wanneer de sensor geactiveerd is. (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen.",
-          "de": "Lifeline Service, der dem Sensor (Bewegungsmelder) zugeordnet ist - Open/Close. Es ermöglicht dem Sensor, Berichte und Messwerte an den Z-Wave-Controller zu senden, wenn der Sensor ausgelöst wird. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern."
+          "de": "Lifeline Service, der dem Sensor (Bewegungsmelder) zugeordnet ist - Open/Close. Es ermöglicht dem Sensor, Berichte und Messwerte an den Z-Wave-Controller zu senden, wenn der Sensor ausgelöst wird. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern.",
+          "da": "Livslinje service tildelt til Sensorens (Bevægelsesdetektor) status – Åben/Lukket. Det gør det muligt for sensoren at sende rapporter og aflæsninger til Z-Wave Controller, når sensoren aktiveres. (Homey ID som standard). Det anbefales ikke at ændre denne gruppe.",
+          "es": "Servicio de línea de vida asignado al estado del Sensor (Detector de movimiento) – Abierto/Cerrado. Permite que el sensor envíe informes y lecturas al controlador Z‐Wave cada vez que se active el sensor. (ID de Homey por defecto). No se recomienda cambiar este grupo.",
+          "fr": "Service de ligne de vie attribué à l'état du capteur (détecteur de mouvement) – Ouvert/Fermé. Il permet au capteur d'envoyer des rapports et des relevés au contrôleur Z‐Wave chaque fois que le capteur est déclenché. (ID par défaut de Homey). Il n'est pas recommandé de modifier ce groupe.",
+          "it": "Servizio di linea vita assegnato allo stato del sensore (Rilevatore di movimento) – Aperto/Chiuso. Consente al sensore di inviare rapporti e letture al controller Z‐Wave ogni volta che il sensore viene attivato. (ID Homey per impostazione predefinita). Non è consigliabile modificare questo gruppo.",
+          "no": "Livlinjetjeneste tilordnet Sensor (bevegelsesdetektor) status – Åpen/Lukket. Den gjør det mulig for sensoren å sende rapporter og målinger til Z‐Wave Controller når sensoren utløses. (Homey ID som standard). Det anbefales ikke å endre denne gruppen.",
+          "sv": "Livlinjetjänst tilldelad Sensor (Rörelsedetektor) status – Öppen/Stängd. Det möjliggör för sensorn att skicka rapporter och avläsningar till Z-Wave Controller varje gång sensorn triggas. (Homey ID som standard). Det rekommenderas inte att ändra denna grupp.",
+          "pl": "Usługa linii życia przypisana do statusu czujnika (detektor ruchu) – Otwarty/Zamknięty. Umożliwia czujnikowi wysyłanie raportów i odczytów do kontrolera Z-Wave za każdym razem, gdy czujnik zostanie uruchomiony. (ID Homey domyślnie). Nie zaleca się zmiany tej grupy.",
+          "ru": "Служба жизненно важной информации, назначенная для статуса датчика (детектор движения) – Открыто/Закрыто. Она позволяет датчику отправлять отчеты и показания на контроллер Z-Wave всякий раз, когда датчик срабатывает. (ID Homey по умолчанию). Не рекомендуется изменять эту группу.",
+          "ko": "센서(모션 감지기) 상태 – 열림/닫힘에 할당된 라이프라인 서비스입니다. 센서가 작동할 때마다 센서가 Z-Wave 컨트롤러에 보고서와 판독값을 보낼 수 있습니다. (기본값으로 Homey ID). 이 그룹을 변경하는 것은 권장하지 않습니다."
         }
       },
       "2": {
         "hint": {
           "en": "Allows for control commands to associated devices such as relay module, lighting, etc. This association group is configured through the 'Illumination switch ON function' parameters. (add Z-wave ID of relay devices).",
           "nl": "Verstuurd controle commando naar gekoppelde apparaten zoals schakelaar, verlichting, etc. Deze group wordt geconfigureerd door de 'Lichtsterkte inschakel functie' parameters. (voeg het Z-wave ID van het te koppelen apparaat toe).",
-          "de": "Ermöglicht Steuerbefehle für assoziierte Geräte wie Relaismodul, Beleuchtung usw. Diese Assoziationsgruppe wird über die Parameter 'Helligkeit Einschalt Funktion' konfiguriert. (Z-Wave-ID von Relaisgeräten hinzufügen)."
+          "de": "Ermöglicht Steuerbefehle für assoziierte Geräte wie Relaismodul, Beleuchtung usw. Diese Assoziationsgruppe wird über die Parameter 'Helligkeit Einschalt Funktion' konfiguriert. (Z-Wave-ID von Relaisgeräten hinzufügen).",
+          "da": "Muliggør kontrolkommandoer til tilknyttede enheder såsom relæmodul, belysning osv. Denne associationsgruppe konfigureres via 'Belysnings tænd funktion' parametre. (tilføj Z-wave ID for relæenheder).",
+          "es": "Permite comandos de control a dispositivos asociados como módulo de relé, iluminación, etc. Este grupo de asociación se configura a través de los parámetros de 'función de interruptor de iluminación encendida'. (agregar ID de Z-wave de dispositivos de relé).",
+          "fr": "Permet des commandes de contrôle vers des appareils associés tels que le module relais, l'éclairage, etc. Ce groupe d'association est configuré via les paramètres de 'fonction d'interrupteur d'éclairage activé'. (ajouter l'ID Z-wave des appareils relais).",
+          "it": "Consente comandi di controllo ai dispositivi associati come modulo relè, illuminazione, ecc. Questo gruppo di associazione è configurato tramite i parametri della 'funzione di accensione interruttore di illuminazione'. (aggiungere l'ID Z-wave dei dispositivi relè).",
+          "no": "Lar deg kontrollere kommandoer til tilknyttede enheter som relémodul, belysning, osv. Denne assosiasjonsgruppen er konfigurert gjennom 'Illuminationsbryter PÅ-funksjonen' parametere. (legg til Z-wave-ID for reléenheter).",
+          "sv": "Möjliggör kontrollkommandon till associerade enheter som relämodul, belysning med mera. Denna associationsgrupp konfigureras genom parametrarna för 'Belysningsbrytare PÅ funktion'. (lägg till Z-wave ID för reläenheter).",
+          "pl": "Pozwala na polecenia kontroli dla skojarzonych urządzeń takich jak moduł przekaźnika, oświetlenie itp. Ta grupa asocjacyjna jest konfigurowana za pomocą parametrów 'funkcji włączania przełącznika oświetlenia'. (dodaj ID Z-wave urządzeń przekaźnikowych).",
+          "ru": "Позволяет отправлять команды управления на связанные устройства, такие как релейные модули, освещение и т. д. Эта группа ассоциаций настраивается через параметры 'функции включения освещения'. (добавить ID Z-wave релейных устройств).",
+          "ko": "릴레이 모듈, 조명 등과 같은 관련 장치에 대한 제어 명령을 허용합니다. 이 연결 그룹은 '조명 스위치 켜짐 기능' 매개변수를 통해 구성됩니다. (릴레이 장치의 Z-wave ID 추가)."
         }
       }
     }
   },
   "class": "sensor",
   "energy": {
-    "batteries": [ "CR123A" ]
+    "batteries": [
+      "CR123A"
+    ]
   },
   "capabilities": [
     "alarm_motion",
-	"alarm_tamper",
+    "alarm_tamper",
     "measure_temperature",
     "measure_luminance",
-	"measure_humidity",
+    "measure_humidity",
     "measure_battery"
   ],
   "images": {

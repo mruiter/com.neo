@@ -1,47 +1,86 @@
 [
-    {
-      "id": "off_delay",
-      "zwave": {
-        "index": 1,
-        "size": 2,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 0,
-        "max": 65535
-      },
-      "label": {
-        "en": "Off Delay",
-        "de": "Ausschaltverzögerung"
-      },
-      "value": 0,
-      "hint": {
-        "en": "Can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay",
-        "nl": "Kan gebruikt worden om de hoeveelheid vertraging aan te passen voordat het OFF commando verzonden. Deze parameter kan worden geconfigureerd met de waarde van 0 tot en met 65535, waarbij 0 betekent stuur onmiddellijk UIT commando en 65535 betekent 65.535 seconden vertraging",
-        "de": "Kann verwendet werden, um die Verzögerungszeit einzustellen, bevor der AUS-Befehl gesendet wird. Dieser Parameter kann mit dem Wert von 0 bis 65535 konfiguriert werden, wobei 0 bedeutet, dass der AUS-Befehl sofort gesendet wird und 65535 bedeutet, dass die Verzögerung 65535 Sekunden beträgt"
-      }
+  {
+    "id": "off_delay",
+    "zwave": {
+      "index": 1,
+      "size": 2,
+      "signed": false
     },
-    {
-      "id": "basic_set_level",
-      "zwave": {
-        "index": 2,
-        "size": 1,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 0,
-        "max": 255
-      },
-      "value": 255,
-      "label": {
-        "en": "Basic Set Level"
-      },
-      "hint": {
-        "en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
-        "nl": "0=UIT, Alarm annuleren of het uitschakelen van de sensor, 1-99 = Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
-        "de": "0=AUS, Alarm deaktivieren oder ein Gerät ausschalten, 1-99=Dim Level (Multilevel Switch Device), 255 = EIN (Binary Switch Device)"
-      }
+    "type": "number",
+    "attr": {
+      "min": 0,
+      "max": 65535
+    },
+    "label": {
+      "en": "Off Delay",
+      "de": "Ausschaltverzögerung",
+      "nl": "Uitstel Uitschakelen",
+      "da": "Slukforsinkelse",
+      "es": "Retraso de Apagado",
+      "fr": "Délai d'arrêt",
+      "it": "Ritardo di Spegnimento",
+      "no": "Forsinkelse av",
+      "sv": "Avstängningsfördröjning",
+      "pl": "Opóźnienie wyłączenia",
+      "ru": "Задержка выключения",
+      "ko": "전원 끄기 지연"
+    },
+    "value": 0,
+    "hint": {
+      "en": "Can be used to adjust the amount of delay before the OFF command is transmitted. This parameter can be configured with the value of 0 through 65535, where 0 means send OFF command immediately and 65535 means 65535 seconds of delay",
+      "nl": "Kan gebruikt worden om de hoeveelheid vertraging aan te passen voordat het OFF commando verzonden. Deze parameter kan worden geconfigureerd met de waarde van 0 tot en met 65535, waarbij 0 betekent stuur onmiddellijk UIT commando en 65535 betekent 65.535 seconden vertraging",
+      "de": "Kann verwendet werden, um die Verzögerungszeit einzustellen, bevor der AUS-Befehl gesendet wird. Dieser Parameter kann mit dem Wert von 0 bis 65535 konfiguriert werden, wobei 0 bedeutet, dass der AUS-Befehl sofort gesendet wird und 65535 bedeutet, dass die Verzögerung 65535 Sekunden beträgt",
+      "da": "Kan bruges til at justere mængden af forsinkelse, før OFF-kommandoen sendes. Denne parameter kan konfigureres med værdien fra 0 til 65535, hvor 0 betyder send OFF-kommandoen med det samme, og 65535 betyder 65.535 sekunders forsinkelse",
+      "es": "Se puede usar para ajustar la cantidad de retraso antes de que se transmita el comando OFF. Este parámetro se puede configurar con un valor de 0 a 65535, donde 0 significa enviar el comando OFF inmediatamente y 65535 significa 65535 segundos de retraso",
+      "fr": "Peut être utilisé pour ajuster la durée du délai avant que la commande OFF ne soit transmise. Ce paramètre peut être configuré avec une valeur de 0 à 65535, où 0 signifie envoyer la commande OFF immédiatement et 65535 signifie 65535 secondes de délai",
+      "it": "Può essere utilizzato per regolare la quantità di ritardo prima che venga trasmesso il comando OFF. Questo parametro può essere configurato con un valore da 0 a 65535, dove 0 significa inviare immediatamente il comando OFF e 65535 significa 65535 secondi di ritardo",
+      "no": "Kan brukes til å justere mengden forsinkelse før AV-kommandoen sendes. Denne parameteren kan konfigureres med verdien 0 til 65535, hvor 0 betyr send AV-kommandoen umiddelbart, og 65535 betyr 65535 sekunders forsinkelse",
+      "sv": "Kan användas för att justera tiden före OFF-kommandot sänds. Denna parameter kan ställas in med värdet 0 till 65535, där 0 betyder att skicka OFF-kommandot omedelbart och 65535 betyder 65535 sekunders fördröjning",
+      "pl": "Może być użyty do dostosowania opóźnienia przed wysłaniem komendy OFF. Parametr ten można skonfigurować stosując wartość od 0 do 65535, gdzie 0 oznacza natychmiastowe wysłanie komendy OFF a 65535 oznacza opóźnienie 65535 sekund",
+      "ru": "Может быть использовано для настройки задержки перед передачей команды OFF. Этот параметр может быть настроен в диапазоне значений от 0 до 65535. 0 означает отправка команды OFF немедленно, 65535 - задержка в 65535 секунд",
+      "ko": "OFF 명령이 전송되기 전의 지연 시간을 조정하는 데 사용할 수 있습니다. 이 매개변수는 0에서 65535까지의 값으로 구성할 수 있으며, 0은 즉시 OFF 명령을 전송하고 65535는 65535초의 지연을 의미합니다"
     }
-  ]
+  },
+  {
+    "id": "basic_set_level",
+    "zwave": {
+      "index": 2,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "value": 255,
+    "label": {
+      "en": "Basic Set Level",
+      "nl": "Basis Instelniveau",
+      "da": "Grundlæggende Sætniveau",
+      "de": "Grundlegendes Einstellniveau",
+      "es": "Nivel de Ajuste Básico",
+      "fr": "Niveau de Réglage de Base",
+      "it": "Livello di Impostazione Base",
+      "no": "Grunnleggende Innstillingsnivå",
+      "sv": "Grundläggande Inställningsnivå",
+      "pl": "Podstawowy Poziom Ustawień",
+      "ru": "Базовый Уровень Настройки",
+      "ko": "기본 설정 수준"
+    },
+    "hint": {
+      "en": "0=OFF, Alarm cancelling or turning a device off, 1-99=Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
+      "nl": "0=UIT, Alarm annuleren of het uitschakelen van de sensor, 1-99 = Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
+      "de": "0=AUS, Alarm deaktivieren oder ein Gerät ausschalten, 1-99=Dim Level (Multilevel Switch Device), 255 = EIN (Binary Switch Device)",
+      "da": "0=OFF, Alarm annullering eller slukke en enhed, 1-99=Dim Level (Multilevel Switch Device), 255 = ON (Binary Switch Device)",
+      "es": "0=OFF, Cancelación de alarma o apagar un dispositivo, 1-99=Nivel de Atenuación (Dispositivo de Interruptor de Niveles), 255=ON (Dispositivo de Interruptor Binario)",
+      "fr": "0=OFF, Annulation de l'alarme ou éteindre un appareil, 1-99=Niveau de Diminution (Appareil de Commutateur Multiniveau), 255=ON (Appareil de Commutateur Binaire)",
+      "it": "0=OFF, Annullamento Allarme o spegnere un dispositivo, 1-99=Livello di Diminuzione (Dispositivo di Commutazione Multilivello), 255=ON (Dispositivo di Commutazione Binaria)",
+      "no": "0=OFF, Alarmkansellering eller slå av en enhet, 1-99=Dimmenivå (Multinivåbryter), 255=ON (Binærbryter)",
+      "sv": "0=OFF, Alarmavbrytning eller stänga av en enhet, 1-99=Dimningsnivå (Multinivåomkopplare), 255=ON (Binäromkopplare)",
+      "pl": "0=OFF, Anulowanie alarmu lub wyłączenie urządzenia, 1-99=Poziom ściemniania (Urządzenie przełączające o wielopoziomach), 255=ON (Urządzenie przełączające binarne)",
+      "ru": "0=OFF, Отмена сигнала или отключение устройства, 1-99=Уровень затемнения (Многоуровневое переключающее устройство), 255=ON (Бинарное переключающее устройство)",
+      "ko": "0=OFF, 알람 취소 또는 기기 끄기, 1-99=디밍 레벨 (다단계 스위치 장치), 255=ON (이진 스위치 장치)"
+    }
+  }
+]

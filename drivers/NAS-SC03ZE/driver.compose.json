@@ -1,10 +1,24 @@
 {
   "name": {
     "en": "Touch Switch Triple",
-    "nl": "Aanraakschakelaar Triple"
+    "nl": "Aanraakschakelaar Triple",
+    "da": "Berøringskontakt Triple",
+    "de": "Touch-Schalter Dreifach",
+    "es": "Interruptor Táctil Triple",
+    "fr": "Interrupteur Tactile Triple",
+    "it": "Interruttore Touch Triplo",
+    "no": "Berøringsbryter Trippel",
+    "sv": "Tryckströmbrytare Trippel",
+    "pl": "Przełącznik Dotykowy Potrójny",
+    "ru": "Тройной сенсорный выключатель",
+    "ko": "터치 스위치 트리플"
   },
-  "platforms": ["local"],
-  "connectivity": ["zwave"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 512,
@@ -16,7 +30,16 @@
       "instruction": {
         "en": "Press the left button on your wallswitch three times quickly",
         "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch",
-        "de": "Drücke den linken Knopf am Wandschalter dreimal schnell."
+        "de": "Drücke den linken Knopf am Wandschalter dreimal schnell.",
+        "da": "Tryk på venstre knap på din vægkontakt hurtigt tre gange",
+        "es": "Presiona el botón izquierdo de tu interruptor de pared tres veces rápidamente",
+        "fr": "Appuyez trois fois rapidement sur le bouton gauche de votre interrupteur mural",
+        "it": "Premi tre volte velocemente il pulsante sinistro del tuo interruttore a parete",
+        "no": "Trykk på venstre knapp på veggbryteren din tre ganger raskt",
+        "sv": "Tryck på vänstra knappen på väggbrytaren tre gånger snabbt",
+        "pl": "Naciśnij szybko trzy razy lewy przycisk na przełączniku ściennym",
+        "ru": "Быстро нажмите левую кнопку на настенном выключателе трижды",
+        "ko": "벽 스위치 왼쪽 버튼을 세 번 빠르게 누릅니다"
       }
     },
     "unlearnmode": {
@@ -24,7 +47,16 @@
       "instruction": {
         "en": "Press the left button on youre wallswitch three times quickly",
         "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch",
-        "de": "Drücke den linken Knopf am Wandschalter dreimal schnell."
+        "de": "Drücke den linken Knopf am Wandschalter dreimal schnell.",
+        "da": "Tryk på venstre knap på din vægkontakt hurtigt tre gange",
+        "es": "Presiona el botón izquierdo de tu interruptor de pared tres veces rápidamente",
+        "fr": "Appuyez trois fois rapidement sur le bouton gauche de votre interrupteur mural",
+        "it": "Premi tre volte velocemente il pulsante sinistro del tuo interruttore a parete",
+        "no": "Trykk på venstre knapp på veggbryteren din tre ganger raskt",
+        "sv": "Tryck på vänstra knappen på väggbrytaren tre gånger snabbt",
+        "pl": "Naciśnij szybko trzy razy lewy przycisk na przełączniku ściennym",
+        "ru": "Быстро нажмите левую кнопку на настенном выключателе трижды",
+        "ko": "벽 스위치 왼쪽 버튼을 세 번 빠르게 누릅니다"
       }
     },
     "defaultConfiguration": [],
@@ -45,7 +77,16 @@
         "name": {
           "en": "NEO Touch Middle Switch",
           "nl": "NEO Touch Middelste Schakelaar",
-          "de": "NEO Touch Mittlere Taster"
+          "de": "NEO Touch Mittlere Taster",
+          "da": "NEO Touch Midterste Kontakt",
+          "es": "NEO Táctil Interruptor del Medio",
+          "fr": "NEO Touch Interrupteur du Milieu",
+          "it": "NEO Touch Interruttore Centrale",
+          "no": "NEO Touch Midtre Bryter",
+          "sv": "NEO Touch Mittenbrytare",
+          "pl": "NEO Dotykowy Środkowy Przełącznik",
+          "ru": "NEO Средний сенсорный выключатель",
+          "ko": "NEO 터치 중간 스위치"
         },
         "settings": []
       },
@@ -58,7 +99,16 @@
         "name": {
           "en": "NEO Touch Right Switch",
           "nl": "NEO Touch Rechter Schakelaar",
-          "de": "NEO Touch Rechter Taster"
+          "de": "NEO Touch Rechter Taster",
+          "da": "NEO Touch Højre Kontakt",
+          "es": "NEO Táctil Interruptor Derecho",
+          "fr": "NEO Touch Interrupteur Droit",
+          "it": "NEO Touch Interruttore Destro",
+          "no": "NEO Touch Høyre Bryter",
+          "sv": "NEO Touch Höger Brytare",
+          "pl": "NEO Dotykowy Prawy Przełącznik",
+          "ru": "NEO Правый сенсорный выключатель",
+          "ko": "NEO 터치 오른쪽 스위치"
         },
         "settings": []
       }

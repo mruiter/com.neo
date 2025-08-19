@@ -1,174 +1,318 @@
 [
-    {
-      "id": "motion_blink",
-      "zwave": {
-        "index": 1,
-        "size": 1,
-		"signed": false
-      },
-      "type": "checkbox",
-	  "_size": 1,
-      "label": {
-        "en": "Motion detection LED indication",
-        "nl": "Bewegingsdetectie LED indicatie",
-        "de": "Bewegungsmelder LED"
-      },
-      "value": true,
-      "hint": {
-        "en": "Enable LED/PIR to blink red when motion detected. (default: Enabled)",
-        "nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (standaard: uitgeschakeld)",
-        "de": "Aktiviert die LED/PIR, um rot zu blinken, wenn eine Bewegung erkannt wird. (default: aktiviert)"
-      }
+  {
+    "id": "motion_blink",
+    "zwave": {
+      "index": 1,
+      "size": 1,
+      "signed": false
     },
-	{
-      "id": "enable_PIR_function",
-      "zwave": {
-        "index": 2,
-        "size": 1,
-		"signed": false
-      },
-      "type": "checkbox",
-	  "_size": 1,
-      "label": {
-        "en": "Motion detection function",
-        "nl": "Bewegingsdetectie functie",
-        "de": "Bewegungsmelder-Funktion"
-      },
-      "value": true,
-      "hint": {
-        "en": "Enable the motion detection (PIR) function. This parameter does not effect the luminance reporting. (default: enabled)",
-        "nl": "Inschakelen van de bewegingsdetectie (PIR) functie. Deze parameter heeft geen invloed op de lichtsterke rapportage. (standaard: ingeschakeld)",
-        "de": "Aktiviert die Funktion Bewegungsmelder (PIR). Dieser Parameter hat keinen Einfluss auf die Heilligkeitsmeldung. (Standard: aktiviert)"
-      }
+    "type": "checkbox",
+    "_size": 1,
+    "label": {
+      "en": "Motion detection LED indication",
+      "nl": "Bewegingsdetectie LED indicatie",
+      "de": "Bewegungsmelder LED",
+      "da": "Bevægelsesdetektor LED indikation",
+      "es": "Indicador LED de detección de movimiento",
+      "fr": "Indication LED de détection de mouvement",
+      "it": "Indicazione LED di rilevamento movimenti",
+      "no": "Bevegelsesdeteksjon LED-indikasjon",
+      "sv": "Rörelsedetektering LED-indikation",
+      "pl": "Indykacja LED wykrywania ruchu",
+      "ru": "Индикатор движения светодиодом",
+      "ko": "움직임 감지 LED 표시"
     },
-	  {
-      "id": "motion_sensor_sensitivity",
-      "zwave": {
-        "index": 6,
-        "size": 1,
-		"signed": false
-      },
-      "type": "dropdown",
-	  "_size": 1,
-      "label": {
-        "en": "Motion detection sensitivity",
-        "nl": "Bewegingsdetectie gevoeligheid",
-        "de": "Empfindlichkeit des Bewegungsmelders"
-      },
-      "value": "2",
-      "hint": {
-        "en": "Adapt the sensitivity of the motion detection. (default: Normal sensitivity)",
-        "nl": "Hiermee kunt u de gevoeligheid van de bewegingsdetectie aanpassen. (standaard: Normale gevoeligheid)",
-        "de": "Passt die Empfindlichkeit des Bewegungsmelders an. (Standard: Normale Empfindlichkeit)"
-      },
-      "values": [{
-          "id": "1",
-          "label": {
-            "en": "High Sensitivity",
-            "nl": "Hoge Gevoeligheid",
-            "de": "Hohe Empfindlichkeit"
-          }
-        },
-        {
-          "id": "2",
-          "label": {
-            "en": "Normal Sensitivity (default)",
-            "nl": "Normale Gevoeligheid (standaard)",
-            "de": "Normale Empfindlichkeit (Standard)"
-          }
-        },
-        {
-          "id": "8",
-          "label": {
-            "en": "Lower Sensitivity",
-            "nl": "Lagere Gevoeligheid",
-            "de": "Niedere Empfindlichkeit"
-          }
-        },
-        {
-          "id": "15",
-          "label": {
-            "en": "Lowest Sensitivity",
-            "nl": "Laagste Gevoeligheid",
-            "de": "Niedrigste Empfindlichkeit"
-          }
-        }
-      ]
-    },
-	{
-      "id": "motion_off_delay",
-      "zwave": {
-        "index": 15,
-        "size": 2,
-		"signed": false
-      },
-      "type": "number",
-	  "_size": 2,
-      "attr": {
-        "min": 5,
-        "max": 3600
-      },
-      "label": {
-        "en": "Motion detection ON time (s)",
-        "nl": "Bewegingsdetectie AAN tijd (s)",
-        "de": "Bewegungsmelder EIN-Zeit (s)"
-      },
-      "value": 30,
-      "hint": {
-        "en": "Time duration that stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (default: 30 [s], range: 5 - 3600 [s])",
-        "nl": "Instelbare tijd dat aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. (standaard: 30 [s], bereik: 5 - 3600 [s])",
-        "de": "Zeitdauer, die der Bewegungserkennung eingeschaltet bleibt. Dieser Parameterwert muss größer sein als das die Bewegungsmelder Blindzeit. (Standard: 30 [s], Bereich: 5 - 3600[s])"
-      }
-    },
-	{
-      "id": "re-trigger_interval",
-      "zwave": {
-        "index": 13,
-        "size": 1,
-		"signed": false
-      },
-      "type": "number",
-      	"_size": 1,
-		"attr": {
-        "min": 0,
-        "max": 8
-      },
-      "label": {
-        "en": "Motion detection blind time (s)",
-        "nl": "Bewegingsdetectie blinde tijd (s)",
-        "de": "Bewegungsmelder Blindzeit (s)"
-      },
-      "value": 8,
-      "hint": {
-        "en": "Period after motion detection in which the sensor is insensitive for new motion detection. This value must be less than the 'Motion detection ON time'. (#6 default: 8 [s], range: 0 - 8 [s])",
-        "nl": "Periode na detecteren van beweging waarin de sensor ongevoelig is voor nieuwe bewegingsdetectie. De waarde moet lager zijn dan de 'Bewegingsdetectie AAN tijd'. (#6 standaard: 8 [s], bereik: 0 - 8 [s])",
-        "de": "Zeitraum nach der Bewegungserkennung, in dem der Sensor für eine neue Bewegungserkennung unempfindlich ist. Dieser Wert muss kleiner sein als die Einschaltzeit der 'Bewegungserkennung'. (#6 Standard: 8 [s], Bereich: 0 - 8[s])"
-      }
-    },
-	{
-      "id": "sensor_interval",
-      "zwave": {
-        "index": 17,
-        "size": 2,
-		"signed": false
-      },
-      "type": "number",
-      	"_size": 2,
-		"attr": {
-        "min": 0,
-        "max": 30000
-      },
-      "label": {
-        "en": "Sensor report interval (s)",
-        "nl": "Sensor rapportage-interval(s)",
-        "de": "Sensorberichtsintervall (s)"
-      },
-      "value": 180,
-      "hint": {
-        "en": "Time interval for light, temperature and humidity sensor measuring. The higher the value, the battery life is longer. 0 is reporting off(default: 180 [s], range: 0 - 30000 [s])",
-        "nl": "Tijdsinterval voor het meten van licht, temperatuur en vochtigheidssensor. Hoe hoger de waarde, hoe langer de batterij meegaat. 0 is uit(standaard: 180 [s], bereik: 0 - 30000 [s])",
-        "de": "Zeitintervall für die Messung des Licht-, Temperatur- und Feuchtigkeitssensors. Je höher der Wert, desto länger ist die Akkulaufzeit. 0 ist aus(Standard: 180 [s], Bereich: 0 - 30000[s])"
-      }
+    "value": true,
+    "hint": {
+      "en": "Enable LED/PIR to blink red when motion detected. (default: Enabled)",
+      "nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (standaard: uitgeschakeld)",
+      "de": "Aktiviert die LED/PIR, um rot zu blinken, wenn eine Bewegung erkannt wird. (default: aktiviert)",
+      "da": "Aktivér LED/PIR til at blinke rødt, når der registreres bevægelse. (standard: aktiveret)",
+      "es": "Permitir que el LED/PIR parpadee rojo cuando se detecte movimiento. (predeterminado: Activado)",
+      "fr": "Permet à la LED/PIR de clignoter en rouge lors de la détection de mouvement. (par défaut : Activé)",
+      "it": "Consenti al LED/PIR di lampeggiare in rosso quando viene rilevato un movimento. (impostazione predefinita: abilitato)",
+      "no": "Aktiver LED/PIR for å blinke rødt når bevegelse oppdages. (standard: aktivert)",
+      "sv": "Aktivera LED/PIR att blinka rött när rörelse upptäcks. (standard: aktiverad)",
+      "pl": "Włącz LED/PIR do migotania na czerwono po wykryciu ruchu. (domyślnie: włączone)",
+      "ru": "Включить мигание LED/PIR красным цветом при обнаружении движения. (по умолчанию: включено)",
+      "ko": "움직임이 감지되면 LED/PIR가 빨간색으로 깜박이도록 설정합니다. (기본값: 활성화)"
     }
-
-  ]
+  },
+  {
+    "id": "enable_PIR_function",
+    "zwave": {
+      "index": 2,
+      "size": 1,
+      "signed": false
+    },
+    "type": "checkbox",
+    "_size": 1,
+    "label": {
+      "en": "Motion detection function",
+      "nl": "Bewegingsdetectie functie",
+      "de": "Bewegungsmelder-Funktion",
+      "da": "Bevægelsesdetektion funktion",
+      "es": "Función de detección de movimiento",
+      "fr": "Fonction de détection de mouvement",
+      "it": "Funzione di rilevamento movimenti",
+      "no": "Bevegelsesdeteksjonsfunksjon",
+      "sv": "Rörelsedetekteringsfunktion",
+      "pl": "Funkcja wykrywania ruchu",
+      "ru": "Функция обнаружения движения",
+      "ko": "움직임 감지 기능"
+    },
+    "value": true,
+    "hint": {
+      "en": "Enable the motion detection (PIR) function. This parameter does not effect the luminance reporting. (default: enabled)",
+      "nl": "Inschakelen van de bewegingsdetectie (PIR) functie. Deze parameter heeft geen invloed op de lichtsterke rapportage. (standaard: ingeschakeld)",
+      "de": "Aktiviert die Funktion Bewegungsmelder (PIR). Dieser Parameter hat keinen Einfluss auf die Heilligkeitsmeldung. (Standard: aktiviert)",
+      "da": "Aktiver bevægelsesdetektion (PIR) funktion. Denne parameter påvirker ikke lysudbredelsesrapporteringen. (standard: aktiveret)",
+      "es": "Habilitar la función de detección de movimiento (PIR). Este parámetro no afecta la notificación de luminancia. (predeterminado: habilitado)",
+      "fr": "Activer la fonction de détection de mouvement (PIR). Ce paramètre n'affecte pas le rapport de luminance. (par défaut : activé)",
+      "it": "Abilita la funzione di rilevamento movimenti (PIR). Questo parametro non influisce sulla segnalazione della luminosità. (impostazione predefinita: abilitato)",
+      "no": "Aktiver bevegelsesdeteksjonsfunksjonen (PIR). Denne parameteren påvirker ikke lysrapporteringen. (standard: aktivert)",
+      "sv": "Aktivera rörelsedetekteringsfunktionen (PIR). Denna parameter påverkar inte ljusrapporteringen. (standard: aktiverad)",
+      "pl": "Włącz funkcję wykrywania ruchu (PIR). Ten parametr nie wpływa na raportowanie luminancji. (domyślnie: włączone)",
+      "ru": "Включите функцию обнаружения движения (PIR). Этот параметр не влияет на отчет о яркости. (по умолчанию: включено)",
+      "ko": "움직임 감지 (PIR) 기능을 활성화합니다. 이 매개변수는 밝기 보고에 영향을 미치지 않습니다. (기본값: 활성화)"
+    }
+  },
+  {
+    "id": "motion_sensor_sensitivity",
+    "zwave": {
+      "index": 6,
+      "size": 1,
+      "signed": false
+    },
+    "type": "dropdown",
+    "_size": 1,
+    "label": {
+      "en": "Motion detection sensitivity",
+      "nl": "Bewegingsdetectie gevoeligheid",
+      "de": "Empfindlichkeit des Bewegungsmelders",
+      "da": "Bevægelsesdetektor følsomhed",
+      "es": "Sensibilidad de detección de movimiento",
+      "fr": "Sensibilité de détection de mouvement",
+      "it": "Sensibilità del rilevamento movimenti",
+      "no": "Bevegelsesdeteksjon følsomhet",
+      "sv": "Rörelsedetektering känslighet",
+      "pl": "Czułość wykrywania ruchu",
+      "ru": "Чувствительность обнаружения движения",
+      "ko": "움직임 감지 민감도"
+    },
+    "value": "2",
+    "hint": {
+      "en": "Adapt the sensitivity of the motion detection. (default: Normal sensitivity)",
+      "nl": "Hiermee kunt u de gevoeligheid van de bewegingsdetectie aanpassen. (standaard: Normale gevoeligheid)",
+      "de": "Passt die Empfindlichkeit des Bewegungsmelders an. (Standard: Normale Empfindlichkeit)",
+      "da": "Tilpas følsomheden af bevægelsesdetektionen. (standard: Normal følsomhed)",
+      "es": "Adapte la sensibilidad de la detección de movimiento. (predeterminado: Sensibilidad normal)",
+      "fr": "Adaptez la sensibilité de la détection de mouvement. (par défaut : Sensibilité normale)",
+      "it": "Adatta la sensibilità del rilevamento movimenti. (impostazione predefinita: Sensibilità normale)",
+      "no": "Tilpass følsomheten til bevegelsesdeteksjonen. (standard: Normal følsomhet)",
+      "sv": "Anpassa känsligheten för rörelsedetektering. (standard: Normal känslighet)",
+      "pl": "Dostosuj czułość wykrywania ruchu. (domyślnie: Normalna czułość)",
+      "ru": "Настройте чувствительность обнаружения движения. (по умолчанию: обычная чувствительность)",
+      "ko": "움직임 감지의 민감도를 조정합니다. (기본값: 보통 민감도)"
+    },
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "High Sensitivity",
+          "nl": "Hoge Gevoeligheid",
+          "de": "Hohe Empfindlichkeit",
+          "da": "Høj følsomhed",
+          "es": "Alta sensibilidad",
+          "fr": "Haute Sensibilité",
+          "it": "Alta Sensibilità",
+          "no": "Høy følsomhet",
+          "sv": "Hög känslighet",
+          "pl": "Wysoka czułość",
+          "ru": "Высокая чувствительность",
+          "ko": "높은 민감도"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Normal Sensitivity (default)",
+          "nl": "Normale Gevoeligheid (standaard)",
+          "de": "Normale Empfindlichkeit (Standard)",
+          "da": "Normal følsomhed (standard)",
+          "es": "Sensibilidad Normal (predeterminada)",
+          "fr": "Sensibilité Normale (par défaut)",
+          "it": "Sensibilità Normale (predefinita)",
+          "no": "Normal følsomhet (standard)",
+          "sv": "Normal känslighet (standard)",
+          "pl": "Normalna czułość (domyślnie)",
+          "ru": "Обычная чувствительность (по умолчанию)",
+          "ko": "보통 민감도 (기본값)"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Lower Sensitivity",
+          "nl": "Lagere Gevoeligheid",
+          "de": "Niedere Empfindlichkeit",
+          "da": "Lavere følsomhed",
+          "es": "Menor Sensibilidad",
+          "fr": "Sensibilité inférieure",
+          "it": "Sensibilità Inferiore",
+          "no": "Lavere følsomhet",
+          "sv": "Lägre känslighet",
+          "pl": "Niższa czułość",
+          "ru": "Низкая чувствительность",
+          "ko": "낮은 민감도"
+        }
+      },
+      {
+        "id": "15",
+        "label": {
+          "en": "Lowest Sensitivity",
+          "nl": "Laagste Gevoeligheid",
+          "de": "Niedrigste Empfindlichkeit",
+          "da": "Laveste følsomhed",
+          "es": "La más Baja Sensibilidad",
+          "fr": "Sensibilité la plus basse",
+          "it": "Sensibilità Più Bassa",
+          "no": "Lavest følsomhet",
+          "sv": "Lägsta känslighet",
+          "pl": "Najniższa czułość",
+          "ru": "Минимальная чувствительность",
+          "ko": "가장 낮은 민감도"
+        }
+      }
+    ]
+  },
+  {
+    "id": "motion_off_delay",
+    "zwave": {
+      "index": 15,
+      "size": 2,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 2,
+    "attr": {
+      "min": 5,
+      "max": 3600
+    },
+    "label": {
+      "en": "Motion detection ON time (s)",
+      "nl": "Bewegingsdetectie AAN tijd (s)",
+      "de": "Bewegungsmelder EIN-Zeit (s)",
+      "da": "Bevægelsesdetektor TIL tid (s)",
+      "es": "Tiempo de detección de movimiento activado (s)",
+      "fr": "Temps de détection de mouvement activé (s)",
+      "it": "Tempo di rilevamento movimenti attivato (s)",
+      "no": "Bevegelsesdeteksjon PÅ tid (s)",
+      "sv": "Rörelsedetektering PÅ tid (s)",
+      "pl": "Czas włączenia wykrywania ruchu (s)",
+      "ru": "Время включения обнаружения движения (s)",
+      "ko": "움직임 감지 켜짐 시간 (초)"
+    },
+    "value": 30,
+    "hint": {
+      "en": "Time duration that stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (default: 30 [s], range: 5 - 3600 [s])",
+      "nl": "Instelbare tijd dat aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. (standaard: 30 [s], bereik: 5 - 3600 [s])",
+      "de": "Zeitdauer, die der Bewegungserkennung eingeschaltet bleibt. Dieser Parameterwert muss größer sein als das die Bewegungsmelder Blindzeit. (Standard: 30 [s], Bereich: 5 - 3600[s])",
+      "da": "Tidsperiode der forbliver TÆNDT efter bevægelsesdetektion. Denne parameter værdi skal være større end 're-trigger interval'. (standard: 30 [s], område: 5 - 3600 [s])",
+      "es": "Duración del tiempo que permanece ACTIVADO después de la detección de movimiento. Este valor de parámetro debe ser mayor que el 'intervalo de reactivación'. (predeterminado: 30 [s], rango: 5 - 3600 [s])",
+      "fr": "Durée pendant laquelle il reste activé après la détection de mouvement. Cette valeur de paramètre doit être supérieure à l'intervalle de réactivation. (par défaut : 30 [s], plage : 5 - 3600 [s])",
+      "it": "Durata del tempo che rimane ACCESO dopo il rilevamento del movimento. Questo valore di parametro deve essere maggiore dell'intervallo di riattivazione. (impostazione predefinita: 30 [s], intervallo: 5 - 3600 [s])",
+      "no": "Tidsvarighet som forblir PÅ etter bevegelighetsdeteksjon. Denne parameterverdien må være større enn 're-trigger interval'. (standard: 30 [s], område: 5 - 3600 [s])",
+      "sv": "Tidslängd som förblir PÅ efter rörelsedetektering. Detta parameter värde måste vara större än 're-trigger interval'. (standard: 30 [s], intervall: 5 - 3600 [s])",
+      "pl": "Czas, który pozostaje WŁĄCZONY po wykryciu ruchu. Wartość tego parametru musi być większa niż 'czas na ponowne wykonanie'. (domyślnie: 30 [s], zakres: 5 - 3600 [s])",
+      "ru": "Продолжительность времени, в течение которого остается ВКЛ после обнаружения движения. Это значение параметра должно быть больше, чем 'интервал повторного срабатывания'. (по умолчанию: 30 [s], диапазон: 5 - 3600 [s])",
+      "ko": "움직임 감지 후 켜짐 상태가 유지되는 시간입니다. 이 매개변수 값은 '재트리거 간격'보다 커야 합니다. (기본값: 30 [초], 범위: 5 - 3600 [초])"
+    }
+  },
+  {
+    "id": "re-trigger_interval",
+    "zwave": {
+      "index": 13,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 1,
+    "attr": {
+      "min": 0,
+      "max": 8
+    },
+    "label": {
+      "en": "Motion detection blind time (s)",
+      "nl": "Bewegingsdetectie blinde tijd (s)",
+      "de": "Bewegungsmelder Blindzeit (s)",
+      "da": "Bevægelsesdetektor blind tid (s)",
+      "es": "Tiempo ciego de detección de movimiento (s)",
+      "fr": "Temps mort de détection de mouvement (s)",
+      "it": "Tempo cieco del rilevamento movimenti (s)",
+      "no": "Bevegelsesdeteksjon blindtid (s)",
+      "sv": "Rörelsedetektering blindtid (s)",
+      "pl": "Czas ślepoty wykrywania ruchu (s)",
+      "ru": "Время нечувствительности к движению (s)",
+      "ko": "움직임 감지 블라인드 시간 (초)"
+    },
+    "value": 8,
+    "hint": {
+      "en": "Period after motion detection in which the sensor is insensitive for new motion detection. This value must be less than the 'Motion detection ON time'. (#6 default: 8 [s], range: 0 - 8 [s])",
+      "nl": "Periode na detecteren van beweging waarin de sensor ongevoelig is voor nieuwe bewegingsdetectie. De waarde moet lager zijn dan de 'Bewegingsdetectie AAN tijd'. (#6 standaard: 8 [s], bereik: 0 - 8 [s])",
+      "de": "Zeitraum nach der Bewegungserkennung, in dem der Sensor für eine neue Bewegungserkennung unempfindlich ist. Dieser Wert muss kleiner sein als die Einschaltzeit der 'Bewegungserkennung'. (#6 Standard: 8 [s], Bereich: 0 - 8[s])",
+      "da": "Periode efter bevægelsesdetektion, hvor sensoren er ufølsom for ny bevægelsesdetektion. Denne værdi skal være mindre end 'Bevægelsesdetektion TID'. (#6 standard: 8 [s], rækkevidde: 0 - 8 [s])",
+      "es": "Periodo después de la detección de movimiento en el que el sensor es insensible a la nueva detección de movimiento. Este valor debe ser menor que el 'Tiempo de detección de movimiento'. (#6 predeterminado: 8 [s], rango: 0 - 8 [s])",
+      "fr": "Période après la détection de mouvement pendant laquelle le capteur est insensible à une nouvelle détection de mouvement. Cette valeur doit être inférieure au « temps de détection du mouvement ». (#6 par défaut : 8 [s], plage : 0 - 8 [s])",
+      "it": "Periodo dopo il rilevamento movimenti in cui il sensore è insensibile al nuovo rilevamento movimenti. Questo valore deve essere inferiore al 'Tempo di rilevamento movimenti ATTIVO'. (#6 impostazione predefinita: 8 [s], intervallo: 0 - 8 [s])",
+      "no": "Perioden etter bevegelsesdeteksjon der sensoren er ufølsom for ny bevegelsesdeteksjon. Denne verdien må være mindre enn 'Bevegelsesdeteksjon PÅ tid'. (#6 standard: 8 [s], område: 0 - 8 [s])",
+      "sv": "Period efter rörelsedetektering där sensorn är okänslig för ny rörelsedetektering. Detta värde måste vara mindre än 'Rörelsedetektering PÅ tid'. (#6 standard: 8 [s], intervall: 0 - 8 [s])",
+      "pl": "Okres po wykryciu ruchu, w którym czujnik jest niewrażliwy na nowe wykrycie ruchu. Wartość ta musi być mniejsza niż 'Czas WŁĄCZENIA wykrywania ruchu'. (#6 domyślnie: 8 [s], zakres: 0 - 8 [s])",
+      "ru": "Период после обнаружения движения, в течение которого датчик нечувствителен к новому обнаружению движения. Это значение должно быть меньше времени включения обнаружения движения. (#6 по умолчанию: 8 [s], диапазон: 0 - 8 [s])",
+      "ko": "움직임이 감지된 후 센서가 새로운 움직임 감지에 둔감한 기간입니다. 이 값은 '움직임 감지 켜짐 시간'보다 작아야 합니다. (#6 기본값: 8 [초], 범위: 0 - 8 [초])"
+    }
+  },
+  {
+    "id": "sensor_interval",
+    "zwave": {
+      "index": 17,
+      "size": 2,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 2,
+    "attr": {
+      "min": 0,
+      "max": 30000
+    },
+    "label": {
+      "en": "Sensor report interval (s)",
+      "nl": "Sensor rapportage-interval(s)",
+      "de": "Sensorberichtsintervall (s)",
+      "da": "Sensor rapporteringsinterval (s)",
+      "es": "Intervalo de reporte del sensor (s)",
+      "fr": "Intervalle de rapport du capteur (s)",
+      "it": "Intervallo di segnalazione del sensore (s)",
+      "no": "Sensor rapporteringsintervall (s)",
+      "sv": "Sensorrapportintervall (s)",
+      "pl": "Interwał raportowania czujnika (s)",
+      "ru": "Интервал отчета сенсора (с)",
+      "ko": "센서 보고 간격 (초)"
+    },
+    "value": 180,
+    "hint": {
+      "en": "Time interval for light, temperature and humidity sensor measuring. The higher the value, the battery life is longer. 0 is reporting off(default: 180 [s], range: 0 - 30000 [s])",
+      "nl": "Tijdsinterval voor het meten van licht, temperatuur en vochtigheidssensor. Hoe hoger de waarde, hoe langer de batterij meegaat. 0 is uit(standaard: 180 [s], bereik: 0 - 30000 [s])",
+      "de": "Zeitintervall für die Messung des Licht-, Temperatur- und Feuchtigkeitssensors. Je höher der Wert, desto länger ist die Akkulaufzeit. 0 ist aus(Standard: 180 [s], Bereich: 0 - 30000[s])",
+      "da": "Tidsinterval for lys, temperatur og fugtighedssensor måling. Jo højere værdi, desto længere batterilevetid. 0 betyder af (standard: 180 [s], rækkevidde: 0 - 30000 [s])",
+      "es": "Intervalo de tiempo para la medición del sensor de luz, temperatura y humedad. Cuanto mayor sea el valor, mayor será la vida útil de la batería. 0 es el informe apagado (predeterminado: 180 [s], rango: 0 - 30000 [s])",
+      "fr": "Intervalle de temps pour la mesure du capteur de lumière, de température et d'humidité. Plus la valeur est élevée, plus la durée de vie de la batterie est longue. 0 signifie que le rapport est désactivé(par défaut : 180 [s], plage : 0 - 30000 [s])",
+      "it": "Intervallo di tempo per la misurazione del sensore di luce, temperatura e umidità. Più alto è il valore, maggiore è la durata della batteria. 0 è la segnalazione disattivata(impostazione predefinita: 180 [s], intervallo: 0 - 30000 [s])",
+      "no": "Tidsinterval for lys-, temperatur- og fuktighetssensormåling. Jo høyere verdi, desto lengre batterilevetid. 0 er rapport av(standard: 180 [s], område: 0 - 30000 [s])",
+      "sv": "Tidsintervall för ljus-, temperatur- och fuktighetssensormätning. Ju högre värdet är, desto längre är batteriets livslängd. 0 är rapportering av(läge: 180 [s], intervall: 0 - 30000 [s])",
+      "pl": "Interwał czasowy pomiaru czujnika światła, temperatury i wilgotności. Im wyższa wartość, tym dłuższa żywotność baterii. 0 oznacza brak raportowania(domyślnie: 180 [s], zakres: 0 - 30000 [s])",
+      "ru": "Интервал времени для измерения света, температуры и влажности датчика. Чем выше значение, тем дольше срок службы батареи. 0 – отчеты выключены(по умолчанию: 180 [s], диапазон: 0 - 30000 [s])",
+      "ko": "조명, 온도 및 습도 센서 측정 시간 간격입니다. 값이 높을수록 배터리 수명이 길어집니다. 0은 보고서가 꺼짐(기본값: 180 [초], 범위: 0 - 30000 [초])"
+    }
+  }
+]

@@ -1,136 +1,244 @@
 [
-    {
-      "id": "alarm_duration_time",
-      "zwave": {
-        "index": 1,
-        "size": 1,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 0,
-        "max": 255
-      },
-      "value": 1,
-      "label": {
-        "en": "Alarm Duration Time",
-        "nl": "Alarm Duratie Tijd",
-        "de": "Alarmdauer"
-      },
-      "hint": {
-        "en": "This configuration parameter that can be used to adjust the time in minutes for beep and LED turned on when water leakage is detected. If this parameter is set to ‘0’, the beep and LED will be turn on always until water leakage is not detected. (default: 120, range: 0 - 255)",
-        "nl": "Deze configuratie parameter die kan worden gebruikt om de tijd in minuten aan te passen voor geluidssignaal en LED ingeschakeld wanneer lekwater wordt gedetecteerd. Als deze parameter is ingesteld op '0', zal de pieptoon en LED altijd aan zijn tot lekkage water niet meer wordt gedetecteerd. (Standaard: 120, bereik: 0-255)",
-        "de": "Dieser Konfigurationsparameter kann verwendet werden, um die Zeit in Minuten für den Signalton und die LED einzustellen, wenn Wasser erkannt wird. Wenn dieser Parameter auf „0“ gesetzt ist, wird der Piepton und die LED immer eingeschaltet, bis kein Wasser mehr erkannt wird (Standard: 120, Bereich: 0 - 255)"
-      }
+  {
+    "id": "alarm_duration_time",
+    "zwave": {
+      "index": 1,
+      "size": 1,
+      "signed": false
     },
-    {
-      "id": "alarm_interval",
-      "zwave": {
-        "index": 2,
-        "size": 1,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 1,
-        "max": 255
-      },
-      "value": 1,
-      "label": {
-        "en": "Alarm Interval",
-        "nl": "Alarm Interval",
-        "de": "Alarm Interval"
-      },
-      "hint": {
-        "en": "This Parameter defines beep on /off interval time in minutes when water leakage is detected. (default: 1, range: 1 - 255)",
-        "nl": "Deze parameter definieert pieptoon aan / uit interval tijd in minuten waneer lekwater wordt gedetecteerd. (Standaard: 1, bereik: 1-255)",
-        "de": "Dieser Parameter definiert die Ein/Ausschaltzeit des Pieptons in Minuten, wenn Wasser festgestellt wird. (Standard: 1, Bereich: 1 - 255)"
-      }
+    "type": "number",
+    "attr": {
+      "min": 0,
+      "max": 255
     },
-    {
-      "id": "first_alarm_ontime",
-      "zwave": {
-        "index": 3,
-        "size": 1,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 10,
-        "max": 255
-      },
-      "value": 60,
-      "label": {
-        "en": "First Alarm On Time Duration",
-        "nl": "Eerste Alarm On Time tijdsduur",
-        "de": "Erster Alarm Einschaltdauer"
-      },
-      "hint": {
-        "en": "This parameter defines beep in seconds on duration first time when water leakage is detected. (default: 60, range: 10 - 255)",
-        "nl": "Deze parameter definieert de pieptoon in seconden van de duur eerste keer toen lekwater wordt gedetecteerd. (Standaard: 60, bereik: 10-255)",
-        "de": "Dieser Parameter definiert den ersten Signalton in Sekunden, wenn ein Wasser erkannt wurde. (Standard: 60, Bereich: 10 - 255)"
-      }
+    "value": 1,
+    "label": {
+      "en": "Alarm Duration Time",
+      "nl": "Alarm Duratie Tijd",
+      "de": "Alarmdauer",
+      "da": "Alarmvarighed",
+      "es": "Duración de la Alarma",
+      "fr": "Durée de l'Alarme",
+      "it": "Durata dell'Allarme",
+      "no": "Alarmens varighet",
+      "sv": "Larmets varaktighet",
+      "pl": "Czas trwania alarmu",
+      "ru": "Время длительности сигнала тревоги",
+      "ko": "알람 지속 시간"
     },
-    {
-      "id": "first_alarm_duration",
-      "zwave": {
-        "index": 4,
-        "size": 1,
-        "signed": false
-      },
-      "type": "number",
-      "attr": {
-        "min": 5,
-        "max": 255
-      },
-      "value": 5,
-      "label": {
-        "en": "Alarm on time duration",
-        "nl": "Alarm aan tijd duur",
-        "de": "Alarm Ein Dauer"
-      },
-      "hint": {
-        "en": "This parameter defines beep on duration in seconds after first beep on when water leakage is detected. (default: 5, range: 5 - 255)",
-        "nl": "Deze parameter definieert de pieptoon in seconden van de duur in seconden na eerste pieptoon wanneer lekwater wordt gedetecteerd. (Standaard: 5, bereik: 5-255)",
-        "de": "Dieser Parameter definiert die Dauer des Pieptons in Sekunden nach dem ersten Piepton, wenn Wasser erkannt wird. (Standard: 5, Bereich: 5 - 255)"
-      }
-    },
-    {
-      "id": "alarm_sound_enable_disable",
-      "zwave": {
-        "index": 5,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Alarm sound on detection",
-        "nl": "Alarm geluid bij detectie",
-        "de": "Alarmton bei Erkennung"
-      },
-      "hint": {
-        "en": "When unchecked it will only report to controller no sound",
-        "nl": "Indien niet aangevink zal er alleen een notificatie naar de controller worden verzonden , geen geluid",
-        "de": "Wenn deaktiviert, wird nur ein Signal an den Controller gemeldet"
-      },
-      "value": true
-    },
-    {
-      "id": "sensor_enable_disable",
-      "zwave": {
-        "index": 6,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Enable or Disable sensor",
-        "nl": "Schakel sensor Aan of Uit",
-        "de": "Aktiviere oder deaktiviere Sensor"
-      },
-      "hint": {
-        "en": "When unchecked the sensor will not report and is disabled",
-        "nl": "Indien niet aangevink zal de sensor worden uitgeschakeld",
-        "de": "Wenn deaktiviert ist, meldet der Sensor nicht und ist deaktiviert"
-      },
-      "value": true
+    "hint": {
+      "en": "This configuration parameter that can be used to adjust the time in minutes for beep and LED turned on when water leakage is detected. If this parameter is set to ‘0’, the beep and LED will be turn on always until water leakage is not detected. (default: 120, range: 0 - 255)",
+      "nl": "Deze configuratie parameter die kan worden gebruikt om de tijd in minuten aan te passen voor geluidssignaal en LED ingeschakeld wanneer lekwater wordt gedetecteerd. Als deze parameter is ingesteld op '0', zal de pieptoon en LED altijd aan zijn tot lekkage water niet meer wordt gedetecteerd. (Standaard: 120, bereik: 0-255)",
+      "de": "Dieser Konfigurationsparameter kann verwendet werden, um die Zeit in Minuten für den Signalton und die LED einzustellen, wenn Wasser erkannt wird. Wenn dieser Parameter auf „0“ gesetzt ist, wird der Piepton und die LED immer eingeschaltet, bis kein Wasser mehr erkannt wird (Standard: 120, Bereich: 0 - 255)",
+      "da": "Denne indstillingsparameter kan bruges til at justere tiden i minutter for bip og LED tændt ved vandlækage. Hvis denne parameter er sat til '0', vil bippet og LED'en altid være tændt, indtil vandlækage ikke er detekteret. (standard: 120, rækkevidde: 0 - 255)",
+      "es": "Este parámetro de configuración se puede utilizar para ajustar el tiempo en minutos en que el pitido y el LED se encienden cuando se detecta una fuga de agua. Si este parámetro se establece en '0', el pitido y el LED siempre estarán encendidos hasta que no se detecte la fuga de agua. (por defecto: 120, rango: 0 - 255)",
+      "fr": "Ce paramètre de configuration peut être utilisé pour ajuster le temps en minutes pour le bip et la LED activés lors de la détection d'une fuite d'eau. Si ce paramètre est réglé sur '0', le bip et la LED resteront allumés en permanence jusqu'à ce qu'aucune fuite d'eau ne soit détectée. (par défaut : 120, plage : 0 - 255)",
+      "it": "Questo parametro di configurazione può essere utilizzato per regolare il tempo in minuti per il beep e il LED accesi quando viene rilevata una perdita d'acqua. Se questo parametro è impostato su '0', il beep e il LED saranno sempre accesi fino a quando non viene rilevata alcuna perdita d'acqua. (predefinito: 120, intervallo: 0 - 255)",
+      "no": "Denne konfigurasjonsparameteren kan brukes til å justere tiden i minutter for pipelyd og LED på når vannlekkasje oppdages. Hvis denne parameteren er satt til '0', vil pipelyden og LED-en alltid være på til vannlekkasje ikke oppdages. (standard: 120, rekkevidde: 0 - 255)",
+      "sv": "Denna konfigurationsparameter kan användas för att justera tiden i minuter för att bip och LED tänds när vattenläckage upptäcks. Om denna parameter är inställd på '0' kommer bippet och LED alltid att vara på tills vattenläckage inte upptäcks. (standard: 120, intervall: 0 - 255)",
+      "pl": "Ten parametr konfiguracyjny można wykorzystać do dostosowania czasu trwania sygnału dźwiękowego i diody LED, który zostanie włączony, gdy zostanie wykryty wyciek wody. Jeśli ten parametr zostanie ustawiony na '0', sygnał dźwiękowy i dioda LED będą włączone bez przerwy, dopóki wyciek wody nie zostanie wykryty. (standard: 120, zakres: 0 - 255)",
+      "ru": "Этот параметр настройки может использоваться для регулировки времени в минутах звучания сигнала и включения LED при обнаружении утечки воды. Если этот параметр установлен на '0', сигнал и LED будут всегда включены, пока утечка воды не будет обнаружена. (по умолчанию: 120, диапазон: 0 - 255)",
+      "ko": "이 구성 매개변수는 물 누수가 감지되었을 때 비프음과 LED가 켜지는 시간을 조정하는 데 사용할 수 있습니다. 이 매개변수를 '0'으로 설정하면 물 누수가 감지되지 않을 때까지 비프음과 LED가 항상 켜져 있게 됩니다. (기본값: 120, 범위: 0 - 255)"
     }
-  ]
+  },
+  {
+    "id": "alarm_interval",
+    "zwave": {
+      "index": 2,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "attr": {
+      "min": 1,
+      "max": 255
+    },
+    "value": 1,
+    "label": {
+      "en": "Alarm Interval",
+      "nl": "Alarm Interval",
+      "de": "Alarm Interval",
+      "da": "Alarminterval",
+      "es": "Intervalo de Alarma",
+      "fr": "Intervalle de l'Alarme",
+      "it": "Intervallo dell'Allarme",
+      "no": "Alarmintervall",
+      "sv": "Alarmintervall",
+      "pl": "Interwał alarmu",
+      "ru": "Интервал сигнала тревоги",
+      "ko": "알람 간격"
+    },
+    "hint": {
+      "en": "This Parameter defines beep on /off interval time in minutes when water leakage is detected. (default: 1, range: 1 - 255)",
+      "nl": "Deze parameter definieert pieptoon aan / uit interval tijd in minuten waneer lekwater wordt gedetecteerd. (Standaard: 1, bereik: 1-255)",
+      "de": "Dieser Parameter definiert die Ein/Ausschaltzeit des Pieptons in Minuten, wenn Wasser festgestellt wird. (Standard: 1, Bereich: 1 - 255)",
+      "da": "Denne parameter definerer bippå / av intervaltid i minutter, når vandlækage opdages. (standard: 1, rækkevidde: 1 - 255)",
+      "es": "Este parámetro define el tiempo de intervalo de encendido / apagado del pitido cuando se detecta una fuga de agua. (por defecto: 1, rango: 1 - 255)",
+      "fr": "Ce paramètre définit l'intervalle de temps en minutes pour l'activation / désactivation du bip lorsque une fuite d'eau est détectée. (par défaut : 1, plage : 1 - 255)",
+      "it": "Questo parametro definisce il tempo di intervallo di accensione / spegnimento del beep in minuti quando viene rilevata una perdita d'acqua. (predefinito: 1, intervallo: 1 - 255)",
+      "no": "Denne parameteren definerer pip på / av interval i minutter når vannlekkasje oppdages. (standard: 1, rekkevidde: 1 - 255)",
+      "sv": "Denna parameter definierar pip på / av intervallet i minuter när vattenläckage upptäcks. (standard: 1, intervall: 1 - 255)",
+      "pl": "Ten parametr definiuje czas trwania sygnału dźwiękowego włączenia / wyłączenia w minutach w przypadku wykrycia wycieku wody. (standard: 1, zakres: 1 - 255)",
+      "ru": "Этот параметр определяет интервал времени включения / выключения сигнала в минутах при обнаружении утечки воды. (по умолчанию: 1, диапазон: 1 - 255)",
+      "ko": "이 매개변수는 물 누수가 감지될 때 비프음 켜짐 / 꺼짐 간격 시간을 분 단위로 정의합니다. (기본값: 1, 범위: 1 - 255)"
+    }
+  },
+  {
+    "id": "first_alarm_ontime",
+    "zwave": {
+      "index": 3,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "attr": {
+      "min": 10,
+      "max": 255
+    },
+    "value": 60,
+    "label": {
+      "en": "First Alarm On Time Duration",
+      "nl": "Eerste Alarm On Time tijdsduur",
+      "de": "Erster Alarm Einschaltdauer",
+      "da": "Første Alarm Tændt Tid",
+      "es": "Duración del Primer Alarma",
+      "fr": "Durée du Premier Alarme",
+      "it": "Durata del Primo Allarme",
+      "no": "Første Alarm på Tid",
+      "sv": "Första Alarm på Tid",
+      "pl": "Czas trwania pierwszego alarmu",
+      "ru": "Время первого сигнала тревоги",
+      "ko": "첫 번째 알람 켜짐 지속 시간"
+    },
+    "hint": {
+      "en": "This parameter defines beep in seconds on duration first time when water leakage is detected. (default: 60, range: 10 - 255)",
+      "nl": "Deze parameter definieert de pieptoon in seconden van de duur eerste keer toen lekwater wordt gedetecteerd. (Standaard: 60, bereik: 10-255)",
+      "de": "Dieser Parameter definiert den ersten Signalton in Sekunden, wenn ein Wasser erkannt wurde. (Standard: 60, Bereich: 10 - 255)",
+      "da": "Denne parameter definerer biplyd i sekunder ved første gang, når vandlækage opdages. (standard: 60, rækkevidde: 10 - 255)",
+      "es": "Este parámetro define el pitido en segundos en la primera vez que se detecta una fuga de agua. (por defecto: 60, rango: 10 - 255)",
+      "fr": "Ce paramètre définit le bip en secondes lors de la première détection de fuite d'eau. (par défaut : 60, plage : 10 - 255)",
+      "it": "Questo parametro definisce il beep in secondi alla prima rilevazione di perdite d'acqua. (predefinito: 60, intervallo: 10 - 255)",
+      "no": "Denne parameteren definerer pipet i sekunder første gang når vannlekkasje oppdages. (standard: 60, rekkevidde: 10 - 255)",
+      "sv": "Denna parameter definierar pip i sekunder första gången när vattenläckage upptäcks. (standard: 60, intervall: 10 - 255)",
+      "pl": "Ten parametr określa czas trwania sygnału dźwiękowego w sekundach przy pierwszym wykryciu wycieku wody. (standard: 60, zakres: 10 - 255)",
+      "ru": "Этот параметр определяет время сигнала в секундах при первом обнаружении утечки воды. (по умолчанию: 60, диапазон: 10 - 255)",
+      "ko": "이 매개변수는 물 누수가 처음 감지되었을 때 비프음을 초 단위로 정의합니다. (기본값: 60, 범위: 10 - 255)"
+    }
+  },
+  {
+    "id": "first_alarm_duration",
+    "zwave": {
+      "index": 4,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "attr": {
+      "min": 5,
+      "max": 255
+    },
+    "value": 5,
+    "label": {
+      "en": "Alarm on time duration",
+      "nl": "Alarm aan tijd duur",
+      "de": "Alarm Ein Dauer",
+      "da": "Alarm tændt varighed",
+      "es": "Duración de la Alarma",
+      "fr": "Durée de l'Alarme",
+      "it": "Durata dell'Allarme",
+      "no": "Alarm på varighet",
+      "sv": "Alarm på varaktighet",
+      "pl": "Czas trwania alarmu włączony",
+      "ru": "Время сигнала тревоги",
+      "ko": "알람 켜짐 지속 시간"
+    },
+    "hint": {
+      "en": "This parameter defines beep on duration in seconds after first beep on when water leakage is detected. (default: 5, range: 5 - 255)",
+      "nl": "Deze parameter definieert de pieptoon in seconden van de duur in seconden na eerste pieptoon wanneer lekwater wordt gedetecteerd. (Standaard: 5, bereik: 5-255)",
+      "de": "Dieser Parameter definiert die Dauer des Pieptons in Sekunden nach dem ersten Piepton, wenn Wasser erkannt wird. (Standard: 5, Bereich: 5 - 255)",
+      "da": "Denne parameter definerer bip varighed i sekunder efter første bip, når vandlækage opdages. (standard: 5, rækkevidde: 5 - 255)",
+      "es": "Este parámetro define la duración del pitido en segundos después del primer pitido cuando se detecta una fuga de agua. (por defecto: 5, rango: 5 - 255)",
+      "fr": "Ce paramètre définit la durée du bip en secondes après le premier bip lorsque une fuite d'eau est détectée. (par défaut : 5, plage : 5 - 255)",
+      "it": "Questo parametro definisce la durata del beep in secondi dopo il primo beep quando viene rilevata una perdita d'acqua. (predefinito: 5, intervallo: 5 - 255)",
+      "no": "Denne parameteren definerer pip varighet i sekunder etter første pip når vannlekkasje oppdages. (standard: 5, rekkevidde: 5 - 255)",
+      "sv": "Denna parameter definierar pipets varaktighet i sekunder efter första pipet när vattenläckage upptäcks. (standard: 5, intervall: 5 - 255)",
+      "pl": "Ten parametr określa czas trwania sygnału dźwiękowego w sekundach po pierwszym sygnale dźwiękowym w przypadku wykrycia wycieku wody. (standard: 5, zakres: 5 - 255)",
+      "ru": "Этот параметр определяет время звучания сигнала в секундах после первого сигнала при обнаружении утечки воды. (по умолчанию: 5, диапазон: 5 - 255)",
+      "ko": "이 매개변수는 물 누수가 감지된 후 첫 번째 비프음이 켜진 시점부터의 지속 시간을 초 단위로 정의합니다. (기본값: 5, 범위: 5 - 255)"
+    }
+  },
+  {
+    "id": "alarm_sound_enable_disable",
+    "zwave": {
+      "index": 5,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Alarm sound on detection",
+      "nl": "Alarm geluid bij detectie",
+      "de": "Alarmton bei Erkennung",
+      "da": "Alarm lyd ved detektion",
+      "es": "Sonido de alarma al detectar",
+      "fr": "Son d'alarme à la détection",
+      "it": "Suono di allarme su rilevazione",
+      "no": "Alarmlyd ved deteksjon",
+      "sv": "Ljudalarm vid detektion",
+      "pl": "Dźwięk alarmu przy wykryciu",
+      "ru": "Звук тревоги при обнаружении",
+      "ko": "감지 시 알람 소리"
+    },
+    "hint": {
+      "en": "When unchecked it will only report to controller no sound",
+      "nl": "Indien niet aangevink zal er alleen een notificatie naar de controller worden verzonden , geen geluid",
+      "de": "Wenn deaktiviert, wird nur ein Signal an den Controller gemeldet",
+      "da": "Når den ikke er markeret, rapporterer den kun til controlleren uden lyd",
+      "es": "Cuando no está marcado, solo informará al controlador sin sonido",
+      "fr": "Quand non coché, il ne signalera que au contrôleur sans son",
+      "it": "Quando non selezionato, segnalerà solo al controller senza suono",
+      "no": "Når den ikke er merket, vil den kun rapportere til kontrolleren uten lyd",
+      "sv": "När den inte är markerad kommer den bara rapportera till kontrollen utan ljud",
+      "pl": "Gdy jest odznaczone, zgłasza tylko do kontrolera bez dźwięku",
+      "ru": "Если не установлен флажок, будет производиться только сигнал на контроллер без звука",
+      "ko": "체크 해제 시 컨트롤러에만 보고되며 소리가 나지 않습니다"
+    },
+    "value": true
+  },
+  {
+    "id": "sensor_enable_disable",
+    "zwave": {
+      "index": 6,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Enable or Disable sensor",
+      "nl": "Schakel sensor Aan of Uit",
+      "de": "Aktiviere oder deaktiviere Sensor",
+      "da": "Aktiver eller deaktiver sensor",
+      "es": "Habilitar o deshabilitar sensor",
+      "fr": "Activer ou désactiver le capteur",
+      "it": "Abilita o disabilita il sensore",
+      "no": "Aktiver eller deaktiver sensor",
+      "sv": "Aktivera eller inaktivera sensor",
+      "pl": "Włącz lub wyłącz czujnik",
+      "ru": "Включение или отключение датчика",
+      "ko": "센서 활성화 또는 비활성화"
+    },
+    "hint": {
+      "en": "When unchecked the sensor will not report and is disabled",
+      "nl": "Indien niet aangevink zal de sensor worden uitgeschakeld",
+      "de": "Wenn deaktiviert ist, meldet der Sensor nicht und ist deaktiviert",
+      "da": "Når den ikke er markeret, vil sensoren ikke rapportere og er deaktiveret",
+      "es": "Cuando no está marcado, el sensor no informará y está deshabilitado",
+      "fr": "Quand non coché, le capteur ne signalera pas et est désactivé",
+      "it": "Quando non selezionato, il sensore non segnalerà e sarà disabilitato",
+      "no": "Når den ikke er merket, vil sensoren ikke rapportere og er deaktivert",
+      "sv": "När den inte är markerad kommer sensorn inte att rapportera och är inaktiverad",
+      "pl": "Gdy jest odznaczone, czujnik nie zgłasza i jest wyłączony",
+      "ru": "Если не установлен флажок, датчик не будет передавать данные и будет отключен",
+      "ko": "체크 해제 시 센서가 보고되지 않고 비활성화됩니다"
+    },
+    "value": true
+  }
+]

@@ -1,493 +1,997 @@
 [
-    {
-      "id": "alarmvolume",
-      "zwave": {
-        "index": 1,
-        "size": 1
-      },
-      "type": "dropdown",
-      "label": {
-        "en": "Alarm volume",
-        "nl": "Alarm volume",
-        "de": "Alarm Lautstärke"
-      },
-      "value": "3",
-      "hint": {
-        "en": "Set the volume of the Alarm sound",
-        "nl": "Aanpassen volume van Alarm geluid",
-        "de": "Einstellen der Lautstärke des Alarmtons"
-      },
-      "values": [
-        {
-          "id": "1",
-          "label": {
-            "en": "Low",
-            "nl": "Laag",
-            "de": "Niedrig"
-          }
-        },
-        {
-          "id": "2",
-          "label": {
-            "en": "Midle",
-            "nl": "Middelmatig",
-            "de": "Mittel"
-          }
-        },
-        {
-          "id": "3",
-          "label": {
-            "en": "High (default)",
-            "nl": "Hoog (standaard)",
-            "de": "Hoch (Standard)"
-          }
-        }
-      ]
+  {
+    "id": "alarmvolume",
+    "zwave": {
+      "index": 1,
+      "size": 1
     },
-    {
-      "id": "alarmsoundtime",
-      "zwave": {
-        "index": 2,
-        "size": 1,
-        "signed": false
-      },
-      "type": "dropdown",
-      "label": {
-        "en": "Alarm duration time",
-        "nl": "Alarm duratie",
-        "de": "Alarmdauer"
-      },
-      "value": "2",
-      "hint": {
-        "en": "Set the duration of the time the siren will sound its alarm music",
-        "nl": "Pas de tijd aan dat de sirene zijn alarm geluid laat horen",
-        "de": "Stellt die Zeitdauer ein, während der die Sirene Alarmton erklingt"
-      },
-      "values": [
-        {
-          "id": "0",
-          "label": {
-            "en": "Alarm sound off",
-            "nl": "Alarm geluid uit",
-            "de": "Alarmton aus"
-          }
-        },
-        {
-          "id": "1",
-          "label": {
-            "en": "30 seconds",
-            "nl": "30 seconden",
-            "de": "30 Sekunden"
-          }
-        },
-        {
-          "id": "2",
-          "label": {
-            "en": "1 minute (default)",
-            "nl": "1 minuut (standaard)",
-            "de": "1 Minute (Standard)"
-          }
-        },
-        {
-          "id": "3",
-          "label": {
-            "en": "5 minutes",
-            "nl": "5 minuten",
-            "de": "5 Minuten"
-          }
-        },
-        {
-          "id": "255",
-          "label": {
-            "en": "Endless until battery drained or alarm switched off",
-            "nl": "Oneindig totdat de accu leeg is of alarm wordt uitgezet",
-            "de": "Endlos, bis die Batterie leer ist oder der Alarm ausgeschaltet wurde."
-          }
-        }
-      ]
+    "type": "dropdown",
+    "label": {
+      "en": "Alarm volume",
+      "nl": "Alarm volume",
+      "de": "Alarm Lautstärke",
+      "da": "Alarmvolumen",
+      "es": "Volumen de alarma",
+      "fr": "Volume d'alarme",
+      "it": "Volume di allarme",
+      "no": "Alarmvolum",
+      "sv": "Alarmvolym",
+      "pl": "Głośność alarmu",
+      "ru": "Громкость сигнала тревоги",
+      "ko": "알람 소리 크기"
     },
-    {
-      "id": "doorbellvolume",
-      "zwave": {
-        "index": 4,
-        "size": 1
-      },
-      "type": "dropdown",
-      "label": {
-        "en": "Doorbell volume",
-        "nl": "Deurbel volume",
-        "de": "Türklingel Lautstärke"
-      },
-      "value": "1",
-      "hint": {
-        "en": "Set the volume of the Doorbell sound",
-        "nl": "Aanpassen volume van deurbel geluid",
-        "de": "Stellt die Lautstärke des Türklingeltons ein."
-      },
-      "values": [
-        {
-          "id": "1",
-          "label": {
-            "en": "Low (default)",
-            "nl": "Laag (standaard)",
-            "de": "Niedrig (Standard)"
-          }
-        },
-        {
-          "id": "2",
-          "label": {
-            "en": "Midle",
-            "nl": "Middelmatig",
-            "de": "Mittel"
-          }
-        },
-        {
-          "id": "3",
-          "label": {
-            "en": "High",
-            "nl": "Hoog",
-            "de": "Hoch"
-          }
-        }
-      ]
+    "value": "3",
+    "hint": {
+      "en": "Set the volume of the Alarm sound",
+      "nl": "Aanpassen volume van Alarm geluid",
+      "de": "Einstellen der Lautstärke des Alarmtons",
+      "da": "Indstil lydstyrken af alarmsignalet",
+      "es": "Ajusta el volumen del sonido de alarma",
+      "fr": "Réglez le volume du son d'alarme",
+      "it": "Imposta il volume del suono di allarme",
+      "no": "Juster volumet på alarmsignalet",
+      "sv": "Ställ in volymen för alarmsignalen",
+      "pl": "Ustaw głośność dźwięku alarmu",
+      "ru": "Установите громкость звука сигнала тревоги",
+      "ko": "알람 소리 크기를 설정하세요"
     },
-    {
-      "id": "doorbellsoundtime",
-      "zwave": {
-        "index": 3,
-        "size": 1,
-        "signed": false
-      },
-      "type": "dropdown",
-      "label": {
-        "en": "Doorbell duration time",
-        "nl": "Deurbel duratie",
-        "de": "Türklingel Dauer"
-      },
-      "value": "1",
-      "hint": {
-        "en": "Set the duration of the time the doorbell will sound its music",
-        "nl": "Pas de tijd aan dat de deurbell zijn geluid laat horen",
-        "de": "Stellt die Dauer ein, während Türklingel ihre Musik erklingen lässt."
-      },
-      "values": [
-        {
-          "id": "0",
-          "label": {
-            "en": "Doorbell sound off",
-            "nl": "Deurbel geluid uit",
-            "de": "Türklingel aus"
-          }
-        },
-        {
-          "id": "1",
-          "label": {
-            "en": "30 seconds (default)",
-            "nl": "30 seconden (standaard)",
-            "de": "30 Sekunden (Standard)"
-          }
-        },
-        {
-          "id": "2",
-          "label": {
-            "en": "1 minute",
-            "nl": "1 minuut",
-            "de": "1 Minute"
-          }
-        },
-        {
-          "id": "3",
-          "label": {
-            "en": "5 minutes",
-            "nl": "5 minuten",
-            "de": "5 Minuten"
-          }
-        },
-        {
-          "id": "255",
-          "label": {
-            "en": "Endless until battery drained or doorbell switched off",
-            "nl": "Oneindig totdat de accu leeg is of deurbell trigger wordt uitgezet",
-            "de": "Endlos, bis die Batterie leer ist oder die Türklingel ausgeschaltet wurde."
-          }
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "Low",
+          "nl": "Laag",
+          "de": "Niedrig",
+          "da": "Lav",
+          "es": "Bajo",
+          "fr": "Faible",
+          "it": "Basso",
+          "no": "Lav",
+          "sv": "Låg",
+          "pl": "Niski",
+          "ru": "Низкий",
+          "ko": "낮음"
         }
-      ]
-    },
-    {
-      "id": "alarmtune",
-      "zwave": {
-        "index": 5,
-        "size": 1
       },
-      "type": "dropdown",
-      "label": {
-        "en": "Alarm sound tune",
-        "nl": "Melodie/geluid alarm",
-        "de": "Alarm Melodie"
-      },
-      "value": "10",
-      "hint": {
-        "en": "Choose the tune of the alarm sound",
-        "nl": "Kies de melodie die gebruikt wordt bij alarm",
-        "de": "Wählt die Melodie des Alarmtons aus."
-      },
-      "values": [
-        {
-          "id": "1",
-          "label": {
-            "en": "Tune 1",
-            "nl": "Melodie 1",
-            "de": "Melodie 1"
-          }
-        },
-        {
-          "id": "2",
-          "label": {
-            "en": "Tune 2",
-            "nl": "Melodie 2",
-            "de": "Melodie 2"
-          }
-        },
-        {
-          "id": "3",
-          "label": {
-            "en": "Tune 3",
-            "nl": "Melodie 3",
-            "de": "Melodie 3"
-          }
-        },
-        {
-          "id": "4",
-          "label": {
-            "en": "Tune 4",
-            "nl": "Melodie 4",
-            "de": "Melodie 4"
-          }
-        },
-        {
-          "id": "5",
-          "label": {
-            "en": "Tune 5",
-            "nl": "Melodie 5",
-            "de": "Melodie 5"
-          }
-        },
-        {
-          "id": "6",
-          "label": {
-            "en": "Tune 6",
-            "nl": "Melodie 6",
-            "de": "Melodie 6"
-          }
-        },
-        {
-          "id": "7",
-          "label": {
-            "en": "Tune 7",
-            "nl": "Melodie 7",
-            "de": "Melodie 7"
-          }
-        },
-        {
-          "id": "8",
-          "label": {
-            "en": "Tune 8",
-            "nl": "Melodie 8",
-            "de": "Melodie 8"
-          }
-        },
-        {
-          "id": "9",
-          "label": {
-            "en": "Tune 9",
-            "nl": "Melodie 9",
-            "de": "Melodie 9"
-          }
-        },
-        {
-          "id": "10",
-          "label": {
-            "en": "Tune 10 (default)",
-            "nl": "Melodie 10 (standaard)",
-            "de": "Melodie 10 (Standard)"
-          }
+      {
+        "id": "2",
+        "label": {
+          "en": "Midle",
+          "nl": "Middelmatig",
+          "de": "Mittel",
+          "da": "Mellem",
+          "es": "Medio",
+          "fr": "Moyen",
+          "it": "Medio",
+          "no": "Middels",
+          "sv": "Medel",
+          "pl": "Średni",
+          "ru": "Средний",
+          "ko": "보통"
         }
-      ]
-    },
-    {
-      "id": "doorbelltune",
-      "zwave": {
-        "index": 6,
-        "size": 1
       },
-      "type": "dropdown",
-      "label": {
-        "en": "Doorbell sound tune",
-        "nl": "Melodie/geluid deurbel",
-        "de": "Türklingel Melodie"
-      },
-      "value": "9",
-      "hint": {
-        "en": "Choose the tune of the doorbell sound",
-        "nl": "Kies de melodie die gebruikt wordt als deurbel",
-        "de": "Wählt die Türklingel Meldie aus"
-      },
-      "values": [
-        {
-          "id": "1",
-          "label": {
-            "en": "Tune 1",
-            "nl": "Melodie 1",
-            "de": "Melodie 1"
-          }
-        },
-        {
-          "id": "2",
-          "label": {
-            "en": "Tune 2",
-            "nl": "Melodie 2",
-            "de": "Melodie 2"
-          }
-        },
-        {
-          "id": "3",
-          "label": {
-            "en": "Tune 3",
-            "nl": "Melodie 3",
-            "de": "Melodie 3"
-          }
-        },
-        {
-          "id": "4",
-          "label": {
-            "en": "Tune 4",
-            "nl": "Melodie 4",
-            "de": "Melodie 4"
-          }
-        },
-        {
-          "id": "5",
-          "label": {
-            "en": "Tune 5",
-            "nl": "Melodie 5",
-            "de": "Melodie 5"
-          }
-        },
-        {
-          "id": "6",
-          "label": {
-            "en": "Tune 6",
-            "nl": "Melodie 6",
-            "de": "Melodie 6"
-          }
-        },
-        {
-          "id": "7",
-          "label": {
-            "en": "Tune 7",
-            "nl": "Melodie 7",
-            "de": "Melodie 7"
-          }
-        },
-        {
-          "id": "8",
-          "label": {
-            "en": "Tune 8",
-            "nl": "Melodie 8",
-            "de": "Melodie 8"
-          }
-        },
-        {
-          "id": "9",
-          "label": {
-            "en": "Tune 9 (default)",
-            "nl": "Melodie 9 (standaard)",
-            "de": "Melodie 9 (Standard)"
-          }
-        },
-        {
-          "id": "10",
-          "label": {
-            "en": "Tune 10",
-            "nl": "Melodie 10",
-            "de": "Melodie 10"
-          }
+      {
+        "id": "3",
+        "label": {
+          "en": "High (default)",
+          "nl": "Hoog (standaard)",
+          "de": "Hoch (Standard)",
+          "da": "Høj (standard)",
+          "es": "Alto (predeterminado)",
+          "fr": "Élevé (par défaut)",
+          "it": "Alto (predefinito)",
+          "no": "Høy (standard)",
+          "sv": "Hög (standard)",
+          "pl": "Wysoki (domyślny)",
+          "ru": "Высокий (по умолчанию)",
+          "ko": "높음 (기본값)"
         }
-      ]
-    },
-    {
-      "id": "alarmordoorbell",
-      "zwave": {
-        "index": 7,
-        "size": 1
-      },
-      "type": "dropdown",
-      "label": {
-        "en": "Use as Siren or Doorbell",
-        "nl": "Gebruik als sirene of bel",
-        "de": "Verwendung als Sirene oder Türklingel"
-      },
-      "value": "1",
-      "hint": {
-        "en": "You can choose on what setting the siren works (alarm or deurbell settings)",
-        "nl": "Maak uw keuze op welk setting nivo de sirene werkt (alarm of deurbel settings",
-        "de": "Du kannst wählen, mit welcher Einstellung die Sirene funktioniert (Alarm- oder Türklingel-Einstellungen)."
-      },
-      "values": [
-        {
-          "id": "1",
-          "label": {
-            "en": "Alarm Siren/settings",
-            "nl": "Alarm Sirene/instellingen",
-            "de": "Alarmsirene/Einstellungen"
-          }
-        },
-        {
-          "id": "2",
-          "label": {
-            "en": "Doorbell Melody/settings",
-            "nl": "Deurbell melodie/instellingen",
-            "de": "Türklingel/Einstellungen"
-          }
-        }
-      ]
-    },
-    {
-      "id": "alarmled",
-      "zwave": {
-        "index": 8,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Alarm led on/off",
-        "nl": "Alarm led aan/uit",
-        "de": "Alarm LED Ein/Aus"
-      },
-      "value": true,
-      "hint": {
-        "en": "You can turn the alarm led siginaling on on/off",
-        "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
-        "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED."
       }
+    ]
+  },
+  {
+    "id": "alarmsoundtime",
+    "zwave": {
+      "index": 2,
+      "size": 1,
+      "signed": false
     },
-    {
-      "id": "doorbellled",
-      "zwave": {
-        "index": 9,
-        "size": 1
+    "type": "dropdown",
+    "label": {
+      "en": "Alarm duration time",
+      "nl": "Alarm duratie",
+      "de": "Alarmdauer",
+      "da": "Alarmvarighed",
+      "es": "Duración de la alarma",
+      "fr": "Durée de l'alarme",
+      "it": "Durata dell'allarme",
+      "no": "Alarmvarighet",
+      "sv": "Alarmtidslängd",
+      "pl": "Czas trwania alarmu",
+      "ru": "Продолжительность сигнала тревоги",
+      "ko": "알람 지속 시간"
+    },
+    "value": "2",
+    "hint": {
+      "en": "Set the duration of the time the siren will sound its alarm music",
+      "nl": "Pas de tijd aan dat de sirene zijn alarm geluid laat horen",
+      "de": "Stellt die Zeitdauer ein, während der die Sirene Alarmton erklingt",
+      "da": "Indstil varigheden af ​​den tid, sirenen vil lyde med sit alarmsignal",
+      "es": "Ajusta la duración del tiempo en que la sirena emitirá su sonido de alarma",
+      "fr": "Réglez la durée pendant laquelle la sirène émettra son signal d'alarme",
+      "it": "Imposta la durata del tempo in cui la sirena suonerà la musica di allarme",
+      "no": "Still inn varigheten for hvor lenge sirenen skal sende ut alarmsignalet",
+      "sv": "Ställ in varaktigheten som sirenen ska låta sin alarmsignal",
+      "pl": "Ustaw czas trwania alarmu dźwiękowego przez syrenę",
+      "ru": "Установите продолжительность времени, в течение которого сирена будет издавать сигнал тревоги",
+      "ko": "사이렌이 알람 음악을 재생할 시간을 설정합니다"
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Alarm sound off",
+          "nl": "Alarm geluid uit",
+          "de": "Alarmton aus",
+          "da": "Alarmsignal slukket",
+          "es": "Sonido de alarma desactivado",
+          "fr": "Son d'alarme désactivé",
+          "it": "Suono di allarme spento",
+          "no": "Alarmlyd av",
+          "sv": "Alarm ljud av",
+          "pl": "Dźwięk alarmu wyłączony",
+          "ru": "Звук сигнала тревоги выключен",
+          "ko": "알람 소리 끔"
+        }
       },
-      "type": "checkbox",
-      "label": {
-        "en": "Doorbell led on/off",
-        "nl": "Deurbel led aan/uit",
-        "de": "Türklingel LED Ein/Aus"
+      {
+        "id": "1",
+        "label": {
+          "en": "30 seconds",
+          "nl": "30 seconden",
+          "de": "30 Sekunden",
+          "da": "30 sekunder",
+          "es": "30 segundos",
+          "fr": "30 secondes",
+          "it": "30 secondi",
+          "no": "30 sekunder",
+          "sv": "30 sekunder",
+          "pl": "30 sekund",
+          "ru": "30 секунд",
+          "ko": "30초"
+        }
       },
-      "value": false,
-      "hint": {
-        "en": "You can turn the alarm led siginaling on on/off",
-        "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
-        "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED."
+      {
+        "id": "2",
+        "label": {
+          "en": "1 minute (default)",
+          "nl": "1 minuut (standaard)",
+          "de": "1 Minute (Standard)",
+          "da": "1 minut (standard)",
+          "es": "1 minuto (predeterminado)",
+          "fr": "1 minute (par défaut)",
+          "it": "1 minuto (predefinito)",
+          "no": "1 minutt (standard)",
+          "sv": "1 minut (standard)",
+          "pl": "1 minuta (domyślny)",
+          "ru": "1 минута (по умолчанию)",
+          "ko": "1분 (기본값)"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "5 minutes",
+          "nl": "5 minuten",
+          "de": "5 Minuten",
+          "da": "5 minutter",
+          "es": "5 minutos",
+          "fr": "5 minutes",
+          "it": "5 minuti",
+          "no": "5 minutter",
+          "sv": "5 minuter",
+          "pl": "5 minut",
+          "ru": "5 минут",
+          "ko": "5분"
+        }
+      },
+      {
+        "id": "255",
+        "label": {
+          "en": "Endless until battery drained or alarm switched off",
+          "nl": "Oneindig totdat de accu leeg is of alarm wordt uitgezet",
+          "de": "Endlos, bis die Batterie leer ist oder der Alarm ausgeschaltet wurde.",
+          "da": "Uendelig indtil batteriet er tomt eller alarmen slukkes",
+          "es": "Infinito hasta que se agote la batería o se apague la alarma",
+          "fr": "Infini jusqu'à ce que la batterie soit épuisée ou que l'alarme soit désactivée",
+          "it": "Infinito fino a quando la batteria è scarica o l'allarme spento",
+          "no": "Uendelig til batteriet er utladet eller alarmen er slått av",
+          "sv": "Oändligt tills batteriet är tömt eller larmet stängs av",
+          "pl": "Bez końca, aż bateria się wyczerpie lub alarm zostanie wyłączony",
+          "ru": "Бесконечно, пока не разрядится батарея или не будет отключена тревога",
+          "ko": "배터리가 소모되거나 알람이 꺼질 때까지 무한"
+        }
       }
+    ]
+  },
+  {
+    "id": "doorbellvolume",
+    "zwave": {
+      "index": 4,
+      "size": 1
+    },
+    "type": "dropdown",
+    "label": {
+      "en": "Doorbell volume",
+      "nl": "Deurbel volume",
+      "de": "Türklingel Lautstärke",
+      "da": "Dørklokkens lydstyrke",
+      "es": "Volumen del timbre",
+      "fr": "Volume de la sonnette",
+      "it": "Volume del campanello",
+      "no": "Volum på dørklokke",
+      "sv": "Dörrklocka volym",
+      "pl": "Głośność dzwonka",
+      "ru": "Громкость дверного звонка",
+      "ko": "초인종 소리 크기"
+    },
+    "value": "1",
+    "hint": {
+      "en": "Set the volume of the Doorbell sound",
+      "nl": "Aanpassen volume van deurbel geluid",
+      "de": "Stellt die Lautstärke des Türklingeltons ein.",
+      "da": "Indstil lydstyrken af dørklokkelyden",
+      "es": "Ajusta el volumen del sonido del timbre",
+      "fr": "Réglez le volume du son de la sonnette",
+      "it": "Imposta il volume del suono del campanello",
+      "no": "Juster volumet på dørklokkelyden",
+      "sv": "Ställ in volymen på dörrklockans ljud",
+      "pl": "Ustaw głośność dźwięku dzwonka",
+      "ru": "Установите громкость звука дверного звонка",
+      "ko": "초인종 소리 크기를 설정하세요"
+    },
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "Low (default)",
+          "nl": "Laag (standaard)",
+          "de": "Niedrig (Standard)",
+          "da": "Lav (standard)",
+          "es": "Bajo (predeterminado)",
+          "fr": "Faible (par défaut)",
+          "it": "Basso (predefinito)",
+          "no": "Lav (standard)",
+          "sv": "Låg (standard)",
+          "pl": "Niski (domyślny)",
+          "ru": "Низкий (по умолчанию)",
+          "ko": "낮음 (기본)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Midle",
+          "nl": "Middelmatig",
+          "de": "Mittel",
+          "da": "Mellem",
+          "es": "Medio",
+          "fr": "Moyen",
+          "it": "Medio",
+          "no": "Middels",
+          "sv": "Medel",
+          "pl": "Średni",
+          "ru": "Средний",
+          "ko": "보통"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "High",
+          "nl": "Hoog",
+          "de": "Hoch",
+          "da": "Høj",
+          "es": "Alto",
+          "fr": "Élevé",
+          "it": "Alto",
+          "no": "Høy",
+          "sv": "Hög",
+          "pl": "Wysoki",
+          "ru": "Высокий",
+          "ko": "높음"
+        }
+      }
+    ]
+  },
+  {
+    "id": "doorbellsoundtime",
+    "zwave": {
+      "index": 3,
+      "size": 1,
+      "signed": false
+    },
+    "type": "dropdown",
+    "label": {
+      "en": "Doorbell duration time",
+      "nl": "Deurbel duratie",
+      "de": "Türklingel Dauer",
+      "da": "Dørklokkens varighedstid",
+      "es": "Tiempo de duración del timbre",
+      "fr": "Durée de la sonnette",
+      "it": "Durata del suono del campanello",
+      "no": "Dørklokkens varighetstid",
+      "sv": "Tidslängd för dörrklocka",
+      "pl": "Czas trwania dzwonka",
+      "ru": "Продолжительность сигнала дверного звонка",
+      "ko": "초인종 소리 시간"
+    },
+    "value": "1",
+    "hint": {
+      "en": "Set the duration of the time the doorbell will sound its music",
+      "nl": "Pas de tijd aan dat de deurbell zijn geluid laat horen",
+      "de": "Stellt die Dauer ein, während Türklingel ihre Musik erklingen lässt.",
+      "da": "Indstil varigheden af den tid, dørklokken vil lyde med sin melodi",
+      "es": "Ajusta la duración del tiempo en que el timbre sonará su música",
+      "fr": "Réglez la durée pendant laquelle la sonnette jouera sa musique",
+      "it": "Imposta la durata del tempo in cui il campanello suonerà la sua musica",
+      "no": "Still inn varighet for hvor lenge dørklokken skal spille sin musikk",
+      "sv": "Ställ in varaktigheten som dörrklockan ska låta sin musik",
+      "pl": "Ustaw czas trwania dzwonka, gdy odtwarza swoją melodię",
+      "ru": "Установите продолжительность времени, в течение которого дверной звонок будет проигрывать свою музыку",
+      "ko": "초인종이 음악을 재생할 시간을 설정하세요"
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Doorbell sound off",
+          "nl": "Deurbel geluid uit",
+          "de": "Türklingel aus",
+          "da": "Dørklokke lyd slukket",
+          "es": "Sonido de timbre desactivado",
+          "fr": "Son de la sonnette désactivé",
+          "it": "Suono del campanello spento",
+          "no": "Dørklokkelyd av",
+          "sv": "Dörrklockans ljud av",
+          "pl": "Dźwięk dzwonka wyłączony",
+          "ru": "Звук дверного звонка выключен",
+          "ko": "초인종 소리 끔"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "30 seconds (default)",
+          "nl": "30 seconden (standaard)",
+          "de": "30 Sekunden (Standard)",
+          "da": "30 sekunder (standard)",
+          "es": "30 segundos (predeterminado)",
+          "fr": "30 secondes (par défaut)",
+          "it": "30 secondi (predefinito)",
+          "no": "30 sekunder (standard)",
+          "sv": "30 sekunder (standard)",
+          "pl": "30 sekund (domyślny)",
+          "ru": "30 секунд (по умолчанию)",
+          "ko": "30초 (기본)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "1 minute",
+          "nl": "1 minuut",
+          "de": "1 Minute",
+          "da": "1 minut",
+          "es": "1 minuto",
+          "fr": "1 minute",
+          "it": "1 minuto",
+          "no": "1 minutt",
+          "sv": "1 minut",
+          "pl": "1 minuta",
+          "ru": "1 минута",
+          "ko": "1분"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "5 minutes",
+          "nl": "5 minuten",
+          "de": "5 Minuten",
+          "da": "5 minutter",
+          "es": "5 minutos",
+          "fr": "5 minutes",
+          "it": "5 minuti",
+          "no": "5 minutter",
+          "sv": "5 minuter",
+          "pl": "5 minut",
+          "ru": "5 минут",
+          "ko": "5분"
+        }
+      },
+      {
+        "id": "255",
+        "label": {
+          "en": "Endless until battery drained or doorbell switched off",
+          "nl": "Oneindig totdat de accu leeg is of deurbell trigger wordt uitgezet",
+          "de": "Endlos, bis die Batterie leer ist oder die Türklingel ausgeschaltet wurde.",
+          "da": "Uendelig indtil batteriet er tomt eller dørklokken slukkes",
+          "es": "Infinito hasta que se agote la batería o se apague el timbre",
+          "fr": "Infini jusqu'à ce que la batterie soit épuisée ou que la sonnette soit désactivée",
+          "it": "Infinito fino a quando la batteria è scarica o il campanello spento",
+          "no": "Uendelig til batteriet er utladet eller dørklokken er slått av",
+          "sv": "Oändligt tills batteriet är tömt eller dörrklockan stängs av",
+          "pl": "Bez końca, aż bateria się wyczerpie lub wyłączony zostanie dzwonek",
+          "ru": "Бесконечно, пока не разрядится батарея или не будет отключен дверной звонок",
+          "ko": "배터리가 소모되거나 초인종이 꺼질 때까지 무한"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alarmtune",
+    "zwave": {
+      "index": 5,
+      "size": 1
+    },
+    "type": "dropdown",
+    "label": {
+      "en": "Alarm sound tune",
+      "nl": "Melodie/geluid alarm",
+      "de": "Alarm Melodie",
+      "da": "Alarmmelodi",
+      "es": "Tono de sonido de alarma",
+      "fr": "Réglage du son d'alarme",
+      "it": "Suono dell'allarme",
+      "no": "Alarmmelodi",
+      "sv": "Alarmton",
+      "pl": "Melodia dźwięku alarmu",
+      "ru": "Настройка звука сигнала тревоги",
+      "ko": "알람 소리 설정"
+    },
+    "value": "10",
+    "hint": {
+      "en": "Choose the tune of the alarm sound",
+      "nl": "Kies de melodie die gebruikt wordt bij alarm",
+      "de": "Wählt die Melodie des Alarmtons aus.",
+      "da": "Vælg melodien til alarmsignalet",
+      "es": "Elige el tono del sonido de alarma",
+      "fr": "Choisissez le son de l'alarme",
+      "it": "Scegli la melodia del suono di allarme",
+      "no": "Velg melodien til alarmlyden",
+      "sv": "Välj tonen för alarmsignalen",
+      "pl": "Wybierz melodię dźwięku alarmu",
+      "ru": "Выберите мелодию сигнала тревоги",
+      "ko": "알람 소리의 음색을 선택하세요"
+    },
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "Tune 1",
+          "nl": "Melodie 1",
+          "de": "Melodie 1",
+          "da": "Melodi 1",
+          "es": "Tono 1",
+          "fr": "Sonnerie 1",
+          "it": "Melodia 1",
+          "no": "Melodi 1",
+          "sv": "Melodi 1",
+          "pl": "Melodia 1",
+          "ru": "Мелодия 1",
+          "ko": "멜로디 1"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Tune 2",
+          "nl": "Melodie 2",
+          "de": "Melodie 2",
+          "da": "Melodi 2",
+          "es": "Tono 2",
+          "fr": "Sonnerie 2",
+          "it": "Melodia 2",
+          "no": "Melodi 2",
+          "sv": "Melodi 2",
+          "pl": "Melodia 2",
+          "ru": "Мелодия 2",
+          "ko": "멜로디 2"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Tune 3",
+          "nl": "Melodie 3",
+          "de": "Melodie 3",
+          "da": "Melodi 3",
+          "es": "Tono 3",
+          "fr": "Sonnerie 3",
+          "it": "Melodia 3",
+          "no": "Melodi 3",
+          "sv": "Melodi 3",
+          "pl": "Melodia 3",
+          "ru": "Мелодия 3",
+          "ko": "멜로디 3"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Tune 4",
+          "nl": "Melodie 4",
+          "de": "Melodie 4",
+          "da": "Melodi 4",
+          "es": "Tono 4",
+          "fr": "Sonnerie 4",
+          "it": "Melodia 4",
+          "no": "Melodi 4",
+          "sv": "Melodi 4",
+          "pl": "Melodia 4",
+          "ru": "Мелодия 4",
+          "ko": "멜로디 4"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Tune 5",
+          "nl": "Melodie 5",
+          "de": "Melodie 5",
+          "da": "Melodi 5",
+          "es": "Tono 5",
+          "fr": "Sonnerie 5",
+          "it": "Melodia 5",
+          "no": "Melodi 5",
+          "sv": "Melodi 5",
+          "pl": "Melodia 5",
+          "ru": "Мелодия 5",
+          "ko": "멜로디 5"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Tune 6",
+          "nl": "Melodie 6",
+          "de": "Melodie 6",
+          "da": "Melodi 6",
+          "es": "Tono 6",
+          "fr": "Sonnerie 6",
+          "it": "Melodia 6",
+          "no": "Melodi 6",
+          "sv": "Melodi 6",
+          "pl": "Melodia 6",
+          "ru": "Мелодия 6",
+          "ko": "멜로디 6"
+        }
+      },
+      {
+        "id": "7",
+        "label": {
+          "en": "Tune 7",
+          "nl": "Melodie 7",
+          "de": "Melodie 7",
+          "da": "Melodi 7",
+          "es": "Tono 7",
+          "fr": "Sonnerie 7",
+          "it": "Melodia 7",
+          "no": "Melodi 7",
+          "sv": "Melodi 7",
+          "pl": "Melodia 7",
+          "ru": "Мелодия 7",
+          "ko": "멜로디 7"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Tune 8",
+          "nl": "Melodie 8",
+          "de": "Melodie 8",
+          "da": "Melodi 8",
+          "es": "Tono 8",
+          "fr": "Sonnerie 8",
+          "it": "Melodia 8",
+          "no": "Melodi 8",
+          "sv": "Melodi 8",
+          "pl": "Melodia 8",
+          "ru": "Мелодия 8",
+          "ko": "멜로디 8"
+        }
+      },
+      {
+        "id": "9",
+        "label": {
+          "en": "Tune 9",
+          "nl": "Melodie 9",
+          "de": "Melodie 9",
+          "da": "Melodi 9",
+          "es": "Tono 9",
+          "fr": "Sonnerie 9",
+          "it": "Melodia 9",
+          "no": "Melodi 9",
+          "sv": "Melodi 9",
+          "pl": "Melodia 9",
+          "ru": "Мелодия 9",
+          "ko": "멜로디 9"
+        }
+      },
+      {
+        "id": "10",
+        "label": {
+          "en": "Tune 10 (default)",
+          "nl": "Melodie 10 (standaard)",
+          "de": "Melodie 10 (Standard)",
+          "da": "Melodi 10 (standard)",
+          "es": "Tono 10 (predeterminado)",
+          "fr": "Sonnerie 10 (par défaut)",
+          "it": "Melodia 10 (predefinito)",
+          "no": "Melodi 10 (standard)",
+          "sv": "Melodi 10 (standard)",
+          "pl": "Melodia 10 (domyślny)",
+          "ru": "Мелодия 10 (по умолчанию)",
+          "ko": "멜로디 10 (기본값)"
+        }
+      }
+    ]
+  },
+  {
+    "id": "doorbelltune",
+    "zwave": {
+      "index": 6,
+      "size": 1
+    },
+    "type": "dropdown",
+    "label": {
+      "en": "Doorbell sound tune",
+      "nl": "Melodie/geluid deurbel",
+      "de": "Türklingel Melodie",
+      "da": "Dørklokkemelodi",
+      "es": "Tono de sonido del timbre",
+      "fr": "Réglage du son de la sonnette",
+      "it": "Suono del campanello",
+      "no": "Dørklokkelyd",
+      "sv": "Dörrklockans ljud",
+      "pl": "Melodia dźwięku dzwonka",
+      "ru": "Настройка звука дверного звонка",
+      "ko": "초인종 소리 설정"
+    },
+    "value": "9",
+    "hint": {
+      "en": "Choose the tune of the doorbell sound",
+      "nl": "Kies de melodie die gebruikt wordt als deurbel",
+      "de": "Wählt die Türklingel Meldie aus",
+      "da": "Vælg melodien til dørklokkelyden",
+      "es": "Elige el tono del sonido del timbre",
+      "fr": "Choisissez le son de la sonnette",
+      "it": "Scegli la melodia del suono del campanello",
+      "no": "Velg melodien til dørklokkelyden",
+      "sv": "Välj tonen till dörrklockans ljud",
+      "pl": "Wybierz melodię dźwięku dzwonka",
+      "ru": "Выберите мелодию звука дверного звонка",
+      "ko": "초인종 소리의 음색을 선택하세요"
+    },
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "Tune 1",
+          "nl": "Melodie 1",
+          "de": "Melodie 1",
+          "da": "Melodi 1",
+          "es": "Tono 1",
+          "fr": "Sonnerie 1",
+          "it": "Melodia 1",
+          "no": "Melodi 1",
+          "sv": "Melodi 1",
+          "pl": "Melodia 1",
+          "ru": "Мелодия 1",
+          "ko": "멜로디 1"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Tune 2",
+          "nl": "Melodie 2",
+          "de": "Melodie 2",
+          "da": "Melodi 2",
+          "es": "Tono 2",
+          "fr": "Sonnerie 2",
+          "it": "Melodia 2",
+          "no": "Melodi 2",
+          "sv": "Melodi 2",
+          "pl": "Melodia 2",
+          "ru": "Мелодия 2",
+          "ko": "멜로디 2"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Tune 3",
+          "nl": "Melodie 3",
+          "de": "Melodie 3",
+          "da": "Melodi 3",
+          "es": "Tono 3",
+          "fr": "Sonnerie 3",
+          "it": "Melodia 3",
+          "no": "Melodi 3",
+          "sv": "Melodi 3",
+          "pl": "Melodia 3",
+          "ru": "Мелодия 3",
+          "ko": "멜로디 3"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Tune 4",
+          "nl": "Melodie 4",
+          "de": "Melodie 4",
+          "da": "Melodi 4",
+          "es": "Tono 4",
+          "fr": "Sonnerie 4",
+          "it": "Melodia 4",
+          "no": "Melodi 4",
+          "sv": "Melodi 4",
+          "pl": "Melodia 4",
+          "ru": "Мелодия 4",
+          "ko": "멜로디 4"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Tune 5",
+          "nl": "Melodie 5",
+          "de": "Melodie 5",
+          "da": "Melodi 5",
+          "es": "Tono 5",
+          "fr": "Sonnerie 5",
+          "it": "Melodia 5",
+          "no": "Melodi 5",
+          "sv": "Melodi 5",
+          "pl": "Melodia 5",
+          "ru": "Мелодия 5",
+          "ko": "멜로디 5"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Tune 6",
+          "nl": "Melodie 6",
+          "de": "Melodie 6",
+          "da": "Melodi 6",
+          "es": "Tono 6",
+          "fr": "Sonnerie 6",
+          "it": "Melodia 6",
+          "no": "Melodi 6",
+          "sv": "Melodi 6",
+          "pl": "Melodia 6",
+          "ru": "Мелодия 6",
+          "ko": "멜로디 6"
+        }
+      },
+      {
+        "id": "7",
+        "label": {
+          "en": "Tune 7",
+          "nl": "Melodie 7",
+          "de": "Melodie 7",
+          "da": "Melodi 7",
+          "es": "Tono 7",
+          "fr": "Sonnerie 7",
+          "it": "Melodia 7",
+          "no": "Melodi 7",
+          "sv": "Melodi 7",
+          "pl": "Melodia 7",
+          "ru": "Мелодия 7",
+          "ko": "멜로디 7"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Tune 8",
+          "nl": "Melodie 8",
+          "de": "Melodie 8",
+          "da": "Melodi 8",
+          "es": "Tono 8",
+          "fr": "Sonnerie 8",
+          "it": "Melodia 8",
+          "no": "Melodi 8",
+          "sv": "Melodi 8",
+          "pl": "Melodia 8",
+          "ru": "Мелодия 8",
+          "ko": "멜로디 8"
+        }
+      },
+      {
+        "id": "9",
+        "label": {
+          "en": "Tune 9 (default)",
+          "nl": "Melodie 9 (standaard)",
+          "de": "Melodie 9 (Standard)",
+          "da": "Melodi 9 (standard)",
+          "es": "Tono 9 (predeterminado)",
+          "fr": "Sonnerie 9 (par défaut)",
+          "it": "Melodia 9 (predefinito)",
+          "no": "Melodi 9 (standard)",
+          "sv": "Melodi 9 (standard)",
+          "pl": "Melodia 9 (domyślny)",
+          "ru": "Мелодия 9 (по умолчанию)",
+          "ko": "멜로디 9 (기본값)"
+        }
+      },
+      {
+        "id": "10",
+        "label": {
+          "en": "Tune 10",
+          "nl": "Melodie 10",
+          "de": "Melodie 10",
+          "da": "Melodi 10",
+          "es": "Tono 10",
+          "fr": "Sonnerie 10",
+          "it": "Melodia 10",
+          "no": "Melodi 10",
+          "sv": "Melodi 10",
+          "pl": "Melodia 10",
+          "ru": "Мелодия 10",
+          "ko": "멜로디 10"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alarmordoorbell",
+    "zwave": {
+      "index": 7,
+      "size": 1
+    },
+    "type": "dropdown",
+    "label": {
+      "en": "Use as Siren or Doorbell",
+      "nl": "Gebruik als sirene of bel",
+      "de": "Verwendung als Sirene oder Türklingel",
+      "da": "Brug som sirene eller dørklokke",
+      "es": "Usar como sirena o timbre",
+      "fr": "Utiliser comme sirène ou sonnette",
+      "it": "Usa come sirena o campanello",
+      "no": "Bruk som sirene eller dørklokke",
+      "sv": "Använd som siren eller dörrklocka",
+      "pl": "Użyj jako syreny lub dzwonka",
+      "ru": "Используйте как сирену или дверной звонок",
+      "ko": "사이렌 또는 초인종으로 사용"
+    },
+    "value": "1",
+    "hint": {
+      "en": "You can choose on what setting the siren works (alarm or deurbell settings)",
+      "nl": "Maak uw keuze op welk setting nivo de sirene werkt (alarm of deurbel settings",
+      "de": "Du kannst wählen, mit welcher Einstellung die Sirene funktioniert (Alarm- oder Türklingel-Einstellungen).",
+      "da": "Du kan vælge, hvilken indstilling sirenen arbejder under (alarm eller dørklokke indstillinger)",
+      "es": "Puedes elegir en qué configuración funciona la sirena (ajustes de alarma o timbre)",
+      "fr": "Vous pouvez choisir le paramètre de fonctionnement de la sirène (réglages d'alarme ou de sonnette)",
+      "it": "Puoi scegliere su quale impostazione funziona la sirena (impostazioni di allarme o campanello)",
+      "no": "Du kan velge hvilken innstilling sirenen fungerer under (alarm- eller dørklokkeinnstillinger)",
+      "sv": "Du kan välja vilken inställning sirenen fungerar med (larm- eller dörrklocksinställningar)",
+      "pl": "Możesz wybrać, w jakim trybie działa syrena (ustawienia alarmowe lub dzwonkowe)",
+      "ru": "Вы можете выбрать, на какой настройке работает сирена (настройки тревоги или звонка)",
+      "ko": "사이렌이 작동하는 설정을 선택할 수 있습니다 (알람 또는 초인종 설정)"
+    },
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "Alarm Siren/settings",
+          "nl": "Alarm Sirene/instellingen",
+          "de": "Alarmsirene/Einstellungen",
+          "da": "Alarm sirene/indstillinger",
+          "es": "Sirena de alarma/configuración",
+          "fr": "Sirène d'alarme/réglages",
+          "it": "Sirena di allarme/impostazioni",
+          "no": "Alarm sirene/innstillinger",
+          "sv": "Alarm siren/inställningar",
+          "pl": "Syrena alarmowa/ustawienia",
+          "ru": "Сирена тревоги/настройки",
+          "ko": "알람 사이렌/설정"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Doorbell Melody/settings",
+          "nl": "Deurbell melodie/instellingen",
+          "de": "Türklingel/Einstellungen",
+          "da": "Dørklokke melodi/indstillinger",
+          "es": "Melodía del timbre/configuración",
+          "fr": "Mélodie de la sonnette/réglages",
+          "it": "Melodia del campanello/impostazioni",
+          "no": "Dørklokkemyodi/innstillinger",
+          "sv": "Dörrklockemelodi/inställningar",
+          "pl": "Melodia dzwonka/ustawienia",
+          "ru": "Мелодия дверного звонка/настройки",
+          "ko": "초인종 멜로디/설정"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alarmled",
+    "zwave": {
+      "index": 8,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Alarm led on/off",
+      "nl": "Alarm led aan/uit",
+      "de": "Alarm LED Ein/Aus",
+      "da": "Alarm LED tændt/slukket",
+      "es": "LED de alarma encendido/apagado",
+      "fr": "LED d'alarme activée/désactivée",
+      "it": "LED dell'allarme acceso/spento",
+      "no": "Alarm LED på/av",
+      "sv": "Alarm LED på/av",
+      "pl": "Dioda alarmowa włączona/wyłączona",
+      "ru": "Сигнальная лампа тревоги включена/выключена",
+      "ko": "알람 LED 켜기/끄기"
+    },
+    "value": true,
+    "hint": {
+      "en": "You can turn the alarm led siginaling on on/off",
+      "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
+      "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED.",
+      "da": "Du kan tænde/slukke for alarmens lysindikator",
+      "es": "Puedes encender/apagar la señalización LED de la alarma",
+      "fr": "Vous pouvez allumer/éteindre la signalisation LED de l'alarme",
+      "it": "Puoi accendere/spegnere il LED dell'allarme",
+      "no": "Du kan slå på/av alarmens lysindikator",
+      "sv": "Du kan slå på/av alarmets lysindikator",
+      "pl": "Możesz włączyć/wyłączyć sygnalizację diody alarmowej",
+      "ru": "Вы можете включить/выключить световую индикацию тревоги",
+      "ko": "알람 LED 신호를 켜거나 끌 수 있습니다"
     }
-  ]
+  },
+  {
+    "id": "doorbellled",
+    "zwave": {
+      "index": 9,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Doorbell led on/off",
+      "nl": "Deurbel led aan/uit",
+      "de": "Türklingel LED Ein/Aus",
+      "da": "Dørklokke LED tændt/slukket",
+      "es": "LED del timbre encendido/apagado",
+      "fr": "LED de la sonnette activée/désactivée",
+      "it": "LED del campanello acceso/spento",
+      "no": "Dørklokke LED på/av",
+      "sv": "Dörrklocka LED på/av",
+      "pl": "Dioda dzwonka włączona/wyłączona",
+      "ru": "Сигнальная лампа дверного звонка включена/выключена",
+      "ko": "초인종 LED 켜기/끄기"
+    },
+    "value": false,
+    "hint": {
+      "en": "You can turn the alarm led siginaling on on/off",
+      "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
+      "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED.",
+      "da": "Du kan tænde/slukke for alarmens lysindikator",
+      "es": "Puedes encender/apagar la señalización LED de la alarma",
+      "fr": "Vous pouvez allumer/éteindre la signalisation LED de l'alarme",
+      "it": "Puoi accendere/spegnere il LED dell'allarme",
+      "no": "Du kan slå på/av alarmens lysindikator",
+      "sv": "Du kan slå på/av alarmets lysindikator",
+      "pl": "Możesz włączyć/wyłączyć sygnalizację diody alarmowej",
+      "ru": "Вы можете включить/выключить световую индикацию тревоги",
+      "ko": "알람 LED 신호를 켜거나 끌 수 있습니다"
+    }
+  }
+]

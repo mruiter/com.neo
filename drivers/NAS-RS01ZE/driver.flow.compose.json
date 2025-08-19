@@ -5,12 +5,30 @@
       "title": {
         "en": "Emergency Alarm",
         "nl": "SOS Alarm",
-        "de": "SOS Alarm"
+        "de": "SOS Alarm",
+        "da": "Nødalarm",
+        "es": "Alarma de Emergencia",
+        "fr": "Alarme d'Urgence",
+        "it": "Allarme di Emergenza",
+        "no": "Nødalarm",
+        "sv": "Nödlarm",
+        "pl": "Alarm Alarmowy",
+        "ru": "Аварийная Сигнализация",
+        "ko": "비상 경보"
       },
       "hint": {
         "en": "This card will trigger when Emergency button is activated.",
         "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop SOS wordt ingedrukt.",
-        "de": "Diese Karte wird ausgelöst, wenn der Notfalltaster gedrückt wird."
+        "de": "Diese Karte wird ausgelöst, wenn der Notfalltaster gedrückt wird.",
+        "da": "Dette kort udløses, når nødknappen aktiveres.",
+        "es": "Esta tarjeta se activará cuando se presione el botón de emergencia.",
+        "fr": "Cette carte se déclenchera lorsque le bouton d'urgence sera activé.",
+        "it": "Questa scheda si attiverà quando viene premuto il pulsante di emergenza.",
+        "no": "Dette kortet utløses når nødknappen aktiveres.",
+        "sv": "Detta kort kommer att aktiveras när nödknappen trycks in.",
+        "pl": "Ta karta zostanie uruchomiona, gdy przycisk alarmowy zostanie aktywowany.",
+        "ru": "Эта карта будет активирована, когда кнопка аварийного сигнала будет нажата.",
+        "ko": "비상 버튼이 활성화되면 이 카드가 트리거됩니다."
       },
       "args": []
     }

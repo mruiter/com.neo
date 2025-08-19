@@ -1,10 +1,24 @@
 {
   "name": {
     "en": "Touch Switch Single",
-    "nl": "Aanraakschakelaar Enkel"
+    "nl": "Aanraakschakelaar Enkel",
+    "da": "Berøringskontakt Enkel",
+    "de": "Berührungsschalter Einzel",
+    "es": "Interruptor Táctil Simple",
+    "fr": "Interrupteur Tactile Simple",
+    "it": "Interruttore Tattile Singolo",
+    "no": "Berøringsbryter Enkel",
+    "sv": "Beröringsströmbrytare Enkel",
+    "pl": "Pojedynczy włącznik dotykowy",
+    "ru": "Сенсорный выключатель",
+    "ko": "터치 스위치 단일"
   },
-"platforms": ["local"],
-  "connectivity": ["zwave"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 3,
@@ -14,7 +28,16 @@
       "instruction": {
         "en": "Press the left button on youre wallswitch three times quickly",
         "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch",
-        "de": "Drücke den linken Knopf am Wandschalter dreimal schnell."
+        "de": "Drücke den linken Knopf am Wandschalter dreimal schnell.",
+        "da": "Tryk hurtigt på venstre knap på din vægkontakt tre gange",
+        "es": "Presiona el botón izquierdo de tu interruptor de pared tres veces rápidamente",
+        "fr": "Appuyez sur le bouton gauche de votre interrupteur mural trois fois rapidement",
+        "it": "Premi il pulsante sinistro sul tuo interruttore a parete tre volte rapidamente",
+        "no": "Trykk på venstre knapp på veggbryteren din tre ganger raskt",
+        "sv": "Tryck på vänster knapp på väggbrytaren tre gånger snabbt",
+        "pl": "Naciśnij lewy przycisk na przełączniku ściennym trzy razy szybko",
+        "ru": "Быстро нажмите левую кнопку на настенном выключателе три раза",
+        "ko": "벽 스위치의 왼쪽 버튼을 세 번 빠르게 누르세요"
       }
     },
     "unlearnmode": {
@@ -22,7 +45,16 @@
       "instruction": {
         "en": "Press the left button on youre wallswitch three times quickly",
         "nl": "Druk driemaal snel achter elkaar op de linker knop van de wallswitch",
-        "de": "Drücke den linken Knopf am Wandschalter dreimal schnell."
+        "de": "Drücke den linken Knopf am Wandschalter dreimal schnell.",
+        "da": "Tryk hurtigt på venstre knap på din vægkontakt tre gange",
+        "es": "Presiona el botón izquierdo de tu interruptor de pared tres veces rápidamente",
+        "fr": "Appuyez sur le bouton gauche de votre interrupteur mural trois fois rapidement",
+        "it": "Premi il pulsante sinistro sul tuo interruttore a parete tre volte rapidamente",
+        "no": "Trykk på venstre knapp på veggbryteren din tre ganger raskt",
+        "sv": "Tryck på vänster knapp på väggbrytaren tre gånger snabbt",
+        "pl": "Naciśnij lewy przycisk na przełączniku ściennym trzy razy szybko",
+        "ru": "Быстро нажмите левую кнопку на настенном выключателе три раза",
+        "ko": "벽 스위치의 왼쪽 버튼을 세 번 빠르게 누르세요"
       }
     },
     "defaultConfiguration": [],

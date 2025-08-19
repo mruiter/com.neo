@@ -2,14 +2,44 @@
   "type": "boolean",
   "title": {
     "en": "Siren",
-    "nl": "Sirene"
+    "nl": "Sirene",
+    "da": "Sirene",
+    "de": "Sirene",
+    "es": "Sirena",
+    "fr": "Sirène",
+    "it": "Sirena",
+    "no": "Sirene",
+    "sv": "Siren",
+    "pl": "Syrena",
+    "ru": "Сирена",
+    "ko": "사이렌"
   },
   "units": {
-    "en": "Status"
+    "en": "Status",
+    "da": "Status",
+    "de": "Status",
+    "es": "Estado",
+    "fr": "Statut",
+    "it": "Stato",
+    "no": "Status",
+    "sv": "Status",
+    "pl": "Status",
+    "ru": "Статус",
+    "ko": "상태"
   },
   "desc": {
     "en": "Alarm",
-    "nl": "Alarm"
+    "nl": "Alarm",
+    "da": "Alarm",
+    "de": "Alarm",
+    "es": "Alarma",
+    "fr": "Alarme",
+    "it": "Allarme",
+    "no": "Alarm",
+    "sv": "Larm",
+    "pl": "Alarm",
+    "ru": "Сигнализация",
+    "ko": "알람"
   },
   "getable": true,
   "setable": false

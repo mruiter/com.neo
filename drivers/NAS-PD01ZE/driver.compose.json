@@ -3,19 +3,27 @@
     "en": "PIR V1",
     "nl": "PIR V1"
   },
-  "platforms": ["local"],
-  "connectivity": ["zwave"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
   "zwave": {
     "manufacturerId": 600,
-    "productTypeId": [3, 16, 512],
+    "productTypeId": [
+      3,
+      16,
+      512
+    ],
     "productId": [
       4227,
-	  4150,
+      4150,
       24707,
       131,
       8323,
       8333,
-	  1818
+      1818
     ],
     "productDocumentation": "http://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1920/Motion Detector User Guide EU V3.3.pdf",
     "pid": 1920,
@@ -25,7 +33,16 @@
       "instruction": {
         "en": "Press the code button inside your NEO PIR three times",
         "nl": "Druk driemaal op de code knop binnen in de NEO PIR",
-        "de": "Drücke die Code-Taste in deinem NEO PIR dreimal"
+        "de": "Drücke die Code-Taste in deinem NEO PIR dreimal",
+        "da": "Tryk på kodeknappen inde i din NEO PIR tre gange",
+        "es": "Presiona el botón de código dentro de tu NEO PIR tres veces",
+        "fr": "Appuyez sur le bouton de code à l'intérieur de votre NEO PIR trois fois",
+        "it": "Premere il pulsante codice all'interno del tuo NEO PIR tre volte",
+        "no": "Trykk på kodeknappen inne i din NEO PIR tre ganger",
+        "sv": "Tryck på kodknappen inuti din NEO PIR tre gånger",
+        "pl": "Naciśnij przycisk kodu wewnątrz swojego NEO PIR trzy razy",
+        "ru": "Нажмите на кнопку кода внутри вашего NEO PIR три раза",
+        "ko": "NEO PIR 내부의 코드 버튼을 세 번 누르세요"
       }
     },
     "unlearnmode": {
@@ -33,7 +50,16 @@
       "instruction": {
         "en": "Press the code button inside your NEO PIR three times",
         "nl": "Druk driemaal op de code knop binnen in de NEO PIR",
-        "de": "Drücke die Code-Taste in deinem NEO PIR dreimal"
+        "de": "Drücke die Code-Taste in deinem NEO PIR dreimal",
+        "da": "Tryk på kodeknappen inde i din NEO PIR tre gange",
+        "es": "Presiona el botón de código dentro de tu NEO PIR tres veces",
+        "fr": "Appuyez sur le bouton de code à l'intérieur de votre NEO PIR trois fois",
+        "it": "Premere il pulsante codice all'interno del tuo NEO PIR tre volte",
+        "no": "Trykk på kodeknappen inne i din NEO PIR tre ganger",
+        "sv": "Tryck på kodknappen inuti din NEO PIR tre gånger",
+        "pl": "Naciśnij przycisk kodu wewnątrz swojego NEO PIR trzy razy",
+        "ru": "Нажмите на кнопку кода внутри вашего NEO PIR три раза",
+        "ko": "NEO PIR 내부의 코드 버튼을 세 번 누르세요"
       }
     },
     "defaultConfiguration": [
@@ -62,28 +88,64 @@
         "hint": {
           "en": "Lifeline service that assigned to Sensor (Motion detector) status – Open/Close. It enables the sensor to send reports and readings to Z‐Wave Controller whenever the sensor is triggered. (Homey ID by default). It is not recommended to change this group.",
           "nl": "Lifeline service toegekend aan de Sensor (Bewegingsdetectie) status - Open/Dicht. Via deze groep kan de sensor bewegingsdetectie / lichtsterkte / batterijniveau rapporteren naar de Z-wave Controller wanneer de sensor geactiveerd is. (Homey ID als standaard waarde). Het is niet aanbevolen om deze groep aan te passen.",
-          "de": "Lifeline Service, der dem Sensor (Bewegungsmelder) zugeordnet ist - Open/Close. Es ermöglicht dem Sensor, Berichte und Messwerte an den Z-Wave-Controller zu senden, wenn der Sensor ausgelöst wird. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern."
+          "de": "Lifeline Service, der dem Sensor (Bewegungsmelder) zugeordnet ist - Open/Close. Es ermöglicht dem Sensor, Berichte und Messwerte an den Z-Wave-Controller zu senden, wenn der Sensor ausgelöst wird. (Homey ID standardmäßig). Es wird nicht empfohlen, diese Gruppe zu ändern.",
+          "da": "Lifeline service, der er tildelt til Sensor (Bevægelsesdetektor) status - Åben/Lukket. Det gør det muligt for sensoren at sende rapporter og målinger til Z-Wave Controller, hver gang sensoren udløses. (Homey ID som standard). Det anbefales ikke at ændre denne gruppe.",
+          "es": "Servicio de línea de vida asignado al estado del Sensor (detector de movimiento) - Abierto/Cerrado. Permite al sensor enviar informes y lecturas al Controlador Z‐Wave cada vez que se activa. (ID de Homey por defecto). No se recomienda cambiar este grupo.",
+          "fr": "Service de ligne de vie attribué à l'état du capteur (détecteur de mouvement) - Ouvert/Fermé. Il permet au capteur d'envoyer des rapports et des relevés au contrôleur Z‐Wave chaque fois que le capteur est déclenché. (ID Homey par défaut). Il n'est pas recommandé de changer ce groupe.",
+          "it": "Servizio di linea di vita assegnato allo stato del Sensore (rivelatore di movimento) - Aperto/Chiuso. Permette al sensore di inviare rapporti e letture al Controller Z‐Wave ogni volta che il sensore viene attivato. (ID Homey di default). Non è consigliato modificare questo gruppo.",
+          "no": "Lifeline-tjeneste som er tildelt til Sensor (Bevegelsesdetektor) status – Åpen/Lukket. Det gjør det mulig for sensoren å sende rapporter og målinger til Z‐Wave-kontrolleren hver gang sensoren er utløst. (Homey ID som standard). Det anbefales ikke å endre denne gruppen.",
+          "sv": "Lifeline-tjänst som är tilldelad till Sensor (Rörelsedetektor) status – Öppen/Stängd. Det gör det möjligt för sensorn att skicka rapporter och avläsningar till Z-Wave-kontrollern när sensorn utlöses. (Homey-ID som standard). Det rekommenderas inte att ändra den här gruppen.",
+          "pl": "Usługa lifeline przypisana do statusu sensora (detektor ruchu) – Otwarty/Zamknięty. Umożliwia sensorowi wysyłanie raportów i odczytów do kontrolera Z‐Wave za każdym razem, gdy sensor jest uruchamiany. (Domyślny identyfikator Homey). Nie zaleca się zmiany tej grupy.",
+          "ru": "Служба обеспечения жизнеспособности, назначенная статусу датчика (детектор движения) – Открыто/Закрыто. Она позволяет датчику отправлять отчеты и показания на контроллер Z-Wave всякий раз, когда датчик срабатывает. (Идентификатор Homey по умолчанию). Не рекомендуется изменять эту группу.",
+          "ko": "감지기(모션 탐지기) 상태에 할당된 생명선 서비스 - 열림/닫힘. 감지기가 트리거될 때마다 Z-Wave 컨트롤러에 보고서와 판독값을 보낼 수 있습니다. (기본값은 Homey ID). 이 그룹을 변경하는 것은 권장하지 않습니다."
         }
       },
       "2": {
         "hint": {
           "en": "Allows for control commands to associated devices such as relay module, lighting, etc. This association group is configured through the 'Illumination switch ON function' parameters. (add Z-wave ID of relay devices).",
           "nl": "Verstuurd controle commando naar gekoppelde apparaten zoals schakelaar, verlichting, etc. Deze group wordt geconfigureerd door de 'Lichtsterkte inschakel functie' parameters. (voeg het Z-wave ID van het te koppelen apparaat toe).",
-          "de": "Ermöglicht Steuerbefehle für assoziierte Geräte wie Relaismodul, Beleuchtung usw. Diese Assoziationsgruppe wird über die Parameter 'Helligkeit Einschalt Funktion' konfiguriert. (Z-Wave-ID von Relaisgeräten hinzufügen)."
+          "de": "Ermöglicht Steuerbefehle für assoziierte Geräte wie Relaismodul, Beleuchtung usw. Diese Assoziationsgruppe wird über die Parameter 'Helligkeit Einschalt Funktion' konfiguriert. (Z-Wave-ID von Relaisgeräten hinzufügen).",
+          "da": "Muliggør kontrolkommandoer til tilknyttede enheder som f.eks. relæmodul, belysning osv. Denne associeringsgruppe er konfigureret gennem 'Belysning tændt funktion' parametrene. (tilføj Z-wave-ID for relæenheder).",
+          "es": "Permite comandos de control a dispositivos asociados como módulo de relé, iluminación, etc. Este grupo de asociación se configura a través de los parámetros de 'Función de interruptor de iluminación ON'. (agregar ID de Z-wave de dispositivos de relé).",
+          "fr": "Permet des commandes de contrôle aux dispositifs associés tels que le module de relais, l'éclairage, etc. Ce groupe d'association est configuré par les paramètres 'Fonction de commutateur d'illumination ON'. (ajouter l'ID du relais Z-wave).",
+          "it": "Consente comandi di controllo ai dispositivi associati come modulo relè, illuminazione, ecc. Questo gruppo di associazione è configurato tramite i parametri 'Funzione di commutazione illuminazione ON'. (aggiungi ID Z-wave dei dispositivi relè).",
+          "no": "Muliggjør kontrollkommandoer til tilknyttede enheter som relémodul, belysning osv. Denne assosieringsgruppen er konfigurert gjennom 'Belysning på-funksjonen' parametere. (legg til Z-wave ID på reléenheter).",
+          "sv": "Gör det möjligt för styrkommandon till associerade enheter som relämodul, belysning osv. Denna associeringsgrupp konfigureras via parametrarna 'Belysning på funktion'. (lägg till Z-wave-ID för reläenheter).",
+          "pl": "Umożliwia komendy sterujące dla powiązanych urządzeń, takich jak moduł przekaźnikowy, oświetlenie itp. Ta grupa powiązań jest konfigurowana za pomocą parametrów 'Funkcja podświetlenia włączona'. (dodaj identyfikator Z-wave urządzeń przekaźnikowych).",
+          "ru": "Позволяет управлять командами для связанных устройств, таких как реле, освещение и т. д. Эта группа ассоциаций настраивается через параметры 'Включение освещения'. (добавьте идентификатор Z-wave реле устройств).",
+          "ko": "릴레이 모듈, 조명 등 관련된 장치에 대한 제어 명령을 허용합니다. 이 연관 그룹은 '조명 스위치 ON 기능' 매개 변수를 통해 구성됩니다. (릴레이 장치의 Z-wave ID 추가)."
         }
       },
       "3": {
         "hint": {
           "en": "Allows for Send Notification to associated devices in this group (add Z-wave ID of relay devices).",
           "nl": "Rapportage van een notificatie naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-          "de": "Ermöglicht das Senden von Benachrichtigungen an assozierten Geräte in dieser Gruppe (Z-Wave-ID der Relaisgeräte hinzufügen)."
+          "de": "Ermöglicht das Senden von Benachrichtigungen an assozierten Geräte in dieser Gruppe (Z-Wave-ID der Relaisgeräte hinzufügen).",
+          "da": "Muliggør sende meddelelser til tilknyttede enheder i denne gruppe (tilføj Z-wave-ID for relæenheder).",
+          "es": "Permite enviar notificaciones a dispositivos asociados en este grupo (agregar ID de Z-wave de dispositivos de relé).",
+          "fr": "Permet d'envoyer des notifications aux dispositifs associés dans ce groupe (ajouter l'ID du relais Z-wave).",
+          "it": "Consente di inviare notifiche ai dispositivi associati in questo gruppo (aggiungi ID Z-wave dei dispositivi relè).",
+          "no": "Muliggjør sending av varsler til tilknyttede enheter i denne gruppen (legg til Z-wave-ID for reléenheter).",
+          "sv": "Gör det möjligt att skicka notifieringar till associerade enheter i denna grupp (lägg till Z-wave-ID för reläenheter).",
+          "pl": "Umożliwia wysyłanie powiadomień do powiązanych urządzeń w tej grupie (dodaj identyfikator Z-wave urządzeń przekaźnikowych).",
+          "ru": "Позволяет отправлять уведомления на связанные устройства в этой группе (добавьте идентификатор Z-wave реле устройств).",
+          "ko": "이 그룹 내 관련 장치에 알림을 보낼 수 있습니다 (릴레이 장치의 Z-wave ID 추가)."
         }
       },
       "4": {
         "hint": {
           "en": "allows for Send Sensor Binary Report (motion detection) to associated devices in this group (add Z-wave ID of relay devices).",
           "nl": "Rapportage van Send Sensor Binary Report (bewegingsdetectie) naar de gekoppelde apparaten. (voeg het Z-wave ID van het te koppelen apparaat toe)",
-          "de": "Ermöglicht das Senden der Sensor-Binärdaten (Bewegungserkennung) an assozierten Geräte in dieser Gruppe (Z-Wave-ID der Relaisgeräte hinzufügen)."
+          "de": "Ermöglicht das Senden der Sensor-Binärdaten (Bewegungserkennung) an assozierten Geräte in dieser Gruppe (Z-Wave-ID der Relaisgeräte hinzufügen).",
+          "da": "Muliggør at sende Sensor Binary Report (bevægelsesdetektering) til tilknyttede enheder i denne gruppe (tilføj Z-wave-ID for relæenheder).",
+          "es": "Permite enviar el Informe Binario del Sensor (detección de movimiento) a dispositivos asociados en este grupo (agregar ID de Z-wave de dispositivos de relé).",
+          "fr": "Permet d'envoyer le rapport binaire du capteur (détection de mouvement) aux dispositifs associés dans ce groupe (ajouter l'ID du relais Z-wave).",
+          "it": "Consente di inviare il Rapporto Binario del Sensore (rilevamento del movimento) ai dispositivi associati in questo gruppo (aggiungi ID Z-wave dei dispositivi relè).",
+          "no": "Muliggjør sending av Sensor Binary Report (bevegelsesdeteksjon) til tilknyttede enheter i denne gruppen (legg til Z-wave-ID for reléenheter).",
+          "sv": "Gör det möjligt att skicka Sensor Binary Report (rörelsedetektion) till associerade enheter i denna grupp (lägg till Z-wave-ID för reläenheter).",
+          "pl": "Umożliwia wysyłanie raportu binarnego czujnika (wykrywanie ruchu) do powiązanych urządzeń w tej grupie (dodaj identyfikator Z-wave urządzeń przekaźnikowych).",
+          "ru": "Позволяет отправлять двоичный отчет датчика (обнаружение движения) на связанные устройства в этой группе (добавьте идентификатор Z-wave реле устройств).",
+          "ko": "이 그룹 내 관련 장치에 센서 이진 보고서(모션 감지)를 보낼 수 있습니다 (릴레이 장치의 Z-wave ID 추가)."
         }
       }
     }

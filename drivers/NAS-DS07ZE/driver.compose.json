@@ -1,10 +1,24 @@
 {
   "name": {
     "en": "Door Sensor V2",
-    "nl": "Deur Sensor V2"
+    "nl": "Deur Sensor V2",
+    "da": "Dørsensor V2",
+    "de": "Türsensor V2",
+    "es": "Sensor de Puerta V2",
+    "fr": "Capteur de Porte V2",
+    "it": "Sensore Porta V2",
+    "no": "Dørsensor V2",
+    "sv": "Dörrsensor V2",
+    "pl": "Czujnik Drzwi V2",
+    "ru": "Датчик двери V2",
+    "ko": "도어 센서 V2"
   },
-  "platforms": ["local"],
-  "connectivity": ["zwave"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 16,
@@ -14,7 +28,16 @@
       "instruction": {
         "en": "Press the button inside your NEO Door Sensor and hold it for 5 seconds until you see a white light and let it go.",
         "nl": "Druk op de pair knop en houdt deze 5 seconden vast totdat de led wit oplicht en laat deze dan los.",
-        "de": "Drücken Sie die Taste in Ihrem NEO-Türsensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los."
+        "de": "Drücken Sie die Taste in Ihrem NEO-Türsensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los.",
+        "da": "Tryk på knappen inde i din NEO Dørsensor og hold den i 5 sekunder, indtil du ser et hvidt lys, og slip den.",
+        "es": "Presiona el botón dentro de tu Sensor de Puerta NEO y mantenlo durante 5 segundos hasta que veas una luz blanca y luego suéltalo.",
+        "fr": "Appuyez sur le bouton à l'intérieur de votre Capteur de Porte NEO et maintenez-le pendant 5 secondes jusqu'à ce que vous voyiez une lumière blanche, puis relâchez-le.",
+        "it": "Premi il pulsante all'interno del tuo Sensore della Porta NEO e tienilo premuto per 5 secondi fino a vedere una luce bianca, poi rilascialo.",
+        "no": "Trykk på knappen inne i din NEO Dørsensor og hold den i 5 sekunder til du ser et hvitt lys, og slipp den.",
+        "sv": "Tryck på knappen inuti din NEO Dörrsensor och håll den i 5 sekunder tills du ser ett vitt sken och släpp den.",
+        "pl": "Naciśnij przycisk wewnątrz swojego Czujnika Drzwi NEO i przytrzymaj go przez 5 sekund, aż zobaczysz białe światło, i puść.",
+        "ru": "Нажмите кнопку внутри вашего Датчика двери NEO и удерживайте её в течение 5 секунд, пока не увидите белый свет, затем отпустите.",
+        "ko": "NEO 도어 센서 내부의 버튼을 눌러 흰색 불빛이 보일 때까지 5초간 누른 후 놓습니다."
       }
     },
     "unlearnmode": {
@@ -22,7 +45,16 @@
       "instruction": {
         "en": "Press the button inside your NEO Door Sensor and hold it for 5 seconds until you see a white light and let it go.",
         "nl": "Druk op de pair knop en houdt deze 5 seconden vast totdat de led wit oplicht en laat deze dan los.",
-        "de": "Drücken Sie die Taste in Ihrem NEO-Türsensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los."
+        "de": "Drücken Sie die Taste in Ihrem NEO-Türsensor und halten Sie sie 5 Sekunden lang gedrückt, bis Sie ein weißes Licht sehen, und lassen Sie sie los.",
+        "da": "Tryk på knappen inde i din NEO Dørsensor og hold den i 5 sekunder, indtil du ser et hvidt lys, og slip den.",
+        "es": "Presiona el botón dentro de tu Sensor de Puerta NEO y mantenlo durante 5 segundos hasta que veas una luz blanca y luego suéltalo.",
+        "fr": "Appuyez sur le bouton à l'intérieur de votre Capteur de Porte NEO et maintenez-le pendant 5 secondes jusqu'à ce que vous voyiez une lumière blanche, puis relâchez-le.",
+        "it": "Premi il pulsante all'interno del tuo Sensore della Porta NEO e tienilo premuto per 5 secondi fino a vedere una luce bianca, poi rilascialo.",
+        "no": "Trykk på knappen inne i din NEO Dørsensor og hold den i 5 sekunder til du ser et hvitt lys, og slipp den.",
+        "sv": "Tryck på knappen inuti din NEO Dörrsensor och håll den i 5 sekunder tills du ser ett vitt sken och släpp den.",
+        "pl": "Naciśnij przycisk wewnątrz swojego Czujnika Drzwi NEO i przytrzymaj go przez 5 sekund, aż zobaczysz białe światło, i puść.",
+        "ru": "Нажмите кнопку внутри вашего Датчика двери NEO и удерживайте её в течение 5 секунд, пока не увидите белый свет, затем отпустите.",
+        "ko": "NEO 도어 센서 내부의 버튼을 눌러 흰색 불빛이 보일 때까지 5초간 누른 후 놓습니다."
       }
     },
     "associationGroups": [

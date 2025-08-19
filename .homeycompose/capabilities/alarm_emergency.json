@@ -2,14 +2,44 @@
   "type": "boolean",
   "title": {
     "en": "Emergency",
-    "nl": "Noodgeval"
+    "nl": "Noodgeval",
+    "da": "Nødsituation",
+    "de": "Notfall",
+    "es": "Emergencia",
+    "fr": "Urgence",
+    "it": "Emergenza",
+    "no": "Nødsituasjon",
+    "sv": "Nödsituation",
+    "pl": "Nagły wypadek",
+    "ru": "Чрезвычайная ситуация",
+    "ko": "긴급"
   },
   "units": {
-    "en": "Status"
+    "en": "Status",
+    "da": "Status",
+    "de": "Status",
+    "es": "Estado",
+    "fr": "Statut",
+    "it": "Stato",
+    "no": "Status",
+    "sv": "Status",
+    "pl": "Status",
+    "ru": "Статус",
+    "ko": "상태"
   },
   "desc": {
     "en": "Alarm",
-    "nl": "Alarm"
+    "nl": "Alarm",
+    "da": "Alarm",
+    "de": "Alarm",
+    "es": "Alarma",
+    "fr": "Alarme",
+    "it": "Allarme",
+    "no": "Alarm",
+    "sv": "Larm",
+    "pl": "Alarm",
+    "ru": "Сигнал тревоги",
+    "ko": "경보"
   },
   "getable": true,
   "setable": false

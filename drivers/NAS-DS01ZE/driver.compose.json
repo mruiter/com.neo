@@ -1,17 +1,34 @@
 {
   "name": {
     "en": "Door Sensor",
-    "nl": "Deur Sensor"
+    "nl": "Deur Sensor",
+    "da": "Dørsensor",
+    "de": "Türsensor",
+    "es": "Sensor de puerta",
+    "fr": "Capteur de porte",
+    "it": "Sensore porta",
+    "no": "Dørsensor",
+    "sv": "Dörrsensor",
+    "pl": "Czujnik drzwi",
+    "ru": "Датчик двери",
+    "ko": "도어 센서"
   },
-  "platforms": ["local"],
-  "connectivity": ["zwave"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
   "zwave": {
     "manufacturerId": 600,
-    "productTypeId": [3, 512],
+    "productTypeId": [
+      3,
+      512
+    ],
     "productId": [
       4130,
-	  4226,
-	  24706,
+      4226,
+      24706,
       8322,
       130
     ],
@@ -23,7 +40,16 @@
       "instruction": {
         "en": "Press the button inside your NEO Door Sensor three times",
         "nl": "Druk driemaal op de knop in de Deur Sensor unit",
-        "de": "Drücke die Taste in deinem NEO Türsensor dreimal."
+        "de": "Drücke die Taste in deinem NEO Türsensor dreimal.",
+        "da": "Tryk på knappen inde i din NEO-dørsensor tre gange",
+        "es": "Presiona el botón dentro de tu sensor de puerta NEO tres veces",
+        "fr": "Appuyez trois fois sur le bouton à l'intérieur de votre capteur de porte NEO",
+        "it": "Premi il pulsante all'interno del tuo sensore porta NEO tre volte",
+        "no": "Trykk på knappen inne i din NEO-dørsensor tre ganger",
+        "sv": "Tryck på knappen inuti din NEO-dörrsensor tre gånger",
+        "pl": "Naciśnij przycisk w środku czujnika drzwi NEO trzy razy",
+        "ru": "Нажмите кнопку внутри вашего дверного датчика NEO три раза",
+        "ko": "NEO 도어 센서 내부 버튼을 세 번 누르세요"
       }
     },
     "unlearnmode": {
@@ -31,7 +57,16 @@
       "instruction": {
         "en": "Press the button inside your NEO Door Sensor three times",
         "nl": "Druk driemaal op de knop in de Deur Sensor unit",
-        "de": "Drücke die Taste in deinem NEO Türsensor dreimal."
+        "de": "Drücke die Taste in deinem NEO Türsensor dreimal.",
+        "da": "Tryk på knappen inde i din NEO-dørsensor tre gange",
+        "es": "Presiona el botón dentro de tu sensor de puerta NEO tres veces",
+        "fr": "Appuyez trois fois sur le bouton à l'intérieur de votre capteur de porte NEO",
+        "it": "Premi il pulsante all'interno del tuo sensore porta NEO tre volte",
+        "no": "Trykk på knappen inne i din NEO-dørsensor tre ganger",
+        "sv": "Tryck på knappen inuti din NEO-dörrsensor tre gånger",
+        "pl": "Naciśnij przycisk w środku czujnika drzwi NEO trzy razy",
+        "ru": "Нажмите кнопку внутри вашего дверного датчика NEO три раза",
+        "ko": "NEO 도어 센서 내부 버튼을 세 번 누르세요"
       }
     },
     "associationGroups": [

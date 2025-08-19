@@ -2,10 +2,23 @@
   "name": {
     "en": "Curtain controller",
     "nl": "Scherm controller",
-    "de": "Vorhang controller"
+    "de": "Vorhang controller",
+    "da": "Gardinstyring",
+    "es": "Controlador de cortina",
+    "fr": "Contrôleur de rideaux",
+    "it": "Controllo tende",
+    "no": "Gardinkontroller",
+    "sv": "Gardinkontroll",
+    "pl": "Sterownik zasłon",
+    "ru": "Контроллер для штор",
+    "ko": "커튼 제어기"
   },
-  "platforms": ["local"],
-  "connectivity": ["zwave"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
   "zwave": {
     "manufacturerId": 600,
     "productTypeId": 512,
@@ -15,7 +28,16 @@
       "instruction": {
         "en": "Press the middle button on youre controller three times quickly",
         "nl": "Druk driemaal snel achter elkaar op de middelste knop van de controller",
-        "de": "Drücke den mittlere Knopf am controller dreimal schnell."
+        "de": "Drücke den mittlere Knopf am controller dreimal schnell.",
+        "da": "Tryk hurtigt på midterknappen på din controller tre gange",
+        "es": "Presiona el botón central de tu controlador tres veces rápidamente",
+        "fr": "Appuyez rapidement trois fois sur le bouton du milieu de votre contrôleur",
+        "it": "Premi il pulsante centrale del tuo controller tre volte velocemente",
+        "no": "Trykk på midtknappen på kontrolleren din tre ganger raskt",
+        "sv": "Tryck på den mellersta knappen på din kontroll tre gånger snabbt",
+        "pl": "Wciśnij trzy razy szybko środkowy przycisk na swoim kontrolerze",
+        "ru": "Быстро нажмите центральную кнопку на контроллере три раза",
+        "ko": "컨트롤러의 중앙 버튼을 빠르게 세 번 눌러주세요"
       }
     },
     "unlearnmode": {
@@ -23,7 +45,16 @@
       "instruction": {
         "en": "Press the middle button on youre controller three times quickly",
         "nl": "Druk driemaal snel achter elkaar op de middelste knop van de controller",
-        "de": "Drücke den mittlere Knopf am controller dreimal schnell."
+        "de": "Drücke den mittlere Knopf am controller dreimal schnell.",
+        "da": "Tryk hurtigt på midterknappen på din controller tre gange",
+        "es": "Presiona el botón central de tu controlador tres veces rápidamente",
+        "fr": "Appuyez rapidement trois fois sur le bouton du milieu de votre contrôleur",
+        "it": "Premi il pulsante centrale del tuo controller tre volte velocemente",
+        "no": "Trykk på midtknappen på kontrolleren din tre ganger raskt",
+        "sv": "Tryck på den mellersta knappen på din kontroll tre gånger snabbt",
+        "pl": "Wciśnij trzy razy szybko środkowy przycisk na swoim kontrolerze",
+        "ru": "Быстро нажмите центральную кнопку на контроллере три раза",
+        "ko": "컨트롤러의 중앙 버튼을 빠르게 세 번 눌러주세요"
       }
     },
     "defaultConfiguration": [],

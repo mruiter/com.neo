@@ -5,17 +5,44 @@
       "title": {
         "en": "Set Touch Switch LED",
         "nl": "Stel Touch Switch LED in",
-        "de": "Touch-Steuerung LED einstellen"
+        "de": "Touch-Steuerung LED einstellen",
+        "da": "Indstil Touch Switch LED",
+        "es": "Configurar LED del interruptor táctil",
+        "fr": "Régler la LED de l'interrupteur tactile",
+        "it": "Imposta LED interruttore touch",
+        "no": "Sett berøringsbryter LED",
+        "sv": "Ställ in touch LED",
+        "pl": "Ustaw diodę LED przełącznika dotykowego",
+        "ru": "Установить светодиод сенсорного переключателя",
+        "ko": "터치 스위치 LED 설정"
       },
-        "titleFormatted": {
-          "en": "Set Touch Switch LED to [[switch_LED_onoff]]",
-          "nl": "Stel Touch Switch LED in op [[switch_LED_onoff]]",
-          "de": "Touch-Steuerung LED auf [[switch_LED_onoff]] einstellen"
-        },
+      "titleFormatted": {
+        "en": "Set Touch Switch LED to [[switch_LED_onoff]]",
+        "nl": "Stel Touch Switch LED in op [[switch_LED_onoff]]",
+        "de": "Touch-Steuerung LED auf [[switch_LED_onoff]] einstellen",
+        "da": "Indstil Touch Switch LED til [[switch_LED_onoff]]",
+        "es": "Configurar LED del interruptor táctil en [[switch_LED_onoff]]",
+        "fr": "Régler la LED de l'interrupteur tactile sur [[switch_LED_onoff]]",
+        "it": "Imposta LED interruttore touch su [[switch_LED_onoff]]",
+        "no": "Sett berøringsbryter LED til [[switch_LED_onoff]]",
+        "sv": "Ställ in touch LED till [[switch_LED_onoff]]",
+        "pl": "Ustaw diodę LED przełącznika dotykowego na [[switch_LED_onoff]]",
+        "ru": "Установить светодиод сенсорного переключателя на [[switch_LED_onoff]]",
+        "ko": "터치 스위치 LED를 [[switch_LED_onoff]]로 설정"
+      },
       "hint": {
         "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
         "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld",
-        "de": "Aktivieren oder deaktivieren der Touch-Steuerung LED, die beim Einschalten aufleuchtet."
+        "de": "Aktivieren oder deaktivieren der Touch-Steuerung LED, die beim Einschalten aufleuchtet.",
+        "da": "Aktiver eller deaktiver Touch Switch LED, lyser op når aktiveret",
+        "es": "Habilitar o deshabilitar el LED del interruptor táctil, iluminándose cuando está habilitado",
+        "fr": "Activer ou désactiver la LED de l'interrupteur tactile, s'allumant lorsqu'elle est activée",
+        "it": "Abilita o disabilita il LED dell'interruttore touch, illuminandosi quando abilitato",
+        "no": "Aktiver eller deaktiver berøringsbryter LED, lyser når aktivert",
+        "sv": "Aktivera eller inaktivera touch LED, lyser när den aktiveras",
+        "pl": "Włącz lub wyłącz diodę LED przełącznika dotykowego, zapala się po włączeniu",
+        "ru": "Включите или отключите светодиод сенсорного переключателя, который загорается при включении",
+        "ko": "터치 스위치 LED를 활성화하거나 비활성화합니다. 활성화 시 점등됩니다"
       },
       "args": [
         {
@@ -27,7 +54,16 @@
               "label": {
                 "en": "LED disabled",
                 "nl": "LED uitgeschakeld",
-                "de": "LED deaktivieren"
+                "de": "LED deaktivieren",
+                "da": "LED deaktiveret",
+                "es": "LED deshabilitada",
+                "fr": "LED désactivée",
+                "it": "LED disabilitato",
+                "no": "LED deaktivert",
+                "sv": "LED inaktiverad",
+                "pl": "LED wyłączony",
+                "ru": "Светодиод отключен",
+                "ko": "LED 비활성화"
               }
             },
             {
@@ -35,7 +71,16 @@
               "label": {
                 "en": "LED enabled",
                 "nl": "LED ingeschakeld",
-                "de": "LED aktivieren"
+                "de": "LED aktivieren",
+                "da": "LED aktiveret",
+                "es": "LED habilitada",
+                "fr": "LED activée",
+                "it": "LED abilitato",
+                "no": "LED aktivert",
+                "sv": "LED aktiverad",
+                "pl": "LED włączony",
+                "ru": "Светодиод включен",
+                "ko": "LED 활성화"
               }
             }
           ]

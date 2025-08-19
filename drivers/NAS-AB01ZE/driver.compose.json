@@ -2,7 +2,16 @@
   "name": {
     "en": "Siren/Doorbell",
     "nl": "Sirene/Deurbel",
-    "de": "Sirene/Türklingel"
+    "de": "Sirene/Türklingel",
+    "da": "Sirene/dørklokke",
+    "es": "Sirena/Timbre",
+    "fr": "Sirène/Sonnette",
+    "it": "Sirena/Campanello",
+    "no": "Siren/dørklokke",
+    "sv": "Sirén/Dörrklocka",
+    "pl": "Syrena/Dzwonek",
+    "ru": "Сирена/Дверной звонок",
+    "ko": "사이렌/문벨"
   },
   "mobile": {
     "components": [
@@ -44,8 +53,12 @@
       }
     ]
   },
-  "platforms": ["local"],
-  "connectivity": ["zwave"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
   "zwave": {
     "manufacturerId": [
       600,
@@ -65,7 +78,16 @@
       "instruction": {
         "en": "Press the button on inside youre NEO Siren three times",
         "nl": "Druk driemaal op de knop op in de NEO Sirene",
-        "de": "Drücke die Taste im Inneren deiner NEO Sirene dreimal."
+        "de": "Drücke die Taste im Inneren deiner NEO Sirene dreimal.",
+        "da": "Tryk på knappen inde i din NEO Siren tre gange",
+        "es": "Presiona el botón dentro de tu Sirena NEO tres veces",
+        "fr": "Appuyez trois fois sur le bouton à l'intérieur de votre sirène NEO",
+        "it": "Premi il pulsante all'interno della tua sirena NEO tre fois",
+        "no": "Trykk på knappen inni din NEO Siren tre ganger",
+        "sv": "Tryck på knappen inuti din NEO-sirén tre gånger",
+        "pl": "Naciśnij przycisk wewnątrz twojej syreny NEO trzy razy",
+        "ru": "Нажмите кнопку внутри вашей сирены NEO три раза",
+        "ko": "당신의 NEO 사이렌 안쪽 버튼을 세 번 누르세요"
       }
     },
     "unlearnmode": {
@@ -73,7 +95,16 @@
       "instruction": {
         "en": "Press the button on inside youre NEO Siren three times",
         "nl": "Druk driemaal op de knop op in de NEO Sirene",
-        "de": "Drücke die Taste im Inneren deiner NEO Sirene dreimal."
+        "de": "Drücke die Taste im Inneren deiner NEO Sirene dreimal.",
+        "da": "Tryk på knappen inde i din NEO Siren tre gange",
+        "es": "Presiona el botón dentro de tu Sirena NEO tres veces",
+        "fr": "Appuyez trois fois sur le bouton à l'intérieur de votre sirène NEO",
+        "it": "Premi il pulsante all'interno della tua sirena NEO tre fois",
+        "no": "Trykk på knappen inni din NEO Siren tre ganger",
+        "sv": "Tryck på knappen inuti din NEO-sirén tre gånger",
+        "pl": "Naciśnij przycisk wewnątrz twojej syreny NEO три razy",
+        "ru": "Нажмите кнопку внутри вашей сирены NEO три раза",
+        "ko": "당신의 NEO 사이렌 안쪽 버튼을 세 번 누르세요"
       }
     },
     "associationGroups": [

@@ -1,269 +1,485 @@
 [
-    {
-      "id": "motion_sensor_sensitivity",
-      "zwave": {
-        "index": 1,
-        "size": 1,
-        "signed": false
-      },
-      "type": "dropdown",
-      "_size": 1,
-      "label": {
-        "en": "Motion detection sensitivity",
-        "nl": "Bewegingsdetectie gevoeligheid",
-        "de": "Empfindlichkeit des Bewegungsmelders"
-      },
-      "value": "12",
-      "hint": {
-        "en": "Adapt the sensitivity of the motion detection. (#1, default: Normal sensitivity)",
-        "nl": "Hiermee kunt u de gevoeligheid van de bewegingsdetectie aanpassen. (#1, standaard: Normale gevoeligheid)",
-        "de": "Passt die Empfindlichkeit des Bewegungsmelders an. (#1, Standard: Normale Empfindlichkeit)"
-      },
-      "values": [
-        {
-          "id": "8",
-          "label": {
-            "en": "High Sensitivity",
-            "nl": "Hoge Gevoeligheid",
-            "de": "Hohe Empfindlichkeit"
-          }
-        },
-        {
-          "id": "12",
-          "label": {
-            "en": "Normal Sensitivity (default)",
-            "nl": "Normale Gevoeligheid (standaard)",
-            "de": "Normale Empfindlichkeit (Standard)"
-          }
-        },
-        {
-          "id": "128",
-          "label": {
-            "en": "Lower Sensitivity",
-            "nl": "Lagere Gevoeligheid",
-            "de": "Niedere Empfindlichkeit"
-          }
-        },
-        {
-          "id": "255",
-          "label": {
-            "en": "Lowest Sensitivity",
-            "nl": "Laagste Gevoeligheid",
-            "de": "Niedrigste Empfindlichkeit"
-          }
+  {
+    "id": "motion_sensor_sensitivity",
+    "zwave": {
+      "index": 1,
+      "size": 1,
+      "signed": false
+    },
+    "type": "dropdown",
+    "_size": 1,
+    "label": {
+      "en": "Motion detection sensitivity",
+      "nl": "Bewegingsdetectie gevoeligheid",
+      "de": "Empfindlichkeit des Bewegungsmelders",
+      "da": "Bevægelsesdetekteringsfølsomhed",
+      "es": "Sensibilidad de detección de movimiento",
+      "fr": "Sensibilité de détection de mouvement",
+      "it": "Sensibilità del rilevamento del movimento",
+      "no": "Bevegelsesdeteksjonssensitivitet",
+      "sv": "Rörelsedetekteringskänslighet",
+      "pl": "Czułość wykrywania ruchu",
+      "ru": "Чувствительность детекции движения",
+      "ko": "움직임 감지 민감도"
+    },
+    "value": "12",
+    "hint": {
+      "en": "Adapt the sensitivity of the motion detection. (#1, default: Normal sensitivity)",
+      "nl": "Hiermee kunt u de gevoeligheid van de bewegingsdetectie aanpassen. (#1, standaard: Normale gevoeligheid)",
+      "de": "Passt die Empfindlichkeit des Bewegungsmelders an. (#1, Standard: Normale Empfindlichkeit)",
+      "da": "Tilpas følsomheden for bevægelsesdetektering. (#1, standard: Normal følsomhed)",
+      "es": "Adapte la sensibilidad de la detección de movimiento. (#1, predeterminado: Sensibilidad normal)",
+      "fr": "Adaptez la sensibilité de la détection de mouvement. (#1, par défaut : Sensibilité normale)",
+      "it": "Adatta la sensibilità del rilevamento del movimento. (#1, impostazione predefinita: Sensibilità normale)",
+      "no": "Juster følsomheten til bevegelsesdeteksjonen. (#1, standard: Normal følsomhet)",
+      "sv": "Anpassa känsligheten för rörelsedetektering. (#1, standard: Normal känslighet)",
+      "pl": "Dostosuj czułość wykrywania ruchu. (#1, domyślnie: Normalna czułość)",
+      "ru": "Настройте чувствительность детекции движения. (#1, по умолчанию: Нормальная чувствительность)",
+      "ko": "움직임 감지의 민감도를 조정합니다. (#1, 기본값: 일반 민감도)"
+    },
+    "values": [
+      {
+        "id": "8",
+        "label": {
+          "en": "High Sensitivity",
+          "nl": "Hoge Gevoeligheid",
+          "de": "Hohe Empfindlichkeit",
+          "da": "Høj følsomhed",
+          "es": "Alta Sensibilidad",
+          "fr": "Haute Sensibilité",
+          "it": "Alta Sensibilità",
+          "no": "Høy Sensitivitet",
+          "sv": "Hög Känslighet",
+          "pl": "Wysoka Czułość",
+          "ru": "Высокая Чувствительность",
+          "ko": "높은 민감도"
         }
-      ]
-    },
-    {
-      "id": "motion_off_delay",
-      "zwave": {
-        "index": 2,
-        "size": 2,
-        "signed": false
       },
-      "type": "number",
-      "_size": 2,
-      "attr": {
-        "min": 5,
-        "max": 600
+      {
+        "id": "12",
+        "label": {
+          "en": "Normal Sensitivity (default)",
+          "nl": "Normale Gevoeligheid (standaard)",
+          "de": "Normale Empfindlichkeit (Standard)",
+          "da": "Normal Følsomhed (standard)",
+          "es": "Sensibilidad Normal (predeterminado)",
+          "fr": "Sensibilité Normale (par défaut)",
+          "it": "Sensibilità Normale (predefinito)",
+          "no": "Normal Sensitivitet (standard)",
+          "sv": "Normal Känslighet (standard)",
+          "pl": "Normalna Czułość (domyślnie)",
+          "ru": "Нормальная Чувствительность (по умолчанию)",
+          "ko": "일반 민감도 (기본값)"
+        }
       },
-      "label": {
-        "en": "Motion detection ON time (s)",
-        "nl": "Bewegingsdetectie AAN tijd (s)",
-        "de": "Bewegungsmelder EIN-Zeit (s)"
+      {
+        "id": "128",
+        "label": {
+          "en": "Lower Sensitivity",
+          "nl": "Lagere Gevoeligheid",
+          "de": "Niedere Empfindlichkeit",
+          "da": "Lavere Følsomhed",
+          "es": "Menor Sensibilidad",
+          "fr": "Sensibilité Inférieure",
+          "it": "Sensibilità Inferiore",
+          "no": "Lavere Sensitivitet",
+          "sv": "Lägre Känslighet",
+          "pl": "Niższa Czułość",
+          "ru": "Низкая Чувствительность",
+          "ko": "낮은 민감도"
+        }
       },
-      "value": 60,
-      "hint": {
-        "en": "Time duration that the associated device (group 2) stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (#2 default: 60 [s], range: 5 - 600 [s])",
-        "nl": "Instelbare tijd dat het gekoppelde apparaat (groep 2) aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. \nParameter: 2 standaard: 60 [s], bereik: 5 - 600 [s])",
-        "de": "Zeitdauer, die das assozierte Gerät (Gruppe 2) nach der Bewegungserkennung eingeschaltet bleibt. Dieser Parameterwert muss größer sein als das die Bewegungsmelder Blindzeit. (#2 Standard: 60 [s], Bereich: 5 - 600[s])"
+      {
+        "id": "255",
+        "label": {
+          "en": "Lowest Sensitivity",
+          "nl": "Laagste Gevoeligheid",
+          "de": "Niedrigste Empfindlichkeit",
+          "da": "Laveste Følsomhed",
+          "es": "Mínima Sensibilidad",
+          "fr": "Sensibilité La Plus Basse",
+          "it": "Sensibilità Più Bassa",
+          "no": "Laveste Sensitivitet",
+          "sv": "Lägsta Känslighet",
+          "pl": "Najniższa Czułość",
+          "ru": "Самая Низкая Чувствительность",
+          "ko": "가장 낮은 민감도"
+        }
       }
+    ]
+  },
+  {
+    "id": "motion_off_delay",
+    "zwave": {
+      "index": 2,
+      "size": 2,
+      "signed": false
     },
-    {
-      "id": "basic_set_level",
-      "zwave": {
-        "index": 3,
-        "size": 1,
-        "signed": false
-      },
-      "type": "number",
-      "_size": 1,
-      "attr": {
-        "min": 0,
-        "max": 255
-      },
-      "label": {
-        "en": "Switch ON command (see hint)",
-        "nl": "Inschakel commando (zie hint)",
-        "de": "Einschaltbefehl (siehe Hinweis)"
-      },
-      "value": 255,
-      "hint": {
-        "en": "Command sent to associated device (group 2). (#3 default: 255 = ON, Range: 0 – OFF, Alarm cancelling or turning a device off; 255 – ON (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))",
-        "nl": "Commando dat gestuurd wordt naar het gekoppelde apparaat (group 2). (#3 standaard: 255 = AAN, bereik: 0 – UIT, annulering alarm of het uitschakelen van het gekoppeld apparaat; 255 – AAN (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))",
-        "de": "Befehl, der an das assozierte Gerät gesendet wird (Gruppe 2). (#3 Standard: 255 = EIN, Bereich: 0 - AUS, Alarm deaktiveren oder ausschalten eines Gerätes; 255 - EIN (Binary Switch Device); 1 ~ 99 Dimmwert (Multilevel Switch Device))"
-      }
+    "type": "number",
+    "_size": 2,
+    "attr": {
+      "min": 5,
+      "max": 600
     },
-    {
-      "id": "enable_PIR_function",
-      "zwave": {
-        "index": 4,
-        "size": 1,
-        "signed": false
-      },
-      "type": "checkbox",
-      "_size": 1,
-      "label": {
-        "en": "Motion detection function",
-        "nl": "Bewegingsdetectie functie",
-        "de": "Bewegungsmelder-Funktion"
-      },
-      "value": true,
-      "hint": {
-        "en": "Enable the motion detection (PIR) function. This parameter does not effect the luminance reporting. (#4, default: enabled = checked)",
-        "nl": "Inschakelen van de bewegingsdetectie (PIR) functie. Deze parameter heeft geen invloed op de lichtsterke rapportage. (#4, standaard: ingeschakeld = checked)",
-        "de": "Aktiviert die Funktion Bewegungsmelder (PIR). Dieser Parameter hat keinen Einfluss auf die Heilligkeitsmeldung. (#4, Standard: aktiviert = ausgewählt)"
-      }
+    "label": {
+      "en": "Motion detection ON time (s)",
+      "nl": "Bewegingsdetectie AAN tijd (s)",
+      "de": "Bewegungsmelder EIN-Zeit (s)",
+      "da": "Bevægelsesdetektion TID (s)",
+      "es": "Tiempo de detección de movimiento ACTIVO (s)",
+      "fr": "Temps de détection de mouvement ACTIVÉ (s)",
+      "it": "Tempo di rilevamento del movimento ATTIVO (s)",
+      "no": "Bevegelsesdeteksjon PÅ tids (s)",
+      "sv": "Rörelsedetektion PÅ tid (s)",
+      "pl": "Czas wykrywania ruchu WŁĄCZ (s)",
+      "ru": "Время ВКЛ. детекции движения (с)",
+      "ko": "움직임 감지 ON 시간 (초)"
     },
-    {
-      "id": "day_night_treshold",
-      "zwave": {
-        "index": 5,
-        "size": 2,
-        "signed": false
-      },
-      "type": "number",
-      "_size": 2,
-      "value": 100,
-      "attr": {
-        "min": 0,
-        "max": 1000
-      },
-      "label": {
-        "en": "Illumination switch ON level (lux)",
-        "nl": "Lichtsterkte inschakel niveau (lux)",
-        "de": "Helligkeitseinschaltpegel (Lux)"
-      },
-      "hint": {
-        "en": "Define the illumination level value which determines when the 'Illumination switch ON function' is activated. If the illumination level falls below this value and a person moves across or within the detected area, the motion sensor will switch on the associated device (group 2). (#5 default: 100 [lux], range: 0 - 1000 [lux])",
-        "nl": "Definieer het lichtsterkte niveau waarbij de 'lichtsterkte inschakel functie' actief wordt. Wanneer de lichtsterkte onder deze waarde komt en bewegings wordt waargenomen, schakelt de sensor het gekoppelde apparaat (groep 2) in. (#5 standaard: 100 [lux], bereik: 0 - 1000 [lux])",
-        "de": "Definiert den Helligkeitswert, der bestimmt, wann die Funktion'Helligkeit Einschalt Funktion' aktiviert wird. Wenn die Helligkeit unter diesen Wert fällt und sich eine Person durch oder innerhalb des erfassten Bereichs bewegt, schaltet der Bewegungsmelder das zugehörige assozierte Gerät (Gruppe 2) ein. (#5 Standard: 100[lux], Bereich: 0 - 1000[lux])"
-      }
-    },
-    {
-      "id": "re-trigger_interval",
-      "zwave": {
-        "index": 6,
-        "size": 1,
-        "signed": false
-      },
-      "type": "number",
-      "_size": 1,
-      "attr": {
-        "min": 0,
-        "max": 8
-      },
-      "label": {
-        "en": "Motion detection blind time (s)",
-        "nl": "Bewegingsdetectie blinde tijd (s)",
-        "de": "Bewegungsmelder Blindzeit (s)"
-      },
-      "value": 8,
-      "hint": {
-        "en": "Period after motion detection in which the sensor is insensitive for new motion detection. This value must be less than the 'Motion detection ON time'. (#6 default: 8 [s], range: 0 - 8 [s])",
-        "nl": "Periode na detecteren van beweging waarin de sensor ongevoelig is voor nieuwe bewegingsdetectie. De waarde moet lager zijn dan de 'Bewegingsdetectie AAN tijd'. (#6 standaard: 8 [s], bereik: 0 - 8 [s])",
-        "de": "Zeitraum nach der Bewegungserkennung, in dem der Sensor für eine neue Bewegungserkennung unempfindlich ist. Dieser Wert muss kleiner sein als die Einschaltzeit der 'Bewegungserkennung'. (#6 Standard: 8 [s], Bereich: 0 - 8[s])"
-      }
-    },
-    {
-      "id": "illumination_polling_interval",
-      "zwave": {
-        "index": 7,
-        "size": 2,
-        "signed": false
-      },
-      "type": "number",
-      "_size": 2,
-      "label": {
-        "en": "Illumination reporting interval (s)",
-        "nl": "Lichtsterkte rapportage interval (s)",
-        "de": "Meldeintervall der Helligkeit (s)"
-      },
-      "value": 180,
-      "attr": {
-        "min": 60,
-        "max": 36000
-      },
-      "hint": {
-        "en": "Determine the time between illumination reports to Homey, even when value has not changed. (#7 default: 180 [s], range: 60 - 36000 [s])",
-        "nl": "Bepaal het interval tussen lichtsterkte rapportages naar Homey, ook als de waarde niet veranderd is. (#7 standaard: 180 [s], bereik: 60 - 36000 [s])",
-        "de": "Bestimmt die Zeit zwischen den Helligkeitsberichten an Homey, auch wenn sich der Wert nicht geändert hat. (#7 Standard: 180 [s], Bereich: 60 - 36000[s])"
-      }
-    },
-    {
-      "id": "enable_illumination_trigger",
-      "zwave": {
-        "index": 8,
-        "size": 1,
-        "signed": false
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Illumination switch ON function",
-        "nl": "Lichtsterkte inschakel functie",
-        "de": "Helligkeit Einschalt Funktion"
-      },
-      "value": false,
-      "hint": {
-        "en": "Enable the function to switch on a associated device (group 2) once motion has been detected and the illumination level will be less than the value specified in 'Illumination switch ON level'. (#8 default: disabled = unchecked)",
-        "nl": "Inschakelen van de lichtsterkte inschakel functie van een gekoppeld apparaat (groep 2) wanneer de lichtsterkte lager is dan de waarde gedefinieerd in 'Lichtsterkte inschakel niveau'. (#8 standaard: uitgeschakeld = unchecked)",
-        "de": "Aktiviere die Funktion, um ein assoziertes Gerät (Gruppe 2) einzuschalten, sobald eine Bewegung erkannt wurde und die Heilligkeit unter dem unter 'Helligkeitseinschaltpegel' angegebenen Wert liegt. (#8 Standard: deaktiviert = nicht ausgewählt)"
-      }
-    },
-    {
-      "id": "illumination_report_threshold",
-      "zwave": {
-        "index": 9,
-        "size": 1,
-        "signed": false
-      },
-      "type": "number",
-      "_size": 1,
-      "label": {
-        "en": "Illumination report threshold (lux)",
-        "nl": "Lichtsterkte rapportage drempel (lux)",
-        "de": "Schwellenwert des Helligkeitsberichts (Lux)"
-      },
-      "value": 100,
-      "attr": {
-        "min": 0,
-        "max": 255
-      },
-      "hint": {
-        "en": "Sets how many lux needs to change before the value is being send to Homey. (#9 default: 20 [lux], range: 0 - 255 [lux])",
-        "nl": "Definieer hoeveel lux er moet veranderen voordat de waarde naar Homey word verstuurd. (#9 standaard: 20 [lux], bereik: 0 - 1000 [lux])",
-        "de": "Legt fest, wie viele Lux sich ändern müssen, bevor der Wert an Homey gesendet wird. (#9 Standard: 20[lux], Bereich: 0 - 255[lux])"
-      }
-    },
-    {
-      "id": "motion_blink",
-      "zwave": {
-        "index": 11,
-        "size": 1,
-        "signed": false
-      },
-      "type": "checkbox",
-      "_size": 1,
-      "label": {
-        "en": "Motion detection LED indication",
-        "nl": "Bewegingsdetectie LED indicatie",
-        "de": "Bewegungsmelder LED"
-      },
-      "value": false,
-      "hint": {
-        "en": "Enable LED/PIR to blink red when motion detected. (#10, default: disabled = unchecked)",
-        "nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (#10, standaard: uitgeschakeld = unchecked)",
-        "de": "Aktiviert die LED/PIR, um rot zu blinken, wenn eine Bewegung erkannt wird. (#10, default: deaktiviert = nicht ausgewählt)"
-      }
+    "value": 60,
+    "hint": {
+      "en": "Time duration that the associated device (group 2) stays ON after motion detection. This Parameter value must be larger than the 're-trigger interval'. (#2 default: 60 [s], range: 5 - 600 [s])",
+      "nl": "Instelbare tijd dat het gekoppelde apparaat (groep 2) aanblijft na bewegingsdetectie. De waarde van deze parameter moet groter zijn dan het 'herhalings interval'. \nParameter: 2 standaard: 60 [s], bereik: 5 - 600 [s])",
+      "de": "Zeitdauer, die das assozierte Gerät (Gruppe 2) nach der Bewegungserkennung eingeschaltet bleibt. Dieser Parameterwert muss größer sein als das die Bewegungsmelder Blindzeit. (#2 Standard: 60 [s], Bereich: 5 - 600[s])",
+      "da": "Tidsvarighed som den tilknyttede enhed (gruppe 2) forbliver TÆNDT efter bevægelsesdetektering. Denne parameter værdi skal være større end 're-trigger interval'. (#2 standard: 60 [s], rækkevidde: 5 - 600 [s])",
+      "es": "Duración del tiempo que el dispositivo asociado (grupo 2) permanece ENCENDIDO después de la detección de movimiento. Este valor de parámetro debe ser mayor que el 'intervalo de reasignación'. (#2 predeterminado: 60 [s], rango: 5 - 600 [s])",
+      "fr": "Durée pendant laquelle l'appareil associé (groupe 2) reste activé après la détection de mouvement. La valeur de ce paramètre doit être supérieure à l'« intervalle de remise à zéro ». (#2 par défaut : 60 [s], plage : 5 - 600 [s])",
+      "it": "Durata del tempo in cui il dispositivo associato (gruppo 2) rimane ACCESO dopo il rilevamento del movimento. Questo valore di parametro deve essere maggiore dell'intervallo di 'riattivazione'. (#2 predefinito: 60 [s], intervallo: 5 - 600 [s])",
+      "no": "Tidsvarighet som den tilknyttede enheten (gruppe 2) forblir PÅ etter bevegelsesdeteksjon. Denne parameterværdi må være større enn 'retrigger intervallet'. (#2 standard: 60 [s], rekkevidde: 5 - 600 [s])",
+      "sv": "Tidsperiod som den associerade enheten (grupp 2) förblir PÅ efter rörelsedetektering. Det här parametervärdet måste vara större än 'återtriggerintervallet'. (#2 standard: 60 [s], omfång: 5 - 600 [s])",
+      "pl": "Czas trwania, przez jaki powiązane urządzenie (grupa 2) pozostaje WŁĄCZONE po wykryciu ruchu. Wartość tego parametru musi być większa niż 'okres ponownego wyzwalania'. (#2 domyślnie: 60 [s], zakres: 5 - 600 [s])",
+      "ru": "Длительность времени, в течение которого связанное устройство (группа 2) остается ВКЛЮЧЕННЫМ после детекции движения. Значение этого параметра должно быть больше, чем 'интервал повторного срабатывания'. (#2 по умолчанию: 60 [с], диапазон: 5 - 600 [с])",
+      "ko": "연관된 장치(그룹 2)가 움직임 감지 후 켜져 있는 시간입니다. 이 매개변수 값은 '재트리거 간격'보다 커야 합니다. (#2 기본값: 60 [초], 범위: 5 - 600 [초])"
     }
-  ]
+  },
+  {
+    "id": "basic_set_level",
+    "zwave": {
+      "index": 3,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 1,
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "label": {
+      "en": "Switch ON command (see hint)",
+      "nl": "Inschakel commando (zie hint)",
+      "de": "Einschaltbefehl (siehe Hinweis)",
+      "da": "Tænd kommand (se hint)",
+      "es": "Comando de encendido (ver pista)",
+      "fr": "Commande d'allumage (voir l'indice)",
+      "it": "Comando ACCENDI (vedi suggerimento)",
+      "no": "Slå PÅ kommando (se hint)",
+      "sv": "Slå PÅ kommando (se tips)",
+      "pl": "Komenda WŁĄCZ (zobacz wskazówkę)",
+      "ru": "Команда ВКЛ (см. подсказку)",
+      "ko": "켜기 명령 (힌트 참조)"
+    },
+    "value": 255,
+    "hint": {
+      "en": "Command sent to associated device (group 2). (#3 default: 255 = ON, Range: 0 – OFF, Alarm cancelling or turning a device off; 255 – ON (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))",
+      "nl": "Commando dat gestuurd wordt naar het gekoppelde apparaat (group 2). (#3 standaard: 255 = AAN, bereik: 0 – UIT, annulering alarm of het uitschakelen van het gekoppeld apparaat; 255 – AAN (Binary Switch Device); 1 ~ 99 Dim Level (Multilevel Switch Device))",
+      "de": "Befehl, der an das assozierte Gerät gesendet wird (Gruppe 2). (#3 Standard: 255 = EIN, Bereich: 0 - AUS, Alarm deaktiveren oder ausschalten eines Gerätes; 255 - EIN (Binary Switch Device); 1 ~ 99 Dimmwert (Multilevel Switch Device))",
+      "da": "Kommando sendt til tilknyttet enhed (gruppe 2). (#3 standard: 255 = ON, Omfang: 0 – OFF, Afbestilling af alarm eller slukning af en enhed; 255 – ON (Binary Switch Device); 1 ~ 99 Dæmp niveau (Multilevel Switch Device))",
+      "es": "Comando enviado al dispositivo asociado (grupo 2). (#3 predeterminado: 255 = ON, Rango: 0 – OFF, Cancelación de alarma o apagado de un dispositivo; 255 – ON (Dispositivo conmutador binario); 1 ~ 99 Nivel de regulación (Dispositivo conmutador de múltiples niveles))",
+      "fr": "Commande envoyée à l'appareil associé (groupe 2). (#3 par défaut : 255 = ON, Plage : 0 – OFF, Annulation de l'alarme ou arrêt d'un appareil ; 255 – ON (Appareil à commutateur binaire); 1 ~ 99 Niveau de gradation (Appareil à commutateur multiniveau))",
+      "it": "Comando inviato al dispositivo associato (gruppo 2). (#3 predefinito: 255 = ON, Intervallo: 0 – OFF, Annullamento allarme o spegnimento di un dispositivo; 255 – ON (Dispositivo interruttore binario); 1 ~ 99 Livello di dim (Dispositivo interruttore multilevello))",
+      "no": "Kommando sendt til tilknyttet enhet (gruppe 2). (#3 standard: 255 = ON, Omfang: 0 – OFF, Avbestilling av alarm eller slå av en enhet; 255 – ON (Binær Bryter Enhet); 1 ~ 99 Dim Nivå (Multilevel Bryter Enhet))",
+      "sv": "Kommando skickat till associerad enhet (grupp 2). (#3 standard: 255 = ON, Omfång: 0 – OFF, Avbryt larmsignal eller stänga av en enhet; 255 – ON (Binär Brytare Enhet); 1 ~ 99 Dämpningsnivå (Multilevel Brytare Enhet))",
+      "pl": "Komenda wysyłana do powiązanego urządzenia (grupa 2). (#3 domyślnie: 255 = ON, Zakres: 0 – OFF, Anulowanie alarmu lub wyłączenie urządzenia; 255 – ON (Urządzenie Przełącznik Binarny); 1 ~ 99 Poziom Dimmingu (Urządzenie Przełącznik Wielopoziomowy))",
+      "ru": "Команда отправляется на связанное устройство (группа 2). (#3 по умолчанию: 255 = ВКЛ, Диапазон: 0 – ВЫКЛ, Отмена тревоги или выключение устройства; 255 – ВКЛ (Устройство Двоичного Переключателя); 1 ~ 99 Уровень Диммирования (Устройство Многоуровневого Переключателя))",
+      "ko": "연관된 장치(그룹 2)로 전송되는 명령입니다. (#3 기본값: 255 = 켜짐, 범위: 0 – 꺼짐, 경보 취소 또는 장치 끄기; 255 – 켜짐 (이진 스위치 장치); 1 ~ 99 디밍 수준 (다단계 스위치 장치))"
+    }
+  },
+  {
+    "id": "enable_PIR_function",
+    "zwave": {
+      "index": 4,
+      "size": 1,
+      "signed": false
+    },
+    "type": "checkbox",
+    "_size": 1,
+    "label": {
+      "en": "Motion detection function",
+      "nl": "Bewegingsdetectie functie",
+      "de": "Bewegungsmelder-Funktion",
+      "da": "Bevægelsesdetektionsfunktion",
+      "es": "Función de detección de movimiento",
+      "fr": "Fonction de détection de mouvement",
+      "it": "Funzione di rilevamento del movimento",
+      "no": "Bevegelsesdeteksjonsfunksjon",
+      "sv": "Rörelsedetekteringsfunktion",
+      "pl": "Funkcja wykrywania ruchu",
+      "ru": "Функция обнаружения движений",
+      "ko": "움직임 감지 기능"
+    },
+    "value": true,
+    "hint": {
+      "en": "Enable the motion detection (PIR) function. This parameter does not effect the luminance reporting. (#4, default: enabled = checked)",
+      "nl": "Inschakelen van de bewegingsdetectie (PIR) functie. Deze parameter heeft geen invloed op de lichtsterke rapportage. (#4, standaard: ingeschakeld = checked)",
+      "de": "Aktiviert die Funktion Bewegungsmelder (PIR). Dieser Parameter hat keinen Einfluss auf die Heilligkeitsmeldung. (#4, Standard: aktiviert = ausgewählt)",
+      "da": "Aktiver bevægelsesdetektering (PIR) funktion. Denne parameter påvirker ikke lysstyrke rapporteringen. (#4, standard: aktiveret = markeret)",
+      "es": "Habilitar la función de detección de movimiento (PIR). Este parámetro no afecta el reporte de luminancia. (#4, predeterminado: habilitado = marcado)",
+      "fr": "Activer la fonction de détection de mouvement (PIR). Ce paramètre n'a pas d'effet sur le rapport de luminance. (#4, par défaut : activé = coché)",
+      "it": "Abilita la funzione di rilevamento del movimento (PIR). Questo parametro non influisce sulla segnalazione della luminanza. (#4, predefinito: abilitato = selezionato)",
+      "no": "Aktiver bevegelsesdeteksjon (PIR) funksjon. Denne parameteren påvirker ikke lysstyrkerapporteringen. (#4, standard: aktivert = valgt)",
+      "sv": "Aktivera rörelsedetektering (PIR) funktion. Denna parameter påverkar inte ljusstyrkerapporteringen. (#4, standard: aktiverad = markerad)",
+      "pl": "Włącz funkcję wykrywania ruchu (PIR). Ten parametr nie wpływa na raportowanie jasności. (#4, domyślnie: włączony = zaznaczone)",
+      "ru": "Включите функцию обнаружения движений (PIR). Этот параметр не влияет на отчетность о яркости. (#4, по умолчанию: включено = отмечено)",
+      "ko": "움직임 감지(PIR) 기능을 활성화합니다. 이 매개변수는 밝기 보고에 영향을 미치지 않습니다. (#4, 기본값: 활성화됨 = 선택됨)"
+    }
+  },
+  {
+    "id": "day_night_treshold",
+    "zwave": {
+      "index": 5,
+      "size": 2,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 2,
+    "value": 100,
+    "attr": {
+      "min": 0,
+      "max": 1000
+    },
+    "label": {
+      "en": "Illumination switch ON level (lux)",
+      "nl": "Lichtsterkte inschakel niveau (lux)",
+      "de": "Helligkeitseinschaltpegel (Lux)",
+      "da": "Lysniveau TÆND niveau (lux)",
+      "es": "Nivel de encendido de la luz de iluminación (lux)",
+      "fr": "Niveau d'allumage de l'éclairage (lux)",
+      "it": "Livello di accensione della luce (lux)",
+      "no": "Belysning AV på nivå (lux)",
+      "sv": "Belysningsnivå PÅ (lux)",
+      "pl": "Poziom włączania oświetlenia (lux)",
+      "ru": "Уровень включения освещения (люкс)",
+      "ko": "조명 스위치 켜짐 수준(lux)"
+    },
+    "hint": {
+      "en": "Define the illumination level value which determines when the 'Illumination switch ON function' is activated. If the illumination level falls below this value and a person moves across or within the detected area, the motion sensor will switch on the associated device (group 2). (#5 default: 100 [lux], range: 0 - 1000 [lux])",
+      "nl": "Definieer het lichtsterkte niveau waarbij de 'lichtsterkte inschakel functie' actief wordt. Wanneer de lichtsterkte onder deze waarde komt en bewegings wordt waargenomen, schakelt de sensor het gekoppelde apparaat (groep 2) in. (#5 standaard: 100 [lux], bereik: 0 - 1000 [lux])",
+      "de": "Definiert den Helligkeitswert, der bestimmt, wann die Funktion'Helligkeit Einschalt Funktion' aktiviert wird. Wenn die Helligkeit unter diesen Wert fällt und sich eine Person durch oder innerhalb des erfassten Bereichs bewegt, schaltet der Bewegungsmelder das zugehörige assozierte Gerät (Gruppe 2) ein. (#5 Standard: 100[lux], Bereich: 0 - 1000[lux])",
+      "da": "Definer lysniveau værdien, der bestemmer, hvornår der „Illumination switch ON funktion” aktiveres. Hvis lysniveauet falder under denne værdi, og en person bevæger sig på tværs eller inden for detekteret område, vil bevægelsessensoren tænde for det tilknyttede enhed (gruppe 2). (#5 standard: 100 [lux], område: 0 - 1000 [lux])",
+      "es": "Defina el valor del nivel de iluminación que determina cuándo se activa la 'función de encendido de luz de iluminación'. Si el nivel de iluminación cae por debajo de este valor y una persona se mueve a través o dentro del área detectada, el sensor de movimiento encenderá el dispositivo asociado (grupo 2). (#5 predeterminado: 100 [lux], rango: 0 - 1000 [lux])",
+      "fr": "Définissez la valeur du niveau d'éclairage qui détermine quand la 'fonction d'allumage de l'éclairage' est activée. Si le niveau d'éclairage tombe en dessous de cette valeur et qu'une personne se déplace à travers ou dans la zone détectée, le détecteur de mouvement allumera l'appareil associé (groupe 2). (#5 par défaut: 100 [lux], plage: 0 - 1000 [lux])",
+      "it": "Definisci il valore del livello di illuminazione che determina quando viene attivata la funzione 'Illuminazione accesa'. Se il livello di illuminazione scende al di sotto di questo valore e una persona si muove attraverso o all'interno dell'area rilevata, il sensore di movimento accenderà il dispositivo associato (gruppo 2). (#5 predefinito: 100 [lux], intervallo: 0 - 1000 [lux])",
+      "no": "Definer belysningsnivå verdien som bestemmer når „belysningsbryter PÅ funksjonen” aktiveres. Hvis belysningsnivået faller under denne verdien og en person beveger seg over eller innenfor detektert område, vil bevegelsessensoren slå på den tilknyttede enheten (gruppe 2). (#5 standard: 100 [lux], omfang: 0 - 1000 [lux])",
+      "sv": "Definiera belysningsnivåvärdet som bestämmer när „belysningsströmbrytaren PÅ funktionen” aktiveras. Om belysningsnivån faller under detta värde och en person rör sig över eller inom detekterat område, kommer rörelsesensorn att slå på den associerade enheten (grupp 2). (#5 standard: 100 [lux], omfång: 0 - 1000 [lux])",
+      "pl": "Określ wartość poziomu oświetlenia, od której zależy aktywacja 'funkcji włącznika oświetlenia'. Jeśli poziom oświetlenia spadnie poniżej tej wartości i na obszarze wykrywanym pojawi się ruch, czujnik ruchu włączy powiązane urządzenie (grupa 2). (#5 domyślnie: 100 [lux], zakres: 0 - 1000 [lux])",
+      "ru": "Определяет уровень освещения, при котором активируется функция переключателя освещения 'ВКЛ'. Если уровень освещенности ниже этого значения и кто-то движется через или в пределах обнаруживаемой области, датчик движения включит связанное устройство (группа 2). (#5 по умолчанию: 100 [люкс], диапазон: 0 - 1000 [люкс])",
+      "ko": "'조명 스위치 켜짐 기능'이 활성화되는 조도 수준 값을 정의합니다. 조명 수준이 이 값보다 낮아지고 사람이 감지된 영역을 가로질러 이동하거나 이동하면 움직임 센서가 연관된 장치(그룹 2)를 켭니다. (#5 기본값: 100 [lux], 범위: 0 - 1000 [lux])"
+    }
+  },
+  {
+    "id": "re-trigger_interval",
+    "zwave": {
+      "index": 6,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 1,
+    "attr": {
+      "min": 0,
+      "max": 8
+    },
+    "label": {
+      "en": "Motion detection blind time (s)",
+      "nl": "Bewegingsdetectie blinde tijd (s)",
+      "de": "Bewegungsmelder Blindzeit (s)",
+      "da": "Bevægelsesdetektering blinde tid (s)",
+      "es": "Tiempo de ceguera en detección de movimiento (s)",
+      "fr": "Temps aveugle de détection de mouvement (s)",
+      "it": "Tempo cieco del rilevamento del movimento (s)",
+      "no": "Bevegelsesdeteksjon blind tid (s)",
+      "sv": "Rörelsedetektering blind tid (s)",
+      "pl": "Czas bezruchu wykrywania ruchu (s)",
+      "ru": "Слепое время детекции движения (с)",
+      "ko": "움직임 감지 시간 지연 (s)"
+    },
+    "value": 8,
+    "hint": {
+      "en": "Period after motion detection in which the sensor is insensitive for new motion detection. This value must be less than the 'Motion detection ON time'. (#6 default: 8 [s], range: 0 - 8 [s])",
+      "nl": "Periode na detecteren van beweging waarin de sensor ongevoelig is voor nieuwe bewegingsdetectie. De waarde moet lager zijn dan de 'Bewegingsdetectie AAN tijd'. (#6 standaard: 8 [s], bereik: 0 - 8 [s])",
+      "de": "Zeitraum nach der Bewegungserkennung, in dem der Sensor für eine neue Bewegungserkennung unempfindlich ist. Dieser Wert muss kleiner sein als die Einschaltzeit der 'Bewegungserkennung'. (#6 Standard: 8 [s], Bereich: 0 - 8[s])",
+      "da": "Periode efter bevægelsesdetektering, hvor sensoren er ufølsom for ny bevægelsesdetektering. Denne værdi skal være mindre end 'Bevægelsesdetektering TÆND tid'. (#6 standard: 8 [s], rækkevidde: 0 - 8 [s])",
+      "es": "Período después de la detección de movimiento en el cual el sensor es insensible para una nueva detección de movimiento. Este valor debe ser menor que el 'Tiempo de APAGADO de la detección de movimiento'. (#6 predeterminado: 8 [s], rango: 0 - 8 [s])",
+      "fr": "Période suivant la détection de mouvement pendant laquelle le capteur est insensible à une nouvelle détection de mouvement. Cette valeur doit être inférieure au 'Temps de MARCHE de la détection de mouvement'. (#6 par défaut: 8 [s], gamme: 0 - 8 [s])",
+      "it": "Periodo dopo il rilevamento del movimento in cui il sensore è insensibile a un nuovo rilevamento del movimento. Questo valore deve essere inferiore al 'Tempo di rilevamento del movimento ACCESO'. (#6 predefinito: 8 [s], intervallo: 0 - 8 [s])",
+      "no": "Periode etter bevegelsesdeteksjon der sensoren er ufølsom for ny bevegelsesdeteksjon. Denne verdien må være mindre enn 'Bevegelsesdeteksjon PÅ tid'. (#6 standard: 8 [s], omfang: 0 - 8 [s])",
+      "sv": "Period efter rörelsedetektering där sensorn är okänslig för ny rörelsedetektering. Detta värde måste vara mindre än 'Rörelsedetektion PÅ tid'. (#6 standard: 8 [s], omfång: 0 - 8 [s])",
+      "pl": "Okres po wykryciu ruchu, w którym czujnik jest nieczuły na nowe wykrywanie ruchu. Ta wartość musi być mniejsza od 'Czasu WŁĄCZENIA wykrywania ruchu'. (#6 domyślnie: 8 [s], zakres: 0 - 8 [s])",
+      "ru": "Период после детекции движения, в течение которого датчик невосприимчив к новой детекции движения. Это значение должно быть меньше, чем 'Время ВКЛ детекции движения'. (#6 по умолчанию: 8 [с], диапазон: 0 - 8 [с])",
+      "ko": "센서가 새로운 움직임 감지에 둔감해지는 움직임 감지 후의 기간입니다. 이 값은 '움직임 감지 ON 시간'보다 작아야 합니다. (#6 기본값: 8 [초], 범위: 0 - 8 [초])"
+    }
+  },
+  {
+    "id": "illumination_polling_interval",
+    "zwave": {
+      "index": 7,
+      "size": 2,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 2,
+    "label": {
+      "en": "Illumination reporting interval (s)",
+      "nl": "Lichtsterkte rapportage interval (s)",
+      "de": "Meldeintervall der Helligkeit (s)",
+      "da": "Rapportering af belysning interval (s)",
+      "es": "Intervalo de informe de iluminación (s)",
+      "fr": "Intervalle de rapport de luminosité (s)",
+      "it": "Intervallo di reporting dell'illuminazione (s)",
+      "no": "Rapporteringsintervall lys (s)",
+      "sv": "Rapporteringsintervall för belysning (s)",
+      "pl": "Interwał raportowania oświetlenia (s)",
+      "ru": "Интервал отчетности об освещении (с)",
+      "ko": "조도 보고 간격 (초)"
+    },
+    "value": 180,
+    "attr": {
+      "min": 60,
+      "max": 36000
+    },
+    "hint": {
+      "en": "Determine the time between illumination reports to Homey, even when value has not changed. (#7 default: 180 [s], range: 60 - 36000 [s])",
+      "nl": "Bepaal het interval tussen lichtsterkte rapportages naar Homey, ook als de waarde niet veranderd is. (#7 standaard: 180 [s], bereik: 60 - 36000 [s])",
+      "de": "Bestimmt die Zeit zwischen den Helligkeitsberichten an Homey, auch wenn sich der Wert nicht geändert hat. (#7 Standard: 180 [s], Bereich: 60 - 36000[s])",
+      "da": "Bestem tiden mellem belysningsrapporter til Homey, selv når værdien ikke er ændret. (#7 standard: 180 [s], rækkevidde: 60 - 36000 [s])",
+      "es": "Determine el tiempo entre los informes de iluminación a Homey, incluso cuando el valor no ha cambiado. (#7 predeterminado: 180 [s], rango: 60 - 36000 [s])",
+      "fr": "Déterminez le temps entre les rapports d'éclairage à Homey, même lorsque la valeur n'a pas changé. (#7 par défaut: 180 [s], plage: 60 - 36000 [s])",
+      "it": "Determina il tempo tra i report di illuminazione a Homey, anche quando il valore non è cambiato. (#7 predefinito: 180 [s], intervallo: 60 - 36000 [s])",
+      "no": "Bestem tiden mellom belysningsrapporter til Homey, selv når verdien ikke har endret seg. (#7 standard: 180 [s], omfang: 60 - 36000 [s])",
+      "sv": "Bestäm tiden mellan belysningsrapporter till Homey, även när värdet inte har ändrats. (#7 standard: 180 [s], omfång: 60 - 36000 [s])",
+      "pl": "Określ czas pomiędzy raportami oświetlenia do Homey, nawet jeśli wartość się nie zmieniła. (#7 domyślnie: 180 [s], zakres: 60 - 36000 [s])",
+      "ru": "Определите время между отчетами об освещении в Homey, даже если значение не изменилось. (#7 по умолчанию: 180 [с], диапазон: 60 - 36000 [с])",
+      "ko": "값이 변경되지 않은 경우에도 홈이로 조명 보고서 간의 시간을 결정합니다. (#7 기본값: 180초, 범위: 60 - 36000초)"
+    }
+  },
+  {
+    "id": "enable_illumination_trigger",
+    "zwave": {
+      "index": 8,
+      "size": 1,
+      "signed": false
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Illumination switch ON function",
+      "nl": "Lichtsterkte inschakel functie",
+      "de": "Helligkeit Einschalt Funktion",
+      "da": "Lys TÆND funktion",
+      "es": "Función de iluminación del interruptor ENCENDIDA",
+      "fr": "Fonction d'allumage de l'éclairage",
+      "it": "Funzione di accensione dell'illuminazione",
+      "no": "Belysningsbryter PÅ funksjon",
+      "sv": "Belysningsströmbrytare PÅ funktion",
+      "pl": "Funkcja włączania przełącznika oświetlenia",
+      "ru": "Функция включения света",
+      "ko": "조명 스위치 ON 기능"
+    },
+    "value": false,
+    "hint": {
+      "en": "Enable the function to switch on a associated device (group 2) once motion has been detected and the illumination level will be less than the value specified in 'Illumination switch ON level'. (#8 default: disabled = unchecked)",
+      "nl": "Inschakelen van de lichtsterkte inschakel functie van een gekoppeld apparaat (groep 2) wanneer de lichtsterkte lager is dan de waarde gedefinieerd in 'Lichtsterkte inschakel niveau'. (#8 standaard: uitgeschakeld = unchecked)",
+      "de": "Aktiviere die Funktion, um ein assoziertes Gerät (Gruppe 2) einzuschalten, sobald eine Bewegung erkannt wurde und die Heilligkeit unter dem unter 'Helligkeitseinschaltpegel' angegebenen Wert liegt. (#8 Standard: deaktiviert = nicht ausgewählt)",
+      "da": "Aktiver funktionen til at tænde en tilknyttet enhed (gruppe 2), når der er registreret bevægelse, og lysstyrken vil være mindre end værdien, der er specificeret i 'Lystændingsniveau'. (#8 standard: deaktiveret = ikke markeret)",
+      "es": "Habilita la función para encender un dispositivo asociado (grupo 2) una vez que se ha detectado movimiento y el nivel de luz sea inferior al valor especificado en 'Nivel de encendido de la luz de iluminación'. (#8 predeterminado: deshabilitado = sin marcar)",
+      "fr": "Activez la fonction pour allumer un appareil associé (groupe 2) une fois qu'un mouvement a été détecté et que le niveau d'éclairage sera inférieur à la valeur spécifiée dans 'Niveau d'allumage de l'éclairage'. (#8 par défaut: désactivé = décoché)",
+      "it": "Abilitare la funzione per accendere un dispositivo associato (gruppo 2) una volta rilevato un movimento e il livello di illuminazione sarà inferiore al valore specificato in 'Livello di accensione dell'illuminazione'. (#8 predefinito: disabilitato = deselezionato)",
+      "no": "Aktiver funksjonen for å slå på en tilknyttet enhet (gruppe 2) når bevegelse er registrert, og lysnivået vil være mindre enn verdien som er angitt i 'Lystændingsnivå'. (#8 standard: deaktivert = ikke avhuket)",
+      "sv": "Aktivera funktionen för att slå på en associerad enhet (grupp 2) när en rörelse har upptäckts och ljusnivån är mindre än värdet specificerat i 'Ljusströmbrytare PÅ nivå'. (#8 standard: avaktiverad = omarkerad)",
+      "pl": "Włącz funkcję pozwalającą na włączenie powiązanego urządzenia (grupa 2) po wykryciu ruchu, gdy poziom oświetlenia będzie mniejszy od wartości określonej w 'Poziom włączenia oświetlenia'. (#8 domyślnie: wyłączone = nie zaznaczone)",
+      "ru": "Включите функцию для включения связанного устройства (группа 2) после обнаружения движения, если уровень освещенности будет ниже значения, указанного в 'Уровень включения света'. (#8 по умолчанию: выключено = не отмечено)",
+      "ko": "움직임이 감지되고 조도 수준이 '조명 스위치 켜짐 수준'에 지정된 값보다 작으면 연관된 장치(그룹 2)를 켜는 기능을 활성화합니다. (#8 기본값: 비활성화됨 = 선택되지 않음)"
+    }
+  },
+  {
+    "id": "illumination_report_threshold",
+    "zwave": {
+      "index": 9,
+      "size": 1,
+      "signed": false
+    },
+    "type": "number",
+    "_size": 1,
+    "label": {
+      "en": "Illumination report threshold (lux)",
+      "nl": "Lichtsterkte rapportage drempel (lux)",
+      "de": "Schwellenwert des Helligkeitsberichts (Lux)",
+      "da": "Tærskelværdi for lysrapportering (lux)",
+      "es": "Umbral de informe de iluminación (lux)",
+      "fr": "Seuil de rapport de luminosité (lux)",
+      "it": "Soglia di reporting dell'illuminazione (lux)",
+      "no": "Rapporteringsgrense for lys (lux)",
+      "sv": "Rapporteringsgräns för ljus (lux)",
+      "pl": "Próg raportowania oświetlenia (lux)",
+      "ru": "Порог отчетности об освещении (люкс)",
+      "ko": "조도 보고 임계값 (lux)"
+    },
+    "value": 100,
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "hint": {
+      "en": "Sets how many lux needs to change before the value is being send to Homey. (#9 default: 20 [lux], range: 0 - 255 [lux])",
+      "nl": "Definieer hoeveel lux er moet veranderen voordat de waarde naar Homey word verstuurd. (#9 standaard: 20 [lux], bereik: 0 - 1000 [lux])",
+      "de": "Legt fest, wie viele Lux sich ändern müssen, bevor der Wert an Homey gesendet wird. (#9 Standard: 20[lux], Bereich: 0 - 255[lux])",
+      "da": "Indstiller, hvor mange lux der skal ændres, inden værdien sendes til Homey. (#9 standard: 20 [lux], rækkevidde: 0 - 255 [lux])",
+      "es": "Establece cuántos lux necesitan cambiar antes de que el valor se envíe a Homey. (#9 predeterminado: 20 [lux], rango: 0 - 255 [lux])",
+      "fr": "Définit combien de lux doivent changer avant d'envoyer la valeur à Homey. (#9 par défaut: 20 [lux], plage: 0 - 255 [lux])",
+      "it": "Imposta quanto devono cambiare i lux prima che il valore venga inviato a Homey. (#9 predefinito: 20 [lux], intervallo: 0 - 255 [lux])",
+      "no": "Angir hvor mange lux endringen må være før verdien sendes til Homey. (#9 standard: 20 [lux], omfang: 0 - 255 [lux])",
+      "sv": "Ställer in hur många lux som behöver ändras innan värdet skickas till Homey. (#9 standard: 20 [lux], omfång: 0 - 255 [lux])",
+      "pl": "Ustawia, ile lux musi się zmienić, zanim wartość zostanie wysłana do Homey. (#9 domyślnie: 20 [lux], zakres: 0 - 255 [lux])",
+      "ru": "Устанавливает, сколько люксов должно измениться, прежде чем значение будет отправлено на Homey. (#9 по умолчанию: 20 [люкс], диапазон: 0 - 255 [люкс])",
+      "ko": "값이 홈이로 전송되기 전에 얼마나 많은 lux가 변경되어야 하는지 설정합니다. (#9 기본값: 20 [lux], 범위: 0 - 255 [lux])"
+    }
+  },
+  {
+    "id": "motion_blink",
+    "zwave": {
+      "index": 11,
+      "size": 1,
+      "signed": false
+    },
+    "type": "checkbox",
+    "_size": 1,
+    "label": {
+      "en": "Motion detection LED indication",
+      "nl": "Bewegingsdetectie LED indicatie",
+      "de": "Bewegungsmelder LED",
+      "da": "Indikatorlys for bevægelsesdetektering",
+      "es": "Indicador LED de detección de movimiento",
+      "fr": "Indication LED de détection de mouvement",
+      "it": "Indicatore LED per rilevamento movimento",
+      "no": "Indikatorlampe for bevegelsesdeteksjon",
+      "sv": "LED-indikator för rörelsedetektion",
+      "pl": "Wskaźnik LED dla wykrywania ruchu",
+      "ru": "Индикатор движения на светодиоде",
+      "ko": "움직임 감지 LED 표시"
+    },
+    "value": false,
+    "hint": {
+      "en": "Enable LED/PIR to blink red when motion detected. (#10, default: disabled = unchecked)",
+      "nl": "Inschakelen van het rood knipperen van de LED/PIR bij bewegingsdetectie. (#10, standaard: uitgeschakeld = unchecked)",
+      "de": "Aktiviert die LED/PIR, um rot zu blinken, wenn eine Bewegung erkannt wird. (#10, default: deaktiviert = nicht ausgewählt)",
+      "da": "Aktivér LED/PIR til at blinke rødt, når bevægelse registreres. (#10, standard: deaktiveret = ikke markeret)",
+      "es": "Habilitar LED/PIR para parpadear en rojo cuando se detecte movimiento. (#10, predeterminado: deshabilitado = sin marcar)",
+      "fr": "Activer la LED/PIR pour clignoter en rouge lorsqu'un mouvement est détecté. (#10, par défaut : désactivé = non coché)",
+      "it": "Abilita LED/PIR a lampeggiare in rosso quando viene rilevato un movimento. (#10, predefinito: disabilitato = non selezionato)",
+      "no": "Aktiver LED/PIR for å blinke rødt når bevegelse oppdages. (#10, standard: deaktivert = ikke avhuket)",
+      "sv": "Aktivera LED/PIR för att blinka rött när rörelse upptäcks. (#10, standard: avaktiverad = omarkerad)",
+      "pl": "Włącz LED/PIR do migania czerwonym, gdy wykryty zostanie ruch. (#10, domyślnie: wyłączony = nie zaznaczone)",
+      "ru": "Включите мигание красным LED/PIR при обнаружении движения. (#10, по умолчанию: выключено = не отмечено)",
+      "ko": "움직임이 감지되면 LED/PIR이 빨간색으로 깜박이도록 합니다. (#10, 기본값: 비활성화됨 = 선택되지 않음)"
+    }
+  }
+]

@@ -5,17 +5,44 @@
       "title": {
         "en": "Scene is activated",
         "nl": "Scene is geactiveerd",
-        "de": "Szene wurde aktiviert"
+        "de": "Szene wurde aktiviert",
+        "da": "Scene er aktiveret",
+        "es": "La escena está activada",
+        "fr": "La scène est activée",
+        "it": "La scena è attivata",
+        "no": "Scenen er aktivert",
+        "sv": "Scen är aktiverad",
+        "pl": "Scena jest aktywowana",
+        "ru": "Сцена активирована",
+        "ko": "장면이 활성화되었습니다"
       },
-  "titleFormatted": {
-    "en": "Button [[button]] [[scene]] is activated",
-    "nl": "Knop [[button]] [[scene]] is geactiveerd",
-    "de": "Taste [[button]] [[scene]] wurde aktiviert"
-  },
+      "titleFormatted": {
+        "en": "Button [[button]] [[scene]] is activated",
+        "nl": "Knop [[button]] [[scene]] is geactiveerd",
+        "de": "Taste [[button]] [[scene]] wurde aktiviert",
+        "da": "Knap [[button]] [[scene]] er aktiveret",
+        "es": "El botón [[button]] [[scene]] está activado",
+        "fr": "Bouton [[button]] [[scene]] est activé",
+        "it": "Pulsante [[button]] [[scene]] è attivato",
+        "no": "Knappen [[button]] [[scene]] er aktivert",
+        "sv": "Knapp [[button]] [[scene]] är aktiverad",
+        "pl": "Przycisk [[button]] [[scene]] jest aktywowany",
+        "ru": "Кнопка [[button]] [[scene]] активирована",
+        "ko": "버튼 [[button]] [[scene]]이 활성화되었습니다"
+      },
       "hint": {
         "en": "This card will only get triggered if the button and scene match the state of the dropdown fields.",
         "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop en scene overeenkomen met de toestand van de gekozen opties.",
-        "de": "Diese Karte wird nur ausgelöst, wenn Taste und Szene mit dem Zustand der Dropdown-Felder übereinstimmen."
+        "de": "Diese Karte wird nur ausgelöst, wenn Taste und Szene mit dem Zustand der Dropdown-Felder übereinstimmen.",
+        "da": "Dette kort udløses kun, hvis knappen og scenen matcher tilstanden for dropdown-felterne.",
+        "es": "Esta tarjeta se activará solo si el botón y la escena coinciden con el estado de los campos desplegables.",
+        "fr": "Cette carte ne sera déclenchée que si le bouton et la scène correspondent à l'état des champs déroulants.",
+        "it": "Questa scheda verrà attivata solo se il pulsante e la scena corrispondono allo stato dei campi a discesa.",
+        "no": "Dette kortet vil bare utløses hvis knappen og scenen samsvarer med tilstanden til nedtrekksfeltene.",
+        "sv": "Detta kort kommer bara att utlösas om knappen och scenen matchar tillståndet för rullgardinsfälten.",
+        "pl": "Ta karta zostanie wyzwolona tylko wtedy, gdy przycisk i scena będą zgodne ze stanem pól rozwijanych.",
+        "ru": "Эта карта будет активирована только в том случае, если кнопка и сцена соответствуют состоянию полей раскрывающегося списка.",
+        "ko": "버튼과 장면이 드롭다운 필드의 상태와 일치할 때만 이 카드가 트리거됩니다."
       },
       "args": [
         {
@@ -27,7 +54,16 @@
               "label": {
                 "en": "Button 1",
                 "nl": "Knop 1",
-                "de": "Taste 1"
+                "de": "Taste 1",
+                "da": "Knap 1",
+                "es": "Botón 1",
+                "fr": "Bouton 1",
+                "it": "Pulsante 1",
+                "no": "Knapp 1",
+                "sv": "Knapp 1",
+                "pl": "Przycisk 1",
+                "ru": "Кнопка 1",
+                "ko": "버튼 1"
               }
             },
             {
@@ -35,7 +71,16 @@
               "label": {
                 "en": "Button 2",
                 "nl": "Knop 2",
-                "de": "Taste 2"
+                "de": "Taste 2",
+                "da": "Knap 2",
+                "es": "Botón 2",
+                "fr": "Bouton 2",
+                "it": "Pulsante 2",
+                "no": "Knapp 2",
+                "sv": "Knapp 2",
+                "pl": "Przycisk 2",
+                "ru": "Кнопка 2",
+                "ko": "버튼 2"
               }
             },
             {
@@ -43,7 +88,16 @@
               "label": {
                 "en": "Button 3",
                 "nl": "Knop 3",
-                "de": "Taste 3"
+                "de": "Taste 3",
+                "da": "Knap 3",
+                "es": "Botón 3",
+                "fr": "Bouton 3",
+                "it": "Pulsante 3",
+                "no": "Knapp 3",
+                "sv": "Knapp 3",
+                "pl": "Przycisk 3",
+                "ru": "Кнопка 3",
+                "ko": "버튼 3"
               }
             }
           ]
@@ -57,7 +111,16 @@
               "label": {
                 "en": "Pressed 1x",
                 "nl": "1x ingedrukt",
-                "de": "1x gedrückt"
+                "de": "1x gedrückt",
+                "da": "Trykket 1x",
+                "es": "Presionado 1x",
+                "fr": "Appuyé 1x",
+                "it": "Premuto 1 volta",
+                "no": "Trykket 1x",
+                "sv": "Tryckt 1x",
+                "pl": "Naciśnięto 1x",
+                "ru": "Нажато 1 раз",
+                "ko": "한 번 누름"
               }
             },
             {
@@ -65,7 +128,16 @@
               "label": {
                 "en": "Pressed 2x",
                 "nl": "2x ingedrukt",
-                "de": "2x gedrückt"
+                "de": "2x gedrückt",
+                "da": "Trykket 2x",
+                "es": "Presionado 2x",
+                "fr": "Appuyé 2x",
+                "it": "Premuto 2 volte",
+                "no": "Trykket 2x",
+                "sv": "Tryckt 2x",
+                "pl": "Naciśnięto 2x",
+                "ru": "Нажато 2 раза",
+                "ko": "두 번 누름"
               }
             }
           ]
@@ -77,17 +149,44 @@
       "title": {
         "en": "Emergency Alarm",
         "nl": "SOS Alarm",
-        "de": "SOS Alarm"
+        "de": "SOS Alarm",
+        "da": "Nødalarm",
+        "es": "Alarma de emergencia",
+        "fr": "Alarme d'urgence",
+        "it": "Allarme di emergenza",
+        "no": "Nødalarmer",
+        "sv": "Nödlarm",
+        "pl": "Alarm awaryjny",
+        "ru": "Аварийная сигнализация",
+        "ko": "비상 알람"
       },
       "titleFormatted": {
         "en": "Emergency Alarm",
         "nl": "SOS Alarm",
-        "de": "SOS Alarm"
+        "de": "SOS Alarm",
+        "da": "Nødalarm",
+        "es": "Alarma de emergencia",
+        "fr": "Alarme d'urgence",
+        "it": "Allarme di emergenza",
+        "no": "Nødalarmer",
+        "sv": "Nödlarm",
+        "pl": "Alarm awaryjny",
+        "ru": "Аварийная сигнализация",
+        "ko": "비상 알람"
       },
       "hint": {
         "en": "This card will trigger when Emergency button is activated.",
         "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop SOS wordt ingedrukt.",
-        "de": "Diese Karte wird ausgelöst, wenn der Notfalltaster gedrückt wird."
+        "de": "Diese Karte wird ausgelöst, wenn der Notfalltaster gedrückt wird.",
+        "da": "Dette kort udløses, når nødknappen er aktiveret.",
+        "es": "Esta tarjeta se activará cuando se active el botón de emergencia.",
+        "fr": "Cette carte sera déclenchée lorsque le bouton d'urgence sera activé.",
+        "it": "Questa scheda verrà attivata quando viene attivato il pulsante di emergenza.",
+        "no": "Dette kortet vil utløses når nødbryteren aktiveres.",
+        "sv": "Detta kort kommer att aktiveras när nödbrytaren trycks in.",
+        "pl": "Ta karta zostanie uruchomiona, gdy przycisk awaryjny zostanie aktywowany.",
+        "ru": "Эта карта будет активирована при нажатии кнопки аварийного сигнала.",
+        "ko": "비상 버튼이 활성화되면 이 카드가 트리거됩니다."
       },
       "args": []
     }
