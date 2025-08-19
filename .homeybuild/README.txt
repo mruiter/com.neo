@@ -20,17 +20,11 @@ NAS-DS01ZE, Door Sensor
 NAS-DS07ZE, Door Sensor V2      
 NAS-WS01ZE, Flood Sensor       
 NAS-RE01ZE, ZWave Repeater   
-    
-Supported Languages: English, Dutch, German   
-   
+       
 Support notes:
+
 Most reliable way to update battery powered devices   
 1. Place the sensor near Homey (< 1 meter)   
 2. Change the settings to the values you want   
 3. Wake up the sensor (triple click the button)   
 4. During the blinking of the LED (indicating connection to Homey) press "save settings"   
-    
-If problems persists:    
-a. Temporarely disable other Z-wave apps   
-b. change the setting to another value with above steps   
-c. check if effective and retry to the desired value    
