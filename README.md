@@ -1,4 +1,4 @@
-Neo Coolcam Z-Wave device APP for Homey
+Neo Coolcam Z-Wave device support
 
 
 
@@ -30,12 +30,10 @@ NAS-RE01ZE, ZWave Repeater
 Support notes:
 
 
+
 Most reliable way to update battery powered devices
 
 1. Place the sensor near Homey (< 1 meter)
 2. Change the settings to the values you want
 3. Wake up the sensor (triple click the button)
 4. During the blinking of the LED (indicating connection to Homey) press "save settings"
-
-
-

@@ -3,16 +3,15 @@
   "id": "com.neo",
   "sdk": 3,
   "name": {
-    "en": "NEO Coolcam",
-    "nl": "NEO Coolcam"
+    "en": "NEO Coolcam Z-Wave",
+    "nl": "NEO Coolcam Z-Wave"
   },
-  "version": "3.0.6",
+  "version": "3.0.8",
   "compatibility": ">=10.0.0",
-  "brandColor": "#ff66cc",
+  "brandColor": "#03befc",
   "description": {
     "en": "NEO Coolcam Z-Wave device support",
-    "nl": "NEO Coolcam Z-Wave device ondersteuning",
-    "de": "NEO Coolcam Z-Wave Produktunterstützung"
+    "nl": "NEO Coolcam Z-Wave device ondersteuning"
   },
   "tags": {
     "en": [
@@ -59,26 +58,26 @@
     "security"
   ],
   "images": {
+    "xlarge": "/assets/images/xlarge.jpg",
     "large": "/assets/images/large.jpg",
     "small": "/assets/images/small.jpg"
   },
   "author": {
     "name": "Marco Ruiter",
-    "email": "mruiter@tuxweb.nl"
+    "email": "mruiter@eslaan24.nl"
   },
   "contributors": {
     "developers": [
       {
         "name": "Marco Ruiter",
-        "email": "mruiter@tuxweb.nl"
+        "email": "mruiter@eslaan24.nl"
       }
     ]
   },
   "bugs": {
     "url": "https://github.com/mruiter/com.neo/issues"
   },
-  "support": "mailto:mruiter@tuxweb.nl",
-  "athomForumDiscussionId": 4346,
+  "support": "mailto:mruiter@eslaan24.nl",
   "contributing": {
     "donate": {
       "paypal": {

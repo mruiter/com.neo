@@ -1,4 +1,4 @@
-Neo Coolcam Z-Wave device APP for Homey   
+Neo Coolcam Z-Wave device support
        
 Supported devices with most common parameters:   
      

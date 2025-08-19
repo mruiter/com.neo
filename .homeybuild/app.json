@@ -3,16 +3,15 @@
   "id": "com.neo",
   "sdk": 3,
   "name": {
-    "en": "NEO Coolcam",
-    "nl": "NEO Coolcam"
+    "en": "NEO Coolcam Z-Wave",
+    "nl": "NEO Coolcam Z-Wave"
   },
-  "version": "3.0.6",
+  "version": "3.0.8",
   "compatibility": ">=10.0.0",
-  "brandColor": "#ff66cc",
+  "brandColor": "#03befc",
   "description": {
     "en": "NEO Coolcam Z-Wave device support",
-    "nl": "NEO Coolcam Z-Wave device ondersteuning",
-    "de": "NEO Coolcam Z-Wave Produktunterstützung"
+    "nl": "NEO Coolcam Z-Wave device ondersteuning"
   },
   "tags": {
     "en": [
@@ -59,26 +58,26 @@
     "security"
   ],
   "images": {
+    "xlarge": "/assets/images/xlarge.jpg",
     "large": "/assets/images/large.jpg",
     "small": "/assets/images/small.jpg"
   },
   "author": {
     "name": "Marco Ruiter",
-    "email": "mruiter@tuxweb.nl"
+    "email": "mruiter@eslaan24.nl"
   },
   "contributors": {
     "developers": [
       {
         "name": "Marco Ruiter",
-        "email": "mruiter@tuxweb.nl"
+        "email": "mruiter@eslaan24.nl"
       }
     ]
   },
   "bugs": {
     "url": "https://github.com/mruiter/com.neo/issues"
   },
-  "support": "mailto:mruiter@tuxweb.nl",
-  "athomForumDiscussionId": 4346,
+  "support": "mailto:mruiter@eslaan24.nl",
   "contributing": {
     "donate": {
       "paypal": {
@@ -91,6 +90,11 @@
       {
         "id": "alarm_siren",
         "title": {
+          "en": "Siren Alarm",
+          "nl": "Sirene Alarm",
+          "de": "Sirenenalarm"
+        },
+        "titleFormatted": {
           "en": "Siren Alarm",
           "nl": "Sirene Alarm",
           "de": "Sirenenalarm"
@@ -114,6 +118,11 @@
           "en": "Scene is activated",
           "nl": "Scene is geactiveerd",
           "de": "Szene wurde aktiviert"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[scene]] is activated",
+          "nl": "Knop [[button]] [[scene]] is geactiveerd",
+          "de": "Taste [[button]] [[scene]] wurde aktiviert"
         },
         "hint": {
           "en": "This card will only get triggered if the button and scene match the state of the dropdown fields.",
@@ -187,6 +196,11 @@
           "nl": "SOS Alarm",
           "de": "SOS Alarm"
         },
+        "titleFormatted": {
+          "en": "Emergency Alarm",
+          "nl": "SOS Alarm",
+          "de": "SOS Alarm"
+        },
         "hint": {
           "en": "This card will trigger when Emergency button is activated.",
           "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop SOS wordt ingedrukt.",
@@ -229,6 +243,11 @@
           "nl": "Verander de alarm toestand",
           "de": "Ändern des Alarmstatus"
         },
+        "titleFormatted": {
+          "en": "Change the alarm state to [[alarm_state]]",
+          "nl": "Verander de alarm toestand naar [[alarm_state]]",
+          "de": "Ändern des Alarmstatus zu [[alarm_state]]"
+        },
         "hint": {
           "en": "Change the alarm state; sound or silence the alarm",
           "nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm",
@@ -270,6 +289,11 @@
           "en": "Set volume of siren",
           "nl": "Zet het volume van de sirene",
           "de": "Einstellen der Lautstärke der Sirene"
+        },
+        "titleFormatted": {
+          "en": "Set volume of siren to [[siren_volume]]",
+          "nl": "Zet het volume van de sirene op [[siren_volume]]",
+          "de": "Lautstärke der Sirene auf [[siren_volume]] einstellen"
         },
         "hint": {
           "en": "Set volume of siren.",
@@ -321,6 +345,11 @@
           "nl": "Zet het volume van de deurbel",
           "de": "Lautstärke der Türklingel einstellen."
         },
+        "titleFormatted": {
+          "en": "Set volume of the doorbell to [[doorbell_volume]]",
+          "nl": "Zet het volume van de deurbel op [[doorbell_volume]]",
+          "de": "Lautstärke der Türklingel auf [[doorbell_volume]] einstellen"
+        },
         "hint": {
           "en": "Set volume of the doorbell.",
           "nl": "Zet het volume van de deurbel.",
@@ -371,6 +400,11 @@
           "nl": "Stel de apparaat modus in",
           "de": "Einstellen des Gerätemodus"
         },
+        "titleFormatted": {
+          "en": "Set the device mode to [[alarm_mode]]",
+          "nl": "Stel de apparaat modus in op [[alarm_mode]]",
+          "de": "Gerätemodus auf [[alarm_mode]] einstellen"
+        },
         "hint": {
           "en": "Set the device mode; alarm or doorbell mode",
           "nl": "Stel de apparaat modus in; alarm of deurbel",
@@ -412,6 +446,11 @@
           "en": "Set the alarm tune",
           "nl": "Stel de alarm melodie in",
           "de": "Einstellen des Alarmtons"
+        },
+        "titleFormatted": {
+          "en": "Set the alarm tune to [[alarm_tune]]",
+          "nl": "Stel de alarm melodie in op [[alarm_tune]]",
+          "de": "Alarmmelodie auf [[alarm_tune]] einstellen"
         },
         "hint": {
           "en": "Choose the tune of the alarm sound",
@@ -519,6 +558,11 @@
           "nl": "Stel de deurbel melodie in",
           "de": "Einstellen der Türklingelmelodie"
         },
+        "titleFormatted": {
+          "en": "Set the doorbell tune to [[doorbell_tune]]",
+          "nl": "Stel de deurbel melodie in op [[doorbell_tune]]",
+          "de": "Türklingelmelodie auf [[doorbell_tune]] einstellen"
+        },
         "hint": {
           "en": "Choose the tune of the doorbell sound",
           "nl": "Kies de melodie die gebruikt wordt als deurbel",
@@ -625,6 +669,11 @@
           "nl": "Stel Touch Switch LED in",
           "de": "Touch-Steuerung LED einstellen"
         },
+        "titleFormatted": {
+          "en": "Set Touch Switch LED to [[switch_LED_onoff]]",
+          "nl": "Stel Touch Switch LED in op [[switch_LED_onoff]]",
+          "de": "Touch-Steuerung LED auf [[switch_LED_onoff]] einstellen"
+        },
         "hint": {
           "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
           "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld",
@@ -667,6 +716,11 @@
           "nl": "Stel Touch Switch LED in",
           "de": "Touch-Steuerung LED einstellen"
         },
+        "titleFormatted": {
+          "en": "Set Touch Switch LED to [[switch_LED_onoff]]",
+          "nl": "Stel Touch Switch LED in op [[switch_LED_onoff]]",
+          "de": "Touch-Steuerung LED auf [[switch_LED_onoff]] einstellen"
+        },
         "hint": {
           "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
           "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld",
@@ -708,6 +762,11 @@
           "en": "Set Touch Switch LED",
           "nl": "Stel Touch Switch LED in",
           "de": "Touch-Steuerung LED einstellen"
+        },
+        "titleFormatted": {
+          "en": "Set Touch Switch LED to [[switch_LED_onoff]]",
+          "nl": "Stel Touch Switch LED in op [[switch_LED_onoff]]",
+          "de": "Touch-Steuerung LED auf [[switch_LED_onoff]] einstellen"
         },
         "hint": {
           "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
