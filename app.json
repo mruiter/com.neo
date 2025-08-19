@@ -121,9 +121,9 @@
           "de": "Szene wurde aktiviert"
         },
         "titleFormatted": {
-          "en": "Scene is activated",
-          "nl": "Scene is geactiveerd",
-          "de": "Szene wurde aktiviert"
+          "en": "Button {{button}} {{scene}} is activated",
+          "nl": "Knop {{button}} {{scene}} is geactiveerd",
+          "de": "Taste {{button}} {{scene}} wurde aktiviert"
         },
         "hint": {
           "en": "This card will only get triggered if the button and scene match the state of the dropdown fields.",
