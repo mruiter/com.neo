@@ -8,12 +8,12 @@
     "homey-zwavedriver": "^2.1.0"
   },
   "devDependencies": {
-		"eslint": "^6.8.0",
-		"eslint-config-athom": "^2.1.0"
+    "eslint": "^6.8.0",
+    "eslint-config-athom": "^2.1.0"
   },
   "scripts": {
     "run": "homeyConfig compose && athom project --run",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test"
   },
   "repository": {
     "type": "git",
