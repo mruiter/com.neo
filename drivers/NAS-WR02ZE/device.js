@@ -15,12 +15,13 @@ class Wallplug_WR02Z extends ZwaveDevice {
     // register capabilities for this device
     this.registerCapability('onoff', 'SWITCH_BINARY');
 
-		this.registerCapability('measure_power', 'METER', {
+        this.registerCapability('measure_power', 'METER', {
             getParserV4: () => ({
-                'Sensor Type': 'Electric meter',
-                'Properties1': {
-                    'Scale': 2,
-                }
+                Properties1: {
+                    'Rate Type': 'Import',
+                    Scale: 2,
+                },
+                'Scale 2': 0,
             }),
             reportParserV4: report => {
                 if (report.hasOwnProperty('Properties2') &&
@@ -36,10 +37,11 @@ class Wallplug_WR02Z extends ZwaveDevice {
 
         this.registerCapability('meter_power', 'METER', {
             getParserV4: () => ({
-                'Sensor Type': 'Electric meter',
-                'Properties1': {
-                    'Scale': 0,
-                }
+                Properties1: {
+                    'Rate Type': 'Import',
+                    Scale: 0,
+                },
+                'Scale 2': 0,
             }),
             reportParserV4: report => {
                 if (report.hasOwnProperty('Properties2') &&
@@ -60,10 +62,11 @@ class Wallplug_WR02Z extends ZwaveDevice {
 
         this.registerCapability('measure_voltage', 'METER', {
             getParserV4: () => ({
-                'Sensor Type': 'Electric meter',
-                'Properties1': {
-                    'Scale': 4,
-                }
+                Properties1: {
+                    'Rate Type': 'Import',
+                    Scale: 4,
+                },
+                'Scale 2': 0,
             }),
             reportParserV4: report => {
                 if (report.hasOwnProperty('Properties2') &&
@@ -79,10 +82,11 @@ class Wallplug_WR02Z extends ZwaveDevice {
 
         this.registerCapability('measure_current', 'METER', {
             getParserV4: () => ({
-                'Sensor Type': 'Electric meter',
-                'Properties1': {
-                    'Scale': 5,
-                }
+                Properties1: {
+                    'Rate Type': 'Import',
+                    Scale: 5,
+                },
+                'Scale 2': 0,
             }),
             reportParserV4: report => {
                 if (report.hasOwnProperty('Properties2') &&
@@ -104,7 +108,7 @@ class Wallplug_WR02Z extends ZwaveDevice {
 
     const actionWR02Z_reset_meter = this.homey.flow
       .getActionCard('WR02Z_reset_meter')
-      .registerRunListener(WR02_reset_meter_run_listener);		
+      .registerRunListener(WR02Z_reset_meter_run_listener);
   }
 }
 module.exports = Wallplug_WR02Z;
