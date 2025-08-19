@@ -1,4 +1,4 @@
-{ 
+{
   "3.0.0": {
     "en": "• Initial SDKv3 Release"
   },
@@ -19,5 +19,8 @@
   },
   "3.0.6": {
     "en": "• Fixed typo in NAS-WR02ZE"
-  }             
+  },
+  "3.0.9": {
+    "en": "Updated for appstore release"
+  }
 }
