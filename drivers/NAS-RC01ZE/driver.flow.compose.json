@@ -7,6 +7,11 @@
         "nl": "Scene is geactiveerd",
         "de": "Szene wurde aktiviert"
       },
+      "titleFormatted": {
+        "en": "Scene is activated",
+        "nl": "Scene is geactiveerd",
+        "de": "Szene wurde aktiviert"
+      },
       "hint": {
         "en": "This card will only get triggered if the button and scene match the state of the dropdown fields.",
         "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop en scene overeenkomen met de toestand van de gekozen opties.",
@@ -70,6 +75,11 @@
     {
       "id": "alarm_emergency",
       "title": {
+        "en": "Emergency Alarm",
+        "nl": "SOS Alarm",
+        "de": "SOS Alarm"
+      },
+      "titleFormatted": {
         "en": "Emergency Alarm",
         "nl": "SOS Alarm",
         "de": "SOS Alarm"

@@ -95,6 +95,11 @@
           "nl": "Sirene Alarm",
           "de": "Sirenenalarm"
         },
+        "titleFormatted": {
+          "en": "Siren Alarm",
+          "nl": "Sirene Alarm",
+          "de": "Sirenenalarm"
+        },
         "hint": {
           "en": "This card will trigger when siren is activated.",
           "nl": "Deze kaart wordt alleen geactiveerd wanneer de sirene actief is.",
@@ -111,6 +116,11 @@
       {
         "id": "RC_scene",
         "title": {
+          "en": "Scene is activated",
+          "nl": "Scene is geactiveerd",
+          "de": "Szene wurde aktiviert"
+        },
+        "titleFormatted": {
           "en": "Scene is activated",
           "nl": "Scene is geactiveerd",
           "de": "Szene wurde aktiviert"
@@ -187,6 +197,11 @@
           "nl": "SOS Alarm",
           "de": "SOS Alarm"
         },
+        "titleFormatted": {
+          "en": "Emergency Alarm",
+          "nl": "SOS Alarm",
+          "de": "SOS Alarm"
+        },
         "hint": {
           "en": "This card will trigger when Emergency button is activated.",
           "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop SOS wordt ingedrukt.",
@@ -229,6 +244,11 @@
           "nl": "Verander de alarm toestand",
           "de": "Ändern des Alarmstatus"
         },
+        "titleFormatted": {
+          "en": "Change the alarm state",
+          "nl": "Verander de alarm toestand",
+          "de": "Ändern des Alarmstatus"
+        },
         "hint": {
           "en": "Change the alarm state; sound or silence the alarm",
           "nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm",
@@ -267,6 +287,11 @@
       {
         "id": "AB01ZE_siren_volume",
         "title": {
+          "en": "Set volume of siren",
+          "nl": "Zet het volume van de sirene",
+          "de": "Einstellen der Lautstärke der Sirene"
+        },
+        "titleFormatted": {
           "en": "Set volume of siren",
           "nl": "Zet het volume van de sirene",
           "de": "Einstellen der Lautstärke der Sirene"
@@ -321,6 +346,11 @@
           "nl": "Zet het volume van de deurbel",
           "de": "Lautstärke der Türklingel einstellen."
         },
+        "titleFormatted": {
+          "en": "Set volume of the doorbell",
+          "nl": "Zet het volume van de deurbel",
+          "de": "Lautstärke der Türklingel einstellen."
+        },
         "hint": {
           "en": "Set volume of the doorbell.",
           "nl": "Zet het volume van de deurbel.",
@@ -371,6 +401,11 @@
           "nl": "Stel de apparaat modus in",
           "de": "Einstellen des Gerätemodus"
         },
+        "titleFormatted": {
+          "en": "Set the device mode",
+          "nl": "Stel de apparaat modus in",
+          "de": "Einstellen des Gerätemodus"
+        },
         "hint": {
           "en": "Set the device mode; alarm or doorbell mode",
           "nl": "Stel de apparaat modus in; alarm of deurbel",
@@ -409,6 +444,11 @@
       {
         "id": "AB01ZE_alarm_tune",
         "title": {
+          "en": "Set the alarm tune",
+          "nl": "Stel de alarm melodie in",
+          "de": "Einstellen des Alarmtons"
+        },
+        "titleFormatted": {
           "en": "Set the alarm tune",
           "nl": "Stel de alarm melodie in",
           "de": "Einstellen des Alarmtons"
@@ -519,6 +559,11 @@
           "nl": "Stel de deurbel melodie in",
           "de": "Einstellen der Türklingelmelodie"
         },
+        "titleFormatted": {
+          "en": "Set the doorbell tune",
+          "nl": "Stel de deurbel melodie in",
+          "de": "Einstellen der Türklingelmelodie"
+        },
         "hint": {
           "en": "Choose the tune of the doorbell sound",
           "nl": "Kies de melodie die gebruikt wordt als deurbel",
@@ -625,6 +670,11 @@
           "nl": "Stel Touch Switch LED in",
           "de": "Touch-Steuerung LED einstellen"
         },
+        "titleFormatted": {
+          "en": "Set Touch Switch LED",
+          "nl": "Stel Touch Switch LED in",
+          "de": "Touch-Steuerung LED einstellen"
+        },
         "hint": {
           "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
           "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld",
@@ -667,6 +717,11 @@
           "nl": "Stel Touch Switch LED in",
           "de": "Touch-Steuerung LED einstellen"
         },
+        "titleFormatted": {
+          "en": "Set Touch Switch LED",
+          "nl": "Stel Touch Switch LED in",
+          "de": "Touch-Steuerung LED einstellen"
+        },
         "hint": {
           "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
           "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld",
@@ -705,6 +760,11 @@
       {
         "id": "SC03ZE_switch_LED",
         "title": {
+          "en": "Set Touch Switch LED",
+          "nl": "Stel Touch Switch LED in",
+          "de": "Touch-Steuerung LED einstellen"
+        },
+        "titleFormatted": {
           "en": "Set Touch Switch LED",
           "nl": "Stel Touch Switch LED in",
           "de": "Touch-Steuerung LED einstellen"
