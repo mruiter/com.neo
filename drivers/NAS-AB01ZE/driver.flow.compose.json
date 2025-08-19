@@ -28,11 +28,11 @@
         "nl": "Verander de alarm toestand",
         "de": "Ändern des Alarmstatus"
       },
-      "titleFormatted": {
-        "en": "Change the alarm state",
-        "nl": "Verander de alarm toestand",
-        "de": "Ändern des Alarmstatus"
-      },
+        "titleFormatted": {
+          "en": "Change the alarm state to [[alarm_state]]",
+          "nl": "Verander de alarm toestand naar [[alarm_state]]",
+          "de": "Ändern des Alarmstatus zu [[alarm_state]]"
+        },
       "hint": {
         "en": "Change the alarm state; sound or silence the alarm",
         "nl": "Verander de alarm toestand; luiden of uitschakelen van het alarm",
@@ -71,9 +71,9 @@
         "de": "Einstellen der Lautstärke der Sirene"
       },
       "titleFormatted": {
-        "en": "Set volume of siren",
-        "nl": "Zet het volume van de sirene",
-        "de": "Einstellen der Lautstärke der Sirene"
+        "en": "Set volume of siren to [[siren_volume]]",
+        "nl": "Zet het volume van de sirene op [[siren_volume]]",
+        "de": "Lautstärke der Sirene auf [[siren_volume]] einstellen"
       },
       "hint": {
         "en": "Set volume of siren.",
@@ -121,9 +121,9 @@
         "de": "Lautstärke der Türklingel einstellen."
       },
       "titleFormatted": {
-        "en": "Set volume of the doorbell",
-        "nl": "Zet het volume van de deurbel",
-        "de": "Lautstärke der Türklingel einstellen."
+        "en": "Set volume of the doorbell to [[doorbell_volume]]",
+        "nl": "Zet het volume van de deurbel op [[doorbell_volume]]",
+        "de": "Lautstärke der Türklingel auf [[doorbell_volume]] einstellen"
       },
       "hint": {
         "en": "Set volume of the doorbell.",
@@ -171,9 +171,9 @@
         "de": "Einstellen des Gerätemodus"
       },
       "titleFormatted": {
-        "en": "Set the device mode",
-        "nl": "Stel de apparaat modus in",
-        "de": "Einstellen des Gerätemodus"
+        "en": "Set the device mode to [[alarm_mode]]",
+        "nl": "Stel de apparaat modus in op [[alarm_mode]]",
+        "de": "Gerätemodus auf [[alarm_mode]] einstellen"
       },
       "hint": {
         "en": "Set the device mode; alarm or doorbell mode",
@@ -213,9 +213,9 @@
         "de": "Einstellen des Alarmtons"
       },
       "titleFormatted": {
-        "en": "Set the alarm tune",
-        "nl": "Stel de alarm melodie in",
-        "de": "Einstellen des Alarmtons"
+        "en": "Set the alarm tune to [[alarm_tune]]",
+        "nl": "Stel de alarm melodie in op [[alarm_tune]]",
+        "de": "Alarmmelodie auf [[alarm_tune]] einstellen"
       },
       "hint": {
         "en": "Choose the tune of the alarm sound",
@@ -319,9 +319,9 @@
         "de": "Einstellen der Türklingelmelodie"
       },
       "titleFormatted": {
-        "en": "Set the doorbell tune",
-        "nl": "Stel de deurbel melodie in",
-        "de": "Einstellen der Türklingelmelodie"
+        "en": "Set the doorbell tune to [[doorbell_tune]]",
+        "nl": "Stel de deurbel melodie in op [[doorbell_tune]]",
+        "de": "Türklingelmelodie auf [[doorbell_tune]] einstellen"
       },
       "hint": {
         "en": "Choose the tune of the doorbell sound",

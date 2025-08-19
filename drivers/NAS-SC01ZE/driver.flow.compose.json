@@ -7,11 +7,11 @@
         "nl": "Stel Touch Switch LED in",
         "de": "Touch-Steuerung LED einstellen"
       },
-      "titleFormatted": {
-        "en": "Set Touch Switch LED",
-        "nl": "Stel Touch Switch LED in",
-        "de": "Touch-Steuerung LED einstellen"
-      },
+        "titleFormatted": {
+          "en": "Set Touch Switch LED to [[switch_LED_onoff]]",
+          "nl": "Stel Touch Switch LED in op [[switch_LED_onoff]]",
+          "de": "Touch-Steuerung LED auf [[switch_LED_onoff]] einstellen"
+        },
       "hint": {
         "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
         "nl": "In of uitschakelen van de Touch Switch LED, oplichtend wanneer ingeschakeld",
