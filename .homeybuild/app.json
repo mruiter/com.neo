@@ -16,7 +16,7 @@
     "ru": "NEO Coolcam Z-Wave",
     "ko": "NEO Coolcam Z-Wave"
   },
-  "version": "3.0.9",
+  "version": "3.0.10",
   "compatibility": ">=10.0.0",
   "brandColor": "#03befc",
   "description": {
