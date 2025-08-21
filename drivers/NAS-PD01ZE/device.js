@@ -29,6 +29,13 @@ class MultiSensor_PD01Z extends ZwaveDevice {
         ? 'NOTIFICATION'
         : 'SENSOR_BINARY';
       this.registerCapability('alarm_motion', cc);
+
+      if (commandClasses.COMMAND_CLASS_NOTIFICATION) {
+        if (!this.hasCapability('alarm_tamper')) {
+          await this.addCapability('alarm_tamper');
+        }
+        this.registerCapability('alarm_tamper', 'NOTIFICATION');
+      }
     }
 
     // multilevel sensor capabilities
@@ -63,6 +70,15 @@ class MultiSensor_PD01Z extends ZwaveDevice {
       if (hasLuminance && !this.hasCapability('measure_luminance')) {
         await this.addCapability('measure_luminance');
         this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL');
+      }
+
+      const hasHumidity =
+        supported.includes('Relative humidity')
+        || supported.includes('Humidity')
+        || supported.includes(5);
+      if (hasHumidity && !this.hasCapability('measure_humidity')) {
+        await this.addCapability('measure_humidity');
+        this.registerCapability('measure_humidity', 'SENSOR_MULTILEVEL');
       }
     }
   }
