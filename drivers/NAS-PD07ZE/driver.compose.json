@@ -106,11 +106,6 @@
     ]
   },
   "capabilities": [
-    "alarm_motion",
-    "alarm_tamper",
-    "measure_temperature",
-    "measure_luminance",
-    "measure_humidity",
     "measure_battery"
   ],
   "images": {
