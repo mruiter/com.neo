@@ -149,9 +149,6 @@
     ]
   },
   "capabilities": [
-    "alarm_motion",
-    "measure_temperature",
-    "measure_luminance",
     "measure_battery"
   ],
   "images": {
