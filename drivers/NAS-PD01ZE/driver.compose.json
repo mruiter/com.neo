@@ -157,8 +157,6 @@
     ]
   },
   "capabilities": [
-    "alarm_motion",
-    "measure_luminance",
     "measure_battery"
   ],
   "images": {
