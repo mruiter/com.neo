@@ -1,58 +1,113 @@
 [
-    {
-      "id": "backlight",
-      "zwave": {
-        "index": 1,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Touch Switch LED enable",
-        "nl": "Touch Switch LED Aan"
-      },
-      "value": true,
-      "hint": {
-        "en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
-        "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)",
-        "de": "Aktiviert oder deaktiviert die Touch-Steuerung-LED. Leuchtet blau wenn aktiviert. \nStandard: Aktiviert (ausgewählt)"
-      }
+  {
+    "id": "backlight",
+    "zwave": {
+      "index": 1,
+      "size": 1
     },
-    {
-      "id": "status_indicate",
-      "zwave": {
-        "index": 2,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Touch Switch LED state",
-        "nl": "Touch Switch LED status",
-        "de": "Touch-Steuerung-LED Status"
-      },
-      "value": true,
-      "hint": {
-        "en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
-        "nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)",
-        "de": "Aktiviert die LED-Zustandsanzeige, um anzuzeigen, ob der Schalter EIN (lila) oder AUS (blau) ist. \nStandard: Aktiviert (ausgewählt)"
-      }
+    "type": "checkbox",
+    "label": {
+      "en": "Touch Switch LED enable",
+      "nl": "Touch Switch LED Aan",
+      "da": "Aktiver Touch Switch LED",
+      "de": "Touch-Steuerung-LED aktivieren",
+      "es": "Habilitar LED del interruptor táctil",
+      "fr": "Activer LED de l'interrupteur tactile",
+      "it": "Abilita LED interruttore touch",
+      "no": "Aktiver berøringsbryterens LED",
+      "sv": "Aktivera Touch Switch LED",
+      "pl": "Włącz diodę LED przełącznika dotykowego",
+      "ru": "Включить сенсорный переключатель LED",
+      "ko": "터치 스위치 LED 활성화"
     },
-    {
-      "id": "laststate_return",
-      "zwave": {
-        "index": 3,
-        "size": 1
-      },
-      "type": "checkbox",
-      "label": {
-        "en": "Restore state after power loss",
-        "nl": "Herstel toestand bij spanningsuitval",
-        "de": "Zustand nach Stromausfall wiederherstellen"
-      },
-      "value": true,
-      "hint": {
-        "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
-        "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)",
-        "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn es aktiviert (ausgewählt) ist, oder bleibt ausgeschaltet, wenn es deaktiviert ist (nicht ausgewählt).\nStandard: aktiviert = ausgewählt)."
-      }
+    "value": true,
+    "hint": {
+      "en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
+      "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)",
+      "de": "Aktiviert oder deaktiviert die Touch-Steuerung-LED. Leuchtet blau wenn aktiviert. \nStandard: Aktiviert (ausgewählt)",
+      "da": "Aktiver eller deaktiver Touch Switch LED, der lyser blåt, når den er aktiveret. \nStandard: Aktiveret (afkrydset)",
+      "es": "Habilita o deshabilita el LED del interruptor táctil, iluminándose en azul cuando está habilitado. \nPredeterminado: Habilitado (marcado)",
+      "fr": "Activez ou désactivez la LED de l'interrupteur tactile, s'allumant en bleu lorsqu'elle est activée. \nPar défaut : Activé (coché)",
+      "it": "Abilita o disabilita il LED dell'interruttore touch, evidenziando in blu quando è abilitato. \nPredefinito: Abilitato (selezionato)",
+      "no": "Aktiver eller deaktiver berøringsbryterens LED, som lyser blått når aktivert. \nSom standard: Aktivert (avkrysset)",
+      "sv": "Aktivera eller inaktivera Touch Switch LED, som lyser blått när den är aktiverad. \nStandard: Aktiverad (markerad)",
+      "pl": "Włącz lub wyłącz diodę LED przełącznika dotykowego, podświetlaną na niebiesko, gdy jest aktywna. \nDomyślnie: Włączona (zaznaczona)",
+      "ru": "Включите или отключите светодиод сенсорного переключателя, подсвечивающий синим цветом, когда он включен. \nПо умолчанию: Включено (выбрано)",
+      "ko": "터치 스위치 LED를 활성화하거나 비활성화하고, 활성화 시 파란색으로 강조 표시됩니다. \n기본값:활성화됨(체크됨)"
     }
-  ]
+  },
+  {
+    "id": "status_indicate",
+    "zwave": {
+      "index": 2,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Touch Switch LED state",
+      "nl": "Touch Switch LED status",
+      "de": "Touch-Steuerung-LED Status",
+      "da": "Touch Switch LED tilstand",
+      "es": "Estado del LED del interruptor táctil",
+      "fr": "État de la LED de l'interrupteur tactile",
+      "it": "Stato del LED dell'interruttore touch",
+      "no": "Berøringsbryterens LED-status",
+      "sv": "Touch Switch LED-status",
+      "pl": "Stan diody LED przełącznika dotykowego",
+      "ru": "Состояние светодиода сенсорного переключателя",
+      "ko": "터치 스위치 LED 상태"
+    },
+    "value": true,
+    "hint": {
+      "en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
+      "nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)",
+      "de": "Aktiviert die LED-Zustandsanzeige, um anzuzeigen, ob der Schalter EIN (lila) oder AUS (blau) ist. \nStandard: Aktiviert (ausgewählt)",
+      "da": "Aktiver LED-tilstandsindikationen for at vise, om kontakten er TÆNDT (Lilla) eller SLUKKET (Blå). \nStandard: Aktiveret (afkrydset)",
+      "es": "Habilita la indicación del estado del LED para mostrar si el interruptor está ENCENDIDO (púrpura) o APAGADO (azul). \nPredeterminado: Habilitado (marcado)",
+      "fr": "Activez l'indication d'état de la LED pour indiquer si l'interrupteur est ALLUMÉ (violet) ou ÉTEINT (bleu). \nPar défaut : Activé (coché)",
+      "it": "Abilita l'indicazione dello stato del LED per mostrare se l'interruttore è ACCESO (viola) o SPENTO (blu). \nPredefinito: Abilitato (selezionato)",
+      "no": "Aktiver LED-statusindikasjonen for å vise om bryteren er PÅ (lilla) eller AV (blå). \nSom standard: Aktivert (avkrysset)",
+      "sv": "Aktivera LED-statusindikationen för att visa om brytaren är PÅ (lila) eller AV (blå). \nStandard: Aktiverad (markerad)",
+      "pl": "Włącz wskaźnik stanu diody LED, aby pokazać, czy przełącznik jest WŁĄCZONY (fioletowy) czy WYŁĄCZONY (niebieski). \nDomyślnie: Włączony (zaznaczony)",
+      "ru": "Включите индикацию состояния светодиода, чтобы показать, включен (фиолетовый) или выключен (синий) переключатель. \nПо умолчанию: Включено (выбрано)",
+      "ko": "스위치가 켜져 있는지(보라색) 꺼져 있는지(파란색)를 보여주기 위해 LED 상태 표시를 활성화합니다. \n기본값: 활성화됨(체크됨)"
+    }
+  },
+  {
+    "id": "laststate_return",
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "type": "checkbox",
+    "label": {
+      "en": "Restore state after power loss",
+      "nl": "Herstel toestand bij spanningsuitval",
+      "de": "Zustand nach Stromausfall wiederherstellen",
+      "da": "Gendan tilstand efter strømtab",
+      "es": "Restaurar estado después de pérdida de energía",
+      "fr": "Restaurer l'état après une coupure de courant",
+      "it": "Ripristina stato dopo interruzione di corrente",
+      "no": "Gjenopprett status etter strømbrudd",
+      "sv": "Återställ tillstånd efter strömavbrott",
+      "pl": "Przywróć stan po utracie zasilania",
+      "ru": "Восстановить состояние после потери питания",
+      "ko": "전원 손실 후 상태 복원"
+    },
+    "value": true,
+    "hint": {
+      "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
+      "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)",
+      "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn es aktiviert (ausgewählt) ist, oder bleibt ausgeschaltet, wenn es deaktiviert ist (nicht ausgewählt).\nStandard: aktiviert = ausgewählt).",
+      "da": "Efter et strømtab vil relæet skifte til sidst kendte tilstand, hvis det er aktiveret (afkrydset), eller forblive slukket, hvis det er deaktiveret (ikke afkrydset).\nStandard: aktiveret = afkrydset)",
+      "es": "Después de la pérdida de energía, el relé cambiará al último estado conocido si está habilitado (marcado) o permanecerá apagado si está deshabilitado (no marcado).\nPredeterminado: habilitado = marcado)",
+      "fr": "Après une coupure de courant, le relais passera à l'état connu le plus récent si activé (coché) ou restera éteint si désactivé (non coché).\nPar défaut : activé = coché)",
+      "it": "Dopo un'interruzione di corrente, il relè passerà all'ultimo stato conosciuto se abilitato (selezionato), o rimarrà spento se disabilitato (non selezionato).\nPredefinito: abilitato = selezionato)",
+      "no": "Etter strømbrudd vil reléet bytte til siste kjente tilstand hvis aktivert (avkrysset) eller forbli av hvis deaktivert (ikke avkrysset).\nSom standard: aktivert = avkrysset)",
+      "sv": "Efter strömavbrott kommer reläet att byta till senast kända tillstånd om aktiverat (markerad) eller förbli avstängd om inaktiverat (ej markerad).\nStandard: aktiverad = markerad)",
+      "pl": "Po utracie zasilania przekaźnik przełączy się na ostatnio znany stan, jeśli jest włączony (zaznaczony) lub pozostanie wyłączony, jeśli jest wyłączony (niezaznaczony).\nDomyślnie: włączony = zaznaczony)",
+      "ru": "После потери питания реле вернется в последнее известное состояние, если включено (выбрано), или останется выключенным, если отключено (не выбрано).\nПо умолчанию: включено = выбрано)",
+      "ko": "전원 손실 후 릴레이가 활성화된 경우(체크됨) 마지막으로 알려진 상태로 전환되거나 비활성화된 경우(체크 해제) 꺼진 상태로 유지됩니다.\n기본값: 활성화됨 = 체크됨)"
+    }
+  }
+]

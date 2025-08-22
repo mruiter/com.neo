@@ -85,7 +85,7 @@
         "da": "Skift alarmstatus; aktiver eller sluk alarmen",
         "es": "Cambiar el estado de la alarma; activar o silenciar la alarma",
         "fr": "Changer l'état de l'alarme ; activer ou désactiver l'alarme",
-        "it": "Cambia lo stato dell'allarme; suonare o silenziare l'allarme",
+        "it": "Cambia lo stato dell'allarme; suonare of silenziare l'allarme",
         "no": "Endre alarmstatus; slå på eller av alarmen",
         "sv": "Ändra larmstatus; slå på eller av larmet",
         "pl": "Zmień stan alarmu; włączać lub wyłączać alarm",
@@ -362,14 +362,14 @@
       "titleFormatted": {
         "en": "Set the device mode to [[alarm_mode]]",
         "nl": "Stel de apparaat modus in op [[alarm_mode]]",
-        "de": "Gerätemodus auf [[alarm_mode]] einstellen",
+        "de": "Gerätemodus на [[alarm_mode]] einstellen",
         "da": "Indstil enhedstilstand til [[alarm_mode]]",
         "es": "Ajustar el modo del dispositivo a [[alarm_mode]]",
         "fr": "Régler le mode de l'appareil à [[alarm_mode]]",
         "it": "Imposta la modalità del dispositivo su [[alarm_mode]]",
         "no": "Sett enhetsmodus til [[alarm_mode]]",
         "sv": "Ställ in enhetsläge till [[alarm_mode]]",
-        "pl": "Ustaw tryb urządzenia na [[alarm_mode]]",
+        "pl": "Ustaw tryb urządzenia на [[alarm_mode]]",
         "ru": "Установите режим устройства на [[alarm_mode]]",
         "ko": "장치 모드를 [[alarm_mode]]로 설정"
       },
@@ -456,7 +456,7 @@
         "it": "Imposta la melodia dell'allarme su [[alarm_tune]]",
         "no": "Sett alarmtone til [[alarm_tune]]",
         "sv": "Ställ in larmsignal till [[alarm_tune]]",
-        "pl": "Ustaw melodię alarmu na [[alarm_tune]]",
+        "pl": "Ustaw melodię alarmу на [[alarm_tune]]",
         "ru": "Установите мелодию сигнала тревоги на [[alarm_tune]]",
         "ko": "알람 [[alarm_tune]]으로 설정"
       },
@@ -470,7 +470,7 @@
         "it": "Scegli la melodia del suono dell'allarme",
         "no": "Velg alarmlyd",
         "sv": "Välj larmsignal",
-        "pl": "Wybierz melodię dźwięku alarmu",
+        "pl": "Wybierz melodię dźwięku alarmу",
         "ru": "Выберите мелодию сигнала тревоги",
         "ko": "알람 소리의 곡조를 선택하세요"
       },
@@ -679,7 +679,7 @@
         "it": "Imposta la melodia del campanello su [[doorbell_tune]]",
         "no": "Sett dørklokkens tone til [[doorbell_tune]]",
         "sv": "Ställ in dörrklockans signal till [[doorbell_tune]]",
-        "pl": "Ustaw melodię dzwonka do drzwi na [[doorbell_tune]]",
+        "pl": "Ustaw melodię dzwonka do drzwi на [[doorbell_tune]]",
         "ru": "Установите мелодию дверного звонка на [[doorbell_tune]]",
         "ko": "[[doorbell_tune]]으로 문 설정]"
       },

@@ -20,18 +20,18 @@
   "compatibility": ">=10.0.0",
   "brandColor": "#03befc",
   "description": {
-    "en": "NEO Coolcam Z-Wave device support",
-    "nl": "NEO Coolcam Z-Wave device ondersteuning",
-    "da": "NEO Coolcam Z-Wave enhedssupport",
-    "de": "NEO Coolcam Z-Wave Geräteunterstützung",
-    "es": "Soporte para dispositivos NEO Coolcam Z-Wave",
-    "fr": "Support pour appareil NEO Coolcam Z-Wave",
-    "it": "Supporto per dispositivi NEO Coolcam Z-Wave",
-    "no": "NEO Coolcam Z-Wave enhetstøtte",
-    "sv": "NEO Coolcam Z-Wave enhetssupport",
-    "pl": "Wsparcie dla urządzeń NEO Coolcam Z-Wave",
-    "ru": "Поддержка устройств NEO Coolcam Z-Wave",
-    "ko": "NEO Coolcam Z-Wave 장치 지원"
+    "en": "Works perfect, only costs less",
+    "nl": "Werkt perfect, kost alleen minder",
+    "da": "Fungerer perfekt, koster bare mindre",
+    "de": "Funktioniert perfekt, kostet nur weniger",
+    "es": "Funciona perfecto, solo cuesta menos",
+    "fr": "Fonctionne parfaitement, coûte juste moins cher",
+    "it": "Funziona perfettamente, costa solo meno",
+    "no": "Fungerer perfekt, koster bare mindre",
+    "sv": "Fungerar perfekt, kostar bara mindre",
+    "pl": "Działa doskonale, kosztuje tylko mniej",
+    "ru": "Работает идеально, просто стоит дешевле",
+    "ko": "완벽하게 작동하며 비용이 적게 듭니다"
   },
   "tags": {
     "en": [
@@ -618,7 +618,7 @@
           "da": "Skift alarmstatus; aktiver eller sluk alarmen",
           "es": "Cambiar el estado de la alarma; activar o silenciar la alarma",
           "fr": "Changer l'état de l'alarme ; activer ou désactiver l'alarme",
-          "it": "Cambia lo stato dell'allarme; suonare o silenziare l'allarme",
+          "it": "Cambia lo stato dell'allarme; suonare of silenziare l'allarme",
           "no": "Endre alarmstatus; slå på eller av alarmen",
           "sv": "Ändra larmstatus; slå på eller av larmet",
           "pl": "Zmień stan alarmu; włączać lub wyłączać alarm",
@@ -910,14 +910,14 @@
         "titleFormatted": {
           "en": "Set the device mode to [[alarm_mode]]",
           "nl": "Stel de apparaat modus in op [[alarm_mode]]",
-          "de": "Gerätemodus auf [[alarm_mode]] einstellen",
+          "de": "Gerätemodus на [[alarm_mode]] einstellen",
           "da": "Indstil enhedstilstand til [[alarm_mode]]",
           "es": "Ajustar el modo del dispositivo a [[alarm_mode]]",
           "fr": "Régler le mode de l'appareil à [[alarm_mode]]",
           "it": "Imposta la modalità del dispositivo su [[alarm_mode]]",
           "no": "Sett enhetsmodus til [[alarm_mode]]",
           "sv": "Ställ in enhetsläge till [[alarm_mode]]",
-          "pl": "Ustaw tryb urządzenia na [[alarm_mode]]",
+          "pl": "Ustaw tryb urządzenia на [[alarm_mode]]",
           "ru": "Установите режим устройства на [[alarm_mode]]",
           "ko": "장치 모드를 [[alarm_mode]]로 설정"
         },
@@ -1009,7 +1009,7 @@
           "it": "Imposta la melodia dell'allarme su [[alarm_tune]]",
           "no": "Sett alarmtone til [[alarm_tune]]",
           "sv": "Ställ in larmsignal till [[alarm_tune]]",
-          "pl": "Ustaw melodię alarmu na [[alarm_tune]]",
+          "pl": "Ustaw melodię alarmу на [[alarm_tune]]",
           "ru": "Установите мелодию сигнала тревоги на [[alarm_tune]]",
           "ko": "알람 [[alarm_tune]]으로 설정"
         },
@@ -1023,7 +1023,7 @@
           "it": "Scegli la melodia del suono dell'allarme",
           "no": "Velg alarmlyd",
           "sv": "Välj larmsignal",
-          "pl": "Wybierz melodię dźwięku alarmu",
+          "pl": "Wybierz melodię dźwięku alarmу",
           "ru": "Выберите мелодию сигнала тревоги",
           "ko": "알람 소리의 곡조를 선택하세요"
         },
@@ -1237,7 +1237,7 @@
           "it": "Imposta la melodia del campanello su [[doorbell_tune]]",
           "no": "Sett dørklokkens tone til [[doorbell_tune]]",
           "sv": "Ställ in dörrklockans signal till [[doorbell_tune]]",
-          "pl": "Ustaw melodię dzwonka do drzwi na [[doorbell_tune]]",
+          "pl": "Ustaw melodię dzwonka do drzwi на [[doorbell_tune]]",
           "ru": "Установите мелодию дверного звонка на [[doorbell_tune]]",
           "ko": "[[doorbell_tune]]으로 문 설정]"
         },
@@ -6670,13 +6670,32 @@
           "type": "checkbox",
           "label": {
             "en": "Touch Switch LED enable",
-            "nl": "Touch Switch LED Aan"
+            "nl": "Touch Switch LED Aan",
+            "da": "Aktiver Touch Switch LED",
+            "de": "Touch-Steuerung-LED aktivieren",
+            "es": "Activar LED del interruptor táctil",
+            "fr": "Activer la LED de l'interrupteur tactile",
+            "it": "Abilita LED interruttore tattile",
+            "no": "Aktiver berøringsbryter LED",
+            "sv": "Aktivera Touch Switch LED",
+            "pl": "Włącz LED przełącznika dotykowego",
+            "ru": "Включить светодиод сенсорного переключателя",
+            "ko": "터치 스위치 LED 활성화"
           },
           "value": true,
           "hint": {
             "en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
             "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)",
-            "de": "Aktiviert oder deaktiviert die Touch-Steuerung-LED. Leuchtet blau wenn aktiviert. \nStandard: Aktiviert (ausgewählt)"
+            "de": "Aktiviert oder deaktiviert die Touch-Steuerung-LED. Leuchtet blau wenn aktiviert. \nStandard: Aktiviert (ausgewählt)",
+            "da": "Aktivér eller deaktiver Touch Switch LED, fremhævet i blåt, når den er aktiveret. \nStandard: aktiveret (markeret)",
+            "es": "Habilita o deshabilita el LED del interruptor táctil, iluminándose en azul cuando está habilitado. \nPredeterminado: habilitado (marcado)",
+            "fr": "Activez ou désactivez la LED de l'interrupteur tactile, éclairée en bleu lorsqu'elle est activée. \nPar défaut : Activé (coché)",
+            "it": "Abilita o disabilita il LED dell'interruttore tattile, illuminandosi di blu quando abilitato. \nPredefinito: Abilitato (selezionato)",
+            "no": "Aktiver eller deaktiver LED for berøringsbryteren, som lyser blått når den er aktivert. \nStandard: Aktivert (avmerket)",
+            "sv": "Aktivera eller inaktivera Touch Switch LED, som lyser blå när den är aktiverad. \nStandard: Aktiverad (markerad)",
+            "pl": "Włącz lub wyłącz LED przełącznika dotykowego, podświetlając się na niebiesko po włączeniu. \nDomyślnie: Włączone (zaznaczone)",
+            "ru": "Включать или выключать светодиод сенсорного переключателя, подсвечивающийся синим при включении. \nПо умолчанию: Включено (отмечено)",
+            "ko": "터치 스위치 LED를 활성화하거나 비활성화하며, 활성화되면 파란색으로 강조 표시됩니다. \n기본값: 활성화됨 (선택됨)"
           }
         },
         {
@@ -6689,13 +6708,31 @@
           "label": {
             "en": "Touch Switch LED state",
             "nl": "Touch Switch LED status",
-            "de": "Touch-Steuerung-LED Status"
+            "de": "Touch-Steuerung-LED Status",
+            "da": "Touch Switch LED-tilstand",
+            "es": "Estado del LED del interruptor táctil",
+            "fr": "État de la LED de l'interrupteur tactile",
+            "it": "Stato LED interruttore tattile",
+            "no": "Status for berøringsbryter LED",
+            "sv": "Touch Switch LED-status",
+            "pl": "Stan LED przełącznika dotykowego",
+            "ru": "Состояние светодиода сенсорного переключателя",
+            "ko": "터치 스위치 LED 상태"
           },
           "value": true,
           "hint": {
             "en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
             "nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)",
-            "de": "Aktiviert die LED-Zustandsanzeige, um anzuzeigen, ob der Schalter EIN (lila) oder AUS (blau) ist. \nStandard: Aktiviert (ausgewählt)"
+            "de": "Aktiviert die LED-Zustandsanzeige, um anzuzeigen, ob der Schalter EIN (lila) oder AUS (blau) ist. \nStandard: Aktiviert (ausgewählt)",
+            "da": "Aktivér LED-statusindikationen for at vise, om kontakten er TIL (lilla) eller FRA (blå). \nStandard: Aktiveret (afkrydset)",
+            "es": "Habilita la indicación de estado LED para mostrar si el interruptor está ENCENDIDO (Púrpura) o APAGADO (Azul). \nPredeterminado: habilitado (marcado)",
+            "fr": "Activez l'indication d'état LED pour montrer si l'interrupteur est ALLUMÉ (Violet) ou ÉTEINT (Bleu). \nPar défaut : Activé (coché)",
+            "it": "Abilita l'indicazione dello stato LED per mostrare se l'interruttore è ACCESSO (Viola) o SPENTO (Blu). \nPredefinito: Abilitato (selezionato)",
+            "no": "Aktiver LED-statusindikasjon for å vise om bryteren er PÅ (Lilla) eller AV (Blå). \nStandard: Aktivert (avmerket)",
+            "sv": "Aktivera LED-statusindikering för att visa om strömbrytaren är PÅ (Lila) eller AV (Blå). \nStandard: Aktiverad (markerad)",
+            "pl": "Włącz wskaźnik stanu LED, aby pokazać, czy przełącznik jest WŁĄCZONY (Fioletowy) czy WYŁĄCZONY (Niebieski). \nDomyślnie: Włączone (zaznaczone)",
+            "ru": "Включить индикатор состояния светодиода, чтобы показать, вкл. ли переключатель (Фиолетовый) или выкл. (Синий). \nПо умолчанию: Включено (отмечено)",
+            "ko": "LED 상태 표시기를 활성화하여 스위치가 켜져 있음(보라색) 또는 꺼짐(파란색)을 표시합니다. \n기본값: 활성화됨 (선택됨)"
           }
         },
         {
@@ -6708,13 +6745,31 @@
           "label": {
             "en": "Restore state after power loss",
             "nl": "Herstel toestand bij spanningsuitval",
-            "de": "Zustand nach Stromausfall wiederherstellen"
+            "de": "Zustand nach Stromausfall wiederherstellen",
+            "da": "Gendan tilstand efter strømsvigt",
+            "es": "Restaurar estado después de pérdida de energía",
+            "fr": "Restaurer l'état après coupure de courant",
+            "it": "Ripristina stato dopo interruzione di corrente",
+            "no": "Gjenopprett tilstand etter strømbrudd",
+            "sv": "Återställ tillstånd efter strömavbrott",
+            "pl": "Przywróć stan po utracie zasilania",
+            "ru": "Восстановить состояние после потери питания",
+            "ko": "전원 차단 후 상태 복원"
           },
           "value": true,
           "hint": {
             "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
             "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)",
-            "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn es aktiviert (ausgewählt) ist, oder bleibt ausgeschaltet, wenn es deaktiviert ist (nicht ausgewählt).\nStandard: aktiviert = ausgewählt)."
+            "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn es aktiviert (ausgewählt) ist, oder bleibt ausgeschaltet, wenn es deaktiviert ist (nicht ausgewählt).\nStandard: aktiviert = ausgewählt).",
+            "da": "Efter strømsvigt vil relæet skifte til sidst kendte tilstand, hvis det er aktiveret (afkrydset) eller forblive slukket, hvis det er deaktiveret (ikke afkrydset).\nStandard: aktiveret = afkrydset)",
+            "es": "Después de la pérdida de energía, el relé cambiará al último estado conocido si está habilitado (marcado) o permanecerá apagado si está deshabilitado (desmarcado).\nPredeterminado: habilitado = marcado)",
+            "fr": "Après une coupure de courant, le relais passera à l'état dernier connu s'il est activé (coché) ou restera éteint s'il est désactivé (non coché).\nPar défaut : activé = coché)",
+            "it": "Dopo un'interruzione di corrente, il relè verrà commutato allo stato ultimo noto se abilitato (selezionato) o resterà spento se disabilitato (deselezionato).\nPredefinito: abilitato = selezionato)",
+            "no": "Etter strømbrudd vil reléet bytte til sist kjente tilstand hvis aktivert (avmerket) eller forbli av hvis deaktivert (ikke avmerket).\nStandard: aktivert = avmerket)",
+            "sv": "Efter strömavbrott kommer reläet att växla till det senast kända tillståndet om det är aktiverat (markerat) eller förbli av om det är inaktiverat (ej markerat).\nStandard: aktiverat = markerat)",
+            "pl": "Po utracie zasilania przekaźnik przełączy się na ostatni znany stan, jeśli jest włączony (zaznaczony) lub pozostanie wyłączony, jeśli jest wyłączony (niezaznaczony).\nDomyślnie: włączony = zaznaczone)",
+            "ru": "После потери питания реле переключится на последнее известное состояние, если оно включено (отмечено), или останется выключенным, если оно выключено (не отмечено).\nПо умолчанию: включено = отмечено)",
+            "ko": "전원 차단 후 릴레이가 마지막으로 알려진 상태로 전환되며, 활성화된 경우(선택됨) 그렇지 않으면 꺼집니다(선택되지 않음).\n기본값: 활성화됨 = 선택됨)"
           }
         }
       ]
@@ -6834,13 +6889,32 @@
           "type": "checkbox",
           "label": {
             "en": "Touch Switch LED enable",
-            "nl": "Touch Switch LED Aan"
+            "nl": "Touch Switch LED Aan",
+            "da": "Aktiver Touch Switch LED",
+            "de": "Touch-Steuerung-LED aktivieren",
+            "es": "Habilitar LED del interruptor táctil",
+            "fr": "Activer LED de l'interrupteur tactile",
+            "it": "Abilita LED interruttore touch",
+            "no": "Aktiver berøringsbryterens LED",
+            "sv": "Aktivera Touch Switch LED",
+            "pl": "Włącz diodę LED przełącznika dotykowego",
+            "ru": "Включить сенсорный переключатель LED",
+            "ko": "터치 스위치 LED 활성화"
           },
           "value": true,
           "hint": {
             "en": "Enable or disable the Touch Switch LED, highlighting blue when enabled. \nDefault: Enabled (checked)",
             "nl": "In of uitschakelen van de Touch Switch LED, blauw oplichtend wanneer ingeschakeld. \nStandaard: ingeschakeld (checked)",
-            "de": "Aktiviert oder deaktiviert die Touch-Steuerung-LED. Leuchtet blau wenn aktiviert. \nStandard: Aktiviert (ausgewählt)"
+            "de": "Aktiviert oder deaktiviert die Touch-Steuerung-LED. Leuchtet blau wenn aktiviert. \nStandard: Aktiviert (ausgewählt)",
+            "da": "Aktiver eller deaktiver Touch Switch LED, der lyser blåt, når den er aktiveret. \nStandard: Aktiveret (afkrydset)",
+            "es": "Habilita o deshabilita el LED del interruptor táctil, iluminándose en azul cuando está habilitado. \nPredeterminado: Habilitado (marcado)",
+            "fr": "Activez ou désactivez la LED de l'interrupteur tactile, s'allumant en bleu lorsqu'elle est activée. \nPar défaut : Activé (coché)",
+            "it": "Abilita o disabilita il LED dell'interruttore touch, evidenziando in blu quando è abilitato. \nPredefinito: Abilitato (selezionato)",
+            "no": "Aktiver eller deaktiver berøringsbryterens LED, som lyser blått når aktivert. \nSom standard: Aktivert (avkrysset)",
+            "sv": "Aktivera eller inaktivera Touch Switch LED, som lyser blått när den är aktiverad. \nStandard: Aktiverad (markerad)",
+            "pl": "Włącz lub wyłącz diodę LED przełącznika dotykowego, podświetlaną na niebiesko, gdy jest aktywna. \nDomyślnie: Włączona (zaznaczona)",
+            "ru": "Включите или отключите светодиод сенсорного переключателя, подсвечивающий синим цветом, когда он включен. \nПо умолчанию: Включено (выбрано)",
+            "ko": "터치 스위치 LED를 활성화하거나 비활성화하고, 활성화 시 파란색으로 강조 표시됩니다. \n기본값:활성화됨(체크됨)"
           }
         },
         {
@@ -6853,13 +6927,31 @@
           "label": {
             "en": "Touch Switch LED state",
             "nl": "Touch Switch LED status",
-            "de": "Touch-Steuerung-LED Status"
+            "de": "Touch-Steuerung-LED Status",
+            "da": "Touch Switch LED tilstand",
+            "es": "Estado del LED del interruptor táctil",
+            "fr": "État de la LED de l'interrupteur tactile",
+            "it": "Stato del LED dell'interruttore touch",
+            "no": "Berøringsbryterens LED-status",
+            "sv": "Touch Switch LED-status",
+            "pl": "Stan diody LED przełącznika dotykowego",
+            "ru": "Состояние светодиода сенсорного переключателя",
+            "ko": "터치 스위치 LED 상태"
           },
           "value": true,
           "hint": {
             "en": "Enable the LED state indication to show if the switch is ON (Purple) or OFF (Blue). \nDefault: Enabled (checked)",
             "nl": "Schakel de LED status indicatie in waarmee aangegeven wordt dat de schakelaar AAN (Paars) of UIT (Blauw) staat. \nStandaard: ingeschakeld (checked)",
-            "de": "Aktiviert die LED-Zustandsanzeige, um anzuzeigen, ob der Schalter EIN (lila) oder AUS (blau) ist. \nStandard: Aktiviert (ausgewählt)"
+            "de": "Aktiviert die LED-Zustandsanzeige, um anzuzeigen, ob der Schalter EIN (lila) oder AUS (blau) ist. \nStandard: Aktiviert (ausgewählt)",
+            "da": "Aktiver LED-tilstandsindikationen for at vise, om kontakten er TÆNDT (Lilla) eller SLUKKET (Blå). \nStandard: Aktiveret (afkrydset)",
+            "es": "Habilita la indicación del estado del LED para mostrar si el interruptor está ENCENDIDO (púrpura) o APAGADO (azul). \nPredeterminado: Habilitado (marcado)",
+            "fr": "Activez l'indication d'état de la LED pour indiquer si l'interrupteur est ALLUMÉ (violet) ou ÉTEINT (bleu). \nPar défaut : Activé (coché)",
+            "it": "Abilita l'indicazione dello stato del LED per mostrare se l'interruttore è ACCESO (viola) o SPENTO (blu). \nPredefinito: Abilitato (selezionato)",
+            "no": "Aktiver LED-statusindikasjonen for å vise om bryteren er PÅ (lilla) eller AV (blå). \nSom standard: Aktivert (avkrysset)",
+            "sv": "Aktivera LED-statusindikationen för att visa om brytaren är PÅ (lila) eller AV (blå). \nStandard: Aktiverad (markerad)",
+            "pl": "Włącz wskaźnik stanu diody LED, aby pokazać, czy przełącznik jest WŁĄCZONY (fioletowy) czy WYŁĄCZONY (niebieski). \nDomyślnie: Włączony (zaznaczony)",
+            "ru": "Включите индикацию состояния светодиода, чтобы показать, включен (фиолетовый) или выключен (синий) переключатель. \nПо умолчанию: Включено (выбрано)",
+            "ko": "스위치가 켜져 있는지(보라색) 꺼져 있는지(파란색)를 보여주기 위해 LED 상태 표시를 활성화합니다. \n기본값: 활성화됨(체크됨)"
           }
         },
         {
@@ -6872,13 +6964,31 @@
           "label": {
             "en": "Restore state after power loss",
             "nl": "Herstel toestand bij spanningsuitval",
-            "de": "Zustand nach Stromausfall wiederherstellen"
+            "de": "Zustand nach Stromausfall wiederherstellen",
+            "da": "Gendan tilstand efter strømtab",
+            "es": "Restaurar estado después de pérdida de energía",
+            "fr": "Restaurer l'état après une coupure de courant",
+            "it": "Ripristina stato dopo interruzione di corrente",
+            "no": "Gjenopprett status etter strømbrudd",
+            "sv": "Återställ tillstånd efter strömavbrott",
+            "pl": "Przywróć stan po utracie zasilania",
+            "ru": "Восстановить состояние после потери питания",
+            "ko": "전원 손실 후 상태 복원"
           },
           "value": true,
           "hint": {
             "en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
             "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)",
-            "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn es aktiviert (ausgewählt) ist, oder bleibt ausgeschaltet, wenn es deaktiviert ist (nicht ausgewählt).\nStandard: aktiviert = ausgewählt)."
+            "de": "Nach einem Stromausfall wechselt das Relais in den zuletzt bekannten Zustand, wenn es aktiviert (ausgewählt) ist, oder bleibt ausgeschaltet, wenn es deaktiviert ist (nicht ausgewählt).\nStandard: aktiviert = ausgewählt).",
+            "da": "Efter et strømtab vil relæet skifte til sidst kendte tilstand, hvis det er aktiveret (afkrydset), eller forblive slukket, hvis det er deaktiveret (ikke afkrydset).\nStandard: aktiveret = afkrydset)",
+            "es": "Después de la pérdida de energía, el relé cambiará al último estado conocido si está habilitado (marcado) o permanecerá apagado si está deshabilitado (no marcado).\nPredeterminado: habilitado = marcado)",
+            "fr": "Après une coupure de courant, le relais passera à l'état connu le plus récent si activé (coché) ou restera éteint si désactivé (non coché).\nPar défaut : activé = coché)",
+            "it": "Dopo un'interruzione di corrente, il relè passerà all'ultimo stato conosciuto se abilitato (selezionato), o rimarrà spento se disabilitato (non selezionato).\nPredefinito: abilitato = selezionato)",
+            "no": "Etter strømbrudd vil reléet bytte til siste kjente tilstand hvis aktivert (avkrysset) eller forbli av hvis deaktivert (ikke avkrysset).\nSom standard: aktivert = avkrysset)",
+            "sv": "Efter strömavbrott kommer reläet att byta till senast kända tillstånd om aktiverat (markerad) eller förbli avstängd om inaktiverat (ej markerad).\nStandard: aktiverad = markerad)",
+            "pl": "Po utracie zasilania przekaźnik przełączy się na ostatnio znany stan, jeśli jest włączony (zaznaczony) lub pozostanie wyłączony, jeśli jest wyłączony (niezaznaczony).\nDomyślnie: włączony = zaznaczony)",
+            "ru": "После потери питания реле вернется в последнее известное состояние, если включено (выбрано), или останется выключенным, если отключено (не выбрано).\nПо умолчанию: включено = выбрано)",
+            "ko": "전원 손실 후 릴레이가 활성화된 경우(체크됨) 마지막으로 알려진 상태로 전환되거나 비활성화된 경우(체크 해제) 꺼진 상태로 유지됩니다.\n기본값: 활성화됨 = 체크됨)"
           }
         }
       ]
@@ -8244,7 +8354,7 @@
             "en": "Press the code button inside your NEO Flood Sensor three times",
             "nl": "Druk driemaal op de code knop binnen in de NEO Flood Sensor",
             "de": "Drück  dreimal die Code-Taste im NEO Wasser Sensor",
-            "da": "Tryk tre gange på kodeknappen i din NEO Oversvømmelsessensor",
+            "da": "Tryk tre gange på kodeknappen inde i din NEO Oversvømmelsessensor",
             "es": "Presiona el botón de código dentro de tu Sensor de Inundación NEO tres veces",
             "fr": "Appuyez trois fois sur le bouton de code à l'intérieur de votre Capteur d'Inondation NEO",
             "it": "Premi tre volte il pulsante del codice all'interno del tuo Sensore di Allagamento NEO",
@@ -8261,11 +8371,11 @@
             "en": "Press the code button inside your NEO Flood Sensor three times",
             "nl": "Druk driemaal op de code knop binnen in de NEO Flood Sensor",
             "de": "Drück  dreimal die Code-Taste im NEO Wasser Sensor",
-            "da": "Tryk tre gange på kodeknappen i din NEO Oversvømmelsessensor",
+            "da": "Tryk tre gange på kodeknappen inde i din NEO Oversvømmelsessensor",
             "es": "Presiona el botón de código dentro de tu Sensor de Inundación NEO tres veces",
             "fr": "Appuyez trois fois sur le bouton de code à l'intérieur de votre Capteur d'Inondation NEO",
             "it": "Premi tre volte il pulsante del codice all'interno del tuo Sensore di Allagamento NEO",
-            "no": "Trykk tre ganger på kodeknappen inni NEO Flomsensoren din",
+            "no": "Trykk tre gange på kodeknappen inni NEO Flomsensoren din",
             "sv": "Tryck tre gånger på kodknappen inuti din NEO Översvämningssensor",
             "pl": "Naciśnij trzykrotnie przycisk kodowy wewnątrz czujnika powodziowego NEO",
             "ru": "Нажмите три раза на кнопку кода внутри вашего датчика потопа NEO",

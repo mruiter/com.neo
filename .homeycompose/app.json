@@ -19,18 +19,18 @@
   "compatibility": ">=10.0.0",
   "brandColor": "#03befc",
   "description": {
-    "en": "NEO Coolcam Z-Wave device support",
-    "nl": "NEO Coolcam Z-Wave device ondersteuning",
-    "da": "NEO Coolcam Z-Wave enhedssupport",
-    "de": "NEO Coolcam Z-Wave Geräteunterstützung",
-    "es": "Soporte para dispositivos NEO Coolcam Z-Wave",
-    "fr": "Support pour appareil NEO Coolcam Z-Wave",
-    "it": "Supporto per dispositivi NEO Coolcam Z-Wave",
-    "no": "NEO Coolcam Z-Wave enhetstøtte",
-    "sv": "NEO Coolcam Z-Wave enhetssupport",
-    "pl": "Wsparcie dla urządzeń NEO Coolcam Z-Wave",
-    "ru": "Поддержка устройств NEO Coolcam Z-Wave",
-    "ko": "NEO Coolcam Z-Wave 장치 지원"
+    "en": "Works perfect, only costs less",
+    "nl": "Werkt perfect, kost alleen minder",
+    "da": "Fungerer perfekt, koster bare mindre",
+    "de": "Funktioniert perfekt, kostet nur weniger",
+    "es": "Funciona perfecto, solo cuesta menos",
+    "fr": "Fonctionne parfaitement, coûte juste moins cher",
+    "it": "Funziona perfettamente, costa solo meno",
+    "no": "Fungerer perfekt, koster bare mindre",
+    "sv": "Fungerar perfekt, kostar bara mindre",
+    "pl": "Działa doskonale, kosztuje tylko mniej",
+    "ru": "Работает идеально, просто стоит дешевле",
+    "ko": "완벽하게 작동하며 비용이 적게 듭니다"
   },
   "tags": {
     "en": [

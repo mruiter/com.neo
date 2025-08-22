@@ -1,7 +1,3 @@
-Neo Coolcam Z-Wave device support
-
-
-
 Supported devices with most common parameters:
 
 
