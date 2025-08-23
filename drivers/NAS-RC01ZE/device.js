@@ -77,7 +77,8 @@ class KeyFob_RC01Z extends ZwaveDevice {
           PreviousSequenceNo = rawReport['Sequence Number'];
           this.log('Triggering sequence:', PreviousSequenceNo, 'remoteValue', remoteValue);
           // Trigger the trigger card with 2 dropdown options
-          triggerRC_scene.trigger(this, triggerRC_scene.getArgumentValues, remoteValue);
+          // Use remoteValue for tokens and state
+          triggerRC_scene.trigger(this, remoteValue, remoteValue);
         }
       }
     });
