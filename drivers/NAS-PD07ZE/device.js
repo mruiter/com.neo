@@ -61,8 +61,10 @@ class MultiSensor_PD07Z extends ZwaveDevice {
       }
 
       const hasTemperature = supported.includes('Temperature') || supported.includes(1);
-      if (hasTemperature && !this.hasCapability('measure_temperature')) {
-        await this.addCapability('measure_temperature');
+      if (hasTemperature) {
+        if (!this.hasCapability('measure_temperature')) {
+          await this.addCapability('measure_temperature');
+        }
         this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
           getOpts: {
             getOnStart: false,
@@ -71,8 +73,10 @@ class MultiSensor_PD07Z extends ZwaveDevice {
       }
 
       const hasLuminance = supported.includes('Luminance') || supported.includes(3);
-      if (hasLuminance && !this.hasCapability('measure_luminance')) {
-        await this.addCapability('measure_luminance');
+      if (hasLuminance) {
+        if (!this.hasCapability('measure_luminance')) {
+          await this.addCapability('measure_luminance');
+        }
         this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL', {
           getOpts: {
             getOnStart: false,
@@ -84,8 +88,10 @@ class MultiSensor_PD07Z extends ZwaveDevice {
         supported.includes('Relative humidity')
         || supported.includes('Humidity')
         || supported.includes(5);
-      if (hasHumidity && !this.hasCapability('measure_humidity')) {
-        await this.addCapability('measure_humidity');
+      if (hasHumidity) {
+        if (!this.hasCapability('measure_humidity')) {
+          await this.addCapability('measure_humidity');
+        }
         this.registerCapability('measure_humidity', 'SENSOR_MULTILEVEL', {
           getOpts: {
             getOnStart: false,
