@@ -1,9 +1,9 @@
 'use strict';
 
 const Homey = require('homey');
-const { ZwaveDevice } = require('homey-zwavedriver');
+const LoggingZwaveDevice = require('../../lib/LoggingZwaveDevice');
 
-class KeyFob_RC01Z extends ZwaveDevice {
+class KeyFob_RC01Z extends LoggingZwaveDevice {
   async onMeshInit() {
     let PreviousSequenceNo = 'empty';
 

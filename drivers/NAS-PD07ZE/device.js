@@ -23,9 +23,9 @@ class MultiSensor_PD07Z extends LoggingZwaveDevice {
     this.registerCapability('measure_battery', 'BATTERY');
     this.registerCapability('alarm_motion', 'NOTIFICATION');
     this.registerCapability('alarm_tamper', 'NOTIFICATION');
-    this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', { getOpts: { getOnStart: false } });
-    this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL', { getOpts: { getOnStart: false } });
-    this.registerCapability('measure_humidity', 'SENSOR_MULTILEVEL', { getOpts: { getOnStart: false } });
+    this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL');
+    this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL');
+    this.registerCapability('measure_humidity', 'SENSOR_MULTILEVEL');
   }
 }
 

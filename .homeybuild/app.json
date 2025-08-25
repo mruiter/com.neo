@@ -16,7 +16,7 @@
     "ru": "NEO Coolcam Z-Wave",
     "ko": "NEO Coolcam Z-Wave"
   },
-  "version": "3.0.11",
+  "version": "3.0.12",
   "compatibility": ">=10.0.0",
   "brandColor": "#03befc",
   "description": {
@@ -3884,7 +3884,12 @@
         ]
       },
       "capabilities": [
-        "measure_battery"
+        "measure_battery",
+        "alarm_motion",
+        "alarm_tamper",
+        "measure_temperature",
+        "measure_luminance",
+        "measure_humidity"
       ],
       "images": {
         "large": "/drivers/NAS-PD01ZE/assets/images/large.jpg",
@@ -4533,7 +4538,12 @@
         ]
       },
       "capabilities": [
-        "measure_battery"
+        "measure_battery",
+        "alarm_motion",
+        "alarm_tamper",
+        "measure_temperature",
+        "measure_luminance",
+        "measure_humidity"
       ],
       "images": {
         "large": "/drivers/NAS-PD02ZE/assets/images/large.jpg",
@@ -5177,7 +5187,12 @@
         ]
       },
       "capabilities": [
-        "measure_battery"
+        "measure_battery",
+        "alarm_motion",
+        "alarm_tamper",
+        "measure_temperature",
+        "measure_luminance",
+        "measure_humidity"
       ],
       "images": {
         "large": "/drivers/NAS-PD02ZE/assets/images/large.jpg",
@@ -5778,7 +5793,12 @@
         ]
       },
       "capabilities": [
-        "measure_battery"
+        "measure_battery",
+        "alarm_motion",
+        "alarm_tamper",
+        "measure_temperature",
+        "measure_luminance",
+        "measure_humidity"
       ],
       "images": {
         "large": "/drivers/NAS-PD07ZE/assets/images/large.jpg",
