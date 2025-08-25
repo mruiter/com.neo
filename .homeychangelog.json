@@ -31,5 +31,8 @@
   },
   "3.0.12": {
     "en": "Fixed issue with NAS-RC01ZE and Dynamic Capabilities for the PD series"
+  },
+  "3.0.13": {
+    "en": "All pirs now have all capabilies that could be available even if the pir version does not have it enabled on its revision"
   }
 }
