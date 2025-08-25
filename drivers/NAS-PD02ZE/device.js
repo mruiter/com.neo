@@ -4,6 +4,11 @@ const Homey = require('homey');
 const { ZwaveDevice } = require('homey-zwavedriver');
 
 class MultiSensor_PD02Z extends ZwaveDevice {
+  async addCapabilityIfNotExists(capabilityId) {
+    if (!this.hasCapability(capabilityId)) {
+      await this.addCapability(capabilityId);
+    }
+  }
 
   async onNodeInit() {
     // enable debugging
@@ -22,18 +27,14 @@ class MultiSensor_PD02Z extends ZwaveDevice {
       commandClasses.COMMAND_CLASS_NOTIFICATION
       || commandClasses.COMMAND_CLASS_SENSOR_BINARY
     ) {
-      if (!this.hasCapability('alarm_motion')) {
-        await this.addCapability('alarm_motion');
-      }
+      await this.addCapabilityIfNotExists('alarm_motion');
       const cc = commandClasses.COMMAND_CLASS_NOTIFICATION
         ? 'NOTIFICATION'
         : 'SENSOR_BINARY';
       this.registerCapability('alarm_motion', cc);
 
       if (commandClasses.COMMAND_CLASS_NOTIFICATION) {
-        if (!this.hasCapability('alarm_tamper')) {
-          await this.addCapability('alarm_tamper');
-        }
+        await this.addCapabilityIfNotExists('alarm_tamper');
         this.registerCapability('alarm_tamper', 'NOTIFICATION');
       }
     }
@@ -62,17 +63,13 @@ class MultiSensor_PD02Z extends ZwaveDevice {
 
       const hasTemperature = supported.includes('Temperature') || supported.includes(1);
       if (hasTemperature) {
-        if (!this.hasCapability('measure_temperature')) {
-          await this.addCapability('measure_temperature');
-        }
+        await this.addCapabilityIfNotExists('measure_temperature');
         this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL');
       }
 
       const hasLuminance = supported.includes('Luminance') || supported.includes(3);
       if (hasLuminance) {
-        if (!this.hasCapability('measure_luminance')) {
-          await this.addCapability('measure_luminance');
-        }
+        await this.addCapabilityIfNotExists('measure_luminance');
         this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL');
       }
 
@@ -81,9 +78,7 @@ class MultiSensor_PD02Z extends ZwaveDevice {
         || supported.includes('Humidity')
         || supported.includes(5);
       if (hasHumidity) {
-        if (!this.hasCapability('measure_humidity')) {
-          await this.addCapability('measure_humidity');
-        }
+        await this.addCapabilityIfNotExists('measure_humidity');
         this.registerCapability('measure_humidity', 'SENSOR_MULTILEVEL');
       }
     }
