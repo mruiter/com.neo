@@ -157,7 +157,12 @@
     ]
   },
   "capabilities": [
-    "measure_battery"
+    "measure_battery",
+    "alarm_motion",
+    "alarm_tamper",
+    "measure_temperature",
+    "measure_luminance",
+    "measure_humidity"
   ],
   "images": {
     "large": "/drivers/NAS-PD01ZE/assets/images/large.jpg",

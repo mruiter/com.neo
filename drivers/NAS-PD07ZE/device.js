@@ -7,6 +7,9 @@ class MultiSensor_PD07Z extends ZwaveDevice {
   async addCapabilityIfNotExists(capabilityId) {
     if (!this.hasCapability(capabilityId)) {
       await this.addCapability(capabilityId);
+      this.log('Added capability', capabilityId);
+    } else {
+      this.log('Capability already exists', capabilityId);
     }
   }
 
@@ -21,6 +24,7 @@ class MultiSensor_PD07Z extends ZwaveDevice {
     this.registerCapability('measure_battery', 'BATTERY');
 
     const commandClasses = this.node.CommandClass || {};
+    this.log('Node command classes', Object.keys(commandClasses));
 
     // notification based capabilities
     if (
@@ -61,6 +65,8 @@ class MultiSensor_PD07Z extends ZwaveDevice {
         supported = multilevel.supportedSensorTypes;
       }
 
+      this.log('Supported multilevel sensor types', supported);
+
       const hasTemperature = supported.includes('Temperature') || supported.includes(1);
       if (hasTemperature) {
         await this.addCapabilityIfNotExists('measure_temperature');
@@ -94,6 +100,8 @@ class MultiSensor_PD07Z extends ZwaveDevice {
         });
       }
     }
+
+    this.log('Device capabilities after init', this.getCapabilities());
   }
 }
 module.exports = MultiSensor_PD07Z;
