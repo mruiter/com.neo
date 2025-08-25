@@ -5,6 +5,21 @@ const LoggingZwaveDevice = require('../../lib/LoggingZwaveDevice');
 
 class MultiSensor_PD01Z extends LoggingZwaveDevice {
   async onNodeInit() {
+    const capabilities = [
+      'measure_battery',
+      'alarm_motion',
+      'alarm_tamper',
+      'measure_temperature',
+      'measure_luminance',
+      'measure_humidity',
+    ];
+
+    for (const capability of capabilities) {
+      if (!this.hasCapability(capability)) {
+        await this.addCapability(capability);
+      }
+    }
+
     this.registerCapability('measure_battery', 'BATTERY');
     this.registerCapability('alarm_motion', 'NOTIFICATION');
     this.registerCapability('alarm_tamper', 'NOTIFICATION');
