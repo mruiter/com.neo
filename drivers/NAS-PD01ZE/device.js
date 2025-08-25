@@ -1,9 +1,9 @@
 'use strict';
 
 const Homey = require('homey');
-const { ZwaveDevice } = require('homey-zwavedriver');
+const LoggingZwaveDevice = require('../../lib/LoggingZwaveDevice');
 
-class MultiSensor_PD01Z extends ZwaveDevice {
+class MultiSensor_PD01Z extends LoggingZwaveDevice {
   async addCapabilityIfNotExists(capabilityId) {
     if (!this.hasCapability(capabilityId)) {
       await this.addCapability(capabilityId);
