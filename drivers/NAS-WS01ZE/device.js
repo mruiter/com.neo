@@ -1,9 +1,9 @@
 'use strict';
 
 const Homey = require('homey');
-const { ZwaveDevice } = require('homey-zwavedriver');
+const LoggingZwaveDevice = require('../../lib/LoggingZwaveDevice');
 
-class WaterSensor_WS01 extends ZwaveDevice {
+class WaterSensor_WS01 extends LoggingZwaveDevice {
 
   async onNodeInit() {
     // enable debugging

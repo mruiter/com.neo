@@ -1,9 +1,9 @@
 'use strict';
 
 const Homey = require('homey');
-const { ZwaveDevice } = require('homey-zwavedriver');
+const LoggingZwaveDevice = require('../../lib/LoggingZwaveDevice');
 
-class WallSwitchSingle_SC01ZE extends ZwaveDevice {
+class WallSwitchSingle_SC01ZE extends LoggingZwaveDevice {
   async onNodeInit() {
     // enable debugging
     // this.enableDebug();
