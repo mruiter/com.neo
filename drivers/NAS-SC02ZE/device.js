@@ -22,10 +22,16 @@ class WallSwitchDual_SC02ZE extends LoggingZwaveDevice {
 
     //===== Led On/Off
     let SC02ZE_LED_mode_run_listener = async (args) => {
-      this.log('FlowCardAction Set Led Mode to: ', args.backlight);
-      this.configurationSet({
-        id: 'backlight'
-      }, args.backlight);
+      try {
+        this.log('FlowCardAction Set Led Mode to: ', args.backlight);
+        await this.configurationSet({
+          id: 'backlight'
+        }, args.backlight);
+        return true;
+      } catch (err) {
+        this.error('failed_to_set_led_mode', err);
+        throw new Error('Z-Wave device did not respond');
+      }
     };
     this.homey.flow.getActionCard('SC02ZE_switch_LED')
       .registerRunListener(SC02ZE_LED_mode_run_listener);
