@@ -44,12 +44,18 @@ class Siren_AB01Z extends LoggingZwaveDevice {
     //===== CONTROL Binary Switch
     // define FlowCardAction to set the Switch
     let AB01ZE_alarm_state_run_listener = async (args) => {
-      //this.log('FlowCardAction Set LED level for: ', args.alarm_state);
-      let result = await args.device.node.CommandClass.COMMAND_CLASS_SWITCH_BINARY.SWITCH_BINARY_SET({
-        'Switch Value': args.alarm_state
-      });
-      //this.log("outcome: ", result)
-      if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
+      try {
+        //this.log('FlowCardAction Set LED level for: ', args.alarm_state);
+        const result = await args.device.node.CommandClass.COMMAND_CLASS_SWITCH_BINARY.SWITCH_BINARY_SET({
+          'Switch Value': args.alarm_state
+        });
+        //this.log("outcome: ", result)
+        if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
+        return true;
+      } catch (err) {
+        this.error('failed_to_set_alarm_state', err);
+        throw new Error('Z-Wave device did not respond');
+      }
     };
 
     this.homey.flow.getActionCard('AB01ZE_alarm_state')
@@ -73,91 +79,60 @@ class Siren_AB01Z extends LoggingZwaveDevice {
       });
     } else this.error('missing_alarm_siren_card_in_manifest');
 
+    const setConfig = async (id, value, label) => {
+      try {
+        await this.configurationSet({ id }, value);
+        return true;
+      } catch (err) {
+        this.error(`failed_to_set_${label}`, err);
+        throw new Error('Z-Wave device did not respond');
+      }
+    };
+
     // Cards that change device settings
     //===== CONTROL Siren Alarm/Doorbell mode
-    let AB01ZE_alarm_mode_run_listener = async (args) => {
-      //this.log('FlowCardAction Set Alarm Mode to: ', args.alarm_mode);
-      this.configurationSet({
-        id: 'alarmordoorbell'
-      }, args.alarm_mode);
-    };
+    let AB01ZE_alarm_mode_run_listener = async (args) => setConfig('alarmordoorbell', args.alarm_mode, 'alarm_mode');
     this.homey.flow.getActionCard('AB01ZE_alarm_mode')
       .registerRunListener(AB01ZE_alarm_mode_run_listener);
 
     //===== CONTROL Siren Alarm Tune
-    let AB01ZE_alarm_tune_run_listener = async (args) => {
-      //this.log('FlowCardAction Set Alarm Tune to: ', args.alarm_tune);
-      this.configurationSet({
-        id: 'alarmtune'
-      }, args.alarm_tune);
-    };
+    let AB01ZE_alarm_tune_run_listener = async (args) => setConfig('alarmtune', args.alarm_tune, 'alarm_tune');
     this.homey.flow.getActionCard('AB01ZE_alarm_tune')
       .registerRunListener(AB01ZE_alarm_tune_run_listener);
 
 
     //===== CONTROL Siren Doorbell Tune
-    let AB01ZE_doorbell_tune_run_listener = async (args) => {
-      //this.log('FlowCardAction Set Doorbell Tune to: ', args.doorbell_tune);
-      this.configurationSet({
-        id: 'doorbelltune'
-      }, args.doorbell_tune);
-    };
+    let AB01ZE_doorbell_tune_run_listener = async (args) => setConfig('doorbelltune', args.doorbell_tune, 'doorbell_tune');
     this.homey.flow.getActionCard('AB01ZE_doorbell_tune')
       .registerRunListener(AB01ZE_doorbell_tune_run_listener);
 
     //===== CONTROL Siren Volume
-    let AB01ZE_siren_volume_run_listener = async (args) => {
-      //this.log('FlowCardAction Set Siren volume to: ', args.siren_volume);
-      this.configurationSet({
-        id: 'alarmvolume'
-      }, args.siren_volume);
-    };
+    let AB01ZE_siren_volume_run_listener = async (args) => setConfig('alarmvolume', args.siren_volume, 'siren_volume');
     this.homey.flow.getActionCard('AB01ZE_siren_volume')
       .registerRunListener(AB01ZE_siren_volume_run_listener);
 
     //===== CONTROL Doorbell Volume
-    let AB01ZE_doorbell_volume_run_listener = async (args) => {
-      //this.log('FlowCardAction Set Doorbell volume to: ', args.doorbell_volume);
-      this.configurationSet({
-        id: 'doorbellvolume'
-      }, args.doorbell_volume);
-    };
+    let AB01ZE_doorbell_volume_run_listener = async (args) => setConfig('doorbellvolume', args.doorbell_volume, 'doorbell_volume');
     this.homey.flow.getActionCard('AB01ZE_doorbell_volume')
       .registerRunListener(AB01ZE_doorbell_volume_run_listener);
 
     //===== CONTROL Alarm Duration Time
-    let AB01ZE_alarm_time_run_listener = async (args) => {
-      this.configurationSet({
-        id: 'alarmsoundtime'
-      }, args.alarm_time);
-    };
+    let AB01ZE_alarm_time_run_listener = async (args) => setConfig('alarmsoundtime', args.alarm_time, 'alarm_time');
     this.homey.flow.getActionCard('AB01ZE_alarm_time')
       .registerRunListener(AB01ZE_alarm_time_run_listener);
 
     //===== CONTROL Doorbell Duration Time
-    let AB01ZE_doorbell_time_run_listener = async (args) => {
-      this.configurationSet({
-        id: 'doorbellsoundtime'
-      }, args.doorbell_time);
-    };
+    let AB01ZE_doorbell_time_run_listener = async (args) => setConfig('doorbellsoundtime', args.doorbell_time, 'doorbell_time');
     this.homey.flow.getActionCard('AB01ZE_doorbell_time')
       .registerRunListener(AB01ZE_doorbell_time_run_listener);
 
     //===== CONTROL Alarm LED
-    let AB01ZE_alarm_led_run_listener = async (args) => {
-      this.configurationSet({
-        id: 'alarmled'
-      }, args.alarm_led_onoff);
-    };
+    let AB01ZE_alarm_led_run_listener = async (args) => setConfig('alarmled', args.alarm_led_onoff, 'alarm_led');
     this.homey.flow.getActionCard('AB01ZE_alarm_led')
       .registerRunListener(AB01ZE_alarm_led_run_listener);
 
     //===== CONTROL Doorbell LED
-    let AB01ZE_doorbell_led_run_listener = async (args) => {
-      this.configurationSet({
-        id: 'doorbellled'
-      }, args.doorbell_led_onoff);
-    };
+    let AB01ZE_doorbell_led_run_listener = async (args) => setConfig('doorbellled', args.doorbell_led_onoff, 'doorbell_led');
     this.homey.flow.getActionCard('AB01ZE_doorbell_led')
       .registerRunListener(AB01ZE_doorbell_led_run_listener);
 
