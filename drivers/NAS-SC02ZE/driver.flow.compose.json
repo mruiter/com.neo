@@ -17,18 +17,18 @@
         "ko": "터치 스위치 LED 설정"
       },
       "titleFormatted": {
-        "en": "Set Touch Switch LED to [[switch_LED_onoff]]",
-        "nl": "Stel Touch Switch LED in op [[switch_LED_onoff]]",
-        "de": "Touch-Steuerung LED auf [[switch_LED_onoff]] einstellen",
-        "da": "Indstil Touch Switch LED til [[switch_LED_onoff]]",
-        "es": "Configurar LED del interruptor táctil a [[switch_LED_onoff]]",
-        "fr": "Régler la LED du commutateur tactile sur [[switch_LED_onoff]]",
-        "it": "Imposta LED interruttore touch su [[switch_LED_onoff]]",
-        "no": "Sett berøringsbryter LED til [[switch_LED_onoff]]",
-        "sv": "Ställ in Touch Switch LED till [[switch_LED_onoff]]",
-        "pl": "Ustaw diodę LED przełącznika dotykowego na [[switch_LED_onoff]]",
-        "ru": "Настроить сенсорную LED на [[switch_LED_onoff]]",
-        "ko": "[[switch_LED_onoff]]로 터치 스위치 LED 설정"
+        "en": "Set Touch Switch LED to [[backlight]]",
+        "nl": "Stel Touch Switch LED in op [[backlight]]",
+        "de": "Touch-Steuerung LED auf [[backlight]] einstellen",
+        "da": "Indstil Touch Switch LED til [[backlight]]",
+        "es": "Configurar LED del interruptor táctil a [[backlight]]",
+        "fr": "Régler la LED du commutateur tactile sur [[backlight]]",
+        "it": "Imposta LED interruttore touch su [[backlight]]",
+        "no": "Sett berøringsbryter LED til [[backlight]]",
+        "sv": "Ställ in Touch Switch LED till [[backlight]]",
+        "pl": "Ustaw diodę LED przełącznika dotykowego na [[backlight]]",
+        "ru": "Настроить сенсорную LED на [[backlight]]",
+        "ko": "[[backlight]]로 터치 스위치 LED 설정"
       },
       "hint": {
         "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
@@ -46,7 +46,7 @@
       },
       "args": [
         {
-          "name": "switch_LED_onoff",
+          "name": "backlight",
           "type": "dropdown",
           "values": [
             {
