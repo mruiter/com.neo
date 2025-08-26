@@ -63,10 +63,11 @@
     },
     "defaultConfiguration": [],
     "associationGroups": [
-      1
+      1,
+      2
     ],
     "associationGroupsMultiChannel": [
-      2
+      3
     ],
     "multiChannelNodes": {
       "2": {
