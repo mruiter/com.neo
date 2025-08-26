@@ -93,8 +93,14 @@ class Wallplug_WR01Z extends LoggingZwaveDevice {
 
 	// define FlowCardAction to reset meter_power
     const WR01Z_reset_meter_run_listener = async args => {
-      const result = await args.device.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
-      if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
+      try {
+        const result = await args.device.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
+        if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
+        return true;
+      } catch (err) {
+        this.error('failed_to_reset_meter', err);
+        throw new Error('Z-Wave device did not respond');
+      }
     };
 
     const actionWR01Z_reset_meter = this.homey.flow
