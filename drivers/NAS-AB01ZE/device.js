@@ -52,7 +52,8 @@ class Siren_AB01Z extends LoggingZwaveDevice {
       if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
     };
 
-    let actionAB01ZE_alarm_state = this.homey.flow.getActionCard('AB01ZE_alarm_state');
+    this.homey.flow.getActionCard('AB01ZE_alarm_state')
+      .registerRunListener(AB01ZE_alarm_state_run_listener);
 
     // Cards that responde to the siren activating / blink icon alarm
     // Register Flow card trigger
@@ -80,7 +81,8 @@ class Siren_AB01Z extends LoggingZwaveDevice {
         id: 'alarmordoorbell'
       }, args.alarm_mode);
     };
-    let actionAB01ZE_alarm_mode = this.homey.flow.getActionCard('AB01ZE_alarm_mode');
+    this.homey.flow.getActionCard('AB01ZE_alarm_mode')
+      .registerRunListener(AB01ZE_alarm_mode_run_listener);
 
     //===== CONTROL Siren Alarm Tune
     let AB01ZE_alarm_tune_run_listener = async (args) => {
@@ -89,7 +91,8 @@ class Siren_AB01Z extends LoggingZwaveDevice {
         id: 'alarmtune'
       }, args.alarm_tune);
     };
-    let actionAB01ZE_alarm_tune = this.homey.flow.getActionCard('AB01ZE_alarm_tune');
+    this.homey.flow.getActionCard('AB01ZE_alarm_tune')
+      .registerRunListener(AB01ZE_alarm_tune_run_listener);
 
 
     //===== CONTROL Siren Doorbell Tune
@@ -99,7 +102,8 @@ class Siren_AB01Z extends LoggingZwaveDevice {
         id: 'doorbelltune'
       }, args.doorbell_tune);
     };
-    let actionAB01ZE_doorbell_tune = this.homey.flow.getActionCard('AB01ZE_doorbell_tune');
+    this.homey.flow.getActionCard('AB01ZE_doorbell_tune')
+      .registerRunListener(AB01ZE_doorbell_tune_run_listener);
 
     //===== CONTROL Siren Volume
     let AB01ZE_siren_volume_run_listener = async (args) => {
@@ -108,7 +112,8 @@ class Siren_AB01Z extends LoggingZwaveDevice {
         id: 'alarmvolume'
       }, args.siren_volume);
     };
-    let actionAB01ZE_siren_volume = this.homey.flow.getActionCard('AB01ZE_siren_volume');
+    this.homey.flow.getActionCard('AB01ZE_siren_volume')
+      .registerRunListener(AB01ZE_siren_volume_run_listener);
 
     //===== CONTROL Doorbell Volume
     let AB01ZE_doorbell_volume_run_listener = async (args) => {
@@ -117,7 +122,44 @@ class Siren_AB01Z extends LoggingZwaveDevice {
         id: 'doorbellvolume'
       }, args.doorbell_volume);
     };
-    let actionAB01ZE_doorbell_volume = this.homey.flow.getActionCard('AB01ZE_doorbell_volume');
+    this.homey.flow.getActionCard('AB01ZE_doorbell_volume')
+      .registerRunListener(AB01ZE_doorbell_volume_run_listener);
+
+    //===== CONTROL Alarm Duration Time
+    let AB01ZE_alarm_time_run_listener = async (args) => {
+      this.configurationSet({
+        id: 'alarmsoundtime'
+      }, args.alarm_time);
+    };
+    this.homey.flow.getActionCard('AB01ZE_alarm_time')
+      .registerRunListener(AB01ZE_alarm_time_run_listener);
+
+    //===== CONTROL Doorbell Duration Time
+    let AB01ZE_doorbell_time_run_listener = async (args) => {
+      this.configurationSet({
+        id: 'doorbellsoundtime'
+      }, args.doorbell_time);
+    };
+    this.homey.flow.getActionCard('AB01ZE_doorbell_time')
+      .registerRunListener(AB01ZE_doorbell_time_run_listener);
+
+    //===== CONTROL Alarm LED
+    let AB01ZE_alarm_led_run_listener = async (args) => {
+      this.configurationSet({
+        id: 'alarmled'
+      }, args.alarm_led_onoff);
+    };
+    this.homey.flow.getActionCard('AB01ZE_alarm_led')
+      .registerRunListener(AB01ZE_alarm_led_run_listener);
+
+    //===== CONTROL Doorbell LED
+    let AB01ZE_doorbell_led_run_listener = async (args) => {
+      this.configurationSet({
+        id: 'doorbellled'
+      }, args.doorbell_led_onoff);
+    };
+    this.homey.flow.getActionCard('AB01ZE_doorbell_led')
+      .registerRunListener(AB01ZE_doorbell_led_run_listener);
 
   }
 }
