@@ -56,7 +56,7 @@
       {
         "id": "2",
         "label": {
-          "en": "Midle",
+          "en": "Middle",
           "nl": "Middelmatig",
           "de": "Mittel",
           "da": "Mellem",
@@ -271,7 +271,7 @@
       {
         "id": "2",
         "label": {
-          "en": "Midle",
+          "en": "Middle",
           "nl": "Middelmatig",
           "de": "Mittel",
           "da": "Mellem",
@@ -943,7 +943,7 @@
     },
     "value": true,
     "hint": {
-      "en": "You can turn the alarm led siginaling on on/off",
+      "en": "You can turn the alarm LED signaling on or off",
       "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
       "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED.",
       "da": "Du kan tænde/slukke for alarmens lysindikator",
@@ -980,7 +980,7 @@
     },
     "value": false,
     "hint": {
-      "en": "You can turn the alarm led siginaling on on/off",
+      "en": "You can turn the doorbell LED signaling on or off",
       "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
       "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED.",
       "da": "Du kan tænde/slukke for alarmens lysindikator",
