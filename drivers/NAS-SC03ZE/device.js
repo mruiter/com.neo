@@ -22,12 +22,13 @@ class WallSwitchDual_SC03ZE extends LoggingZwaveDevice {
 
     //===== Led On/Off
     let SC03ZE_LED_mode_run_listener = async (args) => {
-      this.log('FlowCardAction Set Led Mode to: ', args.switch_LED_onoff);
+      this.log('FlowCardAction Set Led Mode to: ', args.backlight);
       this.configurationSet({
         id: 'backlight'
-      }, args.switch_LED_onoff);
+      }, args.backlight);
     };
-    let actionSC03ZE_led_mode = this.homey.flow.getActionCard('SC03ZE_switch_LED');
+    this.homey.flow.getActionCard('SC03ZE_switch_LED')
+      .registerRunListener(SC03ZE_LED_mode_run_listener);
   }
 }
 module.exports = WallSwitchDual_SC03ZE;
