@@ -14,6 +14,11 @@ class WallSwitchDual_SC03ZE extends LoggingZwaveDevice {
 
     // register device capabilities
     this.registerCapability('onoff', 'SWITCH_BINARY');
+    this.registerReportListener('BASIC', 'BASIC_SET', report => {
+      if (report && report.hasOwnProperty('Value')) {
+        this.setCapabilityValue('onoff', report.Value === 255).catch(this.error);
+      }
+    });
 
     //===== Led On/Off
     let SC03ZE_LED_mode_run_listener = async (args) => {
