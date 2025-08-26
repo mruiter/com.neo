@@ -747,7 +747,7 @@
               {
                 "id": "2",
                 "label": {
-                  "en": "Midle",
+                  "en": "Middle",
                   "nl": "Middelmatig",
                   "de": "Mittel",
                   "da": "Middel",
@@ -856,7 +856,7 @@
               {
                 "id": "2",
                 "label": {
-                  "en": "Midle",
+                  "en": "Middle",
                   "nl": "Middelmatig",
                   "de": "Mittel",
                   "da": "Middel",
@@ -965,7 +965,7 @@
               {
                 "id": "2",
                 "label": {
-                  "en": "Doorbel",
+                  "en": "Doorbell",
                   "nl": "Deurbel",
                   "de": "Türklingel",
                   "da": "Dørklokke",
@@ -1440,6 +1440,476 @@
         ]
       },
       {
+        "id": "AB01ZE_alarm_time",
+        "title": {
+          "en": "Set alarm duration time",
+          "nl": "Stel alarm duratie in",
+          "de": "Alarmdauer einstellen",
+          "da": "Indstil alarmvarighed",
+          "es": "Ajustar la duración de la alarma",
+          "fr": "Régler la durée de l'alarme",
+          "it": "Imposta la durata dell'allarme",
+          "no": "Still inn alarmvarighet",
+          "sv": "Ställ in alarmtiden",
+          "pl": "Ustaw czas trwania alarmu",
+          "ru": "Установить продолжительность сигнала тревоги",
+          "ko": "알람 지속 시간을 설정"
+        },
+        "titleFormatted": {
+          "en": "Set alarm duration time to [[alarm_time]]",
+          "nl": "Stel alarm duratie in op [[alarm_time]]",
+          "de": "Alarmdauer auf [[alarm_time]] einstellen",
+          "da": "Indstil alarmvarighed til [[alarm_time]]",
+          "es": "Ajustar la duración de la alarma a [[alarm_time]]",
+          "fr": "Régler la durée de l'alarme sur [[alarm_time]]",
+          "it": "Imposta la durata dell'allarme su [[alarm_time]]",
+          "no": "Still inn alarmvarighet til [[alarm_time]]",
+          "sv": "Ställ in alarmtiden till [[alarm_time]]",
+          "pl": "Ustaw czas trwania alarmu na [[alarm_time]]",
+          "ru": "Установить продолжительность сигнала тревоги на [[alarm_time]]",
+          "ko": "[[alarm_time]]으로 알람 지속 시간을 설정"
+        },
+        "hint": {
+          "en": "Set the duration of the time the siren will sound its alarm music",
+          "nl": "Pas de tijd aan dat de sirene zijn alarm geluid laat horen",
+          "de": "Stellt die Zeitdauer ein, während der die Sirene Alarmton erklingt",
+          "da": "Indstil varigheden af ​​den tid, sirenen vil lyde med sit alarmsignal",
+          "es": "Ajusta la duración del tiempo en que la sirena emitirá su sonido de alarma",
+          "fr": "Réglez la durée pendant laquelle la sirène émettra son signal d'alarme",
+          "it": "Imposta la durata del tempo in cui la sirena suonerà la musica di allarme",
+          "no": "Still inn varigheten for hvor lenge sirenen skal sende ut alarmsignalet",
+          "sv": "Ställ in varaktigheten som sirenen ska låta sin alarmsignal",
+          "pl": "Ustaw czas trwania alarmu dźwiękowego przez syrenę",
+          "ru": "Установите продолжительность времени, в течение которого сирена будет издавать сигнал тревоги",
+          "ko": "사이렌이 알람 음악을 재생할 시간을 설정합니다"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=NAS-AB01ZE"
+          },
+          {
+            "name": "alarm_time",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Alarm sound off",
+                  "nl": "Alarm geluid uit",
+                  "de": "Alarmton aus",
+                  "da": "Alarmsignal slukket",
+                  "es": "Sonido de alarma desactivado",
+                  "fr": "Son d'alarme désactivé",
+                  "it": "Suono di allarme spento",
+                  "no": "Alarmlyd av",
+                  "sv": "Alarm ljud av",
+                  "pl": "Dźwięk alarmu wyłączony",
+                  "ru": "Звук сигнала тревоги выключен",
+                  "ko": "알람 소리 끔"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "30 seconds",
+                  "nl": "30 seconden",
+                  "de": "30 Sekunden",
+                  "da": "30 sekunder",
+                  "es": "30 segundos",
+                  "fr": "30 secondes",
+                  "it": "30 secondi",
+                  "no": "30 sekunder",
+                  "sv": "30 sekunder",
+                  "pl": "30 sekund",
+                  "ru": "30 секунд",
+                  "ko": "30초"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "1 minute (default)",
+                  "nl": "1 minuut (standaard)",
+                  "de": "1 Minute (Standard)",
+                  "da": "1 minut (standard)",
+                  "es": "1 minuto (predeterminado)",
+                  "fr": "1 minute (par défaut)",
+                  "it": "1 minuto (predefinito)",
+                  "no": "1 minutt (standard)",
+                  "sv": "1 minut (standard)",
+                  "pl": "1 minuta (domyślny)",
+                  "ru": "1 минута (по умолчанию)",
+                  "ko": "1분 (기본값)"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "5 minutes",
+                  "nl": "5 minuten",
+                  "de": "5 Minuten",
+                  "da": "5 minutter",
+                  "es": "5 minutos",
+                  "fr": "5 minutes",
+                  "it": "5 minuti",
+                  "no": "5 minutter",
+                  "sv": "5 minuter",
+                  "pl": "5 minut",
+                  "ru": "5 минут",
+                  "ko": "5분"
+                }
+              },
+              {
+                "id": "255",
+                "label": {
+                  "en": "Endless until battery drained or alarm switched off",
+                  "nl": "Oneindig totdat de accu leeg is of alarm wordt uitgezet",
+                  "de": "Endlos, bis die Batterie leer ist oder der Alarm ausgeschaltet wurde.",
+                  "da": "Uendelig indtil batteriet er tomt eller alarmen slukkes",
+                  "es": "Infinito hasta que se agote la batería o se apague la alarma",
+                  "fr": "Infini jusqu'à ce que la batterie soit épuisée ou que l'alarme soit désactivée",
+                  "it": "Infinito fino a quando la batteria è scarica o l'allarme spento",
+                  "no": "Uendelig til batteriet er utladet eller alarmen er slått av",
+                  "sv": "Oändligt tills batteriet är tömt eller larmet stängs av",
+                  "pl": "Bez końca, aż bateria się wyczerpie lub alarm zostanie wyłączony",
+                  "ru": "Бесконечно, пока не разрядится батарея или не будет отключена тревога",
+                  "ko": "배터리가 소모되거나 알람이 꺼질 때까지 무한"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AB01ZE_doorbell_time",
+        "title": {
+          "en": "Set doorbell duration time",
+          "nl": "Stel deurbel duratie in",
+          "de": "Türklingel Dauer einstellen",
+          "da": "Indstil dørklokkens varighedstid",
+          "es": "Ajustar el tiempo de duración del timbre",
+          "fr": "Régler la durée de la sonnette",
+          "it": "Imposta la durata del suono del campanello",
+          "no": "Still inn dørklokkens varighetstid",
+          "sv": "Ställ in dörrklockans tidslängd",
+          "pl": "Ustaw czas trwania dzwonka",
+          "ru": "Установить продолжительность сигнала дверного звонка",
+          "ko": "초인종 소리 시간을 설정"
+        },
+        "titleFormatted": {
+          "en": "Set doorbell duration time to [[doorbell_time]]",
+          "nl": "Stel deurbel duratie in op [[doorbell_time]]",
+          "de": "Türklingel Dauer auf [[doorbell_time]] einstellen",
+          "da": "Indstil dørklokkens varighedstid til [[doorbell_time]]",
+          "es": "Ajustar el tiempo de duración del timbre a [[doorbell_time]]",
+          "fr": "Régler la durée de la sonnette sur [[doorbell_time]]",
+          "it": "Imposta la durata del suono del campanello su [[doorbell_time]]",
+          "no": "Still inn dørklokkens varighetstid til [[doorbell_time]]",
+          "sv": "Ställ in dörrklockans tidslängd till [[doorbell_time]]",
+          "pl": "Ustaw czas trwania dzwonka na [[doorbell_time]]",
+          "ru": "Установить продолжительность сигнала дверного звонка на [[doorbell_time]]",
+          "ko": "[[doorbell_time]]으로 초인종 소리 시간을 설정"
+        },
+        "hint": {
+          "en": "Set the duration of the time the doorbell will sound its music",
+          "nl": "Pas de tijd aan dat de deurbell zijn geluid laat horen",
+          "de": "Stellt die Dauer ein, während Türklingel ihre Musik erklingen lässt.",
+          "da": "Indstil varigheden af den tid, dørklokken vil lyde med sin melodi",
+          "es": "Ajusta la duración del tiempo en que el timbre sonará su música",
+          "fr": "Réglez la durée pendant laquelle la sonnette jouera sa musique",
+          "it": "Imposta la durata del tempo in cui il campanello suonerà la sua musica",
+          "no": "Still inn varighet for hvor lenge dørklokken skal spille sin musikk",
+          "sv": "Ställ in varaktigheten som dörrklockan ska låta sin musik",
+          "pl": "Ustaw czas trwania dzwonka, gdy odtwarza swoją melodię",
+          "ru": "Установите продолжительность времени, в течение которого дверной звонок будет проигрывать свою музыку",
+          "ko": "초인종이 음악을 재생할 시간을 설정하세요"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=NAS-AB01ZE"
+          },
+          {
+            "name": "doorbell_time",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Doorbell sound off",
+                  "nl": "Deurbel geluid uit",
+                  "de": "Türklingel aus",
+                  "da": "Dørklokke lyd slukket",
+                  "es": "Sonido de timbre desactivado",
+                  "fr": "Son de la sonnette désactivé",
+                  "it": "Suono del campanello spento",
+                  "no": "Dørklokkelyd av",
+                  "sv": "Dörrklockans ljud av",
+                  "pl": "Dźwięk dzwonka wyłączony",
+                  "ru": "Звук дверного звонка выключен",
+                  "ko": "초인종 소리 끔"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "30 seconds (default)",
+                  "nl": "30 seconden (standaard)",
+                  "de": "30 Sekunden (Standard)",
+                  "da": "30 sekunder (standard)",
+                  "es": "30 segundos (predeterminado)",
+                  "fr": "30 secondes (par défaut)",
+                  "it": "30 secondi (predefinito)",
+                  "no": "30 sekunder (standard)",
+                  "sv": "30 sekunder (standard)",
+                  "pl": "30 sekund (domyślny)",
+                  "ru": "30 секунд (по умолчанию)",
+                  "ko": "30초 (기본)"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "1 minute",
+                  "nl": "1 minuut",
+                  "de": "1 Minute",
+                  "da": "1 minut",
+                  "es": "1 minuto",
+                  "fr": "1 minute",
+                  "it": "1 minuto",
+                  "no": "1 minutt",
+                  "sv": "1 minut",
+                  "pl": "1 minuta",
+                  "ru": "1 минута",
+                  "ko": "1분"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "5 minutes",
+                  "nl": "5 minuten",
+                  "de": "5 Minuten",
+                  "da": "5 minutter",
+                  "es": "5 minutos",
+                  "fr": "5 minutes",
+                  "it": "5 minuti",
+                  "no": "5 minutter",
+                  "sv": "5 minuter",
+                  "pl": "5 minut",
+                  "ru": "5 минут",
+                  "ko": "5분"
+                }
+              },
+              {
+                "id": "255",
+                "label": {
+                  "en": "Endless until battery drained or doorbell switched off",
+                  "nl": "Oneindig totdat de accu leeg is of deurbell trigger wordt uitgezet",
+                  "de": "Endlos, bis die Batterie leer ist oder die Türklingel ausgeschaltet wurde.",
+                  "da": "Uendelig indtil batteriet er tomt eller dørklokken slukkes",
+                  "es": "Infinito hasta que se agote la batería o se apague el timbre",
+                  "fr": "Infini jusqu'à ce que la batterie soit épuisée или que la sonnette soit désactivée",
+                  "it": "Infinito fino a quando la batteria è scarica o il campanello spento",
+                  "no": "Uendelig til batteriet er utladet eller dørklokken er slått av",
+                  "sv": "Oändligt tills batteriet är tömt eller dörrklockan stängs av",
+                  "pl": "Bez końca, aż bateria się wyczerpie lub wyłączony zostanie dzwonek",
+                  "ru": "Бесконечно, пока не разрядится батарея или не будет отключен дверной звонок",
+                  "ko": "배터리가 소모되거나 초인종이 꺼질 때까지 무한"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AB01ZE_alarm_led",
+        "title": {
+          "en": "Set alarm LED",
+          "nl": "Stel alarm led in",
+          "de": "Alarm-LED einstellen",
+          "da": "Indstil alarm LED",
+          "es": "Configurar LED de alarma",
+          "fr": "Régler la LED d'alarme",
+          "it": "Imposta il LED dell'allarme",
+          "no": "Sett alarm LED",
+          "sv": "Ställ in alarm LED",
+          "pl": "Ustaw diodę alarmową",
+          "ru": "Настроить светодиод тревоги",
+          "ko": "알람 LED 설정"
+        },
+        "titleFormatted": {
+          "en": "Set alarm LED to [[alarm_led_onoff]]",
+          "nl": "Stel alarm led in op [[alarm_led_onoff]]",
+          "de": "Alarm-LED auf [[alarm_led_onoff]] einstellen",
+          "da": "Indstil alarm LED til [[alarm_led_onoff]]",
+          "es": "Configurar LED de alarma a [[alarm_led_onoff]]",
+          "fr": "Régler la LED d'alarme sur [[alarm_led_onoff]]",
+          "it": "Imposta il LED dell'allarme su [[alarm_led_onoff]]",
+          "no": "Sett alarm LED til [[alarm_led_onoff]]",
+          "sv": "Ställ in alarm LED till [[alarm_led_onoff]]",
+          "pl": "Ustaw diodę alarmową na [[alarm_led_onoff]]",
+          "ru": "Настроить светодиод тревоги на [[alarm_led_onoff]]",
+          "ko": "[[alarm_led_onoff]]으로 알람 LED 설정"
+        },
+        "hint": {
+          "en": "You can turn the alarm LED signaling on or off",
+          "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
+          "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED.",
+          "da": "Du kan tænde/slukke for alarmens lysindikator",
+          "es": "Puedes encender/apagar la señalización LED de la alarma",
+          "fr": "Vous pouvez allumer/éteindre la signalisation LED de l'alarme",
+          "it": "Puoi accendere/spegnere il LED dell'allarme",
+          "no": "Du kan slå på/av alarmens lysindikator",
+          "sv": "Du kan slå på/av alarmets lysindikator",
+          "pl": "Możesz włączyć/wyłączyć sygnalizację diody alarmowej",
+          "ru": "Вы можете включить/выключить световую индикацию тревоги",
+          "ko": "알람 LED 신호를 켜거나 끌 수 있습니다"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=NAS-AB01ZE"
+          },
+          {
+            "name": "alarm_led_onoff",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "LED disabled",
+                  "nl": "LED uitgeschakeld",
+                  "de": "LED deaktivieren",
+                  "da": "LED deaktiveret",
+                  "es": "LED deshabilitada",
+                  "fr": "LED désactivée",
+                  "it": "LED disabilitato",
+                  "no": "LED deaktivert",
+                  "sv": "LED inaktiverad",
+                  "pl": "LED wyłączony",
+                  "ru": "Светодиод отключен",
+                  "ko": "LED 비활성화"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "LED enabled",
+                  "nl": "LED ingeschakeld",
+                  "de": "LED aktivieren",
+                  "da": "LED aktiveret",
+                  "es": "LED habilitada",
+                  "fr": "LED activée",
+                  "it": "LED abilitato",
+                  "no": "LED aktivert",
+                  "sv": "LED aktiverad",
+                  "pl": "LED włączony",
+                  "ru": "Светодиод включен",
+                  "ko": "LED 활성화"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AB01ZE_doorbell_led",
+        "title": {
+          "en": "Set doorbell LED",
+          "nl": "Stel deurbel led in",
+          "de": "Türklingel-LED einstellen",
+          "da": "Indstil dørklokke LED",
+          "es": "Configurar LED del timbre",
+          "fr": "Régler la LED de la sonnette",
+          "it": "Imposta il LED del campanello",
+          "no": "Sett dørklokke LED",
+          "sv": "Ställ in dörrklockans LED",
+          "pl": "Ustaw diodę dzwonka",
+          "ru": "Настроить светодиод дверного звонка",
+          "ko": "초인종 LED 설정"
+        },
+        "titleFormatted": {
+          "en": "Set doorbell LED to [[doorbell_led_onoff]]",
+          "nl": "Stel deurbel led in op [[doorbell_led_onoff]]",
+          "de": "Türklingel-LED auf [[doorbell_led_onoff]] einstellen",
+          "da": "Indstil dørklokke LED til [[doorbell_led_onoff]]",
+          "es": "Configurar LED del timbre a [[doorbell_led_onoff]]",
+          "fr": "Régler la LED de la sonnette sur [[doorbell_led_onoff]]",
+          "it": "Imposta il LED del campanello su [[doorbell_led_onoff]]",
+          "no": "Sett dørklokke LED til [[doorbell_led_onoff]]",
+          "sv": "Ställ in dörrklockans LED till [[doorbell_led_onoff]]",
+          "pl": "Ustaw diodę dzwonka na [[doorbell_led_onoff]]",
+          "ru": "Настроить светодиод дверного звонка на [[doorbell_led_onoff]]",
+          "ko": "[[doorbell_led_onoff]]으로 초인종 LED 설정"
+        },
+        "hint": {
+          "en": "You can turn the doorbell LED signaling on or off",
+          "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
+          "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED.",
+          "da": "Du kan tænde/slukke for alarmens lysindikator",
+          "es": "Puedes encender/apagar la señalización LED de la alarma",
+          "fr": "Vous pouvez allumer/éteindre la signalisation LED de l'alarme",
+          "it": "Puoi accendere/spegnere il LED dell'allarme",
+          "no": "Du kan slå på/av alarmens lysindikator",
+          "sv": "Du kan slå på/av alarmets lysindikator",
+          "pl": "Możesz włączyć/wyłączyć sygnalizację diody alarmowej",
+          "ru": "Вы можете включить/выключить световую индикацию тревоги",
+          "ko": "알람 LED 신호를 켜거나 끌 수 있습니다"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=NAS-AB01ZE"
+          },
+          {
+            "name": "doorbell_led_onoff",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "LED disabled",
+                  "nl": "LED uitgeschakeld",
+                  "de": "LED deaktivieren",
+                  "da": "LED deaktiveret",
+                  "es": "LED deshabilitada",
+                  "fr": "LED désactivée",
+                  "it": "LED disabilitato",
+                  "no": "LED deaktivert",
+                  "sv": "LED inaktiverad",
+                  "pl": "LED wyłączony",
+                  "ru": "Светодиод отключен",
+                  "ko": "LED 비활성화"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "LED enabled",
+                  "nl": "LED ingeschakeld",
+                  "de": "LED aktivieren",
+                  "da": "LED aktiveret",
+                  "es": "LED habilitada",
+                  "fr": "LED activée",
+                  "it": "LED abilitato",
+                  "no": "LED aktivert",
+                  "sv": "LED aktiverad",
+                  "pl": "LED włączony",
+                  "ru": "Светодиод включен",
+                  "ko": "LED 활성화"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "SC01ZE_switch_LED",
         "title": {
           "en": "Set Touch Switch LED",
@@ -1456,18 +1926,18 @@
           "ko": "터치 스위치 LED 설정"
         },
         "titleFormatted": {
-          "en": "Set Touch Switch LED to [[switch_LED_onoff]]",
-          "nl": "Stel Touch Switch LED in op [[switch_LED_onoff]]",
-          "de": "Touch-Steuerung LED auf [[switch_LED_onoff]] einstellen",
-          "da": "Indstil Touch Switch LED til [[switch_LED_onoff]]",
-          "es": "Configurar LED del interruptor táctil en [[switch_LED_onoff]]",
-          "fr": "Régler la LED de l'interrupteur tactile sur [[switch_LED_onoff]]",
-          "it": "Imposta LED interruttore touch su [[switch_LED_onoff]]",
-          "no": "Sett berøringsbryter LED til [[switch_LED_onoff]]",
-          "sv": "Ställ in touch LED till [[switch_LED_onoff]]",
-          "pl": "Ustaw diodę LED przełącznika dotykowego na [[switch_LED_onoff]]",
-          "ru": "Установить светодиод сенсорного переключателя на [[switch_LED_onoff]]",
-          "ko": "터치 스위치 LED를 [[switch_LED_onoff]]로 설정"
+          "en": "Set Touch Switch LED to [[backlight]]",
+          "nl": "Stel Touch Switch LED in op [[backlight]]",
+          "de": "Touch-Steuerung LED auf [[backlight]] einstellen",
+          "da": "Indstil Touch Switch LED til [[backlight]]",
+          "es": "Configurar LED del interruptor táctil en [[backlight]]",
+          "fr": "Régler la LED de l'interrupteur tactile sur [[backlight]]",
+          "it": "Imposta LED interruttore touch su [[backlight]]",
+          "no": "Sett berøringsbryter LED til [[backlight]]",
+          "sv": "Ställ in touch LED till [[backlight]]",
+          "pl": "Ustaw diodę LED przełącznika dotykowego na [[backlight]]",
+          "ru": "Установить светодиод сенсорного переключателя на [[backlight]]",
+          "ko": "터치 스위치 LED를 [[backlight]]로 설정"
         },
         "hint": {
           "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
@@ -1490,7 +1960,7 @@
             "filter": "driver_id=NAS-SC01ZE"
           },
           {
-            "name": "switch_LED_onoff",
+            "name": "backlight",
             "type": "dropdown",
             "values": [
               {
@@ -1548,18 +2018,18 @@
           "ko": "터치 스위치 LED 설정"
         },
         "titleFormatted": {
-          "en": "Set Touch Switch LED to [[switch_LED_onoff]]",
-          "nl": "Stel Touch Switch LED in op [[switch_LED_onoff]]",
-          "de": "Touch-Steuerung LED auf [[switch_LED_onoff]] einstellen",
-          "da": "Indstil Touch Switch LED til [[switch_LED_onoff]]",
-          "es": "Configurar LED del interruptor táctil a [[switch_LED_onoff]]",
-          "fr": "Régler la LED du commutateur tactile sur [[switch_LED_onoff]]",
-          "it": "Imposta LED interruttore touch su [[switch_LED_onoff]]",
-          "no": "Sett berøringsbryter LED til [[switch_LED_onoff]]",
-          "sv": "Ställ in Touch Switch LED till [[switch_LED_onoff]]",
-          "pl": "Ustaw diodę LED przełącznika dotykowego na [[switch_LED_onoff]]",
-          "ru": "Настроить сенсорную LED на [[switch_LED_onoff]]",
-          "ko": "[[switch_LED_onoff]]로 터치 스위치 LED 설정"
+          "en": "Set Touch Switch LED to [[backlight]]",
+          "nl": "Stel Touch Switch LED in op [[backlight]]",
+          "de": "Touch-Steuerung LED auf [[backlight]] einstellen",
+          "da": "Indstil Touch Switch LED til [[backlight]]",
+          "es": "Configurar LED del interruptor táctil a [[backlight]]",
+          "fr": "Régler la LED du commutateur tactile sur [[backlight]]",
+          "it": "Imposta LED interruttore touch su [[backlight]]",
+          "no": "Sett berøringsbryter LED til [[backlight]]",
+          "sv": "Ställ in Touch Switch LED till [[backlight]]",
+          "pl": "Ustaw diodę LED przełącznika dotykowego na [[backlight]]",
+          "ru": "Настроить сенсорную LED на [[backlight]]",
+          "ko": "[[backlight]]로 터치 스위치 LED 설정"
         },
         "hint": {
           "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
@@ -1582,7 +2052,7 @@
             "filter": "driver_id=NAS-SC02ZE"
           },
           {
-            "name": "switch_LED_onoff",
+            "name": "backlight",
             "type": "dropdown",
             "values": [
               {
@@ -1640,18 +2110,18 @@
           "ko": "터치 스위치 LED 설정"
         },
         "titleFormatted": {
-          "en": "Set Touch Switch LED to [[switch_LED_onoff]]",
-          "nl": "Stel Touch Switch LED in op [[switch_LED_onoff]]",
-          "de": "Touch-Steuerung LED auf [[switch_LED_onoff]] einstellen",
-          "da": "Indstil Touch Switch LED til [[switch_LED_onoff]]",
-          "es": "Configurar LED del interruptor táctil a [[switch_LED_onoff]]",
-          "fr": "Régler la LED de l'interrupteur tactile sur [[switch_LED_onoff]]",
-          "it": "Imposta LED interruttore touch su [[switch_LED_onoff]]",
-          "no": "Sett berøringsbryter LED til [[switch_LED_onoff]]",
-          "sv": "Ställ in pekomkopplarens LED till [[switch_LED_onoff]]",
-          "pl": "Ustaw diodę LED przełącznika dotykowego na [[switch_LED_onoff]]",
-          "ru": "Установить светодиод сенсорного переключателя на [[switch_LED_onoff]]",
-          "ko": "[[switch_LED_onoff]]로 터치 스위치 LED 설정"
+          "en": "Set Touch Switch LED to [[backlight]]",
+          "nl": "Stel Touch Switch LED in op [[backlight]]",
+          "de": "Touch-Steuerung LED auf [[backlight]] einstellen",
+          "da": "Indstil Touch Switch LED til [[backlight]]",
+          "es": "Configurar LED del interruptor táctil a [[backlight]]",
+          "fr": "Régler la LED de l'interrupteur tactile sur [[backlight]]",
+          "it": "Imposta LED interruttore touch su [[backlight]]",
+          "no": "Sett berøringsbryter LED til [[backlight]]",
+          "sv": "Ställ in pekomkopplarens LED till [[backlight]]",
+          "pl": "Ustaw diodę LED przełącznika dotykowego na [[backlight]]",
+          "ru": "Установить светодиод сенсорного переключателя на [[backlight]]",
+          "ko": "[[backlight]]로 터치 스위치 LED 설정"
         },
         "hint": {
           "en": "Enable or disable the Touch Switch LED, lighting up when enabled",
@@ -1674,7 +2144,7 @@
             "filter": "driver_id=NAS-SC03ZE"
           },
           {
-            "name": "switch_LED_onoff",
+            "name": "backlight",
             "type": "dropdown",
             "values": [
               {
@@ -1994,7 +2464,7 @@
             {
               "id": "2",
               "label": {
-                "en": "Midle",
+                "en": "Middle",
                 "nl": "Middelmatig",
                 "de": "Mittel",
                 "da": "Mellem",
@@ -2209,7 +2679,7 @@
             {
               "id": "2",
               "label": {
-                "en": "Midle",
+                "en": "Middle",
                 "nl": "Middelmatig",
                 "de": "Mittel",
                 "da": "Mellem",
@@ -2881,7 +3351,7 @@
           },
           "value": true,
           "hint": {
-            "en": "You can turn the alarm led siginaling on on/off",
+            "en": "You can turn the alarm LED signaling on or off",
             "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
             "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED.",
             "da": "Du kan tænde/slukke for alarmens lysindikator",
@@ -2918,7 +3388,7 @@
           },
           "value": false,
           "hint": {
-            "en": "You can turn the alarm led siginaling on on/off",
+            "en": "You can turn the doorbell LED signaling on or off",
             "nl": "Hiermee kan de alarm led verlichting aan of uit gezet worden",
             "de": "Ermöglicht das Ein- und Ausschalten der Alarm-LED.",
             "da": "Du kan tænde/slukke for alarmens lysindikator",
@@ -6859,10 +7329,11 @@
         },
         "defaultConfiguration": [],
         "associationGroups": [
-          1
+          1,
+          2
         ],
         "associationGroupsMultiChannel": [
-          2
+          3
         ],
         "multiChannelNodes": {
           "2": {
@@ -7076,11 +7547,12 @@
         },
         "defaultConfiguration": [],
         "associationGroups": [
-          1
+          1,
+          2
         ],
         "associationGroupsMultiChannel": [
-          2,
-          3
+          3,
+          4
         ],
         "multiChannelNodes": {
           "2": {
