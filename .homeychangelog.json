@@ -40,5 +40,8 @@
   },
   "3.0.15": {
     "en": "Corrected NAS-AB01 setting flow cards , Corrected flow cards and associationgroups"
+  },
+  "3.0.16": {
+    "en": "Curtain controller CS01 On/Off reflect status up down"
   }
 }
