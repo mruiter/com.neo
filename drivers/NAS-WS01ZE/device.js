@@ -1,6 +1,5 @@
 'use strict';
 
-const Homey = require('homey');
 const LoggingZwaveDevice = require('../../lib/LoggingZwaveDevice');
 
 class WaterSensor_WS01 extends LoggingZwaveDevice {

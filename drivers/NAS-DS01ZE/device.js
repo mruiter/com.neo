@@ -1,6 +1,5 @@
 'use strict';
 
-const Homey = require('homey');
 const LoggingZwaveDevice = require('../../lib/LoggingZwaveDevice');
 
 class DoorWindowSensor_DS01Z extends LoggingZwaveDevice {
